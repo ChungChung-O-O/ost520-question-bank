@@ -75,6 +75,12 @@ the schema, question IDs, and exact bank fingerprint, previews the replacement, 
 an explicit confirmation. It refuses backups from a different bank. The existing text/CSV
 style results export remains for quick sharing.
 
+Progress from the former Claude artifact cannot move automatically because the artifact and
+GitHub Pages use different browser origins. The home screen therefore includes **Transfer
+results from the old Claude artifact**, which validates and restores the legacy eight-column
+results export. Legacy text restores scored per-question aggregates and reason tags, but not
+an unfinished session or theme because the old export never contained those fields.
+
 The **Diagnosis** screen and **Copy analysis for Claude/Codex** describe wrong and
 correct-but-guessed questions, concepts, source documents, reason tags, and fresh retest
 availability. That analysis export intentionally excludes correct answers and rationales.

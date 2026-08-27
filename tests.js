@@ -25,6 +25,8 @@ assert(html.includes("sessionUsable(saved) && sessionIsToday(saved)"),"resume gu
 assert(html.includes("const incoming=pendingBackup"),"restore must retain the validated backup while applying theme and state");
 assert(!html.includes("if(pendingBackup.theme)"),"restore must not dereference a cleared pending backup");
 assert(html.includes("fallback && untried ? q=>!H[q.id] : fallback ? ()=>true"),"post-plan fallback must use the full bank after unseen questions are exhausted");
+assert(html.includes('id="opendiag" type="button">'),"diagnosis must remain discoverable with empty history");
+assert(html.includes("function parseLegacyResults"),"legacy artifact transfer parser missing");
 function boot(storage={}){const source=html.slice(html.indexOf("<script>")+8,html.lastIndexOf("</script>")),els=new Map(),el=()=>({hidden:false,style:{},classList:{add(){}},setAttribute(){},appendChild(){},textContent:"",innerHTML:"",click(){}}),document={getElementById:id=>{if(!els.has(id))els.set(id,el());return els.get(id)},createElement:el,addEventListener(){},documentElement:{setAttribute(){},removeAttribute(){},getAttribute(){return null}}},data=new Map(Object.entries(storage)),localStorage={getItem:k=>data.get(k)||null,setItem:(k,v)=>data.set(k,String(v)),removeItem:k=>data.delete(k)},alerts=[],ctx=vm.createContext({document,localStorage,window:{scrollTo(){}},console,Date,JSON,Math,Set,Map,Array,Object,Number,String,Boolean,RegExp,Error,Blob:function(){},URL:{createObjectURL(){return ""},revokeObjectURL(){}},FileReader:function(){},navigator:{},alert:m=>alerts.push(String(m)),setTimeout(){}});vm.runInContext(source,ctx);return{ctx,data,els,alerts};}
 boot();boot({"ost520.bank.v2":"{bad json"});
 const legacyBoot=boot({"ost520.bank.v2":JSON.stringify(legacy)});
@@ -33,4 +35,8 @@ assert.equal(migratedStored.schemaVersion,3);assert.deepStrictEqual(migratedStor
 const restoreBoot=boot({"ost520.bank.v2":JSON.stringify({schemaVersion:3,bankFingerprint:"old",history:{}})});
 vm.runInContext(`pendingBackup={schemaVersion:3,createdAt:new Date().toISOString(),bankFingerprint:BANK_FINGERPRINT,history:{B1:{attempts:1,correct:1,lastOk:true,reasons:[]}},activeSession:null,theme:"dark"}; $("confirmimport").onclick();`,restoreBoot.ctx);
 assert.equal(restoreBoot.alerts.length,0,"valid restore must not report failure");assert.equal(restoreBoot.data.get("ost520.bank.v2.theme"),"dark");assert.equal(JSON.parse(restoreBoot.data.get("ost520.bank.v2")).history.B1.correct,1);
+const legacyText=`OST 520 question bank — full results export (2026-08-27)\n483 in the bank · 1 attempted · 1 currently wrong\nid,topic,docs,attempts,correct,lastOk,lastSeen,reasons\nB1,Biochemistry,L001,2,1,0,2026-08-27,content+cue`;
+restoreBoot.ctx.legacyFixture=legacyText;
+const parsedLegacy=vm.runInContext("parseLegacyResults(legacyFixture)",restoreBoot.ctx);
+assert.equal(parsedLegacy.history.B1.attempts,2);assert.equal(parsedLegacy.history.B1.correct,1);assert.equal(parsedLegacy.history.B1.lastOk,false);assert.deepStrictEqual(Array.from(parsedLegacy.history.B1.reasons),["content","cue"]);
 console.log("PASS: integrity, migration compatibility, queues, interleaving, session semantics, backup/import UI guards");

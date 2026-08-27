@@ -293,7 +293,7 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:22px;margin:30px
 
     <div class="today" id="today" hidden></div>
 
-    <button class="diagbtn" id="opendiag" type="button" hidden>
+    <button class="diagbtn" id="opendiag" type="button">
       <span class="dtext"><b>Your diagnosis</b><small id="diagsub"></small></span>
       <span class="darrow" aria-hidden="true">&rarr;</span>
     </button>
@@ -340,6 +340,12 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:22px;margin:30px
         <button class="btn ghost" id="exportbackup" type="button">Download full backup</button>
         <label class="btn ghost filepick">Import backup<input id="importbackup" type="file" accept="application/json,.json"></label>
       </div>
+      <details style="margin-top:14px">
+        <summary style="cursor:pointer;font-weight:600">Transfer results from the old Claude artifact</summary>
+        <p class="note">In the old artifact, choose <em>Show as text</em> under “Hand your results to Claude,” copy the complete export, and paste it here. This restores scored question history; old active-session and theme data were never included in that export.</p>
+        <textarea id="legacyinput" rows="7" style="width:100%;resize:vertical;border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--surface);color:var(--ink);font:12px/1.5 ui-monospace,Menlo,monospace" placeholder="Paste the legacy results export here"></textarea>
+        <div class="backup-actions"><button class="btn ghost" id="importlegacy" type="button">Preview legacy transfer</button></div>
+      </details>
     </div>
   </section>
 
@@ -676,6 +682,7 @@ function renderExport(){
   };
   $("exportbackup").onclick=downloadBackup;
   $("importbackup").onchange=e=>{ const file=e.target.files&&e.target.files[0]; if(file) readBackup(file); e.target.value=""; };
+  $("importlegacy").onclick=()=>{ try{ previewBackup(parseLegacyResults($("legacyinput").value),"Legacy artifact export"); }catch(e){ alert(e.message||"Invalid legacy results."); } };
 }
 
 function backupPayload(){
@@ -701,14 +708,39 @@ function validateBackup(b){
   if(b.activeSession && !sessionUsable(b.activeSession)) throw new Error("Backup contains an obsolete or invalid active session.");
   return true;
 }
+function parseLegacyResults(text){
+  const lines=String(text||"").split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+  const header=lines.findIndex(x=>x==="id,topic,docs,attempts,correct,lastOk,lastSeen,reasons");
+  if(header<0) throw new Error("That text does not contain the legacy results header.");
+  const history={};
+  lines.slice(header+1).forEach(line=>{
+    const p=line.split(","); if(p.length!==8) throw new Error("A legacy result row is malformed.");
+    const [id,topic,docs,attemptsText,correctText,lastOkText,lastSeen,reasons]=p;
+    if(!IDS.has(id)) throw new Error(`Unknown question ID in legacy results: ${id}`);
+    const attempts=Number(attemptsText), correct=Number(correctText);
+    if(!Number.isInteger(attempts)||attempts<0||!Number.isInteger(correct)||correct<0||correct>attempts) throw new Error(`Invalid counts for ${id}.`);
+    if(lastOkText!=="0"&&lastOkText!=="1") throw new Error(`Invalid latest result for ${id}.`);
+    const q=BANK.find(x=>x.id===id);
+    if(q.topic!==topic || (q.covers||[]).join("+")!==docs) throw new Error(`Question metadata does not match for ${id}.`);
+    const at=lastSeen && /^\d{4}-\d{2}-\d{2}$/.test(lastSeen) ? new Date(lastSeen+"T12:00:00").getTime() : undefined;
+    history[id]={attempts,correct,lastOk:lastOkText==="1",reasons:reasons?reasons.split("+").filter(Boolean):[]};
+    if(at) history[id].at=at;
+  });
+  if(!Object.keys(history).length) throw new Error("The legacy export contains no scored questions.");
+  return {schemaVersion:SCHEMA_VERSION,createdAt:new Date().toISOString(),bankFingerprint:BANK_FINGERPRINT,
+    history,activeSession:null,theme:null,examMetadata:{exam:META.exam||null,artifactVersion:"legacy-text"},artifactVersion:"legacy-text"};
+}
 let pendingBackup=null;
+function previewBackup(b, sourceLabel){
+  validateBackup(b); pendingBackup=b;
+  const old=Object.keys(hist()).length, incoming=Object.keys(b.history).length;
+  $("importpreview").innerHTML=`<p>This will replace the progress currently stored in this browser.</p><p><b>${sourceLabel||"Incoming backup"}:</b> ${incoming} question record${incoming===1?"":"s"}, created ${new Date(b.createdAt).toLocaleString()}.<br><b>Current browser:</b> ${old} question record${old===1?"":"s"}.<br><b>Bank:</b> verified exact match (${BANK.length} questions).</p><p class="note">A recovery copy of the current local progress is saved before restore. This action does not upload anything.</p>`;
+  $("importmodal").hidden=false;
+}
 function readBackup(file){
   const reader=new FileReader(); reader.onerror=()=>alert("Could not read that backup file.");
   reader.onload=()=>{ try{
-    const b=JSON.parse(String(reader.result)); validateBackup(b); pendingBackup=b;
-    const old=Object.keys(hist()).length, incoming=Object.keys(b.history).length;
-    $("importpreview").innerHTML=`<p>This will replace the progress currently stored in this browser.</p><p><b>Incoming backup:</b> ${incoming} question record${incoming===1?"":"s"}, created ${new Date(b.createdAt).toLocaleString()}.<br><b>Current browser:</b> ${old} question record${old===1?"":"s"}.<br><b>Bank:</b> verified exact match (${BANK.length} questions).</p><p class="note">A recovery copy of the current local progress is saved before restore. This action does not upload anything.</p>`;
-    $("importmodal").hidden=false;
+    previewBackup(JSON.parse(String(reader.result)),"Incoming backup");
   }catch(e){ alert(e.message||"Invalid backup."); } };
   reader.readAsText(file);
 }
@@ -821,7 +853,8 @@ function analysisText(){
 function renderDiag(){
   const d = diagnose(), pct = (ok,n)=> n ? Math.round(ok/n*100) : 0;
   if(!d.done.length){ $("diagbody").innerHTML =
-    `<p class="note">Answer some questions first — there is nothing to diagnose yet.</p>`; return; }
+    `<div class="warn"><b>No scored history exists on this website origin yet.</b><br>If you practiced in the Claude artifact, that browser stored the results separately. Return home and use <em>Transfer results from the old Claude artifact</em> under the backup controls, or begin answering here.</div>`;
+    $("analysisexport").hidden=true; return; }
 
   const acc = pct(d.done.length-d.wrong.length, d.done.length);
   $("diagbody").innerHTML = `
@@ -978,11 +1011,9 @@ function renderHome(){
   } else planBox.hidden=true;
 
   const anyDone = BANK.some(q=>H[q.id]);
-  $("opendiag").hidden = !anyDone;
-  if(anyDone){
-    $("diagsub").textContent = `${BANK.filter(q=>H[q.id]).length} answered · recomputed every time you open it`;
-    $("opendiag").onclick = ()=>{ renderDiag(); show("diag"); };
-  }
+  $("opendiag").hidden = false;
+  $("diagsub").textContent = anyDone ? `${BANK.filter(q=>H[q.id]).length} answered · recomputed every time you open it` : "No scored history on this site yet · open for recovery help";
+  $("opendiag").onclick = ()=>{ renderDiag(); show("diag"); };
   renderWeak();
   renderExport();
   const wrong = BANK.filter(q=>H[q.id] && questionStatus(H[q.id]).state==="wrong");
