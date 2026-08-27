@@ -61,12 +61,47 @@ Each element is one question:
 Options are shuffled at runtime in the app, so `answer` refers to the order in this
 file, not to what a given viewer sees on screen.
 
-## Progress
+## Progress, privacy, and recovery
 
-Attempts are kept in the viewer's own `localStorage`, per browser. Nothing is uploaded,
-and progress does not sync between devices or follow the repo.
+Attempts are kept in the viewer's own `localStorage`, per browser, under
+`ost520.bank.v2`. Nothing is uploaded, and progress does not sync between devices or
+follow the repo. The site migrates the earlier aggregate-only record format in place,
+without inventing past attempt details. Before a migration or restore it retains the
+previous value under `ost520.bank.v2.recovery`.
+
+Use **Download full backup** to save a complete JSON snapshot (progress, active session,
+theme, schema version, bank fingerprint, and exam metadata). **Import backup** validates
+the schema, question IDs, and exact bank fingerprint, previews the replacement, and needs
+an explicit confirmation. It refuses backups from a different bank. The existing text/CSV
+style results export remains for quick sharing.
+
+The **Diagnosis** screen and **Copy analysis for Claude/Codex** describe wrong and
+correct-but-guessed questions, concepts, source documents, reason tags, and fresh retest
+availability. That analysis export intentionally excludes correct answers and rationales.
+
+Current wrong, correct-but-guessed, historical misses, and fresh-transfer results are
+separate signals. Legacy records have no attempt timeline, and the UI labels that
+limitation rather than pretending one exists.
+
+## Architecture and tests
+
+This remains one dependency-free static site. `index.html` is the source of truth;
+`bank.json` must stay byte-for-data equivalent to its embedded `BANK` array. Question
+order is canonical in the bank, while sessions use a persisted deterministic weighted
+interleaver so they resume in the exact same order.
+
+Run the offline regression checks with:
+
+```sh
+node tests.js
+```
+
+They verify bank integrity and synchronization, legacy-migration compatibility, review
+queues, deterministic topic interleaving, worked-question scoring semantics, and the
+presence of recovery, import, resume, and analysis safeguards.
 
 ## Regenerating
 
 `index.html` is the source of truth; `bank.json` is derived from the `const BANK = [...]`
-array inside it. If you edit questions, edit them in `index.html` and re-extract.
+array inside it. If you edit questions, edit them in `index.html` and re-extract, then run
+`node tests.js` before publishing.

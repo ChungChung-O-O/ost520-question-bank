@@ -263,6 +263,13 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:22px;margin:30px
 #weaktext,#alltext{background:var(--surface-2);padding:12px 14px;border-radius:8px;overflow-x:auto;
   font-family:ui-monospace,Menlo,monospace;font-size:12px;line-height:1.55;white-space:pre;
   max-height:340px;overflow-y:auto;margin:0}
+.backup-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+.filepick{position:relative;overflow:hidden}
+.filepick input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.analysis-list{display:grid;gap:8px;margin-top:12px}
+.analysis-item{padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.modal{position:fixed;inset:0;background:rgba(20,24,31,.5);display:grid;place-items:center;padding:18px;z-index:20}
+.modalbox{max-width:620px;width:100%;max-height:85vh;overflow:auto;background:var(--surface);border-radius:var(--r);padding:22px;box-shadow:var(--shadow)}
 </style>
 <header>
   <div class="bar">
@@ -329,6 +336,10 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:22px;margin:30px
         <button class="btn ghost" id="showall" type="button">Show as text</button>
       </div>
       <pre id="alltext" hidden style="margin-top:12px"></pre>
+      <div class="backup-actions">
+        <button class="btn ghost" id="exportbackup" type="button">Download full backup</button>
+        <label class="btn ghost filepick">Import backup<input id="importbackup" type="file" accept="application/json,.json"></label>
+      </div>
     </div>
   </section>
 
@@ -368,6 +379,12 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:22px;margin:30px
       <p class="lede">Recomputed from your own answers every time you open this. Nothing is sent anywhere.</p>
     </div>
     <div id="diagbody"></div>
+    <div class="split" id="analysisexport" hidden>
+      <p class="label" style="margin:0">Share this analysis</p>
+      <p class="note" style="margin:8px 0 14px">This report names your results and weak areas, but deliberately excludes answer keys and rationales.</p>
+      <div class="selfmark"><button class="btn ghost" id="copyanalysis" type="button">Copy analysis for Claude/Codex</button><button class="btn ghost" id="showanalysis" type="button">Show as text</button></div>
+      <pre id="analysistext" hidden style="margin-top:12px"></pre>
+    </div>
   </section>
 
   <section id="summary" hidden>
@@ -381,6 +398,13 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:22px;margin:30px
     <h2>What you missed</h2>
     <div class="missed" id="missed"></div>
   </section>
+</div>
+
+<div class="modal" id="importmodal" hidden role="dialog" aria-modal="true" aria-labelledby="importtitle">
+  <div class="modalbox"><h2 id="importtitle">Restore backup?</h2><div id="importpreview"></div><div class="selfmark" style="margin-top:18px"><button class="btn bad" id="confirmimport" type="button">Replace local progress</button><button class="btn ghost" id="cancelimport" type="button">Cancel</button></div></div>
+</div>
+<div class="modal" id="sessionmodal" hidden role="dialog" aria-modal="true" aria-labelledby="sessiontitle">
+  <div class="modalbox"><h2 id="sessiontitle">Paused session</h2><p class="note">You have an unfinished set from today. Its checked answers are already saved.</p><div class="selfmark" style="margin-top:18px"><button class="btn" id="resumepending" type="button">Resume</button><button class="btn bad" id="replacepending" type="button">Replace with new set</button><button class="btn ghost" id="cancelpending" type="button">Cancel</button></div></div>
 </div>
 
 <div class="actions" id="actions" hidden>
@@ -408,10 +432,52 @@ const TOPICS = [
   {name:"Epi & Biostats", src:"E", blurb:"L016–L020 · calculations plus exam-format questions"}
 ];
 
+/* Progress is deliberately local-only.  v2 records remain valid: migration only
+   adds fields that did not exist before, and never fabricates an attempt log. */
+const SCHEMA_VERSION = 3;
+function stableBankFingerprint(){
+  let h=2166136261, s=JSON.stringify(BANK);
+  for(let i=0;i<s.length;i++){ h^=s.charCodeAt(i); h=Math.imul(h,16777619); }
+  return "fnv1a-"+(h>>>0).toString(16).padStart(8,"0")+"-"+BANK.length;
+}
+const BANK_FINGERPRINT = stableBankFingerprint();
+function cloneData(v){ return JSON.parse(JSON.stringify(v)); }
+function migrateState(raw){
+  const base=(raw && typeof raw==="object" && !Array.isArray(raw)) ? cloneData(raw) : {history:{}};
+  let changed=!raw || base.schemaVersion!==SCHEMA_VERSION;
+  base.history=(base.history && typeof base.history==="object" && !Array.isArray(base.history)) ? base.history : {};
+  Object.keys(base.history).forEach(id=>{
+    const h=base.history[id];
+    if(!h || typeof h!=="object"){ delete base.history[id]; changed=true; return; }
+    if(!Array.isArray(h.reasons)){ h.reasons=[]; changed=true; }
+    /* Undefined preserves legacy uncertainty; false means a recorded non-guess. */
+    if("lastGuessed" in h && typeof h.lastGuessed!=="boolean"){ delete h.lastGuessed; changed=true; }
+    if("attemptLog" in h && !Array.isArray(h.attemptLog)){ delete h.attemptLog; changed=true; }
+  });
+  base.schemaVersion=SCHEMA_VERSION;
+  base.bankFingerprint=base.bankFingerprint || BANK_FINGERPRINT;
+  base.updatedAt=base.updatedAt || new Date().toISOString();
+  return {state:base,changed};
+}
 const store = {
-  read(){ try{ return JSON.parse(localStorage.getItem(KEY)) || {history:{}}; }
-          catch(e){ return {history:{}}; } },
-  write(v){ try{ localStorage.setItem(KEY, JSON.stringify(v)); }catch(e){} }
+  read(){
+    try{
+      const rawText=localStorage.getItem(KEY), raw=rawText?JSON.parse(rawText):null;
+      const m=migrateState(raw);
+      if(m.changed){
+        /* A recovery copy is written before touching the live value. */
+        if(rawText) localStorage.setItem(KEY+".recovery",rawText);
+        localStorage.setItem(KEY,JSON.stringify(m.state));
+        if(!localStorage.getItem(KEY)) throw new Error("migration write could not be read back");
+      }
+      return m.state;
+    }catch(e){ return {schemaVersion:SCHEMA_VERSION,bankFingerprint:BANK_FINGERPRINT,history:{}}; }
+  },
+  write(v){
+    try{ const m=migrateState(v); m.state.updatedAt=new Date().toISOString(); localStorage.setItem(KEY,JSON.stringify(m.state));
+      if(!localStorage.getItem(KEY)) throw new Error("progress write failed"); return true;
+    }catch(e){ return false; }
+  }
 };
 let S = null;
 const $ = id => document.getElementById(id);
@@ -422,13 +488,32 @@ const hist = () => store.read().history || {};
 function withFigures(html){
   return (html||"").replace(/\{\{fig:([\w.-]+)\}\}/g, (m,k)=> FIGURES[k] || "");
 }
+function questionStatus(h){
+  if(!h) return {state:"unseen",score:0,misses:0};
+  const attempts=Math.max(0,Number(h.attempts)||0), correct=Math.max(0,Number(h.correct)||0);
+  const misses=Math.max(0,attempts-correct), wrong=h.lastOk===false, guessed=h.lastOk===true && h.lastGuessed===true;
+  /* Current errors matter most; historical misses are a smaller signal.  A
+     detailed timeline is used only when newer records actually contain one. */
+  const recent=h.at && Date.now()-Number(h.at)<=14*86400000;
+  let score=(wrong?4:0)+(guessed?2:0)+Math.min(2,misses)+(attempts>=3 && misses/attempts>=.5?1:0)+(recent && (wrong||guessed)?1:0);
+  const log=Array.isArray(h.attemptLog)?h.attemptLog:[];
+  const freshCorrect=log.filter(a=>a && a.correct===true && a.freshTransfer===true).length;
+  score=Math.max(0,score-Math.min(2,freshCorrect));
+  const resolved=!wrong&&!guessed&&misses>0&&score===0&&(freshCorrect>0 || correct>misses);
+  return {state:wrong?"wrong":guessed?"guessed":resolved?"resolved":"correct",score,misses,attempts,correct,freshCorrect,recent};
+}
 function weakConcepts(){
   const H=hist(), bad=new Set();
-  BANK.forEach(q=>{ const h=H[q.id]; if(h && !h.lastOk) (q.concepts||[]).forEach(c=>bad.add(c)); });
+  BANK.forEach(q=>{ const s=questionStatus(H[q.id]); if(s.score>0) (q.concepts||[]).forEach(c=>bad.add(c)); });
   return bad;
 }
 function todayISO(){ const d=new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`; }
-function todaysPlan(){ return META.plan.find(p=>p.date===todayISO()) || null; }
+function todaysPlan(){
+  const exact=META.plan.find(p=>p.date===todayISO()); if(exact) return exact;
+  const last=(META.plan||[]).map(p=>p.date).sort().at(-1);
+  if(last && todayISO()>last) return {date:todayISO(),concepts:["fallback"],note:"post-exam review — choose the next best retrieval set"};
+  return null;
+}
 
 /* ---------------- daily reset ----------------
    The bank used to boot straight into whatever session was saved, of any age,
@@ -449,8 +534,10 @@ const sessionUsable = s => !!s && !s.done && !!(s.order||[]).length
 const sessionIsToday = s => !!s && s.date === todayISO();
 function sessionProgress(s){
   const A = s.answers || {};
-  return { done:(s.order||[]).filter(id=>A[id] && A[id].checked).length,
-           total:(s.order||[]).length, at:Math.min((s.i||0)+1, (s.order||[]).length) };
+  const viewed=(s.order||[]).filter(id=>A[id] && (A[id].checked || A[id].pick!=null)).length;
+  const revealed=(s.order||[]).filter(id=>{ const q=BANK.find(x=>x.id===id); return q&&q.type==="worked"&&A[id]&&A[id].checked; }).length;
+  const scored=(s.order||[]).filter(id=>{ const q=BANK.find(x=>x.id===id); return q&&A[id]&&(q.type==="worked"?A[id].ok!=null:A[id].checked); }).length;
+  return {viewed,revealed,scored,remaining:(s.order||[]).length-scored,total:(s.order||[]).length,at:Math.min((s.i||0)+1,(s.order||[]).length)};
 }
 function dropSession(){ const st=store.read(); delete st.session; store.write(st); S=null; }
 /* A planned day can match 100+ questions, which is far more than the 90-minute
@@ -475,6 +562,7 @@ function taughtBy(doc, date){
 function planFilter(p){
   const weak=weakConcepts();
   return q=>{
+    if((p.concepts||[]).includes("fallback")) return true;
     if((p.concepts||[]).includes("weak")) return (q.concepts||[]).some(c=>weak.has(c));
     const belongs = (p.docs||[]).some(d=>(q.covers||[]).includes(d));
     const allTaught = (q.covers||[]).every(d=>taughtBy(d, p.date));
@@ -489,6 +577,7 @@ function planHeading(p){
   return docs.join(", ") + " — " + p.note;
 }
 function planCount(p){
+  if((p.concepts||[]).includes("fallback")) return Math.min(BANK.length, DAILY_CAP);
   const n = BANK.filter(planFilter(p)).length;
   return Math.min(n, DAILY_CAP);
 }
@@ -509,11 +598,12 @@ function weakReport(){
   const H = hist(), rows = {};
   BANK.forEach(q=>{
     const h = H[q.id]; if(!h) return;
-    const misses = (h.attempts||0) - (h.correct||0);
+    const status=questionStatus(h), misses=status.misses;
     (q.concepts||[]).forEach(c=>{
       const r = rows[c] || (rows[c] = {c, misses:0, attempts:0, wrongNow:0, total:0, seen:0, docs:new Set()});
       r.misses += misses; r.attempts += h.attempts||0;
-      if(!h.lastOk) r.wrongNow++;
+      if(status.state==="wrong") r.wrongNow++;
+      if(status.state==="guessed") r.guessedNow=(r.guessedNow||0)+1;
     });
   });
   BANK.forEach(q=>(q.concepts||[]).forEach(c=>{
@@ -521,8 +611,8 @@ function weakReport(){
     r.total++; if(H[q.id]) r.seen++;
     (q.covers||[]).forEach(d=>r.docs.add(d));
   }));
-  return Object.values(rows).filter(r=>r.misses>0)
-    .sort((a,b)=> b.misses-a.misses || b.wrongNow-a.wrongNow
+  return Object.values(rows).filter(r=>r.misses>0 || r.guessedNow)
+    .sort((a,b)=> (b.wrongNow+(b.guessedNow||0))- (a.wrongNow+(a.guessedNow||0)) || b.misses-a.misses
                   || (META.labels[a.c]||a.c).localeCompare(META.labels[b.c]||b.c));
 }
 function weakReportText(){
@@ -532,7 +622,7 @@ function weakReportText(){
     const fresh = r.total - r.seen;
     return `- ${META.labels[r.c] || r.c} (${[...r.docs].sort().join(", ")}) `
          + `\u2014 missed ${r.misses}\u00d7 in ${r.attempts} attempt${r.attempts===1?"":"s"}`
-         + `; ${r.wrongNow} still wrong; ${fresh} unseen alternate${fresh===1?"":"s"}`;
+         + `; ${r.wrongNow} still wrong${r.guessedNow?`, ${r.guessedNow} correct but guessed`:""}; ${fresh} unseen alternate${fresh===1?"":"s"}`;
   });
   return `OST 520 question bank \u2014 concepts I keep missing (${new Date().toISOString().slice(0,10)})\n`
        + `${rs.length} concept${rs.length===1?"":"s"}, worst first:\n` + lines.join("\n");
@@ -575,7 +665,6 @@ function wireCopy(btnId, preId, label, textFn){
 }
 function renderExport(){
   const H = hist(), n = BANK.filter(q=>H[q.id]).length, wrap = $("exportwrap");
-  if(!n){ wrap.hidden = true; return; }
   wrap.hidden = false;
   $("exportcount").textContent = `${n} question${n===1?"":"s"} answered so far.`;
   wireCopy("copyall", "alltext", "Copy my results", fullExportText);
@@ -585,7 +674,56 @@ function renderExport(){
     pre.hidden = !pre.hidden;
     $("showall").textContent = pre.hidden ? "Show as text" : "Hide text";
   };
+  $("exportbackup").onclick=downloadBackup;
+  $("importbackup").onchange=e=>{ const file=e.target.files&&e.target.files[0]; if(file) readBackup(file); e.target.value=""; };
 }
+
+function backupPayload(){
+  return {schemaVersion:SCHEMA_VERSION,createdAt:new Date().toISOString(),bankFingerprint:BANK_FINGERPRINT,
+    history:cloneData(hist()),activeSession:cloneData(store.read().session||null),
+    theme:localStorage.getItem(KEY+".theme")||null,examMetadata:{exam:META.exam||null,artifactVersion:"static-site-v3"},artifactVersion:"static-site-v3"};
+}
+function downloadBackup(){
+  const blob=new Blob([JSON.stringify(backupPayload(),null,2)],{type:"application/json"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="ost520-backup-"+todayISO()+".json"; a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+function validateBackup(b){
+  if(!b||typeof b!=="object"||Array.isArray(b)) throw new Error("This is not an OST 520 backup file.");
+  if(!Number.isInteger(b.schemaVersion)||b.schemaVersion<2) throw new Error("Unsupported backup schema.");
+  if(b.bankFingerprint!==BANK_FINGERPRINT) throw new Error("This backup belongs to a different question bank, so it was not imported.");
+  if(!b.history||typeof b.history!=="object"||Array.isArray(b.history)) throw new Error("Backup history is missing or malformed.");
+  Object.entries(b.history).forEach(([id,h])=>{ if(!IDS.has(id)||!h||typeof h!=="object"||Array.isArray(h)) throw new Error("Backup contains an invalid question record.");
+    if(h.attempts!=null&&(!Number.isFinite(h.attempts)||h.attempts<0)) throw new Error("Backup has an invalid attempt count.");
+    if(h.correct!=null&&(!Number.isFinite(h.correct)||h.correct<0)) throw new Error("Backup has an invalid correct count.");
+    if(h.attempts!=null&&h.correct!=null&&h.correct>h.attempts) throw new Error("Backup has more correct answers than attempts.");
+    if(h.attemptLog!=null&&!Array.isArray(h.attemptLog)) throw new Error("Backup has a malformed attempt timeline."); });
+  if(b.activeSession && !sessionUsable(b.activeSession)) throw new Error("Backup contains an obsolete or invalid active session.");
+  return true;
+}
+let pendingBackup=null;
+function readBackup(file){
+  const reader=new FileReader(); reader.onerror=()=>alert("Could not read that backup file.");
+  reader.onload=()=>{ try{
+    const b=JSON.parse(String(reader.result)); validateBackup(b); pendingBackup=b;
+    const old=Object.keys(hist()).length, incoming=Object.keys(b.history).length;
+    $("importpreview").innerHTML=`<p>This will replace the progress currently stored in this browser.</p><p><b>Incoming backup:</b> ${incoming} question record${incoming===1?"":"s"}, created ${new Date(b.createdAt).toLocaleString()}.<br><b>Current browser:</b> ${old} question record${old===1?"":"s"}.<br><b>Bank:</b> verified exact match (${BANK.length} questions).</p><p class="note">A recovery copy of the current local progress is saved before restore. This action does not upload anything.</p>`;
+    $("importmodal").hidden=false;
+  }catch(e){ alert(e.message||"Invalid backup."); } };
+  reader.readAsText(file);
+}
+$("cancelimport").onclick=()=>{ pendingBackup=null; $("importmodal").hidden=true; };
+$("confirmimport").onclick=()=>{
+  if(!pendingBackup) return;
+  try{ const incoming=pendingBackup; validateBackup(incoming); const existing=localStorage.getItem(KEY); if(existing) localStorage.setItem(KEY+".recovery",existing);
+    const state={schemaVersion:incoming.schemaVersion,bankFingerprint:incoming.bankFingerprint,history:incoming.history,session:incoming.activeSession||undefined,updatedAt:new Date().toISOString()};
+    if(!state.session) delete state.session; if(!store.write(state)) throw new Error("Could not verify restored progress.");
+    pendingBackup=null; $("importmodal").hidden=true;
+    if(incoming.theme) localStorage.setItem(KEY+".theme",incoming.theme); else localStorage.removeItem(KEY+".theme");
+    const next=localStorage.getItem(KEY+".theme"); next?document.documentElement.setAttribute("data-theme",next):document.documentElement.removeAttribute("data-theme");
+    S=null; renderHome();
+  }catch(e){ alert(e.message||"Restore failed. Your recovery copy was kept."); }
+};
 
 function renderWeak(){
   const rs = weakReport(), wrap = $("weakwrap");
@@ -618,7 +756,9 @@ const isPrereq = d => /^(RR|REF)/.test(d);   // the refresher / reading-review l
 function diagnose(){
   const H = hist();
   const done  = BANK.filter(q=>H[q.id]);
-  const wrong = done.filter(q=>!H[q.id].lastOk);
+  const wrong = done.filter(q=>questionStatus(H[q.id]).state==="wrong");
+  const guessed = done.filter(q=>questionStatus(H[q.id]).state==="guessed");
+  const resolved = done.filter(q=>questionStatus(H[q.id]).state==="resolved");
 
   /* A question that mixes the two layers belongs to neither bucket — counting it
      in both would let one miss inflate the gap it is supposed to measure. */
@@ -636,10 +776,12 @@ function diagnose(){
   }));
 
   const con={};
+  const topics={};
+  done.forEach(q=>{ const r=topics[q.topic]||(topics[q.topic]={topic:q.topic,n:0,ok:0}); r.n++; if(H[q.id].lastOk) r.ok++; });
   BANK.forEach(q=>(q.concepts||[]).forEach(c=>{
     const r = con[c] || (con[c]={c, seen:0, wrong:0, unseen:0, docs:new Set()});
     (q.covers||[]).forEach(d=>r.docs.add(d));
-    if(H[q.id]){ r.seen++; if(!H[q.id].lastOk) r.wrong++; } else r.unseen++;
+    if(H[q.id]){ r.seen++; if(questionStatus(H[q.id]).score>0) r.wrong++; } else r.unseen++;
   }));
   const weak = Object.values(con).filter(r=>r.wrong)
     .sort((a,b)=> b.wrong-a.wrong || a.unseen-b.unseen);
@@ -659,8 +801,21 @@ function diagnose(){
     days = Math.max(0, Math.ceil(ms/86400000));
   }
   const fresh = retest.filter(q=>!H[q.id] && (q.covers||[]).every(d=>taughtBy(d, todayISO()))).length;
-  return {done, wrong, layer, docs:Object.values(docs).sort((a,b)=>a.ok/a.n-b.ok/b.n),
+  return {done, wrong, guessed, resolved, layer, topics:Object.values(topics), docs:Object.values(docs).sort((a,b)=>a.ok/a.n-b.ok/b.n),
           weak, tally, retest:retest.length, repeats, fresh, days};
+}
+
+function shortStem(q){ return q.stem.replace(/<[^>]+>|\{\{fig:[\w.-]+\}\}/g,"").replace(/\s+/g," ").trim().slice(0,180); }
+function analysisText(){
+  const d=diagnose(), H=hist(), lines=[];
+  const item=q=>{ const h=H[q.id], s=questionStatus(h), log=Array.isArray(h.attemptLog)?h.attemptLog.slice(-5).map(x=>x.correct?"✓":"×").join(""):"legacy aggregate"; return `${q.id} | ${q.topic} | ${(q.covers||[]).join("+")} | ${s.state} | ${h.correct||0}/${h.attempts||0} correct; ${s.misses} historical miss(es) | ${h.at?new Date(h.at).toISOString().slice(0,10):"legacy/unknown"} | recent trend: ${log} | reasons: ${(h.reasons||[]).join("+")||"none"} | ${shortStem(q)}`; };
+  lines.push("OST 520 analysis export",`Bank fingerprint: ${BANK_FINGERPRINT}`,`Attempted: ${d.done.length}/${BANK.length}`,`Currently wrong: ${d.wrong.length}`,`Correct but guessed: ${d.guessed.length}`,`Resolved weaknesses: ${d.resolved.length}`,"");
+  lines.push("CURRENTLY WRONG (no answer key included)",...(d.wrong.map(item)||["None"]),"","CORRECT BUT GUESSED",...(d.guessed.map(item)||["None"]),"","WEAK CONCEPTS");
+  (d.weak||[]).forEach(r=>lines.push(`${META.labels[r.c]||r.c} | ${r.wrong}/${r.seen} active signals | ${r.unseen} fresh available | docs: ${[...r.docs].sort().join("+")}`));
+  lines.push("","TOPIC PERFORMANCE"); d.topics.forEach(r=>lines.push(`${r.topic}: ${r.ok}/${r.n} correct`));
+  lines.push("","DOCUMENT PERFORMANCE"); d.docs.forEach(r=>lines.push(`${r.doc}: ${r.ok}/${r.n} correct`));
+  lines.push("",`Reason tags: technique ${d.tally.technique}, content ${d.tally.content}`);
+  return lines.join("\n");
 }
 
 function renderDiag(){
@@ -673,6 +828,8 @@ function renderDiag(){
     <div class="tiles">
       <div class="tile"><div class="v">${acc}<span style="font-size:16px">%</span></div><div class="l">Accuracy so far</div></div>
       <div class="tile"><div class="v">${d.wrong.length}</div><div class="l">Currently wrong</div></div>
+      <div class="tile"><div class="v">${d.guessed.length}</div><div class="l">Correct but guessed</div></div>
+      <div class="tile"><div class="v">${d.resolved.length}</div><div class="l">Resolved weaknesses</div></div>
       <div class="tile"><div class="v">${d.done.length}<span style="font-size:16px">/${BANK.length}</span></div><div class="l">Answered</div></div>
       ${d.days!=null?`<div class="tile"><div class="v">${d.days}</div><div class="l">Days to UE1</div></div>`:""}
     </div>
@@ -687,6 +844,9 @@ function renderDiag(){
         <div class="lpct ${d.layer.lecture.ok/d.layer.lecture.n < d.layer.prereq.ok/d.layer.prereq.n ? "bad":""}">${pct(d.layer.lecture.ok,d.layer.lecture.n)}%</div>
         <div class="note" style="margin:0">${d.layer.lecture.ok} of ${d.layer.lecture.n}</div></div>
     </div>` : ""}
+
+    <p class="label" style="margin-top:26px">Accuracy by topic</p>
+    <div class="dchart">${d.topics.map(r=>`<div class="drow"><span class="ddoc">${r.topic}</span><span class="dtrack"><i style="width:${pct(r.ok,r.n)}%"></i></span><span class="dval"><b>${pct(r.ok,r.n)}%</b> · ${r.ok} of ${r.n}</span></div>`).join("")}</div>
 
     <p class="label" style="margin-top:26px">Accuracy by source document</p>
     <div class="dchart">${d.docs.map(r=>{
@@ -730,7 +890,12 @@ function renderDiag(){
         ${r.wrong>=2?`<span class="again">Tripped ${r.wrong} times, on ${r.wrong} different questions</span>`:""}
         ${note?`<p class="gnote">${note}</p>`:""}</div>`;
     }).join("")}</div>
-    ${d.weak.length>14?`<p class="note">+ ${d.weak.length-14} more concepts below these.</p>`:""}`;
+    ${d.weak.length>14?`<p class="note">+ ${d.weak.length-14} more concepts below these.</p>`:""}
+    <p class="label" style="margin-top:26px">Exact questions to revisit</p>
+    <div class="analysis-list">${[...d.wrong,...d.guessed].length?[...d.wrong,...d.guessed].map(q=>{const h=hist()[q.id],s=questionStatus(h),trend=Array.isArray(h.attemptLog)?h.attemptLog.slice(-5).map(x=>x.correct?"✓":"×").join(" "):"legacy aggregate"; return `<div class="analysis-item"><b>${q.id}</b> · ${s.state} · ${h.correct||0}/${h.attempts||0} correct · ${s.misses} historical misses · ${(q.covers||[]).join(", ")}<br><span class="note">Last seen: ${h.at?new Date(h.at).toLocaleDateString():"legacy/unknown"} · recent trend: ${trend}${(h.reasons||[]).length?" · "+(h.reasons||[]).map(id=>REASONS.find(r=>r.id===id)?.label||id).join(", "):""}<br>${shortStem(q)}</span></div>`;}).join(""):`<p class="note">No current wrong or guessed questions. ${d.resolved.length?d.resolved.length+" previously weak question"+(d.resolved.length===1?" is":"s are")+" currently resolved.":""}</p>`}</div>`;
+  $("analysisexport").hidden=false;
+  wireCopy("copyanalysis","analysistext","Copy analysis for Claude/Codex",analysisText);
+  $("showanalysis").onclick=()=>{ const p=$("analysistext"); p.textContent=analysisText(); p.hidden=!p.hidden; $("showanalysis").textContent=p.hidden?"Show as text":"Hide text"; };
 }
 
 function renderHome(){
@@ -748,7 +913,7 @@ function renderHome(){
         <button class="btn" id="doresume" type="button">Resume at question ${p.at} of ${p.total}</button>
         <button class="btn ghost" id="dropresume" type="button">Discard it</button>
       </div>
-      <p class="note" style="margin:10px 0 0">${p.done} of ${p.total} answered.${saved.adopted?" Carried over from before the daily reset existed &mdash; it resets from tomorrow.":""} Starting anything else below replaces it.</p>`;
+      <p class="note" style="margin:10px 0 0">${p.viewed} viewed · ${p.revealed} worked solutions revealed · ${p.scored} scored · ${p.remaining} remaining.${saved.adopted?" Carried over from before the daily reset existed &mdash; it resets from tomorrow.":""}</p>`;
     $("doresume").onclick  = ()=>{ S = saved; restore(); show("quiz"); renderQ(); };
     $("dropresume").onclick= ()=>{ dropSession(); renderHome(); };
   } else rbox.hidden = true;
@@ -798,12 +963,18 @@ function renderHome(){
     // never advertise a scope the filter does not enforce.
     const heading = planHeading(plan);
     planBox.hidden=false;
-    planBox.innerHTML = `<span class="lab">Today · ${new Date(plan.date+"T12:00").toLocaleDateString(undefined,{weekday:"long",month:"short",day:"numeric"})}</span>
+    const fallback=(plan.concepts||[]).includes("fallback");
+    planBox.innerHTML = `<span class="lab">${fallback?"Review mode":"Today · "+new Date(plan.date+"T12:00").toLocaleDateString(undefined,{weekday:"long",month:"short",day:"numeric"})}</span>
       <b>${heading}</b>
-      ${n ? `<button class="btn" id="dostoday" type="button">Start today&rsquo;s ${n} question${n===1?"":"s"}</button>
+      ${n ? `<button class="btn" id="dostoday" type="button">${fallback?"Start a mixed review":"Start today’s "+n+" question"+(n===1?"":"s")}</button>
              <p class="note" style="margin:10px 0 0">About ${Math.round(n*1.2)}–${Math.round(n*1.6)} min.${pool>n?` ${pool} available — you get ${n} at a time, unseen first.`:""}</p>`
           : `<p class="note" style="margin:8px 0 0">Nothing built for today yet — pick a topic below.</p>`}`;
-    if(n) $("dostoday").onclick=()=>start(planFilter(plan), "Today — "+heading, true, DAILY_CAP);
+    if(n) $("dostoday").onclick=()=>{
+      const fallbackWeak=weakConcepts();
+      const untried=BANK.some(q=>!H[q.id]);
+      const f=fallback && fallbackWeak.size ? q=>(q.concepts||[]).some(c=>fallbackWeak.has(c)) : fallback && untried ? q=>!H[q.id] : fallback ? ()=>true : planFilter(plan);
+      start(f, fallback?"Mixed review":"Today — "+heading, true, DAILY_CAP);
+    };
   } else planBox.hidden=true;
 
   const anyDone = BANK.some(q=>H[q.id]);
@@ -814,7 +985,9 @@ function renderHome(){
   }
   renderWeak();
   renderExport();
-  const missed = BANK.filter(q=>H[q.id] && !H[q.id].lastOk);
+  const wrong = BANK.filter(q=>H[q.id] && questionStatus(H[q.id]).state==="wrong");
+  const guessed = BANK.filter(q=>H[q.id] && questionStatus(H[q.id]).state==="guessed");
+  const review = BANK.filter(q=>H[q.id] && ["wrong","guessed"].includes(questionStatus(H[q.id]).state));
   const fresh  = BANK.filter(q=>!H[q.id]);
   const weak = weakConcepts();
   /* Retesting on material that has not been taught yet would manufacture misses
@@ -825,8 +998,12 @@ function renderHome(){
   const modes = [
     {label:"Everything", sub:`All ${BANK.length}, interleaved the way an exam mixes them`,
      n:BANK.length, filter:()=>true, on:true},
-    {label:"Only what I keep missing", sub:missed.length?"Every question you got wrong or guessed last time":"Nothing missed yet — answer some first",
-     n:missed.length, filter:q=>H[q.id] && !H[q.id].lastOk, on:missed.length>0},
+    {label:"Questions I got wrong", sub:wrong.length?"Questions whose latest scored outcome was wrong":"No current wrong answers",
+     n:wrong.length, filter:q=>H[q.id] && questionStatus(H[q.id]).state==="wrong", on:wrong.length>0},
+    {label:"Questions I guessed", sub:guessed.length?"Correct answers you explicitly marked uncertain":"No correct-but-guessed answers",
+     n:guessed.length, filter:q=>H[q.id] && questionStatus(H[q.id]).state==="guessed", on:guessed.length>0},
+    {label:"Wrong or guessed", sub:review.length?"Every current error and correct-but-uncertain answer":"Nothing to revisit yet",
+     n:review.length, filter:q=>H[q.id] && ["wrong","guessed"].includes(questionStatus(H[q.id]).state), on:review.length>0},
     {label:"Not tried yet", sub:fresh.length?"Questions you have never answered":"You have been through all of them",
      n:fresh.length, filter:q=>!H[q.id], on:fresh.length>0},
     /* Fresh-only is the one that answers "did I trip again?". Re-serving a
@@ -853,7 +1030,28 @@ function renderHome(){
   });
 }
 
-function start(filter, name, preferUnseen, cap){
+function interleavedOrder(qs, seed){
+  const r=rng(seed), bins={}; qs.forEach(q=>(bins[q.topic]||(bins[q.topic]=[])).push(q));
+  Object.keys(bins).forEach(k=>{ bins[k]=shuffled(bins[k],hash(k)^seed).map(x=>x[0]); });
+  const out=[]; let last=null, run=0;
+  while(out.length<qs.length){
+    const keys=Object.keys(bins).filter(k=>bins[k].length);
+    const choices=(run>=2 && keys.some(k=>k!==last)) ? keys.filter(k=>k!==last) : keys;
+    const total=choices.reduce((n,k)=>n+bins[k].length,0); let pick=r()*total;
+    let topic=choices[choices.length-1]; for(const k of choices){ pick-=bins[k].length; if(pick<0){ topic=k; break; } }
+    out.push(bins[topic].shift()); run=topic===last?run+1:1; last=topic;
+  }
+  return out;
+}
+function start(filter, name, preferUnseen, cap, force){
+  const saved=store.read().session;
+  if(!force && sessionUsable(saved) && sessionIsToday(saved)){
+    $("sessionmodal").hidden=false;
+    $("resumepending").onclick=()=>{ $("sessionmodal").hidden=true; S=saved; restore(); show("quiz"); renderQ(); };
+    $("replacepending").onclick=()=>{ $("sessionmodal").hidden=true; dropSession(); start(filter,name,preferUnseen,cap,true); };
+    $("cancelpending").onclick=()=>{ $("sessionmodal").hidden=true; };
+    return;
+  }
   const H=hist();
   let qs = BANK.filter(filter);
   if(preferUnseen){                    // unseen first, then anything previously missed, then the rest
@@ -865,8 +1063,13 @@ function start(filter, name, preferUnseen, cap){
   if(cap && qs.length > cap) qs = qs.slice(0, cap);
   // date is what makes the overnight reset possible; committed is what keeps
   // a re-marked question from counting twice against the same session.
-  S = { name, date:todayISO(), seed:(Date.now()^0x9e3779b9)>>>0, i:0,
-        answers:{}, committed:{}, order:qs.map(q=>q.id) };
+  const seed=(Date.now()^0x9e3779b9)>>>0;
+  /* Topic-weighted sampling retains the source pool's proportions while never
+     allowing more than two consecutive questions from the same topic. */
+  qs=interleavedOrder(qs,seed);
+  const initiallySeen={}; qs.forEach(q=>{ initiallySeen[q.id]=!!H[q.id]; });
+  S = { id:"s-"+Date.now()+"-"+seed.toString(16), name, date:todayISO(), seed, i:0,
+        answers:{}, committed:{}, initiallySeen, order:qs.map(q=>q.id) };
   sync(); show("quiz"); renderQ();
 }
 function show(w){
@@ -888,7 +1091,7 @@ function renderQ(){
   // only report PRIOR attempts — not the answer just given this session
   const showHist = H && !a.checked;
   $("qhist").hidden = !showHist;
-  if(showHist) $("qhist").textContent = H.lastOk ? "got it last time" : "missed last time";
+  if(showHist) $("qhist").textContent = H.lastOk ? (H.lastGuessed?"got it, but guessed":"got it last time") : "missed last time";
 
   $("context").hidden = !q.context;
   if(q.context) $("contexttext").innerHTML=withFigures(q.context);
@@ -976,7 +1179,7 @@ function tagReasons(qid, list){
 }
 
 /* durable per-question history — this is what makes "only what I keep missing" work */
-function commit(q, ok){
+function commit(q, ok, guessed){
   const st=store.read(); st.history=st.history||{};
   const h=st.history[q.id]||{attempts:0,correct:0};
   /* Re-marking a worked problem (or re-answering during "Review answers")
@@ -986,7 +1189,13 @@ function commit(q, ok){
   if(done === undefined){ h.attempts++; if(ok) h.correct++; }
   else if(done !== ok){ ok ? h.correct++ : h.correct=Math.max(0, h.correct-1); }
   S.committed[q.id]=ok;
-  h.lastOk=ok; h.at=Date.now();
+  h.lastOk=ok; h.lastGuessed=ok && guessed===true; h.at=Date.now();
+  h.attemptLog=Array.isArray(h.attemptLog)?h.attemptLog:[];
+  const entry={timestamp:new Date(h.at).toISOString(),correct:ok,guessed:h.lastGuessed,
+    selectedAnswer:q.type==="mcq"?(S.answers[q.id]||{}).pick:null,
+    sessionType:S.name,sessionId:S.id,freshTransfer:!!(S.initiallySeen && !S.initiallySeen[q.id])};
+  const prior=h.attemptLog.findIndex(x=>x && x.sessionId===S.id);
+  if(prior>=0) h.attemptLog[prior]=entry; else h.attemptLog.push(entry);
   st.history[q.id]=h;
   if(!S.done) st.session=S;             // a finished session never comes back
   store.write(st);
@@ -996,7 +1205,7 @@ function advance(){
   const q=current(), a=S.answers[q.id]||{};
   if(!a.checked){
     S.answers[q.id]={...a,checked:true};
-    if(q.type!=="worked") commit(q, a.pick===q.answer && !a.guessed);
+    if(q.type!=="worked") commit(q, a.pick===q.answer, a.guessed);
     renderQ(); sync(); return;
   }
   if(q.type==="worked" && a.ok==null) return;
