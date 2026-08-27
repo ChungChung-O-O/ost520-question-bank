@@ -1319,7 +1319,7 @@ function renderViews(){
   }).join("");
   const active = SOURCE_VIEWS.find(v=>v.id===SCOPE.source) || SOURCE_VIEWS[0];
   $("viewnote").textContent = active.note
-    + (SCOPE.source==="faculty" ? " — the problem sets printed at the end of the lecture PDFs and the collaborative application session." : "");
+    + (SCOPE.source==="faculty" ? " — printed at the end of the lecture PDFs, plus the collaborative application session." : "");
   box.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{
     SCOPE.source=b.dataset.view; writeScope(); applyScope(); renderHome();
   });
