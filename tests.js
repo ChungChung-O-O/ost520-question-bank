@@ -2,13 +2,60 @@
 const assert=require("assert"),fs=require("fs"),vm=require("vm");
 const html=fs.readFileSync("index.html","utf8"), json=JSON.parse(fs.readFileSync("bank.json","utf8"));
 const between=(a,b)=>html.slice(html.indexOf(a)+a.length,html.indexOf(b,html.indexOf(a)));
-const bank=vm.runInNewContext("("+between("const BANK = ",";\nconst META =")+")");
+const bank=vm.runInNewContext("("+between("let BANK = ",";\nconst META =")+")");
 assert.deepStrictEqual(JSON.parse(JSON.stringify(bank)),json,"bank.json must exactly equal embedded BANK");
-assert.equal(bank.length,507); assert.equal(new Set(bank.map(q=>q.id)).size,507);
-assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":122,"Genetics":326,"Epi & Biostats":59});
-assert.equal(bank.filter(q=>q.type==="mcq").length,484); assert.equal(bank.filter(q=>q.type==="worked").length,23);
+assert.equal(bank.length,557); assert.equal(new Set(bank.map(q=>q.id)).size,557);
+assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":143,"Genetics":355,"Epi & Biostats":59});
+assert.equal(bank.filter(q=>q.type==="mcq").length,532); assert.equal(bank.filter(q=>q.type==="worked").length,25);
 assert.equal(bank.filter(q=>/^WK-/.test(q.id)).length,24,"targeted weakness set must remain complete");
-assert(html.includes('507-question OST 520 Unit Exam 1 bank with adaptive practice'),"page metadata must describe the current bank");
+const faculty=bank.filter(q=>q.source==="faculty-practice");
+assert.equal(faculty.length,50,"faculty practice set must remain complete");
+assert.equal(faculty.filter(q=>/^FP-/.test(q.id)).length,50,"faculty questions must use the FP- id space");
+assert.equal(faculty.filter(q=>q.keyed).length,43,"count of faculty items carrying a published answer key changed");
+for(const q of faculty){
+  assert(q.sourceRef && /\S/.test(q.sourceRef),"faculty question must name its source document: "+q.id);
+  assert(["Biochemistry","Genetics","Epi & Biostats"].includes(q.topic),"bad topic: "+q.id);
+}
+const facultyAnswers={"FP-01":3,"FP-02":3,"FP-03":3,"FP-04":0,"FP-05":3,"FP-06":2,"FP-07":3,"FP-08":2,"FP-09":3,"FP-10":1,"FP-11":1,"FP-14":3,"FP-15":1,"FP-16":0,"FP-17":4,"FP-18":1,"FP-19":1,"FP-20":1,"FP-21":0,"FP-22":1,"FP-23":1,"FP-24":2,"FP-25":0,"FP-26":0,"FP-27":0,"FP-28":2,"FP-29":0,"FP-30":1,"FP-31":1,"FP-32":0,"FP-33":3,"FP-34":0,"FP-35":1,"FP-36":2,"FP-37":2,"FP-38":2,"FP-39":2,"FP-40":1,"FP-41":2,"FP-42":1,"FP-43":3,"FP-44":1,"FP-45":0,"FP-46":0,"FP-47":4,"FP-48":0,"FP-49":0,"FP-50":0};
+for(const [id,ans] of Object.entries(facultyAnswers)){
+  const q=bank.find(x=>x.id===id);
+  assert(q,"faculty question missing: "+id);
+  assert.equal(q.answer,ans,"faculty answer key changed: "+id);
+}
+assert.equal(bank.filter(q=>q.type==="worked"&&q.source==="faculty-practice").length,2,"the two short-answer faculty items must stay worked");
+
+// every question is filed under a class and a unit, so the library can shelve it
+for(const q of bank){ assert.equal(q.course,"OST520","question must carry its course: "+q.id); assert.equal(q.unit,"UE1","question must carry its unit: "+q.id); }
+assert(html.includes("let BANK = "),"BANK must be reassignable for the library view");
+assert(html.includes("const ALL_QUESTIONS = BANK.slice()"),"full bank must be retained separately from the view");
+assert(html.includes("function applyScope()"),"library scope filter missing");
+assert(html.includes('id="library"'),"library screen missing");
+assert(html.includes('id="shelf"'),"library shelf missing");
+assert(html.includes('id="crumb"'),"breadcrumb missing");
+assert(html.includes('id="views"'),"source filter control missing");
+assert(html.includes("JSON.stringify(ALL_QUESTIONS)")&&html.includes('"-"+ALL_QUESTIONS.length'),"fingerprint must span the whole bank, not the current view");
+assert(html.includes("const IDS = new Set(ALL_QUESTIONS.map(q=>q.id))"),"id validation must span the whole bank");
+assert(html.includes("sessionInView(saved)"),"resume must be limited to sessions inside the current view");
+
+// library behaviour, exercised through the real boot path
+const SCOPE_KEY="ost520.bank.v2.scope", scoped=v=>boot({[SCOPE_KEY]:JSON.stringify(v)});
+const libBoot=boot();
+assert.equal(vm.runInContext("BANK.length",libBoot.ctx),557,"with no saved scope the whole bank is loaded");
+assert.equal(libBoot.els.get("library").hidden,false,"no saved scope must open the library");
+assert.equal(vm.runInContext("IDS.size",libBoot.ctx),557,"id set must span the whole bank regardless of view");
+const unitBoot=scoped({course:"OST520",unit:"UE1",source:"all"});
+assert.equal(unitBoot.els.get("setup").hidden,false,"a saved unit must open straight into that unit");
+assert.equal(vm.runInContext("BANK.length",unitBoot.ctx),557);
+const facBoot=scoped({course:"OST520",unit:"UE1",source:"faculty"});
+assert.equal(vm.runInContext("BANK.length",facBoot.ctx),50,"faculty view must show only the faculty practice questions");
+assert(vm.runInContext('BANK.every(q=>q.source==="faculty-practice")',facBoot.ctx),"faculty view leaked a non-faculty question");
+const ownBoot=scoped({course:"OST520",unit:"UE1",source:"bank"});
+assert.equal(vm.runInContext("BANK.length",ownBoot.ctx),507,"bank view must exclude the faculty practice questions");
+assert(vm.runInContext('BANK.every(q=>q.source!=="faculty-practice")',ownBoot.ctx),"bank view leaked a faculty question");
+assert.equal(scoped({course:"OST520",unit:"UE2",source:"all"}).els.get("library").hidden,false,"an empty unit must fall back to the library");
+assert.equal(scoped({course:"NOPE",unit:"UE1",source:"all"}).els.get("library").hidden,false,"an unknown course must fall back to the library");
+assert.equal(vm.runInContext("BANK_FINGERPRINT",facBoot.ctx),vm.runInContext("BANK_FINGERPRINT",libBoot.ctx),"the view must not change the backup fingerprint");
+assert(html.includes('557-question OST 520 Unit Exam 1 bank with adaptive practice'),"page metadata must describe the current bank");
 assert(html.includes('New from your Aug 27 performance analysis'),"home must explain the targeted expansion");
 for(const phrase of ["Metabolism, glycolysis, sugar entry","Pedigrees, inheritance, DNA/chromosomes","Study design, screening, bias"]){assert(html.includes(phrase),`topic coverage description missing: ${phrase}`);}
 const weaknessAnswers={"WK-01":2,"WK-02":1,"WK-03":2,"WK-04":1,"WK-05":0,"WK-06":1,"WK-07":1,"WK-08":1,"WK-09":1,"WK-10":0,"WK-11":1,"WK-12":1,"WK-13":1,"WK-14":0,"WK-15":1,"WK-16":1,"WK-17":1,"WK-18":2,"WK-19":2,"WK-20":1,"WK-21":2,"WK-22":1,"WK-23":2,"WK-24":1};
@@ -48,7 +95,7 @@ assert(html.includes("function parseLegacyResults"),"legacy artifact transfer pa
 assert(html.includes("Today&rsquo;s adaptive 40"),"adaptive prescription entry point missing");assert(html.includes("lastConfidence"),"confidence migration missing");assert(html.includes("timezoneOffsetMinutes"),"timezone-aware timeline missing");assert(html.includes("questionReports"),"question report storage missing");
 assert(html.includes('a.pick!=null && !!(a.confidence || ("guessed" in a'),"new MCQ attempts must explicitly record confidence");
 assert(html.includes('guessed:c!=="knew"}; renderQ(); sync();'),"confidence changes must immediately enable the Check button");
-function boot(storage={}){const source=html.slice(html.indexOf("<script>")+8,html.lastIndexOf("</script>")),els=new Map(),el=()=>({hidden:false,style:{},classList:{add(){}},setAttribute(){},appendChild(){},textContent:"",innerHTML:"",click(){}}),document={getElementById:id=>{if(!els.has(id))els.set(id,el());return els.get(id)},createElement:el,querySelectorAll(){return[]},addEventListener(){},documentElement:{setAttribute(){},removeAttribute(){},getAttribute(){return null}}},data=new Map(Object.entries(storage)),localStorage={getItem:k=>data.get(k)||null,setItem:(k,v)=>data.set(k,String(v)),removeItem:k=>data.delete(k)},alerts=[],ctx=vm.createContext({document,localStorage,window:{scrollTo(){}},console,Date,JSON,Math,Set,Map,Array,Object,Number,String,Boolean,RegExp,Error,Blob:function(){},URL:{createObjectURL(){return ""},revokeObjectURL(){}},FileReader:function(){},navigator:{},alert:m=>alerts.push(String(m)),setTimeout(){}});vm.runInContext(source,ctx);return{ctx,data,els,alerts};}
+function boot(storage={}){const source=html.slice(html.indexOf("<script>")+8,html.lastIndexOf("</script>")),els=new Map(),el=()=>({hidden:false,style:{},classList:{add(){}},setAttribute(){},appendChild(){},textContent:"",innerHTML:"",click(){},querySelectorAll(){return[]}}),document={getElementById:id=>{if(!els.has(id))els.set(id,el());return els.get(id)},createElement:el,querySelectorAll(){return[]},addEventListener(){},documentElement:{setAttribute(){},removeAttribute(){},getAttribute(){return null}}},data=new Map(Object.entries(storage)),localStorage={getItem:k=>data.get(k)||null,setItem:(k,v)=>data.set(k,String(v)),removeItem:k=>data.delete(k)},alerts=[],ctx=vm.createContext({document,localStorage,window:{scrollTo(){}},console,Date,JSON,Math,Set,Map,Array,Object,Number,String,Boolean,RegExp,Error,Blob:function(){},URL:{createObjectURL(){return ""},revokeObjectURL(){}},FileReader:function(){},navigator:{},alert:m=>alerts.push(String(m)),setTimeout(){}});vm.runInContext(source,ctx);return{ctx,data,els,alerts};}
 boot();boot({"ost520.bank.v2":"{bad json"});
 const legacyBoot=boot({"ost520.bank.v2":JSON.stringify(legacy)});
 const migratedStored=JSON.parse(legacyBoot.data.get("ost520.bank.v2"));
@@ -58,7 +105,7 @@ vm.runInContext(`pendingBackup={schemaVersion:4,createdAt:new Date().toISOString
 assert.equal(restoreBoot.alerts.length,0,"valid restore must not report failure");assert.equal(restoreBoot.data.get("ost520.bank.v2.theme"),"dark");assert.equal(JSON.parse(restoreBoot.data.get("ost520.bank.v2")).history.B1.correct,1);
 assert.equal(JSON.parse(restoreBoot.data.get("ost520.bank.v2")).questionReports.B1.reason,"unclear","reports must round-trip through restore");
 assert.throws(()=>vm.runInContext('validateBackup({schemaVersion:4,bankFingerprint:BANK_FINGERPRINT,history:{},questionReports:{B1:{reason:"injected"}}})',restoreBoot.ctx),/invalid question report/);
-for(const priorFingerprint of ["fnv1a-2ed224b5-483","fnv1a-56ef5225-483"]){
+for(const priorFingerprint of ["fnv1a-2ed224b5-483","fnv1a-56ef5225-483","fnv1a-ac6648c1-507"]){
   assert.doesNotThrow(()=>vm.runInContext(`validateBackup({schemaVersion:4,bankFingerprint:"${priorFingerprint}",history:{B1:{attempts:1,correct:1,lastOk:true,reasons:[]}}})`,restoreBoot.ctx),`known additive bank version must remain importable: ${priorFingerprint}`);
 }
 vm.runInContext(`S={id:"timeline-test",name:"Test",date:todayISO(),answers:{B1:{pick:1,reasons:["cue"]}},committed:{},initiallySeen:{B1:false},order:["B1"]}; commit(BANK.find(q=>q.id==="B1"),true,"narrowed");`,restoreBoot.ctx);

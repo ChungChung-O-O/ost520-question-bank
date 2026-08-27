@@ -30,7 +30,7 @@ const questions = [
 ];
 
 const htmlPath="index.html", jsonPath="bank.json";
-const html=fs.readFileSync(htmlPath,"utf8"), marker="const BANK = ", endMarker=";\nconst META =";
+const html=fs.readFileSync(htmlPath,"utf8"), marker="let BANK = ", endMarker=";\nconst META =";
 const start=html.indexOf(marker), end=html.indexOf(endMarker,start);
 if(start<0||end<0) throw new Error("Embedded BANK markers not found.");
 const bank=JSON.parse(html.slice(start+marker.length,end));

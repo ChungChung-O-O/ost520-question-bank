@@ -1,9 +1,12 @@
 # OST 520 Question Bank
 
-Self-contained, 507-question practice bank for OST 520 Unit Exam 1. It combines
+Self-contained, 557-question practice bank for OST 520 Unit Exam 1. It combines
 adaptive daily sets, browser-local performance diagnosis, weak-concept retesting,
 worked rationales, confidence tracking, and lossless backup/restore. Previously a
 Claude Artifact, it is now a plain static site that any browser can reach by URL.
+
+The site is organised as a library: **Question Bank &rarr; class &rarr; unit**. OST 520 is
+the only class so far, and Unit 1 the only unit holding questions.
 
 **Live site:** https://chungchung-o-o.github.io/ost520-question-bank/
 
@@ -12,19 +15,75 @@ Claude Artifact, it is now a plain static site that any browser can reach by URL
 | File | What it is |
 |------|------------|
 | `index.html` | The whole app — questions, grading, rationales, progress tracking. No build step, no server, no dependencies. Opening the file directly also works. |
-| `bank.json` | The 507 questions as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
+| `bank.json` | The 557 questions as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
+| `add-faculty-problem-sets.js` | Idempotent ingest of the faculty practice sets. Also records, in comments, which faculty items were deliberately skipped and why. |
+| `add-weakness-questions.js` | Idempotent ingest of the 24 targeted `WK-*` weak-area questions. |
+
+## The library
+
+Every question carries a `course` and a `unit`, and the site shelves them accordingly.
+
+| Level | Values today |
+|-------|--------------|
+| Class | `OST520` |
+| Unit | `UE1` (557 questions). `UE2` and `UE3` are declared in `COURSES` and render as empty shelves until questions carry those unit tags. |
+
+To open a new unit, tag questions with that `unit` value; the shelf stops being
+empty on its own. To add a class, append to the `COURSES` array in `index.html`
+and give its questions the matching `course` value.
+
+Inside a unit, **Which questions** filters by provenance:
+
+| View | Shows |
+|------|-------|
+| Everything | All 557 |
+| Faculty practice | The 50 questions taken from the course's own problem sets |
+| Bank questions | The 507 written for this site |
+
+The chosen class, unit, and view are remembered in `localStorage` under
+`ost520.bank.v2.scope`, so a reload returns you where you were. The view narrows what
+you practise; it never changes the backup fingerprint or which ids a backup validates
+against, both of which always span the whole bank.
 
 ## Contents
 
-507 questions, all Unit Exam 1:
+557 questions, all Unit Exam 1:
 
 | Topic | Questions | Coverage | `src` |
 |-------|-----------|----------|-------|
-| Genetics | 326 | Pedigrees, inheritance, DNA/chromosomes, regulation, refresher prerequisites | `G` |
-| Biochemistry | 122 | Metabolism, glycolysis, sugar entry, PDH/TCA/ETC, redox | `B` |
+| Genetics | 355 | Pedigrees, inheritance, DNA/chromosomes, regulation, population genetics, refresher prerequisites | `G` |
+| Biochemistry | 143 | Metabolism, glycolysis, sugar entry, carbohydrate digestion, PDH/TCA/ETC, redox | `B` |
 | Epi & Biostats | 59 | Study design, screening, bias, association, calculations | `E` |
 
-484 are multiple choice (`"type": "mcq"`), 23 are worked problems (`"type": "worked"`).
+532 are multiple choice (`"type": "mcq"`), 25 are worked problems (`"type": "worked"`).
+
+### Faculty practice questions
+
+The 50 `FP-*` questions come from the practice sets the course itself hands out. They
+were not in a separate folder: each one is printed at the **end of a lecture PDF** under
+`_inputs`, which is why they are easy to miss.
+
+| Source | Ingested |
+|--------|----------|
+| `(007) L - Vitamins - Wilkins.pdf` pp.17-26, "Wilkins Problem Set" | 14 |
+| `(015) L - Population Genetics - Wilkins.pdf` pp.12-20, two sets | 23 |
+| `(006) L - Mendelian Modes of Inheritance - Wilkins.pdf` pp.11-19 | 3 |
+| `(014) L - Factors Modulating Inheritance - Wilkins.pdf` pp.18-20 | 1 |
+| Refresher 6, Carbohydrate tutorial | 3 |
+| Collaborative Application Session 1 (Aug 26 2026) | 6 |
+
+43 of the 50 carry the faculty's own published answer key (`"keyed": true`); the rest were
+answered from the lecture text and are worth a second look. Every one records where it came
+from in `sourceRef`.
+
+Two categories were deliberately **not** ingested, and `add-faculty-problem-sets.js` lists
+both in comments: items that cannot be posed without their figure (identifying vitamins,
+amino acids, or nucleotides from drawn structures; reading an unlabelled pedigree), and
+items already covered by an equivalent bank question. On the first category, note that the
+Vitamins problem set states outright that structures will not be asked on quizzes or exams.
+
+Population genetics was the largest hole this closed: before the ingest, exactly two
+questions in the bank covered lecture 015.
 
 The 24 `WK-*` questions are fresh alternates added from Austin's 2026-08-27
 performance analysis. They target redox carriers, sugar-entry disorders, ETC entry,
@@ -52,6 +111,7 @@ Each element is one question:
   "type": "mcq",
   "context": "",
   "unit": "UE1",
+  "course": "OST520",
   "concepts": ["anabolism-vs-catabolism"],
   "covers": ["L001"]
 }
@@ -67,6 +127,10 @@ Each element is one question:
 | `context` | Shared vignette or data table, present on 28 questions. Empty string otherwise. |
 | `concepts` | Kebab-case concept slugs, for grouping misses by idea rather than by question. |
 | `covers` | Lecture objective IDs the question tests. |
+| `course`, `unit` | Which library shelf the question sits on. |
+| `source` | Present and set to `faculty-practice` on the 50 `FP-*` questions; absent on questions written for this site. |
+| `sourceRef` | On faculty questions: the document and original question number. |
+| `keyed` | On faculty questions: whether the faculty published an answer key for it. |
 
 Options are shuffled at runtime in the app, so `answer` refers to the order in this
 file, not to what a given viewer sees on screen.
@@ -142,13 +206,19 @@ node tests.js
 They verify bank integrity and synchronization, legacy-migration compatibility, review
 queues, deterministic topic interleaving, worked-question scoring semantics, and the
 presence of recovery, import, resume, and analysis safeguards. They also lock the answer
-indices for the manually rebalanced questions so distractor edits cannot silently change
-the keyed answer.
+indices for the manually rebalanced questions and for all 48 multiple-choice faculty
+questions, so distractor edits cannot silently change a keyed answer.
+
+The library is covered behaviourally, not just by string matching: the suite boots the page
+with a saved scope and asserts that the faculty view shows exactly the 50 faculty questions,
+the bank view exactly the other 507, an empty or unknown unit falls back to the library, and
+the backup fingerprint is identical in every view.
 
 ## Regenerating
 
-`index.html` is the source of truth; `bank.json` is derived from the `const BANK = [...]`
-array inside it. If you edit questions, edit them in `index.html` and re-extract, then run
+`index.html` is the source of truth; `bank.json` is derived from the `let BANK = [...]`
+array inside it. `BANK` is declared with `let` because it is reassigned to the current
+library view; `ALL_QUESTIONS` holds the unfiltered array. If you edit questions, edit them in `index.html` and re-extract, then run
 `node tests.js` before publishing.
 
 `rebalance-choices.js` contains reviewed, ID-based option replacements for questions whose
