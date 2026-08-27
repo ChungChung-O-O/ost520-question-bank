@@ -8,6 +8,15 @@ assert.equal(bank.length,483); assert.equal(new Set(bank.map(q=>q.id)).size,483)
 assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":112,"Genetics":312,"Epi & Biostats":59});
 assert.equal(bank.filter(q=>q.type==="mcq").length,460); assert.equal(bank.filter(q=>q.type==="worked").length,23);
 bank.forEach(q=>{ assert(q.rationale&&q.concepts&&q.concepts.length,"rationale/concept required: "+q.id); if(q.type==="mcq")assert(Number.isInteger(q.answer)&&q.answer>=0&&q.answer<q.options.length,"bad answer: "+q.id); else assert.equal(q.answer,null,"worked answer: "+q.id); });
+const rebalancedAnswers={"A2-25":1,"A2-27":1,"A2-14":1,"L022-03":1,"L021-09":1,"L021-08":1,"A2-02":1,"L014-11":1,"A2-08":1,"L012-08":1,"A2-29":1,"L011-05":3,"D10":1,"A2-11":1,"ALT-02":1,"L010-04":1,"L023-01":0,"L009-05":1};
+const keyedMeaning={"A2-25":"paternally expressed","A2-27":"equal-environments assumption","A2-14":"increases LDL-receptor transcription","L022-03":"MZ 25% / DZ 25%","L021-09":"Huntington is coding","L021-08":"Genetic anticipation","A2-02":"alternative splicing","L014-11":"expressed in only one sex","A2-08":"metaphase spindle checkpoint","L012-08":"protects imprints","A2-29":"4 mg beginning one month before conception","L011-05":"Recruiting co-activators","D10":"Recall bias","A2-11":"S-adenosylmethionine","ALT-02":"shared ancestor","L010-04":"Cyclin levels fluctuate","L023-01":"hypertonic solution","L009-05":"recognizes promoter sequences"};
+for(const [id,answer] of Object.entries(rebalancedAnswers)){
+  const q=bank.find(item=>item.id===id);
+  assert(q,`rebalanced question missing: ${id}`);
+  assert.equal(q.answer,answer,`rebalanced answer key changed: ${id}`);
+  assert(q.options[q.answer].includes(keyedMeaning[id]),`rebalanced keyed meaning changed: ${id}`);
+  assert.equal(new Set(q.options).size,q.options.length,`duplicate rebalanced option: ${id}`);
+}
 
 function status(h){if(!h)return"unseen";if(h.lastOk===false)return"wrong";if(h.lastOk===true&&h.lastGuessed)return"guessed";return"correct";}
 const legacy={history:{B1:{attempts:2,correct:1,lastOk:false,at:1,reasons:["didnt-know"]}}};
@@ -39,4 +48,4 @@ const legacyText=`OST 520 question bank — full results export (2026-08-27)\n48
 restoreBoot.ctx.legacyFixture=legacyText;
 const parsedLegacy=vm.runInContext("parseLegacyResults(legacyFixture)",restoreBoot.ctx);
 assert.equal(parsedLegacy.history.B1.attempts,2);assert.equal(parsedLegacy.history.B1.correct,1);assert.equal(parsedLegacy.history.B1.lastOk,false);assert.deepStrictEqual(Array.from(parsedLegacy.history.B1.reasons),["content","cue"]);
-console.log("PASS: integrity, migration compatibility, queues, interleaving, session semantics, backup/import UI guards");
+console.log("PASS: integrity, answer-key safeguards, migration compatibility, queues, interleaving, session semantics, backup/import UI guards");

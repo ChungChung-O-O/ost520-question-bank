@@ -3140,11 +3140,11 @@
     "context": "",
     "stem": "Cases with a disease recall past exposures more thoroughly than controls do. This is:",
     "options": [
-      "Selection bias",
+      "Selection bias caused by differential enrollment",
       "Recall bias, a form of information bias",
-      "Confounding",
-      "Lead-time bias",
-      "Random error"
+      "Confounding caused by unequal exposure prevalence",
+      "Lead-time bias caused by earlier diagnosis",
+      "Observer bias caused by unequal outcome assessment"
     ],
     "answer": 1,
     "rationale": "<strong>Recall bias</strong> &mdash; a type of <strong>information (measurement) bias</strong>, and a classic weakness of <strong>case-control</strong> designs, where exposure is ascertained after the outcome is known. Being ill motivates people to search their memory for a cause. Contrast: <strong>selection bias</strong> is about <em>who ends up in the study</em>; <strong>confounding</strong> is a third variable explaining the association; <strong>random error</strong> is noise, not a systematic distortion. <strong>Bias distorts in a direction; chance does not.</strong>",
@@ -6045,11 +6045,11 @@
     "context": "",
     "stem": "Why does consanguinity raise the risk specifically of <strong>autosomal recessive</strong> disease and not of autosomal dominant disease?",
     "options": [
-      "Related parents have more mutations overall",
-      "Related parents are more likely to carry the SAME rare allele inherited from a shared ancestor, and a recessive condition needs two copies of the same allele",
-      "Consanguinity increases the mutation rate in the offspring",
-      "Recessive alleles are more common than dominant ones in all populations",
-      "Consanguinity causes non-disjunction"
+      "Related parents generate new recessive mutations more frequently during gametogenesis",
+      "Related parents are more likely to carry the same rare allele inherited from a shared ancestor",
+      "Related parents carry more recessive alleles overall than unrelated parents",
+      "Dominant alleles become recessive when inherited from two related parents",
+      "Consanguinity selectively increases meiotic nondisjunction of autosomes"
     ],
     "answer": 1,
     "rationale": "A dominant condition needs <strong>one</strong> mutant allele, so it appears whether or not the parents are related — consanguinity adds nothing. A recessive condition needs <strong>two copies of the same allele</strong>, and for a <em>rare</em> allele the chance that two unrelated people both carry it is very small. <strong>Relatives share a recent common ancestor</strong>, so they are far more likely to carry the same allele identical by descent.<br><br>That is precisely the reasoning in her Frank-and-Jenny case: two identical copies in the child point back to <strong>one</strong> ancestral allele, making both cousins' parents obligate carriers.<br><br><strong>The trap:</strong> &ldquo;more mutations overall&rdquo; is a real-sounding but false mechanism — consanguinity does not create mutations, it <strong>concentrates existing ones into homozygotes</strong>.",
@@ -6687,11 +6687,11 @@
     "context": "",
     "stem": "In <em>E. coli</em>, what does the sigma (σ) factor add to the core RNA polymerase, and why does the cell need it?",
     "options": [
-      "It adds the catalytic activity that the core polymerase lacks, so the core cannot make RNA at all without it",
-      "It directs the polymerase to the start site by recognising the promoter — the core is catalytically active but has no way to find where to begin in a large genome",
-      "It proofreads the newly made RNA",
-      "It terminates transcription at the correct point",
-      "It adds the 5' cap to the transcript"
+      "Sigma supplies the catalytic activity required to polymerize RNA",
+      "Sigma recognizes promoter sequences and directs the core polymerase to transcription start sites",
+      "Sigma proofreads the RNA transcript through 3′→5′ exonuclease activity",
+      "Sigma terminates transcription by recognizing the polyadenylation signal",
+      "Sigma adds the 5′ cap before the core polymerase begins elongation"
     ],
     "answer": 1,
     "rationale": "<strong>Core polymerase is catalytically active but blind</strong> — it can make RNA and has no idea where to start. Add <strong>σ factor</strong> and you have the <strong>holoenzyme</strong>, which recognises the <strong>promoter</strong> and starts at the right place.<br><br>Her rationale for why this matters is the same asymmetry as before: replication copies everything, so a single origin suffices, but transcription must copy <strong>only the bit needed at that moment</strong> — so <em>where</em> and <em>how often</em> to start is the whole regulatory problem. Different σ factors recognising different promoters is how bacteria switch whole programmes on.<br><br><strong>The trap:</strong> &ldquo;adds catalytic activity&rdquo; inverts the relationship. <strong>The core does the chemistry; σ supplies the address.</strong>",
@@ -7154,11 +7154,11 @@
     "context": "",
     "stem": "Which statement about the relationship between cyclins and CDKs is correct?",
     "options": [
-      "Both cyclin and CDK concentrations rise and fall through the cycle in step with one another",
-      "CDKs are made constantly and their concentration does not change; cyclins are synthesised and degraded phase by phase, so it is the cyclin level that fluctuates and determines CDK activity",
-      "Cyclins are the kinases and CDKs are their regulatory partners",
-      "Each CDK pairs with exactly one cyclin and no CDK is reused",
-      "Cyclins phosphorylate CDKs to activate them"
+      "CDK levels fluctuate while cyclin abundance is constant; CDK synthesis controls phase transitions",
+      "Cyclin levels fluctuate while CDK abundance is relatively constant; cyclin binding controls CDK activity",
+      "Cyclins phosphorylate their partner CDKs and are therefore the catalytic subunits",
+      "Each cyclin binds only one unique CDK, and neither partner is reused in another phase",
+      "Cyclins inhibit CDKs until both proteins are degraded at the same checkpoint"
     ],
     "answer": 1,
     "rationale": "<strong>CDKs are serine/threonine kinases made constantly — their concentration does not change.</strong> <strong>Cyclins are made at the start of a phase and destroyed at its end</strong>, so their concentration rises and falls, and <strong>CDK activity therefore tracks cyclin availability</strong>. That is what makes the cycle a clock rather than a switch.<br><br>Mechanically: cyclin binds CDK → the CDK is phosphorylated and its kinase activity turns on → it phosphorylates the proteins, transcription factors and cytoskeletal subunits needed for that phase → the phase completes → <strong>the cyclin is destroyed by ubiquitin-mediated proteasome degradation</strong> and the next cyclin takes over. The four families are <strong>D, E, A and B</strong>, and note that <strong>cyclin A pairs with both CDK2 and CDK1</strong> to regulate different portions of the cycle.<br><br><strong>The trap:</strong> &ldquo;cyclins are the kinases&rdquo; — her own keyed foil explanation says it plainly: <strong>cyclins are not kinases.</strong> The name means <em>cyclical</em>, not <em>catalytic</em>.",
@@ -7703,11 +7703,11 @@
     "context": "",
     "stem": "Eukaryotic transcriptional <strong>activator</strong> proteins stimulate gene expression mainly by:",
     "options": [
-      "Recruiting histones to the promoter so that nucleosomes form over the start site",
-      "Unwinding DNA to expose the template strand",
-      "Binding to the TATA box",
-      "Recruiting general transcription factors and co-activator proteins to specific gene promoters, loosening chromatin so RNAP-II can reach the promoter DNA",
-      "Covalently acetylating RNA polymerase II"
+      "Binding the TATA box in place of the basal transcription machinery",
+      "Directly unwinding the entire gene so RNA polymerase II no longer needs a promoter",
+      "Adding the 5′ cap and poly-A tail before transcription begins",
+      "Recruiting co-activators and general transcription factors that make the promoter accessible to RNA polymerase II",
+      "Covalently modifying the DNA sequence to create a new promoter"
     ],
     "answer": 3,
     "rationale": "Her keyed answer: activators <strong>recruit co-activator proteins that &ldquo;loosen&rdquo; the chromatin structure to allow RNA polymerase II to access the promoter DNA</strong>, and recruit general transcription factors to that promoter.<br><br>The key idea is <strong>indirection</strong>. An activator does not do the chemistry itself and does not transcribe anything — it binds a specific site and <strong>brings in the machinery</strong>. That is why one activator can control genes it has no enzymatic relationship with.<br><br><strong>The trap:</strong> &ldquo;binding to the TATA box&rdquo; is what a <strong>basal</strong> factor does — TFII-D/TBP — not a gene-specific activator, which binds enhancers and responsive elements. And &ldquo;recruiting histones to form nucleosomes&rdquo; would <em>compact</em> chromatin and <strong>repress</strong> transcription: right vocabulary, wrong direction.",
@@ -7993,11 +7993,11 @@
     "context": "",
     "stem": "There are two epigenetic reprogramming events in development. How do they differ, and why do somatic cells only undergo the first?",
     "options": [
-      "Both erase imprints; somatic cells undergo both",
-      "The zygote event, before implantation, erases most DNA methylation to restore totipotency but does NOT affect genomic imprints; the primordial germ cell event, after implantation, DOES erase imprints so they can be reset to match the sex of the embryo — somatic cells skip it because correct expression of imprinted genes is essential for normal somatic development",
-      "The zygote event erases imprints while the germ cell event does not, so the imprint a child inherits is the one their grandparent established, and no resetting occurs at any point between the two generations, which is why imprinting disorders recur in families with the same parental origin every time",
-      "Both events occur only in germ cells",
-      "Reprogramming adds methylation rather than removing it"
+      "The zygote preserves both methylation and imprints; primordial germ cells later erase only non-imprinted methylation",
+      "The zygote erases most methylation but protects imprints; primordial germ cells later erase and reset imprints",
+      "Both events erase genomic imprints, but only the zygote restores totipotency",
+      "Both events preserve genomic imprints while removing histone acetylation",
+      "Only somatic cells undergo the second event, allowing tissue-specific imprinting"
     ],
     "answer": 1,
     "rationale": "Two erasures with different scopes, and the exception in the first is the examinable detail.<br><br><strong>Zygote, pre-implantation:</strong> extensive demethylation of the genome to <strong>re-establish totipotency</strong> — but <strong>imprints are protected</strong>. If imprints were wiped here, every cell in the embryo would lose parent-of-origin dosage control.<br><br><strong>Primordial germ cells, post-implantation:</strong> imprints <strong>are</strong> erased, so they can be <strong>reset according to the sex of the developing embryo</strong> — a man must put male imprints on all his sperm, including on the chromosome he inherited from his mother.<br><br>That last point resolves her worked tables: in <strong>somatic</strong> cells, an egg-derived chromosome 15 keeps the egg pattern forever; in a <strong>male's sperm</strong> cells, that same egg-derived chromosome has been <strong>reset to the male pattern</strong>.<br><br><strong>The trap:</strong> the option that has the zygote erasing imprints. Both events erase methylation, but only the <strong>germline</strong> event touches imprints.",
@@ -8338,11 +8338,11 @@
     "context": "",
     "stem": "Distinguish a <strong>sex-influenced</strong> from a <strong>sex-limited</strong> condition.",
     "options": [
-      "Sex-influenced conditions are X-linked and sex-limited conditions are autosomal, so the distinction is about chromosome location rather than about expression, and any condition expressed in only one sex must therefore sit on a sex chromosome by definition",
-      "Sex-influenced: expressed in both sexes but at significantly different frequencies — male pattern baldness behaves as autosomal dominant in males and autosomal recessive in females. Sex-limited: an autosomal gene expressed in ONE sex only, generally tied to sexual characteristics — beard growth, milk production, or CBAVD in males with mild CFTR mutations",
-      "Both terms mean the same thing",
-      "Sex-limited conditions affect both sexes with different severity",
-      "Sex-influenced conditions cannot be inherited from the father"
+      "Sex-influenced traits are X-linked; sex-limited traits are Y-linked",
+      "Sex-influenced traits occur in both sexes at different frequencies; sex-limited traits are expressed in only one sex",
+      "Sex-influenced traits occur in one sex only; sex-limited traits occur in both at different frequencies",
+      "Sex-influenced traits require hormones; sex-limited traits require mitochondrial inheritance",
+      "Sex-influenced and sex-limited are equivalent terms for autosomal traits"
     ],
     "answer": 1,
     "rationale": "Both are <strong>autosomal</strong> — that is the first thing to fix, because both are routinely mistaken for X-linkage.<br><br><strong>Sex-influenced — expressed in both sexes, at significantly different frequencies.</strong> Her example is <strong>male pattern baldness</strong>, explicitly <strong>NOT an X-linked trait</strong>: it behaves as <strong>autosomal dominant in males and autosomal recessive in females</strong>, so men need one mutant allele and women need two.<br><br><strong>Sex-limited — expressed in ONE sex only</strong>, generally associated with primary or secondary sexual characteristics: <strong>beard growth, milk production in a lactating mother</strong>, and — the clinically useful one — <strong>mild CFTR mutations causing congenital bilateral absence of the vas deferens (CBAVD) in males</strong>.<br><br><strong>The trap:</strong> a sex bias in a pedigree pulls hard toward X-linkage. Recall her rule-out logic from the modes lecture: <strong>a sex bias makes autosomal inheritance less likely but does not rule it out</strong> — and these two categories are exactly why.",
@@ -9139,11 +9139,11 @@
     "context": "",
     "stem": "The age of onset of Huntington disease becomes progressively earlier in successive generations. What is this, and what is its molecular basis?",
     "options": [
-      "Genetic imprinting; methylation increases each generation",
-      "Genetic anticipation, caused by expansion of the number of trinucleotide repeats in the causative gene — likely from polymerase stuttering during replication or defective repair",
-      "Random X-inactivation becoming more skewed",
-      "Multifactorial inheritance accumulating risk alleles",
-      "A microdeletion enlarging over generations"
+      "Genomic imprinting caused by progressive promoter methylation",
+      "Genetic anticipation caused by expansion of an unstable trinucleotide repeat",
+      "Variable expressivity caused by random X-inactivation",
+      "Locus heterogeneity caused by new genes contributing each generation",
+      "Reduced penetrance caused by age-dependent loss of the mutant allele"
     ],
     "answer": 1,
     "rationale": "<strong>Genetic anticipation:</strong> increased frequency of affected relatives, increased severity, or <strong>earlier age of onset in successive generations</strong>. His keyed answer for the molecular basis is <strong>an increase in the number of repeats of certain trinucleotides</strong>, with the instability attributed to <strong>stuttering of DNA polymerase during replication or dysfunctional DNA repair</strong>.<br><br>His historical note is a good reasoning check: anticipation was long dismissed as <strong>&ldquo;bias of ascertainment&rdquo;</strong> — severely affected people get noticed, mildly affected ones have more children. That was a genuinely reasonable alternative explanation, and it was wrong; <strong>the repeats really do expand</strong>.<br><br><strong>The trap:</strong> the imprinting option is the neighbouring topic in the same lecture, and both are parent-of-origin-flavoured phenomena. <strong>Anticipation changes across generations because the DNA physically lengthens; imprinting changes because methylation marks are reset.</strong>",
@@ -9165,11 +9165,11 @@
     "context": "",
     "stem": "How do <strong>Fragile X</strong> and <strong>Huntington disease</strong> differ in the location of their repeat expansion, and what does that predict about the protein?",
     "options": [
-      "Both are coding-region expansions producing polyglutamine tracts",
-      "Fragile X (and myotonic dystrophy) have expansions in NON-coding regions; Huntington has an expansion in a CODING region — most such repeats being CAG, producing a polyglutamine tract in the protein",
-      "Fragile X is coding and Huntington non-coding",
-      "Both are non-coding, so neither alters the protein",
-      "The location is the same; only the repeat length differs"
+      "Fragile X is coding and produces polyglutamine; Huntington is non-coding",
+      "Fragile X is non-coding; Huntington is coding and produces a polyglutamine tract",
+      "Both expansions are coding and therefore produce polyglutamine tracts",
+      "Both expansions are non-coding and silence their genes by methylation",
+      "Both occur in promoters, but only Huntington alters transcript abundance"
     ],
     "answer": 1,
     "rationale": "His Measurable Outcome G asks exactly this. Of the ~15 clinically significant repeat disorders, the split is:<br><strong>Non-coding expansions — Fragile X syndrome, myotonic dystrophy.</strong> The repeat lies outside the reading frame, so the <strong>protein sequence is unchanged</strong>; the damage is to expression or RNA handling.<br><strong>Coding (exonic) expansions — Huntington disease.</strong> <strong>Most are repeats of the codon CAG, giving a polyglutamine tract</strong> in the protein — an abnormal protein rather than an absent one, which is why these tend to be dominant and involve toxic gain of function.<br><br><strong>The trap:</strong> the two disorders are always taught together, so the pairing is the question. Anchor on <strong>CAG = glutamine = coding = Huntington</strong>, and put Fragile X on the other side.",
@@ -9270,11 +9270,11 @@
     "context": "",
     "stem": "Which concordance pattern best represents an environmentally caused phenotype, and which of his examples proves that high concordance does not mean high heritability?",
     "options": [
-      "MZ 100% / DZ 25%; fingerprints",
-      "MZ 25% / DZ 25% — equal rates in both — and measles is the example: MZ 0.95 and DZ 0.87, yet heritability only 0.16",
-      "MZ 65% / DZ 27%; schizophrenia",
-      "MZ 100% / DZ 100%; multiple sclerosis",
-      "MZ 0% / DZ 0%; cleft lip"
+      "MZ 100% / DZ 25%; fingerprints, because high MZ concordance proves environmental causation",
+      "MZ 25% / DZ 25%; measles, because similar concordance can coexist with low heritability",
+      "MZ 65% / DZ 27%; schizophrenia, because any MZ–DZ gap proves purely environmental causation",
+      "MZ 100% / DZ 100%; multiple sclerosis, because equal concordance proves high heritability",
+      "MZ 0% / DZ 0%; cleft lip, because absent concordance proves a shared exposure"
     ],
     "answer": 1,
     "rationale": "<strong>Equal concordance in MZ and DZ twins means genes are contributing nothing to the difference</strong> — the trait tracks the shared environment, which DZ twins share just as much as MZ twins do. His keyed answer is the 25%/25% row.<br><br><strong>Measles is his worked case for Outcome E:</strong> <strong>MZ 0.95, DZ 0.87</strong> — both very high, so twins nearly always share it — yet <strong>H = 2(0.95 − 0.87) = 0.16</strong>. <em>High concordance rate does not always equal &ldquo;highly genetic&rdquo;.</em> Living in the same house during an outbreak explains it.<br><br>Compare from his table: <strong>fingerprints 0.95/0.49 → H 0.92</strong>; <strong>schizophrenia 0.47/0.12 → H 0.70</strong>; <strong>spina bifida 0.72/0.33 → H 0.78</strong>; <strong>cleft lip/palate 0.38/0.08 → H 0.60</strong>; <strong>multiple sclerosis 0.28/0.03 → H 0.50</strong>. Note that <strong>MS has LOW concordance and moderate heritability</strong> — the reverse trap.<br><br><strong>The trap:</strong> reading the MZ number alone. <strong>Only the GAP between MZ and DZ carries information about genes.</strong>",
@@ -9482,11 +9482,11 @@
     "context": "",
     "stem": "Red blood cell membranes are impermeable to solute X. Placing them in which solution makes them shrivel, and what is the driving force?",
     "options": [
-      "A hypertonic solution — water leaves the cell by osmosis, moving from higher water concentration inside to lower outside, driven by osmotic pressure",
-      "A hypotonic solution — water leaves the cell",
-      "An isotonic solution — no net movement occurs but cells still shrink",
-      "A hypotonic solution — solute enters the cell",
-      "A hypertonic solution — solute leaves the cell"
+      "A hypertonic solution; water leaves the cell down its water-concentration gradient",
+      "A hypotonic solution; water leaves the cell down its osmotic gradient",
+      "An isotonic solution; water leaves while impermeant solute enters",
+      "A hypertonic solution; impermeant solute leaves and pulls water with it",
+      "A hypotonic solution; extracellular osmotic pressure compresses the cell"
     ],
     "answer": 0,
     "rationale": "<strong>Hypertonic</strong> means the solution has a <strong>higher solute concentration than the cytosol</strong>, and therefore a <strong>lower water concentration</strong>. <strong>Osmosis is the movement of water from higher [H₂O] to lower [H₂O]</strong> across a membrane permeable to water but not solute, driven by <strong>osmotic pressure</strong> and using <strong>aquaporins</strong>. So water leaves and the cell shrinks.<br><br>Her three-beaker set: <strong>hypertonic → cells shrink · isotonic → no change · hypotonic → cells swell</strong>.<br><br>Osmosis sits under <strong>passive transport (&ldquo;diffusion&rdquo;), energy-independent</strong>, alongside <strong>simple diffusion</strong> — which follows <strong>Fick's law</strong>: the rate is <strong>proportional to the concentration difference across the membrane and inversely proportional to its thickness</strong>.<br><br><strong>The trap:</strong> tracking the <em>solute</em> instead of the water. <strong>The membrane is impermeable to solute — only water can move</strong>, so name the direction water goes and the answer follows.",
@@ -10082,11 +10082,11 @@
     "id": "A2-02",
     "stem": "Alternative splicing of tropomyosin gives one product in striated muscle and another in smooth muscle. What does this demonstrate about the relationship between genes and proteins?",
     "options": [
-      "Each protein isoform must come from a separate gene",
-      "One gene can yield several polypeptides, so the proteome is larger than the genome — and the choice can be tissue-specific, here changing calcium sensitivity between muscle types",
-      "Alternative splicing always produces a non-functional protein",
-      "Tissue differences come from different DNA sequences",
-      "Splicing choice is random in every cell"
+      "Each tissue-specific isoform must be encoded by a separate gene",
+      "One gene can produce tissue-specific protein isoforms through alternative splicing",
+      "Alternative splicing changes genomic DNA differently in each tissue",
+      "Alternative splicing occurs only when the original transcript is defective",
+      "One transcript can be translated in several reading frames without RNA processing"
     ],
     "answer": 1,
     "rationale": "<strong>One gene, several proteins.</strong> Her tropomyosin example is deliberately physiological: the isoform in <strong>striated muscle</strong> differs from the one in <strong>smooth muscle</strong>, so <strong>calcium sensitivity differs between the two tissues</strong> — from the same gene.<br><br>Since <strong>the majority of human multi-exon genes are alternatively spliced</strong>, this is a major reason ~20,000 genes support a far larger proteome. <strong>Regulatory sites that enhance or suppress inclusion</strong> of a given exon choose between versions.<br><br><strong>The trap:</strong> &ldquo;different tissues, different sequence&rdquo; — the same error as euchromatin/heterochromatin. <strong>Every somatic cell has the same DNA; what differs is what is read and how it is cut.</strong>",
@@ -10239,11 +10239,11 @@
     "id": "A2-08",
     "stem": "A cell has completed S phase but one chromosome fails to attach to the mitotic spindle. Which checkpoint should stop it, and what is being asked at each of the late checkpoints?",
     "options": [
-      "The G1 checkpoint asks whether the spindle is assembled correctly before the cell is allowed to proceed into S phase, and arrests it there if any chromosome is left unattached to the apparatus",
-      "The spindle-assembly checkpoint at metaphase asks whether ALL chromosomes are attached to the spindle; the chromosome-segregation checkpoint then asks whether they separated correctly; and the earlier G2 checkpoint asks whether replication is complete",
-      "The S checkpoint, which monitors spindle attachment",
-      "The G0 checkpoint",
-      "No checkpoint monitors spindle attachment"
+      "The G2 checkpoint tests spindle attachment; metaphase tests whether replication is complete",
+      "The metaphase spindle checkpoint tests attachment; G2 tests completion of DNA replication",
+      "The G1 checkpoint tests spindle attachment; G2 tests chromosome separation",
+      "The S-phase checkpoint tests chromosome separation; metaphase tests DNA damage repair",
+      "The chromosome-segregation checkpoint acts before spindle attachment is assessed"
     ],
     "answer": 1,
     "rationale": "Each checkpoint asks one question, and the questions are in physical order:<br><strong>G1</strong> — is the DNA undamaged, and are nutrients, size and environment favourable? (&ldquo;START&rdquo;, containing the restriction point.)<br><strong>S</strong> — is the DNA being copied cleanly? Slows synthesis if damage appears.<br><strong>G2</strong> — <strong>is replication complete?</strong> DNA must be fully duplicated before mitosis or the genome is divided unevenly.<br><strong>Metaphase</strong> — <strong>spindle-assembly</strong>: are all chromosomes attached? Then <strong>chromosome-segregation</strong>: did they separate correctly?<br><br>An unattached chromosome would be pulled to the wrong pole and produce <strong>aneuploid daughters</strong> — which is the mitotic non-disjunction that causes mosaicism.<br><br><strong>The trap:</strong> the G2 checkpoint is often described loosely as &ldquo;the mitosis checkpoint&rdquo;. It checks <strong>replication</strong>; spindle attachment is checked later, at metaphase.",
@@ -10321,11 +10321,11 @@
     "id": "A2-11",
     "stem": "What is the methyl donor for DNA methylation, and what does that connect it to?",
     "options": [
-      "ATP, connecting it to energy metabolism",
-      "S-adenosyl-methionine (SAM), which links DNA methylation to one-carbon metabolism — and therefore to folate and B12, whose coenzymes supply and transfer methyl groups",
-      "NADPH, connecting DNA methylation to reductive biosynthesis and therefore to the pentose phosphate pathway that generates it",
-      "Acetyl-CoA, connecting it to the TCA cycle",
-      "Methylene blue"
+      "ATP, linking methylation directly to cellular energy charge",
+      "S-adenosylmethionine, linking methylation to one-carbon metabolism",
+      "NADPH, linking methylation to the pentose-phosphate pathway",
+      "Acetyl-CoA, linking DNA methylation to histone acetylation",
+      "Tetrahydrobiopterin, linking methylation to aromatic amino-acid synthesis"
     ],
     "answer": 1,
     "rationale": "<strong>SAM (S-adenosyl-methionine)</strong> is the universal methyl donor, and the <strong>DNMTs transfer the methyl group from SAM to the cytosine of a CpG dinucleotide</strong>.<br><br>The connection worth carrying is nutritional. SAM is made from <strong>methionine</strong>, and methionine is regenerated from homocysteine by <strong>homocysteine methyltransferase — a B12 enzyme using a methyl group supplied by folate's THF</strong>. So <strong>folate and B12 status feed directly into the cell's capacity to methylate DNA</strong>, tying the vitamins lecture to the epigenetics lecture.<br><br><strong>The trap:</strong> reaching for ATP because phosphorylation is the modification you meet most often. <strong>Each modification has its own activated donor: ATP for phosphate, acetyl-CoA for acetyl, SAM for methyl.</strong>",
@@ -10400,11 +10400,11 @@
     "id": "A2-14",
     "stem": "A statin lowers intracellular cholesterol in a hepatocyte. What happens to SREBP, and why does that explain the drug's effect on LDL receptors?",
     "options": [
-      "High cholesterol releases SREBP, so LDL receptors fall",
-      "LOW cholesterol sends the SREBP precursor from the ER to the Golgi, where two proteases free its cytoplasmic domain; that fragment enters the nucleus, binds the sterol regulatory element via its DBD and activates cholesterol-metabolism genes — including the LDL receptor, so the liver clears more LDL from blood",
-      "SREBP is degraded when cholesterol is low",
-      "SREBP is a soluble cytosolic protein with no membrane phase at all, so it is free to enter the nucleus whenever cholesterol falls, without any proteolytic processing being required first",
-      "SREBP acts only in the intestine"
+      "Low cholesterol retains SREBP in the ER, reducing LDL-receptor transcription",
+      "Low cholesterol permits Golgi cleavage of SREBP, whose released domain increases LDL-receptor transcription",
+      "Low cholesterol sends SREBP to lysosomes, increasing LDL-receptor recycling without transcription",
+      "High cholesterol permits Golgi cleavage of SREBP, increasing LDL-receptor transcription",
+      "Low cholesterol lets intact membrane-bound SREBP enter the nucleus without proteolysis"
     ],
     "answer": 1,
     "rationale": "<strong>SREBP is a transmembrane protein in the ER membrane</strong>, and <strong>low cholesterol</strong> is the trigger: the precursor moves to the <strong>Golgi</strong>, where <strong>two proteases cleave the cytoplasmic domain free</strong>. That fragment carries a <strong>DBD that binds the sterol regulatory element</strong> and a <strong>TRD that activates cholesterol-metabolism genes</strong>.<br><br>The physiology is a negative feedback loop, and it is the whole basis of statin therapy: block synthesis → intracellular cholesterol falls → <strong>SREBP is released → LDL receptor transcription rises → hepatocytes pull more LDL out of the blood</strong>. The serum drop comes as much from increased clearance as from decreased synthesis.<br><br><strong>The trap:</strong> assuming a pathway is switched on by the thing it makes. <strong>Low cholesterol turns it ON</strong> — that is what a feedback loop restoring supply must do.",
@@ -10688,11 +10688,11 @@
     "id": "A2-25",
     "stem": "A newborn has profound hypotonia and poor feeding and is initially thought to have Down syndrome; the karyotype is normal. By age 4 he is obese from relentless food-seeking, with small hands and feet and hypogonadism. What is the diagnosis and the imprinting basis?",
     "options": [
-      "Angelman syndrome — the sperm-derived imprint is missing",
-      "Prader-Willi syndrome — 15q11-q13 carries only the EGG-derived imprint, so the genes normally expressed from the sperm-derived chromosome are lost",
-      "Down syndrome mosaicism",
-      "Williams syndrome",
-      "Turner syndrome"
+      "Angelman syndrome — loss of the maternally expressed 15q11-q13 contribution",
+      "Prader-Willi syndrome — loss of the paternally expressed 15q11-q13 contribution",
+      "Prader-Willi syndrome — loss of the maternally expressed 15q11-q13 contribution",
+      "Angelman syndrome — loss of the paternally expressed 15q11-q13 contribution",
+      "Prader-Willi syndrome — biallelic expression of 15q11-q13"
     ],
     "answer": 1,
     "rationale": "<strong>Prader-Willi.</strong> His biphasic course is the recognisable signature: <strong>neonatal hypotonia — which he warns looks a lot like trisomy 21, don't be fooled</strong> — <strong>poor feeding and failure to thrive up to age 2</strong>, then a reversal to <strong>voracious eating and food-stealing</strong>, with <strong>short stature, small hands and feet, micropenis and hypogonadism, microcephaly, obesity, sometimes albinism, an inability to regurgitate</strong>, and being notably good at puzzles.<br><br>The mechanism: <strong>15q11-q13 carries only the egg-derived imprint</strong>, on which <strong>ZNF127, NDN, SNRPN and IPW are methylated and silent</strong> — so their activity, normally supplied by the sperm-derived chromosome, is absent. <strong>Prader-Willi = the sperm's contribution is missing.</strong><br><br><strong>The trap:</strong> the normal karyotype. Many cases are a <strong>microdeletion at 15q11</strong> below karyotype resolution, and others are <strong>uniparental disomy</strong> with no deletion at all — a normal karyotype does not exclude it.",
@@ -10741,11 +10741,11 @@
     "id": "A2-27",
     "stem": "Which is a genuine limitation of twin studies that would bias heritability estimates <strong>upward</strong>?",
     "options": [
-      "MZ twins share only 50% of their genes",
-      "MZ twins may be treated more similarly than DZ twins, so their shared ENVIRONMENT is also greater — inflating MZ concordance and attributing to genes what is partly environment",
-      "DZ twins share 100% of their genes",
-      "Twin studies cannot be performed on common diseases",
-      "Concordance rates cannot be measured accurately"
+      "MZ twins share all their alleles whereas DZ twins share about half, so the comparison itself is invalid",
+      "MZ twins may receive more similar treatment than DZ twins, violating the equal-environments assumption",
+      "Heritability cannot be estimated unless MZ concordance is exactly 100%",
+      "DZ twins raised together do not share meaningful environmental exposures",
+      "Equal MZ and DZ concordance necessarily proves that the phenotype is not familial"
     ],
     "answer": 1,
     "rationale": "The whole method rests on one assumption: <strong>MZ and DZ twins differ in genetic sharing but NOT in environmental sharing.</strong> If <strong>MZ environments are more similar</strong> — dressed alike, treated alike, closer socially — then part of the MZ excess is environmental, and <strong>H = 2(C<sub>MZ</sub> − C<sub>DZ</sub>) attributes it to genes</strong>. The estimate is inflated.<br><br>Her other two: <strong>post-fertilisation somatic mutations</strong> mean MZ twins are not perfectly identical, and the <strong>in-utero environment may differ between MZ pairs</strong> (shared versus separate placentas, unequal blood supply) — both of which push the other way.<br><br><strong>Adoption studies</strong> attack the same assumption from outside, but cannot separate the <strong>in-utero environment</strong>.<br><br><strong>The trap:</strong> the sharing figures. <strong>MZ ~100%, DZ ~50%</strong> — reversing them destroys the formula.",
@@ -10793,11 +10793,11 @@
     "id": "A2-29",
     "stem": "A woman with a previous child with spina bifida plans another pregnancy. What folic acid dose and timing, and what proportion of open neural tube defects can be prevented?",
     "options": [
-      "0.4 mg starting at the first prenatal visit; about 10%",
-      "4 mg — ten times the standard 0.4 mg — beginning one month BEFORE conception and continuing through the first two months of gestation; 50–70% of open NTDs may be avoided",
-      "4 mg starting in the third trimester; about 30%",
-      "0.4 mg throughout pregnancy only; about 50%",
-      "No supplementation is indicated with a prior affected child"
+      "0.4 mg beginning at the first prenatal visit; approximately 10% prevention",
+      "4 mg beginning one month before conception through the first two gestational months; approximately 50–70% prevention",
+      "4 mg beginning after neural-tube closure; approximately 50–70% prevention",
+      "0.4 mg beginning one month before conception; approximately 90–100% prevention",
+      "1 mg beginning in the second trimester; approximately 30% prevention"
     ],
     "answer": 1,
     "rationale": "<strong>4 mg with a history of NTD</strong> — a <strong>ten-fold</strong> increase on the standard <strong>0.4 mg for all women</strong> — starting <strong>one month before conception</strong> and continuing through the <strong>first two months</strong>. Effect: <strong>50–70% of open NTDs may be avoided</strong>.<br><br>The timing is the examinable part, and it follows from embryology: <strong>the neural tube closes at about 4 weeks' gestation</strong>, when many women do not yet know they are pregnant. <strong>Starting at the first prenatal visit is too late.</strong><br><br>Her risk figures for the counselling: population risk <strong>1/500–1/1000</strong>, rising to <strong>~3% (1/33) for a first-degree relative</strong>.<br><br><strong>The trap:</strong> the dose is easy and the timing is what is actually missed. <strong>Anchor on the four-week closure and work backwards.</strong>",

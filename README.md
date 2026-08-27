@@ -81,6 +81,10 @@ results from the old Claude artifact**, which validates and restores the legacy 
 results export. Legacy text restores scored per-question aggregates and reason tags, but not
 an unfinished session or theme because the old export never contained those fields.
 
+For an offline conversion, run `node convert-legacy-export.js INPUT.txt OUTPUT.json`, then
+import the generated JSON backup from the home screen. The converter validates every
+question ID and never writes personal performance data into the repository.
+
 The **Diagnosis** screen and **Copy analysis for Claude/Codex** describe wrong and
 correct-but-guessed questions, concepts, source documents, reason tags, and fresh retest
 availability. That analysis export intentionally excludes correct answers and rationales.
@@ -104,10 +108,16 @@ node tests.js
 
 They verify bank integrity and synchronization, legacy-migration compatibility, review
 queues, deterministic topic interleaving, worked-question scoring semantics, and the
-presence of recovery, import, resume, and analysis safeguards.
+presence of recovery, import, resume, and analysis safeguards. They also lock the answer
+indices for the manually rebalanced questions so distractor edits cannot silently change
+the keyed answer.
 
 ## Regenerating
 
 `index.html` is the source of truth; `bank.json` is derived from the `const BANK = [...]`
 array inside it. If you edit questions, edit them in `index.html` and re-extract, then run
 `node tests.js` before publishing.
+
+`rebalance-choices.js` contains reviewed, ID-based option replacements for questions whose
+correct choice was disproportionately explanatory. Running it updates both bank copies
+while preserving question IDs, concepts, rationales, and answer indices.
