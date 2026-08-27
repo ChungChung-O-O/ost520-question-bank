@@ -264,6 +264,7 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:22px;margin:30px
   font-family:ui-monospace,Menlo,monospace;font-size:12px;line-height:1.55;white-space:pre;
   max-height:340px;overflow-y:auto;margin:0}
 .backup-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+.confidence{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px;color:var(--muted);font-size:14px}.confidence label{display:flex;gap:4px;align-items:center;cursor:pointer}.confidence input{accent-color:var(--hema)}
 .filepick{position:relative;overflow:hidden}
 .filepick input{position:absolute;inset:0;opacity:0;cursor:pointer}
 .analysis-list{display:grid;gap:8px;margin-top:12px}
@@ -336,8 +337,10 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:22px;margin:30px
         <button class="btn ghost" id="showall" type="button">Show as text</button>
       </div>
       <pre id="alltext" hidden style="margin-top:12px"></pre>
+      <p class="note" id="backupstatus" style="margin:12px 0 0"></p>
       <div class="backup-actions">
         <button class="btn ghost" id="exportbackup" type="button">Download full backup</button>
+        <button class="btn ghost" id="confirmbackup" type="button" hidden>I saved the backup</button>
         <label class="btn ghost filepick">Import backup<input id="importbackup" type="file" accept="application/json,.json"></label>
       </div>
       <details style="margin-top:14px">
@@ -360,10 +363,9 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:22px;margin:30px
       <p class="stem" id="stem"></p>
       <p class="prompt" id="prompt" hidden>Work it out on paper first, then reveal the solution and mark yourself honestly.</p>
       <div class="opts" id="opts"></div>
-      <label class="guess" id="guesswrap">
-        <input type="checkbox" id="guess">
-        <span>I guessed &mdash; flag this even if it&rsquo;s right</span>
-      </label>
+      <div class="confidence" id="confidencewrap" role="group" aria-label="How confident were you?">
+        <span>Confidence:</span><label><input type="radio" name="confidence" value="knew"> Knew it</label><label><input type="radio" name="confidence" value="narrowed"> Narrowed to two</label><label><input type="radio" name="confidence" value="guessed"> Guessed</label>
+      </div>
       <div id="feedback" hidden>
         <p class="verdict" id="verdict"></p>
         <div class="why" id="why"></div>
@@ -375,6 +377,7 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:22px;margin:30px
           <p class="label" style="margin:0">Why did it go wrong? <span style="text-transform:none;letter-spacing:0;font-weight:400">Tap all that apply.</span></p>
           <div class="rgrid" id="rgrid"></div>
         </div>
+        <div class="reasons" id="reportwrap" hidden><p class="label" style="margin:0">Flag this question</p><div class="rgrid" id="reportgrid"></div></div>
       </div>
     </div>
   </section>
@@ -437,10 +440,17 @@ const TOPICS = [
   {name:"Genetics",       src:"G", blurb:"RR3 pedigrees & modes, L015, refresher prerequisites"},
   {name:"Epi & Biostats", src:"E", blurb:"L016–L020 · calculations plus exam-format questions"}
 ];
+const REPORT_REASONS=[
+  {id:"ambiguous",label:"More than one defensible answer"},
+  {id:"answer-cue",label:"The correct answer gives itself away"},
+  {id:"out-of-scope",label:"Not supported by course material"},
+  {id:"unclear",label:"Stem or wording is unclear"},
+  {id:"rationale-conflict",label:"Explanation contradicts the keyed answer"}
+];
 
 /* Progress is deliberately local-only.  v2 records remain valid: migration only
    adds fields that did not exist before, and never fabricates an attempt log. */
-const SCHEMA_VERSION = 3;
+const SCHEMA_VERSION = 4;
 function stableBankFingerprint(){
   let h=2166136261, s=JSON.stringify(BANK);
   for(let i=0;i<s.length;i++){ h^=s.charCodeAt(i); h=Math.imul(h,16777619); }
@@ -459,7 +469,12 @@ function migrateState(raw){
     /* Undefined preserves legacy uncertainty; false means a recorded non-guess. */
     if("lastGuessed" in h && typeof h.lastGuessed!=="boolean"){ delete h.lastGuessed; changed=true; }
     if("attemptLog" in h && !Array.isArray(h.attemptLog)){ delete h.attemptLog; changed=true; }
+    if(!h.lastConfidence && h.lastGuessed===true){ h.lastConfidence="guessed"; changed=true; }
+    if(h.lastConfidence && !["knew","narrowed","guessed"].includes(h.lastConfidence)){ delete h.lastConfidence; changed=true; }
   });
+  if(!base.questionReports || typeof base.questionReports!=="object" || Array.isArray(base.questionReports)){ base.questionReports={}; changed=true; }
+  if(!base.reviewedConcepts || typeof base.reviewedConcepts!=="object" || Array.isArray(base.reviewedConcepts)){ base.reviewedConcepts={}; changed=true; }
+  if(!base.backupMetadata || typeof base.backupMetadata!=="object" || Array.isArray(base.backupMetadata)){ base.backupMetadata={}; changed=true; }
   base.schemaVersion=SCHEMA_VERSION;
   base.bankFingerprint=base.bankFingerprint || BANK_FINGERPRINT;
   base.updatedAt=base.updatedAt || new Date().toISOString();
@@ -497,7 +512,7 @@ function withFigures(html){
 function questionStatus(h){
   if(!h) return {state:"unseen",score:0,misses:0};
   const attempts=Math.max(0,Number(h.attempts)||0), correct=Math.max(0,Number(h.correct)||0);
-  const misses=Math.max(0,attempts-correct), wrong=h.lastOk===false, guessed=h.lastOk===true && h.lastGuessed===true;
+  const misses=Math.max(0,attempts-correct), wrong=h.lastOk===false, guessed=h.lastOk===true && (h.lastConfidence==="narrowed"||h.lastConfidence==="guessed"||h.lastGuessed===true);
   /* Current errors matter most; historical misses are a smaller signal.  A
      detailed timeline is used only when newer records actually contain one. */
   const recent=h.at && Date.now()-Number(h.at)<=14*86400000;
@@ -644,12 +659,12 @@ function fullExportText(){
     const h = H[q.id];
     const when = h.at ? new Date(h.at).toISOString().slice(0,10) : "";
     return [q.id, q.topic, (q.covers||[]).join("+"), h.attempts||0, h.correct||0,
-            h.lastOk?1:0, when, (h.reasons||[]).join("+")].join(",");
+            h.lastOk?1:0, when, (h.reasons||[]).join("+"),h.lastConfidence||"legacy"].join(",");
   });
   const wrongNow = BANK.filter(q=>H[q.id] && !H[q.id].lastOk).length;
   return `OST 520 question bank — full results export (${new Date().toISOString().slice(0,10)})\n`
        + `${BANK.length} in the bank · ${rows.length} attempted · ${wrongNow} currently wrong\n`
-       + `id,topic,docs,attempts,correct,lastOk,lastSeen,reasons\n`
+       + `id,topic,docs,attempts,correct,lastOk,lastSeen,reasons,confidence\n`
        + rows.join("\n");
 }
 /* One copy handler for both panels, because the clipboard call fails silently
@@ -673,6 +688,11 @@ function renderExport(){
   const H = hist(), n = BANK.filter(q=>H[q.id]).length, wrap = $("exportwrap");
   wrap.hidden = false;
   $("exportcount").textContent = `${n} question${n===1?"":"s"} answered so far.`;
+  const backupAt=(store.read().backupMetadata||{}).lastBackupAt;
+  const age=backupAt ? Date.now()-new Date(backupAt).getTime() : Infinity;
+  $("backupstatus").textContent=!backupAt ? "No confirmed backup yet. Download one before clearing site data or switching devices."
+    : age>7*86400000 ? `Last confirmed backup: ${new Date(backupAt).toLocaleString()} — a fresh backup is recommended.`
+    : `Last confirmed backup: ${new Date(backupAt).toLocaleString()}.`;
   wireCopy("copyall", "alltext", "Copy my results", fullExportText);
   $("showall").onclick = ()=>{
     const pre = $("alltext");
@@ -688,11 +708,14 @@ function renderExport(){
 function backupPayload(){
   return {schemaVersion:SCHEMA_VERSION,createdAt:new Date().toISOString(),bankFingerprint:BANK_FINGERPRINT,
     history:cloneData(hist()),activeSession:cloneData(store.read().session||null),
-    theme:localStorage.getItem(KEY+".theme")||null,examMetadata:{exam:META.exam||null,artifactVersion:"static-site-v3"},artifactVersion:"static-site-v3"};
+    questionReports:cloneData(store.read().questionReports||{}),reviewedConcepts:cloneData(store.read().reviewedConcepts||{}),
+    backupMetadata:cloneData(store.read().backupMetadata||{}),theme:localStorage.getItem(KEY+".theme")||null,
+    examMetadata:{exam:META.exam||null,artifactVersion:"static-site-v4"},artifactVersion:"static-site-v4"};
 }
 function downloadBackup(){
   const blob=new Blob([JSON.stringify(backupPayload(),null,2)],{type:"application/json"});
   const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="ost520-backup-"+todayISO()+".json"; a.click();
+  $("backupstatus").textContent="Backup download started. Once the JSON file is saved, confirm it here."; $("confirmbackup").hidden=false;
   setTimeout(()=>URL.revokeObjectURL(a.href),1000);
 }
 function validateBackup(b){
@@ -706,6 +729,8 @@ function validateBackup(b){
     if(h.attempts!=null&&h.correct!=null&&h.correct>h.attempts) throw new Error("Backup has more correct answers than attempts.");
     if(h.attemptLog!=null&&!Array.isArray(h.attemptLog)) throw new Error("Backup has a malformed attempt timeline."); });
   if(b.activeSession && !sessionUsable(b.activeSession)) throw new Error("Backup contains an obsolete or invalid active session.");
+  if(b.questionReports!=null && (typeof b.questionReports!=="object"||Array.isArray(b.questionReports))) throw new Error("Backup has malformed question reports.");
+  Object.entries(b.questionReports||{}).forEach(([id,r])=>{ if(!IDS.has(id)||!r||typeof r!=="object"||!REPORT_REASONS.some(x=>x.id===r.reason)) throw new Error("Backup contains an invalid question report."); });
   return true;
 }
 function parseLegacyResults(text){
@@ -748,7 +773,7 @@ $("cancelimport").onclick=()=>{ pendingBackup=null; $("importmodal").hidden=true
 $("confirmimport").onclick=()=>{
   if(!pendingBackup) return;
   try{ const incoming=pendingBackup; validateBackup(incoming); const existing=localStorage.getItem(KEY); if(existing) localStorage.setItem(KEY+".recovery",existing);
-    const state={schemaVersion:incoming.schemaVersion,bankFingerprint:incoming.bankFingerprint,history:incoming.history,session:incoming.activeSession||undefined,updatedAt:new Date().toISOString()};
+    const state={schemaVersion:incoming.schemaVersion,bankFingerprint:incoming.bankFingerprint,history:incoming.history,questionReports:incoming.questionReports||{},reviewedConcepts:incoming.reviewedConcepts||{},backupMetadata:incoming.backupMetadata||{},session:incoming.activeSession||undefined,updatedAt:new Date().toISOString()};
     if(!state.session) delete state.session; if(!store.write(state)) throw new Error("Could not verify restored progress.");
     pendingBackup=null; $("importmodal").hidden=true;
     if(incoming.theme) localStorage.setItem(KEY+".theme",incoming.theme); else localStorage.removeItem(KEY+".theme");
@@ -756,6 +781,8 @@ $("confirmimport").onclick=()=>{
     S=null; renderHome();
   }catch(e){ alert(e.message||"Restore failed. Your recovery copy was kept."); }
 };
+
+$("confirmbackup").onclick=()=>{ const st=store.read(); st.backupMetadata={...(st.backupMetadata||{}),lastBackupAt:new Date().toISOString(),bankFingerprint:BANK_FINGERPRINT}; if(store.write(st)){ $("backupstatus").textContent="Last confirmed backup: "+new Date(st.backupMetadata.lastBackupAt).toLocaleString(); $("confirmbackup").hidden=true; } };
 
 function renderWeak(){
   const rs = weakReport(), wrap = $("weakwrap");
@@ -833,8 +860,12 @@ function diagnose(){
     days = Math.max(0, Math.ceil(ms/86400000));
   }
   const fresh = retest.filter(q=>!H[q.id] && (q.covers||[]).every(d=>taughtBy(d, todayISO()))).length;
+  const timeline=[]; done.forEach(q=>(Array.isArray(H[q.id].attemptLog)?H[q.id].attemptLog:[]).forEach((a,i)=>timeline.push({...a,id:q.id,index:i})));
+  const first=timeline.filter(a=>a.attemptNumber===1), repeat=timeline.filter(a=>a.attemptNumber>1), rate=a=>a.length?Math.round(a.filter(x=>x.correct).length/a.length*100):null;
+  const daily={}; timeline.forEach(a=>{const day=a.localDate||(a.timestamp||"").slice(0,10); if(!day)return; const r=daily[day]||(daily[day]={n:0,ok:0});r.n++;if(a.correct)r.ok++;});
+  const mastered=done.filter(q=>questionStatus(H[q.id]).state==="resolved").length;
   return {done, wrong, guessed, resolved, layer, topics:Object.values(topics), docs:Object.values(docs).sort((a,b)=>a.ok/a.n-b.ok/b.n),
-          weak, tally, retest:retest.length, repeats, fresh, days};
+          weak, tally, retest:retest.length, repeats, fresh, days,reports:store.read().questionReports||{},reviewed:store.read().reviewedConcepts||{},timeline,firstRate:rate(first),repeatRate:rate(repeat),daily,mastered};
 }
 
 function shortStem(q){ return q.stem.replace(/<[^>]+>|\{\{fig:[\w.-]+\}\}/g,"").replace(/\s+/g," ").trim().slice(0,180); }
@@ -846,7 +877,10 @@ function analysisText(){
   (d.weak||[]).forEach(r=>lines.push(`${META.labels[r.c]||r.c} | ${r.wrong}/${r.seen} active signals | ${r.unseen} fresh available | docs: ${[...r.docs].sort().join("+")}`));
   lines.push("","TOPIC PERFORMANCE"); d.topics.forEach(r=>lines.push(`${r.topic}: ${r.ok}/${r.n} correct`));
   lines.push("","DOCUMENT PERFORMANCE"); d.docs.forEach(r=>lines.push(`${r.doc}: ${r.ok}/${r.n} correct`));
-  lines.push("",`Reason tags: technique ${d.tally.technique}, content ${d.tally.content}`);
+  lines.push("",`Timeline (new attempts only): ${d.timeline.length}; first logged accuracy: ${d.firstRate==null?"not enough data":d.firstRate+"%"}; repeat accuracy: ${d.repeatRate==null?"not enough data":d.repeatRate+"%"}; resolved/mastered: ${d.mastered}`);
+  Object.entries(d.daily).sort().forEach(([day,r])=>lines.push(`Daily ${day}: ${r.ok}/${r.n} correct`));
+  lines.push(`Reason tags: technique ${d.tally.technique}, content ${d.tally.content}`);
+  lines.push("Question reports:"); Object.entries(d.reports).forEach(([id,r])=>lines.push(`${id}: ${r.reason} (${r.reportedAt||"unknown date"})`));
   return lines.join("\n");
 }
 
@@ -866,6 +900,9 @@ function renderDiag(){
       <div class="tile"><div class="v">${d.done.length}<span style="font-size:16px">/${BANK.length}</span></div><div class="l">Answered</div></div>
       ${d.days!=null?`<div class="tile"><div class="v">${d.days}</div><div class="l">Days to UE1</div></div>`:""}
     </div>
+    <p class="note">Timeline: ${d.timeline.length} post-migration attempt${d.timeline.length===1?"":"s"}. First logged accuracy: ${d.firstRate==null?"not enough data":d.firstRate+"%"}; repeat accuracy: ${d.repeatRate==null?"not enough data":d.repeatRate+"%"}. Legacy aggregate attempts are retained but are not fabricated as timeline events.</p>
+
+    ${Object.keys(d.daily).length?`<p class="label" style="margin-top:26px">Recent daily performance</p><div class="dchart">${Object.entries(d.daily).sort(([a],[b])=>a.localeCompare(b)).slice(-14).map(([day,r])=>`<div class="drow"><span class="ddoc">${day.slice(5)}</span><span class="dtrack"><i style="width:${pct(r.ok,r.n)}%"></i></span><span class="dval"><b>${pct(r.ok,r.n)}%</b> · ${r.ok} of ${r.n}</span></div>`).join("")}</div>`:""}
 
     ${d.layer.prereq.n && d.layer.lecture.n ? `
     <p class="label" style="margin-top:26px">Refresher layer vs lecture content</p>
@@ -921,14 +958,19 @@ function renderDiag(){
           <span class="gmiss">${r.wrong} of ${r.seen} wrong</span>
           <span class="gfresh">${r.unseen ? r.unseen+" fresh" : "none left"}</span></div>
         ${r.wrong>=2?`<span class="again">Tripped ${r.wrong} times, on ${r.wrong} different questions</span>`:""}
+        ${d.reviewed[r.c]?`<span class="gfresh">Last reviewed ${new Date(d.reviewed[r.c]).toLocaleDateString()}</span>`:""}
         ${note?`<p class="gnote">${note}</p>`:""}</div>`;
     }).join("")}</div>
     ${d.weak.length>14?`<p class="note">+ ${d.weak.length-14} more concepts below these.</p>`:""}
+    <div class="selfmark" style="margin-top:12px">${d.weak.slice(0,14).map(r=>`<button class="btn ghost concept-action" data-concept="${r.c}" data-action="review" type="button">Review ${META.labels[r.c]||r.c}</button><button class="btn ghost concept-action" data-concept="${r.c}" data-action="fresh" type="button">Fresh test</button><button class="btn ghost concept-action" data-concept="${r.c}" data-action="explain" type="button">Show explanations</button><button class="btn ghost concept-action" data-concept="${r.c}" data-action="mark" type="button">Mark reviewed</button>`).join("")}</div><div class="split" id="concept-explanation" hidden style="margin-top:14px"></div>
     <p class="label" style="margin-top:26px">Exact questions to revisit</p>
-    <div class="analysis-list">${[...d.wrong,...d.guessed].length?[...d.wrong,...d.guessed].map(q=>{const h=hist()[q.id],s=questionStatus(h),trend=Array.isArray(h.attemptLog)?h.attemptLog.slice(-5).map(x=>x.correct?"✓":"×").join(" "):"legacy aggregate"; return `<div class="analysis-item"><b>${q.id}</b> · ${s.state} · ${h.correct||0}/${h.attempts||0} correct · ${s.misses} historical misses · ${(q.covers||[]).join(", ")}<br><span class="note">Last seen: ${h.at?new Date(h.at).toLocaleDateString():"legacy/unknown"} · recent trend: ${trend}${(h.reasons||[]).length?" · "+(h.reasons||[]).map(id=>REASONS.find(r=>r.id===id)?.label||id).join(", "):""}<br>${shortStem(q)}</span></div>`;}).join(""):`<p class="note">No current wrong or guessed questions. ${d.resolved.length?d.resolved.length+" previously weak question"+(d.resolved.length===1?" is":"s are")+" currently resolved.":""}</p>`}</div>`;
+    <div class="analysis-list">${[...d.wrong,...d.guessed].length?[...d.wrong,...d.guessed].map(q=>{const h=hist()[q.id],s=questionStatus(h),trend=Array.isArray(h.attemptLog)?h.attemptLog.slice(-5).map(x=>x.correct?"✓":"×").join(" "):"legacy aggregate"; return `<div class="analysis-item"><b>${q.id}</b> · ${s.state} · ${h.correct||0}/${h.attempts||0} correct · ${s.misses} historical misses · ${(q.covers||[]).join(", ")}<br><span class="note">Last seen: ${h.at?new Date(h.at).toLocaleDateString():"legacy/unknown"} · recent trend: ${trend}${(h.reasons||[]).length?" · "+(h.reasons||[]).map(id=>REASONS.find(r=>r.id===id)?.label||id).join(", "):""}<br>${shortStem(q)}</span></div>`;}).join(""):`<p class="note">No current wrong or guessed questions. ${d.resolved.length?d.resolved.length+" previously weak question"+(d.resolved.length===1?" is":"s are")+" currently resolved.":""}</p>`}</div>
+    <p class="label" style="margin-top:26px">Question reports</p><div class="analysis-list">${Object.entries(d.reports).length?Object.entries(d.reports).map(([id,r])=>{const q=BANK.find(x=>x.id===id);return `<div class="analysis-item"><b>${id}</b> · ${(REPORT_REASONS.find(x=>x.id===r.reason)||{}).label||r.reason} · ${r.reportedAt?new Date(r.reportedAt).toLocaleDateString():"unknown date"}<br><span class="note">${q?shortStem(q):"Question unavailable"}</span><br><button class="btn ghost clear-report" data-question="${id}" type="button">Clear report</button></div>`;}).join(""):`<p class="note">No questions flagged.</p>`}</div>`;
   $("analysisexport").hidden=false;
   wireCopy("copyanalysis","analysistext","Copy analysis for Claude/Codex",analysisText);
   $("showanalysis").onclick=()=>{ const p=$("analysistext"); p.textContent=analysisText(); p.hidden=!p.hidden; $("showanalysis").textContent=p.hidden?"Show as text":"Hide text"; };
+  document.querySelectorAll(".concept-action").forEach(b=>b.onclick=()=>{ const c=b.dataset.concept, action=b.dataset.action, H=hist(); if(action==="mark"){const st=store.read(); st.reviewedConcepts=st.reviewedConcepts||{}; st.reviewedConcepts[c]=new Date().toISOString(); store.write(st); b.textContent="Reviewed"; return;} if(action==="explain"){const box=$("concept-explanation"), qs=BANK.filter(q=>(q.concepts||[]).includes(c)).slice(0,8); box.hidden=false; box.innerHTML=`<p class="label" style="margin:0 0 8px">${META.labels[c]||c}</p>${qs.map(q=>`<div class="analysis-item"><b>${q.id}</b> · ${shortStem(q)}<div class="note" style="margin-top:6px">${withFigures(q.rationale)}</div></div>`).join("")}`; return;} const fresh=action==="fresh"; const f=q=>(q.concepts||[]).includes(c) && (fresh?!H[q.id]:questionStatus(H[q.id]).state==="wrong") && (q.covers||[]).every(d=>taughtBy(d,todayISO())); start(f,`${fresh?"Fresh test":"Review misses"} — ${META.labels[c]||c}`,fresh); });
+  document.querySelectorAll(".clear-report").forEach(b=>b.onclick=()=>{ const st=store.read(); delete (st.questionReports||{})[b.dataset.question]; store.write(st); renderDiag(); });
 }
 
 function renderHome(){
@@ -1000,6 +1042,7 @@ function renderHome(){
     planBox.innerHTML = `<span class="lab">${fallback?"Review mode":"Today · "+new Date(plan.date+"T12:00").toLocaleDateString(undefined,{weekday:"long",month:"short",day:"numeric"})}</span>
       <b>${heading}</b>
       ${n ? `<button class="btn" id="dostoday" type="button">${fallback?"Start a mixed review":"Start today’s "+n+" question"+(n===1?"":"s")}</button>
+             <button class="btn ghost" id="adaptiveToday" type="button" style="margin-left:8px">Today&rsquo;s adaptive 40</button>
              <p class="note" style="margin:10px 0 0">About ${Math.round(n*1.2)}–${Math.round(n*1.6)} min.${pool>n?` ${pool} available — you get ${n} at a time, unseen first.`:""}</p>`
           : `<p class="note" style="margin:8px 0 0">Nothing built for today yet — pick a topic below.</p>`}`;
     if(n) $("dostoday").onclick=()=>{
@@ -1008,6 +1051,7 @@ function renderHome(){
       const f=fallback && fallbackWeak.size ? q=>(q.concepts||[]).some(c=>fallbackWeak.has(c)) : fallback && untried ? q=>!H[q.id] : fallback ? ()=>true : planFilter(plan);
       start(f, fallback?"Mixed review":"Today — "+heading, true, DAILY_CAP);
     };
+    if(n) $("adaptiveToday").onclick=()=>{ const p=adaptivePrescription(), description=p.buckets.map(x=>`${x.got}/${x.want} ${x.name}`).join(" · "); start(()=>false,"Today’s adaptive prescription — "+description,false,null,false,p.questions); };
   } else planBox.hidden=true;
 
   const anyDone = BANK.some(q=>H[q.id]);
@@ -1074,17 +1118,30 @@ function interleavedOrder(qs, seed){
   }
   return out;
 }
-function start(filter, name, preferUnseen, cap, force){
+function adaptivePrescription(){
+  const H=hist(), weak=weakConcepts(), taught=q=>(q.covers||[]).every(d=>taughtBy(d,todayISO()));
+  const seed=hash("prescription-"+todayISO()), chosen=[], used=new Set(), buckets=[];
+  const take=(name,pool,n)=>{ const sorted=pool.filter(q=>!used.has(q.id)).slice().sort((a,b)=>hash(a.id+seed)-hash(b.id+seed)); const picked=sorted.slice(0,n); picked.forEach(q=>{used.add(q.id);chosen.push(q)}); buckets.push({name,want:n,got:picked.length}); };
+  take("unseen",BANK.filter(q=>taught(q)&&!H[q.id]),15);
+  take("current misses",BANK.filter(q=>taught(q)&&questionStatus(H[q.id]).state==="wrong"),10);
+  take("fresh weak-concept questions",BANK.filter(q=>taught(q)&&!H[q.id]&&(q.concepts||[]).some(c=>weak.has(c))),10);
+  const older=Date.now()-7*86400000;
+  take("older mastered questions",BANK.filter(q=>taught(q)&&H[q.id]&&H[q.id].lastOk===true&&Number(H[q.id].at||0)<older),5);
+  /* Fill only short buckets, keeping one question per ID and preferring unseen. */
+  const remaining=40-chosen.length; if(remaining>0) take("review fill",BANK.filter(q=>taught(q)),remaining);
+  return {questions:chosen,buckets};
+}
+function start(filter, name, preferUnseen, cap, force, providedQuestions){
   const saved=store.read().session;
   if(!force && sessionUsable(saved) && sessionIsToday(saved)){
     $("sessionmodal").hidden=false;
     $("resumepending").onclick=()=>{ $("sessionmodal").hidden=true; S=saved; restore(); show("quiz"); renderQ(); };
-    $("replacepending").onclick=()=>{ $("sessionmodal").hidden=true; dropSession(); start(filter,name,preferUnseen,cap,true); };
+    $("replacepending").onclick=()=>{ $("sessionmodal").hidden=true; dropSession(); start(filter,name,preferUnseen,cap,true,providedQuestions); };
     $("cancelpending").onclick=()=>{ $("sessionmodal").hidden=true; };
     return;
   }
   const H=hist();
-  let qs = BANK.filter(filter);
+  let qs = providedQuestions ? providedQuestions.slice() : BANK.filter(filter);
   if(preferUnseen){                    // unseen first, then anything previously missed, then the rest
     qs = qs.slice().sort((a,b)=>{
       const rank = q => H[q.id] ? (H[q.id].lastOk ? 2 : 1) : 0;
@@ -1128,10 +1185,10 @@ function renderQ(){
   if(q.context) $("contexttext").innerHTML=withFigures(q.context);
   $("stem").innerHTML=withFigures(q.stem);
   $("prompt").hidden = !worked;
-  $("guesswrap").style.display = worked ? "none" : "flex";
+  $("confidencewrap").style.display = worked ? "none" : "flex";
   $("hint").innerHTML = (worked
     ? `<kbd>Enter</kbd> reveal &nbsp;·&nbsp; then mark yourself`
-    : `<kbd>1</kbd>–<kbd>5</kbd> choose &nbsp;·&nbsp; <kbd>Enter</kbd> check &nbsp;·&nbsp; <kbd>G</kbd> guessed`)
+    : `<kbd>1</kbd>–<kbd>5</kbd> choose &nbsp;·&nbsp; <kbd>Enter</kbd> check &nbsp;·&nbsp; pick confidence`)
     + ` &nbsp;·&nbsp; <kbd>Esc</kbd> home`;
 
   $("opts").innerHTML="";
@@ -1147,14 +1204,15 @@ function renderQ(){
       } else b.onclick=()=>{ S.answers[q.id]={...a,pick:orig}; renderQ(); sync(); };
       $("opts").appendChild(b);
     });
-    $("guess").checked=!!a.guessed; $("guess").disabled=!!a.checked;
-    $("guesswrap").style.opacity=a.checked?.55:1;
-    $("guess").onchange=e=>{ S.answers[q.id]={...(S.answers[q.id]||{}),guessed:e.target.checked}; sync(); };
+    const confidence=a.confidence || ("guessed" in a ? (a.guessed?"guessed":"knew") : null);
+    document.querySelectorAll('input[name="confidence"]').forEach(input=>{ input.checked=input.value===confidence; input.disabled=!!a.checked;
+      input.onchange=e=>{ const c=e.target.value; S.answers[q.id]={...(S.answers[q.id]||{}),confidence:c,guessed:c!=="knew"}; renderQ(); sync(); }; });
+    $("confidencewrap").style.opacity=a.checked?.55:1;
   }
 
   if(a.checked) renderFeedback(q,a); else $("feedback").hidden=true;
 
-  const ready = worked ? true : a.pick!=null;
+  const ready = worked ? true : a.pick!=null && !!(a.confidence || ("guessed" in a ? (a.guessed?"guessed":"knew") : null));
   const settled = a.checked && (!worked || a.ok!=null);
   $("primary").textContent = a.checked
     ? (worked && a.ok==null ? "Mark yourself above" : (S.i===S.order.length-1?"See results":"Next"))
@@ -1179,9 +1237,9 @@ function renderFeedback(q,a){
   } else {
     const ok=a.pick===q.answer;
     $("verdict").className="verdict "+(ok?"ok":"no");
-    $("verdict").textContent = ok ? (a.guessed?"Correct — but you guessed":"Correct") : "Not quite";
+    $("verdict").textContent = ok ? (a.confidence==="narrowed"?"Correct — narrowed to two":a.confidence==="guessed"||a.guessed?"Correct — but you guessed":"Correct") : "Not quite";
   }
-  const flagged = worked ? a.ok===false : (a.pick!==q.answer || a.guessed);
+  const flagged = worked ? a.ok===false : (a.pick!==q.answer || a.confidence==="narrowed" || a.confidence==="guessed" || a.guessed);
   $("reasons").hidden=!flagged;
   if(flagged){
     $("rgrid").innerHTML="";
@@ -1198,6 +1256,15 @@ function renderFeedback(q,a){
       $("rgrid").appendChild(b);
     });
   }
+  renderQuestionReport(q);
+}
+
+function renderQuestionReport(q){
+  const st=store.read(), report=(st.questionReports||{})[q.id], wrap=$("reportwrap");
+  wrap.hidden=false; $("reportgrid").innerHTML="";
+  REPORT_REASONS.forEach(r=>{ const b=document.createElement("button"); b.className="reason"; b.type="button"; b.setAttribute("aria-pressed",String(report&&report.reason===r.id)); b.textContent=r.label;
+    b.onclick=()=>{ const next=store.read(); next.questionReports=next.questionReports||{}; next.questionReports[q.id]={reason:r.id,reportedAt:new Date().toISOString()}; store.write(next); renderQuestionReport(q); }; $("reportgrid").appendChild(b); });
+  if(report){ const clear=document.createElement("button"); clear.className="reason"; clear.type="button"; clear.textContent="Clear report"; clear.onclick=()=>{ const next=store.read(); delete (next.questionReports||{})[q.id]; store.write(next); renderQuestionReport(q); }; $("reportgrid").appendChild(clear); }
 }
 
 /* Reasons used to live only in the session and died at the summary screen,
@@ -1206,11 +1273,13 @@ function renderFeedback(q,a){
 function tagReasons(qid, list){
   const st=store.read(); const h=(st.history||{})[qid];
   if(!h) return;                       // only meaningful once the answer is committed
-  h.reasons = list.slice(); store.write(st);
+  h.reasons = list.slice();
+  if(Array.isArray(h.attemptLog)){ const i=h.attemptLog.map(x=>x&&x.sessionId).lastIndexOf(S&&S.id); if(i>=0) h.attemptLog[i].reasonTags=list.slice(); }
+  store.write(st);
 }
 
 /* durable per-question history — this is what makes "only what I keep missing" work */
-function commit(q, ok, guessed){
+function commit(q, ok, confidence){
   const st=store.read(); st.history=st.history||{};
   const h=st.history[q.id]||{attempts:0,correct:0};
   /* Re-marking a worked problem (or re-answering during "Review answers")
@@ -1220,11 +1289,13 @@ function commit(q, ok, guessed){
   if(done === undefined){ h.attempts++; if(ok) h.correct++; }
   else if(done !== ok){ ok ? h.correct++ : h.correct=Math.max(0, h.correct-1); }
   S.committed[q.id]=ok;
-  h.lastOk=ok; h.lastGuessed=ok && guessed===true; h.at=Date.now();
+  const c=q.type==="worked"?"knew":(confidence||"knew");
+  h.lastOk=ok; h.lastConfidence=c; h.lastGuessed=ok && c!=="knew"; h.at=Date.now();
   h.attemptLog=Array.isArray(h.attemptLog)?h.attemptLog:[];
-  const entry={timestamp:new Date(h.at).toISOString(),correct:ok,guessed:h.lastGuessed,
+  const local=new Date(h.at), localDate=`${local.getFullYear()}-${String(local.getMonth()+1).padStart(2,"0")}-${String(local.getDate()).padStart(2,"0")}`,
+    entry={timestamp:local.toISOString(),localTimestamp:local.toString(),localDate,timezoneOffsetMinutes:local.getTimezoneOffset(),attemptNumber:h.attempts,correct:ok,confidence:c,guessed:h.lastGuessed,
     selectedAnswer:q.type==="mcq"?(S.answers[q.id]||{}).pick:null,
-    sessionType:S.name,sessionId:S.id,freshTransfer:!!(S.initiallySeen && !S.initiallySeen[q.id])};
+    reasonTags:((S.answers[q.id]||{}).reasons||[]).slice(),sessionType:S.name,sessionId:S.id,freshTransfer:!!(S.initiallySeen && !S.initiallySeen[q.id])};
   const prior=h.attemptLog.findIndex(x=>x && x.sessionId===S.id);
   if(prior>=0) h.attemptLog[prior]=entry; else h.attemptLog.push(entry);
   st.history[q.id]=h;
@@ -1236,7 +1307,7 @@ function advance(){
   const q=current(), a=S.answers[q.id]||{};
   if(!a.checked){
     S.answers[q.id]={...a,checked:true};
-    if(q.type!=="worked") commit(q, a.pick===q.answer, a.guessed);
+    if(q.type!=="worked") commit(q, a.pick===q.answer, a.confidence || (a.guessed?"guessed":"knew"));
     renderQ(); sync(); return;
   }
   if(q.type==="worked" && a.ok==null) return;
@@ -1260,7 +1331,8 @@ document.addEventListener("keydown",e=>{
     e.preventDefault();
   } else if(e.key==="Enter"){ if(!$("primary").disabled) $("primary").click(); e.preventDefault(); }
   else if(e.key.toLowerCase()==="g" && q.type!=="worked" && !a.checked){
-    S.answers[q.id]={...a,guessed:!a.guessed}; renderQ(); sync(); e.preventDefault();
+    const cycle={knew:"narrowed",narrowed:"guessed",guessed:"knew"}, c=a.confidence?cycle[a.confidence]:"guessed";
+    S.answers[q.id]={...a,confidence:c,guessed:c!=="knew"}; renderQ(); sync(); e.preventDefault();
   }
   else if(e.key==="Escape"){ goHome(); e.preventDefault(); }
 });

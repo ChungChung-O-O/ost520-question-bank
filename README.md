@@ -65,12 +65,22 @@ file, not to what a given viewer sees on screen.
 
 Attempts are kept in the viewer's own `localStorage`, per browser, under
 `ost520.bank.v2`. Nothing is uploaded, and progress does not sync between devices or
-follow the repo. The site migrates the earlier aggregate-only record format in place,
-without inventing past attempt details. Before a migration or restore it retains the
-previous value under `ost520.bank.v2.recovery`.
+follow the repo. The site migrates older aggregate-only record formats in place, without
+inventing past attempt details. Before a migration or restore it retains the previous
+value under `ost520.bank.v2.recovery`.
+
+New attempts receive an append-only, per-question timeline record with an ISO timestamp,
+local timezone offset, outcome, selected option (for MCQs), confidence, reason tags,
+session identity, and fresh-transfer flag. Existing `attempts` and `correct` aggregates
+remain authoritative for older activity; the timeline begins only after migration.
+
+For MCQs, confidence is **Knew it**, **Narrowed to two**, or **Guessed**. Correct answers
+in either uncertain category enter the review queue alongside current wrong answers.
 
 Use **Download full backup** to save a complete JSON snapshot (progress, active session,
-theme, schema version, bank fingerprint, and exam metadata). **Import backup** validates
+theme, reports, reviewed concepts, backup metadata, schema version, bank fingerprint, and
+exam metadata). Confirm **I saved the backup** only after the download completes: that is
+what updates the visible last-backup date. A reminder appears after seven days. **Import backup** validates
 the schema, question IDs, and exact bank fingerprint, previews the replacement, and needs
 an explicit confirmation. It refuses backups from a different bank. The existing text/CSV
 style results export remains for quick sharing.
@@ -88,6 +98,18 @@ question ID and never writes personal performance data into the repository.
 The **Diagnosis** screen and **Copy analysis for Claude/Codex** describe wrong and
 correct-but-guessed questions, concepts, source documents, reason tags, and fresh retest
 availability. That analysis export intentionally excludes correct answers and rationales.
+
+Diagnosis also exposes the exact items behind a weak concept, their relevant explanation,
+review-miss and fresh-test actions, and a local **Mark reviewed** timestamp. It reports
+future-only daily, first-attempt, repeat, retention, and mastery signals without implying
+that legacy aggregate data has a hidden timeline. You can flag a question as ambiguous,
+answer-cued, unclear, unsupported by course material, or contradicted by its explanation;
+reports are local, non-destructive, visible in Diagnosis, and included in backups.
+
+**Today’s adaptive 40** aims for 15 unseen questions, 10 current misses, 10 fresh
+questions covering weak concepts, and 5 older mastered questions. If a bucket is short it
+fills from eligible taught material, never duplicates an ID, and persists the resulting
+order for an identical resume.
 
 Current wrong, correct-but-guessed, historical misses, and fresh-transfer results are
 separate signals. Legacy records have no attempt timeline, and the UI labels that
