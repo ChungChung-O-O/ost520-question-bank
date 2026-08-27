@@ -4,9 +4,15 @@ const html=fs.readFileSync("index.html","utf8"), json=JSON.parse(fs.readFileSync
 const between=(a,b)=>html.slice(html.indexOf(a)+a.length,html.indexOf(b,html.indexOf(a)));
 const bank=vm.runInNewContext("("+between("const BANK = ",";\nconst META =")+")");
 assert.deepStrictEqual(JSON.parse(JSON.stringify(bank)),json,"bank.json must exactly equal embedded BANK");
-assert.equal(bank.length,483); assert.equal(new Set(bank.map(q=>q.id)).size,483);
-assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":112,"Genetics":312,"Epi & Biostats":59});
-assert.equal(bank.filter(q=>q.type==="mcq").length,460); assert.equal(bank.filter(q=>q.type==="worked").length,23);
+assert.equal(bank.length,507); assert.equal(new Set(bank.map(q=>q.id)).size,507);
+assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":122,"Genetics":326,"Epi & Biostats":59});
+assert.equal(bank.filter(q=>q.type==="mcq").length,484); assert.equal(bank.filter(q=>q.type==="worked").length,23);
+assert.equal(bank.filter(q=>/^WK-/.test(q.id)).length,24,"targeted weakness set must remain complete");
+const weaknessAnswers={"WK-01":2,"WK-02":1,"WK-03":2,"WK-04":1,"WK-05":0,"WK-06":1,"WK-07":1,"WK-08":1,"WK-09":1,"WK-10":0,"WK-11":1,"WK-12":1,"WK-13":1,"WK-14":0,"WK-15":1,"WK-16":1,"WK-17":1,"WK-18":2,"WK-19":2,"WK-20":1,"WK-21":2,"WK-22":1,"WK-23":2,"WK-24":1};
+const weaknessSet=bank.filter(q=>/^WK-/.test(q.id));
+for(const q of weaknessSet){assert.equal(q.answer,weaknessAnswers[q.id],`targeted answer key changed: ${q.id}`);assert(q.rationale.includes("The trap:"),`targeted rationale lacks misconception contrast: ${q.id}`);}
+const uniqueLongest=weaknessSet.filter(q=>{const lengths=q.options.map(x=>x.length),m=Math.max(...lengths);return lengths[q.answer]===m&&lengths.filter(n=>n===m).length===1;}).length/weaknessSet.length;
+assert(uniqueLongest>=.13&&uniqueLongest<=.37,`targeted set length cue must remain near chance, got ${Math.round(uniqueLongest*100)}%`);
 bank.forEach(q=>{ assert(q.rationale&&q.concepts&&q.concepts.length,"rationale/concept required: "+q.id); if(q.type==="mcq")assert(Number.isInteger(q.answer)&&q.answer>=0&&q.answer<q.options.length,"bad answer: "+q.id); else assert.equal(q.answer,null,"worked answer: "+q.id); });
 const rebalancedAnswers={"A2-25":1,"A2-27":1,"A2-14":1,"L022-03":1,"L021-09":1,"L021-08":1,"A2-02":1,"L014-11":1,"A2-08":1,"L012-08":1,"A2-29":1,"L011-05":3,"D10":1,"A2-11":1,"ALT-02":1,"L010-04":1,"L023-01":0,"L009-05":1};
 const keyedMeaning={"A2-25":"paternally expressed","A2-27":"equal-environments assumption","A2-14":"increases LDL-receptor transcription","L022-03":"MZ 25% / DZ 25%","L021-09":"Huntington is coding","L021-08":"Genetic anticipation","A2-02":"alternative splicing","L014-11":"expressed in only one sex","A2-08":"metaphase spindle checkpoint","L012-08":"protects imprints","A2-29":"4 mg beginning one month before conception","L011-05":"Recruiting co-activators","D10":"Recall bias","A2-11":"S-adenosylmethionine","ALT-02":"shared ancestor","L010-04":"Cyclin levels fluctuate","L023-01":"hypertonic solution","L009-05":"recognizes promoter sequences"};
@@ -49,6 +55,9 @@ vm.runInContext(`pendingBackup={schemaVersion:4,createdAt:new Date().toISOString
 assert.equal(restoreBoot.alerts.length,0,"valid restore must not report failure");assert.equal(restoreBoot.data.get("ost520.bank.v2.theme"),"dark");assert.equal(JSON.parse(restoreBoot.data.get("ost520.bank.v2")).history.B1.correct,1);
 assert.equal(JSON.parse(restoreBoot.data.get("ost520.bank.v2")).questionReports.B1.reason,"unclear","reports must round-trip through restore");
 assert.throws(()=>vm.runInContext('validateBackup({schemaVersion:4,bankFingerprint:BANK_FINGERPRINT,history:{},questionReports:{B1:{reason:"injected"}}})',restoreBoot.ctx),/invalid question report/);
+for(const priorFingerprint of ["fnv1a-2ed224b5-483","fnv1a-56ef5225-483"]){
+  assert.doesNotThrow(()=>vm.runInContext(`validateBackup({schemaVersion:4,bankFingerprint:"${priorFingerprint}",history:{B1:{attempts:1,correct:1,lastOk:true,reasons:[]}}})`,restoreBoot.ctx),`known additive bank version must remain importable: ${priorFingerprint}`);
+}
 vm.runInContext(`S={id:"timeline-test",name:"Test",date:todayISO(),answers:{B1:{pick:1,reasons:["cue"]}},committed:{},initiallySeen:{B1:false},order:["B1"]}; commit(BANK.find(q=>q.id==="B1"),true,"narrowed");`,restoreBoot.ctx);
 const timed=JSON.parse(restoreBoot.data.get("ost520.bank.v2")).history.B1.attemptLog.at(-1);assert.equal(timed.confidence,"narrowed");assert.equal(timed.reasonTags[0],"cue");assert.equal(typeof timed.timezoneOffsetMinutes,"number");assert(timed.timestamp.includes("T"));assert(/^\d{4}-\d{2}-\d{2}$/.test(timed.localDate));assert.equal(timed.attemptNumber,2,"legacy aggregate count must classify the first logged event as a repeat");
 const prescription=vm.runInContext("adaptivePrescription()",restoreBoot.ctx);assert(prescription.questions.length>0&&prescription.questions.length<=40);assert.equal(new Set(prescription.questions.map(q=>q.id)).size,prescription.questions.length,"adaptive prescription must not duplicate IDs");

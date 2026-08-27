@@ -10,19 +10,27 @@ Artifact; now a plain static site so any agent or browser can reach it by URL.
 | File | What it is |
 |------|------------|
 | `index.html` | The whole app — questions, grading, rationales, progress tracking. No build step, no server, no dependencies. Opening the file directly also works. |
-| `bank.json` | The 483 questions as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
+| `bank.json` | The 507 questions as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
 
 ## Contents
 
-483 questions, all Unit Exam 1:
+507 questions, all Unit Exam 1:
 
 | Topic | Questions | `src` |
 |-------|-----------|-------|
-| Genetics | 312 | `G` |
-| Biochemistry | 112 | `B` |
+| Genetics | 326 | `G` |
+| Biochemistry | 122 | `B` |
 | Epi & Biostats | 59 | `E` |
 
-460 are multiple choice (`"type": "mcq"`), 23 are worked problems (`"type": "worked"`).
+484 are multiple choice (`"type": "mcq"`), 23 are worked problems (`"type": "worked"`).
+
+The 24 `WK-*` questions are fresh alternates added from Austin's 2026-08-27
+performance analysis. They target redox carriers, sugar-entry disorders, ETC entry,
+pedigree notation and inheritance logic, genetic-code directionality, chromatin packing,
+telomeres, replication-fork proteins, and triploidy. Their source material is the three
+course input groups under `26 Fall/OST 520/_inputs`: Week 1, Week 2, and the prerequisite
+refresher materials. `add-weakness-questions.js` is idempotent and keeps this reviewed set
+synchronized between `bank.json` and the embedded bank.
 They map onto 33 lecture objectives (`L001`–`L033`) and 259 named concepts.
 
 ## `bank.json` schema
@@ -81,8 +89,9 @@ Use **Download full backup** to save a complete JSON snapshot (progress, active 
 theme, reports, reviewed concepts, backup metadata, schema version, bank fingerprint, and
 exam metadata). Confirm **I saved the backup** only after the download completes: that is
 what updates the visible last-backup date. A reminder appears after seven days. **Import backup** validates
-the schema, question IDs, and exact bank fingerprint, previews the replacement, and needs
-an explicit confirmation. It refuses backups from a different bank. The existing text/CSV
+the schema, question IDs, and bank version, previews the replacement, and needs an explicit
+confirmation. Known additive releases remain compatible so older progress backups survive
+new questions; unrelated banks are refused. The existing text/CSV
 style results export remains for quick sharing.
 
 Progress from the former Claude artifact cannot move automatically because the artifact and
