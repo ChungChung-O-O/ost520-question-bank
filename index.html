@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>OST 520 Question Bank</title>
-<meta name="description" content="Self-contained practice question bank for OST 520. Progress is stored in this browser only.">
+<meta name="description" content="507-question OST 520 Unit Exam 1 bank with adaptive practice, weak-area diagnosis, worked rationales, and browser-local progress.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#129516;</text></svg>">
 <style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}</style>
 </head>
@@ -299,6 +299,16 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:22px;margin:30px
       <span class="darrow" aria-hidden="true">&rarr;</span>
     </button>
 
+    <div class="split" id="releasecard">
+      <p class="label" style="margin:0">New from your Aug 27 performance analysis</p>
+      <p style="margin:10px 0 0;font-family:'Source Serif 4',Georgia,serif;font-size:15.5px">
+        <strong>24 fresh weak-area questions</strong> were written from your 46 current misses and the three course-material groups.
+        They focus on metabolism and redox, carbohydrate entry, ETC and shuttles, pedigree notation and inheritance,
+        penetrance and X-inactivation, plus DNA and chromosome fundamentals.</p>
+      <p class="note">All 483 earlier questions and your saved progress remain unchanged. The new questions begin unseen and
+        automatically feed Not tried yet, the adaptive daily 40, and fresh weak-concept retesting.</p>
+    </div>
+
     <div class="split" id="weakwrap" hidden>
       <p class="label" style="margin:0">What you keep missing</p>
       <p class="note" style="margin:8px 0 14px">Ranked by how often you have missed each idea. The bank keeps this in
@@ -436,9 +446,9 @@ const REASONS = [
   {id:"time",    label:"Ran out of time",  kind:"technique"}
 ];
 const TOPICS = [
-  {name:"Biochemistry",   src:"B", blurb:"L001, L002, RR1–RR5 + Wilkins Ch 1–4"},
-  {name:"Genetics",       src:"G", blurb:"RR3 pedigrees & modes, L015, refresher prerequisites"},
-  {name:"Epi & Biostats", src:"E", blurb:"L016–L020 · calculations plus exam-format questions"}
+  {name:"Biochemistry",   src:"B", blurb:"Metabolism, glycolysis, sugar entry, PDH/TCA/ETC and redox"},
+  {name:"Genetics",       src:"G", blurb:"Pedigrees, inheritance, DNA/chromosomes, regulation and refreshers"},
+  {name:"Epi & Biostats", src:"E", blurb:"Study design, screening, bias, association and calculations"}
 ];
 const REPORT_REASONS=[
   {id:"ambiguous",label:"More than one defensible answer"},
@@ -1007,8 +1017,9 @@ function renderHome(){
 
   // generated, never hand-written: a hard-coded count went stale at 70 vs 138
   $("lede").textContent =
-    `${BANK.length} questions across ${TOPICS.length} topics, built from your lecturers' own `
-    + `handouts and textbooks. Results are kept, so the bank knows what you keep missing.`;
+    `${BANK.length} original practice questions across ${TOPICS.length} topics, grounded in Week 1, Week 2, `
+    + `and refresher materials. Your results stay in this browser and continuously shape Diagnosis, `
+    + `adaptive daily sets, and fresh weak-concept retesting.`;
   $("topics").innerHTML = "";
   TOPICS.forEach(t=>{
     const qs = BANK.filter(q=>q.src===t.src);

@@ -8,6 +8,9 @@ assert.equal(bank.length,507); assert.equal(new Set(bank.map(q=>q.id)).size,507)
 assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":122,"Genetics":326,"Epi & Biostats":59});
 assert.equal(bank.filter(q=>q.type==="mcq").length,484); assert.equal(bank.filter(q=>q.type==="worked").length,23);
 assert.equal(bank.filter(q=>/^WK-/.test(q.id)).length,24,"targeted weakness set must remain complete");
+assert(html.includes('507-question OST 520 Unit Exam 1 bank with adaptive practice'),"page metadata must describe the current bank");
+assert(html.includes('New from your Aug 27 performance analysis'),"home must explain the targeted expansion");
+for(const phrase of ["Metabolism, glycolysis, sugar entry","Pedigrees, inheritance, DNA/chromosomes","Study design, screening, bias"]){assert(html.includes(phrase),`topic coverage description missing: ${phrase}`);}
 const weaknessAnswers={"WK-01":2,"WK-02":1,"WK-03":2,"WK-04":1,"WK-05":0,"WK-06":1,"WK-07":1,"WK-08":1,"WK-09":1,"WK-10":0,"WK-11":1,"WK-12":1,"WK-13":1,"WK-14":0,"WK-15":1,"WK-16":1,"WK-17":1,"WK-18":2,"WK-19":2,"WK-20":1,"WK-21":2,"WK-22":1,"WK-23":2,"WK-24":1};
 const weaknessSet=bank.filter(q=>/^WK-/.test(q.id));
 for(const q of weaknessSet){assert.equal(q.answer,weaknessAnswers[q.id],`targeted answer key changed: ${q.id}`);assert(q.rationale.includes("The trap:"),`targeted rationale lacks misconception contrast: ${q.id}`);}

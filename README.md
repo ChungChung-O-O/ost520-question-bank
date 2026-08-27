@@ -1,7 +1,9 @@
 # OST 520 Question Bank
 
-Self-contained practice question bank for OST 520, Unit Exam 1. Previously a Claude
-Artifact; now a plain static site so any agent or browser can reach it by URL.
+Self-contained, 507-question practice bank for OST 520 Unit Exam 1. It combines
+adaptive daily sets, browser-local performance diagnosis, weak-concept retesting,
+worked rationales, confidence tracking, and lossless backup/restore. Previously a
+Claude Artifact, it is now a plain static site that any browser can reach by URL.
 
 **Live site:** https://chungchung-o-o.github.io/ost520-question-bank/
 
@@ -16,11 +18,11 @@ Artifact; now a plain static site so any agent or browser can reach it by URL.
 
 507 questions, all Unit Exam 1:
 
-| Topic | Questions | `src` |
-|-------|-----------|-------|
-| Genetics | 326 | `G` |
-| Biochemistry | 122 | `B` |
-| Epi & Biostats | 59 | `E` |
+| Topic | Questions | Coverage | `src` |
+|-------|-----------|----------|-------|
+| Genetics | 326 | Pedigrees, inheritance, DNA/chromosomes, regulation, refresher prerequisites | `G` |
+| Biochemistry | 122 | Metabolism, glycolysis, sugar entry, PDH/TCA/ETC, redox | `B` |
+| Epi & Biostats | 59 | Study design, screening, bias, association, calculations | `E` |
 
 484 are multiple choice (`"type": "mcq"`), 23 are worked problems (`"type": "worked"`).
 
