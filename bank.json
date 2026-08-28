@@ -14948,5 +14948,505 @@
     "rationale": "Specificity belongs to individual enzymes, not to a whole class of bond. <strong>Lactase</strong> cleaves the one particular &beta;-galactosidic bond of lactose; we have no enzyme for the &beta;-glucosidic bonds of cellulose, which is why cellulose passes through as dietary fibre.<br><br><strong>The trap:</strong> &ldquo;humans cannot digest &beta;(1&rarr;4) bonds&rdquo; is the usual shorthand, and lactose is the exception that shows why the shorthand is imprecise.",
     "n": 143,
     "course": "OST520"
+  },
+  {
+    "id": "TR-01",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Biochemistry",
+    "src": "B",
+    "covers": [
+      "L001"
+    ],
+    "concepts": [
+      "stages-of-catabolism"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "A fasting hepatocyte breaks fatty acids into a common two-carbon product before the citric acid cycle. Which stage and product are paired correctly?",
+    "options": [
+      "Stage 1; acetyl-CoA",
+      "Stage 2; acetyl-CoA",
+      "Stage 2; NADPH",
+      "Stage 3; carbon dioxide"
+    ],
+    "answer": 1,
+    "rationale": "Stage 2 converts building blocks, including fatty acids, into common products such as <strong>acetyl-CoA</strong>; stage 3 then feeds acetyl-CoA into the TCA cycle.<br><br><strong>The trap:</strong> stage 3 produces reducing power, but it is not the stage that first makes the shared acetyl-CoA product.",
+    "sourceRef": "L001 transcript 04:34–05:32",
+    "source": "transcript-remediation",
+    "n": 144
+  },
+  {
+    "id": "TR-02",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Biochemistry",
+    "src": "B",
+    "covers": [
+      "L001"
+    ],
+    "concepts": [
+      "anabolism-vs-catabolism"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "A cell diverts reducing power toward lipid synthesis instead of ATP production. Which change best keeps that reducing power out of the electron transport chain?",
+    "options": [
+      "Converting NADPH to NADH",
+      "Adding phosphate to NADH",
+      "Using NADPH as the reductant",
+      "Using FADH2 as the reductant"
+    ],
+    "answer": 2,
+    "rationale": "The phosphate tag identifies <strong>NADPH</strong> as reducing power for synthetic reactions rather than a substrate for the electron transport chain.<br><br><strong>The trap:</strong> NADH and FADH2 do feed the electron transport chain, even though all three cofactors carry reducing equivalents.",
+    "sourceRef": "L001 transcript 07:48–08:27",
+    "source": "transcript-remediation",
+    "n": 145
+  },
+  {
+    "id": "TR-03",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Biochemistry",
+    "src": "B",
+    "covers": [
+      "L002"
+    ],
+    "concepts": [
+      "hydride-vs-proton"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "During an enzyme-catalyzed redox reaction, a species written H− is transferred to NAD+. Which description is correct?",
+    "options": [
+      "One proton and no electrons",
+      "One proton and one electron",
+      "One proton and two electrons",
+      "Two protons and two electrons"
+    ],
+    "answer": 2,
+    "rationale": "A hydride is <strong>one proton plus two electrons</strong>. Its extra electron pair makes transfer of hydride a redox event.<br><br><strong>The trap:</strong> one proton plus one electron is a neutral hydrogen atom, not hydride.",
+    "sourceRef": "L002 transcript 19:13–19:36",
+    "source": "transcript-remediation",
+    "n": 146
+  },
+  {
+    "id": "TR-04",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Biochemistry",
+    "src": "B",
+    "covers": [
+      "L002"
+    ],
+    "concepts": [
+      "nad-vs-fad",
+      "hydride-vs-proton"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "A substrate loses two hydrogens while NAD+ is reduced. What is the expected immediate product pattern?",
+    "options": [
+      "NADH2, with no proton released",
+      "NADH plus a leftover proton",
+      "NAD+ plus two hydrides",
+      "FADH2 plus a leftover proton"
+    ],
+    "answer": 1,
+    "rationale": "NAD+ accepts one hydride, while the second hydrogen remains as <strong>H+</strong>, giving NADH + H+. NAD+ has room for only one hydride.<br><br><strong>The trap:</strong> FAD can accept two hydrogens, but NAD+ cannot.",
+    "sourceRef": "L002 transcript 20:17–21:20",
+    "source": "transcript-remediation",
+    "n": 147
+  },
+  {
+    "id": "TR-05",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Biochemistry",
+    "src": "B",
+    "covers": [
+      "L002"
+    ],
+    "concepts": [
+      "nad-vs-fad"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "A reaction removes two hydrogens from a substrate and transfers both intact to its oxidized carrier. Which carrier fits this physical arrangement?",
+    "options": [
+      "Nicotinamide adenine dinucleotide (NAD+)",
+      "Nicotinamide adenine dinucleotide phosphate (NADP+)",
+      "Flavin adenine dinucleotide (FAD)",
+      "Coenzyme A (CoA)"
+    ],
+    "answer": 2,
+    "rationale": "<strong>FAD</strong> can physically accept both hydrogens, becoming FADH2. NAD+ and NADP+ accept one hydride and leave one proton behind.<br><br><strong>The trap:</strong> NAD+ is also a redox carrier, but its chemistry is not two intact hydrogens on the carrier.",
+    "sourceRef": "L002 transcript 21:25–21:46",
+    "source": "transcript-remediation",
+    "n": 148
+  },
+  {
+    "id": "TR-06",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Biochemistry",
+    "src": "B",
+    "covers": [
+      "L002"
+    ],
+    "concepts": [
+      "nad-vs-fad",
+      "oxidation-states"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "A saturated carbon chain is oxidized to introduce one carbon-carbon double bond. Which oxidized cofactor is reduced directly during this step?",
+    "options": [
+      "Nicotinamide adenine dinucleotide (NAD+)",
+      "Nicotinamide adenine dinucleotide phosphate (NADP+)",
+      "Flavin adenine dinucleotide (FAD)",
+      "Ubiquinone (coenzyme Q)"
+    ],
+    "answer": 2,
+    "rationale": "Oxidizing an alkane to an alkene removes two hydrogens and directly reduces <strong>FAD to FADH2</strong> in the course oxidation-state framework.<br><br><strong>The trap:</strong> most other oxidations on the chart use NAD+, but alkane to alkene is the named FAD pattern.",
+    "sourceRef": "L002 transcript 31:49–33:31",
+    "source": "transcript-remediation",
+    "n": 149
+  },
+  {
+    "id": "TR-07",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Genetics",
+    "src": "G",
+    "covers": [
+      "L003"
+    ],
+    "concepts": [
+      "dna-strands",
+      "dna-directionality"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "An RNA polymerase reads a DNA strand 3′ to 5′. In which direction is the RNA product synthesized?",
+    "options": [
+      "3′ to 5′",
+      "5′ to 3′",
+      "5′ to 3′ only within exons",
+      "Either direction, based on promoter orientation"
+    ],
+    "answer": 1,
+    "rationale": "DNA and RNA are synthesized <strong>5′ to 3′</strong>, so the template is read 3′ to 5′.<br><br><strong>The trap:</strong> promoter orientation determines which strand is used as the template, not the chemical direction in which RNA grows.",
+    "sourceRef": "L003 transcript 07:00–07:19",
+    "source": "transcript-remediation",
+    "n": 356
+  },
+  {
+    "id": "TR-08",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Genetics",
+    "src": "G",
+    "covers": [
+      "L003"
+    ],
+    "concepts": [
+      "nucleosome",
+      "chromatin-packing"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "A mutation removes histone H1 but leaves the core octamer intact. Which chromatin feature is most directly lost?",
+    "options": [
+      "The two turns of DNA around the core",
+      "Linker-DNA association between nucleosomes",
+      "The positive charge of every core histone",
+      "The phosphodiester backbone of DNA"
+    ],
+    "answer": 1,
+    "rationale": "Histone <strong>H1 binds the linker region</strong> of DNA; the core octamer is two copies each of the core histones around which DNA loops twice.<br><br><strong>The trap:</strong> H1 is histone-associated but is not one of the eight core histones.",
+    "sourceRef": "L003 transcript 18:37–19:14",
+    "source": "transcript-remediation",
+    "n": 357
+  },
+  {
+    "id": "TR-09",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Genetics",
+    "src": "G",
+    "covers": [
+      "L004"
+    ],
+    "concepts": [
+      "prokaryotic-polymerases",
+      "polymerase-fidelity"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "A bacterial polymerase can extend DNA from a primer and remove a just-incorporated wrong base, but cannot remove RNA primers. Which enzyme is functioning?",
+    "options": [
+      "DNA polymerase I",
+      "DNA polymerase III",
+      "DNA ligase",
+      "Primase"
+    ],
+    "answer": 1,
+    "rationale": "DNA polymerase III performs most DNA synthesis and has <strong>3′ to 5′ proofreading</strong>. Primer removal requires polymerase I's separate 5′ to 3′ exonuclease activity.<br><br><strong>The trap:</strong> both polymerases proofread, but only polymerase I has the primer-removal snowplow function.",
+    "sourceRef": "L004 transcript 24:51–26:18",
+    "source": "transcript-remediation",
+    "n": 358
+  },
+  {
+    "id": "TR-10",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Genetics",
+    "src": "G",
+    "covers": [
+      "L004"
+    ],
+    "concepts": [
+      "prokaryotic-polymerases",
+      "semidiscontinuous-replication"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "After RNA primers are laid on lagging-strand fragments, which activity removes each primer in the direction described as a snowplow?",
+    "options": [
+      "DNA polymerase I 5′→3′ exonuclease",
+      "DNA polymerase III 3′→5′ exonuclease",
+      "DNA ligase phosphodiester formation",
+      "Primase RNA polymerase activity"
+    ],
+    "answer": 0,
+    "rationale": "DNA polymerase I's <strong>5′ to 3′ exonuclease</strong> removes RNA primers, the snowplow function. Ligase seals the remaining nick after replacement DNA is present.<br><br><strong>The trap:</strong> 3′ to 5′ exonuclease is proofreading, not primer removal.",
+    "sourceRef": "L004 transcript 26:03–26:38",
+    "source": "transcript-remediation",
+    "n": 359
+  },
+  {
+    "id": "TR-11",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Genetics",
+    "src": "G",
+    "covers": [
+      "L005"
+    ],
+    "concepts": [
+      "ploidy-terms",
+      "nondisjunction"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "A karyotype contains 48 chromosomes because chromosomes 18 and 21 are each present in three copies. Which classification is correct?",
+    "options": [
+      "Tetraploidy, because the total exceeds 46",
+      "Triploidy, because two chromosomes are duplicated",
+      "Aneuploidy, specifically double trisomy",
+      "Euploidy, because every chromosome is represented"
+    ],
+    "answer": 2,
+    "rationale": "This is <strong>aneuploidy</strong> because 48 is not a multiple of the haploid set of 23. The two separately triplicated chromosomes make it a double trisomy.<br><br><strong>The trap:</strong> tetraploidy means four complete haploid sets, which would total 92 chromosomes, not 48.",
+    "sourceRef": "L005 transcript 10:24–11:51",
+    "source": "transcript-remediation",
+    "n": 360
+  },
+  {
+    "id": "TR-12",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Genetics",
+    "src": "G",
+    "covers": [
+      "L005"
+    ],
+    "concepts": [
+      "balanced-vs-unbalanced",
+      "reciprocal-translocation"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "A phenotypically normal parent carries a balanced reciprocal translocation. Why can that parent's child still have multiple malformations?",
+    "options": [
+      "Balanced carriers always lose centromeres",
+      "Meiosis can produce unbalanced chromosome content",
+      "The parent must have an aneuploidy",
+      "Reciprocal exchanges always add a full haploid set"
+    ],
+    "answer": 1,
+    "rationale": "A balanced carrier usually has the normal amount of genetic material, but meiosis can yield offspring with <strong>deletions and duplications</strong>, making them unbalanced.<br><br><strong>The trap:</strong> normal appearance in a balanced carrier does not guarantee balanced gametes.",
+    "sourceRef": "L005 transcript 14:16–15:15; 19:39–20:16",
+    "source": "transcript-remediation",
+    "n": 361
+  },
+  {
+    "id": "TR-13",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Genetics",
+    "src": "G",
+    "covers": [
+      "L006"
+    ],
+    "concepts": [
+      "mode-discrimination",
+      "x-linked-recessive"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "An affected father directly transmits a condition to his son. Which inheritance categories are ruled out by that male-to-male transmission?",
+    "options": [
+      "Autosomal dominant and autosomal recessive",
+      "X-linked and mitochondrial",
+      "Mitochondrial and autosomal recessive",
+      "X-linked and autosomal dominant"
+    ],
+    "answer": 1,
+    "rationale": "Male-to-male transmission rules out <strong>X-linked and mitochondrial</strong> inheritance because fathers pass Y, not X, to sons and mitochondrial DNA is maternally transmitted.<br><br><strong>The trap:</strong> male-to-male transmission is entirely compatible with autosomal inheritance.",
+    "sourceRef": "L006 transcript 01:20–01:46; 03:14–03:28",
+    "source": "transcript-remediation",
+    "n": 362
+  },
+  {
+    "id": "TR-14",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Genetics",
+    "src": "G",
+    "covers": [
+      "L006"
+    ],
+    "concepts": [
+      "mode-discrimination",
+      "rule-out-strategy"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "In a fully penetrant disorder, an affected man has an unaffected daughter. Which pattern becomes unlikely because an affected father should pass his mutant X to all daughters?",
+    "options": [
+      "Autosomal dominant",
+      "Autosomal recessive",
+      "X-linked dominant",
+      "Mitochondrial inheritance"
+    ],
+    "answer": 2,
+    "rationale": "In fully penetrant <strong>X-linked dominant</strong> inheritance, an affected father passes his mutant X chromosome to all female offspring. An unaffected daughter therefore argues against that pattern.<br><br><strong>The trap:</strong> vertical transmission alone suggests dominance but does not distinguish autosomal from X-linked dominance.",
+    "sourceRef": "L006 transcript 02:39–03:03",
+    "source": "transcript-remediation",
+    "n": 363
+  },
+  {
+    "id": "TR-15",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Genetics",
+    "src": "G",
+    "covers": [
+      "L006"
+    ],
+    "concepts": [
+      "autosomal-recessive",
+      "mode-discrimination"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "Two unaffected parents have an affected son and an affected daughter. The affected daughter's father is unaffected. Which inheritance pattern fits best?",
+    "options": [
+      "Autosomal recessive",
+      "X-linked recessive",
+      "X-linked dominant",
+      "Mitochondrial"
+    ],
+    "answer": 0,
+    "rationale": "Unaffected parents producing affected children suggests recessive inheritance, and an affected daughter with an unaffected father argues against X-linked recessive inheritance. <strong>Autosomal recessive</strong> best fits both sexes and the skipped generation.<br><br><strong>The trap:</strong> a recessive-looking pedigree is not automatically X-linked; test whether an affected daughter's father could supply the required mutant X.",
+    "sourceRef": "L006 transcript 03:36–04:09",
+    "source": "transcript-remediation",
+    "n": 364
+  },
+  {
+    "id": "TR-16",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Genetics",
+    "src": "G",
+    "covers": [
+      "L006"
+    ],
+    "concepts": [
+      "mitochondrial-inheritance",
+      "mode-discrimination"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "All children of affected women are affected, whereas children of affected men are unaffected. Which pattern is illustrated?",
+    "options": [
+      "Autosomal dominant",
+      "X-linked dominant",
+      "Homoplasmic mitochondrial",
+      "Autosomal recessive"
+    ],
+    "answer": 2,
+    "rationale": "This is the key pattern for <strong>homoplasmic mitochondrial inheritance</strong>: affected mothers transmit to all children, while affected fathers do not transmit the condition.<br><br><strong>The trap:</strong> vertical transmission can resemble dominance, but paternal nontransmission points to mitochondria.",
+    "sourceRef": "L006 transcript 04:46–05:24",
+    "source": "transcript-remediation",
+    "n": 365
+  },
+  {
+    "id": "TR-17",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Biochemistry",
+    "src": "B",
+    "covers": [
+      "RR1"
+    ],
+    "concepts": [
+      "intestinal-absorption",
+      "secondary-active-transport"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "An inhibitor collapses the sodium gradient at the apical surface of intestinal enterocytes. Which absorption pattern best follows the course model?",
+    "options": [
+      "Glucose and galactose uptake falls; fructose uptake can continue",
+      "Glucose uptake continues; galactose and fructose uptake falls",
+      "Fructose uptake falls; glucose and galactose uptake continue",
+      "All three monosaccharides require the same sodium-dependent entry"
+    ],
+    "answer": 0,
+    "rationale": "Glucose and galactose use sodium-dependent uptake into enterocytes, whereas <strong>fructose is sodium independent</strong>. Removing the gradient therefore selectively disrupts glucose and galactose entry.<br><br><strong>The trap:</strong> all three sugars reach portal blood after absorption, but only glucose and galactose share sodium-coupled apical entry.",
+    "sourceRef": "L002 transcript 04:05–06:25",
+    "source": "transcript-remediation",
+    "n": 150
+  },
+  {
+    "id": "TR-18",
+    "course": "OST520",
+    "unit": "UE1",
+    "topic": "Biochemistry",
+    "src": "B",
+    "covers": [
+      "RR2"
+    ],
+    "concepts": [
+      "galactose-defects",
+      "galactose-entry"
+    ],
+    "type": "mcq",
+    "context": "",
+    "stem": "After milk feeding, a newborn develops jaundice, hepatomegaly, poor feeding, and urine positive for reducing substances but negative on a glucose-specific test. Which defect and accumulated metabolite best fit?",
+    "options": [
+      "Galactokinase deficiency with isolated galactitol accumulation",
+      "GALT deficiency with galactose 1-phosphate accumulation",
+      "Aldolase B deficiency with fructose 1-phosphate accumulation",
+      "Lactase deficiency with circulating lactose accumulation"
+    ],
+    "answer": 1,
+    "rationale": "The systemic neonatal illness plus a non-glucose reducing sugar indicates classic galactosemia from <strong>GALT deficiency</strong>, with galactose 1-phosphate accumulation and ATP depletion.<br><br><strong>The trap:</strong> galactokinase deficiency can produce galactitol and cataracts, but it does not cause the severe liver disease of classic GALT deficiency.",
+    "sourceRef": "L002 transcript 02:39–02:56; RR2 Galactosemia case and GALT section",
+    "source": "transcript-remediation",
+    "n": 151
   }
 ]

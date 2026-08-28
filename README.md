@@ -1,6 +1,6 @@
 # OST 520 Question Bank
 
-Self-contained, 557-question practice bank for OST 520 Unit Exam 1. It combines
+Self-contained, 575-question practice bank for OST 520 Unit Exam 1. It combines
 adaptive daily sets, browser-local performance diagnosis, weak-concept retesting,
 worked rationales, confidence tracking, and lossless backup/restore. Previously a
 Claude Artifact, it is now a plain static site that any browser can reach by URL.
@@ -15,9 +15,10 @@ the only class so far, and Unit 1 the only unit holding questions.
 | File | What it is |
 |------|------------|
 | `index.html` | The whole app — questions, grading, rationales, progress tracking. No build step, no server, no dependencies. Opening the file directly also works. |
-| `bank.json` | The 557 questions as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
+| `bank.json` | The 575 questions as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
 | `add-faculty-problem-sets.js` | Idempotent ingest of the faculty practice sets. Also records, in comments, which faculty items were deliberately skipped and why. |
 | `add-weakness-questions.js` | Idempotent ingest of the 24 targeted `WK-*` weak-area questions. |
+| `add-transcript-remediation.js` | Idempotent ingest of the 18 transcript-grounded `TR-*` remediation questions. |
 
 ## The library
 
@@ -26,7 +27,7 @@ Every question carries a `course` and a `unit`, and the site shelves them accord
 | Level | Values today |
 |-------|--------------|
 | Class | `OST520` |
-| Unit | `UE1` (557 questions). `UE2` and `UE3` are declared in `COURSES` and render as empty shelves until questions carry those unit tags. |
+| Unit | `UE1` (575 questions). `UE2` and `UE3` are declared in `COURSES` and render as empty shelves until questions carry those unit tags. |
 
 To open a new unit, tag questions with that `unit` value; the shelf stops being
 empty on its own. To add a class, append to the `COURSES` array in `index.html`
@@ -36,9 +37,9 @@ Inside a unit, **Which questions** filters by provenance:
 
 | View | Shows |
 |------|-------|
-| Everything | All 557 |
+| Everything | All 575 |
 | Faculty practice | The 50 questions taken from the course's own problem sets |
-| Bank questions | The 507 written for this site |
+| Bank questions | The 525 written for this site |
 
 The chosen class, unit, and view are remembered in `localStorage` under
 `ost520.bank.v2.scope`, so a reload returns you where you were. The view narrows what
@@ -47,15 +48,15 @@ against, both of which always span the whole bank.
 
 ## Contents
 
-557 questions, all Unit Exam 1:
+575 questions, all Unit Exam 1:
 
 | Topic | Questions | Coverage | `src` |
 |-------|-----------|----------|-------|
-| Genetics | 355 | Pedigrees, inheritance, DNA/chromosomes, regulation, population genetics, refresher prerequisites | `G` |
-| Biochemistry | 143 | Metabolism, glycolysis, sugar entry, carbohydrate digestion, PDH/TCA/ETC, redox | `B` |
+| Genetics | 365 | Pedigrees, inheritance, DNA/chromosomes, regulation, population genetics, refresher prerequisites | `G` |
+| Biochemistry | 151 | Metabolism, glycolysis, sugar entry, carbohydrate digestion, PDH/TCA/ETC, redox | `B` |
 | Epi & Biostats | 59 | Study design, screening, bias, association, calculations | `E` |
 
-532 are multiple choice (`"type": "mcq"`), 25 are worked problems (`"type": "worked"`).
+550 are multiple choice (`"type": "mcq"`), 25 are worked problems (`"type": "worked"`).
 
 ### Faculty practice questions
 
@@ -94,6 +95,12 @@ refresher materials. `add-weakness-questions.js` is idempotent and keeps this re
 synchronized between `bank.json` and the embedded bank.
 They map onto 33 lecture objectives (`L001`–`L033`) and 259 named concepts.
 
+The 18 `TR-*` questions are a separate, transcript-grounded remediation batch for
+recurring L001–L006 and RR1/RR2 weak clusters. Each retains its lecture and timestamp range in
+`sourceRef`, so its key can be checked against the timestamped course transcript.
+They are ordinary, non-faculty `UE1` bank questions, start unseen, and are added by
+the idempotent `add-transcript-remediation.js` script without rewriting earlier items.
+
 ## `bank.json` schema
 
 Each element is one question:
@@ -128,8 +135,8 @@ Each element is one question:
 | `concepts` | Kebab-case concept slugs, for grouping misses by idea rather than by question. |
 | `covers` | Lecture objective IDs the question tests. |
 | `course`, `unit` | Which library shelf the question sits on. |
-| `source` | Present and set to `faculty-practice` on the 50 `FP-*` questions; absent on questions written for this site. |
-| `sourceRef` | On faculty questions: the document and original question number. |
+| `source` | `faculty-practice` on the 50 `FP-*` questions and `transcript-remediation` on the 18 `TR-*` questions; absent on the other site-authored questions. |
+| `sourceRef` | On faculty questions: document and original question number. On `TR-*`: lecture plus supporting transcript timestamp range. |
 | `keyed` | On faculty questions: whether the faculty published an answer key for it. |
 
 Options are shuffled at runtime in the app, so `answer` refers to the order in this
@@ -211,7 +218,7 @@ questions, so distractor edits cannot silently change a keyed answer.
 
 The library is covered behaviourally, not just by string matching: the suite boots the page
 with a saved scope and asserts that the faculty view shows exactly the 50 faculty questions,
-the bank view exactly the other 507, an empty or unknown unit falls back to the library, and
+the bank view exactly the other 525, an empty or unknown unit falls back to the library, and
 the backup fingerprint is identical in every view.
 
 ## Regenerating

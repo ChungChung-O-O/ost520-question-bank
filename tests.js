@@ -4,10 +4,15 @@ const html=fs.readFileSync("index.html","utf8"), json=JSON.parse(fs.readFileSync
 const between=(a,b)=>html.slice(html.indexOf(a)+a.length,html.indexOf(b,html.indexOf(a)));
 const bank=vm.runInNewContext("("+between("let BANK = ",";\nconst META =")+")");
 assert.deepStrictEqual(JSON.parse(JSON.stringify(bank)),json,"bank.json must exactly equal embedded BANK");
-assert.equal(bank.length,557); assert.equal(new Set(bank.map(q=>q.id)).size,557);
-assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":143,"Genetics":355,"Epi & Biostats":59});
-assert.equal(bank.filter(q=>q.type==="mcq").length,532); assert.equal(bank.filter(q=>q.type==="worked").length,25);
+assert.equal(bank.length,575); assert.equal(new Set(bank.map(q=>q.id)).size,575);
+assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":151,"Genetics":365,"Epi & Biostats":59});
+assert.equal(bank.filter(q=>q.type==="mcq").length,550); assert.equal(bank.filter(q=>q.type==="worked").length,25);
 assert.equal(bank.filter(q=>/^WK-/.test(q.id)).length,24,"targeted weakness set must remain complete");
+const transcript=bank.filter(q=>/^TR-/.test(q.id));
+assert.equal(transcript.length,18,"transcript remediation set must remain complete");
+const transcriptAnswers={"TR-01":1,"TR-02":2,"TR-03":2,"TR-04":1,"TR-05":2,"TR-06":2,"TR-07":1,"TR-08":1,"TR-09":1,"TR-10":0,"TR-11":2,"TR-12":1,"TR-13":1,"TR-14":2,"TR-15":0,"TR-16":2,"TR-17":0,"TR-18":1};
+for(const q of transcript){assert.equal(q.answer,transcriptAnswers[q.id],`transcript answer changed: ${q.id}`);assert(/^L00[1-6] transcript \d{2}:\d{2}/.test(q.sourceRef),`missing usable sourceRef: ${q.id}`);assert(q.rationale.includes("The trap:"),`transcript rationale lacks trap: ${q.id}`);assert.equal(q.source,"transcript-remediation");assert.equal(q.course,"OST520");assert.equal(q.unit,"UE1");assert.equal(q.type,"mcq");assert(q.options.length>=4&&q.options.length<=5,`bad transcript option count: ${q.id}`);assert.equal(new Set(q.options).size,q.options.length,`duplicate transcript option: ${q.id}`);}
+assert.deepStrictEqual(Object.fromEntries(Object.entries(transcript.reduce((counts,q)=>{counts[q.covers[0]]=(counts[q.covers[0]]||0)+1;return counts;},{})).sort()),{L001:2,L002:4,L003:2,L004:2,L005:2,L006:4,RR1:1,RR2:1},"transcript remediation coverage changed");
 const faculty=bank.filter(q=>q.source==="faculty-practice");
 assert.equal(faculty.length,50,"faculty practice set must remain complete");
 assert.equal(faculty.filter(q=>/^FP-/.test(q.id)).length,50,"faculty questions must use the FP- id space");
@@ -40,23 +45,24 @@ assert(html.includes("sessionInView(saved)"),"resume must be limited to sessions
 // library behaviour, exercised through the real boot path
 const SCOPE_KEY="ost520.bank.v2.scope", scoped=v=>boot({[SCOPE_KEY]:JSON.stringify(v)});
 const libBoot=boot();
-assert.equal(vm.runInContext("BANK.length",libBoot.ctx),557,"with no saved scope the whole bank is loaded");
+assert.equal(vm.runInContext("BANK.length",libBoot.ctx),575,"with no saved scope the whole bank is loaded");
 assert.equal(libBoot.els.get("library").hidden,false,"no saved scope must open the library");
-assert.equal(vm.runInContext("IDS.size",libBoot.ctx),557,"id set must span the whole bank regardless of view");
+assert.equal(vm.runInContext("IDS.size",libBoot.ctx),575,"id set must span the whole bank regardless of view");
 const unitBoot=scoped({course:"OST520",unit:"UE1",source:"all"});
 assert.equal(unitBoot.els.get("setup").hidden,false,"a saved unit must open straight into that unit");
-assert.equal(vm.runInContext("BANK.length",unitBoot.ctx),557);
+assert.equal(vm.runInContext("BANK.length",unitBoot.ctx),575);
 const facBoot=scoped({course:"OST520",unit:"UE1",source:"faculty"});
 assert.equal(vm.runInContext("BANK.length",facBoot.ctx),50,"faculty view must show only the faculty practice questions");
 assert(vm.runInContext('BANK.every(q=>q.source==="faculty-practice")',facBoot.ctx),"faculty view leaked a non-faculty question");
 const ownBoot=scoped({course:"OST520",unit:"UE1",source:"bank"});
-assert.equal(vm.runInContext("BANK.length",ownBoot.ctx),507,"bank view must exclude the faculty practice questions");
+assert.equal(vm.runInContext("BANK.length",ownBoot.ctx),525,"bank view must exclude the faculty practice questions");
 assert(vm.runInContext('BANK.every(q=>q.source!=="faculty-practice")',ownBoot.ctx),"bank view leaked a faculty question");
 assert.equal(scoped({course:"OST520",unit:"UE2",source:"all"}).els.get("library").hidden,false,"an empty unit must fall back to the library");
 assert.equal(scoped({course:"NOPE",unit:"UE1",source:"all"}).els.get("library").hidden,false,"an unknown course must fall back to the library");
 assert.equal(vm.runInContext("BANK_FINGERPRINT",facBoot.ctx),vm.runInContext("BANK_FINGERPRINT",libBoot.ctx),"the view must not change the backup fingerprint");
-assert(html.includes('557-question OST 520 Unit Exam 1 bank with adaptive practice'),"page metadata must describe the current bank");
-assert(html.includes('New from your Aug 27 performance analysis'),"home must explain the targeted expansion");
+assert(html.includes('575-question OST 520 Unit Exam 1 bank with adaptive practice'),"page metadata must describe the current bank");
+assert(html.includes('New from your performance analysis and lecture transcripts'),"home must explain the targeted expansion");
+assert(!html.includes('grounded in Week 1, Week 2, `\n    + `refresher materials, and the faculty problem sets'),"filtered views must not claim excluded faculty provenance");
 for(const phrase of ["Metabolism, glycolysis, sugar entry","Pedigrees, inheritance, DNA/chromosomes","Study design, screening, bias"]){assert(html.includes(phrase),`topic coverage description missing: ${phrase}`);}
 const weaknessAnswers={"WK-01":2,"WK-02":1,"WK-03":2,"WK-04":1,"WK-05":0,"WK-06":1,"WK-07":1,"WK-08":1,"WK-09":1,"WK-10":0,"WK-11":1,"WK-12":1,"WK-13":1,"WK-14":0,"WK-15":1,"WK-16":1,"WK-17":1,"WK-18":2,"WK-19":2,"WK-20":1,"WK-21":2,"WK-22":1,"WK-23":2,"WK-24":1};
 const weaknessSet=bank.filter(q=>/^WK-/.test(q.id));
@@ -105,7 +111,7 @@ vm.runInContext(`pendingBackup={schemaVersion:4,createdAt:new Date().toISOString
 assert.equal(restoreBoot.alerts.length,0,"valid restore must not report failure");assert.equal(restoreBoot.data.get("ost520.bank.v2.theme"),"dark");assert.equal(JSON.parse(restoreBoot.data.get("ost520.bank.v2")).history.B1.correct,1);
 assert.equal(JSON.parse(restoreBoot.data.get("ost520.bank.v2")).questionReports.B1.reason,"unclear","reports must round-trip through restore");
 assert.throws(()=>vm.runInContext('validateBackup({schemaVersion:4,bankFingerprint:BANK_FINGERPRINT,history:{},questionReports:{B1:{reason:"injected"}}})',restoreBoot.ctx),/invalid question report/);
-for(const priorFingerprint of ["fnv1a-2ed224b5-483","fnv1a-56ef5225-483","fnv1a-ac6648c1-507"]){
+for(const priorFingerprint of ["fnv1a-2ed224b5-483","fnv1a-56ef5225-483","fnv1a-ac6648c1-507","fnv1a-40f86fe5-557"]){
   assert.doesNotThrow(()=>vm.runInContext(`validateBackup({schemaVersion:4,bankFingerprint:"${priorFingerprint}",history:{B1:{attempts:1,correct:1,lastOk:true,reasons:[]}}})`,restoreBoot.ctx),`known additive bank version must remain importable: ${priorFingerprint}`);
 }
 vm.runInContext(`S={id:"timeline-test",name:"Test",date:todayISO(),answers:{B1:{pick:1,reasons:["cue"]}},committed:{},initiallySeen:{B1:false},order:["B1"]}; commit(BANK.find(q=>q.id==="B1"),true,"narrowed");`,restoreBoot.ctx);
