@@ -1,8 +1,8 @@
 # OST 520 Question Bank
 
-Self-contained, 575-question practice bank for OST 520 Unit Exam 1. It combines
+Self-contained, 599-question practice bank for OST 520 Unit Exam 1. It combines
 adaptive daily sets, browser-local performance diagnosis, weak-concept retesting,
-worked rationales, confidence tracking, and lossless backup/restore. Previously a
+worked rationales, a Look-Alike Concepts lab, confidence tracking, and lossless backup/restore. Previously a
 Claude Artifact, it is now a plain static site that any browser can reach by URL.
 
 The site is organised as a library: **Question Bank &rarr; class &rarr; unit**. OST 520 is
@@ -15,10 +15,12 @@ the only class so far, and Unit 1 the only unit holding questions.
 | File | What it is |
 |------|------------|
 | `index.html` | The whole app — questions, grading, rationales, progress tracking. No build step, no server, no dependencies. Opening the file directly also works. |
-| `bank.json` | The 575 questions as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
+| `bank.json` | The 599 questions as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
 | `add-faculty-problem-sets.js` | Idempotent ingest of the faculty practice sets. Also records, in comments, which faculty items were deliberately skipped and why. |
 | `add-weakness-questions.js` | Idempotent ingest of the 24 targeted `WK-*` weak-area questions. |
 | `add-transcript-remediation.js` | Idempotent ingest of the 18 transcript-grounded `TR-*` remediation questions. |
+| `upgrade-bank-quality.js` | Idempotent quality upgrade that adds fifth distractors, removes predictive dash styling, and maintains the 24 `DL-*` questions. |
+| `quality-audit.js` | Reports option counts, dash and answer-length cues, duplicate choices, and parallel-style flags. |
 
 ## The library
 
@@ -27,7 +29,7 @@ Every question carries a `course` and a `unit`, and the site shelves them accord
 | Level | Values today |
 |-------|--------------|
 | Class | `OST520` |
-| Unit | `UE1` (575 questions). `UE2` and `UE3` are declared in `COURSES` and render as empty shelves until questions carry those unit tags. |
+| Unit | `UE1` (599 questions). `UE2` and `UE3` are declared in `COURSES` and render as empty shelves until questions carry those unit tags. |
 
 To open a new unit, tag questions with that `unit` value; the shelf stops being
 empty on its own. To add a class, append to the `COURSES` array in `index.html`
@@ -37,9 +39,9 @@ Inside a unit, **Which questions** filters by provenance:
 
 | View | Shows |
 |------|-------|
-| Everything | All 575 |
+| Everything | All 599 |
 | Faculty practice | The 50 questions taken from the course's own problem sets |
-| Bank questions | The 525 written for this site |
+| Bank questions | The 549 written for this site |
 
 The chosen class, unit, and view are remembered in `localStorage` under
 `ost520.bank.v2.scope`, so a reload returns you where you were. The view narrows what
@@ -48,15 +50,33 @@ against, both of which always span the whole bank.
 
 ## Contents
 
-575 questions, all Unit Exam 1:
+599 questions, all Unit Exam 1:
 
 | Topic | Questions | Coverage | `src` |
 |-------|-----------|----------|-------|
-| Genetics | 365 | Pedigrees, inheritance, DNA/chromosomes, regulation, population genetics, refresher prerequisites | `G` |
+| Genetics | 389 | Pedigrees, inheritance, DNA/chromosomes, regulation, population genetics, refresher prerequisites | `G` |
 | Biochemistry | 151 | Metabolism, glycolysis, sugar entry, carbohydrate digestion, PDH/TCA/ETC, redox | `B` |
 | Epi & Biostats | 59 | Study design, screening, bias, association, calculations | `E` |
 
-550 are multiple choice (`"type": "mcq"`), 25 are worked problems (`"type": "worked"`).
+574 are multiple choice (`"type": "mcq"`), 25 are worked problems (`"type": "worked"`).
+Of the MCQs, 569 have five choices. The five four-choice exceptions are preserved
+faculty-authored items whose option text stays faithful to the source.
+
+### Look-Alike Concepts
+
+The 24 `DL-*` questions form the **Look-Alike Concepts** Discrimination Lab. They
+cover eight three-question families, including penetrance versus expressivity,
+heterogeneity terms, mosaicism, mitochondrial genotype terms, sex-limited versus
+sex-influenced traits, and imprinting versus X-inactivation. The mode appears in
+the Everything and Bank questions views, starts unseen questions first, and is
+absent from the faculty-only view.
+
+After a lab answer is checked, an accessible contrast table uses the question's
+explicit `contrast` metadata to show each term, its meaning, and why it fits or
+fails. Wrong selections add a local `chosen concept → correct concept` record.
+Diagnosis ranks those pairs and can launch only the lab questions involving a
+selected pair. Re-marking within one session updates the existing contribution
+instead of double-counting it.
 
 ### Faculty practice questions
 
@@ -135,9 +155,12 @@ Each element is one question:
 | `concepts` | Kebab-case concept slugs, for grouping misses by idea rather than by question. |
 | `covers` | Lecture objective IDs the question tests. |
 | `course`, `unit` | Which library shelf the question sits on. |
-| `source` | `faculty-practice` on the 50 `FP-*` questions and `transcript-remediation` on the 18 `TR-*` questions; absent on the other site-authored questions. |
+| `source` | `faculty-practice` on the 50 `FP-*` questions, `transcript-remediation` on the 18 `TR-*` questions, and `confusion-lab` on the 24 `DL-*` questions; absent on other site-authored questions. |
 | `sourceRef` | On faculty questions: document and original question number. On `TR-*`: lecture plus supporting transcript timestamp range. |
 | `keyed` | On faculty questions: whether the faculty published an answer key for it. |
+| `confusionSet` | On `DL-*` questions: the look-alike family identifier. |
+| `optionConcepts` | On `DL-*`: concept slugs aligned one-for-one with `options`. |
+| `contrast` | On `DL-*`: explicit term, meaning, and fit/fail text used by the contrast table. |
 
 Options are shuffled at runtime in the app, so `answer` refers to the order in this
 file, not to what a given viewer sees on screen.
@@ -159,7 +182,7 @@ For MCQs, confidence is **Knew it**, **Narrowed to two**, or **Guessed**. Correc
 in either uncertain category enter the review queue alongside current wrong answers.
 
 Use **Download full backup** to save a complete JSON snapshot (progress, active session,
-theme, reports, reviewed concepts, backup metadata, schema version, bank fingerprint, and
+theme, reports, reviewed concepts, concept-confusion pairs, backup metadata, schema version, bank fingerprint, and
 exam metadata). Confirm **I saved the backup** only after the download completes: that is
 what updates the visible last-backup date. A reminder appears after seven days. **Import backup** validates
 the schema, question IDs, and bank version, previews the replacement, and needs an explicit
@@ -179,7 +202,8 @@ question ID and never writes personal performance data into the repository.
 
 The **Diagnosis** screen and **Copy analysis for Claude/Codex** describe wrong and
 correct-but-guessed questions, concepts, source documents, reason tags, and fresh retest
-availability. That analysis export intentionally excludes correct answers and rationales.
+availability. They also include ranked concept-confusion pairs. That analysis export
+intentionally excludes answer keys and rationales.
 
 Diagnosis also exposes the exact items behind a weak concept, their relevant explanation,
 review-miss and fresh-test actions, and a local **Mark reviewed** timestamp. It reports
@@ -208,6 +232,7 @@ Run the offline regression checks with:
 
 ```sh
 node tests.js
+node quality-audit.js
 ```
 
 They verify bank integrity and synchronization, legacy-migration compatibility, review
@@ -218,7 +243,7 @@ questions, so distractor edits cannot silently change a keyed answer.
 
 The library is covered behaviourally, not just by string matching: the suite boots the page
 with a saved scope and asserts that the faculty view shows exactly the 50 faculty questions,
-the bank view exactly the other 525, an empty or unknown unit falls back to the library, and
+the bank view exactly the other 549, an empty or unknown unit falls back to the library, and
 the backup fingerprint is identical in every view.
 
 ## Regenerating

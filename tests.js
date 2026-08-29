@@ -1,13 +1,22 @@
 /* Offline regression checks for the static site. Run: node tests.js */
-const assert=require("assert"),fs=require("fs"),vm=require("vm");
+const assert=require("assert"),fs=require("fs"),vm=require("vm"),crypto=require("crypto");
 const html=fs.readFileSync("index.html","utf8"), json=JSON.parse(fs.readFileSync("bank.json","utf8"));
 const between=(a,b)=>html.slice(html.indexOf(a)+a.length,html.indexOf(b,html.indexOf(a)));
 const bank=vm.runInNewContext("("+between("let BANK = ",";\nconst META =")+")");
 assert.deepStrictEqual(JSON.parse(JSON.stringify(bank)),json,"bank.json must exactly equal embedded BANK");
-assert.equal(bank.length,575); assert.equal(new Set(bank.map(q=>q.id)).size,575);
-assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":151,"Genetics":365,"Epi & Biostats":59});
-assert.equal(bank.filter(q=>q.type==="mcq").length,550); assert.equal(bank.filter(q=>q.type==="worked").length,25);
+assert.equal(bank.length,599); assert.equal(new Set(bank.map(q=>q.id)).size,599);
+assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":151,"Genetics":389,"Epi & Biostats":59});
+assert.equal(bank.filter(q=>q.type==="mcq").length,574); assert.equal(bank.filter(q=>q.type==="worked").length,25);
 assert.equal(bank.filter(q=>/^WK-/.test(q.id)).length,24,"targeted weakness set must remain complete");
+const confusionLab=bank.filter(q=>/^DL-\d\d$/.test(q.id));
+assert.equal(confusionLab.length,24,"confusion lab must contain exactly 24 questions");
+assert.equal(confusionLab.map(q=>q.id).join(","),[...Array(24)].map((_,i)=>`DL-${String(i+1).padStart(2,"0")}`).join(","),"confusion-lab ids must be stable and ordered");
+for(const q of confusionLab){assert.equal(q.source,"confusion-lab");assert.equal(q.n,365+Number(q.id.slice(3)),`Genetics-local question number changed: ${q.id}`);assert.equal(q.options.length,5,`confusion-lab item must have five choices: ${q.id}`);assert.equal(q.optionConcepts.length,q.options.length,`optionConcepts must align: ${q.id}`);assert.equal(new Set(q.optionConcepts).size,q.optionConcepts.length,`optionConcepts must be distinct: ${q.id}`);assert.equal(q.contrast.length,q.options.length,`contrast rows must align: ${q.id}`);q.contrast.forEach((row,index)=>{assert.equal(row.concept,q.optionConcepts[index],`contrast concept misaligned: ${q.id}`);for(const field of ["term","meaning","why"])assert(row[field]&&typeof row[field]==="string",`contrast ${field} missing: ${q.id}`);});assert(q.confusionSet&&q.rationale.includes("<strong>"),`contrast metadata/rationale missing: ${q.id}`);}
+assert.equal(new Set(confusionLab.map(q=>q.confusionSet)).size,8,"confusion lab must cover eight look-alike families");
+for(const family of new Set(confusionLab.map(q=>q.confusionSet)))assert.equal(confusionLab.filter(q=>q.confusionSet===family).length,3,`family must contain three questions: ${family}`);
+assert.deepStrictEqual(JSON.parse(JSON.stringify(confusionLab.reduce((counts,q)=>(counts[q.answer]=(counts[q.answer]||0)+1,counts),{}))),{"0":5,"1":5,"2":5,"3":5,"4":4},"confusion-lab answer positions must remain balanced");
+const originalAnswerHash=crypto.createHash("sha256").update(JSON.stringify(bank.filter(q=>!/^DL-/.test(q.id)).map(q=>[q.id,q.answer]))).digest("hex");
+assert.equal(originalAnswerHash,"bf42363a39188b1e3270cd2aedafc141d5f1cf8ef67bfd8c73deab1dae5ec3b9","an original answer index changed");
 const transcript=bank.filter(q=>/^TR-/.test(q.id));
 assert.equal(transcript.length,18,"transcript remediation set must remain complete");
 const transcriptAnswers={"TR-01":1,"TR-02":2,"TR-03":2,"TR-04":1,"TR-05":2,"TR-06":2,"TR-07":1,"TR-08":1,"TR-09":1,"TR-10":0,"TR-11":2,"TR-12":1,"TR-13":1,"TR-14":2,"TR-15":0,"TR-16":2,"TR-17":0,"TR-18":1};
@@ -20,6 +29,24 @@ assert.equal(faculty.filter(q=>q.keyed).length,43,"count of faculty items carryi
 for(const q of faculty){
   assert(q.sourceRef && /\S/.test(q.sourceRef),"faculty question must name its source document: "+q.id);
   assert(["Biochemistry","Genetics","Epi & Biostats"].includes(q.topic),"bad topic: "+q.id);
+}
+const facultyOptionHash=crypto.createHash("sha256").update(JSON.stringify(faculty.map(q=>[q.id,q.options]))).digest("hex");
+assert.equal(facultyOptionHash,"0d0bddcb3920776691b52bcec34f2e6a372e0b632e0fd95d6350e50a5c607076","faculty-authored option text changed");
+const fourChoice=bank.filter(q=>q.type==="mcq"&&q.options.length===4);
+assert.equal(fourChoice.map(q=>q.id).join(","),["FP-08","FP-09","FP-19","FP-34","FP-35"].join(","),"only the five source-fidelity faculty items may remain four-choice");
+assert(bank.filter(q=>q.type==="mcq"&&q.source!=="faculty-practice").every(q=>q.options.length===5),"every eligible non-faculty MCQ must have five choices");
+const dashRe=/[-\u2010-\u2015]/,uniqueDash=bank.filter(q=>q.type==="mcq"&&q.options.filter(option=>dashRe.test(option.replace(/<[^>]*>/g,""))).length===1);
+const dashHeuristic=uniqueDash.filter(q=>dashRe.test(q.options[q.answer].replace(/<[^>]*>/g,""))).length/(uniqueDash.length||1);
+const dashRandom=uniqueDash.reduce((sum,q)=>sum+1/q.options.length,0)/(uniqueDash.length||1);
+assert(dashHeuristic<=dashRandom+.02,`unique-dash heuristic remains predictive: ${dashHeuristic} vs ${dashRandom}`);
+const byId=id=>bank.find(q=>q.id===id);
+assert(byId("B21").options[byId("B21").answer].includes("ubiquinone pool downstream of Complex I"),"glycerol-phosphate shuttle entry point regressed");
+assert(!byId("B21").rationale.includes("Complex II</strong>, which pumps"),"glycerol-phosphate rationale must not imply that Complex II pumps protons");
+assert(byId("R10").options[byId("R10").answer].startsWith("GALT deficiency needs lifelong"),"galactose-management key regressed");
+assert.equal(byId("WK-09").options[4],"Complex II transfers electrons directly to cytochrome c","WK-09 must have one unambiguous keyed explanation");
+assert.equal(byId("TR-09").options[4],"DNA polymerase IV","TR-09 must not offer a second proofreading polymerase");
+for(const broken of ["beforeentering","gated by voltage Ca²⁺ channels open","the dependent on Na⁺","A binding to single stranded DNA protein","classic classic syndrome"]){
+  assert(!JSON.stringify(bank).includes(broken),`mechanical punctuation rewrite damaged wording: ${broken}`);
 }
 const facultyAnswers={"FP-01":3,"FP-02":3,"FP-03":3,"FP-04":0,"FP-05":3,"FP-06":2,"FP-07":3,"FP-08":2,"FP-09":3,"FP-10":1,"FP-11":1,"FP-14":3,"FP-15":1,"FP-16":0,"FP-17":4,"FP-18":1,"FP-19":1,"FP-20":1,"FP-21":0,"FP-22":1,"FP-23":1,"FP-24":2,"FP-25":0,"FP-26":0,"FP-27":0,"FP-28":2,"FP-29":0,"FP-30":1,"FP-31":1,"FP-32":0,"FP-33":3,"FP-34":0,"FP-35":1,"FP-36":2,"FP-37":2,"FP-38":2,"FP-39":2,"FP-40":1,"FP-41":2,"FP-42":1,"FP-43":3,"FP-44":1,"FP-45":0,"FP-46":0,"FP-47":4,"FP-48":0,"FP-49":0,"FP-50":0};
 for(const [id,ans] of Object.entries(facultyAnswers)){
@@ -45,30 +72,35 @@ assert(html.includes("sessionInView(saved)"),"resume must be limited to sessions
 // library behaviour, exercised through the real boot path
 const SCOPE_KEY="ost520.bank.v2.scope", scoped=v=>boot({[SCOPE_KEY]:JSON.stringify(v)});
 const libBoot=boot();
-assert.equal(vm.runInContext("BANK.length",libBoot.ctx),575,"with no saved scope the whole bank is loaded");
+assert.equal(vm.runInContext("BANK.length",libBoot.ctx),599,"with no saved scope the whole bank is loaded");
 assert.equal(libBoot.els.get("library").hidden,false,"no saved scope must open the library");
-assert.equal(vm.runInContext("IDS.size",libBoot.ctx),575,"id set must span the whole bank regardless of view");
+assert.equal(vm.runInContext("IDS.size",libBoot.ctx),599,"id set must span the whole bank regardless of view");
 const unitBoot=scoped({course:"OST520",unit:"UE1",source:"all"});
 assert.equal(unitBoot.els.get("setup").hidden,false,"a saved unit must open straight into that unit");
-assert.equal(vm.runInContext("BANK.length",unitBoot.ctx),575);
+assert.equal(vm.runInContext("BANK.length",unitBoot.ctx),599);
+assert.equal(vm.runInContext('BANK.filter(q=>q.source==="confusion-lab").length',unitBoot.ctx),24,"Everything view must expose all lab questions");
 const facBoot=scoped({course:"OST520",unit:"UE1",source:"faculty"});
 assert.equal(vm.runInContext("BANK.length",facBoot.ctx),50,"faculty view must show only the faculty practice questions");
 assert(vm.runInContext('BANK.every(q=>q.source==="faculty-practice")',facBoot.ctx),"faculty view leaked a non-faculty question");
+assert.equal(vm.runInContext('BANK.filter(q=>q.source==="confusion-lab").length',facBoot.ctx),0,"faculty view leaked the lab");
 const ownBoot=scoped({course:"OST520",unit:"UE1",source:"bank"});
-assert.equal(vm.runInContext("BANK.length",ownBoot.ctx),525,"bank view must exclude the faculty practice questions");
+assert.equal(vm.runInContext("BANK.length",ownBoot.ctx),549,"bank view must exclude the faculty practice questions");
 assert(vm.runInContext('BANK.every(q=>q.source!=="faculty-practice")',ownBoot.ctx),"bank view leaked a faculty question");
+assert.equal(vm.runInContext('BANK.filter(q=>q.source==="confusion-lab").length',ownBoot.ctx),24,"bank view must expose all lab questions");
 assert.equal(scoped({course:"OST520",unit:"UE2",source:"all"}).els.get("library").hidden,false,"an empty unit must fall back to the library");
 assert.equal(scoped({course:"NOPE",unit:"UE1",source:"all"}).els.get("library").hidden,false,"an unknown course must fall back to the library");
 assert.equal(vm.runInContext("BANK_FINGERPRINT",facBoot.ctx),vm.runInContext("BANK_FINGERPRINT",libBoot.ctx),"the view must not change the backup fingerprint");
-assert(html.includes('575-question OST 520 Unit Exam 1 bank with adaptive practice'),"page metadata must describe the current bank");
-assert(html.includes('New from your performance analysis and lecture transcripts'),"home must explain the targeted expansion");
+assert(html.includes('599-question OST 520 Unit Exam 1 bank with adaptive practice'),"page metadata must describe the current bank");
+assert(html.includes('New question-quality release'),"home must explain the current quality release");
+assert(html.includes('label:"Look-Alike Concepts"')&&html.includes('q.source==="confusion-lab"'),"Look-Alike Concepts mode missing");
+assert(html.includes('id="contrastwrap"')&&html.includes("function renderContrast(q,a)"),"contrast table UI missing");
 assert(!html.includes('grounded in Week 1, Week 2, `\n    + `refresher materials, and the faculty problem sets'),"filtered views must not claim excluded faculty provenance");
 for(const phrase of ["Metabolism, glycolysis, sugar entry","Pedigrees, inheritance, DNA/chromosomes","Study design, screening, bias"]){assert(html.includes(phrase),`topic coverage description missing: ${phrase}`);}
 const weaknessAnswers={"WK-01":2,"WK-02":1,"WK-03":2,"WK-04":1,"WK-05":0,"WK-06":1,"WK-07":1,"WK-08":1,"WK-09":1,"WK-10":0,"WK-11":1,"WK-12":1,"WK-13":1,"WK-14":0,"WK-15":1,"WK-16":1,"WK-17":1,"WK-18":2,"WK-19":2,"WK-20":1,"WK-21":2,"WK-22":1,"WK-23":2,"WK-24":1};
 const weaknessSet=bank.filter(q=>/^WK-/.test(q.id));
 for(const q of weaknessSet){assert.equal(q.answer,weaknessAnswers[q.id],`targeted answer key changed: ${q.id}`);assert(q.rationale.includes("The trap:"),`targeted rationale lacks misconception contrast: ${q.id}`);}
 const uniqueLongest=weaknessSet.filter(q=>{const lengths=q.options.map(x=>x.length),m=Math.max(...lengths);return lengths[q.answer]===m&&lengths.filter(n=>n===m).length===1;}).length/weaknessSet.length;
-assert(uniqueLongest>=.13&&uniqueLongest<=.37,`targeted set length cue must remain near chance, got ${Math.round(uniqueLongest*100)}%`);
+assert(uniqueLongest<=.30,`targeted set must not make the longest option predictive, got ${Math.round(uniqueLongest*100)}%`);
 bank.forEach(q=>{ assert(q.rationale&&q.concepts&&q.concepts.length,"rationale/concept required: "+q.id); if(q.type==="mcq")assert(Number.isInteger(q.answer)&&q.answer>=0&&q.answer<q.options.length,"bad answer: "+q.id); else assert.equal(q.answer,null,"worked answer: "+q.id); });
 const rebalancedAnswers={"A2-25":1,"A2-27":1,"A2-14":1,"L022-03":1,"L021-09":1,"L021-08":1,"A2-02":1,"L014-11":1,"A2-08":1,"L012-08":1,"A2-29":1,"L011-05":3,"D10":1,"A2-11":1,"ALT-02":1,"L010-04":1,"L023-01":0,"L009-05":1};
 const keyedMeaning={"A2-25":"paternally expressed","A2-27":"equal-environments assumption","A2-14":"increases LDL-receptor transcription","L022-03":"MZ 25% / DZ 25%","L021-09":"Huntington is coding","L021-08":"Genetic anticipation","A2-02":"alternative splicing","L014-11":"expressed in only one sex","A2-08":"metaphase spindle checkpoint","L012-08":"protects imprints","A2-29":"4 mg beginning one month before conception","L011-05":"Recruiting co-activators","D10":"Recall bias","A2-11":"S-adenosylmethionine","ALT-02":"shared ancestor","L010-04":"Cyclin levels fluctuate","L023-01":"hypertonic solution","L009-05":"recognizes promoter sequences"};
@@ -76,7 +108,8 @@ for(const [id,answer] of Object.entries(rebalancedAnswers)){
   const q=bank.find(item=>item.id===id);
   assert(q,`rebalanced question missing: ${id}`);
   assert.equal(q.answer,answer,`rebalanced answer key changed: ${id}`);
-  assert(q.options[q.answer].includes(keyedMeaning[id]),`rebalanced keyed meaning changed: ${id}`);
+  const normalizeCue=value=>value.toLowerCase().replace(/[-\u2010-\u2015]/g," ").replace(/\s+/g," ");
+  assert(normalizeCue(q.options[q.answer]).includes(normalizeCue(keyedMeaning[id])),`rebalanced keyed meaning changed: ${id}`);
   assert.equal(new Set(q.options).size,q.options.length,`duplicate rebalanced option: ${id}`);
 }
 
@@ -103,15 +136,54 @@ assert(html.includes('a.pick!=null && !!(a.confidence || ("guessed" in a'),"new 
 assert(html.includes('guessed:c!=="knew"}; renderQ(); sync();'),"confidence changes must immediately enable the Check button");
 function boot(storage={}){const source=html.slice(html.indexOf("<script>")+8,html.lastIndexOf("</script>")),els=new Map(),el=()=>({hidden:false,style:{},classList:{add(){}},setAttribute(){},appendChild(){},textContent:"",innerHTML:"",click(){},querySelectorAll(){return[]}}),document={getElementById:id=>{if(!els.has(id))els.set(id,el());return els.get(id)},createElement:el,querySelectorAll(){return[]},addEventListener(){},documentElement:{setAttribute(){},removeAttribute(){},getAttribute(){return null}}},data=new Map(Object.entries(storage)),localStorage={getItem:k=>data.get(k)||null,setItem:(k,v)=>data.set(k,String(v)),removeItem:k=>data.delete(k)},alerts=[],ctx=vm.createContext({document,localStorage,window:{scrollTo(){}},console,Date,JSON,Math,Set,Map,Array,Object,Number,String,Boolean,RegExp,Error,Blob:function(){},URL:{createObjectURL(){return ""},revokeObjectURL(){}},FileReader:function(){},navigator:{},alert:m=>alerts.push(String(m)),setTimeout(){}});vm.runInContext(source,ctx);return{ctx,data,els,alerts};}
 boot();boot({"ost520.bank.v2":"{bad json"});
+const labBoot=boot({"ost520.bank.v2":JSON.stringify({schemaVersion:4,bankFingerprint:"fnv1a-41aaee35-575",history:{"DL-01":{attempts:1,correct:1,lastOk:true,reasons:[]}}})});
+vm.runInContext('start(q=>q.source==="confusion-lab","Look-Alike Concepts",true,null,true)',labBoot.ctx);
+assert.equal(vm.runInContext("S.order.length",labBoot.ctx),24,"lab launch must contain only the 24 lab questions");
+assert.equal(vm.runInContext('S.order.every(id=>ALL_QUESTIONS.find(q=>q.id===id).source==="confusion-lab")',labBoot.ctx),true,"lab launch leaked another source");
+assert.notEqual(vm.runInContext("S.order[0]",labBoot.ctx),"DL-01","seen lab question appeared before unseen questions");
+assert.equal(vm.runInContext("S.order.at(-1)",labBoot.ctx),"DL-01","seen lab question must follow all unseen questions");
+const contrastBoot=boot();
+vm.runInContext('const cq=ALL_QUESTIONS.find(q=>q.id==="DL-01");renderContrast(cq,{pick:cq.answer===0?1:0});',contrastBoot.ctx);
+const contrastHtml=contrastBoot.els.get("contrastwrap").innerHTML;
+assert(contrastHtml.includes("<table>")&&contrastHtml.includes("Term")&&contrastHtml.includes("Meaning")&&contrastHtml.includes("Why it fits or fails"),"accessible contrast table did not render");
+assert(contrastHtml.includes("Correct concept")&&contrastHtml.includes("Your choice"),"contrast table must label correct and selected concepts in text");
+const pairBoot=boot();
+vm.runInContext(`const pq=ALL_QUESTIONS.find(q=>q.id==="DL-01"),wrong=pq.answer===0?1:0;S={id:"pair-session",name:"Look-Alike Concepts",date:todayISO(),answers:{[pq.id]:{pick:wrong}},committed:{},initiallySeen:{[pq.id]:false},order:[pq.id]};commit(pq,false,"knew");`,pairBoot.ctx);
+let pairState=JSON.parse(pairBoot.data.get("ost520.bank.v2"));
+assert.equal(Object.keys(pairState.confusionPairs).length,1,"wrong lab answer must create one confusion pair");
+assert.equal(Object.values(pairState.confusionPairs)[0].count,1);
+const firstChosen=Object.values(pairState.confusionPairs)[0].chosen;
+vm.runInContext('commit(ALL_QUESTIONS.find(q=>q.id==="DL-01"),false,"knew")',pairBoot.ctx);
+pairState=JSON.parse(pairBoot.data.get("ost520.bank.v2"));
+assert.equal(Object.values(pairState.confusionPairs)[0].count,1,"same-session re-commit double-counted a pair");
+vm.runInContext('const pqChange=ALL_QUESTIONS.find(q=>q.id==="DL-01"),oldPick=S.answers[pqChange.id].pick;S.answers[pqChange.id].pick=pqChange.options.findIndex((_,index)=>index!==pqChange.answer&&index!==oldPick);commit(pqChange,false,"knew")',pairBoot.ctx);
+pairState=JSON.parse(pairBoot.data.get("ost520.bank.v2"));
+assert.equal(Object.keys(pairState.confusionPairs).length,1,"changed wrong choice must replace, not add, the session pair");
+assert.equal(Object.values(pairState.confusionPairs)[0].count,1);
+assert.notEqual(Object.values(pairState.confusionPairs)[0].chosen,firstChosen,"changed wrong choice did not adjust the selected concept");
+vm.runInContext('const pq2=ALL_QUESTIONS.find(q=>q.id==="DL-01");S.answers[pq2.id].pick=pq2.answer;commit(pq2,true,"knew")',pairBoot.ctx);
+pairState=JSON.parse(pairBoot.data.get("ost520.bank.v2"));
+assert.equal(Object.keys(pairState.confusionPairs).length,0,"corrected same-session outcome must remove its pair contribution");
 const legacyBoot=boot({"ost520.bank.v2":JSON.stringify(legacy)});
 const migratedStored=JSON.parse(legacyBoot.data.get("ost520.bank.v2"));
-assert.equal(migratedStored.schemaVersion,4);assert.deepStrictEqual(migratedStored.history.B1,legacy.history.B1);assert(legacyBoot.data.has("ost520.bank.v2.recovery"),"migration must keep a recovery copy");
+assert.equal(migratedStored.schemaVersion,4);assert.deepStrictEqual(migratedStored.history.B1,legacy.history.B1);assert.deepStrictEqual(migratedStored.confusionPairs,{},"legacy migration must add an empty pair store without losing history");assert(legacyBoot.data.has("ost520.bank.v2.recovery"),"migration must keep a recovery copy");
 const restoreBoot=boot({"ost520.bank.v2":JSON.stringify({schemaVersion:4,bankFingerprint:"old",history:{}})});
-vm.runInContext(`pendingBackup={schemaVersion:4,createdAt:new Date().toISOString(),bankFingerprint:BANK_FINGERPRINT,history:{B1:{attempts:1,correct:1,lastOk:true,reasons:[]}},questionReports:{B1:{reason:"unclear"}},backupMetadata:{lastBackupAt:"2026-08-27T12:00:00.000Z"},activeSession:null,theme:"dark"}; $("confirmimport").onclick();`,restoreBoot.ctx);
+vm.runInContext(`(()=>{const q=ALL_QUESTIONS.find(x=>x.id==="DL-01"),chosen=q.optionConcepts[q.answer===0?1:0],correct=q.optionConcepts[q.answer],key=pairStorageKey(chosen,correct);pendingBackup={schemaVersion:4,createdAt:new Date().toISOString(),bankFingerprint:BANK_FINGERPRINT,history:{B1:{attempts:1,correct:1,lastOk:true,reasons:[]}},questionReports:{B1:{reason:"unclear"}},confusionPairs:{[key]:{chosen,correct,count:2,lastAt:"2026-08-29T12:00:00.000Z",questionId:q.id}},backupMetadata:{lastBackupAt:"2026-08-27T12:00:00.000Z"},activeSession:null,theme:"dark"}; $("confirmimport").onclick();})()`,restoreBoot.ctx);
 assert.equal(restoreBoot.alerts.length,0,"valid restore must not report failure");assert.equal(restoreBoot.data.get("ost520.bank.v2.theme"),"dark");assert.equal(JSON.parse(restoreBoot.data.get("ost520.bank.v2")).history.B1.correct,1);
 assert.equal(JSON.parse(restoreBoot.data.get("ost520.bank.v2")).questionReports.B1.reason,"unclear","reports must round-trip through restore");
+assert.equal(Object.values(JSON.parse(restoreBoot.data.get("ost520.bank.v2")).confusionPairs)[0].count,2,"confusion pairs must round-trip through restore");
+assert.equal(Object.values(vm.runInContext("backupPayload().confusionPairs",restoreBoot.ctx))[0].count,2,"backup export must preserve confusion pairs");
+assert(vm.runInContext('(()=>{const row=confusionRows()[0],qs=pairQuestions(row.chosen,row.correct);return qs.length>0&&qs.every(q=>q.source==="confusion-lab"&&q.optionConcepts.includes(row.chosen)&&q.optionConcepts.includes(row.correct))})()',restoreBoot.ctx),"pair practice filter must return only matching lab questions");
+vm.runInContext("renderDiag()",restoreBoot.ctx);
+assert(restoreBoot.els.get("diagbody").innerHTML.includes("Concepts you confuse")&&restoreBoot.els.get("diagbody").innerHTML.includes("pair-action"),"Diagnosis must rank pairs and offer pair practice");
+const pairAnalysis=vm.runInContext("analysisText()",restoreBoot.ctx);
+assert(pairAnalysis.includes("CONCEPTS YOU CONFUSE")&&pairAnalysis.includes("→"),"analysis text must include confusion pairs");
+assert(!pairAnalysis.includes("last question DL-"),"analysis export must not reveal the question-to-answer mapping");
+assert(!pairAnalysis.includes(vm.runInContext('ALL_QUESTIONS.find(q=>q.id==="DL-01").rationale',restoreBoot.ctx)),"analysis text leaked a lab rationale");
 assert.throws(()=>vm.runInContext('validateBackup({schemaVersion:4,bankFingerprint:BANK_FINGERPRINT,history:{},questionReports:{B1:{reason:"injected"}}})',restoreBoot.ctx),/invalid question report/);
-for(const priorFingerprint of ["fnv1a-2ed224b5-483","fnv1a-56ef5225-483","fnv1a-ac6648c1-507","fnv1a-40f86fe5-557"]){
+assert.throws(()=>vm.runInContext(`(()=>{const q=ALL_QUESTIONS.find(x=>x.id==="DL-01"),chosen=q.optionConcepts[q.answer===0?1:0],correct=q.optionConcepts[q.answer],key=pairStorageKey(chosen,correct);return validateBackup({schemaVersion:4,bankFingerprint:BANK_FINGERPRINT,history:{},confusionPairs:{[key]:{chosen,correct,count:0,lastAt:new Date().toISOString(),questionId:q.id}}})})()`,restoreBoot.ctx),/invalid confusion pair/);
+assert.throws(()=>vm.runInContext(`validateBackup({schemaVersion:4,bankFingerprint:BANK_FINGERPRINT,history:{},confusionPairs:{"made-up::pair":{chosen:"made-up",correct:"pair",count:1,lastAt:new Date().toISOString(),questionId:"DL-01"}}})`,restoreBoot.ctx),/invalid confusion pair/);
+for(const priorFingerprint of ["fnv1a-2ed224b5-483","fnv1a-56ef5225-483","fnv1a-ac6648c1-507","fnv1a-40f86fe5-557","fnv1a-41aaee35-575"]){
   assert.doesNotThrow(()=>vm.runInContext(`validateBackup({schemaVersion:4,bankFingerprint:"${priorFingerprint}",history:{B1:{attempts:1,correct:1,lastOk:true,reasons:[]}}})`,restoreBoot.ctx),`known additive bank version must remain importable: ${priorFingerprint}`);
 }
 vm.runInContext(`S={id:"timeline-test",name:"Test",date:todayISO(),answers:{B1:{pick:1,reasons:["cue"]}},committed:{},initiallySeen:{B1:false},order:["B1"]}; commit(BANK.find(q=>q.id==="B1"),true,"narrowed");`,restoreBoot.ctx);
