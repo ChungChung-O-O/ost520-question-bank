@@ -1,0 +1,401 @@
+{
+  "locked_at": "2026-09-05",
+  "input_root": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science",
+  "file_count": 48,
+  "total_bytes": 146299781,
+  "exam": {
+    "unit": "UE2",
+    "date": "2026-09-22"
+  },
+  "files": [
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/Histology Lab Site Images/LabSessionInformation 1.jpeg",
+      "relative_path": "Histology Lab Site Images/LabSessionInformation 1.jpeg",
+      "extension": ".jpeg",
+      "bytes": 49638,
+      "sha256": "0a054356f476c610a0d6c77560ee14759872b66f359c91226d5f0f954dd7d0c8"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/Histology Lab Site Images/LabSessionInformation 2.jpeg",
+      "relative_path": "Histology Lab Site Images/LabSessionInformation 2.jpeg",
+      "extension": ".jpeg",
+      "bytes": 42434,
+      "sha256": "983e46b854c1ceee2c7aeec1fefdcd107613fdf0da2deae46a55af9051b4f1d3"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/Histology Lab Site Images/LabSessionInformation 3.jpeg",
+      "relative_path": "Histology Lab Site Images/LabSessionInformation 3.jpeg",
+      "extension": ".jpeg",
+      "bytes": 34953,
+      "sha256": "2acefad8ca4a49712055409377d525627513b41965b7dc87ef22ebf714163ad8"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/Histology Lab Site Images/LabSessionInformation 4.jpeg",
+      "relative_path": "Histology Lab Site Images/LabSessionInformation 4.jpeg",
+      "extension": ".jpeg",
+      "bytes": 80049,
+      "sha256": "d7d96b2248e56310f931b753b5cba2c2312968157df125572801b39c25a9c864"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/Histology Lab Website & Login Details1.html",
+      "relative_path": "Histology Lab Website & Login Details1.html",
+      "extension": ".html",
+      "bytes": 4769,
+      "sha256": "343afd13063958d17e800f92bb475de94a6f6c13a2aca85c1898e71a1034b614"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/Histology Pathology Lab Manual.html",
+      "relative_path": "Histology Pathology Lab Manual.html",
+      "extension": ".html",
+      "bytes": 3911,
+      "sha256": "4fd7cf5cc420e18381bf63a597126ed2f9aeb5a77742da1b4a702ced7bee68af"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (026) L - Connective Tissue - Liang.pdf",
+      "relative_path": "OST520 (026) L - Connective Tissue - Liang.pdf",
+      "extension": ".pdf",
+      "bytes": 1947807,
+      "sha256": "fc177229e3ddf02d8029cd6f0aadee21d0d3e74a0ca02d8f484df661d4c73cc6"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (026) L - Connective Tissue - Liang.pptx",
+      "relative_path": "OST520 (026) L - Connective Tissue - Liang.pptx",
+      "extension": ".pptx",
+      "bytes": 15526581,
+      "sha256": "c66b638cf20cff66fc49c4025b8179b62b1023a4c9f05fcad701425c232274d7"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (027) L - Protein Translation and Post-Translation - Ritchie.docx",
+      "relative_path": "OST520 (027) L - Protein Translation and Post-Translation - Ritchie.docx",
+      "extension": ".docx",
+      "bytes": 1724290,
+      "sha256": "e8ac5eacf51d7ff9889cdda0fe3726ac7320698070a95a2de19e6c29e33738c3"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (027) L - Protein Translation and Post-Translation - Ritchie.pdf",
+      "relative_path": "OST520 (027) L - Protein Translation and Post-Translation - Ritchie.pdf",
+      "extension": ".pdf",
+      "bytes": 1538488,
+      "sha256": "f09d80e6e70edc8bee1fa80afba6999571aa8cfbb7555f2b117b13ce0a243d6d"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (028) L - Pentose Phosphate Pathway - Wilkins.docx",
+      "relative_path": "OST520 (028) L - Pentose Phosphate Pathway - Wilkins.docx",
+      "extension": ".docx",
+      "bytes": 471102,
+      "sha256": "ecf3e3c05d426ac8e2929ff6404cd3e3e48c8110c12904551f8782a1fcf0f96a"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (028) L - Pentose Phosphate Pathway - Wilkins.pdf",
+      "relative_path": "OST520 (028) L - Pentose Phosphate Pathway - Wilkins.pdf",
+      "extension": ".pdf",
+      "bytes": 612516,
+      "sha256": "d6ce72f84842cb55cd4fa55f7408a56b9905a918b0fee180cf903bb645d89e49"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (029) L - Glycogen Metabolism - Wilkins.docx",
+      "relative_path": "OST520 (029) L - Glycogen Metabolism - Wilkins.docx",
+      "extension": ".docx",
+      "bytes": 635631,
+      "sha256": "3226c4c00a081ded12376b5751f1fd808ec43fe3d8bddd53f281cc15d1239d86"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (029) L - Glycogen Metabolism - Wilkins.pdf",
+      "relative_path": "OST520 (029) L - Glycogen Metabolism - Wilkins.pdf",
+      "extension": ".pdf",
+      "bytes": 4434796,
+      "sha256": "8cf6a41ca044423878287cacd2a7fd1cd8242a8a858ae2ea98b75a119772faa7"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (030.1) L - Intro to Infection (outline) - Arvidson.docx",
+      "relative_path": "OST520 (030.1) L - Intro to Infection (outline) - Arvidson.docx",
+      "extension": ".docx",
+      "bytes": 101638,
+      "sha256": "7733edefc73fa34f6973b8b84181724fb5d7d0ed7b766a4cabaf8e04caf4064e"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (030.1) L - Intro to Infection - D. Arvidson.pdf",
+      "relative_path": "OST520 (030.1) L - Intro to Infection - D. Arvidson.pdf",
+      "extension": ".pdf",
+      "bytes": 1078833,
+      "sha256": "6f763c9abd3f55ebeb1e409bd8a3148998a4afa2cede3f036f1b655302fae339"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (030.2) L - Intro to Infection - Normal Microbiota (outline) -D Arvidson.pdf",
+      "relative_path": "OST520 (030.2) L - Intro to Infection - Normal Microbiota (outline) -D Arvidson.pdf",
+      "extension": ".pdf",
+      "bytes": 509563,
+      "sha256": "013b1b995f641783cd6a3453691c369f24ee23f48e1f7c1e1fd46a9f797582ad"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (030.2) L - Intro to Infection - Normal Microbiota (slides) -D Arvidson.pptx",
+      "relative_path": "OST520 (030.2) L - Intro to Infection - Normal Microbiota (slides) -D Arvidson.pptx",
+      "extension": ".pptx",
+      "bytes": 696326,
+      "sha256": "cd3fda05bd6b7d84fb5449bb1aa5bb7d9375239438d295858b0a42dcef83afee"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (031) L - Blood Cells and Hematopoiesis - Schwartz.pdf",
+      "relative_path": "OST520 (031) L - Blood Cells and Hematopoiesis - Schwartz.pdf",
+      "extension": ".pdf",
+      "bytes": 1805246,
+      "sha256": "4778e357c72d906d40c3bae71095163ebde4755c80359d888799b11cb1adb638"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (031) L - Blood Cells and Hematopoiesis - Schwartz.pptx",
+      "relative_path": "OST520 (031) L - Blood Cells and Hematopoiesis - Schwartz.pptx",
+      "extension": ".pptx",
+      "bytes": 5636782,
+      "sha256": "e915754d2617b7e1a6623d8274424a502c84d5a925238dfff55976f1cf693682"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (032) L - Fungal Pathogens - Wilkins.docx",
+      "relative_path": "OST520 (032) L - Fungal Pathogens - Wilkins.docx",
+      "extension": ".docx",
+      "bytes": 2758317,
+      "sha256": "1fe0f6dc8a8be4b3538dacac7410b2ea04bdc6c9e423c4d24c57bfcee4ad1cc1"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (032) L - Fungal Pathogens - Wilkins.pdf",
+      "relative_path": "OST520 (032) L - Fungal Pathogens - Wilkins.pdf",
+      "extension": ".pdf",
+      "bytes": 723470,
+      "sha256": "fcab58fcc6da113c3c76ff6e5430324012dfd1a4c8e82c91fa8b1f24eb5f4b3b"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (033) L - Hemoglobin and Gas Transport - Faner.docx",
+      "relative_path": "OST520 (033) L - Hemoglobin and Gas Transport - Faner.docx",
+      "extension": ".docx",
+      "bytes": 4851888,
+      "sha256": "ac1e28ab7a67a138d438aef633472703ed1218869f10d0c12ff27c3abb20df6f"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (033) L - Hemoglobin and Gas Transport - Faner.pdf",
+      "relative_path": "OST520 (033) L - Hemoglobin and Gas Transport - Faner.pdf",
+      "extension": ".pdf",
+      "bytes": 1156623,
+      "sha256": "fe8fa9f2d59bd433f587e166bc4fe092bede37fedef305601585a89a33281fb3"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (034) L - Blood pH Regulation - Faner.docx",
+      "relative_path": "OST520 (034) L - Blood pH Regulation - Faner.docx",
+      "extension": ".docx",
+      "bytes": 1746169,
+      "sha256": "e6f45aaa15bd499a40fc60a43588093e5e0c54c547dbf686dfcadbb1fb0e7ba4"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (034) L - Blood pH Regulation - Faner.pdf",
+      "relative_path": "OST520 (034) L - Blood pH Regulation - Faner.pdf",
+      "extension": ".pdf",
+      "bytes": 560184,
+      "sha256": "41d9cc1f0dec46aa1c07672aa7c47ca52b5d276ab9bddfe16182d50992b91f81"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (035) L - Bacterial Structure - D Arvidson.pdf",
+      "relative_path": "OST520 (035) L - Bacterial Structure - D Arvidson.pdf",
+      "extension": ".pdf",
+      "bytes": 1248912,
+      "sha256": "bad92e992d1a7cacc2dd4bf63c9ab2df91c5723517dd705165f2ca9e3706cb64"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (035) L - Bacterial Structure - D Arvidson.pptx",
+      "relative_path": "OST520 (035) L - Bacterial Structure - D Arvidson.pptx",
+      "extension": ".pptx",
+      "bytes": 10350497,
+      "sha256": "f65330c209d79cfeb1601be2fad8d4da29ae832cf0909821b43a7a7435e263f5"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (036) L - Intro to Viruses (Outline) - Taylor.docx",
+      "relative_path": "OST520 (036) L - Intro to Viruses (Outline) - Taylor.docx",
+      "extension": ".docx",
+      "bytes": 130286,
+      "sha256": "192766e2e44da08bf6cdc0e85223bfb3937d429cf6cd30276053acfc39878fef"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (036) L - Intro to Viruses (Slides) - Taylor.pptx",
+      "relative_path": "OST520 (036) L - Intro to Viruses (Slides) - Taylor.pptx",
+      "extension": ".pptx",
+      "bytes": 12718468,
+      "sha256": "d493442e872f5dc93c51445389eabe419893b84fdbf7e451d461deda737392dc"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (036) L - Intro to Viruses - Taylor.pdf",
+      "relative_path": "OST520 (036) L - Intro to Viruses - Taylor.pdf",
+      "extension": ".pdf",
+      "bytes": 4493363,
+      "sha256": "969a2763ede769b6c5d90a7ad4773f90573a4c8a7fdb3a61df4289054382b0e9"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (037) L - Parasitology (Outline) - Seydel.docx",
+      "relative_path": "OST520 (037) L - Parasitology (Outline) - Seydel.docx",
+      "extension": ".docx",
+      "bytes": 2380780,
+      "sha256": "743fe53e28bc59109b02b103773266649d3bb4ae4b9b08acc6eab304e0d155cf"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (037) L - Parasitology (Outline) - Seydel.pdf",
+      "relative_path": "OST520 (037) L - Parasitology (Outline) - Seydel.pdf",
+      "extension": ".pdf",
+      "bytes": 168871,
+      "sha256": "708d566303025482f5fe3ea579cec67ba6941970139ee82f2db5d584caa10a1b"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (037) L - Parasitology (slides) - Seydel.pdf",
+      "relative_path": "OST520 (037) L - Parasitology (slides) - Seydel.pdf",
+      "extension": ".pdf",
+      "bytes": 1537808,
+      "sha256": "f0ee8b781a30e20d14117ae7c9079a6a3e9154216e65d9cfc407ce28330f3ae2"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (037) L - Parasitology (slides) - Seydel.pptx",
+      "relative_path": "OST520 (037) L - Parasitology (slides) - Seydel.pptx",
+      "extension": ".pptx",
+      "bytes": 9018664,
+      "sha256": "647c03e5d588992d2c2c186762c796039e90029d62e5ff16d52f4d5a2dc46a04"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (038, 039) L - Intro to Immunology I and II (Outline) - Taylor.docx",
+      "relative_path": "OST520 (038, 039) L - Intro to Immunology I and II (Outline) - Taylor.docx",
+      "extension": ".docx",
+      "bytes": 101311,
+      "sha256": "e846ecebcdae8864557778b7d9e8e8a9cedce20303e8c42e2136d0ef59aef3e1"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (038, 039) L - Intro to Immunology I and II (Slides) - Taylor.pptx",
+      "relative_path": "OST520 (038, 039) L - Intro to Immunology I and II (Slides) - Taylor.pptx",
+      "extension": ".pptx",
+      "bytes": 11775781,
+      "sha256": "6687ffee9b23f4f8a632b9b62ffe532c8709540deff665616183714b01d10999"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (038, 039) L - Intro to Immunology I and II - Taylor.pdf",
+      "relative_path": "OST520 (038, 039) L - Intro to Immunology I and II - Taylor.pdf",
+      "extension": ".pdf",
+      "bytes": 8503221,
+      "sha256": "07ad1f7e500645f1c15bf6a16e6b157fe4607c32c09787b099f43e858041ee5d"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (040, 041) L - Innate Immunology I and II (Outline) - Taylor.docx",
+      "relative_path": "OST520 (040, 041) L - Innate Immunology I and II (Outline) - Taylor.docx",
+      "extension": ".docx",
+      "bytes": 127721,
+      "sha256": "2ef908a7c15767dc2257d2ac4717854bc0502ec149c8ec6e576dda35eaefec95"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (040, 041) L - Innate Immunology I and II (Slides) - Taylor.pptx",
+      "relative_path": "OST520 (040, 041) L - Innate Immunology I and II (Slides) - Taylor.pptx",
+      "extension": ".pptx",
+      "bytes": 23723279,
+      "sha256": "f2ab3cce9ee16d1eb4e10a46e4359a86a578d3af4466a9fabe29e32e9b8d6954"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (040, 041) L - Innate Immunology I and II - Taylor.pdf",
+      "relative_path": "OST520 (040, 041) L - Innate Immunology I and II - Taylor.pdf",
+      "extension": ".pdf",
+      "bytes": 9183551,
+      "sha256": "043e8e5e9952a00c463a0dc354cce9df445a46e9d623c033ac168b07da852439"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (BCH)_Lipid Pathways_Blank Summary Sheets__Wilkins.docx",
+      "relative_path": "OST520 (BCH)_Lipid Pathways_Blank Summary Sheets__Wilkins.docx",
+      "extension": ".docx",
+      "bytes": 69448,
+      "sha256": "5c23e33a06a05a5ed6f51ab757a54cabe6ce875425336bfc30b68af03d09e2f1"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (RR6) R - Gluconeogenesis - Wilkins.docx",
+      "relative_path": "OST520 (RR6) R - Gluconeogenesis - Wilkins.docx",
+      "extension": ".docx",
+      "bytes": 65115,
+      "sha256": "14db1ce8f4f7f97a22d933c3835bbdc197afb71a7c5438eebdce241195a7f1a9"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (RR7a) R - Fatty Acid Oxidation (FAO) - Wilkins.docx",
+      "relative_path": "OST520 (RR7a) R - Fatty Acid Oxidation (FAO) - Wilkins.docx",
+      "extension": ".docx",
+      "bytes": 66454,
+      "sha256": "ac11d667d105d034d71eae8e841e459de2aa107e5a679315781ea02454ba5bf5"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (RR7b) R - Ketone Body Synthesis (KBS) - Wilkins.docx",
+      "relative_path": "OST520 (RR7b) R - Ketone Body Synthesis (KBS) - Wilkins.docx",
+      "extension": ".docx",
+      "bytes": 68800,
+      "sha256": "4fb6be6d9190b945b05cb87947f155b3cf5cc607b95f51e0982ae0e0353e2a1c"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 (RR8) R - Fatty Acid Synthesis (FAS) - Wilkins.docx",
+      "relative_path": "OST520 (RR8) R - Fatty Acid Synthesis (FAS) - Wilkins.docx",
+      "extension": ".docx",
+      "bytes": 64944,
+      "sha256": "a6a72ecf97fba51a619677a4a783c5100c801f1ed8c5b886fba4d9c4d76a9e49"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/OST520 - Histology Lab L3 - Connective Tissue Proper.pdf",
+      "relative_path": "OST520 - Histology Lab L3 - Connective Tissue Proper.pdf",
+      "extension": ".pdf",
+      "bytes": 1761646,
+      "sha256": "960922fa7315ee10daa50f49fbeea9f559bd23d4bd91bf279fb336720fa91fda"
+    },
+    {
+      "path": "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_inputs/Week 3 Biomedical Science/Table of Contents.html",
+      "relative_path": "Table of Contents.html",
+      "extension": ".html",
+      "bytes": 8857,
+      "sha256": "0296ac8c3fb7f62a6ccc227d2af2bf3fe4597c0762c8e2013a67300f04c5d615"
+    }
+  ],
+  "transcript_matches": {
+    "(026)": [
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/022__OST520 (026) L Connective Tissue - Liang.timestamped.txt"
+    ],
+    "(027)": [],
+    "(030.1)": [
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/023__OST520 (030.1) L Introduction to Infection 1 - Arvidson.timestamped.txt"
+    ],
+    "(030.2)": [
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/024__OST520 (030.2) L Introduction to Infection 2 Normal Microbiota - Arvidson.timestamped.txt"
+    ],
+    "(031)": [
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/025__OST520 (031) L Blood Cells and Hematopoiesis - Schwartz.timestamped.txt"
+    ],
+    "(035)": [
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/026__OST520 (035) L Bacterial structure - Arvidson.timestamped.txt"
+    ],
+    "(036.": [
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/027__OST520 (036.1) L Intro to Virology Part 1 - Taylor.timestamped.txt",
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/028__OST520 (036.2) L Intro to Virology Virus Replication - Taylor.timestamped.txt",
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/029__OST520 (036.3) - Intro to Virology Nucleic Acid Replication - Taylor.timestamped.txt"
+    ],
+    "(037)": [
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/030__OST520 (037) L Parasitology - Seydel.timestamped.txt"
+    ],
+    "(038.": [
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/031__OST520 (038.1) L Intro to Immunology 1 - Taylor.timestamped.txt",
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/032__OST520 (038.2) L Intro to Immunology Basic Components - Taylor.timestamped.txt",
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/033__OST520 (038.3) L Intro to Immunology Cell Communication - Taylor.timestamped.txt",
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/034__OST520 (038.4) L Intro to Immunology Innate Immunity - Taylor.timestamped.txt"
+    ],
+    "(039.": [
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/035__OST520 (039.1) L Intro to Immunology Adaptive Immunity - Taylor.timestamped.txt",
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/036__OST520 (039.2) L Intro to Immunology Antigens and Receptors - Taylor.timestamped.txt",
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/037__OST520 (039.3) L Intro to Immunology Big Picture - Taylor.timestamped.txt"
+    ],
+    "(040.": [
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/038__OST520 (040.1) L Innate Immunology Introduction - Taylor.timestamped.txt",
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/039__OST520 (040.2) L Innate Immunology Identifying Pathogens - Taylor.timestamped.txt",
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/040__OST520 (040.3) L Innate Immunology Inflammation - Taylor.timestamped.txt",
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/041__OST520 (040.4) L Innate Immunology Phagocytes - Taylor.timestamped.txt"
+    ],
+    "(041.": [
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/042__OST520 (041.1) L Innate Immunology Granulocytes - Taylor.timestamped.txt",
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/043__OST520 (041.2) L Innate Immunology Complement - Taylor.timestamped.txt",
+      "/Users/austin_cheng/Desktop/MSUCOM/26 Fall/OST 520/_outputs/transcripts/timestamped/044__OST520 (041.3) L Innate Immunology Innate Deficiencies - Taylor.timestamped.txt"
+    ]
+  },
+  "notes": [
+    "The input contains duplicate formats that must be integrated as one logical lecture.",
+    "No Week 3 source file may be added or replaced without regenerating this manifest.",
+    "L028, L029, RR6, RR7a, RR7b, RR8, L032, L033, and L034 do not currently have matching timestamped transcripts in the known corpus; their DOCX/PDF sources are authoritative for this run."
+  ]
+}

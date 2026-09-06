@@ -1,0 +1,63 @@
+{
+  "files": {
+    "histo_blood:cards": 5,
+    "histo_blood:guides": 5,
+    "histo_blood:questions": 5,
+    "metabolism:cards": 7,
+    "metabolism:guides": 7,
+    "metabolism:questions": 7,
+    "micro_immune:cards": 8,
+    "micro_immune:guides": 8,
+    "micro_immune:questions": 8
+  },
+  "totals": {
+    "answer:holdout:0": 8,
+    "answer:holdout:1": 8,
+    "answer:holdout:2": 8,
+    "answer:holdout:3": 8,
+    "answer:holdout:4": 8,
+    "answer:practice:0": 32,
+    "answer:practice:1": 32,
+    "answer:practice:2": 32,
+    "answer:practice:3": 32,
+    "answer:practice:4": 32,
+    "card:basic": 169,
+    "card:cloze": 21,
+    "cue:unique_dash_correct": 9,
+    "cue:unique_dash_eligible": 42,
+    "cue:unique_longest_correct": 50,
+    "cue:unique_longest_eligible": 174,
+    "level:discrimination": 36,
+    "level:mechanism": 53,
+    "level:presentation": 84,
+    "level:recall": 27,
+    "media:holdout": 0,
+    "media:practice": 16,
+    "pool:holdout": 40,
+    "pool:practice": 160
+  },
+  "unique_question_ids": 200,
+  "beyond_recall_percent": 86.5,
+  "presentation_or_discrimination_percent": 60.0,
+  "errors": [],
+  "answer_positions": {
+    "practice": [
+      32,
+      32,
+      32,
+      32,
+      32
+    ],
+    "holdout": [
+      8,
+      8,
+      8,
+      8,
+      8
+    ]
+  },
+  "cue_rates": {
+    "unique_longest_correct": 0.287,
+    "unique_dash_correct": 0.214
+  }
+}

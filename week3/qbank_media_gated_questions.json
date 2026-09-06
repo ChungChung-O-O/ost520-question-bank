@@ -1,0 +1,610 @@
+[
+  {
+    "id": "W3-L033-HEMOGLOBIN-AND-GAS-TRANSPORT-04",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "On an O2-saturation plot, which curve has the highest affinity?",
+    "options": [
+      "The curve with lowest P50",
+      "The curve with highest P50",
+      "The curve with no plateau",
+      "The curve at lowest pO2 only",
+      "The line with most Hb"
+    ],
+    "answer": 0,
+    "rationale": "P50 is the pO2 needed for half saturation, so lower P50 means higher affinity.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "HB3",
+      "HB4"
+    ],
+    "covers": [
+      "HB3",
+      "HB4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L033 p. 7",
+    "sourceBlock": "L033",
+    "applicationLevel": "presentation",
+    "requiresMedia": true,
+    "mediaNote": "Use L033 p. 7 saturation-curve graph; learner must identify plotted curve/half-saturation relationship.",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "A higher P50 means more pO2 is required for half-saturation and therefore lower, not higher, affinity."
+    },
+    "holdout": false,
+    "n": 12
+  },
+  {
+    "id": "W3-LABL3-HISTOLOGY-LAB-L3-CONNECTIVE-TISSUE-PROPER-01",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "In an H&E dermis field, thick eosinophilic type I collagen bundles run in many directions with sparse ground substance. What tissue is present?",
+    "options": [
+      "Loose CT",
+      "Dense regular CT",
+      "Reticular tissue",
+      "Dense irregular CT",
+      "Elastic lamellar tissue"
+    ],
+    "answer": 3,
+    "rationale": "Dermis is dense irregular CT with multidirectional type I collagen bundles.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "LAB1",
+      "LAB2",
+      "LAB3",
+      "LAB4"
+    ],
+    "covers": [
+      "LAB1",
+      "LAB2",
+      "LAB3",
+      "LAB4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Lab L3 p. 6",
+    "sourceBlock": "LABL3",
+    "applicationLevel": "presentation",
+    "requiresMedia": true,
+    "mediaNote": "Requires the dermis virtual-slide/image series or Figure 3 on Lab L3 p. 6.",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Loose CT has relatively few fibers and more ground substance; thick multidirectional type I bundles identify dense irregular CT."
+    },
+    "holdout": false,
+    "n": 9
+  },
+  {
+    "id": "W3-LABL3-HISTOLOGY-LAB-L3-CONNECTIVE-TISSUE-PROPER-03",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "A tendon shows wavy, parallel collagen bundles and fibroblast nuclei in rows. What property follows?",
+    "options": [
+      "Strength to multidirectional stress",
+      "Free diffusion like lamina propria",
+      "Elastic recoil in all directions",
+      "Meshwork stroma",
+      "Strength parallel to fibers"
+    ],
+    "answer": 4,
+    "rationale": "Dense regular CT is strong for unidirectional, parallel stress.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "LAB1",
+      "LAB2",
+      "LAB3"
+    ],
+    "covers": [
+      "LAB1",
+      "LAB2",
+      "LAB3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Lab L3 p. 7",
+    "sourceBlock": "LABL3",
+    "applicationLevel": "presentation",
+    "requiresMedia": true,
+    "mediaNote": "Requires the tendon image series on Lab L3 p. 7.",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Parallel tendon collagen resists force along one axis; multidirectional tensile strength is the dense-irregular pattern."
+    },
+    "holdout": false,
+    "n": 11
+  },
+  {
+    "id": "W3-LABL3-HISTOLOGY-LAB-L3-CONNECTIVE-TISSUE-PROPER-04",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "Which fiber/stain pairing is correct in this lab?",
+    "options": [
+      "Type I collagen - dark in silver-stain preparations",
+      "Type III reticular - silver-black fibers",
+      "Type III reticular - black in silver stain",
+      "Type III reticular - thick H&E bundles",
+      "Elastic fibers - made by erythrocytes"
+    ],
+    "answer": 2,
+    "rationale": "Silver stain delineates type III reticular fibers as black in lymph node.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "LAB5"
+    ],
+    "covers": [
+      "LAB5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Lab L3 p. 8",
+    "sourceBlock": "LABL3",
+    "applicationLevel": "discrimination",
+    "requiresMedia": true,
+    "mediaNote": "Requires silver-stain Image Series A on Lab L3 p. 8.",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "The lab identifies reticular type III fibers, not type I collagen, as black in the silver-stain lymph-node preparation."
+    },
+    "holdout": false,
+    "n": 12
+  },
+  {
+    "id": "W3-LABL3-HISTOLOGY-LAB-L3-CONNECTIVE-TISSUE-PROPER-06",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "An aortic wall has folded, glassy elastic sheets separated by smooth muscle. What structure is being identified?",
+    "options": [
+      "Elastic fibers",
+      "Elastic lamellae",
+      "Reticular network",
+      "Dense regular tendon",
+      "Lamina propria"
+    ],
+    "answer": 1,
+    "rationale": "Aortic elastic lamellae are perforated sheets synthesized by smooth muscle.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "LAB1",
+      "LAB5"
+    ],
+    "covers": [
+      "LAB1",
+      "LAB5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Lab L3 p. 9",
+    "sourceBlock": "LABL3",
+    "applicationLevel": "presentation",
+    "requiresMedia": true,
+    "mediaNote": "Requires aortic H&E/toluidine-blue image series on Lab L3 p. 9.",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Elastic fibers occur in ligaments, but the aortic wall contains perforated elastic lamellae between smooth muscle cells."
+    },
+    "holdout": false,
+    "n": 14
+  },
+  {
+    "id": "W3-LABL3-HISTOLOGY-LAB-L3-CONNECTIVE-TISSUE-PROPER-07",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "An H&E cell has a large empty cytoplasmic space and a flattened peripheral nucleus. What is it?",
+    "options": [
+      "Unilocular adipocyte",
+      "Quiescent fibroblast",
+      "Granulated mast cell",
+      "Antibody-secreting plasma cell",
+      "Pigment-laden macrophage"
+    ],
+    "answer": 0,
+    "rationale": "Lipid is lost in routine preparation, creating the empty-appearing droplet of a unilocular adipocyte.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "LAB6"
+    ],
+    "covers": [
+      "LAB6"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Lab L3 pp. 9-10",
+    "sourceBlock": "LABL3",
+    "applicationLevel": "presentation",
+    "requiresMedia": true,
+    "mediaNote": "Requires unilocular-adipocyte virtual slide on Lab L3 p. 9.",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Fibroblasts have elongate nuclei and scant cytoplasm; the empty lipid space with a peripheral nucleus identifies an adipocyte."
+    },
+    "holdout": false,
+    "n": 15
+  },
+  {
+    "id": "W3-LABL3-HISTOLOGY-LAB-L3-CONNECTIVE-TISSUE-PROPER-08",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "Which finding best supports plasma-cell identification?",
+    "options": [
+      "Multilobed nucleus and eosinophilic granules",
+      "Central nucleus with one lipid droplet",
+      "Flattened heterochromatic nucleus between collagen bundles",
+      "Kidney-shaped nucleus with brown pigment",
+      "Eccentric clock-face nucleus and pale Golgi zone"
+    ],
+    "answer": 4,
+    "rationale": "Plasma cells have eccentric clock-face nuclei, RER-rich basophilic cytoplasm, and a pale Golgi area.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "LAB6"
+    ],
+    "covers": [
+      "LAB6"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Lab L3 p. 12",
+    "sourceBlock": "LABL3",
+    "applicationLevel": "discrimination",
+    "requiresMedia": true,
+    "mediaNote": "Requires plasma-cell Image Series/EM on Lab L3 p. 12.",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Multilobed nuclei with eosinophilic granules suggest granulocytes, not the eccentric clock-face nucleus and pale Golgi zone of plasma cells."
+    },
+    "holdout": false,
+    "n": 16
+  },
+  {
+    "id": "W3-L030-1-INTRODUCTION-TO-INFECTION-06",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Which thioglycolate growth pattern identifies a facultative organism?",
+    "options": [
+      "Growth only at the top",
+      "Growth only at the bottom",
+      "A narrow band below the surface",
+      "Growth throughout, greatest at the top",
+      "Uniform equal growth throughout"
+    ],
+    "answer": 3,
+    "rationale": "Facultative organisms grow with or without oxygen but grow better at the oxygen-rich top.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "oxygen requirements"
+    ],
+    "covers": [
+      "L0301-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Transcript 19:38-20:28",
+    "sourceBlock": "L030.1",
+    "applicationLevel": "discrimination",
+    "requiresMedia": true,
+    "mediaNote": "Thioglycolate tube-pattern figure, PDF slide corresponding to transcript 19:03-20:28.",
+    "closestDistractor": {
+      "index": 4,
+      "why_wrong": "Uniform growth is aerotolerant anaerobe behavior; it does not use oxygen."
+    },
+    "holdout": false,
+    "n": 6
+  },
+  {
+    "id": "W3-L030-1-INTRODUCTION-TO-INFECTION-08",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "An organism grows as a subsurface band in thioglycolate broth and fails to grow at the oxygen-rich surface. Which oxygen category fits best?",
+    "options": [
+      "Microaerophile",
+      "Obligate aerobe",
+      "Obligate anaerobe",
+      "Facultative organism",
+      "Aerotolerant anaerobe"
+    ],
+    "answer": 0,
+    "rationale": "Microaerophiles require some oxygen, but excessive oxygen is toxic, producing a band partway down the tube.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "oxygen requirements"
+    ],
+    "covers": [
+      "L0301-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Transcript 20:02-20:13",
+    "sourceBlock": "L030.1",
+    "applicationLevel": "discrimination",
+    "requiresMedia": true,
+    "mediaNote": "Thioglycolate tube-pattern figure, PDF slide corresponding to transcript 19:03-20:28.",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Obligate aerobes grow at the top where oxygen is highest."
+    },
+    "holdout": false,
+    "n": 8
+  },
+  {
+    "id": "W3-L032-FUNGAL-PATHOGENS-03",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A fungal preparation shows multicellular branching filaments that together form a mycelium. Which form is present?",
+    "options": [
+      "Yeast",
+      "Blastoconidium",
+      "Spherule",
+      "Mold",
+      "Capsule"
+    ],
+    "answer": 3,
+    "rationale": "Molds are multicellular and consist of hyphae that form a mycelium.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "mold",
+      "mycelium"
+    ],
+    "covers": [
+      "L032-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Docx V.B-C",
+    "sourceBlock": "L032",
+    "applicationLevel": "discrimination",
+    "requiresMedia": true,
+    "mediaNote": "Review fungal morphology figure in source section V.",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Yeasts are unicellular and reproduce by budding."
+    },
+    "holdout": false,
+    "n": 19
+  },
+  {
+    "id": "W3-L032-FUNGAL-PATHOGENS-04",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A chain of elongated fungal cells has recurrent pinched constrictions at each junction. What is it?",
+    "options": [
+      "True hyphae",
+      "Aerial mycelium",
+      "Conidiophore",
+      "Sporangium",
+      "Pseudohyphae"
+    ],
+    "answer": 4,
+    "rationale": "Pseudohyphae have recurrent bud-like/pinched constrictions, unlike true hyphae.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "pseudohyphae"
+    ],
+    "covers": [
+      "L032-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Docx V.D",
+    "sourceBlock": "L032",
+    "applicationLevel": "discrimination",
+    "requiresMedia": true,
+    "mediaNote": "True-hypha versus pseudohypha figure in source section V.",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "True hyphae lack the repeated constrictions."
+    },
+    "holdout": false,
+    "n": 20
+  },
+  {
+    "id": "W3-L032-FUNGAL-PATHOGENS-07",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A fungal micrograph shows asexual spores enclosed within a sac-like structure at the end of a hypha. Which structure is being identified?",
+    "options": [
+      "Sporangium containing sporangiospores",
+      "Conidiophore bearing exposed conidia",
+      "Chain of blastoconidia forming pseudohyphae",
+      "Septum dividing a vegetative hypha",
+      "Chlamydoconidium embedded within a hypha"
+    ],
+    "answer": 0,
+    "rationale": "Sporangiospores are enclosed within a sac-like sporangium. Conidia are borne externally from a hypha or conidiophore.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "asexual reproductive structures"
+    ],
+    "covers": [
+      "L032-O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Fungal Pathogens PDF p. 11; docx V.F",
+    "sourceBlock": "L032",
+    "applicationLevel": "discrimination",
+    "requiresMedia": true,
+    "mediaNote": "Use the source reproductive-structure figure on PDF p. 11; the image must be shown without answer-revealing labels.",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "A conidiophore bears conidia externally rather than enclosing them within a sac."
+    },
+    "holdout": false,
+    "n": 23
+  },
+  {
+    "id": "W3-L035-BACTERIAL-STRUCTURE-02",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A beta-lactam stops bacterial cell-wall crosslink formation. Which enzyme was inhibited?",
+    "options": [
+      "Lysozyme",
+      "Transpeptidase/PBP",
+      "ATP synthase",
+      "DNA gyrase",
+      "Catalase"
+    ],
+    "answer": 1,
+    "rationale": "Beta-lactams bind PBPs/transpeptidases to prevent peptidoglycan crosslinking.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "beta-lactam",
+      "PBP"
+    ],
+    "covers": [
+      "L035-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slide 11; transcript 08:08-08:39",
+    "sourceBlock": "L035",
+    "applicationLevel": "mechanism",
+    "requiresMedia": true,
+    "mediaNote": "Peptidoglycan synthesis diagram on PDF slide 11.",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Lysozyme is host enzyme that cleaves glycan chains, not the beta-lactam target."
+    },
+    "holdout": false,
+    "n": 26
+  },
+  {
+    "id": "W3-L037-PARASITOLOGY-04",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Which blood-film approach should be chosen when maximal detection sensitivity is the priority?",
+    "options": [
+      "Thin smear",
+      "Urine microscopy",
+      "Thick smear",
+      "Skin scraping",
+      "Xenodiagnosis"
+    ],
+    "answer": 2,
+    "rationale": "Thick smears maximize sensitivity; thin smears preserve morphology and permit quantification.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "blood smear"
+    ],
+    "covers": [
+      "L037-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Outline, Diagnostic techniques: Blood; transcript 15:20-16:48",
+    "sourceBlock": "L037",
+    "applicationLevel": "mechanism",
+    "requiresMedia": true,
+    "mediaNote": "Blood-smear comparison in parasite slides.",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Thin smears favor ultrastructure and quantification."
+    },
+    "holdout": false,
+    "n": 44
+  },
+  {
+    "id": "W3-L037-PARASITOLOGY-05",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Which feature is the principal advantage of a thin blood smear?",
+    "options": [
+      "Maximum sensitivity",
+      "No laboratory training",
+      "Ultrastructure preservation and quantification",
+      "Low cost PCR-level detection",
+      "Ability to culture all parasites"
+    ],
+    "answer": 2,
+    "rationale": "The outline assigns ultrastructure and quantification to thin smears.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "thin smear"
+    ],
+    "covers": [
+      "L037-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Outline, Diagnostic techniques: Blood; transcript 15:20-16:48",
+    "sourceBlock": "L037",
+    "applicationLevel": "discrimination",
+    "requiresMedia": true,
+    "mediaNote": "Blood-smear morphology in parasite slides.",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Maximum sensitivity is the thick-smear advantage."
+    },
+    "holdout": false,
+    "n": 45
+  },
+  {
+    "id": "W3-L040-041-INNATE-IMMUNOLOGY-I-AND-II-08",
+    "topic": "Immunology",
+    "src": "I",
+    "stem": "Which trigger initiates the classical complement pathway?",
+    "options": [
+      "C3b bound spontaneously to a microbial surface",
+      "MBL bound to microbial sugar",
+      "Antibody bound to bacterial surface",
+      "TLR4 bound to LPS",
+      "C9 binding a membrane"
+    ],
+    "answer": 2,
+    "rationale": "Classical complement is initiated when C1 binds antibody on bacterial surface; alternative uses C3b and lectin uses MBL.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "classical complement"
+    ],
+    "covers": [
+      "L040041-O6"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slide 10; transcript 043 07:49-08:37",
+    "sourceBlock": "L040/041",
+    "applicationLevel": "discrimination",
+    "requiresMedia": true,
+    "mediaNote": "Complement-pathway diagram on PDF slides 9-10.",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "MBL is the lectin-pathway trigger."
+    },
+    "holdout": false,
+    "n": 16
+  }
+]

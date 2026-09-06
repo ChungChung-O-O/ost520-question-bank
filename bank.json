@@ -1559,7 +1559,7 @@
     "src": "E",
     "type": "worked",
     "unit": "UE1",
-    "context": "",
+    "context": "A case-control study enrolls <strong>200 cases</strong> and <strong>200 controls</strong>. <strong>120 cases</strong> and <strong>60 controls</strong> report the exposure. Calculate the <strong>odds ratio</strong> and interpret it.",
     "stem": "Why was an odds ratio used in question 12 rather than a relative risk?",
     "rationale": "In a case-control study the investigator <strong>chooses how many cases and controls to enroll</strong>, so the ratio of diseased to non-diseased is artificial. You therefore <strong>cannot calculate risk or prevalence</strong>, only the <strong>odds ratio</strong>, which estimates the risk.<br><br>---",
     "options": [],
@@ -17199,5 +17199,5863 @@
       }
     ],
     "sourceRef": "L012 concept discrimination"
+  },
+  {
+    "topic": "Genetics",
+    "src": "G",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE1",
+    "course": "OST520",
+    "covers": [
+      "L013"
+    ],
+    "sourceRef": "L013 DNA Repair study guide",
+    "id": "L013-01",
+    "concepts": [
+      "dna-damage-vs-mutation",
+      "dna-repair"
+    ],
+    "stem": "A keratinocyte develops a thymine dimer after UV exposure. Before the cell enters S phase, nucleotide excision repair removes the lesion and restores the original sequence. Which statement is most accurate?",
+    "options": [
+      "The cell carries a fixed transition because thymine bases were damaged",
+      "The cell experienced DNA damage but did not acquire a permanent mutation",
+      "The lesion is a mutation because it altered base pairing temporarily",
+      "The repair created a frameshift by removing the damaged bases",
+      "The cell must undergo apoptosis because UV damage cannot be repaired"
+    ],
+    "answer": 1,
+    "rationale": "A <strong>DNA lesion is damage, not yet a mutation</strong>. Because NER restored the original sequence before replication copied the lesion, no altered genetic information was fixed into a daughter DNA molecule. A permanent mutation requires replication to seal in an unrepaired change.<br><br>UV commonly causes pyrimidine dimers, but the lesion itself is reversible. Frameshifts require an insertion or deletion in a coding sequence, not accurate excision and replacement of damaged DNA.",
+    "n": 390
+  },
+  {
+    "topic": "Genetics",
+    "src": "G",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE1",
+    "course": "OST520",
+    "covers": [
+      "L013"
+    ],
+    "sourceRef": "L013 DNA Repair study guide",
+    "id": "L013-02",
+    "concepts": [
+      "deamination",
+      "transition",
+      "dna-damage-vs-mutation"
+    ],
+    "stem": "Cytosine in a nonreplicating cell spontaneously deaminates to uracil. The lesion escapes repair and the DNA replicates twice. Which permanent substitution is most likely present in descendants?",
+    "options": [
+      "A to G transition",
+      "A to T transversion",
+      "C to A transversion",
+      "C to T transition",
+      "G to C transversion"
+    ],
+    "answer": 3,
+    "rationale": "Deamination converts <strong>cytosine to uracil</strong>, which pairs like thymine. If it is not repaired before replication, the original C:G pair is ultimately converted to a <strong>T:A pair</strong>, a C to T transition. A transition preserves base class because C and T are both pyrimidines.<br><br>The damage is uracil in DNA; the mutation is the later inherited base-pair substitution. Confusing those time points is the central trap.",
+    "n": 391
+  },
+  {
+    "topic": "Genetics",
+    "src": "G",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE1",
+    "course": "OST520",
+    "covers": [
+      "L013"
+    ],
+    "sourceRef": "L013 DNA Repair study guide",
+    "id": "L013-03",
+    "concepts": [
+      "depurination",
+      "transversion",
+      "dna-damage-vs-mutation"
+    ],
+    "stem": "A spontaneous lesion removes adenine from DNA by breaking its N-glycosidic bond while leaving the sugar-phosphate backbone intact. If replication proceeds across the resulting gap, which outcome is most likely?",
+    "options": [
+      "A purine-to-pyrimidine transversion",
+      "A C to T transition",
+      "A pyrimidine dimer repaired by NER",
+      "A double-strand break repaired by BRCA proteins",
+      "A mismatch recognized by parental methylation"
+    ],
+    "answer": 0,
+    "rationale": "This is <strong>depurination</strong>: a purine base is lost while the backbone remains intact. A random base may be inserted opposite the abasic site, and the lecture identifies a purine-to-pyrimidine <strong>transversion</strong> as the most likely mutational result.<br><br>Deamination produces uracil and a C to T transition. A thymine dimer is UV damage, not loss of a purine base.",
+    "n": 392
+  },
+  {
+    "topic": "Genetics",
+    "src": "G",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE1",
+    "course": "OST520",
+    "covers": [
+      "L013"
+    ],
+    "sourceRef": "L013 DNA Repair study guide",
+    "id": "L013-04",
+    "concepts": [
+      "base-excision-repair",
+      "nucleotide-excision-repair",
+      "direct-repair"
+    ],
+    "stem": "A cell must repair a single uracil base in DNA created by cytosine deamination. Which first step best distinguishes the appropriate repair pathway from nucleotide excision repair?",
+    "options": [
+      "A dealkylation enzyme removes a methyl group directly",
+      "An exonuclease removes a long stretch around the helix distortion",
+      "A DNA N-glycosylase removes the damaged base, creating an AP site",
+      "BRCA1 recruits a sister chromatid to copy the region",
+      "DNA polymerase proofreads the parent strand after replication"
+    ],
+    "answer": 2,
+    "rationale": "A single abnormal base is handled by <strong>base excision repair</strong>. DNA N-glycosylase cleaves the N-glycosidic bond to create an AP site, after which AP endonuclease, dRP lyase, polymerase, and ligase complete repair.<br><br>NER removes a stretch around a bulky lesion such as a pyrimidine dimer. Direct repair is the pathway for alkyl groups, not uracil produced by deamination.",
+    "n": 393
+  },
+  {
+    "topic": "Genetics",
+    "src": "G",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE1",
+    "course": "OST520",
+    "covers": [
+      "L013"
+    ],
+    "sourceRef": "L013 DNA Repair study guide",
+    "id": "L013-05",
+    "concepts": [
+      "nucleotide-excision-repair",
+      "xeroderma-pigmentosum",
+      "uv-damage"
+    ],
+    "stem": "A child has profound sun sensitivity and develops multiple skin cancers early in life. Fibroblasts from the child cannot excise a short DNA segment surrounding a thymine-thymine dimer. Which defect best explains the phenotype?",
+    "options": [
+      "Base excision repair of deaminated cytosine",
+      "Mismatch repair of replication errors",
+      "Direct reversal of alkylation",
+      "Non-homologous end joining of breaks",
+      "Nucleotide excision repair of bulky UV lesions"
+    ],
+    "answer": 4,
+    "rationale": "The phenotype is <strong>xeroderma pigmentosum</strong>, caused by defective <strong>nucleotide excision repair</strong>. NER removes a stretch surrounding bulky, helix-distorting UV photoproducts such as pyrimidine dimers; failure leaves cells extraordinarily vulnerable to UV-induced cancer.<br><br>BER fixes a single damaged base, whereas MMR corrects normal but mismatched bases after replication. Neither describes excision around a thymine dimer.",
+    "n": 394
+  },
+  {
+    "topic": "Genetics",
+    "src": "G",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE1",
+    "course": "OST520",
+    "covers": [
+      "L013"
+    ],
+    "sourceRef": "L013 DNA Repair study guide",
+    "id": "L013-06",
+    "concepts": [
+      "mismatch-repair",
+      "lynch-syndrome",
+      "polymerase-fidelity"
+    ],
+    "stem": "Soon after DNA replication, a G is paired with T even though each base is chemically normal. Which repair system is designed to correct this error, and what information lets it select the newly synthesized strand?",
+    "options": [
+      "NER uses UV-induced helix bending",
+      "MMR uses delayed methylation of the daughter strand",
+      "BER recognizes an AP site in the parent strand",
+      "NHEJ uses free DNA ends as a template",
+      "Recombination repair uses BRCA1 in G1"
+    ],
+    "answer": 1,
+    "rationale": "<strong>Mismatch repair</strong> corrects replication mismatches in which both bases are otherwise normal. It distinguishes strands through <strong>parent-strand methylation</strong>: the daughter strand is methylated only after a delay, giving MMR a window to replace the new, incorrect base.<br><br>Defective MMR causes HNPCC, also called Lynch syndrome. BER identifies chemically damaged bases, while NER responds to bulky distortion rather than an ordinary G:T mismatch.",
+    "n": 395
+  },
+  {
+    "topic": "Genetics",
+    "src": "G",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE1",
+    "course": "OST520",
+    "covers": [
+      "L013"
+    ],
+    "sourceRef": "L013 DNA Repair study guide",
+    "id": "L013-07",
+    "concepts": [
+      "mismatch-repair",
+      "lynch-syndrome",
+      "nucleotide-excision-repair"
+    ],
+    "stem": "Two families have inherited cancer predisposition. Family A has early colon cancer consistent with Lynch syndrome. Family B has extreme UV sensitivity with early skin cancers. Which pathway assignment is correct?",
+    "options": [
+      "Family A: NER; Family B: MMR",
+      "Family A: BER; Family B: direct repair",
+      "Family A: recombination repair; Family B: NHEJ",
+      "Family A: MMR; Family B: NER",
+      "Family A: NHEJ; Family B: BER"
+    ],
+    "answer": 3,
+    "rationale": "<strong>Lynch syndrome</strong> reflects loss of <strong>mismatch repair</strong>, allowing replication errors to persist. Extreme UV sensitivity and early skin cancer indicate xeroderma pigmentosum, a defect in <strong>nucleotide excision repair</strong> of pyrimidine dimers.<br><br>Both are inherited cancer syndromes, but their lesion cues point to different pathways: ordinary replication mismatches for MMR and bulky UV photoproducts for NER.",
+    "n": 396
+  },
+  {
+    "topic": "Genetics",
+    "src": "G",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE1",
+    "course": "OST520",
+    "covers": [
+      "L013"
+    ],
+    "sourceRef": "L013 DNA Repair study guide",
+    "id": "L013-08",
+    "concepts": [
+      "double-strand-break-repair",
+      "non-homologous-end-joining",
+      "ionizing-radiation"
+    ],
+    "stem": "After ionizing radiation, a quiescent human cell must reconnect a double-strand break but has no sister chromatid available. Which repair outcome is most likely?",
+    "options": [
+      "Non-homologous end joining, with risk of erroneous joining and translocation",
+      "Homologous recombination, with an error-free copied template",
+      "Mismatch repair, guided by delayed daughter-strand methylation",
+      "NER, because ionizing radiation produces thymine dimers",
+      "Direct repair, because radiation adds methyl groups to bases"
+    ],
+    "answer": 0,
+    "rationale": "Ionizing radiation produces <strong>double-strand breaks</strong>. Without a homologous template, the cell relies on <strong>non-homologous end joining</strong>, which reconnects ends but is error-prone and can produce chromosome translocations.<br><br>Homologous recombination requires a homolog or sister chromatid, so it is favored when that template is available in S/G2. UV, not ionizing radiation, produces pyrimidine dimers.",
+    "n": 397
+  },
+  {
+    "topic": "Genetics",
+    "src": "G",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE1",
+    "course": "OST520",
+    "covers": [
+      "L013"
+    ],
+    "sourceRef": "L013 DNA Repair study guide",
+    "id": "L013-09",
+    "concepts": [
+      "recombination-repair",
+      "brca1-brca2",
+      "double-strand-break-repair"
+    ],
+    "stem": "A proliferating cell in late S phase sustains a double-strand break. It has an intact sister chromatid and functional BRCA1 and BRCA2. Which repair strategy is best supported by these facts?",
+    "options": [
+      "Direct reversal of alkylation",
+      "Mismatch correction using methylation",
+      "Recombination repair using the sister chromatid",
+      "NER removal of a short nucleotide stretch",
+      "Trans-lesion synthesis across an intact lesion"
+    ],
+    "answer": 2,
+    "rationale": "<strong>Recombination repair</strong> uses a homolog or, most practically in cycling cells, a <strong>sister chromatid</strong> as a template. It functions in S/G2 and depends on BRCA1 and BRCA2, making it suited to this late-S-phase double-strand break.<br><br>NHEJ would be the template-free, more error-prone alternative. BRCA proteins are not mismatch repair proteins, despite the shared familial-cancer context.",
+    "n": 398
+  },
+  {
+    "topic": "Genetics",
+    "src": "G",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE1",
+    "course": "OST520",
+    "covers": [
+      "L013"
+    ],
+    "sourceRef": "L013 DNA Repair study guide",
+    "id": "L013-10",
+    "concepts": [
+      "cell-cycle-response",
+      "g1-arrest",
+      "apoptosis",
+      "translesion-synthesis"
+    ],
+    "stem": "A dividing cell detects extensive DNA damage before it has begun DNA synthesis. The damage appears repairable. Which response most directly prevents replication from converting the damage into mutations?",
+    "options": [
+      "Enter G0 permanently",
+      "Proceed through S phase using trans-lesion polymerases",
+      "Enter mitosis to segregate the damaged chromosome",
+      "Initiate apoptosis before assessing repair capacity",
+      "Arrest at the G1/S checkpoint while repair occurs"
+    ],
+    "answer": 4,
+    "rationale": "Repairable damage detected in <strong>G1</strong> triggers <strong>G1/S arrest</strong>, which holds the cell before it commits to replication. This creates time to repair lesions before they can be copied into permanent mutations.<br><br>Apoptosis is appropriate for severe, unrepairable damage. Trans-lesion synthesis is a bypass response when replication has already encountered a lesion in S phase, not the preferred response before S phase.",
+    "n": 399
+  },
+  {
+    "topic": "Genetics",
+    "src": "G",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE1",
+    "course": "OST520",
+    "covers": [
+      "L013"
+    ],
+    "sourceRef": "L013 DNA Repair study guide",
+    "id": "L013-11",
+    "concepts": [
+      "apoptosis",
+      "cell-cycle-response",
+      "dna-damage-vs-mutation"
+    ],
+    "stem": "A cell has extensive chromosome fragmentation after radiation, and repair mechanisms determine that faithful restoration is not feasible. Which response most protects the organism from passing this damage to progeny cells?",
+    "options": [
+      "G1 arrest until a sister chromatid becomes available",
+      "Trans-lesion synthesis to complete DNA replication",
+      "Proofreading by DNA polymerase after mitosis",
+      "Apoptosis of the damaged cell",
+      "Photoreactivation of broken chromosomes"
+    ],
+    "answer": 3,
+    "rationale": "When damage is <strong>severe and unrepairable</strong>, the protective response is <strong>apoptosis</strong>. Eliminating the damaged cell prevents it from replicating or dividing with fragmented chromosomes and propagating genomic errors.<br><br>G1 arrest is for repairable damage. Trans-lesion synthesis bypasses individual template lesions during replication and cannot restore broken chromosomes.",
+    "n": 400
+  },
+  {
+    "topic": "Genetics",
+    "src": "G",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE1",
+    "course": "OST520",
+    "covers": [
+      "L013"
+    ],
+    "sourceRef": "L013 DNA Repair study guide",
+    "id": "L013-12",
+    "concepts": [
+      "translesion-synthesis",
+      "cell-cycle-response",
+      "dna-damage-vs-mutation"
+    ],
+    "stem": "During S phase, a replication fork encounters an unrepaired lesion that blocks the usual polymerase. The cell completes replication by using a specialized polymerase that inserts a nucleotide with low fidelity across the lesion. This is best described as:",
+    "options": [
+      "Base excision repair",
+      "Trans-lesion synthesis",
+      "Mismatch repair",
+      "Homologous recombination",
+      "Proofreading"
+    ],
+    "answer": 1,
+    "rationale": "<strong>Trans-lesion synthesis</strong> is a damage-bypass strategy used when replication encounters a lesion. Specialized polymerases insert a nucleotide across the damaged template so replication can continue, but the tradeoff is reduced accuracy.<br><br>It is not true lesion repair and does not use a template to restore the original sequence. Proofreading removes a newly added mismatched nucleotide through 3′ to 5′ exonuclease activity.",
+    "n": 401
+  },
+  {
+    "topic": "Genetics",
+    "src": "G",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE1",
+    "course": "OST520",
+    "covers": [
+      "L013"
+    ],
+    "sourceRef": "L013 DNA Repair study guide",
+    "id": "L013-13",
+    "concepts": [
+      "photoreactivation",
+      "nucleotide-excision-repair",
+      "uv-damage"
+    ],
+    "stem": "Which proposed therapy relies on a DNA-repair mechanism that human cells do not naturally possess?",
+    "options": [
+      "Photolyase-mediated reversal of pyrimidine dimers",
+      "NER-mediated excision around a pyrimidine dimer",
+      "BER-mediated removal of a damaged single base",
+      "MMR-mediated correction of a replication mismatch",
+      "Direct removal of an alkyl group by dealkylation enzymes"
+    ],
+    "answer": 0,
+    "rationale": "Humans lack <strong>photoreactivation</strong>: they do not have photolyase to directly reverse pyrimidine dimers. Human cells instead remove these UV lesions by <strong>nucleotide excision repair</strong>.<br><br>Do not let the wording of a flawed course outcome override the answer key and pathway table. Direct repair exists for alkylation, but photolyase is not a human repair enzyme.",
+    "n": 402
+  },
+  {
+    "topic": "Genetics",
+    "src": "G",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE1",
+    "course": "OST520",
+    "covers": [
+      "L013"
+    ],
+    "sourceRef": "L013 DNA Repair study guide",
+    "id": "L013-14",
+    "concepts": [
+      "polymerase-fidelity",
+      "proofreading",
+      "mismatch-repair"
+    ],
+    "stem": "A DNA polymerase incorporates an incorrect nucleotide and corrects it immediately before continuing synthesis. Which enzymatic activity performed that correction, and how does it differ from mismatch repair?",
+    "options": [
+      "A 5′ to 3′ exonuclease removes pyrimidine dimers after UV",
+      "A DNA glycosylase creates an AP site before replication",
+      "A 3′ to 5′ exonuclease proofreads at the polymerase, whereas MMR acts on postreplication mismatches",
+      "A photolyase directly reverses the base-pairing error",
+      "A ligase selects the unmethylated daughter strand"
+    ],
+    "answer": 2,
+    "rationale": "DNA polymerase proofreading is a <strong>3′ to 5′ exonuclease</strong> activity that immediately removes a misincorporated nucleotide during synthesis. <strong>Mismatch repair</strong> is a separate postreplication system that recognizes a mismatch after replication and uses delayed daughter-strand methylation to choose which strand to correct.<br><br>DNA glycosylase starts BER by removing damaged bases, not ordinary polymerase errors. Photolyase is absent from humans.",
+    "n": 403
+  },
+  {
+    "id": "W3-L027-01",
+    "topic": "Molecular Biology",
+    "src": "N",
+    "stem": "Which enzyme directly attaches an amino acid to its cognate tRNA?",
+    "options": [
+      "Peptidyl transferase",
+      "Release factor",
+      "Signal peptidase",
+      "Transketolase",
+      "Aminoacyl-tRNA synthetase"
+    ],
+    "answer": 4,
+    "rationale": "Specific aminoacyl-tRNA synthetases charge tRNAs and proofread attachment.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O1"
+    ],
+    "covers": [
+      "O1"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L027 docx paragraphs 101-120",
+    "sourceBlock": "L027",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Release factors act at stop codons during termination; they do not attach amino acids to tRNAs."
+    },
+    "holdout": false,
+    "n": 1
+  },
+  {
+    "id": "W3-L027-02",
+    "topic": "Molecular Biology",
+    "src": "N",
+    "stem": "A tRNA carrying alanine but bearing a threonine anticodon escapes synthetase proofreading. What is incorporated when that anticodon pairs with its mRNA codon?",
+    "options": [
+      "Threonine",
+      "No amino acid",
+      "Methionine",
+      "Alanine",
+      "A stop signal"
+    ],
+    "answer": 3,
+    "rationale": "The ribosome checks codon-anticodon pairing, not whether the attached amino acid is correct.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O1",
+      "O2"
+    ],
+    "covers": [
+      "O1",
+      "O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L027 docx paragraph 168",
+    "sourceBlock": "L027",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "A mischarged tRNA is still accepted by the ribosome, so translation does not halt without amino-acid incorporation."
+    },
+    "holdout": false,
+    "n": 2
+  },
+  {
+    "id": "W3-L027-03",
+    "topic": "Molecular Biology",
+    "src": "N",
+    "stem": "A bacterial mRNA has an intact AUG but a mutated ribosomal recognition site upstream. What is most directly impaired?",
+    "options": [
+      "Peptide-bond formation",
+      "Termination-factor binding",
+      "Selection of that AUG for initiation",
+      "Aminoacyl-tRNA charging",
+      "Stop-codon recognition"
+    ],
+    "answer": 2,
+    "rationale": "Bacterial initiation uses RRS base pairing with 16S rRNA to position the ribosome.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O2",
+      "O3"
+    ],
+    "covers": [
+      "O2",
+      "O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L027 docx paragraphs 132-134",
+    "sourceBlock": "L027",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Termination-factor binding occurs at a stop codon, not at the upstream bacterial RRS needed to choose the initiation AUG."
+    },
+    "holdout": false,
+    "n": 3
+  },
+  {
+    "id": "W3-L027-04",
+    "topic": "Molecular Biology",
+    "src": "N",
+    "stem": "A eukaryotic mRNA loses its 5′ cap. Which translation defect is expected?",
+    "options": [
+      "Reduced 40S scanning initiation",
+      "Failure of 30S binding",
+      "Failure of peptide release",
+      "Loss of tRNA charging",
+      "Conversion to polycistronic translation"
+    ],
+    "answer": 0,
+    "rationale": "The 5′ cap recruits the 40S subunit for scanning.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O3"
+    ],
+    "covers": [
+      "O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L027 docx paragraphs 141-144",
+    "sourceBlock": "L027",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Peptide release is a termination event; loss of the 5′ cap instead impairs 40S recruitment and scanning."
+    },
+    "holdout": false,
+    "n": 4
+  },
+  {
+    "id": "W3-L027-05",
+    "topic": "Molecular Biology",
+    "src": "N",
+    "stem": "A drug prevents an incoming aminoacyl-tRNA from binding the bacterial ribosomal A site. Which drug action best matches?",
+    "options": [
+      "Erythromycin at translocation",
+      "Chloramphenicol at 50S",
+      "Tetracycline at 30S",
+      "Puromycin termination",
+      "Cycloheximide at 60S"
+    ],
+    "answer": 2,
+    "rationale": "The course identifies tetracycline as blocking aminoacyl-tRNA binding to 30S.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O4"
+    ],
+    "covers": [
+      "O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L027 docx antibiotic table",
+    "sourceBlock": "L027",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Chloramphenicol blocks 50S peptidyl transferase, whereas the stem specifically describes failed A-site aa-tRNA binding."
+    },
+    "holdout": false,
+    "n": 5
+  },
+  {
+    "id": "W3-L027-06",
+    "topic": "Molecular Biology",
+    "src": "N",
+    "stem": "A secretory protein contains a functional signal peptide but cannot bind signal recognition particle. Where does it remain?",
+    "options": [
+      "ER lumen",
+      "Cytosol",
+      "Golgi lumen",
+      "Plasma-membrane exterior",
+      "Mitochondrial matrix"
+    ],
+    "answer": 1,
+    "rationale": "SRP docking is required for co-translational targeting to rough ER.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O6"
+    ],
+    "covers": [
+      "O6"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L027 docx paragraphs 213-218",
+    "sourceBlock": "L027",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 3,
+      "why_wrong": "The plasma-membrane exterior is reached only after ER/Golgi trafficking; failed SRP docking leaves the nascent protein in cytosol."
+    },
+    "holdout": false,
+    "n": 6
+  },
+  {
+    "id": "W3-L027-07",
+    "topic": "Molecular Biology",
+    "src": "N",
+    "stem": "An integral membrane protein lacks its stop-transfer sequence. Which topology is most likely lost?",
+    "options": [
+      "mRNA 5′ cap",
+      "Aminoacyl-tRNA binding",
+      "N-linked core addition",
+      "Ribosome assembly",
+      "A membrane-spanning domain"
+    ],
+    "answer": 4,
+    "rationale": "The hydrophobic stop-transfer sequence halts translocation and leaves a transmembrane domain.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O6"
+    ],
+    "covers": [
+      "O6"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L027 docx paragraphs 222-230",
+    "sourceBlock": "L027",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Aminoacyl-tRNA binding is a ribosomal elongation event, not the membrane-topology role of a stop-transfer sequence."
+    },
+    "holdout": false,
+    "n": 7
+  },
+  {
+    "id": "W3-L027-08",
+    "topic": "Molecular Biology",
+    "src": "N",
+    "stem": "A patient with scurvy develops easy bruising. The proximate molecular defect is reduced:",
+    "options": [
+      "Collagen hydroxylation",
+      "N-linked glycosylation",
+      "Peptide termination",
+      "Ribosomal scanning",
+      "O-linked Golgi transfer"
+    ],
+    "answer": 0,
+    "rationale": "Vitamin C-dependent prolyl/lysyl hydroxylation stabilizes collagen triple helices.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O7"
+    ],
+    "covers": [
+      "O7"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L027 docx paragraphs 235-242",
+    "sourceBlock": "L027",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Peptide termination is unrelated to vitamin C-dependent collagen hydroxylation that underlies the capillary-fragility clue."
+    },
+    "holdout": false,
+    "n": 8
+  },
+  {
+    "id": "W3-L028-01",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "The PPP is located primarily in the:",
+    "options": [
+      "Cytosol",
+      "Mitochondrial matrix",
+      "ER lumen",
+      "Nucleus",
+      "Golgi"
+    ],
+    "answer": 0,
+    "rationale": "The lecture states that PPP occurs in the cytosol of every cell.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O3"
+    ],
+    "covers": [
+      "O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L028 docx paragraphs 39-40",
+    "sourceBlock": "L028",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "The ER lumen is not a PPP compartment; the pathway occurs in cytosol."
+    },
+    "holdout": false,
+    "n": 152
+  },
+  {
+    "id": "W3-L028-02",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Loss of G6PD most directly lowers production of:",
+    "options": [
+      "ATP",
+      "FADH2",
+      "Acetyl-CoA",
+      "NADPH",
+      "Ribose only"
+    ],
+    "answer": 3,
+    "rationale": "G6PD is the first oxidative PPP enzyme and makes NADPH.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O1",
+      "O2"
+    ],
+    "covers": [
+      "O1",
+      "O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L028 docx paragraphs 84-90",
+    "sourceBlock": "L028",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "FADH2 is not produced by G6PD; G6PD uses NADP+ and generates NADPH."
+    },
+    "holdout": false,
+    "n": 153
+  },
+  {
+    "id": "W3-L028-03",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A transketolase inhibitor blocks movement of which carbon fragment?",
+    "options": [
+      "One carbon",
+      "Three carbons",
+      "Two carbons",
+      "Four carbons",
+      "Seven carbons"
+    ],
+    "answer": 2,
+    "rationale": "Transketolase transfers a two-carbon keto-containing unit and needs TPP.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O5",
+      "O6"
+    ],
+    "covers": [
+      "O5",
+      "O6"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L028 docx paragraphs 116-121",
+    "sourceBlock": "L028",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Three-carbon transfer is transaldolase activity, while the inhibited transketolase moves two-carbon units."
+    },
+    "holdout": false,
+    "n": 154
+  },
+  {
+    "id": "W3-L028-04",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "RBCs exposed to an oxidant drug develop hemolysis with low reduced glutathione. Which defect is most likely?",
+    "options": [
+      "PFK-1",
+      "Pyruvate kinase",
+      "Transaldolase",
+      "Hexokinase",
+      "G6PD"
+    ],
+    "answer": 4,
+    "rationale": "RBC NADPH from PPP is needed to regenerate GSH during oxidant challenge.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O2"
+    ],
+    "covers": [
+      "O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L028 docx paragraphs 52-58",
+    "sourceBlock": "L028",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Pyruvate kinase affects glycolytic ATP production but cannot regenerate reduced glutathione from oxidized glutathione."
+    },
+    "holdout": false,
+    "n": 155
+  },
+  {
+    "id": "W3-L028-05",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A phagocyte is killing bacteria by respiratory burst. Which NADPH-dependent product is formed first?",
+    "options": [
+      "Glutathione",
+      "Ribose-5-P",
+      "Superoxide",
+      "Fructose-6-P",
+      "Nitric oxide only"
+    ],
+    "answer": 2,
+    "rationale": "NADPH and O2 generate superoxide, initiating the respiratory burst.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O2"
+    ],
+    "covers": [
+      "O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L028 docx paragraphs 63-68",
+    "sourceBlock": "L028",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Ribose-5-P is a PPP product, not the first NADPH-dependent ROS made by phagocyte respiratory burst."
+    },
+    "holdout": false,
+    "n": 156
+  },
+  {
+    "id": "W3-L028-06",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A rapidly growing tissue needs both nucleotide precursors and reducing power. Which PPP output pairing is required?",
+    "options": [
+      "NADPH and ribose-5-P",
+      "ATP and NADH",
+      "FADH2 and acetyl-CoA",
+      "Lactate and pyruvate",
+      "Glucose and glycogen"
+    ],
+    "answer": 0,
+    "rationale": "Mode 1 produces both NADPH and ribose-5-P.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O4"
+    ],
+    "covers": [
+      "O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L028 docx paragraphs 141-144",
+    "sourceBlock": "L028",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "FADH2 and acetyl-CoA do not supply the stated nucleotide and reductive-biosynthesis needs; ribose-5-P and NADPH do."
+    },
+    "holdout": false,
+    "n": 157
+  },
+  {
+    "id": "W3-L028-07",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "An RBC needs ATP and NADPH but no nucleotides. What happens to pentose products?",
+    "options": [
+      "They are converted to F6P and G3P for glycolysis",
+      "They remain as ribose",
+      "They enter the mitochondrial TCA cycle directly without conversion through glycolytic intermediates",
+      "They become glycogen",
+      "They become acetyl-CoA"
+    ],
+    "answer": 0,
+    "rationale": "Mode 3 uses nonoxidative PPP to feed glycolysis.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O4",
+      "O5"
+    ],
+    "covers": [
+      "O4",
+      "O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L028 docx paragraphs 148-150",
+    "sourceBlock": "L028",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Pentoses must first be converted to F6P/G3P before glycolysis; they do not enter the TCA cycle directly."
+    },
+    "holdout": false,
+    "n": 158
+  },
+  {
+    "id": "W3-L028-08",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Severe thiamine deficiency would most directly limit the PPP enzyme that transfers:",
+    "options": [
+      "A one-carbon unit",
+      "A three-carbon unit",
+      "A phosphate group",
+      "An electron pair",
+      "A two-carbon unit"
+    ],
+    "answer": 4,
+    "rationale": "Transketolase is TPP-dependent and transfers two-carbon units.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O6"
+    ],
+    "covers": [
+      "O6"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L028 docx paragraphs 116-121",
+    "sourceBlock": "L028",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "A three-carbon transfer is transaldolase activity, not the TPP-dependent transketolase step impaired by thiamine deficiency."
+    },
+    "holdout": false,
+    "n": 159
+  },
+  {
+    "id": "W3-L029-01",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Which enzyme supplies free glucose to blood from hepatic glucose-6-phosphate?",
+    "options": [
+      "Glucose-6-phosphatase",
+      "Glycogen synthase",
+      "Branching enzyme",
+      "Debranching enzyme",
+      "Phosphoglucomutase"
+    ],
+    "answer": 0,
+    "rationale": "Glucose-6-phosphatase is stated to be present in liver and kidney, not muscle.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O1",
+      "O2"
+    ],
+    "covers": [
+      "O1",
+      "O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L029 docx paragraphs 84-91",
+    "sourceBlock": "L029",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Branching enzyme creates α-1,6 linkages but cannot remove the phosphate from G6P to release blood glucose."
+    },
+    "holdout": false,
+    "n": 160
+  },
+  {
+    "id": "W3-L029-02",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Why do glycogen branches accelerate glycogenolysis?",
+    "options": [
+      "They make glycogen hydrophobic",
+      "They remove all water",
+      "They eliminate phosphate needs",
+      "They replace ATP with NADPH",
+      "They create many free ends"
+    ],
+    "answer": 4,
+    "rationale": "Many branches create many ends for simultaneous addition or removal.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O1"
+    ],
+    "covers": [
+      "O1"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L029 docx paragraphs 29-33",
+    "sourceBlock": "L029",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Glycogen remains water-associated; rapid mobilization comes from many nonreducing ends, not loss of water."
+    },
+    "holdout": false,
+    "n": 161
+  },
+  {
+    "id": "W3-L029-03",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A mutation eliminates glycogen synthase but not branching enzyme. Which direct synthetic step is lost?",
+    "options": [
+      "α-1,6 formation",
+      "UDP-glucose addition to α-1,4 chain",
+      "G1P to G6P conversion",
+      "G6P dephosphorylation",
+      "α-1,4 phosphorolysis"
+    ],
+    "answer": 1,
+    "rationale": "Glycogen synthase transfers glucose from UDP-glucose to make α-1,4 linkages.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O4"
+    ],
+    "covers": [
+      "O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L029 docx paragraphs 58-65",
+    "sourceBlock": "L029",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Phosphoglucomutase interconverts G1P and G6P; glycogen synthase specifically performs UDP-glucose addition to α-1,4 chains."
+    },
+    "holdout": false,
+    "n": 162
+  },
+  {
+    "id": "W3-L029-04",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A fasting liver cell has high glucagon. Which enzyme-state pair is expected?",
+    "options": [
+      "Active phosphorylated synthase",
+      "Inactive phosphorylase only in muscle",
+      "Active phosphorylated phosphorylase",
+      "Active dephosphorylated synthase",
+      "Both enzymes active"
+    ],
+    "answer": 2,
+    "rationale": "Glucagon favors phosphorylated active glycogen phosphorylase and inactive synthase.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O5"
+    ],
+    "covers": [
+      "O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L029 docx paragraphs 126-136",
+    "sourceBlock": "L029",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Muscle-specific phosphorylase status does not describe the glucagon-driven liver enzyme pair requested in the stem."
+    },
+    "holdout": false,
+    "n": 163
+  },
+  {
+    "id": "W3-L029-05",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "An exercising muscle has low ATP/AMP ratio. Which response supports ATP generation?",
+    "options": [
+      "Activate glycogen breakdown",
+      "Activate synthase",
+      "Inhibit phosphorylase",
+      "Export free glucose",
+      "Activate glucose-6-phosphatase"
+    ],
+    "answer": 0,
+    "rationale": "Low energy promotes glycogen breakdown; muscle uses its G6P in glycolysis.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O2",
+      "O5"
+    ],
+    "covers": [
+      "O2",
+      "O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L029 docx paragraphs 108-110",
+    "sourceBlock": "L029",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 3,
+      "why_wrong": "Skeletal muscle lacks G6Pase and therefore uses G6P locally rather than exporting free glucose."
+    },
+    "holdout": false,
+    "n": 164
+  },
+  {
+    "id": "W3-L029-06",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A muscle biopsy has normal glycogen phosphorylase but defective debranching enzyme. Which linkage is the main obstacle?",
+    "options": [
+      "α-1,6 branch point",
+      "α-1,4 only",
+      "Peptide bond",
+      "Phosphodiester bond",
+      "β-1,4 linkage"
+    ],
+    "answer": 0,
+    "rationale": "Phosphorylase cleaves α-1,4 only; branches require debranching enzyme.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O4"
+    ],
+    "covers": [
+      "O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L029 docx paragraphs 84-91",
+    "sourceBlock": "L029",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Peptide bonds are protein linkages; the debranching obstacle is the glycogen α-1,6 branch point."
+    },
+    "holdout": false,
+    "n": 165
+  },
+  {
+    "id": "W3-L029-07",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "After a carbohydrate-rich meal, insulin predominates. Which net hepatic effect occurs?",
+    "options": [
+      "Glycogenolysis rises",
+      "Both rise equally",
+      "Glycogenesis rises",
+      "Glucose-6-phosphatase is needed in muscle",
+      "Glucagon signals muscle"
+    ],
+    "answer": 2,
+    "rationale": "Insulin favors storage, including glycogen synthesis.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O2",
+      "O5"
+    ],
+    "covers": [
+      "O2",
+      "O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L029 docx paragraphs 115-124",
+    "sourceBlock": "L029",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Insulin favors glycogenesis while suppressing glycogenolysis, so both pathways should not rise together."
+    },
+    "holdout": false,
+    "n": 166
+  },
+  {
+    "id": "W3-L029-08",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Why cannot skeletal muscle glycogen directly maintain blood glucose?",
+    "options": [
+      "It lacks glycogen synthase",
+      "It lacks glucose-6-phosphatase",
+      "It lacks phosphoglucomutase",
+      "It lacks glycogenin",
+      "It lacks branches"
+    ],
+    "answer": 1,
+    "rationale": "Muscle produces G6P for local glycolysis; liver/kidney can make free glucose.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O1",
+      "O2",
+      "O3"
+    ],
+    "covers": [
+      "O1",
+      "O2",
+      "O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L029 docx paragraphs 73-88",
+    "sourceBlock": "L029",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Phosphoglucomutase is present in muscle; absent glucose-6-phosphatase prevents direct blood-glucose maintenance."
+    },
+    "holdout": false,
+    "n": 167
+  },
+  {
+    "id": "W3-RR6-01",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Which enzyme catalyzes the mitochondrial conversion of pyruvate to oxaloacetate?",
+    "options": [
+      "Pyruvate carboxylase",
+      "PEPCK",
+      "PFK-1",
+      "Pyruvate kinase",
+      "Glucose-6-phosphatase"
+    ],
+    "answer": 0,
+    "rationale": "Pyruvate carboxylase is the first pyruvate-kinase bypass enzyme.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O4"
+    ],
+    "covers": [
+      "O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR6 objectives/outcomes; prescribed Wilkins pp.119-129",
+    "sourceBlock": "RR6",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "PFK-1 is the irreversible glycolytic enzyme bypassed by FBPase; it does not make mitochondrial oxaloacetate from pyruvate."
+    },
+    "holdout": false,
+    "n": 168
+  },
+  {
+    "id": "W3-RR6-02",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "High mitochondrial acetyl-CoA during fasting directly favors which fate of pyruvate?",
+    "options": [
+      "Acetyl-CoA via PDH",
+      "Lactate via LDH",
+      "PEP via pyruvate kinase",
+      "Glucose via G6Pase",
+      "Oxaloacetate via pyruvate carboxylase"
+    ],
+    "answer": 4,
+    "rationale": "Acetyl-CoA activates pyruvate carboxylase and opposes PDH, routing pyruvate to gluconeogenesis.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O1",
+      "O5"
+    ],
+    "covers": [
+      "O1",
+      "O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR6 objectives/outcomes; prescribed Wilkins pp.119-129",
+    "sourceBlock": "RR6",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Lactate formation consumes pyruvate in cytosol; high acetyl-CoA instead favors pyruvate carboxylase and oxaloacetate."
+    },
+    "holdout": false,
+    "n": 169
+  },
+  {
+    "id": "W3-RR6-03",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Why does gluconeogenesis require distinct enzymes at three glycolytic steps?",
+    "options": [
+      "Those steps are reversible",
+      "They occur only in ER",
+      "Those steps are irreversible",
+      "They lack cofactors",
+      "They produce NADPH"
+    ],
+    "answer": 2,
+    "rationale": "The review explicitly asks for bypasses of the three irreversible glycolytic reactions.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O4"
+    ],
+    "covers": [
+      "O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR6 outcome paragraph 19",
+    "sourceBlock": "RR6",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "The bypass problem is reaction irreversibility, not ER localization of glycolysis."
+    },
+    "holdout": false,
+    "n": 170
+  },
+  {
+    "id": "W3-RR6-04",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A fasting child has hypoglycemia with elevated lactate, alanine, and pyruvate that improves with biotin. Which enzyme is impaired?",
+    "options": [
+      "PEPCK",
+      "F1,6-bisphosphatase",
+      "G6Pase",
+      "Pyruvate kinase",
+      "Pyruvate carboxylase"
+    ],
+    "answer": 4,
+    "rationale": "Biotin and absent oxaloacetate point to pyruvate carboxylase.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O3",
+      "O4"
+    ],
+    "covers": [
+      "O3",
+      "O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR6 prescribed reading; related L029 problem-set explanation paragraph 347",
+    "sourceBlock": "RR6",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "FBPase acts at the PFK-1 bypass but cannot account for absent oxaloacetate and biotin responsiveness."
+    },
+    "holdout": false,
+    "n": 171
+  },
+  {
+    "id": "W3-RR6-05",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "After binge drinking without food, a patient becomes hypoglycemic. Increased hepatic NADH most directly limits gluconeogenesis by shifting:",
+    "options": [
+      "Pyruvate to acetyl-CoA",
+      "Pyruvate to lactate",
+      "Glucose to G6P",
+      "PEP to pyruvate",
+      "Acetyl-CoA to pyruvate"
+    ],
+    "answer": 1,
+    "rationale": "High NADH favors lactate and malate, depleting gluconeogenic precursors.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O6"
+    ],
+    "covers": [
+      "O6"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR6 outcome paragraph 25; prescribed Wilkins pp.119-129",
+    "sourceBlock": "RR6",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Glucose-to-G6P is phosphorylation, whereas ethanol-derived NADH shifts pyruvate toward lactate."
+    },
+    "holdout": false,
+    "n": 172
+  },
+  {
+    "id": "W3-RR6-06",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A hepatocyte must release free glucose into blood during fasting. Which enzyme is required?",
+    "options": [
+      "Hexokinase",
+      "Glycogen synthase",
+      "PFK-1",
+      "Lactate dehydrogenase",
+      "Glucose-6-phosphatase"
+    ],
+    "answer": 4,
+    "rationale": "G6Pase produces free glucose; the review asks which organs can release it.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O3",
+      "O4"
+    ],
+    "covers": [
+      "O3",
+      "O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR6 objective paragraph 15",
+    "sourceBlock": "RR6",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Glycogen synthase stores glucose and cannot dephosphorylate G6P for hepatic blood-glucose release."
+    },
+    "holdout": false,
+    "n": 173
+  },
+  {
+    "id": "W3-RR6-07",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Glucagon lowers fructose-2,6-bisphosphate in liver. What is the intended paired response?",
+    "options": [
+      "Activate PFK-1 and inhibit FBPase",
+      "Inhibit PFK-1 and favor FBPase",
+      "Activate both pathways",
+      "Inhibit pyruvate carboxylase",
+      "Increase glycogen synthase"
+    ],
+    "answer": 1,
+    "rationale": "Lower F2,6BP suppresses PFK-1 and favors gluconeogenesis.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O5"
+    ],
+    "covers": [
+      "O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR6 objectives/outcomes; related L028 problem set paragraph 197-202",
+    "sourceBlock": "RR6",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Activating both pathways is the futile-cycle state; lower F2,6BP inhibits PFK-1 while favoring FBPase."
+    },
+    "holdout": false,
+    "n": 174
+  },
+  {
+    "id": "W3-RR6-08",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Why is gluconeogenesis particularly important after liver glycogen is depleted?",
+    "options": [
+      "It uses acetyl-CoA to make glucose",
+      "It makes ketones in RBCs",
+      "It exports muscle glycogen",
+      "It replaces ATP production",
+      "It supplies glucose from noncarbohydrate precursors"
+    ],
+    "answer": 4,
+    "rationale": "It maintains blood glucose using precursor carbon when stored glycogen is no longer enough.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O2",
+      "O3"
+    ],
+    "covers": [
+      "O2",
+      "O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR6 objectives paragraphs 13-15",
+    "sourceBlock": "RR6",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "RBCs neither make ketones nor use gluconeogenesis to maintain blood glucose; liver uses precursors to produce glucose."
+    },
+    "holdout": false,
+    "n": 175
+  },
+  {
+    "id": "W3-RR7A-01",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Which molecule inhibits CAT I and limits long-chain fatty-acid entry into mitochondria?",
+    "options": [
+      "Acetyl-CoA",
+      "Malonyl-CoA",
+      "Succinyl-CoA",
+      "Pyruvate",
+      "NADH"
+    ],
+    "answer": 1,
+    "rationale": "Malonyl-CoA coordinates synthesis with inhibition of oxidative mitochondrial entry.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O5"
+    ],
+    "covers": [
+      "O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR7a outcomes; required Wilkins pp.155-171",
+    "sourceBlock": "RR7a",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Succinyl-CoA is an odd-chain product destination, not the malonyl-CoA signal that inhibits CAT I."
+    },
+    "holdout": false,
+    "n": 176
+  },
+  {
+    "id": "W3-RR7A-02",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A long-chain fatty acyl-CoA cannot cross the inner mitochondrial membrane directly. Which shuttle component accepts the acyl group first?",
+    "options": [
+      "Albumin",
+      "CoA in cytosol",
+      "Biotin",
+      "TPP",
+      "Carnitine"
+    ],
+    "answer": 4,
+    "rationale": "The carnitine system transports long-chain acyl groups into mitochondria.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O3"
+    ],
+    "covers": [
+      "O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR7a outcome paragraph 20",
+    "sourceBlock": "RR7a",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Cytosolic CoA activates fatty acids but cannot shuttle a long-chain acyl group across the inner mitochondrial membrane."
+    },
+    "holdout": false,
+    "n": 177
+  },
+  {
+    "id": "W3-RR7A-03",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Which cofactor is produced in the first oxidation step of each β-oxidation cycle?",
+    "options": [
+      "FADH2",
+      "NADPH",
+      "ATP",
+      "GTP",
+      "CoASH"
+    ],
+    "answer": 0,
+    "rationale": "The first dehydrogenation produces FADH2; the later oxidation produces NADH.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O2",
+      "O4"
+    ],
+    "covers": [
+      "O2",
+      "O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR7a outcome paragraph 21; required Wilkins pp.155-171",
+    "sourceBlock": "RR7a",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "ATP is not the electron carrier from the first β-oxidation oxidation; that dehydrogenation produces FADH2."
+    },
+    "holdout": false,
+    "n": 178
+  },
+  {
+    "id": "W3-RR7A-04",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A fasting child has hypoglycemia after illness and cannot use long-chain fatty acids efficiently. A carnitine-system defect directly prevents:",
+    "options": [
+      "Cytosolic lipolysis",
+      "Glycogen branching",
+      "Ketone utilization by brain",
+      "Glucose export",
+      "Mitochondrial fatty-acyl-CoA entry"
+    ],
+    "answer": 4,
+    "rationale": "Carnitine defects block mitochondrial import of long-chain acyl-CoA.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O3",
+      "O6"
+    ],
+    "covers": [
+      "O3",
+      "O6"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR7a paragraphs 27-43",
+    "sourceBlock": "RR7a",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Glycogen branching does not control mitochondrial long-chain acyl-CoA import through the carnitine system."
+    },
+    "holdout": false,
+    "n": 179
+  },
+  {
+    "id": "W3-RR7A-05",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A patient has an inborn MCAD deficiency. Which metabolic response is most impaired during fasting?",
+    "options": [
+      "NADPH generation",
+      "Medium-chain β-oxidation",
+      "Ribose synthesis",
+      "Glycogenesis",
+      "Urea formation"
+    ],
+    "answer": 1,
+    "rationale": "The reading identifies MCAD deficiency as decreased FA oxidation causing severe hypoglycemia.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O2",
+      "O6"
+    ],
+    "covers": [
+      "O2",
+      "O6"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR7a paragraphs 39-43",
+    "sourceBlock": "RR7a",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Ribose synthesis is PPP function; MCAD deficiency impairs medium-chain β-oxidation during fasting."
+    },
+    "holdout": false,
+    "n": 180
+  },
+  {
+    "id": "W3-RR7A-06",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Complete oxidation of an odd-chain fatty acid leaves which carbon product after repeated two-carbon removal?",
+    "options": [
+      "Lactate",
+      "Oxaloacetate",
+      "Malonyl-CoA",
+      "Citrate",
+      "Propionyl-CoA"
+    ],
+    "answer": 4,
+    "rationale": "Odd chains end with propionyl-CoA, then enter metabolism as succinyl-CoA.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O4"
+    ],
+    "covers": [
+      "O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR7a outcome paragraph 23",
+    "sourceBlock": "RR7a",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Oxaloacetate is not the terminal three-carbon product of odd-chain oxidation; propionyl-CoA is."
+    },
+    "holdout": false,
+    "n": 181
+  },
+  {
+    "id": "W3-RR7A-07",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A vitamin B12 deficiency specifically impairs conversion of which FAO-derived intermediate?",
+    "options": [
+      "Acetyl-CoA to citrate",
+      "Acyl-CoA to acylcarnitine",
+      "Propionyl-CoA toward succinyl-CoA",
+      "Malonyl-CoA to palmitate",
+      "FADH2 to NADH"
+    ],
+    "answer": 2,
+    "rationale": "Methylmalonyl-CoA mutase in propionyl-CoA conversion needs B12.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O4"
+    ],
+    "covers": [
+      "O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR7a outcome paragraph 23",
+    "sourceBlock": "RR7a",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Acyl-CoA-to-acylcarnitine transfer is a carnitine-shuttle step, not the B12-dependent propionyl-CoA-to-succinyl-CoA pathway."
+    },
+    "holdout": false,
+    "n": 182
+  },
+  {
+    "id": "W3-RR7A-08",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "During a fed, lipogenic state, high malonyl-CoA protects against simultaneous FA oxidation by:",
+    "options": [
+      "Activating CAT I",
+      "Activating MCAD",
+      "Inhibiting CAT I",
+      "Inhibiting albumin",
+      "Activating thiolase"
+    ],
+    "answer": 2,
+    "rationale": "CAT I is the transport-regulation point and is inhibited by malonyl-CoA.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O5"
+    ],
+    "covers": [
+      "O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR7a outcome paragraph 24",
+    "sourceBlock": "RR7a",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "MCAD catalyzes β-oxidation, while malonyl-CoA protects against oxidation by inhibiting CAT I."
+    },
+    "holdout": false,
+    "n": 183
+  },
+  {
+    "id": "W3-RR7B-01",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Which tissue synthesizes ketone bodies?",
+    "options": [
+      "Skeletal muscle cytosol",
+      "RBC cytosol",
+      "Brain nucleus",
+      "Adipose ER",
+      "Liver mitochondria"
+    ],
+    "answer": 4,
+    "rationale": "Ketone synthesis is hepatic and mitochondrial.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O3",
+      "O1"
+    ],
+    "covers": [
+      "O3",
+      "O1"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR7b outcomes; prescribed Wilkins pp.171-178",
+    "sourceBlock": "RR7b",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "RBCs lack mitochondria and cannot synthesize ketone bodies; ketogenesis is hepatic and mitochondrial."
+    },
+    "holdout": false,
+    "n": 184
+  },
+  {
+    "id": "W3-RR7B-02",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Why does hepatic acetyl-CoA increasingly enter ketogenesis during starvation?",
+    "options": [
+      "Ribose is depleted",
+      "Oxaloacetate is directed toward gluconeogenesis",
+      "Glycogen synthase is activated",
+      "NADPH is absent",
+      "Carnitine blocks β-oxidation"
+    ],
+    "answer": 1,
+    "rationale": "Oxaloacetate use for gluconeogenesis limits TCA condensation, leaving acetyl-CoA for ketogenesis.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O5"
+    ],
+    "covers": [
+      "O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR7b outcomes; prescribed Wilkins pp.171-178",
+    "sourceBlock": "RR7b",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Ribose availability does not route acetyl-CoA; oxaloacetate diversion limits TCA entry and favors ketogenesis."
+    },
+    "holdout": false,
+    "n": 185
+  },
+  {
+    "id": "W3-RR7B-03",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Which ketone body arises by decarboxylation of acetoacetate?",
+    "options": [
+      "β-Hydroxybutyrate",
+      "Acetone",
+      "Acetyl-CoA",
+      "Malonyl-CoA",
+      "Propionyl-CoA"
+    ],
+    "answer": 1,
+    "rationale": "The summary-sheet prompt specifically calls for explaining acetone production by decarboxylation.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O2",
+      "O3"
+    ],
+    "covers": [
+      "O2",
+      "O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Lipid summary sheet paragraphs 56-67",
+    "sourceBlock": "RR7b",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Acetyl-CoA supplies ketogenesis but is not the decarboxylation product of acetoacetate."
+    },
+    "holdout": false,
+    "n": 186
+  },
+  {
+    "id": "W3-RR7B-04",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "After 24 hours of fasting, a child has high free fatty acids but no measurable ketones and fatty liver. What defect best explains both?",
+    "options": [
+      "G6PD deficiency",
+      "Transketolase deficiency",
+      "Glycogen branching defect",
+      "Carnitine deficiency",
+      "PFK-1 activation"
+    ],
+    "answer": 3,
+    "rationale": "Carnitine deficiency prevents mitochondrial FA entry, so no acetyl-CoA/ketones and lipid accumulates.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O3",
+      "O5"
+    ],
+    "covers": [
+      "O3",
+      "O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR7b case paragraphs 33-37, 59-61",
+    "sourceBlock": "RR7b",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Transketolase deficiency affects PPP; the absent fasting ketones plus fatty liver point to failed carnitine-dependent FA import."
+    },
+    "holdout": false,
+    "n": 187
+  },
+  {
+    "id": "W3-RR7B-05",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "An extrahepatic tissue uses β-hydroxybutyrate during fasting. Its carbon is ultimately used to make:",
+    "options": [
+      "Ribose",
+      "Glucose in RBC",
+      "Malonyl-CoA only",
+      "Acetyl-CoA for energy",
+      "Urea"
+    ],
+    "answer": 3,
+    "rationale": "Acetoacetate and β-hydroxybutyrate are fuel precursors for acetyl-CoA in other tissues.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O2",
+      "O4"
+    ],
+    "covers": [
+      "O2",
+      "O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR7b outcome paragraph 19",
+    "sourceBlock": "RR7b",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "RBCs cannot oxidize ketone-derived acetyl-CoA for energy because they lack mitochondria."
+    },
+    "holdout": false,
+    "n": 188
+  },
+  {
+    "id": "W3-RR7B-06",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A fasting patient has impaired CAT I. Which downstream hepatic product falls most directly?",
+    "options": [
+      "Ketone bodies",
+      "Glycogen",
+      "Ribose-5-P",
+      "Lactate",
+      "Glucose-6-P"
+    ],
+    "answer": 0,
+    "rationale": "CAT I failure blocks FA oxidation-derived acetyl-CoA for ketogenesis.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O3",
+      "O5"
+    ],
+    "covers": [
+      "O3",
+      "O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR7b answers paragraphs 59-65",
+    "sourceBlock": "RR7b",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Ribose-5-P is unrelated to CAT I-dependent hepatic FA entry and resulting ketone production."
+    },
+    "holdout": false,
+    "n": 189
+  },
+  {
+    "id": "W3-RR7B-07",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Why did the case patient develop hypoglycemia without ketosis during illness?",
+    "options": [
+      "Ketones consume glucose",
+      "Hepatic glycogen stores remain sufficient throughout any prolonged fast",
+      "RBCs made too much NADPH",
+      "Acetone inhibits glucose release",
+      "FA could not enter mitochondria to support oxidation/ketogenesis"
+    ],
+    "answer": 4,
+    "rationale": "The case links failed mitochondrial fatty-acid import to absent ketones and fasting intolerance.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O2",
+      "O5"
+    ],
+    "covers": [
+      "O2",
+      "O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR7b case/answers paragraphs 35-65",
+    "sourceBlock": "RR7b",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "The case demonstrates fasting intolerance, not sufficient hepatic glycogen during prolonged fasting."
+    },
+    "holdout": false,
+    "n": 190
+  },
+  {
+    "id": "W3-RR7B-08",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Which condition most strongly promotes ketone-body production?",
+    "options": [
+      "High insulin after a meal",
+      "High malonyl-CoA",
+      "Active fatty-acid synthesis",
+      "Starvation with high fatty-acid mobilization",
+      "RBC oxidative stress"
+    ],
+    "answer": 3,
+    "rationale": "The objectives explicitly link starvation to increased ketone production.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O5"
+    ],
+    "covers": [
+      "O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR7b objectives paragraphs 20-21",
+    "sourceBlock": "RR7b",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "High malonyl-CoA inhibits CAT I and opposes the fasting FA oxidation that supports ketogenesis."
+    },
+    "holdout": false,
+    "n": 191
+  },
+  {
+    "id": "W3-RR8-01",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Which enzyme catalyzes the committed step of fatty-acid synthesis?",
+    "options": [
+      "Acetyl-CoA carboxylase",
+      "Fatty-acid synthase",
+      "CAT I",
+      "MCAD",
+      "Thiolase"
+    ],
+    "answer": 0,
+    "rationale": "Acetyl-CoA carboxylase makes malonyl-CoA, the committed intermediate.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O4"
+    ],
+    "covers": [
+      "O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR8 outcomes; prescribed Wilkins pp.179-199",
+    "sourceBlock": "RR8",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "CAT I imports fatty acyl groups for oxidation; acetyl-CoA carboxylase, not CAT I, commits carbon to synthesis."
+    },
+    "holdout": false,
+    "n": 192
+  },
+  {
+    "id": "W3-RR8-02",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Why is citrate export used to provide cytosolic acetyl-CoA?",
+    "options": [
+      "Acetyl-CoA cannot directly cross the inner mitochondrial membrane",
+      "Acetyl-CoA directly crosses mitochondrial membrane",
+      "Citrate is a ketone body",
+      "Citrate activates β-oxidation",
+      "Citrate replaces biotin"
+    ],
+    "answer": 0,
+    "rationale": "A special export mechanism is required because matrix acetyl-CoA cannot cross directly.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O3",
+      "O4"
+    ],
+    "covers": [
+      "O3",
+      "O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR8 outcome paragraph 16",
+    "sourceBlock": "RR8",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Citrate is the export form of acetyl carbon, not a ketone body."
+    },
+    "holdout": false,
+    "n": 193
+  },
+  {
+    "id": "W3-RR8-03",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Which reducing cofactor is consumed twice per fatty-acid-synthesis elongation cycle?",
+    "options": [
+      "NADH",
+      "FADH2",
+      "ATP",
+      "NADPH",
+      "GTP"
+    ],
+    "answer": 3,
+    "rationale": "The repeated reductions of fatty-acid synthesis use NADPH.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O4"
+    ],
+    "covers": [
+      "O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR8 outcome paragraph 18; prescribed Wilkins pp.179-199",
+    "sourceBlock": "RR8",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "FADH2 is produced in β-oxidation; fatty-acid synthesis consumes NADPH in its reduction steps."
+    },
+    "holdout": false,
+    "n": 194
+  },
+  {
+    "id": "W3-RR8-04",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A biotin deficiency most directly limits production of which FAS intermediate?",
+    "options": [
+      "Palmitate from acetyl-CoA",
+      "Acetyl-CoA from citrate",
+      "FADH2 from acyl-CoA",
+      "Malonyl-CoA from acetyl-CoA",
+      "Succinyl-CoA from propionyl-CoA"
+    ],
+    "answer": 3,
+    "rationale": "ACC requires biotin to carboxylate acetyl-CoA into malonyl-CoA.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O4"
+    ],
+    "covers": [
+      "O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR8 outcomes paragraphs 17-18",
+    "sourceBlock": "RR8",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Acetyl-CoA from citrate is upstream substrate supply; biotin loss directly prevents its carboxylation to malonyl-CoA."
+    },
+    "holdout": false,
+    "n": 195
+  },
+  {
+    "id": "W3-RR8-05",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A well-fed hepatocyte has high insulin and citrate. What happens to ACC and FAS flux?",
+    "options": [
+      "ACC inhibited; oxidation rises",
+      "CAT I activated; synthesis falls",
+      "Ketogenesis rises",
+      "ACC activated; synthesis rises",
+      "No change"
+    ],
+    "answer": 3,
+    "rationale": "Citrate/insulin favor ACC and lipogenesis.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O5"
+    ],
+    "covers": [
+      "O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR8 outcome paragraph 21; prescribed Wilkins pp.179-199",
+    "sourceBlock": "RR8",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "CAT I activation promotes oxidation, but insulin/citrate should activate ACC and synthesis in this fed-state stem."
+    },
+    "holdout": false,
+    "n": 196
+  },
+  {
+    "id": "W3-RR8-06",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "High palmitoyl-CoA in a cell should have what feedback effect?",
+    "options": [
+      "Activate ACC",
+      "Activate CAT I",
+      "Increase NADPH use",
+      "Inhibit ACC",
+      "Increase ketone use"
+    ],
+    "answer": 3,
+    "rationale": "End-product palmitoyl-CoA inhibits the synthesis regulatory step.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O5"
+    ],
+    "covers": [
+      "O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR8 outcome paragraph 21; prescribed Wilkins pp.179-199",
+    "sourceBlock": "RR8",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "CAT I activation would favor mitochondrial oxidation, the opposite of palmitoyl-CoA feedback inhibition of synthesis."
+    },
+    "holdout": false,
+    "n": 197
+  },
+  {
+    "id": "W3-RR8-07",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A patient has no dietary linoleic acid. Why cannot the body simply synthesize it from palmitate?",
+    "options": [
+      "Humans cannot make acetyl-CoA",
+      "Humans lack needed desaturation capacity",
+      "Palmitate cannot be elongated",
+      "NADPH is absent",
+      "Citrate cannot exit mitochondria"
+    ],
+    "answer": 1,
+    "rationale": "The course objective identifies linoleic/linolenic acids as dietary essential because of human double-bond limitations.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O2"
+    ],
+    "covers": [
+      "O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR8 objectives paragraphs 9-14, 22-23",
+    "sourceBlock": "RR8",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Palmitate can be elongated; the dietary requirement reflects inability to introduce the needed double bonds."
+    },
+    "holdout": false,
+    "n": 198
+  },
+  {
+    "id": "W3-RR8-08",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A mutation removes the ACP phosphopantetheine arm. What synthesis feature is lost?",
+    "options": [
+      "Transfer of growing acyl intermediates between synthase sites",
+      "Mitochondrial β-oxidation",
+      "Citrate export of mitochondrial acetyl units into the cytosol for synthesis",
+      "Biotin carboxylation",
+      "Albumin transport"
+    ],
+    "answer": 0,
+    "rationale": "The carrier arm channels growing acyl groups within the multifunctional synthase complex.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "O4"
+    ],
+    "covers": [
+      "O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "RR8 outcome paragraph 19; prescribed Wilkins pp.179-199",
+    "sourceBlock": "RR8",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Citrate export supplies cytosolic acetyl-CoA, whereas the missing phosphopantetheine arm specifically transfers growing acyl intermediates within synthase."
+    },
+    "holdout": false,
+    "n": 199
+  },
+  {
+    "id": "W3-L026-CONNECTIVE-TISSUE-01",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "Which ECM component is a hydrated gel composed mainly of water?",
+    "options": [
+      "Collagen fibers",
+      "Ground substance",
+      "Elastic lamellae",
+      "Cell membrane",
+      "Reticular network"
+    ],
+    "answer": 1,
+    "rationale": "The lecture identifies hydrated, gel-like ground substance as a major ECM component.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "CT1"
+    ],
+    "covers": [
+      "CT1"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L026 slide 9; transcript 07:43-10:34",
+    "sourceBlock": "L026",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Collagen fibers are structural ECM proteins; the hydrated gel component is ground substance."
+    },
+    "holdout": false,
+    "n": 1
+  },
+  {
+    "id": "W3-L026-CONNECTIVE-TISSUE-02",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "A mutation removes sulfate groups from matrix GAGs. Which change is most expected?",
+    "options": [
+      "Greater sodium retention with matrix hydration",
+      "Reduced cation attraction but increased matrix hydration",
+      "Reduced cation attraction and matrix hydration",
+      "Covalent attachment to a protein core",
+      "Increased integrin-mediated adhesion"
+    ],
+    "answer": 2,
+    "rationale": "Negative carboxylate and sulfate groups attract cations and water; loss reduces hydration.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "CT2"
+    ],
+    "covers": [
+      "CT2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L026 slide 10; transcript 10:51-12:36",
+    "sourceBlock": "L026",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Loss of negatively charged sulfate groups reduces, rather than increases, cation attraction and hydration."
+    },
+    "holdout": false,
+    "n": 2
+  },
+  {
+    "id": "W3-L026-CONNECTIVE-TISSUE-03",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "Cartilage loses its proteoglycan aggregates. Which matrix property is most directly compromised?",
+    "options": [
+      "Oxygen delivery and gas exchange",
+      "Cellular matrix hydration",
+      "Membrane electrical conduction",
+      "Antibody production and secretion",
+      "Hydration and force resistance"
+    ],
+    "answer": 4,
+    "rationale": "The lecture names buffering, hydration, binding, and force-resistance as proteoglycan functions.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "CT2"
+    ],
+    "covers": [
+      "CT2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L026 slide 11; transcript 12:57-14:05",
+    "sourceBlock": "L026",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Proteoglycan aggregates chiefly provide matrix hydration and force resistance, not gas transport."
+    },
+    "holdout": false,
+    "n": 3
+  },
+  {
+    "id": "W3-L026-CONNECTIVE-TISSUE-04",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "A cell cannot bind fibronectin through its membrane integrins. Which ECM function is directly affected?",
+    "options": [
+      "Linking adjacent epithelial cells through junctions",
+      "Making collagen triple helices",
+      "Carrying oxygen in blood",
+      "Releasing mast-cell mediators",
+      "Linking ECM to an integrin-bearing cell"
+    ],
+    "answer": 4,
+    "rationale": "Glycoproteins stabilize ECM by interacting with matrix components and integrins.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "CT2"
+    ],
+    "covers": [
+      "CT2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L026 slide 14; transcript 15:43-16:43",
+    "sourceBlock": "L026",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Cell-cell junctions do not describe glycoprotein binding between ECM and integrin-bearing cells."
+    },
+    "holdout": false,
+    "n": 4
+  },
+  {
+    "id": "W3-L026-CONNECTIVE-TISSUE-05",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "A patient with vitamin C deficiency develops abnormal connective-tissue support. The relevant course mechanism is impaired:",
+    "options": [
+      "Fibrillin-1 transcription",
+      "GAG sulfation",
+      "Collagen formation",
+      "Mast-cell migration",
+      "Macrophage phagocytosis"
+    ],
+    "answer": 2,
+    "rationale": "Scurvy is presented as a disease caused by vitamin C deficiency in the collagen section.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "CT3"
+    ],
+    "covers": [
+      "CT3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L026 slide 20; transcript 20:13-23:16",
+    "sourceBlock": "L026",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "The lecture links vitamin C deficiency to collagen formation and scurvy, not fibrillin transcription."
+    },
+    "holdout": false,
+    "n": 5
+  },
+  {
+    "id": "W3-L026-CONNECTIVE-TISSUE-06",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "Which pairing is correct?",
+    "options": [
+      "Type I collagen mutation - scurvy",
+      "Vitamin C deficiency - osteogenesis imperfecta",
+      "Type III collagen mutation - Marfan syndrome",
+      "Fibrillin-1 mutation - Marfan syndrome",
+      "Fibrillin-1 deficiency - reticular fibrosis"
+    ],
+    "answer": 3,
+    "rationale": "The lecture directly attributes Marfan syndrome to fibrillin-1 mutation.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "CT3",
+      "CT4"
+    ],
+    "covers": [
+      "CT3",
+      "CT4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L026 slide 24; transcript 25:17-26:59",
+    "sourceBlock": "L026",
+    "applicationLevel": "discrimination",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Scurvy follows vitamin C deficiency; the lecture links type I collagen mutation to osteogenesis imperfecta."
+    },
+    "holdout": false,
+    "n": 6
+  },
+  {
+    "id": "W3-L026-CONNECTIVE-TISSUE-07",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "A lymph node needs a branching support network that permits cell movement. Which fiber is most fitting?",
+    "options": [
+      "Type I collagen bundles",
+      "Elastic lamellae",
+      "Type III reticular fibers",
+      "Fibrillin microfibrils only",
+      "Keratan sulfate"
+    ],
+    "answer": 2,
+    "rationale": "Reticular fibers are type III collagen with a branched mesh-like pattern.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "CT4"
+    ],
+    "covers": [
+      "CT4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L026 slide 25; transcript 27:13-27:50",
+    "sourceBlock": "L026",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Type I collagen forms dense structural bundles, whereas the required branching lymph-node network is type III reticular fiber."
+    },
+    "holdout": false,
+    "n": 7
+  },
+  {
+    "id": "W3-L026-CONNECTIVE-TISSUE-08",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "A large phagocytic connective-tissue cell arises from which circulating precursor?",
+    "options": [
+      "Monocyte",
+      "Erythrocyte",
+      "Basophil",
+      "Fibroblast",
+      "Adipocyte"
+    ],
+    "answer": 0,
+    "rationale": "Macrophages differentiate from monocytes and phagocytose foreign material and dead cells.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "CT5"
+    ],
+    "covers": [
+      "CT5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L026 slide 32; transcript 36:05-37:05",
+    "sourceBlock": "L026",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Monocytes, not erythrocytes, differentiate into macrophages in tissue."
+    },
+    "holdout": false,
+    "n": 8
+  },
+  {
+    "id": "W3-L031-BLOOD-CELLS-AND-HEMATOPOIESIS-01",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "Which liquid component contains the substances in serum plus clotting factors?",
+    "options": [
+      "Plasma",
+      "Serum",
+      "Buffy coat",
+      "Erythrocyte layer",
+      "Platelet plug"
+    ],
+    "answer": 0,
+    "rationale": "The course source defines plasma as serum plus clotting factors; serum is the liquid component after clotting and lacks those factors.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "BC4",
+      "BC5"
+    ],
+    "covers": [
+      "BC4",
+      "BC5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L031 slide 6; transcript 01:18-02:17",
+    "sourceBlock": "L031",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Serum is the post-clotting liquid component and does not contain clotting factors."
+    },
+    "holdout": false,
+    "n": 1
+  },
+  {
+    "id": "W3-L031-BLOOD-CELLS-AND-HEMATOPOIESIS-02",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "A pregnant patient has increased plasma volume more than RBC mass. What course-described result follows?",
+    "options": [
+      "Pathologic red-cell destruction",
+      "Physiologic dilutional anemia",
+      "Primary platelet deficiency",
+      "Absolute erythrocytosis",
+      "No intravascular volume change"
+    ],
+    "answer": 1,
+    "rationale": "Plasma expands more than red-cell mass in normal pregnancy, causing slight physiologic anemia.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "BC2",
+      "BC3"
+    ],
+    "covers": [
+      "BC2",
+      "BC3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L031 slide 13; transcript 07:50-08:43",
+    "sourceBlock": "L031",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Pregnancy expands plasma volume more than red-cell mass, producing dilutional rather than destructive anemia."
+    },
+    "holdout": false,
+    "n": 2
+  },
+  {
+    "id": "W3-L031-BLOOD-CELLS-AND-HEMATOPOIESIS-03",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "Heart failure lowers cardiac output and renal perfusion. Which response expands plasma volume?",
+    "options": [
+      "EPO suppression",
+      "Renin/RAAS activation",
+      "Platelet fragmentation",
+      "IgE release",
+      "BPG depletion"
+    ],
+    "answer": 1,
+    "rationale": "Renal hypoperfusion triggers renin release and RAAS compensation with fluid retention.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "BC1",
+      "BC3"
+    ],
+    "covers": [
+      "BC1",
+      "BC3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L031 slide 12; transcript 06:49-07:45",
+    "sourceBlock": "L031",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "The heart-failure response is renal hypoperfusion with renin/RAAS activation, not suppression of EPO."
+    },
+    "holdout": false,
+    "n": 3
+  },
+  {
+    "id": "W3-L031-BLOOD-CELLS-AND-HEMATOPOIESIS-04",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "Which marrow is rich in adipocytes but can resume hematopoiesis when activated?",
+    "options": [
+      "Red marrow",
+      "Yellow marrow",
+      "Peripheral blood",
+      "Lamina propria",
+      "Buffy coat"
+    ],
+    "answer": 1,
+    "rationale": "Yellow marrow is adipocyte-rich but retains hematopoietic capacity.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "BC6"
+    ],
+    "covers": [
+      "BC6"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L031 slide 16; transcript 11:55-12:22",
+    "sourceBlock": "L031",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Red marrow is already actively hematopoietic; the adipocyte-rich but recruitable marrow is yellow marrow."
+    },
+    "holdout": false,
+    "n": 4
+  },
+  {
+    "id": "W3-L031-BLOOD-CELLS-AND-HEMATOPOIESIS-05",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "A smear shows a small anucleate fragment with adhesion/clotting granules. What is it?",
+    "options": [
+      "Reticulocyte",
+      "Platelet",
+      "Monocyte",
+      "Lymphocyte",
+      "Eosinophil"
+    ],
+    "answer": 1,
+    "rationale": "Platelets are anucleate megakaryocyte fragments with clotting and adhesion factors.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "BC5",
+      "BC12",
+      "BC7"
+    ],
+    "covers": [
+      "BC5",
+      "BC12",
+      "BC7"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L031 slide 17; transcript 12:31-13:12",
+    "sourceBlock": "L031",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Reticulocytes are immature erythroid cells, not anucleate megakaryocyte fragments with adhesion granules."
+    },
+    "holdout": false,
+    "n": 5
+  },
+  {
+    "id": "W3-L031-BLOOD-CELLS-AND-HEMATOPOIESIS-06",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "Which leukocyte is agranular?",
+    "options": [
+      "Neutrophil",
+      "Eosinophil",
+      "Monocyte",
+      "Basophil",
+      "All are granulocytes"
+    ],
+    "answer": 2,
+    "rationale": "Monocytes and lymphocytes are agranulocytes; the three named granulocytes have recognizable granules.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "BC5",
+      "BC12"
+    ],
+    "covers": [
+      "BC5",
+      "BC12"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L031 slide 24; transcript 18:20-18:50",
+    "sourceBlock": "L031",
+    "applicationLevel": "discrimination",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Neutrophils are granulocytes; monocytes are agranulocytes."
+    },
+    "holdout": false,
+    "n": 6
+  },
+  {
+    "id": "W3-L031-BLOOD-CELLS-AND-HEMATOPOIESIS-07",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "A PHSC differentiates through the lineage that produces erythrocytes and platelets. Which branch is this?",
+    "options": [
+      "Common lymphoid progenitor",
+      "Common myeloid progenitor",
+      "Mature-cell pool",
+      "Reticulocyte",
+      "Plasma-cell lineage"
+    ],
+    "answer": 1,
+    "rationale": "Erythrocytes and platelets are on the myeloid branch.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "BC8"
+    ],
+    "covers": [
+      "BC8"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L031 slides 23, 26; transcript 17:29-18:08, 20:09-21:12",
+    "sourceBlock": "L031",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Lymphoid progenitors generate lymphocyte-related cells, whereas erythrocytes and platelets arise from the myeloid branch."
+    },
+    "holdout": false,
+    "n": 7
+  },
+  {
+    "id": "W3-L031-BLOOD-CELLS-AND-HEMATOPOIESIS-08",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "A normal peripheral smear has a small population of an erythroid cell retaining residual RNA. Which cell is it?",
+    "options": [
+      "Reticulocyte",
+      "Proerythroblast",
+      "Basophilic erythroblast",
+      "Normoblast",
+      "Myeloblast"
+    ],
+    "answer": 0,
+    "rationale": "Reticulocytes and erythrocytes leave marrow for peripheral blood; reticulocytes retain nucleic-acid remnants.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "BC9"
+    ],
+    "covers": [
+      "BC9"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L031 slides 31-33; transcript 24:14-29:35",
+    "sourceBlock": "L031",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Proerythroblasts remain in marrow; a normal peripheral smear contains erythrocytes and some reticulocytes."
+    },
+    "holdout": false,
+    "n": 8
+  },
+  {
+    "id": "W3-L033-HEMOGLOBIN-AND-GAS-TRANSPORT-01",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "Which protein has quaternary structure and can bind four O2 molecules?",
+    "options": [
+      "Myoglobin monomer",
+      "Free heme complex",
+      "Albumin carrier",
+      "Hemoglobin tetramer",
+      "Fibrillin glycoprotein"
+    ],
+    "answer": 3,
+    "rationale": "Hb is an alpha2beta2 tetramer with one heme per chain and maximal binding of four O2.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "HB1"
+    ],
+    "covers": [
+      "HB1"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L033 pp. 3, 5-6",
+    "sourceBlock": "L033",
+    "applicationLevel": "discrimination",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Myoglobin is a monomer with one heme; only hemoglobin is the tetramer that can bind four O2 molecules."
+    },
+    "holdout": false,
+    "n": 9
+  },
+  {
+    "id": "W3-L033-HEMOGLOBIN-AND-GAS-TRANSPORT-02",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "Oxidation of heme iron from Fe2+ to Fe3+ produces which species?",
+    "options": [
+      "OxyHb",
+      "DeoxyHb",
+      "CarboxyHb",
+      "MetHb",
+      "HbF"
+    ],
+    "answer": 3,
+    "rationale": "The course table identifies ferri Hb (methemoglobin) as Fe3+ with water ligand.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "HB2"
+    ],
+    "covers": [
+      "HB2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L033 p. 3",
+    "sourceBlock": "L033",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Oxyhemoglobin remains Fe2+ with O2 bound; Fe3+ defines ferri hemoglobin (methemoglobin)."
+    },
+    "holdout": false,
+    "n": 10
+  },
+  {
+    "id": "W3-L033-HEMOGLOBIN-AND-GAS-TRANSPORT-03",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "Why does distal histidine reduce, but not eliminate, CO preference of globin-bound heme?",
+    "options": [
+      "It oxidizes heme iron",
+      "It removes the porphyrin ring",
+      "Distal His bends bound CO",
+      "It binds BPG centrally",
+      "It expels bound oxygen"
+    ],
+    "answer": 2,
+    "rationale": "Distal His forces CO into a bent configuration, lowering its affinity relative to free heme.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "HB2"
+    ],
+    "covers": [
+      "HB2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L033 p. 5",
+    "sourceBlock": "L033",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Iron oxidation produces methemoglobin, whereas distal histidine alters CO geometry by steric hindrance."
+    },
+    "holdout": false,
+    "n": 11
+  },
+  {
+    "id": "W3-L033-HEMOGLOBIN-AND-GAS-TRANSPORT-05",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "An increase in RBC BPG causes which change?",
+    "options": [
+      "Right shift with lower affinity",
+      "Left shift with increased hemoglobin affinity",
+      "No allosteric Hb change",
+      "MetHb formation in RBCs",
+      "Higher fetal BPG binding"
+    ],
+    "answer": 0,
+    "rationale": "BPG stabilizes tense Hb and decreases O2 affinity, shifting the saturation curve right.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "HB4",
+      "HB5"
+    ],
+    "covers": [
+      "HB4",
+      "HB5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L033 p. 8",
+    "sourceBlock": "L033",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "A left shift increases affinity, whereas increased BPG stabilizes tense Hb and produces a right shift."
+    },
+    "holdout": false,
+    "n": 12
+  },
+  {
+    "id": "W3-L033-HEMOGLOBIN-AND-GAS-TRANSPORT-06",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "Why can fetal blood acquire O2 from maternal blood at the placenta?",
+    "options": [
+      "HbF binds BPG more strongly and thereby lowers fetal O2 affinity",
+      "HbF contains Fe3+ and cannot bind O2",
+      "HbF binds BPG less strongly, maintaining higher O2 affinity",
+      "Maternal Hb cannot bind O2 at the placenta",
+      "HbF lacks a heme prosthetic group"
+    ],
+    "answer": 2,
+    "rationale": "HbF binds BPG less strongly than HbA; in BPG presence this preserves higher HbF O2 affinity and promotes maternal-to-fetal O2 transfer.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "HB5",
+      "HB6"
+    ],
+    "covers": [
+      "HB5",
+      "HB6"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L033 p. 9",
+    "sourceBlock": "L033",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Stronger BPG binding would lower HbF oxygen affinity; the placental-transfer mechanism requires HbF to bind BPG less strongly."
+    },
+    "holdout": false,
+    "n": 13
+  },
+  {
+    "id": "W3-L033-HEMOGLOBIN-AND-GAS-TRANSPORT-07",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "A person at altitude has persistent hypoxia. Which adaptation supports tissue unloading?",
+    "options": [
+      "Lower BPG with increased O2 affinity",
+      "Higher fetal Hb expression",
+      "Increase BPG, lowering O2 affinity",
+      "CO binding to hemoglobin",
+      "Loss of Hb beta chains"
+    ],
+    "answer": 2,
+    "rationale": "Hypoxia increases BPG, reducing affinity and increasing tissue O2 dumping.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "HB5"
+    ],
+    "covers": [
+      "HB5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L033 p. 10",
+    "sourceBlock": "L033",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Lower BPG raises Hb oxygen affinity and would oppose the course-described adaptation that improves tissue unloading."
+    },
+    "holdout": false,
+    "n": 14
+  },
+  {
+    "id": "W3-L033-HEMOGLOBIN-AND-GAS-TRANSPORT-08",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "After CO exposure, which treatment is taught to promote CO dissociation?",
+    "options": [
+      "Bicarbonate infusion",
+      "100% oxygen",
+      "Iron oxidation",
+      "BPG depletion",
+      "Antihistamine"
+    ],
+    "answer": 1,
+    "rationale": "The lecture specifies 100% oxygen for CO poisoning.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "HB2",
+      "HB4"
+    ],
+    "covers": [
+      "HB2",
+      "HB4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L033 pp. 11-12",
+    "sourceBlock": "L033",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Bicarbonate can address acid-base status but does not promote CO dissociation from hemoglobin; 100% oxygen does."
+    },
+    "holdout": false,
+    "n": 15
+  },
+  {
+    "id": "W3-L034-BLOOD-PH-REGULATION-01",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "At pH equal to pKa for a weak acid, what is [A-]/[HA]?",
+    "options": [
+      "0.1",
+      "0.5",
+      "10",
+      "100",
+      "1"
+    ],
+    "answer": 4,
+    "rationale": "At pH=pKa, conjugate base and weak acid are equal.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "PH1",
+      "PH3"
+    ],
+    "covers": [
+      "PH1",
+      "PH3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L034 p. 2",
+    "sourceBlock": "L034",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "A 0.1 ratio would place pH one unit below pKa, not at pKa where the ratio is 1."
+    },
+    "holdout": false,
+    "n": 16
+  },
+  {
+    "id": "W3-L034-BLOOD-PH-REGULATION-02",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "A buffer receives added OH-. Which response limits pH rise?",
+    "options": [
+      "A- directly neutralizes OH-",
+      "All HA must be consumed before pH changes",
+      "Dissolved CO2 alone neutralizes OH-",
+      "HA supplies H+; H+ and OH- form H2O",
+      "Na+ becomes the buffer acid"
+    ],
+    "answer": 3,
+    "rationale": "When OH- is added, HA donates H+; H+ and OH- form H2O and HA becomes A-, limiting the pH rise.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "PH1",
+      "PH3"
+    ],
+    "covers": [
+      "PH1",
+      "PH3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L034 p. 3",
+    "sourceBlock": "L034",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "A- is the conjugate base that accepts added H+; buffering added OH- requires HA to supply H+."
+    },
+    "holdout": false,
+    "n": 17
+  },
+  {
+    "id": "W3-L034-BLOOD-PH-REGULATION-03",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "With pCO2 40 mm Hg and solubility 0.03 mM/mm Hg, [CO2(d)] is:",
+    "options": [
+      "0.3 mM",
+      "0.6 mM",
+      "12 mM",
+      "40 mM",
+      "1.2 mM"
+    ],
+    "answer": 4,
+    "rationale": "Henry law: 0.03 x 40 = 1.2 mM.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "PH2",
+      "PH5"
+    ],
+    "covers": [
+      "PH2",
+      "PH5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L034 p. 7",
+    "sourceBlock": "L034",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "At pCO2 40 mm Hg, Henry law gives 0.03 x 40 = 1.2 mM, not 0.3 mM."
+    },
+    "holdout": false,
+    "n": 18
+  },
+  {
+    "id": "W3-L034-BLOOD-PH-REGULATION-04",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "[HCO3-] is 24 mM and [CO2(d)] is 1.2 mM. What pH does the lecture equation predict?",
+    "options": [
+      "6.1",
+      "7.4",
+      "6.4",
+      "7.1",
+      "8.1"
+    ],
+    "answer": 1,
+    "rationale": "6.1 + log(24/1.2) = 6.1 + log20, approximately 7.4.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "PH2",
+      "PH5"
+    ],
+    "covers": [
+      "PH2",
+      "PH5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L034 p. 7",
+    "sourceBlock": "L034",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "A pH of 6.1 would occur at a 1:1 bicarbonate-to-dissolved-CO2 ratio, not the stated 20:1 ratio."
+    },
+    "holdout": false,
+    "n": 19
+  },
+  {
+    "id": "W3-L034-BLOOD-PH-REGULATION-05",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "An ABG has pH 7.26, pCO2 55 mm Hg, and HCO3- 24 mEq/L. What is the primary process?",
+    "options": [
+      "Metabolic acidosis",
+      "Metabolic alkalosis",
+      "Respiratory acidosis",
+      "Respiratory alkalosis",
+      "Fully compensated normal state"
+    ],
+    "answer": 2,
+    "rationale": "The pH is acidemic, pCO2 is elevated, and bicarbonate is normal, so the primary process is uncompensated respiratory acidosis.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "PH5",
+      "PH6"
+    ],
+    "covers": [
+      "PH5",
+      "PH6"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L034 pp. 9-11",
+    "sourceBlock": "L034",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Metabolic acidosis requires a primary bicarbonate decrease; bicarbonate is normal in this respiratory acidosis example."
+    },
+    "holdout": false,
+    "n": 20
+  },
+  {
+    "id": "W3-L034-BLOOD-PH-REGULATION-06",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "In respiratory acidosis, which compensatory direction is taught?",
+    "options": [
+      "Renal bicarbonate excretion over several days",
+      "Lungs retain more CO2",
+      "No physiologic response occurs",
+      "Renal HCO3- retention over 2-4 days",
+      "Lungs remove bicarbonate directly"
+    ],
+    "answer": 3,
+    "rationale": "For a respiratory primary disturbance, renal/metabolic compensation takes 2-4 days and retains HCO3- to move the HCO3-/CO2(d) ratio toward 20:1.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "PH6",
+      "PH7"
+    ],
+    "covers": [
+      "PH6",
+      "PH7"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L034 p. 12",
+    "sourceBlock": "L034",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Bicarbonate excretion would lower the numerator of the H-H ratio and worsen respiratory acidosis rather than compensate."
+    },
+    "holdout": false,
+    "n": 21
+  },
+  {
+    "id": "W3-L034-BLOOD-PH-REGULATION-07",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "A ventilator lowers pCO2 toward 40 in oversedation-induced respiratory acidosis. This is:",
+    "options": [
+      "Compensation",
+      "Correction",
+      "Anion-gap calculation",
+      "Metabolic alkalosis",
+      "Chloride shift"
+    ],
+    "answer": 1,
+    "rationale": "Changing the primary abnormal pCO2 is correction; renal bicarbonate change is compensation.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "PH7"
+    ],
+    "covers": [
+      "PH7"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L034 p. 12",
+    "sourceBlock": "L034",
+    "applicationLevel": "discrimination",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Compensation uses the nonprimary system; lowering the primary elevated pCO2 with ventilation is correction."
+    },
+    "holdout": false,
+    "n": 22
+  },
+  {
+    "id": "W3-L034-BLOOD-PH-REGULATION-08",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "Na+ 140, Cl- 104, HCO3- 12 mEq/L. What is the anion gap?",
+    "options": [
+      "12",
+      "20",
+      "24",
+      "28",
+      "36"
+    ],
+    "answer": 2,
+    "rationale": "AG = 140 - 104 - 12 = 24.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "PH8"
+    ],
+    "covers": [
+      "PH8"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "L034 p. 15",
+    "sourceBlock": "L034",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "The taught formula is Na - Cl - HCO3, so 140 - 104 - 12 equals 24, not 12."
+    },
+    "holdout": false,
+    "n": 23
+  },
+  {
+    "id": "W3-LABL3-HISTOLOGY-LAB-L3-CONNECTIVE-TISSUE-PROPER-02",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "Why does dense irregular CT resist stress from multiple directions?",
+    "options": [
+      "Type I bundles run in many directions",
+      "Abundant hydrated ground substance between collagen fibers",
+      "Only type III collagen fibers",
+      "Absence of resident fibroblasts",
+      "Elastic lamellae in dermis"
+    ],
+    "answer": 0,
+    "rationale": "Varied bundle orientation provides strength in a variety of directions.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "LAB2"
+    ],
+    "covers": [
+      "LAB2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Lab L3 p. 6",
+    "sourceBlock": "LABL3",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Ground substance contributes permeability but the multidirectional strength in dense irregular CT comes from differently oriented type I bundles."
+    },
+    "holdout": false,
+    "n": 9
+  },
+  {
+    "id": "W3-LABL3-HISTOLOGY-LAB-L3-CONNECTIVE-TISSUE-PROPER-05",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "Why does reticular stroma support lymph-node function?",
+    "options": [
+      "It slows fluid and cell movement through the stroma",
+      "It forms tendon-like bundles",
+      "Type III mesh permits passage but slows flow",
+      "It stores neutral lipid",
+      "It secretes immunoglobulins"
+    ],
+    "answer": 2,
+    "rationale": "Type III mesh permits movement while slowing flow to maximize interactions.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "LAB2",
+      "LAB3",
+      "LAB5",
+      "LAB7"
+    ],
+    "covers": [
+      "LAB2",
+      "LAB3",
+      "LAB5",
+      "LAB7"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Lab L3 p. 8",
+    "sourceBlock": "LABL3",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Reticular stroma permits, rather than simply slows or prevents, fluid and cellular passage while increasing opportunities for interaction."
+    },
+    "holdout": false,
+    "n": 10
+  },
+  {
+    "id": "W3-L030-1-INTRODUCTION-TO-INFECTION-01",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Which listed infectious agent is acellular?",
+    "options": [
+      "Bacterium",
+      "Fungus",
+      "Virus",
+      "Protozoan",
+      "Helminth"
+    ],
+    "answer": 2,
+    "rationale": "The lecture identifies viruses as acellular; bacteria, fungi, protozoa, and helminths are cellular organisms.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "infectious agents"
+    ],
+    "covers": [
+      "L0301-O1"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Transcript 01:52-02:47",
+    "sourceBlock": "L030.1",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Bacteria are cellular prokaryotes."
+    },
+    "holdout": false,
+    "n": 1
+  },
+  {
+    "id": "W3-L030-1-INTRODUCTION-TO-INFECTION-02",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A drug selectively blocks translation in a bacterium while sparing human cytoplasmic translation. Which difference most directly explains selectivity?",
+    "options": [
+      "Bacterial circular versus human linear chromosomes",
+      "Bacterial binary fission versus human mitosis",
+      "Bacterial 70S versus human 80S cytoplasmic ribosomes",
+      "Bacterial cell wall versus human plasma membrane",
+      "Bacterial haploidy versus human diploidy"
+    ],
+    "answer": 2,
+    "rationale": "The course explicitly links 70S bacterial versus 80S eukaryotic ribosomes to selective protein-synthesis inhibition.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "ribosomes",
+      "antibiotic selectivity"
+    ],
+    "covers": [
+      "L0301-O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Transcript 04:42-05:13",
+    "sourceBlock": "L030.1",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 3,
+      "why_wrong": "Cell walls can be drug targets, but this question specifies translation."
+    },
+    "holdout": false,
+    "n": 2
+  },
+  {
+    "id": "W3-L030-1-INTRODUCTION-TO-INFECTION-03",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A routine light-microscope preparation contains host cells but the suspected pathogen is not visible. Which lecture-supported explanation is most likely?",
+    "options": [
+      "The organism is a fungal yeast too large for light-microscope resolution",
+      "The organism lacks a plasma membrane",
+      "The organism must be a helminth",
+      "The organism is a thin spirochete below light-microscope resolution",
+      "The host sample contains no cells"
+    ],
+    "answer": 3,
+    "rationale": "The lecture names thin Treponema pallidum among organisms not seen on routine light microscopy despite its length.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "size",
+      "light microscopy"
+    ],
+    "covers": [
+      "L0301-O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Transcript 06:53-07:20",
+    "sourceBlock": "L030.1",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Fungi are generally larger, not a usual explanation for invisibility."
+    },
+    "holdout": false,
+    "n": 3
+  },
+  {
+    "id": "W3-L030-1-INTRODUCTION-TO-INFECTION-04",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "After crystal violet and iodine, a bacterium becomes colorless during alcohol decolorization and pink after safranin. What feature best explains this result?",
+    "options": [
+      "Thin peptidoglycan that cannot retain the violet-iodine complex",
+      "Thick mycolic acid that retains carbol fuchsin",
+      "A membrane-bound nucleus",
+      "Internal flagella",
+      "High surface-area-to-volume ratio"
+    ],
+    "answer": 0,
+    "rationale": "Gram-negative cells have thin peptidoglycan, lose the violet complex during decolorization, and take up safranin.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "Gram stain"
+    ],
+    "covers": [
+      "L0301-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Transcript 15:17-17:51",
+    "sourceBlock": "L030.1",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Mycolic acid explains acid-fast staining, not the Gram-stain sequence."
+    },
+    "holdout": false,
+    "n": 4
+  },
+  {
+    "id": "W3-L030-1-INTRODUCTION-TO-INFECTION-05",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A sputum specimen contains red rods after hot carbol fuchsin, acid-alcohol, and methylene blue. Which structural feature is present?",
+    "options": [
+      "Thick peptidoglycan alone",
+      "Outer membrane porins",
+      "Nuclear envelope",
+      "Waxy mycolic-acid layer",
+      "Cellulose wall"
+    ],
+    "answer": 3,
+    "rationale": "Acid-fast mycobacteria retain red carbol fuchsin because their waxy mycolic-acid layer resists acid-alcohol decolorization.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "acid-fast stain",
+      "mycolic acid"
+    ],
+    "covers": [
+      "L0301-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Transcript 17:52-18:57",
+    "sourceBlock": "L030.1",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Thick peptidoglycan is the Gram-positive discriminator, not acid-fastness."
+    },
+    "holdout": false,
+    "n": 5
+  },
+  {
+    "id": "W3-L030-1-INTRODUCTION-TO-INFECTION-07",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A bacterial isolate produces bubbles immediately after hydrogen peroxide is added. Which enzyme activity was detected?",
+    "options": [
+      "Coagulase",
+      "Catalase",
+      "Urease",
+      "Cytochrome c oxidase",
+      "Peptidoglycan synthase"
+    ],
+    "answer": 1,
+    "rationale": "Catalase converts hydrogen peroxide to water and oxygen, producing visible bubbles.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "biochemical tests"
+    ],
+    "covers": [
+      "L0301-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Transcript 21:28-21:41",
+    "sourceBlock": "L030.1",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 3,
+      "why_wrong": "Oxidase is detected by a purple color change, not peroxide bubbles."
+    },
+    "holdout": false,
+    "n": 6
+  },
+  {
+    "id": "W3-L030-2-NORMAL-MICROBIOTA-01",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "How can resident Lactobacilli reduce establishment of a new urogenital pathogen?",
+    "options": [
+      "They convert all bacteria into spores",
+      "They eliminate host receptors",
+      "They inhibit colonization by bacterial interference",
+      "They make the site sterile",
+      "They create a bacterial nucleus"
+    ],
+    "answer": 2,
+    "rationale": "The course uses Lactobacilli as an example of resident microbiota inhibiting pathogen colonization.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "colonization resistance"
+    ],
+    "covers": [
+      "L0302-O1"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Slide 6; transcript 04:58-05:34",
+    "sourceBlock": "L030.2",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 3,
+      "why_wrong": "Colonization resistance does not make a colonized mucosal site sterile."
+    },
+    "holdout": false,
+    "n": 7
+  },
+  {
+    "id": "W3-L030-2-NORMAL-MICROBIOTA-02",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "After a urinary catheter is placed, a patient develops a bloodstream infection with Staphylococcus epidermidis. Which interpretation best fits the lecture?",
+    "options": [
+      "A skin commensal is always a blood-culture contaminant",
+      "Blood normally contains resident skin flora after catheter use",
+      "Only fungi can cause device-associated bloodstream infection",
+      "The isolate proves dysbiosis of the intestinal microbiota",
+      "A skin commensal can cause disease after barrier breach"
+    ],
+    "answer": 4,
+    "rationale": "The lecture identifies skin S. epidermidis as a possible bloodstream pathogen after surgery or catheter placement.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "opportunistic infection",
+      "barrier breach"
+    ],
+    "covers": [
+      "L0302-O1",
+      "L0302-O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Slide 9; transcript 11:41-12:35",
+    "sourceBlock": "L030.2",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "It may be a contaminant in some settings, but the barrier breach and bloodstream infection support pathogenic potential."
+    },
+    "holdout": false,
+    "n": 8
+  },
+  {
+    "id": "W3-L030-2-NORMAL-MICROBIOTA-03",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Which nutrient is listed as a product of gut microbiota?",
+    "options": [
+      "Insulin",
+      "Cortisol",
+      "Hemoglobin",
+      "Vitamin K",
+      "Bile acid"
+    ],
+    "answer": 3,
+    "rationale": "The course lists vitamin K, B vitamins, and essential amino acids as microbiota-derived nutrients.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "microbiota benefits"
+    ],
+    "covers": [
+      "L0302-O1"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Slide 7; transcript 07:47-08:36",
+    "sourceBlock": "L030.2",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 4,
+      "why_wrong": "Bile is a host secretion, not a listed microbial nutrient product."
+    },
+    "holdout": false,
+    "n": 9
+  },
+  {
+    "id": "W3-L030-2-NORMAL-MICROBIOTA-04",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Which sampled site is generally on the course list of sites devoid of normal microbiota?",
+    "options": [
+      "Oral cavity",
+      "Colon",
+      "Female genital mucosa",
+      "Lower respiratory tract",
+      "Skin surface"
+    ],
+    "answer": 3,
+    "rationale": "The lower respiratory tract is on the lecture's generally sterile-site list; the others are colonized locations.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "sterile sites"
+    ],
+    "covers": [
+      "L0302-O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Slide 11; transcript 13:57-14:18",
+    "sourceBlock": "L030.2",
+    "applicationLevel": "discrimination",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "The mouth is a common mucosal site of microbial colonization."
+    },
+    "holdout": false,
+    "n": 10
+  },
+  {
+    "id": "W3-L030-2-NORMAL-MICROBIOTA-05",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A broad-spectrum antibiotic course is followed by diarrhea from overgrowth of an organism already present at low abundance. What process occurred?",
+    "options": [
+      "Binary fission",
+      "Acid-fastness",
+      "Transient bacteremia",
+      "Dysbiosis",
+      "Tissue tropism"
+    ],
+    "answer": 3,
+    "rationale": "The lecture defines dysbiosis as a population shift that permits a potentially harmful organism to overgrow, using antibiotic-associated diarrhea as the example.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "dysbiosis"
+    ],
+    "covers": [
+      "L0302-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Slide 12; transcript 14:30-15:27",
+    "sourceBlock": "L030.2",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 4,
+      "why_wrong": "Tissue tropism is preference for a specific tissue, usually mediated by adhesin-receptor binding."
+    },
+    "holdout": false,
+    "n": 11
+  },
+  {
+    "id": "W3-L030-2-NORMAL-MICROBIOTA-06",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Why can C. difficile cause disease after broad-spectrum antibiotics despite prior antibiotic exposure?",
+    "options": [
+      "It becomes a eukaryote after entering the gut",
+      "It requires high oxygen tension in the colon after competing anaerobes are removed",
+      "Its inactive spores survive, then germinate after competitors are removed",
+      "It is normally confined to the bloodstream",
+      "It produces eukaryotic 80S ribosomes"
+    ],
+    "answer": 2,
+    "rationale": "The lecture explains that inactive spores escape antibiotic effects; after other bacteria are reduced, they can germinate and overgrow.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "C. difficile",
+      "dysbiosis"
+    ],
+    "covers": [
+      "L0302-O1",
+      "L0302-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Transcript 14:47-15:27",
+    "sourceBlock": "L030.2",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "The course describes the colon as anoxic, not high oxygen."
+    },
+    "holdout": false,
+    "n": 12
+  },
+  {
+    "id": "W3-L030-2-NORMAL-MICROBIOTA-07",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Which term means a mixture of probiotics and prebiotics?",
+    "options": [
+      "Commensal",
+      "Dysbiosis",
+      "Pathovar",
+      "Bacteremia",
+      "Synbiotic"
+    ],
+    "answer": 4,
+    "rationale": "The lecture defines synbiotics as synergistic mixtures of probiotics and prebiotics.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "probiotic",
+      "prebiotic",
+      "synbiotic"
+    ],
+    "covers": [
+      "L0302-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Slide 8; transcript 10:23-10:56",
+    "sourceBlock": "L030.2",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Dysbiosis is an unfavorable community imbalance, not a supplement combination."
+    },
+    "holdout": false,
+    "n": 13
+  },
+  {
+    "id": "W3-L030-2-NORMAL-MICROBIOTA-08",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A culture from a site with abundant commensals grows several organisms. What is the most appropriate first interpretive step?",
+    "options": [
+      "Treat every isolate as the cause",
+      "Ignore all cultures from colonized sites",
+      "Assume the rarest organism is causal regardless of expected flora at that site",
+      "Use Gram stain alone to assign causality",
+      "Compare organisms with expected flora for that specific site"
+    ],
+    "answer": 4,
+    "rationale": "The lecture emphasizes knowing normal site flora because commensals can obscure a pathogen and site determines whether an organism is concerning.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "diagnostic interpretation"
+    ],
+    "covers": [
+      "L0302-O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Slide 4; transcript 00:12-00:45",
+    "sourceBlock": "L030.2",
+    "applicationLevel": "discrimination",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Rarity is not a reliable causal criterion without site and clinical context."
+    },
+    "holdout": false,
+    "n": 14
+  },
+  {
+    "id": "W3-L032-FUNGAL-PATHOGENS-01",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Which cell-wall polymer is characteristic of fungi rather than bacteria?",
+    "options": [
+      "Peptidoglycan",
+      "Lipopolysaccharide",
+      "Chitin",
+      "Teichoic acid",
+      "Ribitol"
+    ],
+    "answer": 2,
+    "rationale": "The lecture lists mannan, glucan, and chitin in fungal walls and specifically excludes peptidoglycan, teichoic acids, and LPS.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "fungal wall"
+    ],
+    "covers": [
+      "L032-O1",
+      "L032-O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Docx III.F, lines 140-156",
+    "sourceBlock": "L032",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Peptidoglycan is bacterial, not fungal."
+    },
+    "holdout": false,
+    "n": 15
+  },
+  {
+    "id": "W3-L032-FUNGAL-PATHOGENS-02",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Why is selective antifungal therapy intrinsically challenging?",
+    "options": [
+      "Fungi lack membranes",
+      "Humans use chitin walls",
+      "Fungi have 70S ribosomes",
+      "Fungi and mammals are both eukaryotes",
+      "Mammals make conidia"
+    ],
+    "answer": 3,
+    "rationale": "The lecture names shared eukaryotic biology as the main therapy problem.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "antifungal selectivity"
+    ],
+    "covers": [
+      "L032-O2",
+      "L032-O7"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Docx I.C and XI.A",
+    "sourceBlock": "L032",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Fungal ribosomes are eukaryotic, not bacterial 70S."
+    },
+    "holdout": false,
+    "n": 16
+  },
+  {
+    "id": "W3-L032-FUNGAL-PATHOGENS-05",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A thermally dimorphic endemic fungus is recovered from an environmental culture at 25 C. Which morphology is expected?",
+    "options": [
+      "Mold",
+      "Yeast",
+      "Only sclerotic bodies",
+      "Only blastoconidia",
+      "No growth"
+    ],
+    "answer": 0,
+    "rationale": "The course states that endemic dimorphic fungi are mold in environmental reservoirs and laboratory culture at 25 C.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "thermal dimorphism"
+    ],
+    "covers": [
+      "L032-O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Docx VI.C",
+    "sourceBlock": "L032",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Yeast is the infected-tissue/37 C form."
+    },
+    "holdout": false,
+    "n": 17
+  },
+  {
+    "id": "W3-L032-FUNGAL-PATHOGENS-06",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A direct KOH/calcofluor examination is negative, but suspicion for invasive fungal infection remains high. What is the best course-grounded next diagnostic step?",
+    "options": [
+      "Obtain fungal culture",
+      "Exclude fungal infection",
+      "Start bacterial Gram classification",
+      "Use urine colony count only",
+      "Assume a viral infection"
+    ],
+    "answer": 0,
+    "rationale": "In the course's conventional direct-microscopy-versus-culture comparison, direct microscopy is rapid but less sensitive and a negative examination does not rule out infection; obtain culture. This does not make a broader claim about every organism-specific antigen assay.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "fungal diagnosis"
+    ],
+    "covers": [
+      "L032-O6"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Docx X.B-C",
+    "sourceBlock": "L032",
+    "applicationLevel": "discrimination",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "The source explicitly warns against this conclusion."
+    },
+    "holdout": false,
+    "n": 18
+  },
+  {
+    "id": "W3-L032-FUNGAL-PATHOGENS-08",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A drug blocks fungal beta-1,3-glucan production. What cellular structure is directly impaired?",
+    "options": [
+      "Cell wall",
+      "Plasma membrane ergosterol",
+      "DNA replication fork",
+      "Mitochondrial matrix",
+      "Capsule"
+    ],
+    "answer": 0,
+    "rationale": "Echinocandins inhibit beta-1,3-glucan synthesis, an important fungal cell-wall component.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "echinocandins"
+    ],
+    "covers": [
+      "L032-O7"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Docx XI.C",
+    "sourceBlock": "L032",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Ergosterol membrane synthesis is targeted by azoles."
+    },
+    "holdout": false,
+    "n": 19
+  },
+  {
+    "id": "W3-L035-BACTERIAL-STRUCTURE-01",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Which molecule is found only in bacterial peptidoglycan?",
+    "options": [
+      "Ergosterol",
+      "Muramic acid",
+      "Cholesterol",
+      "Cellulose",
+      "Sialic acid"
+    ],
+    "answer": 1,
+    "rationale": "The lecture identifies NAM/muramic acid as unique to peptidoglycan and bacteria.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "peptidoglycan"
+    ],
+    "covers": [
+      "L035-O1",
+      "L035-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slides 10-12; transcript 06:35-07:36",
+    "sourceBlock": "L035",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Ergosterol is fungal membrane sterol."
+    },
+    "holdout": false,
+    "n": 20
+  },
+  {
+    "id": "W3-L035-BACTERIAL-STRUCTURE-03",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Which feature distinguishes a Gram-negative envelope from a Gram-positive envelope?",
+    "options": [
+      "Cytoplasmic membrane",
+      "Outer membrane containing LPS",
+      "Peptidoglycan",
+      "70S ribosomes",
+      "Pili"
+    ],
+    "answer": 1,
+    "rationale": "Gram-negative bacteria have an outer membrane containing LPS; both groups have cytoplasmic membrane and peptidoglycan.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "Gram-negative envelope"
+    ],
+    "covers": [
+      "L035-O1"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slides 17-20; transcript 11:34-12:57",
+    "sourceBlock": "L035",
+    "applicationLevel": "discrimination",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Both Gram-positive and Gram-negative bacteria have peptidoglycan."
+    },
+    "holdout": false,
+    "n": 21
+  },
+  {
+    "id": "W3-L035-BACTERIAL-STRUCTURE-04",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A patient has Gram-negative bacteremia followed by intense inflammation, shock, and DIC. Which component is the direct toxic trigger?",
+    "options": [
+      "O antigen",
+      "Teichoic acid",
+      "Capsule",
+      "Lipid A",
+      "Flagellin"
+    ],
+    "answer": 3,
+    "rationale": "Lipid A is the toxic component of LPS; the lecture links LPS to inflammation, endotoxic shock, and DIC.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "endotoxin",
+      "LPS"
+    ],
+    "covers": [
+      "L035-O2",
+      "L035-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slides 20-22; transcript 18:06-19:05",
+    "sourceBlock": "L035",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "O antigen is the variable surface antigen, not the toxic LPS moiety."
+    },
+    "holdout": false,
+    "n": 22
+  },
+  {
+    "id": "W3-L035-BACTERIAL-STRUCTURE-05",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Why does vancomycin fail to reach its peptidoglycan target in many Gram-negative bacteria?",
+    "options": [
+      "The outer membrane excludes this large molecule",
+      "Gram-negatives lack peptidoglycan",
+      "Lipid A cleaves the drug",
+      "Teichoic acid pumps it out",
+      "Capsules digest it"
+    ],
+    "answer": 0,
+    "rationale": "The course describes the outer membrane and porins as a major permeability barrier that excludes large molecules such as vancomycin.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "outer membrane",
+      "porins"
+    ],
+    "covers": [
+      "L035-O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Transcript 16:36-17:13",
+    "sourceBlock": "L035",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Gram-negative bacteria do have thin peptidoglycan."
+    },
+    "holdout": false,
+    "n": 23
+  },
+  {
+    "id": "W3-L035-BACTERIAL-STRUCTURE-06",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A bacterial mutant is rapidly cleared by phagocytes because it cannot prevent complement opsonization. Which structure is most likely absent?",
+    "options": [
+      "Flagellum",
+      "Ribosome",
+      "Plasmid",
+      "Endospore",
+      "Capsule"
+    ],
+    "answer": 4,
+    "rationale": "The course names capsule as anti-phagocytic through prevention of complement opsonization.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "capsule",
+      "virulence"
+    ],
+    "covers": [
+      "L035-O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slide 24; transcript 22:15-23:25",
+    "sourceBlock": "L035",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Flagella mediate motility, not the described anti-opsonic function."
+    },
+    "holdout": false,
+    "n": 24
+  },
+  {
+    "id": "W3-L035-BACTERIAL-STRUCTURE-07",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A uropathogen adheres to mannose residues on bladder cells. Which structure mediates attachment?",
+    "options": [
+      "Flagella",
+      "Lipoteichoic acid",
+      "Type I pili",
+      "Lipid A",
+      "Endospore coat"
+    ],
+    "answer": 2,
+    "rationale": "Type I pili bind mannose residues and are associated with cystitis in the lecture.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "pili",
+      "adhesion"
+    ],
+    "covers": [
+      "L035-O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slide 28; transcript 26:30-27:12",
+    "sourceBlock": "L035",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Flagella support motility rather than the specified mannose adhesion."
+    },
+    "holdout": false,
+    "n": 25
+  },
+  {
+    "id": "W3-L035-BACTERIAL-STRUCTURE-08",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "What is the function of a bacterial sex pilus?",
+    "options": [
+      "ATP synthesis",
+      "Conjugative horizontal DNA transfer",
+      "Peptidoglycan crosslinking",
+      "Endotoxin release",
+      "Spore germination"
+    ],
+    "answer": 1,
+    "rationale": "The lecture specifies sex pili in horizontal gene transfer by conjugation.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "sex pili",
+      "conjugation"
+    ],
+    "covers": [
+      "L035-O1",
+      "L035-O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slide 28; transcript 27:43-28:00",
+    "sourceBlock": "L035",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "PBPs perform crosslinking, not pili."
+    },
+    "holdout": false,
+    "n": 26
+  },
+  {
+    "id": "W3-L036-INTRODUCTION-TO-VIRUSES-01",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A virus remains infectious for months in sewage and survives stomach acid. Which structural class is most likely?",
+    "options": [
+      "Enveloped virus",
+      "Capsid-free virus",
+      "DNA-free virus",
+      "Naked virus",
+      "Host-cell vesicle"
+    ],
+    "answer": 3,
+    "rationale": "The course uses naked poliovirus as the environmentally resistant, fecal-oral example.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "envelope",
+      "transmission"
+    ],
+    "covers": [
+      "L036-O1"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slide 2; transcript 027, 17:15-17:42",
+    "sourceBlock": "L036",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Envelopes are sensitive to drying, disinfectants, and acid."
+    },
+    "holdout": false,
+    "n": 27
+  },
+  {
+    "id": "W3-L036-INTRODUCTION-TO-VIRUSES-02",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Drying overnight abolishes infectivity of a virus stock. Which feature was most likely damaged?",
+    "options": [
+      "DNA genome",
+      "Capsid protein",
+      "Host ribosome",
+      "Viral receptor",
+      "Lipid envelope"
+    ],
+    "answer": 4,
+    "rationale": "Enveloped viruses are more susceptible to desiccation because their lipid envelope is fragile.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "envelope"
+    ],
+    "covers": [
+      "L036-O1"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slides 2 and 10; transcript 027, 15:20-17:12",
+    "sourceBlock": "L036",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "A capsid is the protective shell of naked viruses and generally supports resistance."
+    },
+    "holdout": false,
+    "n": 28
+  },
+  {
+    "id": "W3-L036-INTRODUCTION-TO-VIRUSES-03",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A virus infects only cells expressing a particular surface receptor. Which replication step is restricted?",
+    "options": [
+      "Uncoating",
+      "Genome replication",
+      "Attachment/adsorption",
+      "Assembly",
+      "Egress"
+    ],
+    "answer": 2,
+    "rationale": "Binding of viral protein to a host receptor is adsorption and determines tissue tropism.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "tropism",
+      "attachment"
+    ],
+    "covers": [
+      "L036-O2",
+      "L036-O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slide 3; transcript 028, 01:43-03:37",
+    "sourceBlock": "L036",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Uncoating occurs after penetration, not receptor selection."
+    },
+    "holdout": false,
+    "n": 29
+  },
+  {
+    "id": "W3-L036-INTRODUCTION-TO-VIRUSES-04",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Which viral protein would be embedded in a host plasma membrane before an enveloped virus buds?",
+    "options": [
+      "Viral transcriptase",
+      "Viral nucleic acid",
+      "Viral envelope glycoprotein",
+      "Viral protease",
+      "Capsid protein"
+    ],
+    "answer": 2,
+    "rationale": "Envelope glycoproteins are incorporated into host membrane before budding and mediate attachment.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "budding",
+      "glycoprotein"
+    ],
+    "covers": [
+      "L036-O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slide 9; transcript 028, 07:59-10:47",
+    "sourceBlock": "L036",
+    "applicationLevel": "discrimination",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 4,
+      "why_wrong": "Capsid protein remains within the enveloped virion associated with genome."
+    },
+    "holdout": false,
+    "n": 30
+  },
+  {
+    "id": "W3-L036-INTRODUCTION-TO-VIRUSES-05",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Purified viral RNA introduced into a cell directly produces viral proteins and progeny. Which genome is most likely?",
+    "options": [
+      "Positive-sense ssRNA",
+      "Negative-sense ssRNA",
+      "dsRNA",
+      "ssDNA",
+      "dsDNA"
+    ],
+    "answer": 0,
+    "rationale": "Positive-sense RNA can act directly as mRNA for host ribosomes.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "positive-sense RNA"
+    ],
+    "covers": [
+      "L036-O3",
+      "L036-O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slides 5 and 9; transcript 029, 05:54-08:48",
+    "sourceBlock": "L036",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Negative-sense RNA requires an RdRp-generated positive copy before translation."
+    },
+    "holdout": false,
+    "n": 31
+  },
+  {
+    "id": "W3-L036-INTRODUCTION-TO-VIRUSES-06",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Why must a negative-sense RNA virion contain RdRp?",
+    "options": [
+      "Host cells lack functional ribosomes for translation",
+      "It must copy DNA before beginning translation",
+      "It supplies a lipid envelope for virion stability",
+      "It performs receptor binding at the cell surface",
+      "Host cells cannot translate negative RNA until RdRp makes positive RNA"
+    ],
+    "answer": 4,
+    "rationale": "Negative RNA is not directly translatable; virion-associated RdRp makes the positive-strand mRNA.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "negative-sense RNA",
+      "RdRp"
+    ],
+    "covers": [
+      "L036-O3",
+      "L036-O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slides 5-6; transcript 029, 09:34-11:22",
+    "sourceBlock": "L036",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "The enzyme makes RNA from RNA, not DNA."
+    },
+    "holdout": false,
+    "n": 32
+  },
+  {
+    "id": "W3-L036-INTRODUCTION-TO-VIRUSES-07",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "What enzyme replicates a retroviral RNA genome into a DNA copy?",
+    "options": [
+      "RNA-dependent RNA polymerase",
+      "RNA-dependent DNA polymerase",
+      "DNA-dependent DNA polymerase",
+      "DNA-dependent RNA polymerase",
+      "Host ribosome"
+    ],
+    "answer": 1,
+    "rationale": "Reverse transcriptase is RNA-dependent DNA polymerase.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "retrovirus",
+      "reverse transcriptase"
+    ],
+    "covers": [
+      "L036-O3",
+      "L036-O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slide 6; transcript 029, 11:28-13:46",
+    "sourceBlock": "L036",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "RdRp copies RNA into RNA, not RNA into DNA."
+    },
+    "holdout": false,
+    "n": 33
+  },
+  {
+    "id": "W3-L036-INTRODUCTION-TO-VIRUSES-08",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Which sequence correctly orders early-to-late basic viral replication?",
+    "options": [
+      "Assembly, attachment, penetration, genome replication",
+      "Penetration, attachment, assembly, genome replication",
+      "Genome replication, uncoating, attachment, assembly",
+      "Egress, attachment, penetration, assembly",
+      "Attachment, penetration, genome replication, assembly"
+    ],
+    "answer": 4,
+    "rationale": "The course sequence places attachment then penetration, followed by uncoating, replication/protein production, and assembly.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "replication cycle"
+    ],
+    "covers": [
+      "L036-O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slides 3-4 and 10; transcript 028, 00:39-01:38",
+    "sourceBlock": "L036",
+    "applicationLevel": "discrimination",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Attachment necessarily precedes penetration."
+    },
+    "holdout": false,
+    "n": 34
+  },
+  {
+    "id": "W3-L037-PARASITOLOGY-01",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A parasite undergoes sexual reproduction in a beetle and asexual replication in a monkey. What is the beetle?",
+    "options": [
+      "Intermediate host",
+      "Incidental host",
+      "Definitive host",
+      "Dead-end host",
+      "Vector only"
+    ],
+    "answer": 2,
+    "rationale": "The definitive host is defined by sexual reproduction, regardless of pathology or time spent.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "host definition"
+    ],
+    "covers": [
+      "L037-O1"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Outline, Types of hosts and self-study Q2; transcript 04:45-05:06",
+    "sourceBlock": "L037",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Intermediate hosts lack sexual maturity."
+    },
+    "holdout": false,
+    "n": 35
+  },
+  {
+    "id": "W3-L037-PARASITOLOGY-02",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Which host is infected accidentally and is not necessary to complete a parasite life cycle?",
+    "options": [
+      "Definitive host",
+      "Incidental host",
+      "Intermediate host",
+      "Reservoir host",
+      "Sexual host"
+    ],
+    "answer": 1,
+    "rationale": "This is the course definition of an incidental host.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "incidental host"
+    ],
+    "covers": [
+      "L037-O1"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Outline, Types of hosts; transcript 09:25-10:47",
+    "sourceBlock": "L037",
+    "applicationLevel": "discrimination",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "A definitive host supports sexual reproduction."
+    },
+    "holdout": false,
+    "n": 36
+  },
+  {
+    "id": "W3-L037-PARASITOLOGY-03",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "An oxpecker removes mites and ticks from a gazelle while feeding on them. What relationship is this?",
+    "options": [
+      "Parasitism",
+      "Commensalism",
+      "Predation",
+      "Mutualism",
+      "Tropism"
+    ],
+    "answer": 3,
+    "rationale": "Both oxpecker and gazelle benefit, matching mutualism.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "mutualism"
+    ],
+    "covers": [
+      "L037-O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Outline self-study Q1; transcript 02:31-03:25",
+    "sourceBlock": "L037",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Commensalism leaves one partner unaffected."
+    },
+    "holdout": false,
+    "n": 37
+  },
+  {
+    "id": "W3-L037-PARASITOLOGY-06",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Which diagnostic technique offers a low limit of detection but is expensive and resource intensive?",
+    "options": [
+      "PCR",
+      "Rapid antigen test",
+      "Thick smear",
+      "IFA",
+      "Xenodiagnosis"
+    ],
+    "answer": 0,
+    "rationale": "The course attributes low detection limit but high expense/resource use to PCR.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "PCR"
+    ],
+    "covers": [
+      "L037-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Outline, DNA detection; transcript 21:41-23:06",
+    "sourceBlock": "L037",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Rapid tests are low-tech and need minimal expertise."
+    },
+    "holdout": false,
+    "n": 38
+  },
+  {
+    "id": "W3-L037-PARASITOLOGY-07",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A patient has intermittent diarrhea and an intestinal parasite is suspected. The first stool examination is unrevealing. Which collection plan best follows the course guidance for ova-and-parasite testing?",
+    "options": [
+      "Submit three appropriately collected stool specimens, each transported promptly",
+      "Submit one stool specimen after adding urine to preserve motility",
+      "Delay collection until after antibiotics and IV contrast are completed",
+      "Replace stool microscopy with a thin blood smear",
+      "Use a single rectal swab as the definitive specimen"
+    ],
+    "answer": 0,
+    "rationale": "The outline recommends three stool specimens in an appropriate container, without urine, antibiotics, or IV-contrast contamination, transported to the laboratory within two hours.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "stool ova and parasite testing"
+    ],
+    "covers": [
+      "L037-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Parasitology outline, Diagnostic techniques: Stool (O&P); transcript 12:45-14:47",
+    "sourceBlock": "L037",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Antibiotics and IV contrast can compromise the specimen; the outline specifically lists them among contaminants to avoid."
+    },
+    "holdout": false,
+    "n": 39
+  },
+  {
+    "id": "W3-L037-PARASITOLOGY-08",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "Why might a single antiparasitic drug fail despite adequate exposure?",
+    "options": [
+      "Parasites lack genomes",
+      "Parasites are prokaryotes with drug-selective ribosomes and peptidoglycan walls",
+      "All parasites are dormant",
+      "The parasite may have multiple life stages requiring different targets",
+      "Host cells provide a capsule"
+    ],
+    "answer": 3,
+    "rationale": "Multiple stages and nonproliferating forms are course treatment challenges.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "treatment challenges"
+    ],
+    "covers": [
+      "L037-O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Outline, Treatment challenges; transcript 25:23-28:20",
+    "sourceBlock": "L037",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Parasites are eukaryotic, a reason for limited therapeutic selectivity."
+    },
+    "holdout": false,
+    "n": 40
+  },
+  {
+    "id": "W3-L038-039-INTRODUCTION-TO-IMMUNOLOGY-I-AND-II-01",
+    "topic": "Immunology",
+    "src": "I",
+    "stem": "Which are primary lymphoid organs?",
+    "options": [
+      "Spleen and lymph nodes",
+      "MALT and GALT",
+      "Skin and liver",
+      "Tonsils and spleen",
+      "Bone marrow and thymus"
+    ],
+    "answer": 4,
+    "rationale": "Bone marrow and thymus are primary organs for development/maturation.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "lymphoid organs"
+    ],
+    "covers": [
+      "L038039-O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Outline, lymphatic system",
+    "sourceBlock": "L038/039",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "They are secondary lymphoid organs."
+    },
+    "holdout": false,
+    "n": 1
+  },
+  {
+    "id": "W3-L038-039-INTRODUCTION-TO-IMMUNOLOGY-I-AND-II-02",
+    "topic": "Immunology",
+    "src": "I",
+    "stem": "A blood-borne pathogen is filtered mainly by which secondary organ?",
+    "options": [
+      "Thymus",
+      "Spleen",
+      "Bone marrow",
+      "Skin",
+      "Thyroid"
+    ],
+    "answer": 1,
+    "rationale": "The spleen filters blood-borne material.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "spleen"
+    ],
+    "covers": [
+      "L038039-O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Outline, lymphatic system",
+    "sourceBlock": "L038/039",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Thymus is a primary maturation organ."
+    },
+    "holdout": false,
+    "n": 2
+  },
+  {
+    "id": "W3-L038-039-INTRODUCTION-TO-IMMUNOLOGY-I-AND-II-03",
+    "topic": "Immunology",
+    "src": "I",
+    "stem": "Which immune arm responds immediately to an unknown microbe?",
+    "options": [
+      "Adaptive",
+      "Innate",
+      "Humoral only",
+      "Memory only",
+      "Cell-mediated only"
+    ],
+    "answer": 1,
+    "rationale": "Innate immunity is always on and immediately responsive.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "innate immunity"
+    ],
+    "covers": [
+      "L038039-O1",
+      "L038039-O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Outline, innate system",
+    "sourceBlock": "L038/039",
+    "applicationLevel": "discrimination",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Adaptive immunity is initially slow and naive."
+    },
+    "holdout": false,
+    "n": 3
+  },
+  {
+    "id": "W3-L038-039-INTRODUCTION-TO-IMMUNOLOGY-I-AND-II-04",
+    "topic": "Immunology",
+    "src": "I",
+    "stem": "Why is a second adaptive response to the same pathogen faster?",
+    "options": [
+      "Innate-response genes mutate after reinfection",
+      "Pathogens lose their surface receptors",
+      "Neutrophils become antibody-secreting cells",
+      "Long-lived memory lymphocytes reactivate",
+      "The thymus enlarges after reinfection"
+    ],
+    "answer": 3,
+    "rationale": "Memory B and T cells support rapid specific reactivation.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "memory"
+    ],
+    "covers": [
+      "L038039-O4"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Outline, memory lymphocytes; transcript 037 05:05-07:45",
+    "sourceBlock": "L038/039",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "The speed derives from host memory, not pathogen change."
+    },
+    "holdout": false,
+    "n": 4
+  },
+  {
+    "id": "W3-L038-039-INTRODUCTION-TO-IMMUNOLOGY-I-AND-II-05",
+    "topic": "Immunology",
+    "src": "I",
+    "stem": "Which cell makes cytokines to coordinate immune effectors?",
+    "options": [
+      "CD8+ T cell",
+      "CD4+ helper T cell",
+      "Plasma cell",
+      "Neutrophil",
+      "Erythrocyte"
+    ],
+    "answer": 1,
+    "rationale": "CD4 helper T cells coordinate via cytokines.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "CD4"
+    ],
+    "covers": [
+      "L038039-O3",
+      "L038039-O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Outline, adaptive cells",
+    "sourceBlock": "L038/039",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "CD8 cells kill diseased cells."
+    },
+    "holdout": false,
+    "n": 5
+  },
+  {
+    "id": "W3-L038-039-INTRODUCTION-TO-IMMUNOLOGY-I-AND-II-06",
+    "topic": "Immunology",
+    "src": "I",
+    "stem": "A cytokine is released near a cell lacking its receptor. What happens?",
+    "options": [
+      "Universal activation",
+      "No direct effect on that cell",
+      "Antibody secretion",
+      "Genome recombination",
+      "Complement lysis"
+    ],
+    "answer": 1,
+    "rationale": "Cytokines act through specific cell-surface receptors.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "cytokines"
+    ],
+    "covers": [
+      "L038039-O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Outline, cytokines",
+    "sourceBlock": "L038/039",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Receptor expression restricts cytokine effects."
+    },
+    "holdout": false,
+    "n": 6
+  },
+  {
+    "id": "W3-L038-039-INTRODUCTION-TO-IMMUNOLOGY-I-AND-II-07",
+    "topic": "Immunology",
+    "src": "I",
+    "stem": "Loss of tolerance to self tissues produces what disorder category?",
+    "options": [
+      "Secondary immunodeficiency",
+      "Innate memory",
+      "Commensalism",
+      "Autoimmunity",
+      "Neutropenia"
+    ],
+    "answer": 3,
+    "rationale": "Loss of self tolerance produces autoimmune disease.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "tolerance"
+    ],
+    "covers": [
+      "L038039-O6"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Outline, autoimmunity",
+    "sourceBlock": "L038/039",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Immunodeficiency is failure to detect/eliminate foreign pathogens."
+    },
+    "holdout": false,
+    "n": 7
+  },
+  {
+    "id": "W3-L038-039-INTRODUCTION-TO-IMMUNOLOGY-I-AND-II-08",
+    "topic": "Immunology",
+    "src": "I",
+    "stem": "Which is a secondary immunodeficiency cause?",
+    "options": [
+      "Inborn mutation",
+      "Inherited absent receptor",
+      "Congenital enzyme defect",
+      "HIV infection",
+      "Birth defect"
+    ],
+    "answer": 3,
+    "rationale": "Secondary defects are acquired; outline examples include HIV, leukemia, and immunosuppressive drugs.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "immunodeficiency"
+    ],
+    "covers": [
+      "L038039-O6"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Outline, immune failures",
+    "sourceBlock": "L038/039",
+    "applicationLevel": "discrimination",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Inborn mutations cause primary immunodeficiencies."
+    },
+    "holdout": false,
+    "n": 8
+  },
+  {
+    "id": "W3-L040-041-INNATE-IMMUNOLOGY-I-AND-II-01",
+    "topic": "Immunology",
+    "src": "I",
+    "stem": "A newly encountered bacterium is recognized before antigen-specific lymphocytes expand. Which property enables this response?",
+    "options": [
+      "Pathogen-specific memory B cells",
+      "Somatic receptor mutation",
+      "Antibody affinity maturation",
+      "Germline-encoded pattern-recognition receptors",
+      "Thymic selection after exposure"
+    ],
+    "answer": 3,
+    "rationale": "Innate receptors are germline encoded and immediately recognize broad microbial patterns without prior exposure.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "innate specificity"
+    ],
+    "covers": [
+      "L040041-O1"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Outline lines 17-32",
+    "sourceBlock": "L040/041",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Memory B cells are adaptive and pathogen specific."
+    },
+    "holdout": false,
+    "n": 9
+  },
+  {
+    "id": "W3-L040-041-INNATE-IMMUNOLOGY-I-AND-II-02",
+    "topic": "Immunology",
+    "src": "I",
+    "stem": "A bacterium is unable to grow after entering an iron-poor mucosal environment. Which barrier is most directly responsible?",
+    "options": [
+      "Ciliary motion clearing mucosal fluid",
+      "Tight junctions sealing adjacent cells",
+      "C3b cleavage coating bacterial surfaces",
+      "Mannose-binding lectin binding microbial sugars",
+      "Lactoferrin/transferrin iron sequestration"
+    ],
+    "answer": 4,
+    "rationale": "Lactoferrin and transferrin restrict bacterial growth by sequestering free iron.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "chemical barrier"
+    ],
+    "covers": [
+      "L040041-O2"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "Outline lines 44-57",
+    "sourceBlock": "L040/041",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Cilia impair colonization by moving fluid but do not create iron restriction."
+    },
+    "holdout": false,
+    "n": 10
+  },
+  {
+    "id": "W3-L040-041-INNATE-IMMUNOLOGY-I-AND-II-03",
+    "topic": "Immunology",
+    "src": "I",
+    "stem": "A macrophage binds bacterial LPS through its pattern-recognition system. Which receptor is most directly implicated?",
+    "options": [
+      "TLR3",
+      "TLR2",
+      "CD18",
+      "CD4",
+      "TLR4"
+    ],
+    "answer": 4,
+    "rationale": "The course maps TLR4 to LPS, whereas TLR3 detects dsRNA and TLR2 detects peptidoglycan.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "TLR4",
+      "PAMP"
+    ],
+    "covers": [
+      "L040041-O3"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slides 4, 19",
+    "sourceBlock": "L040/041",
+    "applicationLevel": "discrimination",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "TLR2 is mapped to bacterial peptidoglycan."
+    },
+    "holdout": false,
+    "n": 11
+  },
+  {
+    "id": "W3-L040-041-INNATE-IMMUNOLOGY-I-AND-II-04",
+    "topic": "Immunology",
+    "src": "I",
+    "stem": "After PRR signaling in infected tissue, which event most directly precedes neutrophil recruitment?",
+    "options": [
+      "C5b-C9 pore formation on bacterial membranes",
+      "Antibody affinity maturation in germinal centers",
+      "B-cell isotype switching after activation",
+      "Erythrocyte sedimentation from acute-phase proteins",
+      "NF-kB-driven production of IL-1, IL-6, TNF-alpha, and IL-8"
+    ],
+    "answer": 4,
+    "rationale": "The course sequence is TLR recognition -> NF-kB -> proinflammatory cytokines -> neutrophil recruitment.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "inflammation",
+      "NF-kB"
+    ],
+    "covers": [
+      "L040041-O4",
+      "L040041-O7"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slide 19; outline lines 73 onward; transcript 040 02:09-03:48",
+    "sourceBlock": "L040/041",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "MAC can lyse targets but does not describe the cytokine recruitment sequence."
+    },
+    "holdout": false,
+    "n": 12
+  },
+  {
+    "id": "W3-L040-041-INNATE-IMMUNOLOGY-I-AND-II-05",
+    "topic": "Immunology",
+    "src": "I",
+    "stem": "Which innate cell is most specialized for direct killing of helminths using major basic protein?",
+    "options": [
+      "Neutrophil",
+      "Eosinophil",
+      "Macrophage",
+      "NK cell",
+      "Mast cell"
+    ],
+    "answer": 1,
+    "rationale": "Eosinophil granules contain major basic protein and peroxidase that damage helminth membranes.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "eosinophil",
+      "helminth"
+    ],
+    "covers": [
+      "L040041-O5"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slide 8",
+    "sourceBlock": "L040/041",
+    "applicationLevel": "discrimination",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Neutrophils are rapid phagocytic responders, not the course’s helminth-granule cell."
+    },
+    "holdout": false,
+    "n": 13
+  },
+  {
+    "id": "W3-L040-041-INNATE-IMMUNOLOGY-I-AND-II-06",
+    "topic": "Immunology",
+    "src": "I",
+    "stem": "A patient with acute bacterial infection has an increased blood protein made by the liver in response to IL-6 that coats bacterial lipids. Which protein is this?",
+    "options": [
+      "C-reactive protein",
+      "CD18",
+      "NF-kB",
+      "Lysozyme",
+      "IL-8"
+    ],
+    "answer": 0,
+    "rationale": "CRP is an IL-6-induced acute-phase liver protein that binds bacterial lipids and promotes opsonization/complement activation.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "CRP",
+      "acute phase"
+    ],
+    "covers": [
+      "L040041-O3",
+      "L040041-O7"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slide 5; transcript 040 07:14-12:09",
+    "sourceBlock": "L040/041",
+    "applicationLevel": "presentation",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 3,
+      "why_wrong": "Lysozyme cleaves peptidoglycan but is not the described IL-6-induced acute-phase marker."
+    },
+    "holdout": false,
+    "n": 14
+  },
+  {
+    "id": "W3-L040-041-INNATE-IMMUNOLOGY-I-AND-II-07",
+    "topic": "Immunology",
+    "src": "I",
+    "stem": "A complement fragment coats a bacterial membrane, making it more attractive to phagocytes. Which fragment is responsible?",
+    "options": [
+      "C3a",
+      "C5a",
+      "C9",
+      "C3b",
+      "C1"
+    ],
+    "answer": 3,
+    "rationale": "C3b binds microbial surfaces as an opsonin; C3a and C5a are proinflammatory fragments.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "C3b",
+      "opsonization"
+    ],
+    "covers": [
+      "L040041-O3",
+      "L040041-O6"
+    ],
+    "course": "OST520",
+    "source": "week3-bank",
+    "sourceRef": "PDF slides 9-10; transcript 043 03:06-04:08",
+    "sourceBlock": "L040/041",
+    "applicationLevel": "discrimination",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "C3a promotes inflammation rather than surface opsonization."
+    },
+    "holdout": false,
+    "n": 15
   }
 ]

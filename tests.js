@@ -4,9 +4,9 @@ const html=fs.readFileSync("index.html","utf8"), json=JSON.parse(fs.readFileSync
 const between=(a,b)=>html.slice(html.indexOf(a)+a.length,html.indexOf(b,html.indexOf(a)));
 const bank=vm.runInNewContext("("+between("let BANK = ",";\nconst META =")+")");
 assert.deepStrictEqual(JSON.parse(JSON.stringify(bank)),json,"bank.json must exactly equal embedded BANK");
-assert.equal(bank.length,599); assert.equal(new Set(bank.map(q=>q.id)).size,599);
-assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":151,"Genetics":389,"Epi & Biostats":59});
-assert.equal(bank.filter(q=>q.type==="mcq").length,574); assert.equal(bank.filter(q=>q.type==="worked").length,25);
+assert.equal(bank.length,757); assert.equal(new Set(bank.map(q=>q.id)).size,757);
+assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats","Molecular Biology","Histology","Hematology & Physiology","Microbiology","Immunology"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":199,"Genetics":403,"Epi & Biostats":59,"Molecular Biology":8,"Histology":10,"Hematology & Physiology":23,"Microbiology":40,"Immunology":15});
+assert.equal(bank.filter(q=>q.type==="mcq").length,732); assert.equal(bank.filter(q=>q.type==="worked").length,25);
 assert.equal(bank.filter(q=>/^WK-/.test(q.id)).length,24,"targeted weakness set must remain complete");
 const confusionLab=bank.filter(q=>/^DL-\d\d$/.test(q.id));
 assert.equal(confusionLab.length,24,"confusion lab must contain exactly 24 questions");
@@ -15,8 +15,27 @@ for(const q of confusionLab){assert.equal(q.source,"confusion-lab");assert.equal
 assert.equal(new Set(confusionLab.map(q=>q.confusionSet)).size,8,"confusion lab must cover eight look-alike families");
 for(const family of new Set(confusionLab.map(q=>q.confusionSet)))assert.equal(confusionLab.filter(q=>q.confusionSet===family).length,3,`family must contain three questions: ${family}`);
 assert.deepStrictEqual(JSON.parse(JSON.stringify(confusionLab.reduce((counts,q)=>(counts[q.answer]=(counts[q.answer]||0)+1,counts),{}))),{"0":5,"1":5,"2":5,"3":5,"4":4},"confusion-lab answer positions must remain balanced");
-const originalAnswerHash=crypto.createHash("sha256").update(JSON.stringify(bank.filter(q=>!/^DL-/.test(q.id)).map(q=>[q.id,q.answer]))).digest("hex");
+const originalAnswerHash=crypto.createHash("sha256").update(JSON.stringify(bank.filter(q=>!(/^(DL-|L013-|W3-)/.test(q.id))).map(q=>[q.id,q.answer]))).digest("hex");
 assert.equal(originalAnswerHash,"bf42363a39188b1e3270cd2aedafc141d5f1cf8ef67bfd8c73deab1dae5ec3b9","an original answer index changed");
+const dnaRepair=bank.filter(q=>/^L013-\d\d$/.test(q.id));
+assert.equal(dnaRepair.length,14,"L013 DNA Repair set must remain complete");
+assert(dnaRepair.every(q=>q.topic==="Genetics"&&q.src==="G"&&q.course==="OST520"&&q.unit==="UE1"&&q.type==="mcq"),"L013 question metadata changed");
+assert(dnaRepair.every(q=>q.covers.length===1&&q.covers[0]==="L013"&&q.sourceRef==="L013 DNA Repair study guide"),"L013 source metadata changed");
+assert(dnaRepair.every(q=>q.options.length===5&&new Set(q.options).size===5&&q.rationale.includes("<strong>")),"L013 question quality guard failed");
+const week3=bank.filter(q=>/^W3-/.test(q.id));
+assert.equal(week3.length,144,"Week 3 bank-ready set must remain complete");
+assert(week3.every(q=>q.course==="OST520"&&q.unit==="UE2"&&q.source==="week3-bank"&&q.type==="mcq"),"Week 3 scope metadata changed");
+assert(week3.every(q=>q.options.length===5&&new Set(q.options).size===5&&q.requiresMedia===false&&q.holdout===false),"Week 3 release leaked a malformed, media-gated, or holdout item");
+assert(week3.every(q=>q.sourceRef&&q.closestDistractor&&q.closestDistractor.index!==q.answer),"Week 3 grounding or distractor metadata missing");
+const week3Blocks=new Set(["RR6","L026","L027","L028","L029","LABL3","RR7a","RR7b","RR8","L030.1","L030.2","L031","L032","L033","L034","L035","L036","L037","L038/039","L040/041"]);
+assert(week3.every(q=>week3Blocks.has(q.sourceBlock)),"Week 3 sourceBlock is missing or outside the 20-block syllabus map");
+assert.deepStrictEqual(new Set(week3.map(q=>q.applicationLevel)),new Set(["recall","mechanism","presentation","discrimination"]),"Week 3 application-level mix changed");
+assert(week3.every(q=>!/(?:does not match the course-supported mechanism|does not explain the decisive clue)/i.test(q.closestDistractor.why_wrong)),"Week 3 closest-distractor explanation regressed to a generic placeholder");
+const week3ById=Object.fromEntries(week3.map(q=>[q.id,q]));
+assert.match(week3ById["W3-L034-BLOOD-PH-REGULATION-02"].options[week3ById["W3-L034-BLOOD-PH-REGULATION-02"].answer],/HA.*H\+.*H2O/i,"buffer question must key weak-acid proton donation");
+assert.match(week3ById["W3-L034-BLOOD-PH-REGULATION-06"].options[week3ById["W3-L034-BLOOD-PH-REGULATION-06"].answer],/renal HCO3- retention/i,"respiratory-acidosis question must key renal bicarbonate retention");
+assert.match(week3ById["W3-L033-HEMOGLOBIN-AND-GAS-TRANSPORT-06"].options[week3ById["W3-L033-HEMOGLOBIN-AND-GAS-TRANSPORT-06"].answer],/BPG less strongly.*higher O2 affinity/i,"fetal-hemoglobin question must key reduced BPG binding");
+assert.match(week3ById["W3-L034-BLOOD-PH-REGULATION-05"].stem,/pH 7\.26, pCO2 55 mm Hg, and HCO3- 24 mEq\/L/i,"ABG regression fixture must remain internally consistent");
 const transcript=bank.filter(q=>/^TR-/.test(q.id));
 assert.equal(transcript.length,18,"transcript remediation set must remain complete");
 const transcriptAnswers={"TR-01":1,"TR-02":2,"TR-03":2,"TR-04":1,"TR-05":2,"TR-06":2,"TR-07":1,"TR-08":1,"TR-09":1,"TR-10":0,"TR-11":2,"TR-12":1,"TR-13":1,"TR-14":2,"TR-15":0,"TR-16":2,"TR-17":0,"TR-18":1};
@@ -56,14 +75,20 @@ for(const [id,ans] of Object.entries(facultyAnswers)){
 }
 assert.equal(bank.filter(q=>q.type==="worked"&&q.source==="faculty-practice").length,2,"the two short-answer faculty items must stay worked");
 
+// Follow-up items must remain understandable when sessions shuffle question order.
+const numberedReferences=bank.filter(q=>/\b(?:question|item)\s*(?:#\s*)?\d+\b/i.test(q.stem));
+for(const q of numberedReferences) assert(q.context&&q.context.trim(),"numbered cross-reference must include the referenced stem as context: "+q.id);
+assert.equal(bank.find(q=>q.id==="E13").context,bank.find(q=>q.id==="E12").stem,"E13 must display the full E12 stem before asking its follow-up");
+
 // every question is filed under a class and a unit, so the library can shelve it
-for(const q of bank){ assert.equal(q.course,"OST520","question must carry its course: "+q.id); assert.equal(q.unit,"UE1","question must carry its unit: "+q.id); }
+for(const q of bank){ assert.equal(q.course,"OST520","question must carry its course: "+q.id); assert(["UE1","UE2"].includes(q.unit),"question must carry a known unit: "+q.id); if(/^W3-/.test(q.id))assert.equal(q.unit,"UE2"); else assert.equal(q.unit,"UE1"); }
 assert(html.includes("let BANK = "),"BANK must be reassignable for the library view");
 assert(html.includes("const ALL_QUESTIONS = BANK.slice()"),"full bank must be retained separately from the view");
 assert(html.includes("function applyScope()"),"library scope filter missing");
 assert(html.includes('id="library"'),"library screen missing");
 assert(html.includes('id="shelf"'),"library shelf missing");
 assert(html.includes('id="crumb"'),"breadcrumb missing");
+assert(html.includes('id="unitnav"')&&html.includes('data-unit-tab="UE2"'),"persistent Unit 2 tab missing");
 assert(html.includes('id="views"'),"source filter control missing");
 assert(html.includes("JSON.stringify(ALL_QUESTIONS)")&&html.includes('"-"+ALL_QUESTIONS.length'),"fingerprint must span the whole bank, not the current view");
 assert(html.includes("const IDS = new Set(ALL_QUESTIONS.map(q=>q.id))"),"id validation must span the whole bank");
@@ -72,30 +97,38 @@ assert(html.includes("sessionInView(saved)"),"resume must be limited to sessions
 // library behaviour, exercised through the real boot path
 const SCOPE_KEY="ost520.bank.v2.scope", scoped=v=>boot({[SCOPE_KEY]:JSON.stringify(v)});
 const libBoot=boot();
-assert.equal(vm.runInContext("BANK.length",libBoot.ctx),599,"with no saved scope the whole bank is loaded");
+assert.equal(vm.runInContext("BANK.length",libBoot.ctx),757,"with no saved scope the whole bank is loaded");
 assert.equal(libBoot.els.get("library").hidden,false,"no saved scope must open the library");
-assert.equal(vm.runInContext("IDS.size",libBoot.ctx),599,"id set must span the whole bank regardless of view");
+assert.equal(vm.runInContext("IDS.size",libBoot.ctx),757,"id set must span the whole bank regardless of view");
 const unitBoot=scoped({course:"OST520",unit:"UE1",source:"all"});
 assert.equal(unitBoot.els.get("setup").hidden,false,"a saved unit must open straight into that unit");
-assert.equal(vm.runInContext("BANK.length",unitBoot.ctx),599);
+assert.equal(vm.runInContext("BANK.length",unitBoot.ctx),613);
 assert.equal(vm.runInContext('BANK.filter(q=>q.source==="confusion-lab").length',unitBoot.ctx),24,"Everything view must expose all lab questions");
 const facBoot=scoped({course:"OST520",unit:"UE1",source:"faculty"});
 assert.equal(vm.runInContext("BANK.length",facBoot.ctx),50,"faculty view must show only the faculty practice questions");
 assert(vm.runInContext('BANK.every(q=>q.source==="faculty-practice")',facBoot.ctx),"faculty view leaked a non-faculty question");
 assert.equal(vm.runInContext('BANK.filter(q=>q.source==="confusion-lab").length',facBoot.ctx),0,"faculty view leaked the lab");
 const ownBoot=scoped({course:"OST520",unit:"UE1",source:"bank"});
-assert.equal(vm.runInContext("BANK.length",ownBoot.ctx),549,"bank view must exclude the faculty practice questions");
+assert.equal(vm.runInContext("BANK.length",ownBoot.ctx),563,"bank view must exclude the faculty practice questions");
 assert(vm.runInContext('BANK.every(q=>q.source!=="faculty-practice")',ownBoot.ctx),"bank view leaked a faculty question");
 assert.equal(vm.runInContext('BANK.filter(q=>q.source==="confusion-lab").length',ownBoot.ctx),24,"bank view must expose all lab questions");
-assert.equal(scoped({course:"OST520",unit:"UE2",source:"all"}).els.get("library").hidden,false,"an empty unit must fall back to the library");
+const unit2Boot=scoped({course:"OST520",unit:"UE2",source:"all"});
+assert.equal(unit2Boot.els.get("setup").hidden,false,"a saved UE2 scope must open straight into that unit");
+assert.equal(vm.runInContext("BANK.length",unit2Boot.ctx),144,"UE2 must expose only bank-ready Week 3 questions");
+assert(vm.runInContext('BANK.every(q=>q.unit==="UE2"&&q.source==="week3-bank")',unit2Boot.ctx),"UE2 leaked another unit or source");
+assert.equal(unit2Boot.els.get("unittitle").textContent,"Unit Exam 2","UE2 screen title must not say Unit Exam 1");
+assert.equal(vm.runInContext("dailyCap()",unit2Boot.ctx),22,"UE2 daily cap must honor the 13-22 question strategy");
+assert.equal(vm.runInContext('unitById(courseById("OST520"),"UE2").exam',unit2Boot.ctx),"2026-09-22","UE2 exam date changed");
+assert.deepStrictEqual(Array.from(vm.runInContext('unitById(courseById("OST520"),"UE2").plan[0].blocks',unit2Boot.ctx)),["RR6","L026","L027","L028","L029","LABL3"],"Wednesday launch must contain only Tuesday's six taught blocks");
+assert.equal(vm.runInContext('unitById(courseById("OST520"),"UE2").plan[0].date',unit2Boot.ctx),"2026-09-09","UE2 practice must begin Wednesday");
 assert.equal(scoped({course:"NOPE",unit:"UE1",source:"all"}).els.get("library").hidden,false,"an unknown course must fall back to the library");
 assert.equal(vm.runInContext("BANK_FINGERPRINT",facBoot.ctx),vm.runInContext("BANK_FINGERPRINT",libBoot.ctx),"the view must not change the backup fingerprint");
-assert(html.includes('599-question OST 520 Unit Exam 1 bank with adaptive practice'),"page metadata must describe the current bank");
+assert(html.includes('757-question OST 520 bank for Unit Exams 1 and 2 with adaptive practice'),"page metadata must describe the current bank");
 assert(html.includes('New question-quality release'),"home must explain the current quality release");
 assert(html.includes('label:"Look-Alike Concepts"')&&html.includes('q.source==="confusion-lab"'),"Look-Alike Concepts mode missing");
 assert(html.includes('id="contrastwrap"')&&html.includes("function renderContrast(q,a)"),"contrast table UI missing");
 assert(!html.includes('grounded in Week 1, Week 2, `\n    + `refresher materials, and the faculty problem sets'),"filtered views must not claim excluded faculty provenance");
-for(const phrase of ["Metabolism, glycolysis, sugar entry","Pedigrees, inheritance, DNA/chromosomes","Study design, screening, bias"]){assert(html.includes(phrase),`topic coverage description missing: ${phrase}`);}
+for(const phrase of ["Metabolism, glycolysis, sugar entry","Pedigrees, inheritance, DNA/chromosomes","Study design, screening, bias","Translation, targeting, folding","Connective-tissue structure","Blood cells, hematopoiesis","Infection, microbiota, fungi","Immune organization, communication"]){assert(html.includes(phrase),`topic coverage description missing: ${phrase}`);}
 const weaknessAnswers={"WK-01":2,"WK-02":1,"WK-03":2,"WK-04":1,"WK-05":0,"WK-06":1,"WK-07":1,"WK-08":1,"WK-09":1,"WK-10":0,"WK-11":1,"WK-12":1,"WK-13":1,"WK-14":0,"WK-15":1,"WK-16":1,"WK-17":1,"WK-18":2,"WK-19":2,"WK-20":1,"WK-21":2,"WK-22":1,"WK-23":2,"WK-24":1};
 const weaknessSet=bank.filter(q=>/^WK-/.test(q.id));
 for(const q of weaknessSet){assert.equal(q.answer,weaknessAnswers[q.id],`targeted answer key changed: ${q.id}`);assert(q.rationale.includes("The trap:"),`targeted rationale lacks misconception contrast: ${q.id}`);}

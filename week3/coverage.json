@@ -1,0 +1,402 @@
+[
+  {
+    "group": "metabolism",
+    "block": "L027",
+    "card_file": "L027_protein_translation_cards.json",
+    "objectives": [
+      "O1: Delineate the ribosomal and non-ribosomal components of protein-synthesis machinery and the role of aminoacyl-tRNA synthetase.",
+      "O2: Describe how mRNA code is translated into a protein sequence.",
+      "O3: Identify key prokaryotic-versus-eukaryotic translation differences.",
+      "O4: Recognize how antibiotics inhibit steps of protein synthesis.",
+      "O5: Explain the basis of protein folding.",
+      "O6: Describe synthesis of membrane-bound and secreted proteins, including signal hypothesis components.",
+      "O7: Identify hydroxylation and O- versus N-linked glycosylation mechanisms and functional effects."
+    ],
+    "card_count": 9
+  },
+  {
+    "group": "metabolism",
+    "block": "L028",
+    "card_file": "L028_pentose_phosphate_cards.json",
+    "objectives": [
+      "O1: Define the PPP.",
+      "O2: Explain its purpose and NADPH uses.",
+      "O3: Identify its cellular location.",
+      "O4: Compare its four modes.",
+      "O5: Integrate PPP with glycolysis and gluconeogenesis.",
+      "O6: Explain vitamin-deficiency effects."
+    ],
+    "card_count": 8
+  },
+  {
+    "group": "metabolism",
+    "block": "L029",
+    "card_file": "L029_glycogen_metabolism_cards.json",
+    "objectives": [
+      "O1: Recognize glycogen structure, cellular/tissue storage, and tissues that maintain blood glucose.",
+      "O2: Explain glycogenesis and glycogenolysis purposes.",
+      "O3: Identify cellular locations.",
+      "O4: Explain both pathways.",
+      "O5: Explain timing and reciprocal regulation."
+    ],
+    "card_count": 8
+  },
+  {
+    "group": "metabolism",
+    "block": "RR6",
+    "card_file": "RR6_gluconeogenesis_cards.json",
+    "objectives": [
+      "O1: Define branch-point roles of glucose-6-P, pyruvate, and acetyl-CoA.",
+      "O2: Define gluconeogenesis.",
+      "O3: Explain its purpose, location, and clinical relevance.",
+      "O4: Explain its bypasses and transports.",
+      "O5: Explain regulation and reciprocal control.",
+      "O6: Explain alcohol-associated hypoglycemia."
+    ],
+    "card_count": 8
+  },
+  {
+    "group": "metabolism",
+    "block": "RR7a",
+    "card_file": "RR7a_fatty_acid_oxidation_cards.json",
+    "objectives": [
+      "O1: Define fatty-acid oxidation.",
+      "O2: Explain its purpose and products.",
+      "O3: Identify location/tissues and transport.",
+      "O4: Explain repeated steps and odd-chain conversion.",
+      "O5: Explain regulation.",
+      "O6: Identify clinical dehydrogenase defects."
+    ],
+    "card_count": 8
+  },
+  {
+    "group": "metabolism",
+    "block": "RR7b",
+    "card_file": "RR7b_ketone_body_synthesis_cards.json",
+    "objectives": [
+      "O1: Define ketone-body synthesis.",
+      "O2: Explain purpose and products.",
+      "O3: Identify location/tissue and pathway.",
+      "O4: Explain use by other tissues.",
+      "O5: Explain fasting regulation and integration."
+    ],
+    "card_count": 8
+  },
+  {
+    "group": "metabolism",
+    "block": "RR8",
+    "card_file": "RR8_fatty_acid_synthesis_cards.json",
+    "objectives": [
+      "O1: Define fatty-acid synthesis.",
+      "O2: Explain purpose and essential fatty acids.",
+      "O3: Identify location and export.",
+      "O4: Explain committed/repeated steps.",
+      "O5: Explain regulation.",
+      "O6: Compare FA synthesis and oxidation."
+    ],
+    "card_count": 8
+  },
+  {
+    "group": "histo_blood",
+    "block": "L026 Connective Tissue",
+    "card_file": "L026_connective_tissue_cards.json",
+    "objectives": [
+      [
+        "CT1",
+        "Define extracellular matrix (ECM)."
+      ],
+      [
+        "CT2",
+        "Recognize the structure and characteristics of glycosaminoglycans (GAGs), proteoglycans, and adhesive glycoproteins and identify their common characteristics."
+      ],
+      [
+        "CT3",
+        "Identify structural features of collagen and apply the basis of collagen disorders to predict their consequences."
+      ],
+      [
+        "CT4",
+        "Learn the most common locations, principal protein composition, morphological appearance, and function of elastic fibers and reticular fibers."
+      ],
+      [
+        "CT5",
+        "Understand major cell types of the connective tissue."
+      ]
+    ],
+    "card_count": 8
+  },
+  {
+    "group": "histo_blood",
+    "block": "L031 Blood Cells and Hematopoiesis",
+    "card_file": "L031_blood_cells_hematopoiesis_cards.json",
+    "objectives": [
+      [
+        "BC1",
+        "Discuss blood volume."
+      ],
+      [
+        "BC2",
+        "Describe influences of sex, weight, athletic training, health conditions, and pregnancy on blood volume."
+      ],
+      [
+        "BC3",
+        "Differentiate changes in blood volume during health and disease."
+      ],
+      [
+        "BC4",
+        "List blood components; compare serum to plasma."
+      ],
+      [
+        "BC5",
+        "Describe formed elements."
+      ],
+      [
+        "BC6",
+        "Compare blood-forming tissues at developmental stages."
+      ],
+      [
+        "BC7",
+        "Define elevated/diminished blood-cell terms."
+      ],
+      [
+        "BC8",
+        "Trace blood-cell progenitors during hematopoiesis."
+      ],
+      [
+        "BC9",
+        "Describe erythropoiesis and identify key cells."
+      ],
+      [
+        "BC10",
+        "Describe granulopoiesis and key cells."
+      ],
+      [
+        "BC11",
+        "Review hormones and growth factors supporting blood production."
+      ],
+      [
+        "BC12",
+        "Recognize basic hematologic terms."
+      ]
+    ],
+    "card_count": 8
+  },
+  {
+    "group": "histo_blood",
+    "block": "L033 Hemoglobin and Gas Transport",
+    "card_file": "L033_hemoglobin_gas_transport_cards.json",
+    "objectives": [
+      [
+        "HB1",
+        "Identify components and structural organization of myoglobin and hemoglobin."
+      ],
+      [
+        "HB2",
+        "Explain oxidation states/heme-ligand interactions and MetHb/HbCO clinical problems."
+      ],
+      [
+        "HB3",
+        "Relate allostery, positive cooperativity, saturation curves, P50, and affinity."
+      ],
+      [
+        "HB4",
+        "Predict effects of allosteric effectors and curves."
+      ],
+      [
+        "HB5",
+        "Describe BPG location/effect and physiology."
+      ],
+      [
+        "HB6",
+        "Interpret developmental Hb-chain/affinity curves."
+      ],
+      [
+        "HB7",
+        "Explain bicarbonate buffer, Bohr effect, and isohydric transport."
+      ]
+    ],
+    "card_count": 8
+  },
+  {
+    "group": "histo_blood",
+    "block": "L034 Blood pH Regulation",
+    "card_file": "L034_blood_ph_regulation_cards.json",
+    "objectives": [
+      [
+        "PH1",
+        "Identify H-H components and predict variable changes."
+      ],
+      [
+        "PH2",
+        "Use H-H equation and pKa values to calculate unknown values."
+      ],
+      [
+        "PH3",
+        "Predict pH from dissociated/undissociated weak-acid ratio."
+      ],
+      [
+        "PH4",
+        "Identify blood buffers/contributions and disturbance effects."
+      ],
+      [
+        "PH5",
+        "Apply Henry law and H-H to determine acidemia/alkalemia."
+      ],
+      [
+        "PH6",
+        "Understand respiratory and non-respiratory regulation."
+      ],
+      [
+        "PH7",
+        "Distinguish correction from compensation and predict compensation."
+      ],
+      [
+        "PH8",
+        "Calculate anion gap and its diagnostic value."
+      ]
+    ],
+    "card_count": 8
+  },
+  {
+    "group": "histo_blood",
+    "block": "LABL3 Histology Lab L3: Connective Tissue Proper",
+    "card_file": "LABL3_connective_tissue_proper_lab_cards.json",
+    "objectives": [
+      [
+        "LAB1",
+        "Identify connective tissue and types by histologic appearance."
+      ],
+      [
+        "LAB2",
+        "Relate function to fiber type, density, orientation, and cellular constituents."
+      ],
+      [
+        "LAB3",
+        "Identify locations and functions of specific CT types."
+      ],
+      [
+        "LAB4",
+        "Identify ground substance and describe composition/function."
+      ],
+      [
+        "LAB5",
+        "Identify extracellular fibers and which require special stain for LM."
+      ],
+      [
+        "LAB6",
+        "Identify resident and wandering cells and primary functions."
+      ],
+      [
+        "LAB7",
+        "Define stroma and lamina propria."
+      ],
+      [
+        "LAB8",
+        "Identify embryonic mesenchyme and its features."
+      ]
+    ],
+    "card_count": 8
+  },
+  {
+    "group": "micro_immune",
+    "block": "L030.1 Introduction to Infection",
+    "card_file": "L030_1_intro_infection_cards.json",
+    "objectives": [
+      "L0301-O1",
+      "L0301-O2",
+      "L0301-O3"
+    ],
+    "card_count": 12
+  },
+  {
+    "group": "micro_immune",
+    "block": "L030.2 Normal Microbiota",
+    "card_file": "L030_2_normal_microbiota_cards.json",
+    "objectives": [
+      "L0302-O1",
+      "L0302-O2",
+      "L0302-O3",
+      "L0302-O4"
+    ],
+    "card_count": 10
+  },
+  {
+    "group": "micro_immune",
+    "block": "L032 Fungal Pathogens",
+    "card_file": "L032_fungal_pathogens_cards.json",
+    "objectives": [
+      "L032-O1",
+      "L032-O2",
+      "L032-O3",
+      "L032-O4",
+      "L032-O5",
+      "L032-O6",
+      "L032-O7"
+    ],
+    "card_count": 13
+  },
+  {
+    "group": "micro_immune",
+    "block": "L035 Bacterial Structure",
+    "card_file": "L035_bacterial_structure_cards.json",
+    "objectives": [
+      "L035-O1",
+      "L035-O2",
+      "L035-O3"
+    ],
+    "card_count": 12
+  },
+  {
+    "group": "micro_immune",
+    "block": "L036 Introduction to Viruses",
+    "card_file": "L036_intro_viruses_cards.json",
+    "objectives": [
+      "L036-O1",
+      "L036-O2",
+      "L036-O3",
+      "L036-O4"
+    ],
+    "card_count": 10
+  },
+  {
+    "group": "micro_immune",
+    "block": "L037 Parasitology",
+    "card_file": "L037_parasitology_cards.json",
+    "objectives": [
+      "L037-O1",
+      "L037-O2",
+      "L037-O3",
+      "L037-O4"
+    ],
+    "card_count": 10
+  },
+  {
+    "group": "micro_immune",
+    "block": "L038/039 Introduction to Immunology I and II",
+    "card_file": "L038_039_intro_immunology_cards.json",
+    "objectives": [
+      "L038039-O1",
+      "L038039-O2",
+      "L038039-O3",
+      "L038039-O4",
+      "L038039-O5",
+      "L038039-O6"
+    ],
+    "card_count": 10
+  },
+  {
+    "group": "micro_immune",
+    "block": "L040/041 Innate Immunology I and II",
+    "card_file": "L040_041_innate_immunology_cards.json",
+    "objectives": [
+      "L040041-O1",
+      "L040041-O2",
+      "L040041-O3",
+      "L040041-O4",
+      "L040041-O5",
+      "L040041-O6",
+      "L040041-O7",
+      "L040041-O8"
+    ],
+    "card_count": 16
+  }
+]
