@@ -127,6 +127,7 @@ vm.runInContext('const RealDate=Date;Date=class extends RealDate{constructor(...
 const wedAdaptive=vm.runInContext("adaptivePrescription()",wedBoot.ctx);
 assert.equal(wedAdaptive.questions.length,22,"Wednesday adaptive set must honor the UE2 cap");
 assert(vm.runInContext("adaptivePrescription().questions.every(q=>questionTaughtBy(q,todayISO()))",wedBoot.ctx),"Wednesday adaptive set leaked untaught blocks");
+assert(vm.runInContext('adaptivePrescription().questions.every(q=>["RR6","L026","L027","L028","L029","LABL3"].includes(q.sourceBlock))',wedBoot.ctx),"Wednesday adaptive set must be restricted to Tuesday's six blocks");
 assert(vm.runInContext('todaysPlan().blocks.join(",")',wedBoot.ctx)==="RR6,L026,L027,L028,L029,LABL3","Wednesday plan routing changed");
 const cumulativeBoot=scoped({course:"OST520",unit:"UE2",source:"all"});
 vm.runInContext('const RealDate=Date;Date=class extends RealDate{constructor(...args){super(...(args.length?args:["2026-09-13T12:00:00-04:00"]))}static now(){return new RealDate("2026-09-13T12:00:00-04:00").getTime()}}',cumulativeBoot.ctx);
