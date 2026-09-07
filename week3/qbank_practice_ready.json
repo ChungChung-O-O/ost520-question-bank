@@ -5,7 +5,7 @@
     "src": "N",
     "stem": "Which enzyme directly attaches an amino acid to its cognate tRNA?",
     "options": [
-      "Peptidyl transferase",
+      "Ribosomal peptidyl transferase",
       "Release factor",
       "Signal peptidase",
       "Transketolase",
@@ -17,7 +17,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O1"
+      "L027-O1"
     ],
     "covers": [
       "O1"
@@ -54,8 +54,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O1",
-      "O2"
+      "L027-O1",
+      "L027-O2"
     ],
     "covers": [
       "O1",
@@ -93,8 +93,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O2",
-      "O3"
+      "L027-O2",
+      "L027-O3"
     ],
     "covers": [
       "O2",
@@ -132,7 +132,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O3"
+      "L027-O3"
     ],
     "covers": [
       "O3"
@@ -169,7 +169,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O4"
+      "L027-O4"
     ],
     "covers": [
       "O4"
@@ -206,7 +206,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O6"
+      "L027-O6"
     ],
     "covers": [
       "O6"
@@ -243,7 +243,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O6"
+      "L027-O6"
     ],
     "covers": [
       "O6"
@@ -280,7 +280,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O7"
+      "L027-O7"
     ],
     "covers": [
       "O7"
@@ -317,7 +317,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O3"
+      "L028-O3"
     ],
     "covers": [
       "O3"
@@ -354,8 +354,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O1",
-      "O2"
+      "L028-O1",
+      "L028-O2"
     ],
     "covers": [
       "O1",
@@ -393,8 +393,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O5",
-      "O6"
+      "L028-O5",
+      "L028-O6"
     ],
     "covers": [
       "O5",
@@ -432,7 +432,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O2"
+      "L028-O2"
     ],
     "covers": [
       "O2"
@@ -469,7 +469,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O2"
+      "L028-O2"
     ],
     "covers": [
       "O2"
@@ -506,7 +506,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O4"
+      "L028-O4"
     ],
     "covers": [
       "O4"
@@ -543,8 +543,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O4",
-      "O5"
+      "L028-O4",
+      "L028-O5"
     ],
     "covers": [
       "O4",
@@ -582,7 +582,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O6"
+      "L028-O6"
     ],
     "covers": [
       "O6"
@@ -609,7 +609,7 @@
     "options": [
       "Glucose-6-phosphatase",
       "Glycogen synthase",
-      "Branching enzyme",
+      "Glycogen branching enzyme",
       "Debranching enzyme",
       "Phosphoglucomutase"
     ],
@@ -619,8 +619,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O1",
-      "O2"
+      "L029-O1",
+      "L029-O2"
     ],
     "covers": [
       "O1",
@@ -635,7 +635,7 @@
     "mediaNote": "",
     "closestDistractor": {
       "index": 2,
-      "why_wrong": "Branching enzyme creates \u03b1-1,6 linkages but cannot remove the phosphate from G6P to release blood glucose."
+      "why_wrong": "Glycogen branching enzyme creates \u03b1-1,6 linkages but cannot remove the phosphate from G6P to release blood glucose."
     },
     "holdout": false,
     "n": 160
@@ -658,7 +658,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O1"
+      "L029-O1"
     ],
     "covers": [
       "O1"
@@ -695,7 +695,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O4"
+      "L029-O4"
     ],
     "covers": [
       "O4"
@@ -732,7 +732,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O5"
+      "L029-O5"
     ],
     "covers": [
       "O5"
@@ -769,8 +769,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O2",
-      "O5"
+      "L029-O2",
+      "L029-O5"
     ],
     "covers": [
       "O2",
@@ -808,7 +808,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O4"
+      "L029-O4"
     ],
     "covers": [
       "O4"
@@ -845,8 +845,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O2",
-      "O5"
+      "L029-O2",
+      "L029-O5"
     ],
     "covers": [
       "O2",
@@ -884,9 +884,9 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O1",
-      "O2",
-      "O3"
+      "L029-O1",
+      "L029-O2",
+      "L029-O3"
     ],
     "covers": [
       "O1",
@@ -925,7 +925,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O4"
+      "RR6-O4"
     ],
     "covers": [
       "O4"
@@ -962,8 +962,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O1",
-      "O5"
+      "RR6-O1",
+      "RR6-O5"
     ],
     "covers": [
       "O1",
@@ -1001,7 +1001,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O4"
+      "RR6-O4"
     ],
     "covers": [
       "O4"
@@ -1038,8 +1038,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O3",
-      "O4"
+      "RR6-O3",
+      "RR6-O4"
     ],
     "covers": [
       "O3",
@@ -1077,7 +1077,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O6"
+      "RR6-O6"
     ],
     "covers": [
       "O6"
@@ -1114,8 +1114,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O3",
-      "O4"
+      "RR6-O3",
+      "RR6-O4"
     ],
     "covers": [
       "O3",
@@ -1153,7 +1153,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O5"
+      "RR6-O5"
     ],
     "covers": [
       "O5"
@@ -1190,8 +1190,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O2",
-      "O3"
+      "RR6-O2",
+      "RR6-O3"
     ],
     "covers": [
       "O2",
@@ -1229,7 +1229,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O5"
+      "RR7a-O5"
     ],
     "covers": [
       "O5"
@@ -1266,7 +1266,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O3"
+      "RR7a-O3"
     ],
     "covers": [
       "O3"
@@ -1303,8 +1303,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O2",
-      "O4"
+      "RR7a-O2",
+      "RR7a-O4"
     ],
     "covers": [
       "O2",
@@ -1334,16 +1334,16 @@
       "Glycogen branching",
       "Ketone utilization by brain",
       "Glucose export",
-      "Mitochondrial fatty-acyl-CoA entry"
+      "Mitochondrial acyl import"
     ],
     "answer": 4,
-    "rationale": "Carnitine defects block mitochondrial import of long-chain acyl-CoA.",
+    "rationale": "Carnitine defects block mitochondrial import of long-chain acyl groups.",
     "type": "mcq",
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O3",
-      "O6"
+      "RR7a-O3",
+      "RR7a-O6"
     ],
     "covers": [
       "O3",
@@ -1358,7 +1358,7 @@
     "mediaNote": "",
     "closestDistractor": {
       "index": 1,
-      "why_wrong": "Glycogen branching does not control mitochondrial long-chain acyl-CoA import through the carnitine system."
+      "why_wrong": "Glycogen branching does not control mitochondrial long-chain acyl-group import through the carnitine system."
     },
     "holdout": false,
     "n": 179
@@ -1381,8 +1381,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O2",
-      "O6"
+      "RR7a-O2",
+      "RR7a-O6"
     ],
     "covers": [
       "O2",
@@ -1420,7 +1420,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O4"
+      "RR7a-O4"
     ],
     "covers": [
       "O4"
@@ -1457,7 +1457,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O4"
+      "RR7a-O4"
     ],
     "covers": [
       "O4"
@@ -1494,7 +1494,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O5"
+      "RR7a-O5"
     ],
     "covers": [
       "O5"
@@ -1531,8 +1531,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O3",
-      "O1"
+      "RR7b-O3",
+      "RR7b-O1"
     ],
     "covers": [
       "O3",
@@ -1570,7 +1570,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O5"
+      "RR7b-O5"
     ],
     "covers": [
       "O5"
@@ -1607,8 +1607,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O2",
-      "O3"
+      "RR7b-O2",
+      "RR7b-O3"
     ],
     "covers": [
       "O2",
@@ -1646,8 +1646,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O3",
-      "O5"
+      "RR7b-O3",
+      "RR7b-O5"
     ],
     "covers": [
       "O3",
@@ -1685,8 +1685,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O2",
-      "O4"
+      "RR7b-O2",
+      "RR7b-O4"
     ],
     "covers": [
       "O2",
@@ -1724,8 +1724,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O3",
-      "O5"
+      "RR7b-O3",
+      "RR7b-O5"
     ],
     "covers": [
       "O3",
@@ -1763,8 +1763,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O2",
-      "O5"
+      "RR7b-O2",
+      "RR7b-O5"
     ],
     "covers": [
       "O2",
@@ -1802,7 +1802,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O5"
+      "RR7b-O5"
     ],
     "covers": [
       "O5"
@@ -1839,7 +1839,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O4"
+      "RR8-O4"
     ],
     "covers": [
       "O4"
@@ -1876,8 +1876,8 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O3",
-      "O4"
+      "RR8-O3",
+      "RR8-O4"
     ],
     "covers": [
       "O3",
@@ -1915,7 +1915,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O4"
+      "RR8-O4"
     ],
     "covers": [
       "O4"
@@ -1952,7 +1952,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O4"
+      "RR8-O4"
     ],
     "covers": [
       "O4"
@@ -1989,7 +1989,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O5"
+      "RR8-O5"
     ],
     "covers": [
       "O5"
@@ -2026,7 +2026,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O5"
+      "RR8-O5"
     ],
     "covers": [
       "O5"
@@ -2063,7 +2063,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O2"
+      "RR8-O2"
     ],
     "covers": [
       "O2"
@@ -2100,7 +2100,7 @@
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "O4"
+      "RR8-O4"
     ],
     "covers": [
       "O4"

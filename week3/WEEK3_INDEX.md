@@ -10,7 +10,7 @@
 **Reserved holdouts:** 40  
 **Media-gated holdouts:** 0
 
-The daily Week 3 loop replaces the adaptive 40 when used. Holdout items are excluded from ordinary practice until their first cumulative use. Media-gated items stay outside the live bank until the referenced source image is attached without answer-revealing labels.
+The daily Week 3 loop and adaptive prescription share one 13-22 question budget. Holdout items are excluded from ordinary practice until their first cumulative use. Media-gated items stay outside the live bank until the referenced source image is attached without answer-revealing labels.
 
 ## Guides
 

@@ -29,6 +29,7 @@ assert(week3.every(q=>q.options.length===5&&new Set(q.options).size===5&&q.requi
 assert(week3.every(q=>q.sourceRef&&q.closestDistractor&&q.closestDistractor.index!==q.answer),"Week 3 grounding or distractor metadata missing");
 const week3Blocks=new Set(["RR6","L026","L027","L028","L029","LABL3","RR7a","RR7b","RR8","L030.1","L030.2","L031","L032","L033","L034","L035","L036","L037","L038/039","L040/041"]);
 assert(week3.every(q=>week3Blocks.has(q.sourceBlock)),"Week 3 sourceBlock is missing or outside the 20-block syllabus map");
+assert(week3.every(q=>(q.concepts||[]).every(c=>!/^O\d+$/.test(c))),"Week 3 objective concepts must be namespaced by source block");
 assert.deepStrictEqual(new Set(week3.map(q=>q.applicationLevel)),new Set(["recall","mechanism","presentation","discrimination"]),"Week 3 application-level mix changed");
 assert(week3.every(q=>!/(?:does not match the course-supported mechanism|does not explain the decisive clue)/i.test(q.closestDistractor.why_wrong)),"Week 3 closest-distractor explanation regressed to a generic placeholder");
 const week3ById=Object.fromEntries(week3.map(q=>[q.id,q]));
@@ -121,6 +122,15 @@ assert.equal(vm.runInContext("dailyCap()",unit2Boot.ctx),22,"UE2 daily cap must 
 assert.equal(vm.runInContext('unitById(courseById("OST520"),"UE2").exam',unit2Boot.ctx),"2026-09-22","UE2 exam date changed");
 assert.deepStrictEqual(Array.from(vm.runInContext('unitById(courseById("OST520"),"UE2").plan[0].blocks',unit2Boot.ctx)),["RR6","L026","L027","L028","L029","LABL3"],"Wednesday launch must contain only Tuesday's six taught blocks");
 assert.equal(vm.runInContext('unitById(courseById("OST520"),"UE2").plan[0].date',unit2Boot.ctx),"2026-09-09","UE2 practice must begin Wednesday");
+const wedBoot=scoped({course:"OST520",unit:"UE2",source:"all"});
+vm.runInContext('const RealDate=Date;Date=class extends RealDate{constructor(...args){super(...(args.length?args:["2026-09-09T12:00:00-04:00"]))}static now(){return new RealDate("2026-09-09T12:00:00-04:00").getTime()}}',wedBoot.ctx);
+const wedAdaptive=vm.runInContext("adaptivePrescription()",wedBoot.ctx);
+assert.equal(wedAdaptive.questions.length,22,"Wednesday adaptive set must honor the UE2 cap");
+assert(vm.runInContext("adaptivePrescription().questions.every(q=>questionTaughtBy(q,todayISO()))",wedBoot.ctx),"Wednesday adaptive set leaked untaught blocks");
+assert(vm.runInContext('todaysPlan().blocks.join(",")',wedBoot.ctx)==="RR6,L026,L027,L028,L029,LABL3","Wednesday plan routing changed");
+const cumulativeBoot=scoped({course:"OST520",unit:"UE2",source:"all"});
+vm.runInContext('const RealDate=Date;Date=class extends RealDate{constructor(...args){super(...(args.length?args:["2026-09-13T12:00:00-04:00"]))}static now(){return new RealDate("2026-09-13T12:00:00-04:00").getTime()}}',cumulativeBoot.ctx);
+assert.match(vm.runInContext("todaysPlan().note",cumulativeBoot.ctx),/^cumulative review/,"pre-exam fallback was mislabeled post-exam");
 assert.equal(scoped({course:"NOPE",unit:"UE1",source:"all"}).els.get("library").hidden,false,"an unknown course must fall back to the library");
 assert.equal(vm.runInContext("BANK_FINGERPRINT",facBoot.ctx),vm.runInContext("BANK_FINGERPRINT",libBoot.ctx),"the view must not change the backup fingerprint");
 assert(html.includes('757-question OST 520 bank for Unit Exams 1 and 2 with adaptive practice'),"page metadata must describe the current bank");
@@ -164,7 +174,7 @@ assert(!html.includes("if(pendingBackup.theme)"),"restore must not dereference a
 assert(html.includes("fallback && untried ? q=>!H[q.id] : fallback ? ()=>true"),"post-plan fallback must use the full bank after unseen questions are exhausted");
 assert(html.includes('id="opendiag" type="button">'),"diagnosis must remain discoverable with empty history");
 assert(html.includes("function parseLegacyResults"),"legacy artifact transfer parser missing");
-assert(html.includes("Today&rsquo;s adaptive 40"),"adaptive prescription entry point missing");assert(html.includes("lastConfidence"),"confidence migration missing");assert(html.includes("timezoneOffsetMinutes"),"timezone-aware timeline missing");assert(html.includes("questionReports"),"question report storage missing");
+assert(html.includes("Today&rsquo;s adaptive ${dailyCap()}"),"adaptive prescription entry point must display the active unit cap");assert(html.includes("lastConfidence"),"confidence migration missing");assert(html.includes("timezoneOffsetMinutes"),"timezone-aware timeline missing");assert(html.includes("questionReports"),"question report storage missing");
 assert(html.includes('a.pick!=null && !!(a.confidence || ("guessed" in a'),"new MCQ attempts must explicitly record confidence");
 assert(html.includes('guessed:c!=="knew"}; renderQ(); sync();'),"confidence changes must immediately enable the Check button");
 function boot(storage={}){const source=html.slice(html.indexOf("<script>")+8,html.lastIndexOf("</script>")),els=new Map(),el=()=>({hidden:false,style:{},classList:{add(){}},setAttribute(){},appendChild(){},textContent:"",innerHTML:"",click(){},querySelectorAll(){return[]}}),document={getElementById:id=>{if(!els.has(id))els.set(id,el());return els.get(id)},createElement:el,querySelectorAll(){return[]},addEventListener(){},documentElement:{setAttribute(){},removeAttribute(){},getAttribute(){return null}}},data=new Map(Object.entries(storage)),localStorage={getItem:k=>data.get(k)||null,setItem:(k,v)=>data.set(k,String(v)),removeItem:k=>data.delete(k)},alerts=[],ctx=vm.createContext({document,localStorage,window:{scrollTo(){}},console,Date,JSON,Math,Set,Map,Array,Object,Number,String,Boolean,RegExp,Error,Blob:function(){},URL:{createObjectURL(){return ""},revokeObjectURL(){}},FileReader:function(){},navigator:{},alert:m=>alerts.push(String(m)),setTimeout(){}});vm.runInContext(source,ctx);return{ctx,data,els,alerts};}
