@@ -2,7 +2,7 @@
 
 Self-contained, 765-question practice bank for OST 520 Unit Exams 1 and 2. It combines
 adaptive daily sets, browser-local performance diagnosis, weak-concept retesting,
-worked rationales, a Look-Alike Concepts lab, confidence tracking, and lossless backup/restore. Previously a
+worked rationales, choice-by-choice Unit 2 explanations, a Look-Alike Concepts lab, confidence tracking, and lossless backup/restore. Previously a
 Claude Artifact, it is now a plain static site that any browser can reach by URL.
 
 The site is organised as a library: **Question Bank &rarr; class &rarr; unit**. OST 520 is
@@ -153,6 +153,7 @@ Each element is one question:
   "src": "B",
   "stem": "A patient's cells are producing large amounts of NADPH...",
   "options": ["Catabolic, oxidative", "Anabolic, reductive", "..."],
+  "optionExplanations": ["Incorrect because...", "Correct because...", "..."],
   "answer": 1,
   "rationale": "NADPH is the reducing power of <strong>anabolic</strong> pathways...",
   "type": "mcq",
@@ -170,6 +171,7 @@ Each element is one question:
 | `n` | Position within its topic. |
 | `answer` | Zero-based index into `options`. `null` for worked problems. |
 | `options` | Empty array `[]` for worked problems — those are answered from the rationale. |
+| `optionExplanations` | Optional on MCQs. When present, it contains one non-empty explanation per original `options` entry. The app reveals these only after the answer is checked and keeps them aligned when choices are shuffled. |
 | `rationale` | Contains inline HTML (`<strong>`, entities like `₂`). Strip tags if you need plain text. |
 | `context` | Shared vignette or data table, present on 28 questions. Empty string otherwise. |
 | `concepts` | Kebab-case concept slugs, for grouping misses by idea rather than by question. |
@@ -183,7 +185,8 @@ Each element is one question:
 | `contrast` | On `DL-*`: explicit term, meaning, and fit/fail text used by the contrast table. |
 
 Options are shuffled at runtime in the app, so `answer` refers to the order in this
-file, not to what a given viewer sees on screen.
+file, not to what a given viewer sees on screen. `optionExplanations` uses that same
+original order; it must never be pre-shuffled or keyed to the displayed A–E labels.
 
 ## Progress, privacy, and recovery
 

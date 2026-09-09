@@ -17618,6 +17618,13 @@
       "Recognition of a stop codon by a release factor",
       "EF-2-dependent ribosomal translocation along mRNA"
     ],
+    "optionExplanations": [
+      "Aminoacyl-tRNA synthetases charge tRNAs before ribosomal elongation and do not require EF-2.",
+      "Initiator-tRNA placement occurs during initiation, before the peptide-bond event specified in the stem.",
+      "Large-subunit rRNA catalyzes peptide-bond formation; EF-2 acts in the next elongation step.",
+      "Release factors recognize stop codons during termination, not during the post-peptide-bond elongation step.",
+      "EF-2 uses GTP to translocate the ribosome after peptide-bond formation, so its inactivation blocks this movement."
+    ],
     "answer": 4,
     "rationale": "EF-2 drives ribosomal translocation during eukaryotic elongation. Diphtheria toxin inactivates EF-2, so the ribosome cannot move along the mRNA after peptide-bond formation. The trap: peptide-bond formation precedes translocation and is catalyzed by the ribosome, not EF-2.",
     "type": "mcq",
@@ -17654,6 +17661,13 @@
       "Methionine",
       "Alanine",
       "A stop signal"
+    ],
+    "optionExplanations": [
+      "The codon normally specifies threonine, but the ribosome cannot verify the amino acid attached to the matching tRNA.",
+      "A mischarged tRNA can still enter the ribosome when its anticodon matches, so incorporation does not stop.",
+      "Methionine is incorporated only when a methionine-charged tRNA is accepted; the described tRNA carries alanine.",
+      "The ribosome accepts the matching anticodon and transfers the amino acid actually attached, which is alanine.",
+      "A stop signal requires a stop codon and release factor; an aminoacyl-tRNA with a matching anticodon instead adds its cargo."
     ],
     "answer": 3,
     "rationale": "The ribosome checks codon-anticodon pairing, not whether the attached amino acid is correct.",
@@ -17694,6 +17708,13 @@
       "Aminoacyl-tRNA charging",
       "Stop-codon recognition"
     ],
+    "optionExplanations": [
+      "Peptidyl transferase acts after initiation and is not the function of the upstream ribosomal recognition sequence.",
+      "Termination-factor binding occurs at a stop codon, not at the bacterial initiation-recognition site.",
+      "Base pairing between the bacterial recognition site and 16S rRNA positions the ribosome to select the initiation AUG.",
+      "Aminoacyl-tRNA synthetases charge tRNAs independently of where a ribosome initiates on this mRNA.",
+      "Stop-codon recognition occurs during termination and does not depend on the upstream initiation-recognition site."
+    ],
     "answer": 2,
     "rationale": "Bacterial initiation uses RRS base pairing with 16S rRNA to position the ribosome.",
     "type": "mcq",
@@ -17733,6 +17754,13 @@
       "Loss of tRNA charging",
       "Conversion to polycistronic translation"
     ],
+    "optionExplanations": [
+      "The eukaryotic 5-prime cap recruits initiation machinery and supports 40S scanning to the start codon.",
+      "The 30S subunit is bacterial; eukaryotic cap-dependent initiation uses the 40S subunit.",
+      "Peptide release is governed by stop codons and release factors after elongation, not by the 5-prime cap.",
+      "Aminoacyl-tRNA synthetases charge tRNAs separately from cap-dependent mRNA recruitment.",
+      "Loss of a cap reduces eukaryotic initiation; it does not convert one mRNA into a bacterial-style polycistronic transcript."
+    ],
     "answer": 0,
     "rationale": "The 5′ cap recruits the 40S subunit for scanning.",
     "type": "mcq",
@@ -17769,6 +17797,13 @@
       "Tetracycline at 30S",
       "Puromycin termination",
       "Cycloheximide at 60S"
+    ],
+    "optionExplanations": [
+      "Erythromycin inhibits bacterial translocation on the 50S subunit rather than initial aminoacyl-tRNA entry into the A site.",
+      "Chloramphenicol inhibits 50S peptidyl transferase, so its blocked event is peptide-bond formation.",
+      "Tetracycline binds the bacterial 30S subunit and prevents incoming aminoacyl-tRNA from occupying the A site.",
+      "Puromycin mimics an aminoacyl-tRNA and causes premature chain termination instead of preventing A-site binding.",
+      "Cycloheximide inhibits eukaryotic 60S elongation, whereas the stem asks about a bacterial A-site inhibitor."
     ],
     "answer": 2,
     "rationale": "The course identifies tetracycline as blocking aminoacyl-tRNA binding to 30S.",
@@ -17807,6 +17842,13 @@
       "Plasma-membrane exterior",
       "Mitochondrial matrix"
     ],
+    "optionExplanations": [
+      "Without SRP binding, the ribosome is not delivered to rough ER, so the protein cannot enter the ER lumen.",
+      "Failure of SRP recognition leaves translation on free ribosomes and the protein in the cytosol.",
+      "Golgi entry requires prior rough-ER targeting and vesicular transport, both unavailable after failed SRP binding.",
+      "A secreted protein reaches the extracellular surface only through ER and Golgi trafficking, which failed at the first targeting step.",
+      "A secretory signal peptide targets rough ER, not mitochondria; mitochondrial import uses different targeting information."
+    ],
     "answer": 1,
     "rationale": "SRP docking is required for co-translational targeting to rough ER.",
     "type": "mcq",
@@ -17843,6 +17885,13 @@
       "N-linked core addition",
       "Ribosome assembly",
       "A membrane-spanning domain"
+    ],
+    "optionExplanations": [
+      "A stop-transfer sequence affects protein topology, not the 5-prime cap on the encoding mRNA.",
+      "Aminoacyl-tRNA binding is a general elongation event and does not create a membrane-spanning segment.",
+      "N-linked core glycosylation occurs in the ER lumen but is not the anchoring function of a stop-transfer sequence.",
+      "Ribosome assembly is independent of the hydrophobic sequence that halts polypeptide translocation.",
+      "A hydrophobic stop-transfer sequence exits laterally into the membrane and becomes a transmembrane domain."
     ],
     "answer": 4,
     "rationale": "The hydrophobic stop-transfer sequence halts translocation and leaves a transmembrane domain.",
@@ -17881,6 +17930,13 @@
       "Ribosomal scanning",
       "O-linked Golgi transfer"
     ],
+    "optionExplanations": [
+      "Vitamin C supports proline and lysine hydroxylation needed to stabilize collagen, so deficiency impairs this modification.",
+      "N-linked glycosylation begins in rough ER and is not the vitamin C-dependent cause of scurvy.",
+      "Peptide termination uses release factors and is unrelated to collagen instability in vitamin C deficiency.",
+      "Ribosomal scanning is a cap-dependent initiation event, not a collagen post-translational modification.",
+      "O-linked glycosylation occurs in Golgi but does not explain the vitamin C-dependent collagen defect."
+    ],
     "answer": 0,
     "rationale": "Vitamin C-dependent prolyl/lysyl hydroxylation stabilizes collagen triple helices.",
     "type": "mcq",
@@ -17918,6 +17974,13 @@
       "Nucleus",
       "Golgi"
     ],
+    "optionExplanations": [
+      "Both oxidative and nonoxidative pentose phosphate reactions occur in the cytosol.",
+      "The mitochondrial matrix contains pathways such as the TCA cycle, not the pentose phosphate pathway.",
+      "The ER lumen performs protein and lipid processing rather than cytosolic glucose-6-phosphate oxidation.",
+      "The nucleus houses DNA transactions; it is not the compartment for the pentose phosphate pathway.",
+      "The Golgi modifies and sorts macromolecules but does not contain the pentose phosphate pathway."
+    ],
     "answer": 0,
     "rationale": "The lecture states that PPP occurs in the cytosol of every cell.",
     "type": "mcq",
@@ -17954,6 +18017,13 @@
       "Acetyl-CoA",
       "NADPH",
       "Ribose only"
+    ],
+    "optionExplanations": [
+      "The PPP is not an ATP-producing pathway, so G6PD loss primarily affects reducing power rather than ATP output.",
+      "G6PD transfers electrons to NADP+, not FAD, so it does not directly generate FADH2.",
+      "Acetyl-CoA is produced by pathways such as pyruvate oxidation and beta-oxidation, not by G6PD.",
+      "G6PD catalyzes the first oxidative PPP step that reduces NADP+ to NADPH.",
+      "The oxidative PPP can contribute pentose, but the most direct product lost at the G6PD reaction is NADPH, not ribose alone."
     ],
     "answer": 3,
     "rationale": "G6PD is the first oxidative PPP enzyme and makes NADPH.",
@@ -17994,6 +18064,13 @@
       "Use the oxidative phase for NADPH, then use transketolase and transaldolase to return all pentoses to glycolysis",
       "Repeatedly recycle pentoses to glucose-6-phosphate so the oxidative phase makes NADPH without retaining ribose-5-phosphate"
     ],
+    "optionExplanations": [
+      "Running the nonoxidative phase backward requires transketolase, which is absent in severe thiamine deficiency.",
+      "This plan also depends on transketolase to rearrange pentoses, so it cannot operate under the stated enzyme loss.",
+      "Mode 1 uses oxidative PPP for NADPH and phosphopentose isomerase for ribose-5-phosphate without needing transketolase.",
+      "Returning pentoses to glycolysis requires transketolase as well as transaldolase, so this route is blocked.",
+      "Repeated pentose recycling depends on nonoxidative transketolase reactions and also sacrifices the retained ribose the cell needs."
+    ],
     "answer": 2,
     "rationale": "Mode 1 supplies both products without transketolase: the oxidative phase makes NADPH and ribulose-5-phosphate, then phosphopentose isomerase makes ribose-5-phosphate. The trap: Modes 2-4 require nonoxidative rearrangements that rely on transketolase, which requires thiamine pyrophosphate.",
     "type": "mcq",
@@ -18033,6 +18110,13 @@
       "Hexokinase",
       "G6PD"
     ],
+    "optionExplanations": [
+      "PFK-1 regulates glycolysis but does not produce NADPH for glutathione reduction.",
+      "Pyruvate kinase loss lowers glycolytic ATP but cannot explain failure to maintain reduced glutathione during oxidant stress.",
+      "Transaldolase participates in nonoxidative carbon rearrangement, not the oxidative production of NADPH.",
+      "Hexokinase supplies glucose-6-phosphate but does not itself reduce NADP+ or regenerate glutathione.",
+      "G6PD supplies RBC NADPH, which glutathione reductase needs to maintain protective reduced glutathione."
+    ],
     "answer": 4,
     "rationale": "RBC NADPH from PPP is needed to regenerate GSH during oxidant challenge.",
     "type": "mcq",
@@ -18069,6 +18153,13 @@
       "Superoxide",
       "Fructose-6-P",
       "Nitric oxide only"
+    ],
+    "optionExplanations": [
+      "Reduced glutathione uses NADPH for antioxidant defense but is not the first reactive oxygen product of respiratory burst.",
+      "Ribose-5-phosphate supports nucleotide synthesis and is not generated by phagocyte NADPH oxidase.",
+      "NADPH oxidase transfers electrons to oxygen to form superoxide, initiating respiratory burst.",
+      "Fructose-6-phosphate is a glycolytic/nonoxidative-PPP intermediate, not an antimicrobial oxidant.",
+      "Nitric oxide can be NADPH-dependent, but respiratory burst specifically begins with NADPH-oxidase production of superoxide."
     ],
     "answer": 2,
     "rationale": "NADPH and O2 generate superoxide, initiating the respiratory burst.",
@@ -18107,6 +18198,13 @@
       "Lactate and pyruvate",
       "Glucose and glycogen"
     ],
+    "optionExplanations": [
+      "NADPH supplies reducing power and ribose-5-phosphate supplies the sugar backbone for nucleotide synthesis.",
+      "ATP and NADH provide energy and catabolic reducing equivalents but not the required ribose precursor and anabolic NADPH.",
+      "FADH2 and acetyl-CoA feed energy metabolism; neither supplies ribose-5-phosphate for nucleotides.",
+      "Lactate and pyruvate are glycolytic metabolites and do not pair nucleotide precursor with reducing power.",
+      "Glucose and glycogen are carbohydrate fuel/storage forms, not the two specialized PPP outputs requested."
+    ],
     "answer": 0,
     "rationale": "Mode 1 produces both NADPH and ribose-5-P.",
     "type": "mcq",
@@ -18143,6 +18241,13 @@
       "They enter the mitochondrial TCA cycle directly without conversion through glycolytic intermediates",
       "They become glycogen",
       "They become acetyl-CoA"
+    ],
+    "optionExplanations": [
+      "Nonoxidative PPP converts unused pentoses to fructose-6-phosphate and glyceraldehyde-3-phosphate, which enter glycolysis for ATP.",
+      "Retaining ribose would not meet the RBC's stated ATP need when nucleotide synthesis is unnecessary.",
+      "Pentoses cannot enter the mitochondrial TCA cycle directly and RBCs lack mitochondria; they first become glycolytic intermediates.",
+      "RBCs do not store meaningful glycogen, and converting pentoses to glycogen would not directly supply ATP.",
+      "Acetyl-CoA production requires pyruvate oxidation in mitochondria, which RBCs lack."
     ],
     "answer": 0,
     "rationale": "Mode 3 uses nonoxidative PPP to feed glycolysis.",
@@ -18183,6 +18288,13 @@
       "An electron pair",
       "A two-carbon unit"
     ],
+    "optionExplanations": [
+      "One-carbon transfers use folate chemistry, not the TPP-dependent transketolase reaction.",
+      "Transaldolase transfers a three-carbon unit and does not require thiamine pyrophosphate.",
+      "Phosphate transfer is performed by kinases or phosphatases, not transketolase.",
+      "Electron-pair transfer is a redox reaction involving carriers such as NADP+, not a transketolase carbon shift.",
+      "Thiamine-derived TPP is the cofactor for transketolase, which moves two-carbon units in nonoxidative PPP."
+    ],
     "answer": 4,
     "rationale": "Transketolase is TPP-dependent and transfers two-carbon units.",
     "type": "mcq",
@@ -18219,6 +18331,13 @@
       "Glycogen branching enzyme",
       "Debranching enzyme",
       "Phosphoglucomutase"
+    ],
+    "optionExplanations": [
+      "Glucose-6-phosphatase removes the phosphate from hepatic glucose-6-phosphate, permitting free glucose release into blood.",
+      "Glycogen synthase stores glucose in glycogen and does not dephosphorylate glucose-6-phosphate.",
+      "Branching enzyme creates alpha-1,6 linkages during glycogen synthesis rather than producing free glucose.",
+      "Debranching enzyme processes glycogen branch points but does not remove the phosphate from glucose-6-phosphate.",
+      "Phosphoglucomutase interconverts glucose-1-phosphate and glucose-6-phosphate; it does not generate exportable free glucose."
     ],
     "answer": 0,
     "rationale": "Glucose-6-phosphatase is stated to be present in liver and kidney, not muscle.",
@@ -18259,6 +18378,13 @@
       "They replace ATP with NADPH",
       "They create many free ends"
     ],
+    "optionExplanations": [
+      "Branching increases solubility but does not make the hydrophilic glucose polymer hydrophobic.",
+      "Glycogen remains hydrated; removing water is not the basis of rapid mobilization.",
+      "Glycogen phosphorylase still requires inorganic phosphate despite the presence of branches.",
+      "Branching does not substitute NADPH for ATP; those cofactors are not the reason breakdown accelerates.",
+      "Each branch creates another nonreducing end, allowing many phosphorylase molecules to release glucose-1-phosphate simultaneously."
+    ],
     "answer": 4,
     "rationale": "Many branches create many ends for simultaneous addition or removal.",
     "type": "mcq",
@@ -18295,6 +18421,13 @@
       "G1P to G6P conversion",
       "G6P dephosphorylation",
       "α-1,4 phosphorolysis"
+    ],
+    "optionExplanations": [
+      "Alpha-1,6 branch formation is performed by branching enzyme, which remains present in the stem.",
+      "Glycogen synthase transfers glucose from UDP-glucose to extend alpha-1,4 chains, so this direct step is lost.",
+      "Phosphoglucomutase performs glucose-1-phosphate/glucose-6-phosphate interconversion, not chain elongation.",
+      "Glucose-6-phosphatase removes phosphate for hepatic glucose export and is not a synthetic glycogen step.",
+      "Glycogen phosphorylase performs alpha-1,4 phosphorolysis during breakdown, the opposite direction from synthase."
     ],
     "answer": 1,
     "rationale": "Glycogen synthase transfers glucose from UDP-glucose to make α-1,4 linkages.",
@@ -18333,6 +18466,13 @@
       "Active dephosphorylated synthase",
       "Both enzymes active"
     ],
+    "optionExplanations": [
+      "Phosphorylation inactivates glycogen synthase, so a phosphorylated synthase is not active during glucagon signaling.",
+      "Glucagon acts in liver, and fasting phosphorylation activates rather than inactivates hepatic phosphorylase.",
+      "Glucagon-dependent phosphorylation activates glycogen phosphorylase, promoting hepatic glycogen breakdown.",
+      "Dephosphorylated synthase is active in the insulin-fed state, not the glucagon-dominant fasting state.",
+      "Reciprocal regulation prevents synthase and phosphorylase from being active together during fasting."
+    ],
     "answer": 2,
     "rationale": "Glucagon favors phosphorylated active glycogen phosphorylase and inactive synthase.",
     "type": "mcq",
@@ -18369,6 +18509,13 @@
       "Inhibit phosphorylase",
       "Export free glucose",
       "Activate glucose-6-phosphatase"
+    ],
+    "optionExplanations": [
+      "Low energy and increased AMP favor glycogenolysis so muscle glucose-6-phosphate can enter glycolysis and support ATP production.",
+      "Activating glycogen synthase would store glucose rather than mobilize it for immediate ATP generation.",
+      "Inhibiting phosphorylase would block glycogen breakdown and oppose the low-energy response.",
+      "Muscle lacks glucose-6-phosphatase, so it uses glycogen-derived glucose locally rather than exporting free glucose.",
+      "Skeletal muscle does not activate glucose-6-phosphatase because it lacks that hepatic/renal enzyme."
     ],
     "answer": 0,
     "rationale": "Low energy promotes glycogen breakdown; muscle uses its G6P in glycolysis.",
@@ -18409,6 +18556,13 @@
       "Phosphodiester bond",
       "β-1,4 linkage"
     ],
+    "optionExplanations": [
+      "Glycogen phosphorylase stops near alpha-1,6 branches, which require debranching-enzyme activities to clear.",
+      "Phosphorylase can cleave ordinary alpha-1,4 chains, so these are not the obstacle created by debranching loss.",
+      "Peptide bonds join amino acids in proteins and are not present in the glucose polymer glycogen.",
+      "Phosphodiester bonds occur in nucleic acids and some signaling molecules, not at glycogen branch points.",
+      "Beta-1,4 linkages characterize polymers such as cellulose; glycogen contains alpha-1,4 chains and alpha-1,6 branches."
+    ],
     "answer": 0,
     "rationale": "Phosphorylase cleaves α-1,4 only; branches require debranching enzyme.",
     "type": "mcq",
@@ -18445,6 +18599,13 @@
       "Glycogenesis rises",
       "Glucose-6-phosphatase is needed in muscle",
       "Glucagon signals muscle"
+    ],
+    "optionExplanations": [
+      "Insulin suppresses hepatic glycogenolysis after a carbohydrate-rich meal rather than increasing it.",
+      "Reciprocal regulation avoids a futile cycle; insulin increases synthesis while decreasing breakdown.",
+      "Insulin activates the storage program, so net hepatic glycogenesis rises in the fed state.",
+      "Muscle lacks glucose-6-phosphatase, and that fact does not describe the liver's fed-state net response.",
+      "Glucagon primarily signals liver rather than muscle and is low, not dominant, after a carbohydrate-rich meal."
     ],
     "answer": 2,
     "rationale": "Insulin favors storage, including glycogen synthesis.",
@@ -18484,6 +18645,13 @@
       "It lacks phosphoglucomutase",
       "It lacks glycogenin",
       "It lacks branches"
+    ],
+    "optionExplanations": [
+      "Muscle has glycogen synthase and can replenish its own glycogen stores.",
+      "Without glucose-6-phosphatase, muscle cannot convert glucose-6-phosphate to free glucose for blood release.",
+      "Muscle uses phosphoglucomutase to make glucose-6-phosphate from glycogen-derived glucose-1-phosphate.",
+      "Glycogenin primes muscle glycogen particles but does not determine whether glucose can be exported.",
+      "Muscle glycogen is branched normally; branch absence is not why it cannot maintain blood glucose."
     ],
     "answer": 1,
     "rationale": "Muscle produces G6P for local glycolysis; liver/kidney can make free glucose.",
@@ -18526,6 +18694,13 @@
       "Pyruvate kinase",
       "Glucose-6-phosphatase"
     ],
+    "optionExplanations": [
+      "Mitochondrial pyruvate carboxylase uses biotin and ATP to convert pyruvate to oxaloacetate.",
+      "PEPCK converts oxaloacetate to phosphoenolpyruvate after oxaloacetate has already been formed.",
+      "PFK-1 converts fructose-6-phosphate to fructose-1,6-bisphosphate in glycolysis, not pyruvate to oxaloacetate.",
+      "Pyruvate kinase converts phosphoenolpyruvate to pyruvate in glycolysis, the opposite side of the bypass.",
+      "Glucose-6-phosphatase catalyzes the final glucose-release step of gluconeogenesis, not the first mitochondrial bypass."
+    ],
     "answer": 0,
     "rationale": "Pyruvate carboxylase is the first pyruvate-kinase bypass enzyme.",
     "type": "mcq",
@@ -18562,6 +18737,13 @@
       "PEP via pyruvate kinase",
       "Glucose via G6Pase",
       "Oxaloacetate via pyruvate carboxylase"
+    ],
+    "optionExplanations": [
+      "High acetyl-CoA inhibits pyruvate dehydrogenase, so it opposes conversion of pyruvate to more acetyl-CoA.",
+      "Lactate formation is driven by cytosolic redox conditions; acetyl-CoA instead directly activates pyruvate carboxylase.",
+      "Pyruvate kinase makes pyruvate from PEP and does not convert pyruvate back to PEP.",
+      "Glucose-6-phosphatase releases glucose from glucose-6-phosphate and does not act directly on pyruvate.",
+      "Acetyl-CoA allosterically activates pyruvate carboxylase, routing pyruvate toward oxaloacetate and gluconeogenesis."
     ],
     "answer": 4,
     "rationale": "Acetyl-CoA activates pyruvate carboxylase and opposes PDH, routing pyruvate to gluconeogenesis.",
@@ -18602,6 +18784,13 @@
       "They lack cofactors",
       "They produce NADPH"
     ],
+    "optionExplanations": [
+      "Reversible glycolytic reactions can run backward using the same enzymes and therefore need no bypass.",
+      "Glycolysis is cytosolic; ER localization is relevant only to glucose-6-phosphatase and does not explain three bypasses.",
+      "The three strongly irreversible glycolytic reactions require different gluconeogenic enzymes to proceed in the reverse net direction.",
+      "The enzymes do have cofactors or substrates as needed; cofactor absence is not the shared property of the three steps.",
+      "Glycolysis does not produce NADPH at these steps; irreversibility, not reducing-power production, creates the bypass requirement."
+    ],
     "answer": 2,
     "rationale": "The review explicitly asks for bypasses of the three irreversible glycolytic reactions.",
     "type": "mcq",
@@ -18638,6 +18827,13 @@
       "G6Pase",
       "Pyruvate kinase",
       "Pyruvate carboxylase"
+    ],
+    "optionExplanations": [
+      "PEPCK converts oxaloacetate to PEP and does not require biotin, so the biotin-responsive block localizes instead to pyruvate carboxylase.",
+      "Fructose-1,6-bisphosphatase acts later at the PFK-1 bypass and is not a biotin-dependent pyruvate-handling enzyme.",
+      "Glucose-6-phosphatase acts at the final glucose-release step and does not require biotin, so improvement with biotin points away from this enzyme.",
+      "Pyruvate kinase is a glycolytic enzyme and is not the biotin-dependent source of oxaloacetate.",
+      "Pyruvate carboxylase requires biotin and converts pyruvate to oxaloacetate; loss backs pyruvate into lactate and alanine."
     ],
     "answer": 4,
     "rationale": "Biotin and absent oxaloacetate point to pyruvate carboxylase.",
@@ -18678,6 +18874,13 @@
       "PEP to pyruvate",
       "Acetyl-CoA to pyruvate"
     ],
+    "optionExplanations": [
+      "Pyruvate dehydrogenase is not the principal high-NADH equilibrium shift that blocks gluconeogenesis after ethanol.",
+      "High NADH drives lactate dehydrogenase toward lactate, removing pyruvate from gluconeogenesis.",
+      "Glucose phosphorylation uses ATP and hexokinase/glucokinase; it is not a redox reaction shifted by NADH.",
+      "PEP-to-pyruvate is the forward glycolytic pyruvate-kinase reaction and does not describe NADH-mediated precursor depletion.",
+      "Acetyl-CoA cannot be converted back to pyruvate in humans because pyruvate dehydrogenase is irreversible."
+    ],
     "answer": 1,
     "rationale": "High NADH favors lactate and malate, depleting gluconeogenic precursors.",
     "type": "mcq",
@@ -18714,6 +18917,13 @@
       "PFK-1",
       "Lactate dehydrogenase",
       "Glucose-6-phosphatase"
+    ],
+    "optionExplanations": [
+      "Hexokinase traps glucose as glucose-6-phosphate and therefore works opposite to free-glucose release.",
+      "Glycogen synthase stores glucose in glycogen rather than removing phosphate for export.",
+      "PFK-1 commits fructose-6-phosphate to glycolysis and does not act at the hepatic export step.",
+      "Lactate dehydrogenase interconverts pyruvate and lactate; it does not produce free glucose from glucose-6-phosphate.",
+      "Glucose-6-phosphatase removes the phosphate, allowing liver or kidney to release free glucose into blood."
     ],
     "answer": 4,
     "rationale": "G6Pase produces free glucose; the review asks which organs can release it.",
@@ -18754,6 +18964,13 @@
       "Inhibit pyruvate carboxylase",
       "Increase glycogen synthase"
     ],
+    "optionExplanations": [
+      "Fructose-2,6-bisphosphate activates PFK-1 and inhibits fructose-1,6-bisphosphatase, so lowering it causes the opposite pair.",
+      "Lower fructose-2,6-bisphosphate suppresses PFK-1 and relieves inhibition of fructose-1,6-bisphosphatase, favoring gluconeogenesis.",
+      "Simultaneously activating glycolysis and gluconeogenesis would create a futile cycle rather than the coordinated glucagon response.",
+      "Pyruvate carboxylase is activated by acetyl-CoA; lowering fructose-2,6-bisphosphate does not directly inhibit it.",
+      "Glucagon inhibits glycogen synthase through phosphorylation rather than increasing its activity."
+    ],
     "answer": 1,
     "rationale": "Lower F2,6BP suppresses PFK-1 and favors gluconeogenesis.",
     "type": "mcq",
@@ -18790,6 +19007,13 @@
       "Limited hepatic glycogen reserve together with ethanol-driven conversion of pyruvate to oxaloacetate and lactate to pyruvate",
       "Normal hepatic glycogen reserve together with ethanol-driven conversion of oxaloacetate to phosphoenolpyruvate",
       "Limited glycogen plus high NADH diverting pyruvate to lactate and oxaloacetate to malate"
+    ],
+    "optionExplanations": [
+      "Toddlers have a smaller, not larger, hepatic glycogen reserve, and high NADH does not route pyruvate toward acetyl-CoA for glucose production.",
+      "High NADH drives lactate dehydrogenase toward lactate and malate dehydrogenase toward malate, opposite to both directions stated here.",
+      "This reverses the ethanol redox effect: high NADH removes pyruvate and oxaloacetate rather than producing them.",
+      "The toddler's glycogen reserve is limited, and oxaloacetate-to-PEP alone does not capture ethanol's depletion of gluconeogenic precursors.",
+      "Limited glycogen is exhausted quickly while ethanol-derived NADH diverts pyruvate to lactate and oxaloacetate to malate, blocking gluconeogenesis."
     ],
     "answer": 4,
     "rationale": "Toddlers have limited hepatic glycogen reserve. Ethanol metabolism raises the hepatic NADH/NAD+ ratio, driving pyruvate toward lactate and oxaloacetate toward malate, so gluconeogenesis cannot maintain blood glucose once glycogen is limited. The trap: high NADH drives these reactions in the opposite direction from gluconeogenesis.",
@@ -18832,6 +19056,13 @@
       "Pyruvate",
       "NADH"
     ],
+    "optionExplanations": [
+      "Acetyl-CoA is the substrate for acetyl-CoA carboxylase but is not the direct inhibitor of carnitine acyltransferase I.",
+      "Malonyl-CoA inhibits carnitine acyltransferase I, preventing simultaneous long-chain fatty-acid synthesis and mitochondrial oxidation.",
+      "Succinyl-CoA receives odd-chain fatty-acid carbon after propionyl-CoA metabolism but does not regulate mitochondrial acyl entry.",
+      "Pyruvate is a carbohydrate-metabolism intermediate and does not directly inhibit the carnitine shuttle.",
+      "NADH signals a reduced state but is not the named direct inhibitor of carnitine acyltransferase I."
+    ],
     "answer": 1,
     "rationale": "Malonyl-CoA coordinates synthesis with inhibition of oxidative mitochondrial entry.",
     "type": "mcq",
@@ -18869,6 +19100,13 @@
       "TPP",
       "Carnitine"
     ],
+    "optionExplanations": [
+      "Albumin carries unesterified fatty acids in blood but does not transport activated acyl groups across the inner mitochondrial membrane.",
+      "Cytosolic CoA activates the fatty acid, but the resulting long-chain acyl-CoA itself cannot cross the inner membrane.",
+      "Biotin carries activated carbon dioxide in carboxylase reactions and is not an acyl shuttle.",
+      "Thiamine pyrophosphate supports oxidative decarboxylation and transketolase chemistry, not mitochondrial fatty-acid import.",
+      "Carnitine accepts the long-chain acyl group from carnitine acyltransferase I for transport across the inner membrane."
+    ],
     "answer": 4,
     "rationale": "The carnitine system transports long-chain acyl groups into mitochondria.",
     "type": "mcq",
@@ -18905,6 +19143,13 @@
       "ATP",
       "GTP",
       "CoASH"
+    ],
+    "optionExplanations": [
+      "Acyl-CoA dehydrogenase performs the first oxidation and reduces its bound FAD to FADH2.",
+      "NADPH is used mainly for reductive biosynthesis; beta-oxidation produces NADH later rather than NADPH.",
+      "ATP is consumed during fatty-acid activation before beta-oxidation and is not the first oxidation's electron carrier.",
+      "GTP is not the electron acceptor in beta-oxidation and is not produced by the first dehydrogenation.",
+      "CoASH participates in thiolysis at the final step of the cycle; it is not the reduced cofactor from the first oxidation."
     ],
     "answer": 0,
     "rationale": "The first dehydrogenation produces FADH2; the later oxidation produces NADH.",
@@ -18945,6 +19190,13 @@
       "Glucose export",
       "Mitochondrial acyl import"
     ],
+    "optionExplanations": [
+      "Cytosolic lipases can still release fatty acids; the carnitine defect lies at inner-mitochondrial-membrane transport.",
+      "Glycogen branching is a carbohydrate-storage reaction unrelated to the carnitine shuttle.",
+      "Brain ketone utilization occurs after the liver makes ketones and is not the direct transport defect described.",
+      "Hepatic glucose export uses glucose-6-phosphatase and is not directly performed by the carnitine system.",
+      "The carnitine shuttle is required to import long-chain acyl groups into the mitochondrial matrix for beta-oxidation."
+    ],
     "answer": 4,
     "rationale": "Carnitine defects block mitochondrial import of long-chain acyl groups.",
     "type": "mcq",
@@ -18983,6 +19235,13 @@
       "Ribose synthesis",
       "Glycogenesis",
       "Urea formation"
+    ],
+    "optionExplanations": [
+      "NADPH generation occurs chiefly through pathways such as PPP and is not catalyzed by medium-chain acyl-CoA dehydrogenase.",
+      "MCAD catalyzes the first dehydrogenation of medium-chain acyl-CoAs, making their fasting beta-oxidation directly impaired.",
+      "Ribose synthesis is a pentose phosphate function and is not the target of MCAD deficiency.",
+      "Glycogenesis is a fed-state carbohydrate-storage pathway rather than the fasting process requiring MCAD.",
+      "Urea formation disposes of nitrogen and is not the direct fatty-acid chain-length defect."
     ],
     "answer": 1,
     "rationale": "The reading identifies MCAD deficiency as decreased FA oxidation causing severe hypoglycemia.",
@@ -19023,6 +19282,13 @@
       "Citrate",
       "Propionyl-CoA"
     ],
+    "optionExplanations": [
+      "Lactate is a three-carbon glycolytic product but is not the terminal fragment of odd-chain beta-oxidation.",
+      "Oxaloacetate is a TCA/gluconeogenic intermediate and is not directly released by fatty-acid thiolysis.",
+      "Malonyl-CoA is the two-carbon donor for fatty-acid synthesis, not the final odd-chain oxidation fragment.",
+      "Citrate forms from acetyl-CoA and oxaloacetate in the TCA cycle rather than emerging directly from odd-chain beta-oxidation.",
+      "Repeated two-carbon acetyl-CoA removal from an odd chain leaves the three-carbon product propionyl-CoA."
+    ],
     "answer": 4,
     "rationale": "Odd chains end with propionyl-CoA, then enter metabolism as succinyl-CoA.",
     "type": "mcq",
@@ -19059,6 +19325,13 @@
       "Propionyl-CoA toward succinyl-CoA",
       "Malonyl-CoA to palmitate",
       "FADH2 to NADH"
+    ],
+    "optionExplanations": [
+      "Acetyl-CoA condensation with oxaloacetate uses citrate synthase and does not require vitamin B12.",
+      "Carnitine acyltransferase I transfers long-chain acyl groups to carnitine and is not B12-dependent.",
+      "B12-dependent methylmalonyl-CoA mutase is required in the route from propionyl-CoA to succinyl-CoA.",
+      "Malonyl-CoA use by fatty-acid synthase consumes NADPH but does not require B12.",
+      "FADH2 donates electrons to the respiratory chain; it is not enzymatically converted into NADH by a B12 reaction."
     ],
     "answer": 2,
     "rationale": "Methylmalonyl-CoA mutase in propionyl-CoA conversion needs B12.",
@@ -19097,6 +19370,13 @@
       "Inhibiting albumin",
       "Activating thiolase"
     ],
+    "optionExplanations": [
+      "Activating carnitine acyltransferase I would increase mitochondrial entry and oppose the fed-state block on oxidation.",
+      "MCAD acts after medium-chain acyl-CoAs are in mitochondria and is not activated by malonyl-CoA.",
+      "Malonyl-CoA inhibits carnitine acyltransferase I, keeping newly synthesized long-chain fatty acids out of beta-oxidation.",
+      "Albumin transports fatty acids in plasma; inhibiting it is not the intracellular mechanism coordinating synthesis and oxidation.",
+      "Thiolase catalyzes the final cleavage within beta-oxidation and is not the malonyl-CoA-regulated entry point."
+    ],
     "answer": 2,
     "rationale": "CAT I is the transport-regulation point and is inhibited by malonyl-CoA.",
     "type": "mcq",
@@ -19133,6 +19413,13 @@
       "Brain nucleus",
       "Adipose ER",
       "Liver mitochondria"
+    ],
+    "optionExplanations": [
+      "Skeletal muscle can consume ketones but does not synthesize them in its cytosol.",
+      "RBCs lack mitochondria and therefore cannot perform mitochondrial ketogenesis.",
+      "The brain can use ketones during prolonged fasting, but ketogenesis does not occur in its nucleus.",
+      "Adipose tissue releases fatty acids; its ER is not the site of ketone-body synthesis.",
+      "Hepatic mitochondria convert accumulated fatty-acid-derived acetyl-CoA into ketone bodies."
     ],
     "answer": 4,
     "rationale": "Ketone synthesis is hepatic and mitochondrial.",
@@ -19173,6 +19460,13 @@
       "NADPH is absent",
       "Carnitine blocks β-oxidation"
     ],
+    "optionExplanations": [
+      "Ribose availability does not control whether hepatic acetyl-CoA can enter the TCA cycle during starvation.",
+      "Oxaloacetate is diverted into gluconeogenesis, limiting citrate formation and leaving acetyl-CoA available for ketogenesis.",
+      "Glycogen synthase is inhibited rather than activated during starvation and does not explain acetyl-CoA accumulation.",
+      "NADPH is not simply absent during starvation, and its concentration is not the stated TCA-versus-ketogenesis switch.",
+      "Low malonyl-CoA permits rather than blocks carnitine-mediated beta-oxidation during starvation."
+    ],
     "answer": 1,
     "rationale": "Oxaloacetate use for gluconeogenesis limits TCA condensation, leaving acetyl-CoA for ketogenesis.",
     "type": "mcq",
@@ -19209,6 +19503,13 @@
       "Acetyl-CoA",
       "Malonyl-CoA",
       "Propionyl-CoA"
+    ],
+    "optionExplanations": [
+      "Beta-hydroxybutyrate forms by reduction of acetoacetate, not by its decarboxylation.",
+      "Acetoacetate can lose carbon dioxide to form acetone, the volatile ketone body.",
+      "Acetyl-CoA is an upstream substrate for ketogenesis, not the decarboxylation product of acetoacetate.",
+      "Malonyl-CoA is a fatty-acid-synthesis intermediate and does not arise from acetoacetate.",
+      "Propionyl-CoA is the terminal product of odd-chain fatty-acid oxidation, not an acetoacetate product."
     ],
     "answer": 1,
     "rationale": "The summary-sheet prompt specifically calls for explaining acetone production by decarboxylation.",
@@ -19249,6 +19550,13 @@
       "Carnitine deficiency",
       "PFK-1 activation"
     ],
+    "optionExplanations": [
+      "G6PD deficiency reduces NADPH and antioxidant defense but does not directly block fatty-acid mitochondrial entry or ketogenesis.",
+      "Transketolase deficiency affects nonoxidative PPP, not transport of long-chain fatty acids into mitochondria.",
+      "A glycogen branching defect changes glycogen structure but does not explain high fatty acids, fatty liver, and absent ketones.",
+      "Carnitine deficiency traps long-chain fatty acids outside mitochondrial oxidation, causing lipid accumulation and absent ketone production.",
+      "PFK-1 activation increases glycolysis but does not directly create the combined fatty-liver and absent-ketone phenotype."
+    ],
     "answer": 3,
     "rationale": "Carnitine deficiency prevents mitochondrial FA entry, so no acetyl-CoA/ketones and lipid accumulates.",
     "type": "mcq",
@@ -19287,6 +19595,13 @@
       "Malonyl-CoA only",
       "Acetyl-CoA for energy",
       "Urea"
+    ],
+    "optionExplanations": [
+      "Ketone bodies are not converted to ribose; ribose-5-phosphate is produced through PPP.",
+      "RBCs lack mitochondria and cannot use ketones or convert their carbon into glucose.",
+      "Ketone-derived acetyl-CoA may enter energy metabolism; it is not restricted to malonyl-CoA production.",
+      "Extrahepatic tissues convert beta-hydroxybutyrate to acetoacetate and then acetyl-CoA for TCA energy production.",
+      "Urea carries amino nitrogen and is not the metabolic destination of ketone-body carbon."
     ],
     "answer": 3,
     "rationale": "Acetoacetate and β-hydroxybutyrate are fuel precursors for acetyl-CoA in other tissues.",
@@ -19327,6 +19642,13 @@
       "Lactate",
       "Glucose-6-P"
     ],
+    "optionExplanations": [
+      "Impaired long-chain acyl import lowers beta-oxidation-derived acetyl-CoA and therefore directly reduces hepatic ketogenesis.",
+      "Glycogen synthesis is a cytosolic storage pathway and is not downstream of carnitine acyltransferase I.",
+      "Ribose-5-phosphate comes from PPP and does not require mitochondrial fatty-acid entry.",
+      "Lactate arises from pyruvate redox metabolism rather than directly from the carnitine shuttle.",
+      "Glucose-6-phosphate is a carbohydrate intermediate and is not the immediate product lost when fatty-acid import fails."
+    ],
     "answer": 0,
     "rationale": "CAT I failure blocks FA oxidation-derived acetyl-CoA for ketogenesis.",
     "type": "mcq",
@@ -19365,6 +19687,13 @@
       "RBCs made too much NADPH",
       "Acetone inhibits glucose release",
       "FA could not enter mitochondria to support oxidation/ketogenesis"
+    ],
+    "optionExplanations": [
+      "Ketones spare some glucose use; they do not consume glucose as the cause of this patient's hypoglycemia.",
+      "Hepatic glycogen is finite and becomes inadequate during prolonged fasting, especially in a child.",
+      "RBC NADPH supports glutathione defense and does not explain the absence of hepatic ketones.",
+      "Acetone is a minor ketone product and does not directly block hepatic glucose release.",
+      "Failed fatty-acid mitochondrial import removes beta-oxidation energy and acetyl-CoA for ketogenesis, producing fasting hypoglycemia without ketosis."
     ],
     "answer": 4,
     "rationale": "The case links failed mitochondrial fatty-acid import to absent ketones and fasting intolerance.",
@@ -19405,6 +19734,13 @@
       "Starvation with high fatty-acid mobilization",
       "RBC oxidative stress"
     ],
+    "optionExplanations": [
+      "High insulin suppresses adipose lipolysis and hepatic ketogenesis in the fed state.",
+      "High malonyl-CoA inhibits carnitine acyltransferase I and therefore restricts fatty-acid oxidation needed for ketogenesis.",
+      "Active fatty-acid synthesis is a fed-state process coordinated against simultaneous oxidation and ketone production.",
+      "Starvation increases fatty-acid mobilization and hepatic beta-oxidation, supplying acetyl-CoA for ketone-body synthesis.",
+      "RBC oxidative stress concerns NADPH and glutathione; RBCs lack mitochondria and cannot drive ketogenesis."
+    ],
     "answer": 3,
     "rationale": "The objectives explicitly link starvation to increased ketone production.",
     "type": "mcq",
@@ -19442,6 +19778,13 @@
       "MCAD",
       "Thiolase"
     ],
+    "optionExplanations": [
+      "Acetyl-CoA carboxylase makes malonyl-CoA, committing acetyl units to fatty-acid synthesis.",
+      "Fatty-acid synthase elongates the chain after malonyl-CoA has already been made at the committed step.",
+      "Carnitine acyltransferase I controls mitochondrial fatty-acid entry for oxidation, not cytosolic synthesis commitment.",
+      "MCAD oxidizes medium-chain acyl-CoA during beta-oxidation and is not a synthetic enzyme.",
+      "Thiolase cleaves beta-ketoacyl-CoA during oxidation rather than committing acetyl-CoA to synthesis."
+    ],
     "answer": 0,
     "rationale": "Acetyl-CoA carboxylase makes malonyl-CoA, the committed intermediate.",
     "type": "mcq",
@@ -19478,6 +19821,13 @@
       "Citrate is a ketone body",
       "Citrate activates β-oxidation",
       "Citrate replaces biotin"
+    ],
+    "optionExplanations": [
+      "Matrix acetyl-CoA cannot cross the inner mitochondrial membrane, so its carbons leave as citrate and are regenerated cytosolically.",
+      "Direct acetyl-CoA passage is precisely what the inner mitochondrial membrane prevents.",
+      "Citrate is a TCA intermediate and acetyl-carbon carrier, not one of the ketone bodies.",
+      "Citrate promotes lipogenesis through cytosolic acetyl supply and ACC activation rather than activating beta-oxidation.",
+      "Citrate export solves a compartment problem; it does not replace biotin used by acetyl-CoA carboxylase."
     ],
     "answer": 0,
     "rationale": "A special export mechanism is required because matrix acetyl-CoA cannot cross directly.",
@@ -19518,6 +19868,13 @@
       "NADPH",
       "GTP"
     ],
+    "optionExplanations": [
+      "Fatty-acid synthesis uses NADPH rather than the catabolic carrier NADH for its repeated reductions.",
+      "FADH2 is produced during beta-oxidation and is not consumed in fatty-acid-synthase reduction steps.",
+      "ATP is used by acetyl-CoA carboxylase before elongation, not twice as the reducing cofactor in each synthase cycle.",
+      "Each elongation cycle contains two reductions, and both use NADPH as the electron donor.",
+      "GTP is not the reducing carrier used by fatty-acid synthase."
+    ],
     "answer": 3,
     "rationale": "The repeated reductions of fatty-acid synthesis use NADPH.",
     "type": "mcq",
@@ -19554,6 +19911,13 @@
       "FADH2 from acyl-CoA",
       "Malonyl-CoA from acetyl-CoA",
       "Succinyl-CoA from propionyl-CoA"
+    ],
+    "optionExplanations": [
+      "Fatty-acid synthase makes palmitate downstream, but the direct biotin-dependent reaction is malonyl-CoA formation.",
+      "ATP-citrate lyase makes cytosolic acetyl-CoA from citrate without using biotin.",
+      "Acyl-CoA dehydrogenase produces FADH2 during beta-oxidation, not during biotin-dependent synthesis.",
+      "Biotin carries activated carbon dioxide for acetyl-CoA carboxylase to form malonyl-CoA.",
+      "Propionyl-CoA carboxylation uses biotin, but conversion all the way to succinyl-CoA also requires later enzymes and is not a FAS intermediate."
     ],
     "answer": 3,
     "rationale": "ACC requires biotin to carboxylate acetyl-CoA into malonyl-CoA.",
@@ -19592,6 +19956,13 @@
       "ACC activated; synthesis rises",
       "No change"
     ],
+    "optionExplanations": [
+      "Insulin and citrate activate rather than inhibit ACC, so oxidation does not become the dominant response.",
+      "High malonyl-CoA inhibits carnitine acyltransferase I; fed-state signaling does not activate fatty-acid entry for oxidation.",
+      "Ketogenesis rises in fasting, not in the insulin-rich lipogenic state described.",
+      "Insulin promotes ACC dephosphorylation and citrate allosterically activates it, increasing malonyl-CoA and fatty-acid-synthase flux.",
+      "The coordinated hormonal and allosteric signals produce a change, specifically increased synthesis."
+    ],
     "answer": 3,
     "rationale": "Citrate/insulin favor ACC and lipogenesis.",
     "type": "mcq",
@@ -19628,6 +19999,13 @@
       "Increase NADPH use",
       "Inhibit ACC",
       "Increase ketone use"
+    ],
+    "optionExplanations": [
+      "Activating ACC would worsen end-product accumulation rather than provide negative feedback.",
+      "Carnitine acyltransferase I responds directly to malonyl-CoA, not as the principal palmitoyl-CoA feedback target.",
+      "Increasing NADPH consumption would drive more synthesis rather than shut down the committed step.",
+      "Palmitoyl-CoA provides end-product feedback inhibition of acetyl-CoA carboxylase.",
+      "Ketone utilization occurs in extrahepatic fasting tissues and is not the direct feedback response to a fatty-acid-synthesis product."
     ],
     "answer": 3,
     "rationale": "End-product palmitoyl-CoA inhibits the synthesis regulatory step.",
@@ -19666,6 +20044,13 @@
       "NADPH is absent",
       "Citrate cannot exit mitochondria"
     ],
+    "optionExplanations": [
+      "Humans can make acetyl-CoA, which supplies carbon for palmitate synthesis.",
+      "Humans cannot introduce the required double bonds beyond their desaturase capacity, making linoleic acid dietary essential.",
+      "Palmitate can be elongated, but elongation alone cannot install linoleic acid's required double-bond pattern.",
+      "NADPH is available from PPP and other sources; its absence is not why linoleic acid is essential.",
+      "Citrate can export acetyl units from mitochondria, so carbon transport is not the limiting step."
+    ],
     "answer": 1,
     "rationale": "The course objective identifies linoleic/linolenic acids as dietary essential because of human double-bond limitations.",
     "type": "mcq",
@@ -19702,6 +20087,13 @@
       "Citrate export of mitochondrial acetyl units into the cytosol for synthesis",
       "Biotin carboxylation",
       "Albumin transport"
+    ],
+    "optionExplanations": [
+      "The phosphopantetheine arm carries the growing acyl chain between catalytic sites within fatty-acid synthase.",
+      "Mitochondrial beta-oxidation uses acyl-CoA enzymes and is not performed by the cytosolic synthase ACP arm.",
+      "The citrate shuttle supplies cytosolic acetyl-CoA before synthase and does not depend on ACP's internal carrier arm.",
+      "Biotin carboxylation occurs on acetyl-CoA carboxylase to make malonyl-CoA, not on the ACP arm.",
+      "Albumin transports fatty acids through blood and is unrelated to intracomplex acyl transfer."
     ],
     "answer": 0,
     "rationale": "The carrier arm channels growing acyl groups within the multifunctional synthase complex.",
@@ -19740,6 +20132,13 @@
       "Cell membrane",
       "Reticular network"
     ],
+    "optionExplanations": [
+      "Collagen fibers provide tensile structure but are not the water-rich gel portion of extracellular matrix.",
+      "Ground substance is a highly hydrated gel containing GAGs, proteoglycans, and adhesive glycoproteins.",
+      "Elastic lamellae provide stretch and recoil through elastic fibers rather than forming the matrix's hydrated gel.",
+      "The cell membrane encloses cells and is not an extracellular-matrix component.",
+      "Reticular fibers form a branching supportive mesh of type III collagen, not the water-rich gel."
+    ],
     "answer": 1,
     "rationale": "The lecture identifies hydrated, gel-like ground substance as a major ECM component.",
     "type": "mcq",
@@ -19777,6 +20176,13 @@
       "Covalent attachment to a protein core",
       "Increased integrin-mediated adhesion"
     ],
+    "optionExplanations": [
+      "Removing negatively charged sulfate groups decreases rather than increases sodium attraction and water retention.",
+      "Reduced cation attraction would reduce osmotic water retention, not increase matrix hydration.",
+      "Loss of sulfate negative charge reduces cation binding and therefore reduces water-rich matrix hydration.",
+      "GAG attachment to a core protein defines proteoglycan organization but is not caused by removing sulfate groups.",
+      "Integrin adhesion is mediated by adhesive glycoproteins such as fibronectin, not by GAG sulfate charge."
+    ],
     "answer": 2,
     "rationale": "Negative carboxylate and sulfate groups attract cations and water; loss reduces hydration.",
     "type": "mcq",
@@ -19809,10 +20215,17 @@
     "stem": "Cartilage loses its proteoglycan aggregates. Which matrix property is most directly compromised?",
     "options": [
       "Oxygen delivery and gas exchange",
-      "Cellular matrix hydration",
+      "Elastic recoil after repeated stretch",
       "Membrane electrical conduction",
       "Antibody production and secretion",
       "Hydration and force resistance"
+    ],
+    "optionExplanations": [
+      "Oxygen delivery and gas exchange depend on blood and respiratory surfaces, not cartilage proteoglycan aggregates.",
+      "Elastic recoil is supplied primarily by elastic fibers; proteoglycan aggregates instead retain water and resist compression.",
+      "Electrical conduction is a cell-membrane property and is not supplied by extracellular proteoglycan aggregates.",
+      "Antibody production is a plasma-cell function, unrelated to the mechanical properties of cartilage matrix.",
+      "Charged proteoglycan aggregates retain water and let cartilage resist compressive force."
     ],
     "answer": 4,
     "rationale": "The lecture names buffering, hydration, binding, and force-resistance as proteoglycan functions.",
@@ -19851,6 +20264,13 @@
       "Releasing mast-cell mediators",
       "Linking ECM to an integrin-bearing cell"
     ],
+    "optionExplanations": [
+      "Cell-cell junctions link neighboring cells; fibronectin-integrin binding instead links a cell to extracellular matrix.",
+      "Collagen triple-helix formation is an intracellular collagen-processing event and is not performed by fibronectin-integrin binding.",
+      "Hemoglobin carries oxygen in blood; fibronectin and integrins mediate extracellular-matrix attachment.",
+      "Mast-cell mediator release follows degranulation and is unrelated to fibronectin anchoring.",
+      "Fibronectin binds extracellular-matrix components and membrane integrins, physically connecting the matrix to the cell."
+    ],
     "answer": 4,
     "rationale": "Glycoproteins stabilize ECM by interacting with matrix components and integrins.",
     "type": "mcq",
@@ -19888,6 +20308,13 @@
       "Mast-cell migration",
       "Macrophage phagocytosis"
     ],
+    "optionExplanations": [
+      "Fibrillin-1 mutation is associated with Marfan syndrome, not the vitamin C deficiency in this stem.",
+      "GAG sulfation supports matrix charge and hydration but is not the vitamin C-dependent reaction causing scurvy.",
+      "Vitamin C is needed for collagen hydroxylation and stable collagen formation, so deficiency weakens connective-tissue support.",
+      "Mast-cell migration is not the collagen-processing defect responsible for scurvy.",
+      "Macrophage phagocytosis is an immune cleanup function and is not vitamin C-dependent collagen synthesis."
+    ],
     "answer": 2,
     "rationale": "Scurvy is presented as a disease caused by vitamin C deficiency in the collagen section.",
     "type": "mcq",
@@ -19924,6 +20351,13 @@
       "Type III collagen mutation - Marfan syndrome",
       "Fibrillin-1 mutation - Marfan syndrome",
       "Fibrillin-1 deficiency - reticular fibrosis"
+    ],
+    "optionExplanations": [
+      "Type I collagen mutations cause osteogenesis imperfecta; scurvy instead results from vitamin C deficiency.",
+      "Vitamin C deficiency causes scurvy, whereas osteogenesis imperfecta is associated with type I collagen mutation.",
+      "Type III collagen forms reticular fibers; Marfan syndrome is caused by fibrillin-1 mutation.",
+      "Marfan syndrome results from pathogenic fibrillin-1, a component of elastic-fiber microfibrils.",
+      "Fibrillin supports elastic fibers and is not the type III collagen defect that would define a reticular-fiber disorder."
     ],
     "answer": 3,
     "rationale": "The lecture directly attributes Marfan syndrome to fibrillin-1 mutation.",
@@ -19964,6 +20398,13 @@
       "Fibrillin microfibrils only",
       "Keratan sulfate"
     ],
+    "optionExplanations": [
+      "Type I collagen forms strong bundles but not the delicate branching stroma needed for cell movement in lymphoid tissue.",
+      "Elastic lamellae permit stretch and recoil in structures such as large arteries rather than forming lymph-node stroma.",
+      "Type III collagen reticular fibers form a fine branching mesh that supports mobile cells in lymphoid organs.",
+      "Fibrillin microfibrils support elastic fibers but do not form the classic reticular network of a lymph node.",
+      "Keratan sulfate is a GAG component of ground substance and is not a fibrous branching scaffold."
+    ],
     "answer": 2,
     "rationale": "Reticular fibers are type III collagen with a branched mesh-like pattern.",
     "type": "mcq",
@@ -20001,6 +20442,13 @@
       "Fibroblast",
       "Adipocyte"
     ],
+    "optionExplanations": [
+      "Circulating monocytes enter connective tissue and differentiate into phagocytic macrophages.",
+      "Erythrocytes transport gases and do not differentiate into tissue macrophages.",
+      "Basophils are circulating granulocytes related functionally to mast cells but are not macrophage precursors.",
+      "Fibroblasts are resident matrix-producing connective-tissue cells, not circulating macrophage precursors.",
+      "Adipocytes store lipid in connective tissue and do not give rise to phagocytic macrophages."
+    ],
     "answer": 0,
     "rationale": "Macrophages differentiate from monocytes and phagocytose foreign material and dead cells.",
     "type": "mcq",
@@ -20037,6 +20485,13 @@
       "Buffy coat",
       "Erythrocyte layer",
       "Platelet plug"
+    ],
+    "optionExplanations": [
+      "Plasma is the liquid blood component containing serum constituents plus clotting factors such as fibrinogen.",
+      "Serum is the liquid remaining after clotting and therefore lacks the clotting factors consumed or removed in the clot.",
+      "The buffy coat is the centrifuged leukocyte-and-platelet layer, not the liquid containing serum substances.",
+      "The erythrocyte layer is the packed cellular fraction and does not contain the full liquid clotting-factor pool.",
+      "A platelet plug is a hemostatic cellular aggregate, not the complete liquid component of blood."
     ],
     "answer": 0,
     "rationale": "The course source defines plasma as serum plus clotting factors; serum is the liquid component after clotting and lacks those factors.",
@@ -20077,6 +20532,13 @@
       "Absolute erythrocytosis",
       "No intravascular volume change"
     ],
+    "optionExplanations": [
+      "The reduced concentration reflects plasma expansion, not pathologic destruction of circulating red cells.",
+      "Plasma volume rises more than red-cell mass in pregnancy, lowering measured hematocrit and producing physiologic dilutional anemia.",
+      "The stated mismatch concerns plasma and RBC volume rather than an absolute platelet deficiency.",
+      "Absolute erythrocytosis requires increased red-cell mass out of proportion to plasma, the opposite relationship.",
+      "Pregnancy does change intravascular volume; plasma expansion is the key premise of the stem."
+    ],
     "answer": 1,
     "rationale": "Plasma expands more than red-cell mass in normal pregnancy, causing slight physiologic anemia.",
     "type": "mcq",
@@ -20115,6 +20577,13 @@
       "Platelet fragmentation",
       "IgE release",
       "BPG depletion"
+    ],
+    "optionExplanations": [
+      "EPO regulation primarily changes red-cell production and suppression would not produce compensatory fluid retention.",
+      "Reduced renal perfusion stimulates renin and RAAS, increasing sodium and water retention and expanding plasma volume.",
+      "Platelet fragmentation occurs from megakaryocytes and does not mediate renal compensation for low cardiac output.",
+      "IgE release is an allergic immune process, not a renal-perfusion response.",
+      "BPG changes hemoglobin oxygen affinity and does not directly expand plasma volume."
     ],
     "answer": 1,
     "rationale": "Renal hypoperfusion triggers renin release and RAAS compensation with fluid retention.",
@@ -20155,6 +20624,13 @@
       "Lamina propria",
       "Buffy coat"
     ],
+    "optionExplanations": [
+      "Red marrow is already actively hematopoietic and is not the adipocyte-rich reserve described.",
+      "Yellow marrow contains abundant adipocytes but can be recruited back toward hematopoiesis when demand rises.",
+      "Peripheral blood carries mature cells and is not a marrow compartment capable of resuming hematopoiesis.",
+      "Lamina propria is loose connective tissue beneath epithelia, not an adipocyte-rich marrow reserve.",
+      "The buffy coat is a centrifuged blood layer of leukocytes and platelets, not marrow."
+    ],
     "answer": 1,
     "rationale": "Yellow marrow is adipocyte-rich but retains hematopoietic capacity.",
     "type": "mcq",
@@ -20191,6 +20667,13 @@
       "Monocyte",
       "Lymphocyte",
       "Eosinophil"
+    ],
+    "optionExplanations": [
+      "A reticulocyte is an immature erythroid cell with residual RNA, not a megakaryocyte-derived clotting fragment.",
+      "A platelet is a small anucleate megakaryocyte fragment containing granules that support adhesion and clotting.",
+      "A monocyte is a large nucleated agranular leukocyte and does not match a small anucleate fragment.",
+      "A lymphocyte is a nucleated agranular leukocyte, not a fragment with hemostatic granules.",
+      "An eosinophil is a nucleated granulocyte with characteristic granules, not an anucleate platelet."
     ],
     "answer": 1,
     "rationale": "Platelets are anucleate megakaryocyte fragments with clotting and adhesion factors.",
@@ -20233,6 +20716,13 @@
       "Basophil",
       "All are granulocytes"
     ],
+    "optionExplanations": [
+      "Neutrophils are granulocytes with specific granules and a multilobed nucleus.",
+      "Eosinophils are granulocytes recognized by prominent eosinophilic granules.",
+      "Monocytes are agranular leukocytes, grouped with lymphocytes rather than neutrophils, eosinophils, and basophils.",
+      "Basophils are granulocytes with dark basophilic granules.",
+      "Because monocytes are agranulocytes, the statement that all listed cells are granulocytes is false."
+    ],
     "answer": 2,
     "rationale": "Monocytes and lymphocytes are agranulocytes; the three named granulocytes have recognizable granules.",
     "type": "mcq",
@@ -20272,6 +20762,13 @@
       "Reticulocyte",
       "Plasma-cell lineage"
     ],
+    "optionExplanations": [
+      "Common lymphoid progenitors generate lymphocyte lineages, not erythrocytes and platelets.",
+      "The common myeloid progenitor gives rise to erythroid/megakaryocytic lineages as well as other myeloid cells.",
+      "A mature-cell pool contains differentiated products and is not the progenitor branch requested.",
+      "A reticulocyte is a late erythroid cell, not the shared branch that also produces platelets.",
+      "The plasma-cell lineage belongs to differentiated B lymphocytes and cannot generate erythrocytes or platelets."
+    ],
     "answer": 1,
     "rationale": "Erythrocytes and platelets are on the myeloid branch.",
     "type": "mcq",
@@ -20308,6 +20805,13 @@
       "Basophilic erythroblast",
       "Normoblast",
       "Myeloblast"
+    ],
+    "optionExplanations": [
+      "Reticulocytes have expelled their nucleus but retain residual RNA and normally circulate as a small fraction of peripheral red cells.",
+      "Proerythroblasts are early nucleated marrow precursors and are not normally present in peripheral blood.",
+      "Basophilic erythroblasts are nucleated marrow-stage cells, not the circulating residual-RNA erythroid population.",
+      "Normoblasts are nucleated late erythroid precursors that normally remain in marrow before nuclear extrusion.",
+      "Myeloblasts are granulocytic precursors rather than erythroid cells and are not normal peripheral-smear residents."
     ],
     "answer": 0,
     "rationale": "Reticulocytes and erythrocytes leave marrow for peripheral blood; reticulocytes retain nucleic-acid remnants.",
@@ -20346,6 +20850,13 @@
       "Hemoglobin tetramer",
       "Fibrillin glycoprotein"
     ],
+    "optionExplanations": [
+      "Myoglobin is a monomer with one heme and binds one oxygen molecule, so it lacks quaternary structure.",
+      "Free heme is a prosthetic group rather than a four-subunit protein and cannot bind four oxygen molecules cooperatively.",
+      "Albumin is a monomeric plasma carrier without four heme groups and is not the principal oxygen-binding tetramer.",
+      "Hemoglobin has alpha2beta2 quaternary structure with one heme per subunit, allowing binding of four oxygen molecules.",
+      "Fibrillin is an extracellular-matrix glycoprotein and contains neither hemoglobin subunits nor oxygen-binding hemes."
+    ],
     "answer": 3,
     "rationale": "Hb is an alpha2beta2 tetramer with one heme per chain and maximal binding of four O2.",
     "type": "mcq",
@@ -20382,6 +20893,13 @@
       "CarboxyHb",
       "MetHb",
       "HbF"
+    ],
+    "optionExplanations": [
+      "Oxyhemoglobin contains oxygen bound to ferrous Fe2+ heme; oxidation to Fe3+ produces a different species.",
+      "Deoxyhemoglobin is unliganded ferrous Fe2+ hemoglobin, not oxidized ferric hemoglobin.",
+      "Carboxyhemoglobin contains carbon monoxide bound to ferrous heme and is not defined by Fe3+ oxidation.",
+      "Methemoglobin contains ferric Fe3+ heme, which cannot bind oxygen normally.",
+      "HbF identifies the fetal globin-chain composition and does not mean its iron is oxidized to Fe3+."
     ],
     "answer": 3,
     "rationale": "The course table identifies ferri Hb (methemoglobin) as Fe3+ with water ligand.",
@@ -20420,6 +20938,13 @@
       "It binds BPG centrally",
       "It expels bound oxygen"
     ],
+    "optionExplanations": [
+      "Iron oxidation would create methemoglobin; it is not how distal histidine alters carbon-monoxide affinity.",
+      "Distal histidine does not remove the porphyrin ring and instead interacts sterically with a bound ligand.",
+      "Distal histidine forces carbon monoxide into a bent geometry, reducing its otherwise very high preference for heme.",
+      "BPG binds in the central cavity of deoxyhemoglobin, not to distal histidine at the heme ligand site.",
+      "Distal histidine helps position oxygen rather than expelling it completely from heme."
+    ],
     "answer": 2,
     "rationale": "Distal His forces CO into a bent configuration, lowering its affinity relative to free heme.",
     "type": "mcq",
@@ -20456,6 +20981,13 @@
       "No allosteric Hb change",
       "MetHb formation in RBCs",
       "Higher fetal BPG binding"
+    ],
+    "optionExplanations": [
+      "BPG stabilizes the tense deoxy state, lowering oxygen affinity and shifting the dissociation curve to the right.",
+      "A left shift represents higher affinity, the opposite of the effect of increased BPG.",
+      "BPG is an allosteric regulator of hemoglobin, so increasing it does change oxygen binding.",
+      "Methemoglobin forms by oxidation of Fe2+ to Fe3+, not by increasing BPG.",
+      "HbF binds BPG less strongly because of its gamma chains; increasing adult RBC BPG does not create stronger fetal binding."
     ],
     "answer": 0,
     "rationale": "BPG stabilizes tense Hb and decreases O2 affinity, shifting the saturation curve right.",
@@ -20496,6 +21028,13 @@
       "Maternal Hb cannot bind O2 at the placenta",
       "HbF lacks a heme prosthetic group"
     ],
+    "optionExplanations": [
+      "Stronger BPG binding would stabilize tense HbF and lower its oxygen affinity, opposing placental oxygen uptake.",
+      "HbF contains functional ferrous heme; ferric Fe3+ would define methemoglobin rather than fetal hemoglobin.",
+      "HbF binds BPG less strongly than HbA, preserving higher oxygen affinity and drawing oxygen from maternal blood.",
+      "Maternal hemoglobin does bind oxygen; transfer depends on the relative affinities of maternal HbA and fetal HbF.",
+      "HbF has heme in each globin chain; lacking heme would prevent the oxygen transport described."
+    ],
     "answer": 2,
     "rationale": "HbF binds BPG less strongly than HbA; in BPG presence this preserves higher HbF O2 affinity and promotes maternal-to-fetal O2 transfer.",
     "type": "mcq",
@@ -20535,6 +21074,13 @@
       "CO binding to hemoglobin",
       "Loss of Hb beta chains"
     ],
+    "optionExplanations": [
+      "Lower BPG would left-shift hemoglobin and retain oxygen, opposing improved unloading to hypoxic tissues.",
+      "Switching adults to fetal hemoglobin is not the normal altitude adaptation described and would increase affinity.",
+      "Persistent hypoxia raises RBC BPG, right-shifting hemoglobin so oxygen unloads more readily in tissues.",
+      "Carbon monoxide occupies heme and increases the affinity of remaining sites, impairing rather than supporting tissue oxygen delivery.",
+      "Loss of beta chains is a globin disorder, not an adaptive way to improve altitude oxygen unloading."
+    ],
     "answer": 2,
     "rationale": "Hypoxia increases BPG, reducing affinity and increasing tissue O2 dumping.",
     "type": "mcq",
@@ -20571,6 +21117,13 @@
       "Iron oxidation",
       "BPG depletion",
       "Antihistamine"
+    ],
+    "optionExplanations": [
+      "Bicarbonate can address selected acid-base disturbances but does not displace carbon monoxide from hemoglobin.",
+      "One hundred percent oxygen raises oxygen tension and accelerates carbon-monoxide dissociation from hemoglobin.",
+      "Oxidizing heme creates methemoglobin and further compromises oxygen carriage rather than treating carbon-monoxide binding.",
+      "BPG depletion raises hemoglobin oxygen affinity and does not directly remove bound carbon monoxide.",
+      "Antihistamines block histamine signaling and have no role in promoting carbon-monoxide dissociation."
     ],
     "answer": 1,
     "rationale": "The lecture specifies 100% oxygen for CO poisoning.",
@@ -20613,6 +21166,13 @@
     ],
     "answer": 4,
     "rationale": "At pH=pKa, conjugate base and weak acid are equal.",
+    "optionExplanations": [
+      "A 0.1 ratio means conjugate base is one tenth of weak acid, so Henderson-Hasselbalch gives pH = pKa - 1.",
+      "For a ratio of 0.5, pH = pKa + log(0.5), which places pH about 0.30 unit below pKa rather than equal to it.",
+      "A ratio of 10 places pH one unit above pKa because log(10) = 1.",
+      "A ratio of 100 places pH two units above pKa because log(100) = 2.",
+      "When pH equals pKa, log([A-]/[HA]) must be zero, so [A-] and [HA] are equal and the ratio is 1."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -20652,6 +21212,13 @@
     ],
     "answer": 3,
     "rationale": "When OH- is added, HA donates H+; H+ and OH- form H2O and HA becomes A-, limiting the pH rise.",
+    "optionExplanations": [
+      "A- is the conjugate base and is positioned to accept H+, not to supply the proton needed to convert added OH- into water.",
+      "Buffers reduce the size of a pH change but do not prevent all change until one component is completely consumed.",
+      "Dissolved CO2 participates in the bicarbonate system through carbonic acid, but CO2 alone is not the general proton-donating component described here.",
+      "The weak acid HA donates H+ to added OH-, forming water and converting HA to A-, thereby limiting the pH rise.",
+      "Na+ is a spectator cation in this setting and does not become a weak acid that donates protons."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -20691,6 +21258,13 @@
     ],
     "answer": 4,
     "rationale": "Henry law: 0.03 x 40 = 1.2 mM.",
+    "optionExplanations": [
+      "This would result from multiplying 0.03 by 10 mm Hg, not by the stated 40 mm Hg.",
+      "This is half the calculated concentration and would correspond to a pCO2 of 20 mm Hg at the same solubility.",
+      "This is a one-place decimal error: 0.03 multiplied by 40 equals 1.2, not 12.",
+      "A gas partial pressure is not itself the dissolved concentration; it must be multiplied by the solubility coefficient.",
+      "[CO2(d)] = 0.03 mM/mm Hg x 40 mm Hg = 1.2 mM."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -20730,6 +21304,13 @@
     ],
     "answer": 1,
     "rationale": "6.1 + log(24/1.2) = 6.1 + log20, approximately 7.4.",
+    "optionExplanations": [
+      "6.1 is the bicarbonate system pKa term alone and omits the logarithmic contribution from the 20:1 bicarbonate-to-CO2 ratio.",
+      "pH = 6.1 + log(24/1.2) = 6.1 + log(20), approximately 7.4.",
+      "A pH near 6.4 would imply a much smaller base-to-acid ratio than 20:1.",
+      "A pH of 7.1 is one full unit above 6.1 and would correspond to a ratio of 10 rather than 20.",
+      "A pH of 8.1 would require a ratio near 100, far larger than 24/1.2."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -20769,6 +21350,13 @@
     ],
     "answer": 2,
     "rationale": "The pH is acidemic, pCO2 is elevated, and bicarbonate is normal, so the primary process is uncompensated respiratory acidosis.",
+    "optionExplanations": [
+      "Metabolic acidosis requires a primary fall in bicarbonate; here HCO3- is 24 mEq/L, while pCO2 is elevated.",
+      "Metabolic alkalosis has a primary rise in bicarbonate and usually alkalemia, neither of which is present.",
+      "The patient has acidemia with elevated pCO2 and normal bicarbonate, identifying a primary respiratory acidosis without substantial renal compensation yet.",
+      "Respiratory alkalosis is caused by a primary decrease in pCO2 and produces alkalemia, the opposite pattern.",
+      "A pH of 7.26 is not normal, and normal HCO3- with high pCO2 does not indicate full compensation."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -20808,6 +21396,13 @@
     ],
     "answer": 3,
     "rationale": "For a respiratory primary disturbance, renal/metabolic compensation takes 2-4 days and retains HCO3- to move the HCO3-/CO2(d) ratio toward 20:1.",
+    "optionExplanations": [
+      "Excreting bicarbonate would lower plasma HCO3- and worsen, not compensate for, respiratory acidosis.",
+      "Additional CO2 retention increases carbonic acid and drives pH lower, so it is not compensatory.",
+      "Physiologic compensation does occur; the kidneys alter acid excretion and bicarbonate handling over days.",
+      "During sustained respiratory acidosis, the kidneys retain/generate HCO3- and excrete acid over roughly 2-4 days, raising the bicarbonate-to-CO2 ratio.",
+      "The lungs regulate volatile CO2, not bicarbonate directly; renal handling changes HCO3-."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -20847,6 +21442,13 @@
     ],
     "answer": 1,
     "rationale": "Changing the primary abnormal pCO2 is correction; renal bicarbonate change is compensation.",
+    "optionExplanations": [
+      "Compensation would be a secondary physiologic response, such as renal bicarbonate retention, while the primary respiratory cause remains.",
+      "Ventilation directly removes excess CO2 and reverses the primary disturbance, so it is correction of the respiratory acidosis.",
+      "Anion-gap calculation classifies metabolic acidosis using electrolytes; it does not describe lowering pCO2 by ventilation.",
+      "Metabolic alkalosis is a primary bicarbonate elevation, not restoration of ventilation after oversedation.",
+      "The chloride shift is erythrocyte bicarbonate-chloride exchange during CO2 transport, not the therapeutic distinction being tested."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -20884,6 +21486,13 @@
     ],
     "answer": 2,
     "rationale": "AG = 140 - 104 - 12 = 24.",
+    "optionExplanations": [
+      "An anion gap of 12 would be obtained if bicarbonate were 24 mEq/L, not the stated 12.",
+      "This underestimates the gap by 4; chloride plus bicarbonate equals 116, leaving 24 unmeasured anions.",
+      "AG = Na+ - (Cl- + HCO3-) = 140 - (104 + 12) = 24 mEq/L.",
+      "This would result from omitting part of the measured-anion sum or using the wrong bicarbonate value.",
+      "This incorrectly subtracts only chloride from sodium and ignores bicarbonate: 140 - 104 = 36."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -20921,6 +21530,13 @@
     ],
     "answer": 0,
     "rationale": "Varied bundle orientation provides strength in a variety of directions.",
+    "optionExplanations": [
+      "Thick type I collagen bundles are interwoven in multiple orientations, so tension arriving from different directions is distributed across aligned fibers.",
+      "Hydrated ground substance is prominent in loose connective tissue and resists compression, but it does not explain multidirectional tensile strength.",
+      "Type III collagen forms delicate reticular networks; dense irregular connective tissue is dominated by type I bundles.",
+      "Fibroblasts maintain extracellular matrix, but their absence would not create the multidirectional collagen architecture.",
+      "Elastic lamellae permit stretch and recoil in elastic tissues; dermal dense irregular connective tissue resists tension through irregular type I collagen bundles."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -20950,7 +21566,7 @@
     "src": "T",
     "stem": "Why does reticular stroma support lymph-node function?",
     "options": [
-      "It slows fluid and cell movement through the stroma",
+      "It forms a barrier that prevents cells and fluid from entering the stroma",
       "It forms tendon-like bundles",
       "Type III mesh permits passage but slows flow",
       "It stores neutral lipid",
@@ -20958,6 +21574,13 @@
     ],
     "answer": 2,
     "rationale": "Type III mesh permits movement while slowing flow to maximize interactions.",
+    "optionExplanations": [
+      "Reticular stroma permits rather than prevents cells and fluid from entering its branching meshwork.",
+      "Tendon-like parallel type I collagen bundles characterize dense regular connective tissue, not lymph-node reticular stroma.",
+      "Branching type III reticular fibers create a supportive mesh that permits immune-cell and fluid passage while slowing flow for surveillance.",
+      "Neutral lipid storage is the function of adipocytes, not the reticular fiber network.",
+      "Plasma cells secrete immunoglobulins; the reticular stroma provides structural support rather than antibody secretion."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21001,6 +21624,13 @@
     ],
     "answer": 2,
     "rationale": "The lecture identifies viruses as acellular; bacteria, fungi, protozoa, and helminths are cellular organisms.",
+    "optionExplanations": [
+      "Bacteria are cellular prokaryotes with a membrane, ribosomes, and metabolic machinery.",
+      "Fungi are cellular eukaryotes, whether unicellular yeasts or multicellular molds.",
+      "A virus is acellular and must use a host cell's machinery for replication.",
+      "Protozoa are single-celled eukaryotic organisms, so they are cellular.",
+      "Helminths are multicellular eukaryotic animals and therefore cellular."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21038,6 +21668,13 @@
     ],
     "answer": 2,
     "rationale": "The course explicitly links 70S bacterial versus 80S eukaryotic ribosomes to selective protein-synthesis inhibition.",
+    "optionExplanations": [
+      "Chromosome shape differs, but a translation inhibitor acts on ribosomes rather than on chromosome topology.",
+      "Binary fission and mitosis describe cell division, not the molecular machinery targeted by a translation inhibitor.",
+      "Bacterial 70S ribosomes differ structurally from human cytoplasmic 80S ribosomes, permitting selective inhibition of bacterial protein synthesis.",
+      "Cell-wall differences explain selectivity of cell-wall drugs, but the stated drug specifically blocks translation.",
+      "Ploidy concerns chromosome copy number and does not create the ribosomal target difference responsible for translation selectivity."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21076,6 +21713,13 @@
     ],
     "answer": 3,
     "rationale": "The lecture names thin Treponema pallidum among organisms not seen on routine light microscopy despite its length.",
+    "optionExplanations": [
+      "Yeasts are generally large enough to be seen by light microscopy; excessive size does not make them invisible.",
+      "Spirochetes possess a plasma membrane; invisibility on routine light microscopy is a size/resolution issue, not absence of a membrane.",
+      "Helminths and their eggs are much larger than bacteria and are not inferred simply because a pathogen is not resolved.",
+      "Very thin spirochetes can fall below routine bright-field light-microscope resolution even when host cells are readily visible.",
+      "The preparation explicitly contains visible host cells, so sample acellularity cannot explain the missing pathogen."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21114,6 +21758,13 @@
     ],
     "answer": 0,
     "rationale": "Gram-negative cells have thin peptidoglycan, lose the violet complex during decolorization, and take up safranin.",
+    "optionExplanations": [
+      "Alcohol disrupts the Gram-negative outer membrane, and the thin peptidoglycan layer cannot retain the crystal-violet-iodine complex, so safranin stains the cells pink.",
+      "Mycolic acid retention of carbol fuchsin describes an acid-fast stain, not Gram decolorization followed by safranin.",
+      "Bacteria lack a membrane-bound nucleus, and nuclear organization does not determine Gram-stain retention.",
+      "Internal flagella help spirochete motility but do not determine retention of the violet-iodine complex.",
+      "Surface-area-to-volume ratio influences exchange and growth but is not the structural basis of Gram staining."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21151,6 +21802,13 @@
     ],
     "answer": 3,
     "rationale": "Acid-fast mycobacteria retain red carbol fuchsin because their waxy mycolic-acid layer resists acid-alcohol decolorization.",
+    "optionExplanations": [
+      "Thick peptidoglycan explains Gram-positive staining, but it does not confer acid-fast retention after acid-alcohol treatment.",
+      "Porins are channels in Gram-negative outer membranes and do not retain carbol fuchsin during acid-fast staining.",
+      "Bacteria lack a nuclear envelope, so this cannot explain red rods.",
+      "Long-chain mycolic acids create a waxy cell envelope that retains hot carbol fuchsin despite acid-alcohol decolorization.",
+      "Cellulose is a plant wall polymer and is not the acid-fast determinant of these bacteria."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21189,6 +21847,13 @@
     ],
     "answer": 1,
     "rationale": "Catalase converts hydrogen peroxide to water and oxygen, producing visible bubbles.",
+    "optionExplanations": [
+      "Coagulase converts fibrinogen to fibrin and is detected by clot formation, not oxygen bubbles after peroxide.",
+      "Catalase decomposes hydrogen peroxide into water and oxygen; immediate bubbles are released O2.",
+      "Urease hydrolyzes urea to ammonia and CO2 and is detected by alkalinization, not this peroxide reaction.",
+      "Cytochrome c oxidase transfers electrons to oxygen in respiration and is detected with an oxidase reagent color change.",
+      "Peptidoglycan synthase builds the cell wall and does not generate bubbles from hydrogen peroxide."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21226,6 +21891,13 @@
     ],
     "answer": 2,
     "rationale": "The course uses Lactobacilli as an example of resident microbiota inhibiting pathogen colonization.",
+    "optionExplanations": [
+      "Lactobacilli do not induce sporulation in all bacteria; their protection comes from competition and local environmental effects.",
+      "Resident organisms can compete for attachment sites, but they do not remove the host's receptors.",
+      "Resident Lactobacilli interfere with pathogen colonization by occupying niches and producing conditions or substances that suppress competitors.",
+      "Normal urogenital sites are colonized rather than sterile, even when Lactobacilli are protective.",
+      "Bacteria are prokaryotes and do not acquire membrane-bound nuclei through bacterial interference."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21263,6 +21935,13 @@
     ],
     "answer": 4,
     "rationale": "The lecture identifies skin S. epidermidis as a possible bloodstream pathogen after surgery or catheter placement.",
+    "optionExplanations": [
+      "A skin commensal can be a contaminant, but recovery in a compatible catheter-associated bloodstream infection can represent true disease.",
+      "Blood is normally sterile; catheter placement does not establish normal resident flora within blood.",
+      "Bacteria such as S. epidermidis commonly cause device-associated infection, so this is not restricted to fungi.",
+      "Intestinal dysbiosis is a community imbalance in the gut and is not proven by a skin commensal on an intravascular device.",
+      "A catheter breaches the skin barrier and provides a surface for biofilm, allowing a normally harmless skin commensal to become opportunistically pathogenic."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21302,6 +21981,13 @@
     ],
     "answer": 3,
     "rationale": "The course lists vitamin K, B vitamins, and essential amino acids as microbiota-derived nutrients.",
+    "optionExplanations": [
+      "Insulin is a peptide hormone secreted by pancreatic beta cells, not a nutrient synthesized by gut microbes.",
+      "Cortisol is a steroid hormone produced by the adrenal cortex, not a microbiota product.",
+      "Hemoglobin is synthesized in erythroid precursors and is not made by gut flora.",
+      "Gut bacteria synthesize vitamin K, which the host can use in gamma-carboxylation of several clotting factors.",
+      "Bile acids originate from hepatic cholesterol metabolism; microbes can modify them, but bile acid is not the listed microbiota-produced nutrient."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21339,6 +22025,13 @@
     ],
     "answer": 3,
     "rationale": "The lower respiratory tract is on the lecture's generally sterile-site list; the others are colonized locations.",
+    "optionExplanations": [
+      "The oral cavity contains abundant resident microbiota on teeth and mucosal surfaces.",
+      "The colon carries one of the body's densest microbial communities.",
+      "The female genital mucosa normally contains microbiota, often including Lactobacillus species.",
+      "The lower respiratory tract is on the course list of sites generally considered devoid of normal microbiota.",
+      "The skin surface is colonized by resident organisms such as coagulase-negative staphylococci."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21376,6 +22069,13 @@
     ],
     "answer": 3,
     "rationale": "The lecture defines dysbiosis as a population shift that permits a potentially harmful organism to overgrow, using antibiotic-associated diarrhea as the example.",
+    "optionExplanations": [
+      "Binary fission is bacterial cell division; it does not name the antibiotic-induced community imbalance that permits overgrowth.",
+      "Acid-fastness is a staining property caused by a mycolic-acid-rich envelope, unrelated to loss of microbial balance.",
+      "Transient bacteremia is temporary presence of bacteria in blood, not intestinal overgrowth after antibiotics.",
+      "Broad-spectrum antibiotics disrupt the normal microbial community, and the resulting dysbiosis permits a low-abundance organism to overgrow.",
+      "Tissue tropism describes a pathogen's preference for particular tissues or cells, not a shift in microbiota composition."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21413,6 +22113,13 @@
     ],
     "answer": 2,
     "rationale": "The lecture explains that inactive spores escape antibiotic effects; after other bacteria are reduced, they can germinate and overgrow.",
+    "optionExplanations": [
+      "C. difficile remains a prokaryotic bacterium; it does not transform into a eukaryote.",
+      "C. difficile is an anaerobe, so disease is not explained by a new requirement for high colonic oxygen tension.",
+      "Dormant spores can withstand antibiotic exposure, then germinate and expand when susceptible competing microbiota have been depleted.",
+      "C. difficile colonizes the intestine; it is not normally restricted to the bloodstream.",
+      "C. difficile uses bacterial 70S ribosomes, and ribosome type does not explain spore survival and post-antibiotic overgrowth."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21452,6 +22159,13 @@
     ],
     "answer": 4,
     "rationale": "The lecture defines synbiotics as synergistic mixtures of probiotics and prebiotics.",
+    "optionExplanations": [
+      "A commensal is an organism that benefits without harming the host; it is not a combined supplement.",
+      "Dysbiosis is an unfavorable disruption of a microbial community, not a probiotic-prebiotic mixture.",
+      "A pathovar is a pathogenic variant within a bacterial species distinguished by host or disease traits.",
+      "Bacteremia means bacteria are present in the bloodstream.",
+      "A synbiotic combines live beneficial microorganisms (probiotics) with substrates that support them (prebiotics)."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21491,6 +22205,13 @@
     ],
     "answer": 4,
     "rationale": "The lecture emphasizes knowing normal site flora because commensals can obscure a pathogen and site determines whether an organism is concerning.",
+    "optionExplanations": [
+      "Colonized sites routinely yield commensals, so treating every isolate would mistake normal flora for pathogens.",
+      "Cultures from colonized sites can still identify pathogens; they require contextual interpretation rather than automatic dismissal.",
+      "Rarity alone does not establish causation and must be interpreted against the site's expected flora and clinical picture.",
+      "Gram stain provides morphology and staining class but cannot by itself establish which cultured organism caused disease.",
+      "First compare the recovered organisms with the normal microbiota expected at that anatomic site, then interpret possible pathogens in clinical context."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21528,6 +22249,13 @@
     ],
     "answer": 2,
     "rationale": "The lecture lists mannan, glucan, and chitin in fungal walls and specifically excludes peptidoglycan, teichoic acids, and LPS.",
+    "optionExplanations": [
+      "Peptidoglycan, containing muramic acid, is the defining bacterial cell-wall polymer rather than a fungal component.",
+      "Lipopolysaccharide is found in the outer membrane of Gram-negative bacteria, not fungal walls.",
+      "Chitin is a characteristic structural polysaccharide in fungal cell walls and is absent from bacterial peptidoglycan.",
+      "Teichoic acids are associated with Gram-positive bacterial cell walls.",
+      "Ribitol can occur in bacterial teichoic acids and is not the characteristic fungal wall polymer."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21566,6 +22294,13 @@
     ],
     "answer": 3,
     "rationale": "The lecture names shared eukaryotic biology as the main therapy problem.",
+    "optionExplanations": [
+      "Fungi do have plasma membranes, which commonly contain ergosterol.",
+      "Human cells lack chitin walls; the fungal wall is actually one source of selective targets.",
+      "Fungal cytoplasmic ribosomes are eukaryotic 80S ribosomes, not bacterial 70S ribosomes.",
+      "Because fungi and humans are both eukaryotes, many cellular processes are similar, narrowing the range of pathogen-specific drug targets and increasing toxicity risk.",
+      "Conidia are asexual fungal spores; mammalian cells do not produce them, but that fact does not explain shared cellular drug targets."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21604,6 +22339,13 @@
     ],
     "answer": 0,
     "rationale": "The course states that endemic dimorphic fungi are mold in environmental reservoirs and laboratory culture at 25 C.",
+    "optionExplanations": [
+      "Thermally dimorphic endemic fungi generally grow as filamentous molds at environmental temperature around 25 C.",
+      "The yeast form is generally favored at body temperature in host tissue, not at 25 C environmental culture conditions.",
+      "Sclerotic bodies are tissue forms of chromoblastomycosis and are not the universal environmental morphology of dimorphic fungi.",
+      "Blastoconidia are produced by budding yeasts and are not the expected exclusive morphology at 25 C.",
+      "Thermally dimorphic fungi can grow at 25 C; the temperature shifts their morphology rather than preventing growth."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21641,6 +22383,13 @@
     ],
     "answer": 0,
     "rationale": "In the course's conventional direct-microscopy-versus-culture comparison, direct microscopy is rapid but less sensitive and a negative examination does not rule out infection; obtain culture. This does not make a broader claim about every organism-specific antigen assay.",
+    "optionExplanations": [
+      "Direct microscopy can miss low organism burdens, whereas fungal culture can recover and identify viable fungi when suspicion remains high.",
+      "A negative direct examination has limited sensitivity and therefore cannot by itself exclude invasive fungal infection.",
+      "Gram classification is designed primarily for bacteria and does not replace fungal culture after a negative fungal preparation.",
+      "Urine colony counts assess urinary microbial growth and are not a general diagnostic substitute for suspected invasive mycosis.",
+      "A negative KOH/calcofluor result does not establish viral disease; further fungal testing is warranted when clinical suspicion persists."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21678,6 +22427,13 @@
     ],
     "answer": 0,
     "rationale": "Echinocandins inhibit beta-1,3-glucan synthesis, an important fungal cell-wall component.",
+    "optionExplanations": [
+      "Beta-1,3-glucan is a major fungal cell-wall polymer, so blocking its synthesis directly weakens the wall.",
+      "Ergosterol is a fungal plasma-membrane sterol; its synthesis or binding is targeted by other antifungal classes, not beta-glucan inhibition.",
+      "DNA replication occurs intracellularly and is not the structure built from beta-1,3-glucan.",
+      "The mitochondrial matrix is enclosed by mitochondrial membranes and does not contain the extracellular beta-glucan wall.",
+      "Some fungi possess capsules, but beta-1,3-glucan synthesis specifically supplies the cell wall rather than the capsule."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21715,6 +22471,13 @@
     ],
     "answer": 1,
     "rationale": "The lecture identifies NAM/muramic acid as unique to peptidoglycan and bacteria.",
+    "optionExplanations": [
+      "Ergosterol is a fungal membrane sterol and is not part of bacterial peptidoglycan.",
+      "N-acetylmuramic acid is unique to bacterial peptidoglycan, where it alternates with N-acetylglucosamine and bears peptide side chains.",
+      "Cholesterol is a major animal-cell membrane sterol and is generally not a peptidoglycan component.",
+      "Cellulose is a structural polysaccharide in plant walls, not bacterial peptidoglycan.",
+      "Sialic acid can occur on host glycoconjugates and some microbial surfaces but is not the defining peptidoglycan-only sugar."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21753,6 +22516,13 @@
     ],
     "answer": 1,
     "rationale": "Gram-negative bacteria have an outer membrane containing LPS; both groups have cytoplasmic membrane and peptidoglycan.",
+    "optionExplanations": [
+      "Both Gram-positive and Gram-negative bacteria possess a cytoplasmic membrane, so this does not distinguish their envelopes.",
+      "Gram-negative bacteria have an additional outer membrane containing LPS outside a thin peptidoglycan layer; Gram-positive bacteria lack this outer membrane.",
+      "Both groups contain peptidoglycan, although it is much thicker in Gram-positive walls.",
+      "Both groups use 70S cytoplasmic ribosomes, which are not an envelope feature.",
+      "Pili occur in many bacteria but are not the defining envelope distinction between Gram classes."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21790,6 +22560,13 @@
     ],
     "answer": 3,
     "rationale": "Lipid A is the toxic component of LPS; the lecture links LPS to inflammation, endotoxic shock, and DIC.",
+    "optionExplanations": [
+      "O antigen is the variable outer polysaccharide used for serotyping LPS, but the toxic inflammatory activity resides in Lipid A.",
+      "Teichoic acid is a Gram-positive wall component and is not the endotoxin trigger in Gram-negative bacteremia.",
+      "Capsules impede phagocytosis but do not constitute the LPS component directly responsible for endotoxin shock.",
+      "Lipid A anchors LPS in the outer membrane and is the endotoxin moiety that drives intense cytokine release, shock, and DIC.",
+      "Flagellin can activate innate receptors, but it is not the direct toxic component of LPS responsible for classic endotoxemia."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21829,6 +22606,13 @@
     ],
     "answer": 0,
     "rationale": "The course describes the outer membrane and porins as a major permeability barrier that excludes large molecules such as vancomycin.",
+    "optionExplanations": [
+      "The Gram-negative outer membrane is a permeability barrier, and bulky vancomycin cannot efficiently traverse it to reach periplasmic peptidoglycan.",
+      "Gram-negative bacteria do contain a thin peptidoglycan layer in the periplasm.",
+      "Lipid A activates inflammation but does not enzymatically cleave vancomycin.",
+      "Teichoic acids occur mainly in Gram-positive walls and are not Gram-negative drug efflux pumps.",
+      "Capsules may impede host defenses, but they do not digest vancomycin."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21867,6 +22651,13 @@
     ],
     "answer": 4,
     "rationale": "The course names capsule as anti-phagocytic through prevention of complement opsonization.",
+    "optionExplanations": [
+      "A flagellum provides motility and does not primarily prevent complement opsonization.",
+      "Loss of ribosomes would prevent protein synthesis and viability rather than selectively increase phagocytic clearance.",
+      "Plasmids carry accessory genes but are not themselves the surface structure that blocks opsonization.",
+      "Endospores provide environmental resistance during dormancy, not routine evasion of complement-mediated phagocytosis by vegetative cells.",
+      "A capsule can inhibit complement deposition and phagocyte recognition, so its absence increases opsonization and clearance."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21905,6 +22696,13 @@
     ],
     "answer": 2,
     "rationale": "Type I pili bind mannose residues and are associated with cystitis in the lecture.",
+    "optionExplanations": [
+      "Flagella generate motility, whereas receptor-specific adherence to bladder epithelium is mediated by adhesins on pili.",
+      "Lipoteichoic acid anchors Gram-positive wall polymers and is not the mannose-binding uropathogen adhesin.",
+      "Type I pili carry adhesins that bind mannose-containing receptors on uroepithelial cells.",
+      "Lipid A is the toxic membrane anchor of Gram-negative LPS, not an attachment appendage.",
+      "An endospore coat protects dormant spores and does not mediate epithelial adherence."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21943,6 +22741,13 @@
     ],
     "answer": 1,
     "rationale": "The lecture specifies sex pili in horizontal gene transfer by conjugation.",
+    "optionExplanations": [
+      "ATP synthesis occurs mainly through the cytoplasmic membrane electron-transport system, not the sex pilus.",
+      "A sex pilus links donor and recipient bacteria to enable conjugative transfer of DNA, commonly a plasmid.",
+      "Peptidoglycan crosslinking is performed by transpeptidases in cell-wall synthesis.",
+      "Endotoxin release involves Gram-negative outer-membrane LPS, not sex-pilus function.",
+      "Spore germination is the return of an endospore to vegetative growth and does not require a sex pilus."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -21982,6 +22787,13 @@
     ],
     "answer": 3,
     "rationale": "The course uses naked poliovirus as the environmentally resistant, fecal-oral example.",
+    "optionExplanations": [
+      "Enveloped viruses are generally more vulnerable to acid, drying, detergents, and environmental exposure because disruption of the lipid membrane abolishes infectivity.",
+      "Viruses require a protein capsid around their genome; 'capsid-free virus' is not the stable structural class described.",
+      "Viruses may carry RNA or DNA, so being 'DNA-free' does not predict exceptional environmental stability.",
+      "Naked viruses lack a fragile lipid envelope, making them comparatively resistant to acid, drying, and prolonged environmental exposure.",
+      "A host-cell vesicle is not a viral structural class and would not account for acid-resistant infectious virions."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22020,6 +22832,13 @@
     ],
     "answer": 4,
     "rationale": "Enveloped viruses are more susceptible to desiccation because their lipid envelope is fragile.",
+    "optionExplanations": [
+      "Drying may damage virions, but the defining labile component suggested by this pattern is lipid rather than necessarily the DNA genome.",
+      "Capsids of naked viruses are relatively resistant to drying, so loss of infectivity specifically points away from capsid-only structure.",
+      "Host ribosomes perform translation inside cells; desiccation sensitivity instead reflects damage to the virion's fragile lipid envelope.",
+      "The host-cell receptor is on susceptible cells, not within the dried virus stock.",
+      "Lipid envelopes are fragile and readily disrupted by drying, so enveloped viruses often lose infectivity outside the host."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22057,6 +22876,13 @@
     ],
     "answer": 2,
     "rationale": "Binding of viral protein to a host receptor is adsorption and determines tissue tropism.",
+    "optionExplanations": [
+      "Uncoating occurs after entry; absent receptor binding prevents the virus from reaching this step.",
+      "Genome replication depends on prior cell entry and is not the first step directly controlled by a surface receptor.",
+      "Viral attachment or adsorption requires a compatible host-cell receptor, which determines cellular tropism at the entry stage.",
+      "Assembly occurs after viral components are produced and is not directly selected by the host surface receptor.",
+      "Egress releases completed virions and occurs long after receptor-dependent attachment."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22096,6 +22922,13 @@
     ],
     "answer": 2,
     "rationale": "Envelope glycoproteins are incorporated into host membrane before budding and mediate attachment.",
+    "optionExplanations": [
+      "A viral transcriptase functions inside an infected cell or virion and is not the membrane spike acquired during budding.",
+      "Viral nucleic acid is packaged inside the virion rather than embedded in the host plasma membrane.",
+      "Viral envelope glycoproteins are inserted into the host membrane before budding, allowing the emerging virion to acquire receptor-binding spikes in its envelope.",
+      "Viral proteases process viral polyproteins and are not generally the surface proteins embedded for budding.",
+      "Capsid proteins assemble around the genome inside the cell; envelope glycoproteins, not capsid, are inserted into the plasma membrane."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22134,6 +22967,13 @@
     ],
     "answer": 0,
     "rationale": "Positive-sense RNA can act directly as mRNA for host ribosomes.",
+    "optionExplanations": [
+      "Positive-sense ssRNA has the same polarity as mRNA, so purified genomic RNA can be translated immediately by host ribosomes and initiate infection.",
+      "Negative-sense ssRNA is complementary to mRNA and first requires a viral RNA-dependent RNA polymerase to make positive-sense transcripts.",
+      "Double-stranded RNA must be transcribed by viral polymerase before host ribosomes can translate a positive-sense RNA strand.",
+      "Single-stranded DNA must first be converted to a transcriptionally usable DNA form and then transcribed; it is not directly translated.",
+      "Double-stranded DNA must be transcribed into mRNA before translation and therefore cannot function directly as mRNA."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22172,6 +23012,13 @@
     ],
     "answer": 4,
     "rationale": "Negative RNA is not directly translatable; virion-associated RdRp makes the positive-strand mRNA.",
+    "optionExplanations": [
+      "Host ribosomes are functional, but they can translate only positive-sense mRNA, not a negative-sense viral template.",
+      "Negative-sense RNA viruses do not need to copy DNA as the prerequisite to translation; they need a positive-sense RNA transcript.",
+      "The lipid envelope is acquired from host membranes and is not supplied enzymatically by RNA-dependent RNA polymerase.",
+      "Receptor binding is performed by capsid or envelope attachment proteins, not by RdRp.",
+      "Host cells lack an enzyme that converts negative-sense RNA into positive-sense mRNA, so the virion must carry RdRp to begin transcription."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22211,6 +23058,13 @@
     ],
     "answer": 1,
     "rationale": "Reverse transcriptase is RNA-dependent DNA polymerase.",
+    "optionExplanations": [
+      "RNA-dependent RNA polymerase makes RNA from an RNA template and is used by many RNA viruses, but it does not produce the retroviral DNA intermediate.",
+      "Reverse transcriptase is an RNA-dependent DNA polymerase that copies the retroviral RNA genome into DNA.",
+      "DNA-dependent DNA polymerase copies DNA from DNA and can act after a DNA intermediate exists, not during the initial RNA-to-DNA step.",
+      "DNA-dependent RNA polymerase transcribes RNA from DNA and operates in the opposite informational direction.",
+      "A ribosome translates RNA into protein; it does not synthesize nucleic acid."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22250,6 +23104,13 @@
     ],
     "answer": 4,
     "rationale": "The course sequence places attachment then penetration, followed by uncoating, replication/protein production, and assembly.",
+    "optionExplanations": [
+      "Assembly cannot precede attachment and entry because viral components have not yet entered or been synthesized.",
+      "Penetration requires prior attachment, and assembly follows genome replication rather than preceding it.",
+      "Genome replication cannot occur before attachment and uncoating deliver the genome to the proper intracellular site.",
+      "Egress is a late release step, so it cannot come before attachment and penetration.",
+      "Basic replication proceeds from attachment to penetration/entry, then genome replication and gene expression, followed by assembly and eventual egress."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22287,6 +23148,13 @@
     ],
     "answer": 2,
     "rationale": "The definitive host is defined by sexual reproduction, regardless of pathology or time spent.",
+    "optionExplanations": [
+      "An intermediate host supports larval development or asexual stages; it is not the host in which sexual reproduction occurs.",
+      "An incidental host is accidentally infected and is not required for the normal life cycle.",
+      "The definitive host is defined as the host in which the parasite undergoes sexual reproduction, so the beetle is definitive despite its species type.",
+      "A dead-end host does not transmit the parasite onward effectively and is not defined by supporting sexual reproduction.",
+      "A vector transmits a parasite, but a vector that contains sexual reproduction is specifically functioning as the definitive host, not merely 'vector only.'"
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22324,6 +23192,13 @@
     ],
     "answer": 1,
     "rationale": "This is the course definition of an incidental host.",
+    "optionExplanations": [
+      "The definitive host is part of the normal cycle and supports the parasite's sexual stage.",
+      "An incidental or accidental host becomes infected outside the usual life cycle and is not required for its completion.",
+      "An intermediate host is normally required for larval development or asexual reproduction.",
+      "A reservoir host maintains the organism in nature and serves as a source of infection, so it is not defined as accidental.",
+      "A sexual host is another description of a definitive host and participates in the normal cycle."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22361,6 +23236,13 @@
     ],
     "answer": 3,
     "rationale": "Both oxpecker and gazelle benefit, matching mutualism.",
+    "optionExplanations": [
+      "In parasitism one organism benefits while the host is harmed; here the gazelle benefits from parasite removal.",
+      "In commensalism one partner benefits while the other is essentially unaffected, but the gazelle receives a clear benefit.",
+      "The bird consumes mites, but the interaction being classified between bird and gazelle benefits both participants rather than harming the gazelle as prey.",
+      "The oxpecker obtains food and the gazelle loses harmful ectoparasites, so both organisms benefit.",
+      "Tropism is an organism's preference for a host, tissue, or cell type, not a symbiotic relationship category."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22398,6 +23280,13 @@
     ],
     "answer": 0,
     "rationale": "The course attributes low detection limit but high expense/resource use to PCR.",
+    "optionExplanations": [
+      "PCR can detect very small amounts of parasite nucleic acid but requires specialized equipment, reagents, and technical resources.",
+      "Rapid antigen tests are comparatively simple and fast, but their detection limit may be higher than molecular amplification.",
+      "A thick smear concentrates blood parasites and is inexpensive, but microscopy is operator dependent and not the expensive molecular method described.",
+      "Indirect fluorescent antibody testing detects host antibodies and requires fluorescence microscopy, but it does not provide PCR's direct low-level nucleic-acid detection.",
+      "Xenodiagnosis uses a vector to acquire and reveal infection; it is specialized but is not the course's low-limit-of-detection molecular technique."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22435,6 +23324,13 @@
     ],
     "answer": 0,
     "rationale": "The outline recommends three stool specimens in an appropriate container, without urine, antibiotics, or IV-contrast contamination, transported to the laboratory within two hours.",
+    "optionExplanations": [
+      "Parasite shedding may be intermittent, so three separately collected stool specimens with prompt proper transport improve ova-and-parasite detection.",
+      "Urine contaminates stool, can damage organisms, and is not an appropriate preservative for motility.",
+      "Antibiotics and contrast can interfere with examination; delaying until after them does not follow optimal collection guidance.",
+      "A thin blood smear evaluates blood-borne parasites and cannot replace stool examination for an intestinal parasite.",
+      "A single rectal swab provides less material and does not replace serial properly collected stool specimens for definitive O&P evaluation."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22472,6 +23368,13 @@
     ],
     "answer": 3,
     "rationale": "Multiple stages and nonproliferating forms are course treatment challenges.",
+    "optionExplanations": [
+      "Parasites possess genomes; absence of genetic material cannot explain treatment failure.",
+      "Parasites are eukaryotic organisms, not peptidoglycan-walled prokaryotes with bacterial 70S ribosomes.",
+      "Parasites are not universally dormant, and adequate exposure can still miss stage-specific vulnerabilities.",
+      "Different life-cycle stages can differ in location, metabolism, and drug susceptibility, so one agent may not eliminate every stage.",
+      "Host-cell capsules are not the general mechanism; failure reflects parasite stage biology rather than a capsule supplied by host cells."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22509,6 +23412,13 @@
     ],
     "answer": 4,
     "rationale": "Bone marrow and thymus are primary organs for development/maturation.",
+    "optionExplanations": [
+      "The spleen and lymph nodes are secondary lymphoid organs where mature lymphocytes encounter antigens.",
+      "MALT and GALT are secondary lymphoid tissues at mucosal sites, not sites of lymphocyte development.",
+      "Skin and liver contribute to immunity but are not the paired primary lymphoid organs.",
+      "Tonsils and spleen are secondary lymphoid organs that organize responses to encountered antigens.",
+      "Bone marrow supports hematopoiesis and B-cell maturation, while the thymus supports T-cell maturation; both are primary lymphoid organs."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22546,6 +23456,13 @@
     ],
     "answer": 1,
     "rationale": "The spleen filters blood-borne material.",
+    "optionExplanations": [
+      "The thymus is a primary lymphoid organ for T-cell maturation, not the main filter for blood-borne pathogens.",
+      "The spleen filters blood and organizes immune responses to circulating antigens and blood-borne microbes.",
+      "Bone marrow produces blood cells and supports B-cell maturation but is not the principal secondary organ filtering circulating pathogens.",
+      "Skin is a physical and immune barrier to external organisms rather than the main filter of the bloodstream.",
+      "The thyroid is an endocrine gland and is not a secondary lymphoid organ specialized for blood filtration."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22583,6 +23500,13 @@
     ],
     "answer": 1,
     "rationale": "Innate immunity is always on and immediately responsive.",
+    "optionExplanations": [
+      "Adaptive immunity requires activation and clonal expansion of antigen-specific lymphocytes during a first encounter, so it is not immediate.",
+      "Innate immunity uses preexisting barriers, cells, complement, and germline-encoded receptors to respond rapidly to unfamiliar microbes.",
+      "Humoral mechanisms exist in both innate and adaptive immunity, and 'humoral only' does not identify the complete immediate response arm.",
+      "Memory is a feature of prior adaptive exposure and cannot explain an immediate response to an unknown microbe.",
+      "Cell-mediated responses include adaptive T cells, which are not immediately expanded during a first encounter."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22621,6 +23545,13 @@
     ],
     "answer": 3,
     "rationale": "Memory B and T cells support rapid specific reactivation.",
+    "optionExplanations": [
+      "Innate pattern-recognition genes do not somatically mutate to create the faster antigen-specific secondary response.",
+      "The pathogen need not lose receptors; the change is in the host's retained antigen-specific cells.",
+      "Neutrophils are short-lived innate phagocytes and do not differentiate into antibody-secreting cells.",
+      "Long-lived memory B and T lymphocytes generated during the first response reactivate rapidly and expand upon re-exposure.",
+      "Thymic enlargement is not the mechanism of faster recall; peripheral memory lymphocytes provide the enhanced secondary response."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22658,6 +23589,13 @@
     ],
     "answer": 1,
     "rationale": "CD4 helper T cells coordinate via cytokines.",
+    "optionExplanations": [
+      "CD8+ T cells primarily kill infected or abnormal target cells; they are not the principal coordinating helper population.",
+      "CD4+ helper T cells release cytokines that activate and direct B cells, macrophages, and other immune effectors.",
+      "Plasma cells specialize in secreting antibodies rather than coordinating multiple effector populations through helper cytokines.",
+      "Neutrophils are rapid innate phagocytes and are not the central cytokine-coordinating lymphocyte in adaptive responses.",
+      "Erythrocytes transport respiratory gases and do not coordinate immune effectors by secreting cytokines."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22696,6 +23634,13 @@
     ],
     "answer": 1,
     "rationale": "Cytokines act through specific cell-surface receptors.",
+    "optionExplanations": [
+      "Cytokines do not activate every nearby cell; signaling requires the matching receptor and downstream machinery.",
+      "A cytokine can directly signal only cells expressing its receptor, so a receptor-negative neighboring cell has no direct response.",
+      "Antibody secretion requires plasma-cell differentiation and appropriate stimulation, not mere cytokine proximity without a receptor.",
+      "Antigen-receptor gene recombination occurs during lymphocyte development and is not triggered in a receptor-negative cell by a nearby cytokine.",
+      "Complement-mediated lysis requires complement activation and membrane-attack-complex formation, not receptor-independent cytokine action."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22733,6 +23678,13 @@
     ],
     "answer": 3,
     "rationale": "Loss of self tolerance produces autoimmune disease.",
+    "optionExplanations": [
+      "Secondary immunodeficiency is acquired loss of immune function, not immune attack caused by failed self-tolerance.",
+      "Innate memory refers to altered responsiveness of innate cells and does not mean recognition of self as foreign.",
+      "Commensalism is an ecological relationship in which one organism benefits without materially harming the other.",
+      "Autoimmunity results when self-tolerance fails and adaptive immune responses target the body's own tissues.",
+      "Neutropenia is a low neutrophil count and may impair defense, but it is not the general category caused by loss of self-tolerance."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22770,6 +23722,13 @@
     ],
     "answer": 3,
     "rationale": "Secondary defects are acquired; outline examples include HIV, leukemia, and immunosuppressive drugs.",
+    "optionExplanations": [
+      "An inborn mutation causes a primary, inherited immunodeficiency rather than a secondary acquired one.",
+      "An inherited absent receptor is a genetic primary immunodeficiency.",
+      "A congenital enzyme defect is present from birth and is classified as a primary immunodeficiency.",
+      "HIV is an acquired infection that damages CD4+ T cells, making the resulting immune defect secondary.",
+      "A birth defect is congenital and would fall under primary rather than acquired secondary immunodeficiency."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22807,6 +23766,13 @@
     ],
     "answer": 3,
     "rationale": "Innate receptors are germline encoded and immediately recognize broad microbial patterns without prior exposure.",
+    "optionExplanations": [
+      "Pathogen-specific memory B cells arise after prior adaptive exposure, so they cannot explain recognition of a newly encountered bacterium.",
+      "Somatic receptor mutation refines adaptive B-cell receptors after activation and is not the basis of immediate innate recognition.",
+      "Antibody affinity maturation occurs during an adaptive response and takes time rather than acting before lymphocyte expansion.",
+      "Innate cells carry germline-encoded PRRs that recognize conserved microbial patterns immediately without prior exposure or clonal expansion.",
+      "Thymic selection occurs during T-cell development before exposure and does not generate a rapid pathogen-pattern receptor after infection."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22844,6 +23810,13 @@
     ],
     "answer": 4,
     "rationale": "Lactoferrin and transferrin restrict bacterial growth by sequestering free iron.",
+    "optionExplanations": [
+      "Ciliary motion removes trapped material mechanically but does not directly deprive bacteria of iron needed for growth.",
+      "Tight junctions block passage between epithelial cells but do not create the stated iron-poor environment.",
+      "C3b opsonizes microbial surfaces to enhance phagocytosis; it does not sequester environmental iron.",
+      "Mannose-binding lectin recognizes microbial carbohydrates and activates complement rather than withholding iron.",
+      "Lactoferrin and transferrin bind free iron tightly, creating nutritional immunity that restricts bacterial growth."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22881,6 +23854,13 @@
     ],
     "answer": 4,
     "rationale": "The course maps TLR4 to LPS, whereas TLR3 detects dsRNA and TLR2 detects peptidoglycan.",
+    "optionExplanations": [
+      "TLR3 primarily detects viral double-stranded RNA, not bacterial LPS.",
+      "TLR2 recognizes several bacterial lipoproteins and Gram-positive wall components but is not the principal LPS receptor.",
+      "CD18 is a beta-2 integrin involved in leukocyte adhesion and migration, not direct LPS pattern recognition.",
+      "CD4 is a T-cell coreceptor for MHC class II and is not the macrophage PRR for LPS.",
+      "TLR4, with accessory proteins, recognizes Gram-negative lipopolysaccharide and initiates inflammatory signaling."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22919,6 +23899,13 @@
     ],
     "answer": 4,
     "rationale": "The course sequence is TLR recognition -> NF-kB -> proinflammatory cytokines -> neutrophil recruitment.",
+    "optionExplanations": [
+      "C5b-C9 forms the membrane attack complex for target lysis; it is not the cytokine signal that precedes neutrophil recruitment after PRR activation.",
+      "Affinity maturation is a later adaptive germinal-center process and cannot be the immediate link from tissue PRR signaling to neutrophil influx.",
+      "B-cell isotype switching is an adaptive response requiring activation and helper signals, not an early recruitment step.",
+      "Acute-phase proteins can raise erythrocyte sedimentation rate, but sedimentation itself does not recruit neutrophils.",
+      "PRR signaling activates NF-kB, inducing inflammatory cytokines and IL-8; these activate endothelium and guide neutrophils into infected tissue."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22958,6 +23945,13 @@
     ],
     "answer": 1,
     "rationale": "Eosinophil granules contain major basic protein and peroxidase that damage helminth membranes.",
+    "optionExplanations": [
+      "Neutrophils excel at phagocytosing and killing bacteria and fungi but are not the main source of helminth-directed major basic protein.",
+      "Eosinophil granules contain major basic protein, which is released onto large helminths that cannot be efficiently phagocytosed.",
+      "Macrophages phagocytose microbes and coordinate inflammation but are not specialized for major-basic-protein-mediated helminth killing.",
+      "NK cells kill stressed or virus-infected host cells using perforin and granzymes, not major basic protein.",
+      "Mast cells release histamine and other mediators in allergy and parasite responses, but eosinophils deliver major basic protein."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -22996,6 +23990,13 @@
     ],
     "answer": 0,
     "rationale": "CRP is an IL-6-induced acute-phase liver protein that binds bacterial lipids and promotes opsonization/complement activation.",
+    "optionExplanations": [
+      "IL-6 stimulates hepatocytes to produce C-reactive protein, an acute-phase opsonin that binds microbial phospholipids and can activate complement.",
+      "CD18 is a leukocyte adhesion integrin, not a soluble liver-derived acute-phase protein.",
+      "NF-kB is an intracellular transcription factor that drives inflammatory gene expression; it is not secreted by the liver into blood.",
+      "Lysozyme is an antimicrobial enzyme that cleaves peptidoglycan and is not the IL-6-induced protein described.",
+      "IL-8 is a chemokine that recruits neutrophils, not a liver-produced protein coating bacterial lipids."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -23035,6 +24036,13 @@
     ],
     "answer": 3,
     "rationale": "C3b binds microbial surfaces as an opsonin; C3a and C5a are proinflammatory fragments.",
+    "optionExplanations": [
+      "C3a is an anaphylatoxin that promotes inflammation but does not serve as the principal surface opsonin.",
+      "C5a is a potent anaphylatoxin and neutrophil chemoattractant rather than the complement coating recognized for opsonization.",
+      "C9 polymerizes within the membrane attack complex to form pores; it is not the main complement opsonin.",
+      "C3b covalently coats microbial surfaces and binds complement receptors on phagocytes, enhancing uptake.",
+      "C1 initiates the classical pathway after binding antibody or other activators but does not provide the major opsonic coating."
+    ],
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -23071,6 +24079,13 @@
       "Lymph-node failure from loss of reticular-fiber stroma",
       "Scurvy from absent vitamin C dependent collagen hydroxylation",
       "Mast-cell loss from defective IgE receptor signaling"
+    ],
+    "optionExplanations": [
+      "Fibrillin-1 failure weakens elastic-fiber support in the aorta, making progressive aortic dilation the urgent Marfan complication.",
+      "Proteoglycan loss compromises cartilage compression resistance, a different matrix defect from fibrillin-associated Marfan syndrome.",
+      "Lymph-node reticular stroma is type III collagen and is not the primary structure affected by fibrillin-1 mutation.",
+      "Scurvy results from vitamin C-dependent collagen hydroxylation failure, not from a fibrillin-1 variant.",
+      "Mast-cell IgE signaling is an immune-cell mechanism and does not explain the vascular risk of Marfan syndrome."
     ],
     "answer": 0,
     "rationale": "Fibrillin-1 is a glycoprotein in elastic-fiber microfibrils. Its disruption in Marfan syndrome compromises vessel-supporting connective tissue, making aortic disease the time-critical clue. The trap: proteoglycan, reticular-fiber, collagen-hydroxylation, and mast-cell defects describe different matrix or cell mechanisms.",
@@ -23109,6 +24124,13 @@
       "Adipocyte storage of triacylglycerol in a lipid droplet",
       "Plasma-cell secretion of immunoglobulin"
     ],
+    "optionExplanations": [
+      "Mast cells release stored inflammatory mediators, but their granules do not require the spindle-shaped matrix-secreting profile described.",
+      "Macrophages contain phagolysosomal machinery for debris removal rather than prominent secretory organelles for extracellular matrix production.",
+      "An active fibroblast uses abundant rough ER and Golgi to secrete collagen and ground-substance components during wound repair.",
+      "Adipocytes are dominated by a lipid droplet and specialize in triacylglycerol storage, not matrix secretion.",
+      "Plasma cells also synthesize abundant protein but secrete immunoglobulin and typically have an eccentric nucleus, not the spindle-shaped wound fibroblast."
+    ],
     "answer": 2,
     "rationale": "An active fibroblast is spindle shaped and uses abundant rough ER and Golgi to synthesize and secrete collagen plus ground-substance components during repair. The trap: plasma cells also have abundant protein-synthesis machinery, but they make immunoglobulin and have a characteristic eccentric nucleus rather than the spindle-shaped fibroblast profile.",
     "type": "mcq",
@@ -23145,6 +24167,13 @@
       "Failure of signal-peptide-mediated entry into rough ER",
       "Loss of N-linked glycan addition in the ER lumen",
       "Premature stop-codon recognition by a release factor"
+    ],
+    "optionExplanations": [
+      "The mutation already specifies the charged replacement; defective tRNA charging would change amino-acid delivery rather than destabilize the folded core.",
+      "Burying a charged side chain in a hydrophobic core is energetically unfavorable and destabilizes tertiary folding.",
+      "The protein is cytosolic, so rough-ER targeting is neither expected nor the cause of its folding defect.",
+      "Cytosolic proteins do not require ER-lumen N-linked glycosylation, and the stem localizes the defect to the hydrophobic core.",
+      "A missense mutation replaces one residue; it does not create the premature termination expected from a nonsense codon."
     ],
     "answer": 1,
     "rationale": "A charged side chain is unfavorable when buried in a protein's hydrophobic core, so this substitution destabilizes tertiary folding and promotes misfolding. The trap: aminoacyl-tRNA charging affects which amino acid is incorporated during translation; it does not explain why the already encoded charged residue is unstable specifically in the folded core.",
@@ -23183,6 +24212,13 @@
       "O-linked glycosylation in the Golgi",
       "GPI-anchor attachment at the ER membrane"
     ],
+    "optionExplanations": [
+      "Signal-peptide cleavage occurs in rough ER and removes a targeting sequence; it does not add sugars to serine or threonine.",
+      "Ribosomes form peptide bonds during translation, before Golgi carbohydrate modification of mucin.",
+      "Disulfide bonds aid protein folding in rough ER but do not attach carbohydrates to serine or threonine.",
+      "O-linked glycosylation adds sugars stepwise to serine or threonine residues in the Golgi, matching every clue.",
+      "GPI-anchor attachment is an ER membrane-anchoring modification, not Golgi glycosylation of serine or threonine."
+    ],
     "answer": 3,
     "rationale": "O-linked glycosylation adds sugars stepwise to serine or threonine residues in the Golgi, a major feature of mucin processing. The trap: signal-peptide cleavage, peptide-bond formation, disulfide-bond formation, and GPI-anchor attachment are distinct protein-processing events.",
     "type": "mcq",
@@ -23220,6 +24256,13 @@
       "Transfer of amino acids onto their cognate tRNAs",
       "Nitric oxide synthesis by nitric oxide synthase"
     ],
+    "optionExplanations": [
+      "Phosphoglycerate kinase makes ATP by substrate-level phosphorylation and does not consume NADPH.",
+      "Phosphoglucomutase interconverts glucose-6-phosphate and glucose-1-phosphate without NADPH.",
+      "Glycogen synthase transfers glucose from UDP-glucose and does not use NADPH.",
+      "Aminoacyl-tRNA synthetases use ATP to charge tRNAs, not PPP-derived NADPH.",
+      "Nitric oxide synthase requires NADPH as an electron donor, so impaired PPP flux can reduce endothelial nitric oxide production."
+    ],
     "answer": 4,
     "rationale": "The PPP supplies NADPH for several reductive processes, including nitric oxide synthesis. This is distinct from the RBC hemolysis mechanism in G6PD deficiency: the stem asks for a different NADPH-dependent tissue function. The trap: glycolytic ATP production, glycogen metabolism, and tRNA charging do not directly use PPP-derived NADPH in this way.",
     "type": "mcq",
@@ -23256,6 +24299,13 @@
       "Two NADPH, carbon dioxide, and ribulose-5-P",
       "Two FADH2, carbon dioxide, and ribose-5-P",
       "One NADPH, two ATP, and glyceraldehyde-3-P"
+    ],
+    "optionExplanations": [
+      "The two reducing equivalents are NADPH, not NADH, although carbon dioxide and ribulose-5-phosphate are produced.",
+      "Oxidative PPP makes two NADPH and releases carbon dioxide; fructose-6-phosphate appears only after nonoxidative rearrangement.",
+      "One oxidative pass yields two NADPH, one carbon dioxide, and ribulose-5-phosphate before nonoxidative reactions.",
+      "The pathway does not use FAD, and its immediate pentose product is ribulose-5-phosphate rather than ribose-5-phosphate.",
+      "Oxidative PPP produces neither ATP nor glyceraldehyde-3-phosphate directly and yields two NADPH rather than one."
     ],
     "answer": 2,
     "rationale": "The oxidative PPP has two NADPH-producing dehydrogenase reactions and releases carbon dioxide, leaving ribulose-5-P before the reversible nonoxidative reactions. The trap: NADH, FADH2, ATP, and glycolytic intermediates are not the immediate products of this oxidative PPP pass.",
@@ -23296,6 +24346,13 @@
       "Debranching enzyme at branch points",
       "Phosphoglucomutase for glucose-1-P conversion"
     ],
+    "optionExplanations": [
+      "Glycogen phosphorylase uses inorganic phosphate to release glucose-1-phosphate from nonreducing alpha-1,4-linked ends.",
+      "Glycogen synthase uses UDP-glucose to build alpha-1,4 chains; it does not perform phosphorolytic release.",
+      "Branching enzyme builds alpha-1,6 branches, and the stem states that branch architecture is intact.",
+      "Debranching enzyme clears branch-point limit structures but is not the general alpha-1,4 phosphorolysis enzyme.",
+      "Phosphoglucomutase acts after release by converting glucose-1-phosphate to glucose-6-phosphate; it does not cleave glycogen."
+    ],
     "answer": 0,
     "rationale": "Glycogen phosphorylase uses inorganic phosphate to release glucose-1-P from nonreducing alpha-1,4-linked ends during glycogenolysis. The trap: synthase and branching enzyme build glycogen, debranching enzyme acts at branch obstacles, and phosphoglucomutase converts the released glucose-1-P to glucose-6-P rather than cleaving glycogen.",
     "type": "mcq",
@@ -23334,6 +24391,13 @@
       "Failure of branching enzyme to make alpha-1,6 linkages",
       "Failure to prime a new glycogen particle",
       "Failure to convert glucose-1-P into UDP-glucose"
+    ],
+    "optionExplanations": [
+      "Glucose-6-phosphatase supports hepatic glucose export and is unrelated to initiating a glycogen particle.",
+      "Glycogen phosphorylase cleaves existing alpha-1,4 chains during breakdown rather than priming synthesis.",
+      "Branching enzyme creates alpha-1,6 linkages only after a glucan chain exists, so it cannot substitute for glycogenin.",
+      "Glycogenin autoglycosylates to create the primer that glycogen synthase needs to begin a new particle.",
+      "UDP-glucose pyrophosphorylase makes UDP-glucose; glycogenin loss does not directly block that precursor reaction."
     ],
     "answer": 3,
     "rationale": "Glycogenin supplies the primer required to initiate a glycogen particle; glycogen synthase then extends that primer with glucose from UDP-glucose. The trap: branching, phosphorylase cleavage, UDP-glucose formation, and glucose export are separate glycogen or hepatic processes.",

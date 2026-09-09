@@ -14,6 +14,14 @@ if (incoming.some(q => q.holdout || q.requiresMedia || q.unit !== "UE2" || q.cou
   throw new Error("Week 3 release contains a holdout, media-gated item, or incorrect course/unit tag.");
 }
 if (new Set(incoming.map(q => q.id)).size !== incoming.length) throw new Error("Duplicate Week 3 IDs.");
+for (const q of incoming) {
+  if (!Array.isArray(q.options) || !Array.isArray(q.optionExplanations) || q.optionExplanations.length !== q.options.length) {
+    throw new Error(`Week 3 per-option explanations are missing or misaligned: ${q.id}`);
+  }
+  if (q.optionExplanations.some(text => typeof text !== "string" || text.trim().length < 40)) {
+    throw new Error(`Week 3 per-option explanation is too short or invalid: ${q.id}`);
+  }
+}
 
 const html = fs.readFileSync(htmlPath, "utf8");
 const start = html.indexOf(marker);

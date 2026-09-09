@@ -33,6 +33,13 @@ assert(week3.every(q=>(q.concepts||[]).every(c=>!/^O\d+$/.test(c))),"Week 3 obje
 assert.deepStrictEqual(new Set(week3.map(q=>q.applicationLevel)),new Set(["recall","mechanism","presentation","discrimination"]),"Week 3 application-level mix changed");
 assert(week3.every(q=>!/(?:does not match the course-supported mechanism|does not explain the decisive clue)/i.test(q.closestDistractor.why_wrong)),"Week 3 closest-distractor explanation regressed to a generic placeholder");
 const week3ById=Object.fromEntries(week3.map(q=>[q.id,q]));
+const perOptionExplained=week3.filter(q=>q.optionExplanations!=null);
+assert.equal(perOptionExplained.length,week3.length,"every released UE2 question must teach through every answer option");
+for(const q of perOptionExplained){
+  assert.equal(q.optionExplanations.length,q.options.length,`optionExplanations must align: ${q.id}`);
+  assert(q.optionExplanations.every(text=>typeof text==="string"&&text.trim().length>=40),`optionExplanations must be substantive strings: ${q.id}`);
+  assert(q.optionExplanations.every(text=>!/^(?:correct|incorrect)\b|not (?:the )?correct|does not match the course-supported mechanism|does not explain the decisive clue/i.test(text.trim())),`optionExplanations must not use generic or redundant labels: ${q.id}`);
+}
 const dayOneExpansionAnswers={"W3-L026-CONNECTIVE-TISSUE-11":0,"W3-L026-CONNECTIVE-TISSUE-12":2,"W3-L027-11":1,"W3-L027-12":3,"W3-L028-11":4,"W3-L028-12":2,"W3-L029-11":0,"W3-L029-12":3};
 for(const [id,answer] of Object.entries(dayOneExpansionAnswers)){assert(week3ById[id],`Day 1 expansion question missing: ${id}`);assert.equal(week3ById[id].answer,answer,`Day 1 expansion answer changed: ${id}`);}
 assert.deepStrictEqual(Object.fromEntries([...Array(5)].map((_,index)=>[index,week3.filter(q=>q.answer===index).length])),{"0":30,"1":31,"2":30,"3":31,"4":30},"Day 1 UE2 answer balance changed");
@@ -194,7 +201,7 @@ assert(html.includes("function parseLegacyResults"),"legacy artifact transfer pa
 assert(html.includes("Today&rsquo;s adaptive ${dailyCap()}"),"adaptive prescription entry point must display the active unit cap");assert(html.includes("lastConfidence"),"confidence migration missing");assert(html.includes("timezoneOffsetMinutes"),"timezone-aware timeline missing");assert(html.includes("questionReports"),"question report storage missing");
 assert(html.includes('a.pick!=null && !!(a.confidence || ("guessed" in a'),"new MCQ attempts must explicitly record confidence");
 assert(html.includes('guessed:c!=="knew"}; renderQ(); sync();'),"confidence changes must immediately enable the Check button");
-function boot(storage={}){const source=html.slice(html.indexOf("<script>")+8,html.lastIndexOf("</script>")),els=new Map(),el=()=>({hidden:false,style:{},classList:{add(){}},setAttribute(){},appendChild(){},textContent:"",innerHTML:"",click(){},querySelectorAll(){return[]}}),document={getElementById:id=>{if(!els.has(id))els.set(id,el());return els.get(id)},createElement:el,querySelectorAll(){return[]},addEventListener(){},documentElement:{setAttribute(){},removeAttribute(){},getAttribute(){return null}}},data=new Map(Object.entries(storage)),localStorage={getItem:k=>data.get(k)||null,setItem:(k,v)=>data.set(k,String(v)),removeItem:k=>data.delete(k)},alerts=[],ctx=vm.createContext({document,localStorage,window:{scrollTo(){}},console,Date,JSON,Math,Set,Map,Array,Object,Number,String,Boolean,RegExp,Error,Blob:function(){},URL:{createObjectURL(){return ""},revokeObjectURL(){}},FileReader:function(){},navigator:{},alert:m=>alerts.push(String(m)),setTimeout(){}});vm.runInContext(source,ctx);return{ctx,data,els,alerts};}
+function boot(storage={}){const source=html.slice(html.indexOf("<script>")+8,html.lastIndexOf("</script>")),els=new Map(),el=()=>{const node={hidden:false,style:{},classList:{add(){}},setAttribute(){},children:[],textContent:"",click(){},querySelectorAll(){return[]},appendChild(child){this.children.push(child);}};Object.defineProperty(node,"innerHTML",{get(){return this._innerHTML||""},set(value){this._innerHTML=value;if(value==="")this.children=[];}});return node;},document={getElementById:id=>{if(!els.has(id))els.set(id,el());return els.get(id)},createElement:el,querySelectorAll(){return[]},addEventListener(){},documentElement:{setAttribute(){},removeAttribute(){},getAttribute(){return null}}},data=new Map(Object.entries(storage)),localStorage={getItem:k=>data.get(k)||null,setItem:(k,v)=>data.set(k,String(v)),removeItem:k=>data.delete(k)},alerts=[],ctx=vm.createContext({document,localStorage,window:{scrollTo(){}},console,Date,JSON,Math,Set,Map,Array,Object,Number,String,Boolean,RegExp,Error,Blob:function(){},URL:{createObjectURL(){return ""},revokeObjectURL(){}},FileReader:function(){},navigator:{},alert:m=>alerts.push(String(m)),setTimeout(){}});vm.runInContext(source,ctx);return{ctx,data,els,alerts};}
 boot();boot({"ost520.bank.v2":"{bad json"});
 const labBoot=boot({"ost520.bank.v2":JSON.stringify({schemaVersion:4,bankFingerprint:"fnv1a-41aaee35-575",history:{"DL-01":{attempts:1,correct:1,lastOk:true,reasons:[]}}})});
 vm.runInContext('start(q=>q.source==="confusion-lab","Look-Alike Concepts",true,null,true)',labBoot.ctx);
@@ -207,6 +214,18 @@ vm.runInContext('const cq=ALL_QUESTIONS.find(q=>q.id==="DL-01");renderContrast(c
 const contrastHtml=contrastBoot.els.get("contrastwrap").innerHTML;
 assert(contrastHtml.includes("<table>")&&contrastHtml.includes("Term")&&contrastHtml.includes("Meaning")&&contrastHtml.includes("Why it fits or fails"),"accessible contrast table did not render");
 assert(contrastHtml.includes("Correct concept")&&contrastHtml.includes("Your choice"),"contrast table must label correct and selected concepts in text");
+const optionExplanationBoot=boot();
+vm.runInContext(`(()=>{const q=ALL_QUESTIONS.find(q=>q.id==="W3-L027-01");BANK=[q];S={id:"option-explanation-test",name:"Test",date:todayISO(),seed:918273,i:0,answers:{[q.id]:{pick:0,confidence:"knew"}},committed:{},initiallySeen:{[q.id]:false},order:[q.id]};renderQ();})()`,optionExplanationBoot.ctx);
+assert(optionExplanationBoot.els.get("opts").children.every(button=>!button.innerHTML.includes("option-explanation")),"per-option explanations must stay hidden before submission");
+vm.runInContext('S.answers["W3-L027-01"].checked=true;renderQ()',optionExplanationBoot.ctx);
+const renderedOptions=optionExplanationBoot.els.get("opts").children.map(button=>button.innerHTML);
+assert.equal(renderedOptions.filter(markup=>markup.includes("option-explanation")).length,5,"all aligned option explanations must render after submission");
+const explanationQuestion=week3ById["W3-L027-01"];
+for(let originalIndex=0;originalIndex<explanationQuestion.options.length;originalIndex++){
+  const displayedMarkup=renderedOptions.find(markup=>markup.includes(explanationQuestion.options[originalIndex]));
+  assert(displayedMarkup&&displayedMarkup.includes(explanationQuestion.optionExplanations[originalIndex]),`shuffled explanation mapped to the wrong option at original index ${originalIndex}`);
+  assert(displayedMarkup.includes(originalIndex===explanationQuestion.answer?"Why this is correct":"Why this is incorrect"),`option verdict label is wrong at original index ${originalIndex}`);
+}
 const pairBoot=boot();
 vm.runInContext(`const pq=ALL_QUESTIONS.find(q=>q.id==="DL-01"),wrong=pq.answer===0?1:0;S={id:"pair-session",name:"Look-Alike Concepts",date:todayISO(),answers:{[pq.id]:{pick:wrong}},committed:{},initiallySeen:{[pq.id]:false},order:[pq.id]};commit(pq,false,"knew");`,pairBoot.ctx);
 let pairState=JSON.parse(pairBoot.data.get("ost520.bank.v2"));
@@ -243,7 +262,7 @@ assert(!pairAnalysis.includes(vm.runInContext('ALL_QUESTIONS.find(q=>q.id==="DL-
 assert.throws(()=>vm.runInContext('validateBackup({schemaVersion:4,bankFingerprint:BANK_FINGERPRINT,history:{},questionReports:{B1:{reason:"injected"}}})',restoreBoot.ctx),/invalid question report/);
 assert.throws(()=>vm.runInContext(`(()=>{const q=ALL_QUESTIONS.find(x=>x.id==="DL-01"),chosen=q.optionConcepts[q.answer===0?1:0],correct=q.optionConcepts[q.answer],key=pairStorageKey(chosen,correct);return validateBackup({schemaVersion:4,bankFingerprint:BANK_FINGERPRINT,history:{},confusionPairs:{[key]:{chosen,correct,count:0,lastAt:new Date().toISOString(),questionId:q.id}}})})()`,restoreBoot.ctx),/invalid confusion pair/);
 assert.throws(()=>vm.runInContext(`validateBackup({schemaVersion:4,bankFingerprint:BANK_FINGERPRINT,history:{},confusionPairs:{"made-up::pair":{chosen:"made-up",correct:"pair",count:1,lastAt:new Date().toISOString(),questionId:"DL-01"}}})`,restoreBoot.ctx),/invalid confusion pair/);
-for(const priorFingerprint of ["fnv1a-2ed224b5-483","fnv1a-56ef5225-483","fnv1a-ac6648c1-507","fnv1a-40f86fe5-557","fnv1a-41aaee35-575"]){
+for(const priorFingerprint of ["fnv1a-2ed224b5-483","fnv1a-56ef5225-483","fnv1a-ac6648c1-507","fnv1a-40f86fe5-557","fnv1a-41aaee35-575","fnv1a-2939a373-613","fnv1a-91c07573-765"]){
   assert.doesNotThrow(()=>vm.runInContext(`validateBackup({schemaVersion:4,bankFingerprint:"${priorFingerprint}",history:{B1:{attempts:1,correct:1,lastOk:true,reasons:[]}}})`,restoreBoot.ctx),`known additive bank version must remain importable: ${priorFingerprint}`);
 }
 vm.runInContext(`S={id:"timeline-test",name:"Test",date:todayISO(),answers:{B1:{pick:1,reasons:["cue"]}},committed:{},initiallySeen:{B1:false},order:["B1"]}; commit(BANK.find(q=>q.id==="B1"),true,"narrowed");`,restoreBoot.ctx);
