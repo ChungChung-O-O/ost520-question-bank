@@ -1,6 +1,6 @@
 # OST 520 Question Bank
 
-Self-contained, 757-question practice bank for OST 520 Unit Exams 1 and 2. It combines
+Self-contained, 765-question practice bank for OST 520 Unit Exams 1 and 2. It combines
 adaptive daily sets, browser-local performance diagnosis, weak-concept retesting,
 worked rationales, a Look-Alike Concepts lab, confidence tracking, and lossless backup/restore. Previously a
 Claude Artifact, it is now a plain static site that any browser can reach by URL.
@@ -15,9 +15,12 @@ the only class so far. Unit 1 and Unit 2 both hold questions.
 | File | What it is |
 |------|------------|
 | `index.html` | The whole app — questions, grading, rationales, progress tracking. No build step, no server, no dependencies. Opening the file directly also works. |
-| `bank.json` | The 757 released questions as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
-| `add-week3-questions.js` | Idempotent ingest for the 144 verified, non-media-gated Week 3 practice questions. |
+| `bank.json` | The 765 released questions as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
+| `add-week3-questions.js` | Idempotent ingest for the 152 verified, non-media-gated Week 3 practice questions. |
+| `update-week3-day1-transcripts.js` | Guarded, idempotent replacement of the three verified Day 1 transcript-grounded Week 3 items before synchronizing the release. |
+| `update-week3-validation-report.js` | Private audit helper that recomputes Week 3 pool, answer-position, application-level, and option-cue metrics. It requires the intentionally ignored holdout file. |
 | `week3/` | Week 3 public release data, media-gated questions, coverage ledger, source manifest, and validation report. Reserved holdouts are stored only in the private course pack. |
+| `week3/DAY1_MEDIA_QBANK_PLAN.md` | Internal MediaSpace transcript audit, replacement plan, no-change decisions, and post-change verification record. |
 | `add-faculty-problem-sets.js` | Idempotent ingest of the faculty practice sets. Also records, in comments, which faculty items were deliberately skipped and why. |
 | `add-weakness-questions.js` | Idempotent ingest of the 24 targeted `WK-*` weak-area questions. |
 | `add-transcript-remediation.js` | Idempotent ingest of the 18 transcript-grounded `TR-*` remediation questions. |
@@ -31,7 +34,7 @@ Every question carries a `course` and a `unit`, and the site shelves them accord
 | Level | Values today |
 |-------|--------------|
 | Class | `OST520` |
-| Unit | `UE1` (613 questions), `UE2` (144 released questions), and an empty `UE3` shelf. |
+| Unit | `UE1` (613 questions), `UE2` (152 released questions), and an empty `UE3` shelf. |
 
 To open a new unit, tag questions with that `unit` value; the shelf stops being
 empty on its own. To add a class, append to the `COURSES` array in `index.html`
@@ -41,9 +44,9 @@ Inside a unit, **Which questions** filters by provenance:
 
 | View | Shows |
 |------|-------|
-| Everything | All 757 |
+| Everything | All 765 |
 | Faculty practice | The 50 questions taken from the course's own problem sets |
-| Bank questions | The 707 written for this site |
+| Bank questions | The 715 written for this site |
 
 The chosen class, unit, and view are remembered in `localStorage` under
 `ost520.bank.v2.scope`, so a reload returns you where you were. The view narrows what
@@ -52,27 +55,27 @@ against, both of which always span the whole bank.
 
 ## Contents
 
-757 released questions: 613 for Unit Exam 1 and 144 for Unit Exam 2.
+765 released questions: 613 for Unit Exam 1 and 152 for Unit Exam 2.
 
 | Topic | Questions | Coverage | `src` |
 |-------|-----------|----------|-------|
 | Genetics | 403 | Pedigrees, inheritance, DNA/chromosomes, regulation, population genetics, refresher prerequisites | `G` |
-| Biochemistry | 199 | UE1 metabolism plus Week 3 PPP, glycogen, gluconeogenesis, fatty-acid oxidation, ketones, and synthesis | `B` |
+| Biochemistry | 203 | UE1 metabolism plus Week 3 PPP, glycogen, gluconeogenesis, fatty-acid oxidation, ketones, and synthesis | `B` |
 | Epi & Biostats | 59 | Study design, screening, bias, association, calculations | `E` |
-| Molecular Biology | 8 | Translation, protein targeting, folding, and processing | `N` |
-| Histology | 10 | Connective-tissue cells, fibers, matrix, and non-image morphology | `T` |
+| Molecular Biology | 10 | Translation, protein targeting, folding, and processing | `N` |
+| Histology | 12 | Connective-tissue cells, fibers, matrix, and non-image morphology | `T` |
 | Hematology & Physiology | 23 | Blood cells, hematopoiesis, hemoglobin transport, and acid-base physiology | `H` |
 | Microbiology | 40 | Infection, microbiota, fungi, bacterial structure, viruses, and parasites | `M` |
 | Immunology | 15 | Immune organization, communication, innate recognition, complement, and deficiencies | `I` |
 
-732 are multiple choice (`"type": "mcq"`), 25 are worked problems (`"type": "worked"`).
-Of the MCQs, 727 have five choices. The five four-choice exceptions are preserved
+740 are multiple choice (`"type": "mcq"`), 25 are worked problems (`"type": "worked"`).
+Of the MCQs, 735 have five choices. The five four-choice exceptions are preserved
 faculty-authored items whose option text stays faithful to the source.
 
 ### Week 3 release policy
 
-Week 3 contains 160 practice questions and 40 first-use holdouts across 20 logical
-source blocks. The live UE2 shelf receives only the 144 practice questions that do
+Week 3 contains 168 practice questions and 40 first-use holdouts across 20 logical
+source blocks. The live UE2 shelf receives only the 152 practice questions that do
 not depend on missing visual media. Sixteen figure-dependent practice items remain
 in `week3/qbank_media_gated_questions.json`. All 40 first-use holdouts are retained
 privately in the course study pack and are intentionally excluded from this public

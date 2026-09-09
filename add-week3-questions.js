@@ -9,7 +9,7 @@ const marker = "let BANK = ";
 const endMarker = ";\nconst META =";
 
 const incoming = JSON.parse(fs.readFileSync(sourcePath, "utf8"));
-if (incoming.length !== 144) throw new Error(`Expected 144 bank-ready Week 3 questions, got ${incoming.length}.`);
+if (incoming.length !== 152) throw new Error(`Expected 152 bank-ready Week 3 questions, got ${incoming.length}.`);
 if (incoming.some(q => q.holdout || q.requiresMedia || q.unit !== "UE2" || q.course !== "OST520")) {
   throw new Error("Week 3 release contains a holdout, media-gated item, or incorrect course/unit tag.");
 }

@@ -4,8 +4,8 @@
 **Exam:** September 22, 2026  
 **Logical guides:** 20  
 **Selective Anki cards:** 190  
-**Practice questions:** 160  
-**Bank-ready practice (no missing media):** 144  
+**Practice questions:** 168
+**Bank-ready practice (no missing media):** 152
 **Media-gated practice:** 16  
 **Reserved holdouts:** 40  
 **Media-gated holdouts:** 0
@@ -35,16 +35,16 @@ The daily Week 3 loop and adaptive prescription share one 13-22 question budget.
 - `L038_039_intro_immunology.md`
 - `L040_041_innate_immunology.md`
 
-## Question mix (all 200 authored items)
+## Question mix (all 208 authored items)
 
 - discrimination: 36
-- mechanism: 53
+- mechanism: 61
 - presentation: 84
 - recall: 27
 
 ## Live-ready practice mix
 
 - discrimination: 16
-- mechanism: 37
+- mechanism: 45
 - presentation: 64
 - recall: 27
