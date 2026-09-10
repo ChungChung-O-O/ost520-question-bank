@@ -7079,4 +7079,925 @@
     "holdout": false,
     "requiresMedia": false
   }
+,
+{
+    "id": "MQG-SEP11-L0301-01",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A bacterium grows anaerobically only by fermentation; no alternate electron acceptors support anaerobic respiration. It grows faster aerobically. A drug blocks its membrane electron-transport chain. Compared with untreated culture, what follows?",
+    "options": [
+      "Less aerobic growth and unchanged anaerobic growth",
+      "Less aerobic and less anaerobic growth",
+      "Unchanged aerobic and less anaerobic growth",
+      "Unchanged growth in both conditions",
+      "More aerobic and less anaerobic growth"
+    ],
+    "optionExplanations": [
+      "The membrane electron-transport chain supplies the aerobic respiratory advantage, while the stated fermentation pathway can still support anaerobic growth.",
+      "Anaerobic growth is explicitly supported by fermentation alone, so blocking electron transport does not remove that route in this organism.",
+      "Aerobic growth depends on the membrane respiratory system, whereas the stem states that anaerobic growth does not depend on that system.",
+      "The drug removes the respiratory mechanism that explains why the untreated culture grows faster when oxygen is available.",
+      "Blocking membrane electron transport cannot improve aerobic growth, and it does not create a reason for fermentation-dependent anaerobic growth to fall."
+    ],
+    "answer": 0,
+    "rationale": "In bacteria, respiration occurs at the plasma membrane. Blocking that electron-transport chain removes the energy-generating advantage of aerobic respiration. Because this organism uses fermentation, rather than anaerobic respiration, when oxygen is absent, its anaerobic growth remains supported.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "L0301-O2"
+    ],
+    "covers": [
+      "L0301-O2"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (030.1) L - Intro to Infection - D. Arvidson.pdf, p. 9",
+    "sourceBlock": "L030.1",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "It incorrectly treats membrane electron transport as necessary for the organism's stated fermentation-only anaerobic growth."
+    },
+    "holdout": false,
+    "n": 41
+  },
+  {
+    "id": "MQG-SEP11-L0301-02",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "During Gram staining, alcohol decolorization is omitted. A known Gram-positive and known Gram-negative control are then counterstained with safranin. What result is expected?",
+    "options": [
+      "Both appear pink",
+      "Both appear purple",
+      "Gram-positive purple and Gram-negative pink",
+      "Gram-positive pink and Gram-negative purple",
+      "Both colorless"
+    ],
+    "optionExplanations": [
+      "Safranin colors cells pink only after they have been decolorized, so omitting the alcohol step leaves crystal violet in both controls.",
+      "Crystal violet initially stains all bacteria purple; without alcohol, neither control loses the crystal-violet iodine complex before safranin is applied.",
+      "This is the usual result only when alcohol decolorizes the Gram-negative control and the Gram-positive wall retains crystal violet.",
+      "The differential colors cannot reverse in this way because the omitted step prevents, rather than redirects, removal of crystal violet.",
+      "Both controls received crystal violet and iodine, so omission of decolorization does not leave either population unstained."
+    ],
+    "answer": 1,
+    "rationale": "Crystal violet stains both bacterial controls first, and iodine forms the retained stain complex. Alcohol normally removes that complex from Gram-negative cells. If alcohol is omitted, both controls retain crystal violet; the later safranin counterstain does not make the retained purple signal disappear.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "Gram stain"
+    ],
+    "covers": [
+      "L0301-O3"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (030.1) L - Intro to Infection - D. Arvidson.pdf, p. 16",
+    "sourceBlock": "L030.1",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "It applies the normal completed Gram-stain result despite omission of the step that decolorizes Gram-negative cells."
+    },
+    "holdout": false,
+    "n": 42
+  },
+  {
+    "id": "MQG-SEP11-L0302-01",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A vaginal Lactobacillus culture acidifies medium and suppresses an introduced bacterium. Buffering the medium restores its growth. After antibiotics reduce Lactobacilli in vivo, what is most likely?",
+    "options": [
+      "Lower susceptibility because host antimicrobial peptides increase",
+      "Greater susceptibility because resident competition becomes stronger",
+      "Greater susceptibility because the acid-mediated barrier is lost",
+      "No change because adhesin expression is unchanged",
+      "Lower susceptibility because all commensals are removed"
+    ],
+    "optionExplanations": [
+      "The experiment identifies a Lactobacillus-dependent environmental barrier, not an antibiotic-induced increase in host antimicrobial-peptide production.",
+      "Reducing Lactobacilli removes one component of resident interference, so competition against the introduced bacterium becomes weaker rather than stronger.",
+      "The culture result shows that acidity suppresses the introduced bacterium; antibiotics reduce the acidifying residents and therefore weaken colonization resistance.",
+      "Adhesins may influence tissue tropism, but unchanged adhesin expression does not restore the lost acidic environment demonstrated in the culture experiment.",
+      "Broad-spectrum antibiotics reduce protective commensals, which removes barriers to colonization instead of creating a lower-susceptibility state."
+    ],
+    "answer": 2,
+    "rationale": "Normal microbiota inhibit pathogen colonization through bacterial interference. Here, buffering directly shows that Lactobacillus-mediated acidification is part of that interference. Antibiotic reduction of Lactobacilli removes the acid-mediated barrier, allowing the introduced organism to colonize more readily.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "colonization resistance"
+    ],
+    "covers": [
+      "L0302-O1"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (030.2) L - Intro to Infection - Normal Microbiota (outline) -D Arvidson.pdf, pp. 6-7",
+    "sourceBlock": "L030.2",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Antibiotic loss of Lactobacilli weakens the resident competition described by bacterial interference."
+    },
+    "holdout": false,
+    "n": 43
+  },
+  {
+    "id": "MQG-SEP11-L0302-02",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A patient carried C. difficile at low abundance before antibiotics; no new strain is isolated and there is no epithelial breach. After broad-spectrum antibiotics, toxin-positive diarrhea develops. Which mechanism is best supported?",
+    "options": [
+      "Selection of a newly acquired resistant C. difficile strain",
+      "Primary immune failure despite unchanged resident flora",
+      "Increased competing anaerobes that suppress C. difficile growth",
+      "Loss of competing flora permits surviving C. difficile to overgrow",
+      "Loss of epithelial integrity permitting bloodstream invasion"
+    ],
+    "optionExplanations": [
+      "No new strain was isolated, and the clinical sequence instead begins with an organism already present at low abundance before treatment.",
+      "The key changed exposure is broad-spectrum antibiotic treatment, which alters resident microbiota rather than establishing primary immune failure.",
+      "More competing anaerobes would reinforce colonization resistance and oppose, rather than explain, post-antibiotic C. difficile overgrowth.",
+      "Broad-spectrum antibiotics can deplete normal microbiota, allowing a previously low-abundance pathogen to escape competition, expand, and produce toxin.",
+      "Diarrhea from a toxin-producing intestinal organism does not require epithelial breach or bloodstream invasion, both of which the stem argues against."
+    ],
+    "answer": 3,
+    "rationale": "The organism was already present, so acquisition is unnecessary to explain disease. Broad-spectrum antibiotics reduce the competing normal microbiota, creating dysbiosis. Loss of colonization resistance permits the preexisting C. difficile population to overgrow and its toxin to cause diarrhea.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "C. difficile",
+      "dysbiosis",
+      "colonization resistance"
+    ],
+    "covers": [
+      "L0302-O1",
+      "L0302-O3"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (030.2) L - Intro to Infection - Normal Microbiota (outline) -D Arvidson.pdf, p. 12",
+    "sourceBlock": "L030.2",
+    "applicationLevel": "recall",
+    "reasoningOrder": 1,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "The stem specifically excludes a newly isolated strain and supports overgrowth of the preexisting organism after dysbiosis."
+    },
+    "holdout": false,
+    "n": 44
+  },
+  {
+    "id": "MQG-SEP11-L031-01",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "A chronically hypoxemic patient receives exogenous erythropoietin. One week later hemoglobin has not risen and reticulocytes remain low. Which defect is most directly supported?",
+    "options": [
+      "Impaired renal erythropoietin secretion",
+      "Shortened survival of newly formed mature RBCs",
+      "Failure of reticulocytes to complete maturation only after blood entry",
+      "Reduced hemoglobin loading despite normal erythroid output",
+      "Failure of marrow erythroid precursors to respond to erythropoietin"
+    ],
+    "optionExplanations": [
+      "Exogenous erythropoietin bypasses deficient renal secretion, so persistent low reticulocytes point downstream of hormone availability.",
+      "Shortened mature-RBC survival could limit hemoglobin later, but it does not directly explain failure to generate the expected reticulocyte response.",
+      "Peripheral reticulocyte maturation occurs after marrow release; the low reticulocyte count indicates inadequate production before that stage.",
+      "Normal erythroid output would produce reticulocytes even if hemoglobin loading were reduced, contrary to the persistently low reticulocyte count.",
+      "Erythropoietin should stimulate erythrocyte production and differentiation; no reticulocyte rise after replacement indicates a marrow precursor response defect."
+    ],
+    "answer": 4,
+    "rationale": "Hypoxia normally stimulates erythropoietin release, and erythropoietin promotes erythrocyte production and differentiation in bone marrow. Giving the hormone removes lack of renal EPO as the limiting step. Continued low reticulocytes therefore localize the defect to marrow erythroid precursors that cannot respond adequately to EPO.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "BC9",
+      "BC11"
+    ],
+    "covers": [
+      "BC9",
+      "BC11"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (031) L - Blood Cells and Hematopoiesis - Schwartz.pdf, pp. 33, 38",
+    "sourceBlock": "L031",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Injected EPO bypasses a renal secretion defect; the absent reticulocyte response identifies a downstream marrow problem."
+    },
+    "holdout": false,
+    "n": 24
+  },
+  {
+    "id": "MQG-SEP11-L031-02",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "A pregnant patient has 40% more plasma volume and 20% more RBC mass than before pregnancy. What change is expected?",
+    "options": [
+      "Lower hematocrit from physiologic dilution",
+      "Higher hematocrit from erythrocytosis",
+      "Unchanged hematocrit because both rose",
+      "Lower hematocrit from hemolysis",
+      "Higher hematocrit from plasma loss"
+    ],
+    "optionExplanations": [
+      "Because plasma volume rises proportionally more than RBC mass, red cells occupy a smaller fraction of total blood volume despite their absolute increase.",
+      "Absolute RBC mass increases, but hematocrit falls because plasma expands proportionally more than the RBC mass in this pregnancy scenario.",
+      "Hematocrit is a fraction, so unequal increases do not cancel; the larger plasma expansion lowers the red-cell fraction.",
+      "The reduced hematocrit follows dilution by plasma expansion, not destruction of red cells by hemolysis.",
+      "Pregnancy produces plasma expansion, not plasma loss, so the direction of the volume change contradicts this explanation."
+    ],
+    "answer": 0,
+    "rationale": "Hematocrit reflects the fraction of blood volume made up by RBCs. In normal pregnancy, both compartments expand, but plasma expands more than RBC mass. The larger denominator dilutes the RBC fraction, producing physiologic dilutional anemia rather than loss of RBCs.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "BC2",
+      "BC3"
+    ],
+    "covers": [
+      "BC2",
+      "BC3"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (031) L - Blood Cells and Hematopoiesis - Schwartz.pdf, p. 13",
+    "sourceBlock": "L031",
+    "applicationLevel": "presentation",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Both values rise, but plasma rises by the larger proportion, so the hematocrit fraction falls."
+    },
+    "holdout": false,
+    "n": 25
+  },
+  {
+    "id": "MQG-SEP11-L031-03",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "A mutation blocks common myeloid progenitor differentiation but spares common lymphoid progenitors. Which blood profile is likely?",
+    "options": [
+      "Low lymphocytes with preserved neutrophils and platelets",
+      "Low neutrophils, platelets, and RBCs with preserved lymphocytes",
+      "Low RBCs and lymphocytes with preserved platelets",
+      "Low neutrophils and lymphocytes with preserved RBCs",
+      "Isolated thrombocytopenia"
+    ],
+    "optionExplanations": [
+      "Lymphocytes arise from the spared lymphoid branch, whereas neutrophils and platelets arise through the disrupted myeloid branch.",
+      "The common myeloid progenitor supplies granulocytic, erythroid, and megakaryocytic lineages, while lymphocytes remain supported by common lymphoid progenitors.",
+      "RBC reduction fits myeloid impairment, but lymphocyte reduction does not because the stem explicitly preserves the common lymphoid progenitor.",
+      "Neutrophil reduction fits myeloid impairment, but preserved lymphoid progenitors should maintain lymphocyte production rather than lower it.",
+      "Platelets derive from the myeloid branch, but a block at the common myeloid progenitor affects additional myeloid outputs, including RBCs and granulocytes."
+    ],
+    "answer": 1,
+    "rationale": "Multipotent progenitors divide into myeloid and lymphoid branches. A common myeloid progenitor defect reduces erythroid cells, megakaryocyte-derived platelets, and granulocytes such as neutrophils. Because common lymphoid progenitors are spared, lymphocyte production is relatively preserved.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "BC8"
+    ],
+    "covers": [
+      "BC8"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (031) L - Blood Cells and Hematopoiesis - Schwartz.pdf, pp. 25-28",
+    "sourceBlock": "L031",
+    "applicationLevel": "recall",
+    "reasoningOrder": 1,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 3,
+      "why_wrong": "It incorrectly places lymphocytes on the affected myeloid branch despite the stem's preserved common lymphoid progenitors."
+    },
+    "holdout": false,
+    "n": 26
+  },
+  {
+    "id": "MQG-SEP11-L032-01",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A non-Coccidioides endemic dimorphic fungus is mold in soil at 25 C. Which culture-and-tissue pairing is expected?",
+    "options": [
+      "Yeast at 25 C and mold in infected tissue at 37 C",
+      "Mold at 25 C and mold in infected tissue at 37 C",
+      "Mold at 25 C and yeast in infected tissue at 37 C",
+      "Yeast at 25 C and yeast in infected tissue at 37 C",
+      "Pseudohyphae at 25 C and spherules in infected tissue"
+    ],
+    "optionExplanations": [
+      "This reverses the temperature-linked forms: environmental, ambient culture is mold, while infected tissue at body temperature is yeast for the stated fungi.",
+      "The environmental mold form is correct, but tissue at 37 C selects the parasitic yeast form for a non-Coccidioides endemic dimorphic fungus.",
+      "Thermal dimorphism links the soil or ambient 25 C condition to mold and the infected-tissue 37 C condition to yeast.",
+      "Yeast is expected in infected tissue at 37 C, but the environmental 25 C culture condition favors mold rather than yeast.",
+      "Spherules are the exceptional tissue form associated with Coccidioides, which the stem excludes; pseudohyphae are not the required environmental mold form."
+    ],
+    "answer": 2,
+    "rationale": "Endemic dimorphic fungi change morphology with environment and temperature. In the environmental reservoir or laboratory at about 25 C, they grow as molds. In infected tissue at 37 C, the usual parasitic form is yeast; the stem excludes Coccidioides because its tissue morphology is the exception.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "thermal dimorphism"
+    ],
+    "covers": [
+      "L032-O5"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (032) L - Fungal Pathogens - Wilkins.docx, paragraphs 236-246",
+    "sourceBlock": "L032",
+    "applicationLevel": "recall",
+    "reasoningOrder": 1,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "It misses the tissue-phase conversion to yeast that defines thermal dimorphism for the non-Coccidioides fungi specified."
+    },
+    "holdout": false,
+    "n": 45
+  },
+  {
+    "id": "MQG-SEP11-L032-02",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A new antifungal causes fungal lysis in ordinary medium, but osmotic support rescues growth. Ergosterol concentration and nucleic-acid synthesis remain normal, and membrane permeability remains normal at a nonlytic dose. Which target is most likely?",
+    "options": [
+      "Lanosterol-to-ergosterol conversion",
+      "Existing membrane ergosterol",
+      "Fungal DNA and RNA synthesis",
+      "1,3-beta-glucan synthesis",
+      "Microtubule assembly"
+    ],
+    "optionExplanations": [
+      "Blocking lanosterol conversion would lower ergosterol and impair membrane synthesis, but the stem states that ergosterol concentration remains normal.",
+      "Normal ergosterol concentration alone does not exclude a polyene that binds existing ergosterol, but normal membrane permeability at a nonlytic dose and osmotic rescue favor wall failure instead.",
+      "Inhibition of nucleic-acid synthesis would impair growth without the characteristic osmotic rescue of a mechanically weakened fungal cell wall.",
+      "Beta-1,3-glucan is a fungal cell-wall component; blocking its synthesis weakens the wall, so osmotic support can prevent lysis while ergosterol remains normal.",
+      "Microtubule inhibition disrupts mitosis, but it does not directly remove the wall polymer whose loss makes cells vulnerable to osmotic lysis."
+    ],
+    "answer": 3,
+    "rationale": "Osmotic rescue points to loss of structural protection against turgor pressure, which is a cell-wall problem. Normal ergosterol concentration excludes impaired ergosterol synthesis but does not by itself exclude a polyene that binds existing ergosterol. However, normal membrane permeability at a nonlytic dose argues against direct membrane damage, while osmotic rescue supports wall-integrity failure. Normal nucleic-acid synthesis excludes antimetabolite action. Echinocandin-like inhibition of 1,3-beta-glucan synthesis best explains the findings.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "echinocandins",
+      "fungal wall"
+    ],
+    "covers": [
+      "L032-O7"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (032) L - Fungal Pathogens - Wilkins.docx, paragraphs 354-377",
+    "sourceBlock": "L032",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Lanosterol conversion is an azole target and would reduce ergosterol, which the stem explicitly reports as normal."
+    },
+    "holdout": false,
+    "n": 46
+  },
+  {
+    "id": "MQG-SEP11-L033-01",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "A hemoglobin variant binds 2,3-BPG less strongly than normal adult Hb. At fixed tissue pO2, which paired change follows?",
+    "options": [
+      "Higher P50 and more O2 unloading",
+      "Lower P50 and more O2 unloading",
+      "Higher P50 and less O2 unloading",
+      "No change in either",
+      "Lower P50 and less O2 unloading"
+    ],
+    "optionExplanations": [
+      "A higher P50 reflects lower oxygen affinity, which is the direction caused by stronger BPG binding rather than the weaker binding in this variant.",
+      "Lower P50 correctly indicates higher affinity, but higher-affinity hemoglobin holds oxygen more tightly and therefore unloads less at the same tissue pO2.",
+      "Higher P50 and less unloading pair opposing physiologic directions: a right shift usually lowers affinity and favors unloading.",
+      "BPG is a negative allosteric effector, so changing its binding strength changes hemoglobin affinity, P50, and unloading behavior.",
+      "Weaker BPG binding reduces BPG's affinity-lowering effect, shifting hemoglobin toward higher affinity, a lower P50, and reduced tissue oxygen unloading."
+    ],
+    "answer": 4,
+    "rationale": "BPG normally binds the central cleft of adult hemoglobin and decreases oxygen affinity, producing a right shift and higher P50. If the variant binds BPG less strongly, that negative allosteric effect is reduced. Hemoglobin therefore has higher oxygen affinity, a lower P50, and releases less oxygen at a fixed tissue pO2.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "HB5",
+      "HB6"
+    ],
+    "covers": [
+      "HB5",
+      "HB6"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (033) L - Hemoglobin and Gas Transport - Faner.docx, paragraphs 123-130, 142-147",
+    "sourceBlock": "L033",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Lower P50 does indicate higher affinity, but higher affinity impairs rather than increases oxygen unloading at a fixed tissue pO2."
+    },
+    "holdout": false,
+    "n": 27
+  },
+  {
+    "id": "MQG-SEP11-L033-02",
+    "n": 28,
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "After carbon-monoxide exposure, hemoglobin-bound CO occupies available O2-binding sites and left-shifts the remaining sites. Which paired consequence follows?",
+    "options": [
+      "Lower O2 content and impaired tissue unloading",
+      "Lower O2 content and enhanced tissue unloading",
+      "Normal O2 content and impaired tissue unloading",
+      "Higher O2 content and impaired tissue unloading",
+      "Lower O2 content and unchanged tissue unloading"
+    ],
+    "optionExplanations": [
+      "CO occupies heme sites, reducing blood oxygen content, and its left shift raises affinity at the remaining sites, so tissue unloading is impaired.",
+      "Although CO reduces oxygen content, the left shift increases hemoglobin affinity and therefore opposes rather than enhances tissue oxygen unloading.",
+      "Oxygen content is not normal because CO-bound heme cannot carry oxygen, even though the remaining sites bind oxygen more avidly.",
+      "CO does not increase oxygen capacity; it removes usable heme sites while also impairing release from the sites that remain available.",
+      "The remaining oxygen-binding sites are left-shifted, so their unloading is changed in the harmful direction rather than remaining unchanged."
+    ],
+    "answer": 0,
+    "rationale": "CO binding removes heme sites from oxygen carriage, lowering total O2 content. It also stabilizes high-affinity binding at remaining sites, so the oxygen that is carried is released poorly to tissue.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "HB2",
+      "HB4"
+    ],
+    "covers": [
+      "HB2",
+      "HB4"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (033) L - Hemoglobin and Gas Transport - Faner.docx, paragraphs 150-155",
+    "sourceBlock": "L033",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "The lower oxygen content is correct, but CO left-shifts hemoglobin and worsens rather than enhances unloading."
+    },
+    "holdout": false,
+    "reasoningOrder": 2
+  },
+  {
+    "id": "MQG-SEP11-L033-03",
+    "n": 29,
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "At the placenta, a fetal hemoglobin variant binds BPG as strongly as maternal HbA. Relative to normal HbF, what paired result follows?",
+    "options": [
+      "Higher fetal O2 affinity and more maternal-to-fetal transfer",
+      "Lower fetal O2 affinity and less maternal-to-fetal transfer",
+      "Lower fetal O2 affinity and more maternal-to-fetal transfer",
+      "Higher fetal O2 affinity and less maternal-to-fetal transfer",
+      "No change in fetal affinity or maternal-to-fetal transfer"
+    ],
+    "optionExplanations": [
+      "Higher affinity and increased transfer describe normal HbF, which binds BPG less strongly than maternal HbA rather than as strongly.",
+      "Stronger BPG binding stabilizes the low-affinity state of the fetal variant, removing its normal affinity advantage and reducing placental transfer.",
+      "Lower fetal affinity would make fetal hemoglobin less able to recruit oxygen from maternal HbA, so transfer would not increase.",
+      "Higher fetal affinity would favor transfer, whereas stronger BPG binding produces the opposite affinity change in this variant.",
+      "The altered BPG interaction changes oxygen affinity, which is the mechanism that normally permits maternal-to-fetal oxygen transfer."
+    ],
+    "answer": 1,
+    "rationale": "Normal HbF binds BPG weakly and therefore maintains higher O2 affinity than maternal HbA. If fetal BPG binding becomes HbA-like, fetal affinity falls and less oxygen is recruited across the placenta.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "HB5",
+      "HB6"
+    ],
+    "covers": [
+      "HB5",
+      "HB6"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (033) L - Hemoglobin and Gas Transport - Faner.docx, paragraphs 131-135",
+    "sourceBlock": "L033",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "That is the normal HbF pattern, but the variant loses it by binding BPG as strongly as HbA."
+    },
+    "holdout": false,
+    "reasoningOrder": 2
+  },
+  {
+    "id": "MQG-SEP11-L034-01",
+    "n": 30,
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "A sedated patient has persistent pCO2 of 60 mm Hg with low pH. Over several days, which renal response is compensation, and what happens to pH?",
+    "options": [
+      "Excrete HCO3-; pH rises toward normal",
+      "Retain HCO3-; pH falls further",
+      "Retain HCO3-; pH rises toward but need not reach normal",
+      "Excrete HCO3-; pH remains unchanged",
+      "No HCO3- change; pH normalizes fully"
+    ],
+    "optionExplanations": [
+      "Bicarbonate excretion lowers the base component of the buffer ratio and therefore worsens the respiratory acidosis instead of compensating for it.",
+      "Renal bicarbonate retention is the correct direction, but it raises the bicarbonate-to-CO2 ratio and moves pH upward rather than further downward.",
+      "Kidneys retain bicarbonate during respiratory acidosis, raising the HCO3-/dissolved-CO2 ratio and moving pH toward normal while pCO2 remains elevated.",
+      "Excreting bicarbonate would oppose the renal response needed for respiratory acidosis and would not preserve pH at its current value.",
+      "Compensation acts through bicarbonate handling and may improve pH, but it does not guarantee full normalization while the primary CO2 elevation persists."
+    ],
+    "answer": 2,
+    "rationale": "Sustained hypoventilation raises CO2, producing respiratory acidosis. Renal bicarbonate retention over days raises the buffer ratio and compensates by increasing pH toward normal, but it does not remove the primary CO2 excess.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "PH6",
+      "PH7"
+    ],
+    "covers": [
+      "PH6",
+      "PH7"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (034) L - Blood pH Regulation - Faner.docx, paragraphs 311-321",
+    "sourceBlock": "L034",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Retention is compensatory, but it raises rather than lowers pH by increasing the buffer ratio."
+    },
+    "holdout": false,
+    "reasoningOrder": 2
+  },
+  {
+    "id": "MQG-SEP11-L034-02",
+    "n": 31,
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "A patient with diarrhea has low HCO3- and pCO2 of 40 mm Hg. Which change is respiratory compensation rather than correction?",
+    "options": [
+      "Raise HCO3- while pCO2 remains 40 mm Hg",
+      "Raise pCO2 while HCO3- remains low",
+      "Lower HCO3- while pCO2 remains 40 mm Hg",
+      "Lower pCO2 while HCO3- remains low",
+      "Normalize both values by ventilation alone"
+    ],
+    "optionExplanations": [
+      "Raising bicarbonate would alter the primary metabolic abnormality, whereas the question asks for the separate respiratory compensatory response.",
+      "Retaining more CO2 lowers the buffer ratio and aggravates metabolic acidosis rather than providing respiratory compensation.",
+      "Further bicarbonate loss worsens the primary disturbance from diarrhea and does not represent a response by the respiratory system.",
+      "Hyperventilation lowers pCO2 while bicarbonate stays low, increasing the buffer ratio and moving pH toward normal without correcting bicarbonate loss.",
+      "Ventilation can lower pCO2, but it cannot replace the lost bicarbonate or independently normalize both variables."
+    ],
+    "answer": 3,
+    "rationale": "Diarrhea produces metabolic acidosis by lowering bicarbonate. The lungs compensate by lowering pCO2 through ventilation, which improves the bicarbonate-to-CO2 ratio while the primary bicarbonate deficit remains.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "PH6",
+      "PH7"
+    ],
+    "covers": [
+      "PH6",
+      "PH7"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (034) L - Blood pH Regulation - Faner.docx, paragraphs 421-445",
+    "sourceBlock": "L034",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "Changing bicarbonate addresses the primary metabolic component; respiratory compensation changes pCO2 instead."
+    },
+    "holdout": false,
+    "reasoningOrder": 2
+  },
+  {
+    "id": "MQG-SEP11-L034-03",
+    "n": 32,
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "stem": "Which electrolyte panel has the largest anion gap using AG = Na+ - Cl- - HCO3-?",
+    "options": [
+      "Na+ 140, Cl- 104, HCO3- 24",
+      "Na+ 140, Cl- 100, HCO3- 20",
+      "Na+ 140, Cl- 110, HCO3- 18",
+      "Na+ 140, Cl- 106, HCO3- 26",
+      "Na+ 140, Cl- 96, HCO3- 18"
+    ],
+    "optionExplanations": [
+      "This panel has AG = 140 - 104 - 24 = 12 mEq/L, which is lower than the largest calculated value.",
+      "This panel has AG = 140 - 100 - 20 = 20 mEq/L, so it is elevated relative to some choices but not the maximum.",
+      "This panel has AG = 140 - 110 - 18 = 12 mEq/L because the high chloride offsets the lower bicarbonate.",
+      "This panel has AG = 140 - 106 - 26 = 8 mEq/L, the smallest value among the listed panels.",
+      "This panel has AG = 140 - 96 - 18 = 26 mEq/L, which is larger than the gaps calculated from every other option."
+    ],
+    "answer": 4,
+    "rationale": "The anion gap is calculated separately for each panel. Subtracting chloride and bicarbonate from sodium gives 26 mEq/L for the final panel, the largest amount of unmeasured anions listed.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "PH8"
+    ],
+    "covers": [
+      "PH8"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (034) L - Blood pH Regulation - Faner.docx, paragraphs 490-516",
+    "sourceBlock": "L034",
+    "applicationLevel": "recall",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "An anion gap of 20 is substantial, but 26 from the final panel is larger."
+    },
+    "holdout": false,
+    "reasoningOrder": 1
+  },
+  {
+    "id": "MQG-SEP11-L035-01",
+    "n": 47,
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A Gram-negative parent strain and an isogenic mutant with a disrupted outer membrane are exposed to the same lysozyme concentration in hypotonic medium. The mutant's periplasmic peptidoglycan is initially intact. Compared with the parent, what outcome is most likely?",
+    "options": [
+      "Greater lysozyme access, greater peptidoglycan degradation, and greater osmotic fragility",
+      "Less lysozyme access, greater peptidoglycan degradation, and greater osmotic fragility",
+      "Greater lysozyme access, less peptidoglycan degradation, and less osmotic fragility",
+      "Unchanged lysozyme access and unchanged osmotic fragility",
+      "Less lysozyme access, less peptidoglycan degradation, and less osmotic fragility"
+    ],
+    "optionExplanations": [
+      "The outer membrane is a permeability barrier; its disruption exposes peptidoglycan to lysozyme, whose glycan-chain hydrolysis weakens the wall and causes hypotonic fragility.",
+      "Removing the permeability barrier increases, rather than decreases, lysozyme access; the increased degradation is therefore paired with the wrong access direction.",
+      "Greater access lets lysozyme hydrolyze more peptidoglycan, so wall strength and resistance to hypotonic osmotic stress cannot increase.",
+      "The outer membrane normally limits entry to periplasmic peptidoglycan, so disrupting it changes lysozyme access and its downstream wall damage.",
+      "A disrupted outer membrane does not further exclude lysozyme; it exposes peptidoglycan and makes degradation-related fragility more likely."
+    ],
+    "answer": 0,
+    "rationale": "The Gram-negative outer membrane normally limits access to the periplasmic peptidoglycan. Its disruption permits lysozyme-mediated glycan hydrolysis, weakening the wall that resists hypotonic swelling and thereby increasing fragility.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "outer membrane",
+      "peptidoglycan"
+    ],
+    "covers": [
+      "L035-O2"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (035) L - Bacterial Structure - D Arvidson.pdf, pp. 12, 17-19",
+    "sourceBlock": "L035",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "Lysozyme access increases, but more peptidoglycan hydrolysis weakens the wall and raises rather than lowers hypotonic fragility."
+    },
+    "holdout": false,
+    "reasoningOrder": 2
+  },
+  {
+    "id": "MQG-SEP11-L035-02",
+    "n": 48,
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "In an assay of actively synthesized bacterial wall, lysozyme produces soluble glycan fragments, whereas a beta-lactam produces uncross-linked glycan chains. Which pair of processes is affected?",
+    "options": [
+      "Lysozyme blocks peptide cross-linking; beta-lactam cleaves glycan bonds",
+      "Lysozyme degrades glycan chains; beta-lactam prevents peptide cross-linking",
+      "Both agents prevent peptide cross-linking",
+      "Both agents degrade glycan chains",
+      "Lysozyme disrupts LPS; beta-lactam prevents capsule assembly"
+    ],
+    "optionExplanations": [
+      "Peptide cross-linking is the beta-lactam-sensitive transpeptidase step; lysozyme instead hydrolyzes the glycan backbone of existing peptidoglycan.",
+      "Lysozyme hydrolyzes peptidoglycan glycan chains, while beta-lactams bind PBPs and prevent the peptide cross-links that strengthen the wall scaffold.",
+      "Lysozyme has a degradative glycan-chain action, so the two agents do not share the same peptide-cross-linking process.",
+      "Beta-lactams do not cleave existing glycan chains; they block PBP-mediated cross-linking during peptidoglycan wall synthesis.",
+      "Neither agent has the stated primary action: lysozyme targets peptidoglycan and beta-lactams target PBPs, not LPS or capsule assembly."
+    ],
+    "answer": 1,
+    "rationale": "Lysozyme degrades existing peptidoglycan by hydrolyzing glycan chains. Beta-lactams act differently: by binding transpeptidases, they prevent peptide cross-link formation and leave uncross-linked wall material.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "peptidoglycan"
+    ],
+    "covers": [
+      "L035-O2"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (035) L - Bacterial Structure - D Arvidson.pdf, pp. 11-12",
+    "sourceBlock": "L035",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "This reverses the taught actions: lysozyme cleaves the glycan chain, while beta-lactams block PBP-mediated peptide cross-linking."
+    },
+    "holdout": false,
+    "reasoningOrder": 2
+  },
+  {
+    "id": "MQG-SEP11-L035-03",
+    "n": 49,
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "An encapsulated strain and an isogenic capsule-deficient strain are exposed to complement and neutrophils. What paired observation is expected for the capsule-deficient strain?",
+    "options": [
+      "Less complement deposition and more phagocytosis",
+      "More complement deposition and less phagocytosis",
+      "More complement deposition and more phagocytosis",
+      "Less complement deposition and less phagocytosis",
+      "No change in complement deposition or phagocytosis"
+    ],
+    "optionExplanations": [
+      "Capsule loss removes an anti-opsonic layer, so complement deposition should increase rather than decrease before phagocytosis rises.",
+      "Increased complement deposition promotes phagocyte recognition and ingestion, making reduced phagocytosis inconsistent with the causal chain.",
+      "Capsules prevent complement opsonization; without the capsule, complement tags the cell more effectively and neutrophils phagocytose it more readily.",
+      "Both directions are reversed because the capsule normally impedes complement opsonization and the resulting phagocytic clearance.",
+      "The capsule is a virulence factor specifically because it changes complement opsonization and phagocytic susceptibility."
+    ],
+    "answer": 2,
+    "rationale": "A capsule impedes complement opsonization. Removing it permits more complement deposition on the bacterial surface, which improves neutrophil recognition and leads to more phagocytosis.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "capsule",
+      "virulence"
+    ],
+    "covers": [
+      "L035-O2"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (035) L - Bacterial Structure - D Arvidson.pdf, p. 24",
+    "sourceBlock": "L035",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "Complement deposition rises after capsule loss, and that increased opsonization promotes rather than reduces phagocytosis."
+    },
+    "holdout": false,
+    "reasoningOrder": 2
+  },
+  {
+    "id": "MQG-SEP11-RR8-01",
+    "n": 207,
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "An isolated hepatocyte shifts from high insulin to high glucagon while glucose, supplied palmitate, oxygen, and carnitine remain constant. What pair follows?",
+    "options": [
+      "Decreased ACC activity and decreased mitochondrial palmitate entry",
+      "Increased ACC activity and increased mitochondrial palmitate entry",
+      "Increased ACC activity and decreased mitochondrial palmitate entry",
+      "Decreased ACC activity and increased mitochondrial palmitate entry",
+      "No change in ACC activity or mitochondrial palmitate entry"
+    ],
+    "optionExplanations": [
+      "Glucagon lowers ACC activity and malonyl-CoA, which releases the carnitine entry step rather than decreasing mitochondrial fatty-acid entry.",
+      "Increased ACC activity is a fed-state lipogenic response; glucagon instead turns ACC down and shifts metabolism toward oxidation.",
+      "This is a physiologically consistent fed-state pair: high ACC raises malonyl-CoA, which inhibits carnitine acyltransferase I, but it is opposite to the high-glucagon condition.",
+      "Glucagon inhibits ACC, lowering malonyl-CoA; less malonyl-CoA releases carnitine acyltransferase I and increases mitochondrial palmitate entry for oxidation.",
+      "Carnitine availability does not override hormonal regulation because malonyl-CoA controls access of long-chain acyl groups to mitochondrial oxidation."
+    ],
+    "answer": 3,
+    "rationale": "Glucagon inhibits acetyl-CoA carboxylase, decreasing malonyl-CoA. Low malonyl-CoA releases inhibition of carnitine acyltransferase I, so supplied palmitate enters mitochondria more readily for beta-oxidation.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "RR8-O5"
+    ],
+    "covers": [
+      "O5"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (RR8) R - Fatty Acid Synthesis (FAS) - Wilkins.docx, paragraphs 122-128; OST520 (RR7a) R - Fatty Acid Oxidation (FAO) - Wilkins.docx, paragraph 24",
+    "sourceBlock": "RR8",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "The ACC change is correct, but less malonyl-CoA releases rather than suppresses carnitine-dependent mitochondrial entry."
+    },
+    "holdout": false,
+    "reasoningOrder": 3
+  },
+  {
+    "id": "MQG-SEP11-L027-01",
+    "n": 12,
+    "topic": "Molecular Biology",
+    "src": "N",
+    "stem": "A drug inhibits the Golgi glycosyltransferase group. A secretory protein enters the ER normally. Which pairing best describes its ER sugar attachment and the usual O-linked modification after Golgi inhibition?",
+    "options": [
+      "No ER sugar attachment; usual O-linked addition proceeds normally",
+      "ER attachment to serine or threonine; usual O-linked addition increases",
+      "No ER sugar attachment; usual O-linked addition is reduced",
+      "ER attachment to asparagine; usual O-linked addition increases",
+      "ER attachment to asparagine; usual O-linked addition is reduced"
+    ],
+    "optionExplanations": [
+      "Golgi enzyme inhibition does not prevent ER glycosylation, and usual O-linked addition depends on Golgi glycosyltransferases so it is not preserved.",
+      "O-linked sugars are usually added in the Golgi, while the ER attachment in this pathway is to asparagine rather than serine or threonine.",
+      "The protein still enters an intact ER and receives its ER glycosylation; Golgi inhibition reduces the later usual O-linked additions instead of removing both processes.",
+      "ER attachment to asparagine is correct, but blocking the Golgi enzyme group cannot increase the usual O-linked additions that those enzymes catalyze.",
+      "N-linked sugars are attached to asparagine in the ER, whereas usual O-linked sugars are added stepwise in the Golgi and are reduced when its transferases are inhibited."
+    ],
+    "answer": 4,
+    "rationale": "Normal ER entry allows N-linked attachment to asparagine in the ER. The drug acts later in the Golgi, where glycosyltransferases normally add O-linked sugars stepwise, so usual O-linked modification falls while the ER event remains intact.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "L027-O7"
+    ],
+    "covers": [
+      "O7"
+    ],
+    "course": "OST520",
+    "source": "sept11-practice",
+    "sourceRef": "OST520 (027) L - Protein Translation and Post-Translation - Ritchie.docx, paragraphs 310-335",
+    "sourceBlock": "L027",
+    "applicationLevel": "mechanism",
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 3,
+      "why_wrong": "ER attachment to asparagine is correct, but Golgi glycosyltransferase inhibition reduces rather than increases usual O-linked addition."
+    },
+    "holdout": false,
+    "reasoningOrder": 2
+  }
 ]

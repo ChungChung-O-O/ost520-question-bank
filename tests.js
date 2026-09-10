@@ -4,9 +4,9 @@ const html=fs.readFileSync("index.html","utf8"), json=JSON.parse(fs.readFileSync
 const between=(a,b)=>html.slice(html.indexOf(a)+a.length,html.indexOf(b,html.indexOf(a)));
 const bank=vm.runInNewContext("("+between("let BANK = ",";\nconst META =")+")");
 assert.deepStrictEqual(JSON.parse(JSON.stringify(bank)),json,"bank.json must exactly equal embedded BANK");
-assert.equal(bank.length,771); assert.equal(new Set(bank.map(q=>q.id)).size,771);
-assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats","Molecular Biology","Histology","Hematology & Physiology","Microbiology","Immunology"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":206,"Genetics":403,"Epi & Biostats":59,"Molecular Biology":11,"Histology":14,"Hematology & Physiology":23,"Microbiology":40,"Immunology":15});
-assert.equal(bank.filter(q=>q.type==="mcq").length,746); assert.equal(bank.filter(q=>q.type==="worked").length,25);
+assert.equal(bank.length,791); assert.equal(new Set(bank.map(q=>q.id)).size,791);
+assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats","Molecular Biology","Histology","Hematology & Physiology","Microbiology","Immunology"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":207,"Genetics":403,"Epi & Biostats":59,"Molecular Biology":12,"Histology":14,"Hematology & Physiology":32,"Microbiology":49,"Immunology":15});
+assert.equal(bank.filter(q=>q.type==="mcq").length,766); assert.equal(bank.filter(q=>q.type==="worked").length,25);
 assert.equal(bank.filter(q=>/^WK-/.test(q.id)).length,24,"targeted weakness set must remain complete");
 const confusionLab=bank.filter(q=>/^DL-\d\d$/.test(q.id));
 assert.equal(confusionLab.length,24,"confusion lab must contain exactly 24 questions");
@@ -22,8 +22,8 @@ assert.equal(dnaRepair.length,14,"L013 DNA Repair set must remain complete");
 assert(dnaRepair.every(q=>q.topic==="Genetics"&&q.src==="G"&&q.course==="OST520"&&q.unit==="UE1"&&q.type==="mcq"),"L013 question metadata changed");
 assert(dnaRepair.every(q=>q.covers.length===1&&q.covers[0]==="L013"&&q.sourceRef==="L013 DNA Repair study guide"),"L013 source metadata changed");
 assert(dnaRepair.every(q=>q.options.length===5&&new Set(q.options).size===5&&q.rationale.includes("<strong>")),"L013 question quality guard failed");
-const week3=bank.filter(q=>q.unit==="UE2"),coreWeek3=week3.filter(q=>/^W3-/.test(q.id)),missedRemediation=week3.filter(q=>/^MQG-/.test(q.id));
-assert.equal(week3.length,158,"Unit 2 released set must remain complete");
+const week3=bank.filter(q=>q.unit==="UE2"),coreWeek3=week3.filter(q=>/^W3-/.test(q.id)),missedRemediation=week3.filter(q=>q.source==="missed-remediation");
+assert.equal(week3.length,178,"Unit 2 released set must remain complete");
 assert.equal(coreWeek3.length,152,"Week 3 baseline set must remain complete");
 assert.equal(missedRemediation.length,6,"missed-question remediation set must remain complete");
 assert(coreWeek3.every(q=>q.source==="week3-bank"),"Week 3 baseline provenance changed");
@@ -126,9 +126,9 @@ assert(html.includes("sessionInView(saved)"),"resume must be limited to sessions
 // library behaviour, exercised through the real boot path
 const SCOPE_KEY="ost520.bank.v2.scope", scoped=v=>boot({[SCOPE_KEY]:JSON.stringify(v)});
 const libBoot=boot();
-assert.equal(vm.runInContext("BANK.length",libBoot.ctx),771,"with no saved scope the whole bank is loaded");
+assert.equal(vm.runInContext("BANK.length",libBoot.ctx),791,"with no saved scope the whole bank is loaded");
 assert.equal(libBoot.els.get("library").hidden,false,"no saved scope must open the library");
-assert.equal(vm.runInContext("IDS.size",libBoot.ctx),771,"id set must span the whole bank regardless of view");
+assert.equal(vm.runInContext("IDS.size",libBoot.ctx),791,"id set must span the whole bank regardless of view");
 const unitBoot=scoped({course:"OST520",unit:"UE1",source:"all"});
 assert.equal(unitBoot.els.get("setup").hidden,false,"a saved unit must open straight into that unit");
 assert.equal(vm.runInContext("BANK.length",unitBoot.ctx),613);
@@ -143,8 +143,8 @@ assert(vm.runInContext('BANK.every(q=>q.source!=="faculty-practice")',ownBoot.ct
 assert.equal(vm.runInContext('BANK.filter(q=>q.source==="confusion-lab").length',ownBoot.ctx),24,"bank view must expose all lab questions");
 const unit2Boot=scoped({course:"OST520",unit:"UE2",source:"all"});
 assert.equal(unit2Boot.els.get("setup").hidden,false,"a saved UE2 scope must open straight into that unit");
-assert.equal(vm.runInContext("BANK.length",unit2Boot.ctx),158,"UE2 must expose the Week 3 baseline plus missed-question remediation");
-assert(vm.runInContext('BANK.every(q=>q.unit==="UE2"&&["week3-bank","missed-remediation"].includes(q.source))',unit2Boot.ctx),"UE2 leaked another unit or source");
+assert.equal(vm.runInContext("BANK.length",unit2Boot.ctx),178,"UE2 must expose the Week 3 baseline plus missed-question remediation");
+assert(vm.runInContext('BANK.every(q=>q.unit==="UE2"&&["week3-bank","missed-remediation","sept11-practice"].includes(q.source))',unit2Boot.ctx),"UE2 leaked another unit or source");
 assert.equal(unit2Boot.els.get("unittitle").textContent,"Unit Exam 2","UE2 screen title must not say Unit Exam 1");
 assert.equal(vm.runInContext("dailyCap()",unit2Boot.ctx),22,"UE2 daily cap must honor the 13-22 question strategy");
 assert.equal(vm.runInContext('unitById(courseById("OST520"),"UE2").exam',unit2Boot.ctx),"2026-09-22","UE2 exam date changed");
@@ -158,11 +158,32 @@ assert(vm.runInContext("adaptivePrescription().questions.every(q=>questionTaught
 assert(vm.runInContext('adaptivePrescription().questions.every(q=>["RR6","L026","L027","L028","L029","LABL3"].includes(q.sourceBlock))',wedBoot.ctx),"Wednesday adaptive set must be restricted to Tuesday's six blocks");
 assert(vm.runInContext('todaysPlan().blocks.join(",")',wedBoot.ctx)==="RR6,L026,L027,L028,L029,LABL3","Wednesday plan routing changed");
 const cumulativeBoot=scoped({course:"OST520",unit:"UE2",source:"all"});
+// Both daily entry points must serve the reviewed batch, even with old history.
+const sept11Batch=bank.filter(q=>q.source==="sept11-practice");
+assert.equal(sept11Batch.length,20);
+assert(sept11Batch.every(q=>/^MQG-SEP11-/.test(q.id)));
+assert(sept11Batch.filter(q=>q.reasoningOrder===2).length>=14,"second-order questions must dominate the approved batch");
+for(const source of ["all","bank"]){
+  const friday=scoped({course:"OST520",unit:"UE2",source});
+  vm.runInContext('const RealDate=Date;Date=class extends RealDate{constructor(...args){super(...(args.length?args:["2026-09-11T08:00:00-04:00"]))}static now(){return new RealDate("2026-09-11T08:00:00-04:00").getTime()}}',friday.ctx);
+  vm.runInContext('const st=store.read();st.history["W3-L027-01"]={attempts:1,correct:0,lastOk:false,reasons:[]};store.write(st);renderHome();',friday.ctx);
+  const expected=Array.from(sept11Batch,q=>q.id).sort();
+  const planned=Array.from(vm.runInContext('BANK.filter(planFilter(todaysPlan())).map(q=>q.id)',friday.ctx)).sort();
+  assert.deepStrictEqual(planned,expected,"dated route must select the exact reviewed set");
+  assert.equal(vm.runInContext('planCount(todaysPlan())',friday.ctx),20);
+  assert.deepStrictEqual(Array.from(vm.runInContext('adaptivePrescription().questions.map(q=>q.id)',friday.ctx)).sort(),expected,"adaptive route must serve the same reviewed set");
+  friday.els.get("dostoday").onclick();
+  assert.deepStrictEqual(Array.from(vm.runInContext('S.order',friday.ctx)).sort(),expected,"start button must launch the reviewed set");
+  vm.runInContext('dropSession();renderHome()',friday.ctx);
+  friday.els.get("adaptiveToday").onclick();
+  assert.deepStrictEqual(Array.from(vm.runInContext('S.order',friday.ctx)).sort(),expected,"application button must launch the reviewed set");
+  assert.equal(vm.runInContext('hist()["W3-L027-01"].attempts',friday.ctx),1,"routing must preserve old attempts");
+}
 vm.runInContext('const RealDate=Date;Date=class extends RealDate{constructor(...args){super(...(args.length?args:["2026-09-13T12:00:00-04:00"]))}static now(){return new RealDate("2026-09-13T12:00:00-04:00").getTime()}}',cumulativeBoot.ctx);
 assert.match(vm.runInContext("todaysPlan().note",cumulativeBoot.ctx),/^cumulative review/,"pre-exam fallback was mislabeled post-exam");
 assert.equal(scoped({course:"NOPE",unit:"UE1",source:"all"}).els.get("library").hidden,false,"an unknown course must fall back to the library");
 assert.equal(vm.runInContext("BANK_FINGERPRINT",facBoot.ctx),vm.runInContext("BANK_FINGERPRINT",libBoot.ctx),"the view must not change the backup fingerprint");
-assert(html.includes('771-question OST 520 bank for Unit Exams 1 and 2 with adaptive practice'),"page metadata must describe the current bank");
+assert(html.includes('791-question OST 520 bank for Unit Exams 1 and 2 with adaptive practice'),"page metadata must describe the current bank");
 assert(html.includes('New question-quality release'),"home must explain the current quality release");
 assert(html.includes('label:"Look-Alike Concepts"')&&html.includes('q.source==="confusion-lab"'),"Look-Alike Concepts mode missing");
 assert(html.includes('id="contrastwrap"')&&html.includes("function renderContrast(q,a)"),"contrast table UI missing");
@@ -203,7 +224,7 @@ assert(!html.includes("if(pendingBackup.theme)"),"restore must not dereference a
 assert(html.includes("fallback && untried ? q=>!H[q.id] : fallback ? ()=>true"),"post-plan fallback must use the full bank after unseen questions are exhausted");
 assert(html.includes('id="opendiag" type="button">'),"diagnosis must remain discoverable with empty history");
 assert(html.includes("function parseLegacyResults"),"legacy artifact transfer parser missing");
-assert(html.includes("Today&rsquo;s adaptive ${dailyCap()}"),"adaptive prescription entry point must display the active unit cap");assert(html.includes("lastConfidence"),"confidence migration missing");assert(html.includes("timezoneOffsetMinutes"),"timezone-aware timeline missing");assert(html.includes("questionReports"),"question report storage missing");
+assert(html.includes('plan.questionIds?"application "+n:"adaptive "+dailyCap()'),"adaptive prescription entry point must show the dated application set or active unit cap");assert(html.includes("lastConfidence"),"confidence migration missing");assert(html.includes("timezoneOffsetMinutes"),"timezone-aware timeline missing");assert(html.includes("questionReports"),"question report storage missing");
 assert(html.includes('a.pick!=null && !!(a.confidence || ("guessed" in a'),"new MCQ attempts must explicitly record confidence");
 assert(html.includes('guessed:c!=="knew"}; renderQ(); sync();'),"confidence changes must immediately enable the Check button");
 function boot(storage={}){const source=html.slice(html.indexOf("<script>")+8,html.lastIndexOf("</script>")),els=new Map(),el=()=>{const node={hidden:false,style:{},classList:{add(){}},setAttribute(){},children:[],textContent:"",click(){},querySelectorAll(){return[]},appendChild(child){this.children.push(child);}};Object.defineProperty(node,"innerHTML",{get(){return this._innerHTML||""},set(value){this._innerHTML=value;if(value==="")this.children=[];}});return node;},document={getElementById:id=>{if(!els.has(id))els.set(id,el());return els.get(id)},createElement:el,querySelectorAll(){return[]},addEventListener(){},documentElement:{setAttribute(){},removeAttribute(){},getAttribute(){return null}}},data=new Map(Object.entries(storage)),localStorage={getItem:k=>data.get(k)||null,setItem:(k,v)=>data.set(k,String(v)),removeItem:k=>data.delete(k)},alerts=[],ctx=vm.createContext({document,localStorage,window:{scrollTo(){}},console,Date,JSON,Math,Set,Map,Array,Object,Number,String,Boolean,RegExp,Error,Blob:function(){},URL:{createObjectURL(){return ""},revokeObjectURL(){}},FileReader:function(){},navigator:{},alert:m=>alerts.push(String(m)),setTimeout(){}});vm.runInContext(source,ctx);return{ctx,data,els,alerts};}
@@ -267,7 +288,7 @@ assert(!pairAnalysis.includes(vm.runInContext('ALL_QUESTIONS.find(q=>q.id==="DL-
 assert.throws(()=>vm.runInContext('validateBackup({schemaVersion:4,bankFingerprint:BANK_FINGERPRINT,history:{},questionReports:{B1:{reason:"injected"}}})',restoreBoot.ctx),/invalid question report/);
 assert.throws(()=>vm.runInContext(`(()=>{const q=ALL_QUESTIONS.find(x=>x.id==="DL-01"),chosen=q.optionConcepts[q.answer===0?1:0],correct=q.optionConcepts[q.answer],key=pairStorageKey(chosen,correct);return validateBackup({schemaVersion:4,bankFingerprint:BANK_FINGERPRINT,history:{},confusionPairs:{[key]:{chosen,correct,count:0,lastAt:new Date().toISOString(),questionId:q.id}}})})()`,restoreBoot.ctx),/invalid confusion pair/);
 assert.throws(()=>vm.runInContext(`validateBackup({schemaVersion:4,bankFingerprint:BANK_FINGERPRINT,history:{},confusionPairs:{"made-up::pair":{chosen:"made-up",correct:"pair",count:1,lastAt:new Date().toISOString(),questionId:"DL-01"}}})`,restoreBoot.ctx),/invalid confusion pair/);
-for(const priorFingerprint of ["fnv1a-2ed224b5-483","fnv1a-56ef5225-483","fnv1a-ac6648c1-507","fnv1a-40f86fe5-557","fnv1a-41aaee35-575","fnv1a-2939a373-613","fnv1a-91c07573-765"]){
+for(const priorFingerprint of ["fnv1a-2ed224b5-483","fnv1a-56ef5225-483","fnv1a-ac6648c1-507","fnv1a-40f86fe5-557","fnv1a-41aaee35-575","fnv1a-2939a373-613","fnv1a-91c07573-765","fnv1a-26480c6b-771"]){
   assert.doesNotThrow(()=>vm.runInContext(`validateBackup({schemaVersion:4,bankFingerprint:"${priorFingerprint}",history:{B1:{attempts:1,correct:1,lastOk:true,reasons:[]}}})`,restoreBoot.ctx),`known additive bank version must remain importable: ${priorFingerprint}`);
 }
 vm.runInContext(`S={id:"timeline-test",name:"Test",date:todayISO(),answers:{B1:{pick:1,reasons:["cue"]}},committed:{},initiallySeen:{B1:false},order:["B1"]}; commit(BANK.find(q=>q.id==="B1"),true,"narrowed");`,restoreBoot.ctx);

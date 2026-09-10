@@ -8,7 +8,8 @@
     "metabolism:questions": 7,
     "micro_immune:cards": 8,
     "micro_immune:guides": 8,
-    "micro_immune:questions": 8
+    "micro_immune:questions": 8,
+    "september11_ue2:questions": 20
   },
   "totals": {
     "answer:holdout:0": 8,
@@ -16,48 +17,52 @@
     "answer:holdout:2": 8,
     "answer:holdout:3": 8,
     "answer:holdout:4": 8,
-    "answer:practice:0": 35,
-    "answer:practice:1": 34,
-    "answer:practice:2": 35,
-    "answer:practice:3": 36,
-    "answer:practice:4": 34,
+    "answer:practice:0": 39,
+    "answer:practice:1": 38,
+    "answer:practice:2": 39,
+    "answer:practice:3": 40,
+    "answer:practice:4": 38,
     "card:basic": 169,
     "card:cloze": 21,
-    "cue:unique_dash_correct": 7,
-    "cue:unique_dash_eligible": 40,
-    "cue:unique_longest_correct": 46,
-    "cue:unique_longest_eligible": 189,
+    "cue:unique_dash_correct": 8,
+    "cue:unique_dash_eligible": 41,
+    "cue:unique_longest_correct": 53,
+    "cue:unique_longest_eligible": 203,
     "level:discrimination": 39,
-    "level:mechanism": 67,
-    "level:presentation": 83,
-    "level:recall": 25,
+    "level:mechanism": 82,
+    "level:presentation": 84,
+    "level:recall": 29,
     "media:holdout": 0,
     "media:practice": 16,
     "pool:holdout": 40,
-    "pool:practice": 174,
-    "ready:cue:unique_dash_correct": 5,
-    "ready:cue:unique_dash_eligible": 28,
-    "ready:cue:unique_longest_correct": 35,
-    "ready:cue:unique_longest_eligible": 136,
+    "pool:practice": 194,
+    "ready:cue:unique_dash_correct": 6,
+    "ready:cue:unique_dash_eligible": 29,
+    "ready:cue:unique_longest_correct": 42,
+    "ready:cue:unique_longest_eligible": 150,
     "ready:level:discrimination": 19,
-    "ready:level:mechanism": 51,
-    "ready:level:presentation": 63,
-    "ready:level:recall": 25,
-    "ready:questions": 158
+    "ready:level:mechanism": 66,
+    "ready:level:presentation": 64,
+    "ready:level:recall": 29,
+    "ready:questions": 178,
+    "source:sept11-practice": 20,
+    "reasoningOrder:1": 4,
+    "reasoningOrder:2": 15,
+    "reasoningOrder:3": 1
   },
-  "unique_question_ids": 214,
-  "beyond_recall_percent": 88.3,
-  "presentation_or_discrimination_percent": 57,
-  "ready_beyond_recall_percent": 84.2,
-  "ready_presentation_or_discrimination_percent": 51.9,
+  "unique_question_ids": 234,
+  "beyond_recall_percent": 87.6,
+  "presentation_or_discrimination_percent": 52.6,
+  "ready_beyond_recall_percent": 83.7,
+  "ready_presentation_or_discrimination_percent": 46.6,
   "errors": [],
   "answer_positions": {
     "practice": [
-      35,
-      34,
-      35,
-      36,
-      34
+      39,
+      38,
+      39,
+      40,
+      38
     ],
     "holdout": [
       8,
@@ -68,11 +73,11 @@
     ]
   },
   "cue_rates": {
-    "unique_longest_correct": 0.243,
-    "unique_dash_correct": 0.175
+    "unique_longest_correct": 0.261,
+    "unique_dash_correct": 0.195
   },
   "ready_cue_rates": {
-    "unique_longest_correct": 0.257,
-    "unique_dash_correct": 0.179
+    "unique_longest_correct": 0.28,
+    "unique_dash_correct": 0.207
   }
 }

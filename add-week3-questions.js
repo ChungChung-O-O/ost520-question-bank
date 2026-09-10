@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* Add the verified, non-media-gated OST 520 Week 3 and remediation set. */
+/* Add the verified, public OST 520 Week 3 and remediation release. */
 const fs = require("fs");
 
 const htmlPath = "index.html";
@@ -9,11 +9,22 @@ const marker = "let BANK = ";
 const endMarker = ";\nconst META =";
 
 const incoming = JSON.parse(fs.readFileSync(sourcePath, "utf8"));
-if (incoming.length < 152) throw new Error(`Expected at least the 152-question Week 3 baseline, got ${incoming.length}.`);
+if (incoming.length < 178) throw new Error(`Expected at least the 178-question public UE2 release, got ${incoming.length}.`);
 if (incoming.some(q => q.holdout || q.requiresMedia || q.unit !== "UE2" || q.course !== "OST520")) {
   throw new Error("Week 3 release contains a holdout, media-gated item, or incorrect course/unit tag.");
 }
 if (new Set(incoming.map(q => q.id)).size !== incoming.length) throw new Error("Duplicate Week 3 IDs.");
+const sept11 = incoming.filter(q => q.source === "sept11-practice");
+if (sept11.length !== 20 || sept11.some(q => !/^MQG-SEP11-/.test(q.id))) {
+  throw new Error("Expected exactly 20 reviewed September 11 application questions.");
+}
+const reasoningOrders = Object.fromEntries([1, 2, 3].map(order => [order, sept11.filter(q => q.reasoningOrder === order).length]));
+if (reasoningOrders[1] !== 4 || reasoningOrders[2] !== 15 || reasoningOrders[3] !== 1) {
+  throw new Error("September 11 reasoning-order distribution changed.");
+}
+if (sept11.some(q => q.applicationLevel === "calculation" || (q.reasoningOrder === 1 && q.applicationLevel !== "recall"))) {
+  throw new Error("September 11 application-level metadata changed.");
+}
 for (const q of incoming) {
   if (!Array.isArray(q.options) || !Array.isArray(q.optionExplanations) || q.optionExplanations.length !== q.options.length) {
     throw new Error(`Week 3 per-option explanations are missing or misaligned: ${q.id}`);
@@ -53,4 +64,4 @@ for (const q of bank) {
 const serialized = JSON.stringify(bank);
 fs.writeFileSync(htmlPath, html.slice(0, start + marker.length) + serialized + html.slice(end));
 fs.writeFileSync(jsonPath, `${JSON.stringify(bank, null, 2)}\n`);
-console.log(`Added ${incoming.length} verified Week 3 questions; bank now has ${bank.length}.`);
+console.log(`Added ${incoming.length} verified UE2 questions; bank now has ${bank.length}.`);
