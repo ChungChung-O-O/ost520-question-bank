@@ -6816,5 +6816,267 @@
     },
     "holdout": false,
     "n": 171
+  },
+  {
+    "id": "MQG-RR6-O6-01",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "After an overnight fast, an isolated liver is exposed to ethanol while receiving lactate and alanine. Glucose output falls, the lactate-to-pyruvate ratio rises, and the malate-to-oxaloacetate ratio rises. Which interpretation best explains the reduced gluconeogenic flux?",
+    "options": [
+      "NADH shifts pyruvate to lactate and oxaloacetate to malate, depleting both glucose precursors",
+      "Ethanol permits acetyl-CoA to be converted back to pyruvate, which diverts carbon away from glucose production",
+      "Ethanol-derived NADH directly activates glucose-6-phosphatase, causing hepatic glucose-6-phosphate depletion",
+      "The increased lactate-to-pyruvate ratio shows that lactate dehydrogenase has stopped functioning",
+      "The increased malate-to-oxaloacetate ratio increases oxaloacetate availability for conversion to phosphoenolpyruvate"
+    ],
+    "answer": 0,
+    "optionExplanations": [
+      "ethanol oxidation raises hepatic NADH, shifting lactate dehydrogenase toward lactate and malate dehydrogenase toward malate, thereby lowering pyruvate and oxaloacetate available for gluconeogenesis.",
+      "human pyruvate dehydrogenase is irreversible; acetyl-CoA cannot be converted back to pyruvate and therefore cannot explain these redox-ratio changes.",
+      "glucose-6-phosphatase hydrolyzes glucose-6-phosphate in the ER and is not directly activated by NADH; the immediate ethanol effect is precursor depletion.",
+      "a high NADH level drives a functioning lactate dehydrogenase equilibrium toward lactate; the increased ratio does not indicate that the enzyme has stopped.",
+      "shifting oxaloacetate toward malate lowers, rather than raises, oxaloacetate available for PEP formation and thereby suppresses gluconeogenesis."
+    ],
+    "rationale": "Ethanol oxidation raises the hepatic NADH-to-NAD+ ratio, pulling both pyruvate and oxaloacetate away from gluconeogenesis and toward lactate and malate.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "concepts": [
+      "RR6-O6"
+    ],
+    "covers": [
+      "O6"
+    ],
+    "source": "missed-remediation",
+    "sourceRef": "Lippincott Illustrated Reviews: Biochemistry, 9th ed., Ch. 23 IV.C, alcohol-related hypoglycemia",
+    "sourceBlock": "RR6",
+    "applicationLevel": "discrimination",
+    "derivedFrom": [
+      "W3-RR6-05"
+    ],
+    "missDescription": "Selected acetyl-CoA to pyruvate instead of recognizing that ethanol-derived NADH shifts pyruvate to lactate.",
+    "variantAngle": "Interpret paired hepatic redox ratios and precursor depletion instead of recalling a single reaction direction.",
+    "holdout": false,
+    "requiresMedia": false
+  },
+  {
+    "id": "MQG-L026-CT4-01",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "A lymph-node biopsy shows selective loss of its delicate branching stromal mesh, while thick tensile bundles and elastic recoil are preserved. Loss of which matrix component best accounts for this pattern?",
+    "options": [
+      "Type I collagen fibers",
+      "Elastic-fiber elastin",
+      "Elastic-fiber fibrillin",
+      "Type III collagen fibers",
+      "Adhesive glycoprotein fibronectin"
+    ],
+    "answer": 3,
+    "optionExplanations": [
+      "type I collagen forms strong, thick bundles; those bundles are described as preserved rather than being the lost branching stroma.",
+      "elastin provides stretch and recoil, and the stem explicitly states that elastic recoil remains intact.",
+      "fibrillin supports elastic-fiber microfibrils; preserved elastic recoil argues against selective loss of this component.",
+      "type III collagen forms reticular fibers, the fine branching mesh that supports mobile cells in lymphoid tissue.",
+      "fibronectin is an adhesive glycoprotein linking cells to matrix, not the principal protein of the branching reticular-fiber scaffold."
+    ],
+    "rationale": "Reticular fibers are composed of type III collagen and form the delicate branching support network characteristic of lymphoid stroma.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "concepts": [
+      "CT4"
+    ],
+    "covers": [
+      "CT4"
+    ],
+    "source": "missed-remediation",
+    "sourceRef": "L026 slide 25; transcript 27:13-27:50",
+    "sourceBlock": "L026",
+    "applicationLevel": "discrimination",
+    "derivedFrom": [
+      "W3-L026-CONNECTIVE-TISSUE-07"
+    ],
+    "missDescription": "Selected type I collagen bundles instead of type III collagen reticular fibers for a branching lymph-node support network.",
+    "variantAngle": "Infer fiber composition from a selective-loss biopsy pattern instead of choosing a fiber from its stated function.",
+    "holdout": false,
+    "requiresMedia": false
+  },
+  {
+    "id": "MQG-L026-CT5-01",
+    "topic": "Histology",
+    "src": "T",
+    "stem": "In a dermal explant, a treatment reduces radiolabeled proline incorporation into extracellular collagen and decreases secretion of ground-substance components. IgE-triggered mediator release and phagocytosis remain normal. Which connective-tissue cell was most likely inhibited?",
+    "options": [
+      "Mast cell",
+      "Fibroblast",
+      "Monocyte-derived macrophage",
+      "White adipocyte",
+      "Plasma cell"
+    ],
+    "answer": 1,
+    "optionExplanations": [
+      "Mast cells use IgE receptors to release inflammatory mediators, and that function remains normal in the explant.",
+      "Fibroblasts synthesize collagen fibers and ground-substance components, matching both reduced matrix-production measurements.",
+      "Monocyte-derived macrophages phagocytose foreign material and dead cells, and the stem states that phagocytosis is preserved.",
+      "White adipocytes primarily store triacylglycerol in a large lipid droplet rather than producing the measured extracellular matrix.",
+      "Plasma cells synthesize immunoglobulin; they are not the resident cell responsible for collagen and ground-substance production."
+    ],
+    "rationale": "The paired loss of collagen production and ground-substance secretion identifies fibroblast inhibition, while preserved mast-cell and macrophage functions exclude the closest immune-cell alternatives.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "concepts": [
+      "CT5"
+    ],
+    "covers": [
+      "CT5"
+    ],
+    "source": "missed-remediation",
+    "sourceRef": "OST520 (026) L - Connective Tissue - Liang.pdf, cell-types section",
+    "sourceBlock": "L026",
+    "applicationLevel": "mechanism",
+    "derivedFrom": [
+      "W3-L026-CONNECTIVE-TISSUE-12"
+    ],
+    "missDescription": "Selected mast-cell degranulation instead of fibroblast collagen and ground-substance secretion for a spindle-shaped wound-repair cell.",
+    "variantAngle": "Infer cell identity from paired matrix-production assays with preserved immune-cell controls instead of inferring function from wound morphology and organelles.",
+    "holdout": false,
+    "requiresMedia": false
+  },
+  {
+    "id": "MQG-L027-O6-01",
+    "topic": "Molecular Biology",
+    "src": "N",
+    "stem": "A normally soluble secretory protein has a hydrophobic sequence inserted midway through its polypeptide. Its N-terminal region enters the ER lumen, but a downstream reporter remains cytosolic and the protein stays membrane-associated. What role did the inserted sequence perform?",
+    "options": [
+      "A second signal peptide restarted translocation of the downstream reporter into the ER lumen",
+      "An SRP-binding signal initiated the protein's first contact with the rough ER",
+      "A stop-transfer sequence halted translocation and became a membrane-spanning anchor",
+      "A signal-peptidase recognition site cleaved the protein free of the ER membrane",
+      "A translation-termination signal caused a release factor to end polypeptide synthesis"
+    ],
+    "answer": 2,
+    "optionExplanations": [
+      "A sequence that restarted translocation would place the downstream reporter in the ER lumen, opposite the observed cytosolic location.",
+      "The original N-terminal signal already initiated rough-ER targeting; the inserted internal segment instead determines later topology.",
+      "A hydrophobic stop-transfer sequence halts further passage through the translocon and exits laterally into the bilayer as a membrane span.",
+      "Signal peptidase cleaves an N-terminal signal in the ER lumen, whereas this internal segment remains in the bilayer as a membrane span.",
+      "Release factors recognize stop codons in mRNA, whereas the full downstream reporter was synthesized and remained cytosolic."
+    ],
+    "rationale": "The inserted hydrophobic segment acted as a stop-transfer anchor: it halted lumenal translocation, entered the membrane laterally, and left the downstream region in the cytosol.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "concepts": [
+      "L027-O6"
+    ],
+    "covers": [
+      "O6"
+    ],
+    "source": "missed-remediation",
+    "sourceRef": "L027 docx paragraphs 222-230",
+    "sourceBlock": "L027",
+    "applicationLevel": "mechanism",
+    "derivedFrom": [
+      "W3-L027-07"
+    ],
+    "missDescription": "Selected aminoacyl-tRNA binding instead of recognizing that a stop-transfer sequence creates a membrane-spanning domain.",
+    "variantAngle": "Infer an inserted sequence's role from a topology experiment instead of predicting the structure lost after deletion, using new process-level distractors.",
+    "holdout": false,
+    "requiresMedia": false
+  },
+  {
+    "id": "MQG-L028-O2-01",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "A phagocyte has intact pentose-phosphate-pathway production of NADPH but no NADPH oxidase activity. Which reaction is most directly impaired when the cell encounters bacteria?",
+    "options": [
+      "Reduction of oxidized glutathione to reduced glutathione",
+      "Production of ribose-5-phosphate for nucleotide synthesis",
+      "Conversion of fructose-6-phosphate to glycolytic intermediates",
+      "NADPH-dependent synthesis of nitric oxide",
+      "Transfer of electrons from NADPH to oxygen to form superoxide"
+    ],
+    "answer": 4,
+    "optionExplanations": [
+      "glutathione reduction uses NADPH through antioxidant machinery and can remain intact when the separate NADPH oxidase enzyme is absent.",
+      "ribose-5-phosphate production is a pentose-phosphate-pathway function and does not require phagocyte NADPH oxidase.",
+      "reversible carbon exchange between the pentose phosphate pathway and glycolysis does not depend on NADPH oxidase.",
+      "nitric oxide synthesis can use NADPH, but loss of NADPH oxidase specifically impairs the respiratory-burst reaction that begins with superoxide.",
+      "phagocyte NADPH oxidase initiates respiratory burst by transferring electrons from NADPH to molecular oxygen, producing superoxide."
+    ],
+    "rationale": "NADPH oxidase uses PPP-derived reducing power to convert oxygen to superoxide at the start of the phagocyte respiratory burst, distinct from NADPH-supported antioxidant reactions.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "concepts": [
+      "L028-O2"
+    ],
+    "covers": [
+      "O2"
+    ],
+    "source": "missed-remediation",
+    "sourceRef": "L028 docx paragraphs 63-68",
+    "sourceBlock": "L028",
+    "applicationLevel": "mechanism",
+    "derivedFrom": [
+      "W3-L028-05"
+    ],
+    "missDescription": "Selected glutathione instead of superoxide as the first NADPH-dependent product of phagocyte respiratory burst.",
+    "variantAngle": "Infer the missing reaction from a selective enzyme defect while distinguishing pro-oxidant NADPH oxidase from glutathione recycling.",
+    "holdout": false,
+    "requiresMedia": false
+  },
+  {
+    "id": "MQG-L029-O1-01",
+    "topic": "Biochemistry",
+    "src": "B",
+    "stem": "Glucose carbon is incorporated into skeletal-muscle glycogen after a meal. During later exercise, the labeled carbon appears in muscle glucose-6-phosphate and lactate but not as free glucose released into blood. Absence of which muscle activity best explains this distribution?",
+    "options": [
+      "Glycogenin-mediated priming of a new glycogen particle",
+      "Phosphoglucomutase interconversion of glucose-1-phosphate and glucose-6-phosphate",
+      "Glycogen phosphorylase cleavage at nonreducing alpha-1,4-linked ends",
+      "Glucose-6-phosphatase hydrolysis of glucose-6-phosphate in the ER",
+      "Glycogen synthase addition of glucose from UDP-glucose"
+    ],
+    "answer": 3,
+    "optionExplanations": [
+      "Glycogenin acts upstream by priming formation of a new glycogen particle; it does not dephosphorylate glucose-6-phosphate for export from muscle.",
+      "appearance of label in muscle glucose-6-phosphate requires phosphoglucomutase activity after glycogen-derived glucose-1-phosphate is formed.",
+      "mobilization of labeled glycogen carbon requires glycogen phosphorylase; its activity explains production of glucose-1-phosphate rather than failure to export glucose.",
+      "skeletal muscle lacks glucose-6-phosphatase, so glycogen-derived glucose-6-phosphate remains available for local glycolysis rather than becoming free blood glucose.",
+      "glycogen synthase is needed to store labeled glucose after the meal, but its presence or absence does not explain why mobilized carbon cannot be released as free glucose."
+    ],
+    "rationale": "Muscle can synthesize and degrade glycogen and can form glucose-6-phosphate, but without glucose-6-phosphatase it cannot dephosphorylate that intermediate for blood-glucose export.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "concepts": [
+      "L029-O1",
+      "L029-O2",
+      "L029-O3"
+    ],
+    "covers": [
+      "O1",
+      "O2",
+      "O3"
+    ],
+    "source": "missed-remediation",
+    "sourceRef": "L029 docx paragraphs 73-88",
+    "sourceBlock": "L029",
+    "applicationLevel": "discrimination",
+    "derivedFrom": [
+      "W3-L029-08"
+    ],
+    "missDescription": "Selected glycogenin instead of glucose-6-phosphatase as the reason muscle glycogen cannot directly maintain blood glucose.",
+    "variantAngle": "Interpret tracer distribution across storage, local glycolysis, and blood export instead of recalling a tissue-specific enzyme absence directly.",
+    "holdout": false,
+    "requiresMedia": false
   }
 ]

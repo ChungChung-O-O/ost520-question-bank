@@ -1,6 +1,6 @@
 # OST 520 Question Bank
 
-Self-contained, 765-question practice bank for OST 520 Unit Exams 1 and 2. It combines
+Self-contained, 771-question practice bank for OST 520 Unit Exams 1 and 2. It combines
 adaptive daily sets, browser-local performance diagnosis, weak-concept retesting,
 worked rationales, choice-by-choice Unit 2 explanations, a Look-Alike Concepts lab, confidence tracking, and lossless backup/restore. Previously a
 Claude Artifact, it is now a plain static site that any browser can reach by URL.
@@ -15,11 +15,11 @@ the only class so far. Unit 1 and Unit 2 both hold questions.
 | File | What it is |
 |------|------------|
 | `index.html` | The whole app — questions, grading, rationales, progress tracking. No build step, no server, no dependencies. Opening the file directly also works. |
-| `bank.json` | The 765 released questions as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
-| `add-week3-questions.js` | Idempotent ingest for the 152 verified, non-media-gated Week 3 practice questions. |
+| `bank.json` | The 771 released questions as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
+| `add-week3-questions.js` | Idempotent ingest for the verified, non-media-gated Week 3 baseline and missed-question remediation set. |
 | `update-week3-day1-transcripts.js` | Guarded, idempotent replacement of the three verified Day 1 transcript-grounded Week 3 items before synchronizing the release. |
 | `update-week3-validation-report.js` | Private audit helper that recomputes Week 3 pool, answer-position, application-level, and option-cue metrics. It requires the intentionally ignored holdout file. |
-| `week3/` | Week 3 public release data, media-gated questions, coverage ledger, source manifest, and validation report. Reserved holdouts are stored only in the private course pack. |
+| `week3/` | Week 3 public release data, dated remediation batches, media-gated questions, coverage ledger, source manifest, and validation report. Reserved holdouts are stored only in the private course pack. |
 | `week3/DAY1_MEDIA_QBANK_PLAN.md` | Internal MediaSpace transcript audit, replacement plan, no-change decisions, and post-change verification record. |
 | `add-faculty-problem-sets.js` | Idempotent ingest of the faculty practice sets. Also records, in comments, which faculty items were deliberately skipped and why. |
 | `add-weakness-questions.js` | Idempotent ingest of the 24 targeted `WK-*` weak-area questions. |
@@ -34,7 +34,7 @@ Every question carries a `course` and a `unit`, and the site shelves them accord
 | Level | Values today |
 |-------|--------------|
 | Class | `OST520` |
-| Unit | `UE1` (613 questions), `UE2` (152 released questions), and an empty `UE3` shelf. |
+| Unit | `UE1` (613 questions), `UE2` (158 released questions), and an empty `UE3` shelf. |
 
 To open a new unit, tag questions with that `unit` value; the shelf stops being
 empty on its own. To add a class, append to the `COURSES` array in `index.html`
@@ -44,9 +44,9 @@ Inside a unit, **Which questions** filters by provenance:
 
 | View | Shows |
 |------|-------|
-| Everything | All 765 |
+| Everything | All 771 |
 | Faculty practice | The 50 questions taken from the course's own problem sets |
-| Bank questions | The 715 written for this site |
+| Bank questions | The 721 written for this site |
 
 The chosen class, unit, and view are remembered in `localStorage` under
 `ost520.bank.v2.scope`, so a reload returns you where you were. The view narrows what
@@ -55,32 +55,39 @@ against, both of which always span the whole bank.
 
 ## Contents
 
-765 released questions: 613 for Unit Exam 1 and 152 for Unit Exam 2.
+771 released questions: 613 for Unit Exam 1 and 158 for Unit Exam 2.
 
 | Topic | Questions | Coverage | `src` |
 |-------|-----------|----------|-------|
 | Genetics | 403 | Pedigrees, inheritance, DNA/chromosomes, regulation, population genetics, refresher prerequisites | `G` |
-| Biochemistry | 203 | UE1 metabolism plus Week 3 PPP, glycogen, gluconeogenesis, fatty-acid oxidation, ketones, and synthesis | `B` |
+| Biochemistry | 206 | UE1 metabolism plus Week 3 PPP, glycogen, gluconeogenesis, fatty-acid oxidation, ketones, and synthesis | `B` |
 | Epi & Biostats | 59 | Study design, screening, bias, association, calculations | `E` |
-| Molecular Biology | 10 | Translation, protein targeting, folding, and processing | `N` |
-| Histology | 12 | Connective-tissue cells, fibers, matrix, and non-image morphology | `T` |
+| Molecular Biology | 11 | Translation, protein targeting, folding, and processing | `N` |
+| Histology | 14 | Connective-tissue cells, fibers, matrix, and non-image morphology | `T` |
 | Hematology & Physiology | 23 | Blood cells, hematopoiesis, hemoglobin transport, and acid-base physiology | `H` |
 | Microbiology | 40 | Infection, microbiota, fungi, bacterial structure, viruses, and parasites | `M` |
 | Immunology | 15 | Immune organization, communication, innate recognition, complement, and deficiencies | `I` |
 
-740 are multiple choice (`"type": "mcq"`), 25 are worked problems (`"type": "worked"`).
-Of the MCQs, 735 have five choices. The five four-choice exceptions are preserved
+746 are multiple choice (`"type": "mcq"`), 25 are worked problems (`"type": "worked"`).
+Of the MCQs, 741 have five choices. The five four-choice exceptions are preserved
 faculty-authored items whose option text stays faithful to the source.
 
 ### Week 3 release policy
 
-Week 3 contains 168 practice questions and 40 first-use holdouts across 20 logical
-source blocks. The live UE2 shelf receives only the 152 practice questions that do
+Week 3 contains 174 practice questions and 40 first-use holdouts across 20 logical
+source blocks. The live UE2 shelf receives 152 baseline questions plus six source-grounded
+transfer questions generated from Austin's 2026-09-09 misses. All 158 released questions do
 not depend on missing visual media. Sixteen figure-dependent practice items remain
 in `week3/qbank_media_gated_questions.json`. All 40 first-use holdouts are retained
 privately in the course study pack and are intentionally excluded from this public
 repository. This prevents answer exposure and prevents a prose description from being
 treated as a substitute for image recognition.
+
+The six `MQG-*` questions are retained in `week3/remediation_batches/missed_2026-09-09.json`
+and in the released `week3/qbank_practice_ready.json`. Each records its parent question,
+the diagnosed misconception, the changed transfer angle, source block, and source locator.
+They enter the ordinary weak-concept and adaptive routing without increasing the 22-question
+daily cap.
 
 ### Look-Alike Concepts
 
@@ -177,7 +184,7 @@ Each element is one question:
 | `concepts` | Kebab-case concept slugs, for grouping misses by idea rather than by question. |
 | `covers` | Lecture objective IDs the question tests. |
 | `course`, `unit` | Which library shelf the question sits on. |
-| `source` | `faculty-practice` on the 50 `FP-*` questions, `transcript-remediation` on the 18 `TR-*` questions, and `confusion-lab` on the 24 `DL-*` questions; absent on other site-authored questions. |
+| `source` | Includes `faculty-practice`, `transcript-remediation`, `confusion-lab`, `week3-bank`, and `missed-remediation` provenance labels. |
 | `sourceRef` | On faculty questions: document and original question number. On `TR-*`: lecture plus supporting transcript timestamp range. |
 | `keyed` | On faculty questions: whether the faculty published an answer key for it. |
 | `confusionSet` | On `DL-*` questions: the look-alike family identifier. |

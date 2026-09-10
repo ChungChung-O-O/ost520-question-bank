@@ -16,48 +16,48 @@
     "answer:holdout:2": 8,
     "answer:holdout:3": 8,
     "answer:holdout:4": 8,
-    "answer:practice:0": 34,
-    "answer:practice:1": 33,
-    "answer:practice:2": 34,
-    "answer:practice:3": 34,
-    "answer:practice:4": 33,
+    "answer:practice:0": 35,
+    "answer:practice:1": 34,
+    "answer:practice:2": 35,
+    "answer:practice:3": 36,
+    "answer:practice:4": 34,
     "card:basic": 169,
     "card:cloze": 21,
     "cue:unique_dash_correct": 7,
-    "cue:unique_dash_eligible": 39,
+    "cue:unique_dash_eligible": 40,
     "cue:unique_longest_correct": 46,
-    "cue:unique_longest_eligible": 183,
-    "level:discrimination": 36,
-    "level:mechanism": 64,
+    "cue:unique_longest_eligible": 189,
+    "level:discrimination": 39,
+    "level:mechanism": 67,
     "level:presentation": 83,
     "level:recall": 25,
     "media:holdout": 0,
     "media:practice": 16,
     "pool:holdout": 40,
-    "pool:practice": 168,
+    "pool:practice": 174,
     "ready:cue:unique_dash_correct": 5,
-    "ready:cue:unique_dash_eligible": 27,
+    "ready:cue:unique_dash_eligible": 28,
     "ready:cue:unique_longest_correct": 35,
-    "ready:cue:unique_longest_eligible": 130,
-    "ready:level:discrimination": 16,
-    "ready:level:mechanism": 48,
+    "ready:cue:unique_longest_eligible": 136,
+    "ready:level:discrimination": 19,
+    "ready:level:mechanism": 51,
     "ready:level:presentation": 63,
     "ready:level:recall": 25,
-    "ready:questions": 152
+    "ready:questions": 158
   },
-  "unique_question_ids": 208,
-  "beyond_recall_percent": 88,
-  "presentation_or_discrimination_percent": 57.2,
-  "ready_beyond_recall_percent": 83.6,
-  "ready_presentation_or_discrimination_percent": 52,
+  "unique_question_ids": 214,
+  "beyond_recall_percent": 88.3,
+  "presentation_or_discrimination_percent": 57,
+  "ready_beyond_recall_percent": 84.2,
+  "ready_presentation_or_discrimination_percent": 51.9,
   "errors": [],
   "answer_positions": {
     "practice": [
+      35,
       34,
-      33,
-      34,
-      34,
-      33
+      35,
+      36,
+      34
     ],
     "holdout": [
       8,
@@ -68,11 +68,11 @@
     ]
   },
   "cue_rates": {
-    "unique_longest_correct": 0.251,
-    "unique_dash_correct": 0.179
+    "unique_longest_correct": 0.243,
+    "unique_dash_correct": 0.175
   },
   "ready_cue_rates": {
-    "unique_longest_correct": 0.269,
-    "unique_dash_correct": 0.185
+    "unique_longest_correct": 0.257,
+    "unique_dash_correct": 0.179
   }
 }

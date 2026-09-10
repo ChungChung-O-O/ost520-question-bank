@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* Add the verified, non-media-gated OST 520 Week 3 practice set. */
+/* Add the verified, non-media-gated OST 520 Week 3 and remediation set. */
 const fs = require("fs");
 
 const htmlPath = "index.html";
@@ -9,7 +9,7 @@ const marker = "let BANK = ";
 const endMarker = ";\nconst META =";
 
 const incoming = JSON.parse(fs.readFileSync(sourcePath, "utf8"));
-if (incoming.length !== 152) throw new Error(`Expected 152 bank-ready Week 3 questions, got ${incoming.length}.`);
+if (incoming.length < 152) throw new Error(`Expected at least the 152-question Week 3 baseline, got ${incoming.length}.`);
 if (incoming.some(q => q.holdout || q.requiresMedia || q.unit !== "UE2" || q.course !== "OST520")) {
   throw new Error("Week 3 release contains a holdout, media-gated item, or incorrect course/unit tag.");
 }
@@ -29,7 +29,14 @@ const end = html.indexOf(endMarker, start);
 if (start < 0 || end < 0) throw new Error("Embedded BANK markers not found.");
 
 const oldBank = JSON.parse(html.slice(start + marker.length, end));
-const bank = oldBank.filter(q => !/^W3-/.test(q.id));
+const incomingIds = new Set(incoming.map(q => q.id));
+const missingReleasedIds = oldBank
+  .filter(q => /^(?:W3-|MQG-)/.test(q.id) && !incomingIds.has(q.id))
+  .map(q => q.id);
+if (missingReleasedIds.length) {
+  throw new Error(`Incoming Week 3 source would remove released questions: ${missingReleasedIds.join(", ")}`);
+}
+const bank = oldBank.filter(q => !/^(?:W3-|MQG-)/.test(q.id));
 const existingIds = new Set(bank.map(q => q.id));
 for (const q of incoming) {
   if (existingIds.has(q.id)) throw new Error(`Week 3 ID collides with existing bank: ${q.id}`);

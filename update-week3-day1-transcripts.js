@@ -343,17 +343,18 @@ const additions = {
 };
 
 const questions = JSON.parse(fs.readFileSync(sourcePath, "utf8"));
-if (!Array.isArray(questions) || ![preExpansionCount, expectedCount].includes(questions.length)) {
-  throw new Error(`Expected exactly ${preExpansionCount} or ${expectedCount} practice-ready questions.`);
+if (!Array.isArray(questions) || questions.length < preExpansionCount) {
+  throw new Error(`Expected at least the ${preExpansionCount}-question pre-expansion baseline.`);
 }
-const expanding = questions.length === preExpansionCount;
 if (new Set(questions.map(question => question.id)).size !== questions.length) {
   throw new Error("Practice-ready question IDs must be unique.");
 }
 
 for (const question of questions) {
-  for (const field of requiredFields) {
-    if (!(field in question)) throw new Error(`Question ${question.id || "<unknown>"} is missing schema field ${field}.`);
+  if (/^W3-/.test(question.id)) {
+    for (const field of requiredFields) {
+      if (!(field in question)) throw new Error(`Question ${question.id || "<unknown>"} is missing schema field ${field}.`);
+    }
   }
   if (question.type !== "mcq" || !Array.isArray(question.options) || question.options.length !== 5) {
     throw new Error(`Question ${question.id} must be a five-option MCQ.`);
@@ -380,15 +381,14 @@ for (const [id, addition] of Object.entries(additions)) {
   const matches = questions.filter(question => question.id === id);
   if (matches.length > 1) throw new Error(`Expected at most one ${id}; found ${matches.length}.`);
   if (matches.length === 0) {
-    if (!expanding) throw new Error(`${id} is missing from an already expanded release.`);
     questions.push(addition);
   } else {
     Object.assign(matches[0], addition);
   }
 }
 
-if (questions.length !== expectedCount || new Set(questions.map(question => question.id)).size !== expectedCount) {
-  throw new Error(`Day 1 expansion must produce exactly ${expectedCount} unique practice-ready questions.`);
+if (questions.length < expectedCount || new Set(questions.map(question => question.id)).size !== questions.length) {
+  throw new Error(`Day 1 expansion must retain at least ${expectedCount} unique practice-ready questions.`);
 }
 
 fs.writeFileSync(sourcePath, `${asciiJson(questions)}\n`);
