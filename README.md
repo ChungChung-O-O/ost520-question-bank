@@ -1,6 +1,6 @@
 # OST 520 Question Bank
 
-Self-contained, 791-question practice bank for OST 520 Unit Exams 1 and 2. It combines
+Self-contained, 811-question practice bank for OST 520 Unit Exams 1 and 2. It combines
 adaptive daily sets, browser-local performance diagnosis, weak-concept retesting,
 worked rationales, choice-by-choice Unit 2 explanations, a Look-Alike Concepts lab, confidence tracking, and lossless backup/restore. Previously a
 Claude Artifact, it is now a plain static site that any browser can reach by URL.
@@ -15,7 +15,7 @@ the only class so far. Unit 1 and Unit 2 both hold questions.
 | File | What it is |
 |------|------------|
 | `index.html` | The whole app — questions, grading, rationales, progress tracking. No build step, no server, no dependencies. Opening the file directly also works. |
-| `bank.json` | The 791 released questions as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
+| `bank.json` | The 811 released questions as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
 | `add-week3-questions.js` | Idempotent ingest for the verified Week 3 baseline, remediation, and September 11 application set. |
 | `update-week3-day1-transcripts.js` | Guarded, idempotent replacement of the three verified Day 1 transcript-grounded Week 3 items before synchronizing the release. |
 | `update-week3-validation-report.js` | Private audit helper that recomputes Week 3 pool, answer-position, application-level, and option-cue metrics. It requires the intentionally ignored holdout file. |
@@ -34,7 +34,7 @@ Every question carries a `course` and a `unit`, and the site shelves them accord
 | Level | Values today |
 |-------|--------------|
 | Class | `OST520` |
-| Unit | `UE1` (613 questions), `UE2` (178 released questions), and an empty `UE3` shelf. |
+| Unit | `UE1` (613 questions), `UE2` (198 released questions), and an empty `UE3` shelf. |
 
 To open a new unit, tag questions with that `unit` value; the shelf stops being
 empty on its own. To add a class, append to the `COURSES` array in `index.html`
@@ -44,7 +44,7 @@ Inside a unit, **Which questions** filters by provenance:
 
 | View | Shows |
 |------|-------|
-| Everything | All 791 |
+| Everything | All 811 |
 | Faculty practice | The 50 questions taken from the course's own problem sets |
 | Bank questions | The 741 written for this site |
 
@@ -55,7 +55,7 @@ against, both of which always span the whole bank.
 
 ## Contents
 
-791 released questions: 613 for Unit Exam 1 and 178 for Unit Exam 2.
+811 released questions: 613 for Unit Exam 1 and 198 for Unit Exam 2.
 
 | Topic | Questions | Coverage | `src` |
 |-------|-----------|----------|-------|
@@ -68,15 +68,15 @@ against, both of which always span the whole bank.
 | Microbiology | 49 | Infection, microbiota, fungi, bacterial structure, viruses, and parasites | `M` |
 | Immunology | 15 | Immune organization, communication, innate recognition, complement, and deficiencies | `I` |
 
-766 are multiple choice (`"type": "mcq"`), 25 are worked problems (`"type": "worked"`).
+786 are multiple choice (`"type": "mcq"`), 25 are worked problems (`"type": "worked"`).
 Of the MCQs, 761 have five choices. The five four-choice exceptions are preserved
-faculty-authored items whose option text stays faithful to the source. Of all 791 questions, 741 are bank-authored.
+faculty-authored items whose option text stays faithful to the source. Of all 811 questions, 761 are bank-authored.
 
 ### Week 3 release policy
 
-Week 3 contains 194 public practice questions and 40 first-use holdouts across 20 logical
+Week 3 contains 214 public practice questions and 40 first-use holdouts across 20 logical
 source blocks. The live UE2 shelf receives 152 baseline questions, six source-grounded
-remediation questions, and 20 reviewed September 11 application questions. All 178 released questions do
+remediation questions, 20 reviewed September 11 application questions, and 20 reviewed September 12 application questions. All 198 released questions do
 not depend on missing visual media. Sixteen figure-dependent practice items remain
 in `week3/qbank_media_gated_questions.json`. All 40 first-use holdouts are retained
 privately in the course study pack and are intentionally excluded from this public

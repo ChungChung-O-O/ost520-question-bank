@@ -4,9 +4,9 @@ const html=fs.readFileSync("index.html","utf8"), json=JSON.parse(fs.readFileSync
 const between=(a,b)=>html.slice(html.indexOf(a)+a.length,html.indexOf(b,html.indexOf(a)));
 const bank=vm.runInNewContext("("+between("let BANK = ",";\nconst META =")+")");
 assert.deepStrictEqual(JSON.parse(JSON.stringify(bank)),json,"bank.json must exactly equal embedded BANK");
-assert.equal(bank.length,791); assert.equal(new Set(bank.map(q=>q.id)).size,791);
-assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats","Molecular Biology","Histology","Hematology & Physiology","Microbiology","Immunology"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":207,"Genetics":403,"Epi & Biostats":59,"Molecular Biology":12,"Histology":14,"Hematology & Physiology":32,"Microbiology":49,"Immunology":15});
-assert.equal(bank.filter(q=>q.type==="mcq").length,766); assert.equal(bank.filter(q=>q.type==="worked").length,25);
+assert.equal(bank.length,811); assert.equal(new Set(bank.map(q=>q.id)).size,811);
+assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats","Molecular Biology","Histology","Hematology & Physiology","Microbiology","Immunology"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":207,"Genetics":403,"Epi & Biostats":59,"Molecular Biology":12,"Histology":14,"Hematology & Physiology":32,"Microbiology":55,"Immunology":29});
+assert.equal(bank.filter(q=>q.type==="mcq").length,786); assert.equal(bank.filter(q=>q.type==="worked").length,25);
 assert.equal(bank.filter(q=>/^WK-/.test(q.id)).length,24,"targeted weakness set must remain complete");
 const confusionLab=bank.filter(q=>/^DL-\d\d$/.test(q.id));
 assert.equal(confusionLab.length,24,"confusion lab must contain exactly 24 questions");
@@ -23,7 +23,7 @@ assert(dnaRepair.every(q=>q.topic==="Genetics"&&q.src==="G"&&q.course==="OST520"
 assert(dnaRepair.every(q=>q.covers.length===1&&q.covers[0]==="L013"&&q.sourceRef==="L013 DNA Repair study guide"),"L013 source metadata changed");
 assert(dnaRepair.every(q=>q.options.length===5&&new Set(q.options).size===5&&q.rationale.includes("<strong>")),"L013 question quality guard failed");
 const week3=bank.filter(q=>q.unit==="UE2"),coreWeek3=week3.filter(q=>/^W3-/.test(q.id)),missedRemediation=week3.filter(q=>q.source==="missed-remediation");
-assert.equal(week3.length,178,"Unit 2 released set must remain complete");
+assert.equal(week3.length,198,"Unit 2 released set must remain complete");
 assert.equal(coreWeek3.length,152,"Week 3 baseline set must remain complete");
 assert.equal(missedRemediation.length,6,"missed-question remediation set must remain complete");
 assert(coreWeek3.every(q=>q.source==="week3-bank"),"Week 3 baseline provenance changed");
@@ -126,9 +126,9 @@ assert(html.includes("sessionInView(saved)"),"resume must be limited to sessions
 // library behaviour, exercised through the real boot path
 const SCOPE_KEY="ost520.bank.v2.scope", scoped=v=>boot({[SCOPE_KEY]:JSON.stringify(v)});
 const libBoot=boot();
-assert.equal(vm.runInContext("BANK.length",libBoot.ctx),791,"with no saved scope the whole bank is loaded");
+assert.equal(vm.runInContext("BANK.length",libBoot.ctx),811,"with no saved scope the whole bank is loaded");
 assert.equal(libBoot.els.get("library").hidden,false,"no saved scope must open the library");
-assert.equal(vm.runInContext("IDS.size",libBoot.ctx),791,"id set must span the whole bank regardless of view");
+assert.equal(vm.runInContext("IDS.size",libBoot.ctx),811,"id set must span the whole bank regardless of view");
 const unitBoot=scoped({course:"OST520",unit:"UE1",source:"all"});
 assert.equal(unitBoot.els.get("setup").hidden,false,"a saved unit must open straight into that unit");
 assert.equal(vm.runInContext("BANK.length",unitBoot.ctx),613);
@@ -143,8 +143,8 @@ assert(vm.runInContext('BANK.every(q=>q.source!=="faculty-practice")',ownBoot.ct
 assert.equal(vm.runInContext('BANK.filter(q=>q.source==="confusion-lab").length',ownBoot.ctx),24,"bank view must expose all lab questions");
 const unit2Boot=scoped({course:"OST520",unit:"UE2",source:"all"});
 assert.equal(unit2Boot.els.get("setup").hidden,false,"a saved UE2 scope must open straight into that unit");
-assert.equal(vm.runInContext("BANK.length",unit2Boot.ctx),178,"UE2 must expose the Week 3 baseline plus missed-question remediation");
-assert(vm.runInContext('BANK.every(q=>q.unit==="UE2"&&["week3-bank","missed-remediation","sept11-practice"].includes(q.source))',unit2Boot.ctx),"UE2 leaked another unit or source");
+assert.equal(vm.runInContext("BANK.length",unit2Boot.ctx),198,"UE2 must expose the Week 3 baseline plus missed-question remediation");
+assert(vm.runInContext('BANK.every(q=>q.unit==="UE2"&&["week3-bank","missed-remediation","sept11-practice","sept12-practice"].includes(q.source))',unit2Boot.ctx),"UE2 leaked another unit or source");
 assert.equal(unit2Boot.els.get("unittitle").textContent,"Unit Exam 2","UE2 screen title must not say Unit Exam 1");
 assert.equal(vm.runInContext("dailyCap()",unit2Boot.ctx),22,"UE2 daily cap must honor the 13-22 question strategy");
 assert.equal(vm.runInContext('unitById(courseById("OST520"),"UE2").exam',unit2Boot.ctx),"2026-09-22","UE2 exam date changed");
@@ -179,11 +179,32 @@ for(const source of ["all","bank"]){
   assert.deepStrictEqual(Array.from(vm.runInContext('S.order',friday.ctx)).sort(),expected,"application button must launch the reviewed set");
   assert.equal(vm.runInContext('hist()["W3-L027-01"].attempts',friday.ctx),1,"routing must preserve old attempts");
 }
+
+// Saturday 2026-09-12 must serve exactly the reviewed September 12 application set (L036-L041).
+const sept12Batch=bank.filter(q=>q.source==="sept12-practice");
+assert.equal(sept12Batch.length,20,"September 12 application set must be complete");
+assert(sept12Batch.every(q=>/^MQG-SEP12-/.test(q.id)),"September 12 set must use the MQG-SEP12 id space");
+assert(sept12Batch.filter(q=>q.reasoningOrder===2).length>=14,"second-order questions must dominate the September 12 set");
+for(const source of ["all","bank"]){
+  const saturday=scoped({course:"OST520",unit:"UE2",source});
+  vm.runInContext('const RealDate=Date;Date=class extends RealDate{constructor(...args){super(...(args.length?args:["2026-09-12T08:00:00-04:00"]))}static now(){return new RealDate("2026-09-12T08:00:00-04:00").getTime()}}',saturday.ctx);
+  vm.runInContext('renderHome();',saturday.ctx);
+  const expected12=Array.from(sept12Batch,q=>q.id).sort();
+  const planned12=Array.from(vm.runInContext('BANK.filter(planFilter(todaysPlan())).map(q=>q.id)',saturday.ctx)).sort();
+  assert.deepStrictEqual(planned12,expected12,"Saturday dated route must select the exact September 12 set");
+  assert.equal(vm.runInContext('planCount(todaysPlan())',saturday.ctx),20,"Saturday plan count must be the 20 reviewed items");
+  assert.deepStrictEqual(Array.from(vm.runInContext('adaptivePrescription().questions.map(q=>q.id)',saturday.ctx)).sort(),expected12,"Saturday adaptive route must serve the same September 12 set");
+  saturday.els.get("dostoday").onclick();
+  assert.deepStrictEqual(Array.from(vm.runInContext('S.order',saturday.ctx)).sort(),expected12,"Saturday start button must launch the September 12 set");
+  vm.runInContext('dropSession();renderHome()',saturday.ctx);
+  saturday.els.get("adaptiveToday").onclick();
+  assert.deepStrictEqual(Array.from(vm.runInContext('S.order',saturday.ctx)).sort(),expected12,"Saturday application button must launch the September 12 set");
+}
 vm.runInContext('const RealDate=Date;Date=class extends RealDate{constructor(...args){super(...(args.length?args:["2026-09-13T12:00:00-04:00"]))}static now(){return new RealDate("2026-09-13T12:00:00-04:00").getTime()}}',cumulativeBoot.ctx);
 assert.match(vm.runInContext("todaysPlan().note",cumulativeBoot.ctx),/^cumulative review/,"pre-exam fallback was mislabeled post-exam");
 assert.equal(scoped({course:"NOPE",unit:"UE1",source:"all"}).els.get("library").hidden,false,"an unknown course must fall back to the library");
 assert.equal(vm.runInContext("BANK_FINGERPRINT",facBoot.ctx),vm.runInContext("BANK_FINGERPRINT",libBoot.ctx),"the view must not change the backup fingerprint");
-assert(html.includes('791-question OST 520 bank for Unit Exams 1 and 2 with adaptive practice'),"page metadata must describe the current bank");
+assert(html.includes('811-question OST 520 bank for Unit Exams 1 and 2 with adaptive practice'),"page metadata must describe the current bank");
 assert(html.includes('New question-quality release'),"home must explain the current quality release");
 assert(html.includes('label:"Look-Alike Concepts"')&&html.includes('q.source==="confusion-lab"'),"Look-Alike Concepts mode missing");
 assert(html.includes('id="contrastwrap"')&&html.includes("function renderContrast(q,a)"),"contrast table UI missing");

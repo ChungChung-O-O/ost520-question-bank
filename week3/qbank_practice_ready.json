@@ -139,7 +139,7 @@
     "id": "W3-L027-04",
     "topic": "Molecular Biology",
     "src": "N",
-    "stem": "A eukaryotic mRNA loses its 5\u2032 cap. Which translation defect is expected?",
+    "stem": "A eukaryotic mRNA loses its 5′ cap. Which translation defect is expected?",
     "options": [
       "Reduced 40S scanning initiation",
       "Failure of 30S binding",
@@ -155,7 +155,7 @@
       "Loss of a cap reduces eukaryotic initiation; it does not convert one mRNA into a bacterial-style polycistronic transcript."
     ],
     "answer": 0,
-    "rationale": "The 5\u2032 cap recruits the 40S subunit for scanning.",
+    "rationale": "The 5′ cap recruits the 40S subunit for scanning.",
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -174,7 +174,7 @@
     "mediaNote": "",
     "closestDistractor": {
       "index": 2,
-      "why_wrong": "Peptide release is a termination event; loss of the 5\u2032 cap instead impairs 40S recruitment and scanning."
+      "why_wrong": "Peptide release is a termination event; loss of the 5′ cap instead impairs 40S recruitment and scanning."
     },
     "holdout": false,
     "n": 4
@@ -273,7 +273,7 @@
     "src": "N",
     "stem": "An integral membrane protein lacks its stop-transfer sequence. Which topology is most likely lost?",
     "options": [
-      "mRNA 5\u2032 cap",
+      "mRNA 5′ cap",
       "Aminoacyl-tRNA binding",
       "N-linked core addition",
       "Ribosome assembly",
@@ -754,7 +754,7 @@
     "mediaNote": "",
     "closestDistractor": {
       "index": 2,
-      "why_wrong": "Glycogen branching enzyme creates \u03b1-1,6 linkages but cannot remove the phosphate from G6P to release blood glucose."
+      "why_wrong": "Glycogen branching enzyme creates α-1,6 linkages but cannot remove the phosphate from G6P to release blood glucose."
     },
     "holdout": false,
     "n": 160
@@ -809,11 +809,11 @@
     "src": "B",
     "stem": "A mutation eliminates glycogen synthase but not branching enzyme. Which direct synthetic step is lost?",
     "options": [
-      "\u03b1-1,6 formation",
-      "UDP-glucose addition to \u03b1-1,4 chain",
+      "α-1,6 formation",
+      "UDP-glucose addition to α-1,4 chain",
       "G1P to G6P conversion",
       "G6P dephosphorylation",
-      "\u03b1-1,4 phosphorolysis"
+      "α-1,4 phosphorolysis"
     ],
     "optionExplanations": [
       "Alpha-1,6 branch formation is performed by branching enzyme, which remains present in the stem.",
@@ -823,7 +823,7 @@
       "Glycogen phosphorylase performs alpha-1,4 phosphorolysis during breakdown, the opposite direction from synthase."
     ],
     "answer": 1,
-    "rationale": "Glycogen synthase transfers glucose from UDP-glucose to make \u03b1-1,4 linkages.",
+    "rationale": "Glycogen synthase transfers glucose from UDP-glucose to make α-1,4 linkages.",
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -842,7 +842,7 @@
     "mediaNote": "",
     "closestDistractor": {
       "index": 2,
-      "why_wrong": "Phosphoglucomutase interconverts G1P and G6P; glycogen synthase specifically performs UDP-glucose addition to \u03b1-1,4 chains."
+      "why_wrong": "Phosphoglucomutase interconverts G1P and G6P; glycogen synthase specifically performs UDP-glucose addition to α-1,4 chains."
     },
     "holdout": false,
     "n": 162
@@ -943,11 +943,11 @@
     "src": "B",
     "stem": "A muscle biopsy has normal glycogen phosphorylase but defective debranching enzyme. Which linkage is the main obstacle?",
     "options": [
-      "\u03b1-1,6 branch point",
-      "\u03b1-1,4 only",
+      "α-1,6 branch point",
+      "α-1,4 only",
       "Peptide bond",
       "Phosphodiester bond",
-      "\u03b2-1,4 linkage"
+      "β-1,4 linkage"
     ],
     "optionExplanations": [
       "Glycogen phosphorylase stops near alpha-1,6 branches, which require debranching-enzyme activities to clear.",
@@ -957,7 +957,7 @@
       "Beta-1,4 linkages characterize polymers such as cellulose; glycogen contains alpha-1,4 chains and alpha-1,6 branches."
     ],
     "answer": 0,
-    "rationale": "Phosphorylase cleaves \u03b1-1,4 only; branches require debranching enzyme.",
+    "rationale": "Phosphorylase cleaves α-1,4 only; branches require debranching enzyme.",
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -976,7 +976,7 @@
     "mediaNote": "",
     "closestDistractor": {
       "index": 2,
-      "why_wrong": "Peptide bonds are protein linkages; the debranching obstacle is the glycogen \u03b1-1,6 branch point."
+      "why_wrong": "Peptide bonds are protein linkages; the debranching obstacle is the glycogen α-1,6 branch point."
     },
     "holdout": false,
     "n": 165
@@ -1529,7 +1529,7 @@
     "id": "W3-RR7A-03",
     "topic": "Biochemistry",
     "src": "B",
-    "stem": "Which cofactor is produced in the first oxidation step of each \u03b2-oxidation cycle?",
+    "stem": "Which cofactor is produced in the first oxidation step of each β-oxidation cycle?",
     "options": [
       "FADH2",
       "NADPH",
@@ -1566,7 +1566,7 @@
     "mediaNote": "",
     "closestDistractor": {
       "index": 2,
-      "why_wrong": "ATP is not the electron carrier from the first \u03b2-oxidation oxidation; that dehydrogenation produces FADH2."
+      "why_wrong": "ATP is not the electron carrier from the first β-oxidation oxidation; that dehydrogenation produces FADH2."
     },
     "holdout": false,
     "n": 178
@@ -1624,7 +1624,7 @@
     "stem": "A patient has an inborn MCAD deficiency. Which metabolic response is most impaired during fasting?",
     "options": [
       "NADPH generation",
-      "Medium-chain \u03b2-oxidation",
+      "Medium-chain β-oxidation",
       "Ribose synthesis",
       "Glycogenesis",
       "Urea formation"
@@ -1658,7 +1658,7 @@
     "mediaNote": "",
     "closestDistractor": {
       "index": 2,
-      "why_wrong": "Ribose synthesis is PPP function; MCAD deficiency impairs medium-chain \u03b2-oxidation during fasting."
+      "why_wrong": "Ribose synthesis is PPP function; MCAD deficiency impairs medium-chain β-oxidation during fasting."
     },
     "holdout": false,
     "n": 180
@@ -1790,7 +1790,7 @@
     "mediaNote": "",
     "closestDistractor": {
       "index": 1,
-      "why_wrong": "MCAD catalyzes \u03b2-oxidation, while malonyl-CoA protects against oxidation by inhibiting CAT I."
+      "why_wrong": "MCAD catalyzes β-oxidation, while malonyl-CoA protects against oxidation by inhibiting CAT I."
     },
     "holdout": false,
     "n": 183
@@ -1851,7 +1851,7 @@
       "Oxaloacetate is directed toward gluconeogenesis",
       "Glycogen synthase is activated",
       "NADPH is absent",
-      "Carnitine blocks \u03b2-oxidation"
+      "Carnitine blocks β-oxidation"
     ],
     "optionExplanations": [
       "Ribose availability does not control whether hepatic acetyl-CoA can enter the TCA cycle during starvation.",
@@ -1891,7 +1891,7 @@
     "src": "B",
     "stem": "Which ketone body arises by decarboxylation of acetoacetate?",
     "options": [
-      "\u03b2-Hydroxybutyrate",
+      "β-Hydroxybutyrate",
       "Acetone",
       "Acetyl-CoA",
       "Malonyl-CoA",
@@ -1981,7 +1981,7 @@
     "id": "W3-RR7B-05",
     "topic": "Biochemistry",
     "src": "B",
-    "stem": "An extrahepatic tissue uses \u03b2-hydroxybutyrate during fasting. Its carbon is ultimately used to make:",
+    "stem": "An extrahepatic tissue uses β-hydroxybutyrate during fasting. Its carbon is ultimately used to make:",
     "options": [
       "Ribose",
       "Glucose in RBC",
@@ -1997,7 +1997,7 @@
       "Urea carries amino nitrogen and is not the metabolic destination of ketone-body carbon."
     ],
     "answer": 3,
-    "rationale": "Acetoacetate and \u03b2-hydroxybutyrate are fuel precursors for acetyl-CoA in other tissues.",
+    "rationale": "Acetoacetate and β-hydroxybutyrate are fuel precursors for acetyl-CoA in other tissues.",
     "type": "mcq",
     "context": "",
     "unit": "UE2",
@@ -2212,7 +2212,7 @@
       "Acetyl-CoA cannot directly cross the inner mitochondrial membrane",
       "Acetyl-CoA directly crosses mitochondrial membrane",
       "Citrate is a ketone body",
-      "Citrate activates \u03b2-oxidation",
+      "Citrate activates β-oxidation",
       "Citrate replaces biotin"
     ],
     "optionExplanations": [
@@ -2288,7 +2288,7 @@
     "mediaNote": "",
     "closestDistractor": {
       "index": 1,
-      "why_wrong": "FADH2 is produced in \u03b2-oxidation; fatty-acid synthesis consumes NADPH in its reduction steps."
+      "why_wrong": "FADH2 is produced in β-oxidation; fatty-acid synthesis consumes NADPH in its reduction steps."
     },
     "holdout": false,
     "n": 194
@@ -2476,7 +2476,7 @@
     "stem": "A mutation removes the ACP phosphopantetheine arm. What synthesis feature is lost?",
     "options": [
       "Transfer of growing acyl intermediates between synthase sites",
-      "Mitochondrial \u03b2-oxidation",
+      "Mitochondrial β-oxidation",
       "Citrate export of mitochondrial acetyl units into the cytosol for synthesis",
       "Biotin carboxylation",
       "Albumin transport"
@@ -6364,7 +6364,7 @@
     "mediaNote": "",
     "closestDistractor": {
       "index": 0,
-      "why_wrong": "Neutrophils are rapid phagocytic responders, not the course\u2019s helminth-granule cell."
+      "why_wrong": "Neutrophils are rapid phagocytic responders, not the course’s helminth-granule cell."
     },
     "holdout": false,
     "n": 13
@@ -7078,9 +7078,8 @@
     "variantAngle": "Interpret tracer distribution across storage, local glycolysis, and blood export instead of recalling a tissue-specific enzyme absence directly.",
     "holdout": false,
     "requiresMedia": false
-  }
-,
-{
+  },
+  {
     "id": "MQG-SEP11-L0301-01",
     "topic": "Microbiology",
     "src": "M",
@@ -7406,43 +7405,44 @@
     "id": "MQG-SEP11-L032-01",
     "topic": "Microbiology",
     "src": "M",
-    "stem": "A non-Coccidioides endemic dimorphic fungus is mold in soil at 25 C. Which culture-and-tissue pairing is expected?",
+    "stem": "The same fungal isolate appears as yeast in infected tissue at 37 C and as mold after culture at 25 C with minimal nutrients. Which interpretation best connects the two findings?",
     "options": [
-      "Yeast at 25 C and mold in infected tissue at 37 C",
-      "Mold at 25 C and mold in infected tissue at 37 C",
-      "Mold at 25 C and yeast in infected tissue at 37 C",
-      "Yeast at 25 C and yeast in infected tissue at 37 C",
-      "Pseudohyphae at 25 C and spherules in infected tissue"
+      "An opportunistic yeast acquired a mold form solely because it infected a healthy host",
+      "A true pathogenic dimorphic fungus shifted from parasitic mold to saprophytic yeast",
+      "A true pathogenic dimorphic fungus shifted from parasitic yeast to saprophytic mold",
+      "Coccidioides is required because its parasitic tissue phase is yeast",
+      "The culture is contamination because one fungus cannot express both morphologies"
     ],
     "optionExplanations": [
-      "This reverses the temperature-linked forms: environmental, ambient culture is mold, while infected tissue at body temperature is yeast for the stated fungi.",
-      "The environmental mold form is correct, but tissue at 37 C selects the parasitic yeast form for a non-Coccidioides endemic dimorphic fungus.",
-      "Thermal dimorphism links the soil or ambient 25 C condition to mold and the infected-tissue 37 C condition to yeast.",
-      "Yeast is expected in infected tissue at 37 C, but the environmental 25 C culture condition favors mold rather than yeast.",
-      "Spherules are the exceptional tissue form associated with Coccidioides, which the stem excludes; pseudohyphae are not the required environmental mold form."
+      "The relevant switch is temperature and growth environment, not host immunocompetence. Opportunistic yeasts do not acquire a mold phase merely by infecting a healthy person.",
+      "This reverses both phases. The lecture labels the tissue yeast phase parasitic and the environmental or low-temperature mold phase saprophytic.",
+      "The tissue-to-culture pattern follows thermal dimorphism: a true pathogen is yeast in infected tissue at body temperature and mold in the low-temperature, minimal-nutrient saprophytic phase.",
+      "Coccidioides is the tissue-form exception: the guide identifies spherules with endospores in tissue, rather than the yeast form described in this stem.",
+      "A single thermally dimorphic pathogen can legitimately appear in both morphologies when tissue and culture conditions differ; the paired findings do not require contamination."
     ],
     "answer": 2,
-    "rationale": "Endemic dimorphic fungi change morphology with environment and temperature. In the environmental reservoir or laboratory at about 25 C, they grow as molds. In infected tissue at 37 C, the usual parasitic form is yeast; the stem excludes Coccidioides because its tissue morphology is the exception.",
+    "rationale": "The tissue and culture results are linked by thermal dimorphism. A true pathogenic dimorphic fungus is generally yeast in infected tissue at 37 C, its parasitic phase. When the same organism is cultured at 25 C with minimal nutrients, it returns to the saprophytic mold phase. Thus the differing appearances are a temperature-and-environment-dependent transition, not two organisms.",
     "type": "mcq",
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "thermal dimorphism"
+      "thermal dimorphism",
+      "saprophytic versus parasitic phase"
     ],
     "covers": [
       "L032-O5"
     ],
     "course": "OST520",
     "source": "sept11-practice",
-    "sourceRef": "OST520 (032) L - Fungal Pathogens - Wilkins.docx, paragraphs 236-246",
+    "sourceRef": "OST520 live recording 1_5aok0tts, raw transcript lines 701-713; L032 fungal pathogens guide, Thermal dimorphism.",
     "sourceBlock": "L032",
-    "applicationLevel": "recall",
-    "reasoningOrder": 1,
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
     "requiresMedia": false,
     "mediaNote": "",
     "closestDistractor": {
       "index": 1,
-      "why_wrong": "It misses the tissue-phase conversion to yeast that defines thermal dimorphism for the non-Coccidioides fungi specified."
+      "why_wrong": "It recognizes two phases but reverses the temperature-linked parasitic yeast and saprophytic mold assignments."
     },
     "holdout": false,
     "n": 45
@@ -7451,44 +7451,44 @@
     "id": "MQG-SEP11-L032-02",
     "topic": "Microbiology",
     "src": "M",
-    "stem": "A new antifungal causes fungal lysis in ordinary medium, but osmotic support rescues growth. Ergosterol concentration and nucleic-acid synthesis remain normal, and membrane permeability remains normal at a nonlytic dose. Which target is most likely?",
+    "stem": "A clinical specimen is initially described as showing mold because it contains long filamentous chains. Higher-power microscopy shows repeated buds and a constricted pinch point between adjacent cells throughout the chains. Which interpretation is most consistent with the finding?",
     "options": [
-      "Lanosterol-to-ergosterol conversion",
-      "Existing membrane ergosterol",
-      "Fungal DNA and RNA synthesis",
-      "1,3-beta-glucan synthesis",
-      "Microtubule assembly"
+      "Septate mold hyphae with chitin-containing cross walls",
+      "Aseptate mold hyphae with sparse cross walls and many nuclei",
+      "A dimorphic pathogen's tissue yeast phase identified solely by temperature",
+      "Rapidly budding yeast forming pseudohyphae with recurrent constrictions",
+      "Mold conidia attached to aerial stalks above vegetative mycelium"
     ],
     "optionExplanations": [
-      "Blocking lanosterol conversion would lower ergosterol and impair membrane synthesis, but the stem states that ergosterol concentration remains normal.",
-      "Normal ergosterol concentration alone does not exclude a polyene that binds existing ergosterol, but normal membrane permeability at a nonlytic dose and osmotic rescue favor wall failure instead.",
-      "Inhibition of nucleic-acid synthesis would impair growth without the characteristic osmotic rescue of a mechanically weakened fungal cell wall.",
-      "Beta-1,3-glucan is a fungal cell-wall component; blocking its synthesis weakens the wall, so osmotic support can prevent lysis while ergosterol remains normal.",
-      "Microtubule inhibition disrupts mitosis, but it does not directly remove the wall polymer whose loss makes cells vulnerable to osmotic lysis."
+      "Septate true hyphae are mold structures with cross walls, but the recurrent buds and constricted junctions in the stem identify pseudohyphae instead.",
+      "Aseptate or coenocytic hyphae have few cross walls and multiple nuclei between septa; they do not explain repeated yeast buds with pinched junctions.",
+      "Thermal dimorphism requires evidence about the organism under different temperature or nutrient conditions. The visible constrictions here directly distinguish pseudohyphae from true hyphae.",
+      "Rapid budding before complete cell separation produces elongated yeast chains with the characteristic pinched constrictions of pseudohyphae.",
+      "Conidia are asexual spores associated with mold reproductive structures. The specimen instead describes a chain of budding cells, not spores on an aerial stalk."
     ],
     "answer": 3,
-    "rationale": "Osmotic rescue points to loss of structural protection against turgor pressure, which is a cell-wall problem. Normal ergosterol concentration excludes impaired ergosterol synthesis but does not by itself exclude a polyene that binds existing ergosterol. However, normal membrane permeability at a nonlytic dose argues against direct membrane damage, while osmotic rescue supports wall-integrity failure. Normal nucleic-acid synthesis excludes antimetabolite action. Echinocandin-like inhibition of 1,3-beta-glucan synthesis best explains the findings.",
+    "rationale": "The sequence is morphology to organism form: repeated buds that have not fully separated create long chains, and the residual pinch points identify pseudohyphae. True mold hyphae can be septate or aseptate, but their cross walls are not the recurrent bud-like constrictions described here. The specimen therefore supports a yeast-derived pseudohyphal form rather than a mold.",
     "type": "mcq",
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "echinocandins",
-      "fungal wall"
+      "pseudohyphae versus true hyphae",
+      "yeast morphology"
     ],
     "covers": [
-      "L032-O7"
+      "L032-O3"
     ],
     "course": "OST520",
     "source": "sept11-practice",
-    "sourceRef": "OST520 (032) L - Fungal Pathogens - Wilkins.docx, paragraphs 354-377",
+    "sourceRef": "OST520 live recording 1_5aok0tts, raw transcript lines 536-563 and 790-801; L032 fungal pathogens guide, Yeasts and molds.",
     "sourceBlock": "L032",
-    "applicationLevel": "mechanism",
+    "applicationLevel": "presentation",
     "reasoningOrder": 2,
     "requiresMedia": false,
     "mediaNote": "",
     "closestDistractor": {
       "index": 0,
-      "why_wrong": "Lanosterol conversion is an azole target and would reduce ergosterol, which the stem explicitly reports as normal."
+      "why_wrong": "Septate hyphae are a real mold morphology, but their cross walls do not account for the stem's repeated budding and pinched junctions."
     },
     "holdout": false,
     "n": 46
@@ -7733,45 +7733,49 @@
     "n": 32,
     "topic": "Hematology & Physiology",
     "src": "H",
-    "stem": "Which electrolyte panel has the largest anion gap using AG = Na+ - Cl- - HCO3-?",
+    "stem": "An adult with ketoacidosis has pH 7.26, HCO3- 12 mM, pCO2 28 mm Hg, Na+ 140 mM, and Cl- 100 mM. Which interpretation best accounts for these values?",
     "options": [
-      "Na+ 140, Cl- 104, HCO3- 24",
-      "Na+ 140, Cl- 100, HCO3- 20",
-      "Na+ 140, Cl- 110, HCO3- 18",
-      "Na+ 140, Cl- 106, HCO3- 26",
-      "Na+ 140, Cl- 96, HCO3- 18"
+      "High-gap metabolic acidosis with respiratory correction; ventilation replaced the lost bicarbonate",
+      "Normal-gap metabolic acidosis with respiratory compensation; chloride retention explains the gap",
+      "Primary respiratory alkalosis with renal compensation; bicarbonate loss is secondary to low CO2",
+      "Primary respiratory acidosis with renal compensation; CO2 retention produced the low pCO2",
+      "High-gap metabolic acidosis with respiratory compensation; excess organic anions explain the gap"
     ],
     "optionExplanations": [
-      "This panel has AG = 140 - 104 - 24 = 12 mEq/L, which is lower than the largest calculated value.",
-      "This panel has AG = 140 - 100 - 20 = 20 mEq/L, so it is elevated relative to some choices but not the maximum.",
-      "This panel has AG = 140 - 110 - 18 = 12 mEq/L because the high chloride offsets the lower bicarbonate.",
-      "This panel has AG = 140 - 106 - 26 = 8 mEq/L, the smallest value among the listed panels.",
-      "This panel has AG = 140 - 96 - 18 = 26 mEq/L, which is larger than the gaps calculated from every other option."
+      "The high-gap metabolic process is correct, but lowering pCO2 changes the nonprimary respiratory parameter and therefore compensates; ventilation does not restore the primary bicarbonate deficit.",
+      "An AG of 28 is elevated rather than normal. The high gap is explained by unmeasured organic anions as bicarbonate buffers the added acid, not by chloride retention.",
+      "Low pCO2 can be a respiratory alkalosis process, but here low bicarbonate and acidemia identify metabolic acidosis as primary; the low pCO2 moves pH toward normal as compensation.",
+      "Respiratory acidosis requires elevated pCO2 from impaired CO2 escape. This patient instead has low pCO2 and low bicarbonate, with the bicarbonate abnormality driving acidemia.",
+      "The low pH and low bicarbonate identify metabolic acidosis. The low pCO2 is the opposite-parameter respiratory compensation, and AG = 140 - 100 - 12 = 28 indicates excess unmeasured organic anions from ketoacidosis."
     ],
     "answer": 4,
-    "rationale": "The anion gap is calculated separately for each panel. Subtracting chloride and bicarbonate from sodium gives 26 mEq/L for the final panel, the largest amount of unmeasured anions listed.",
+    "rationale": "First, pH 7.26 establishes acidemia. Low HCO3- identifies metabolic acidosis as the primary process, while low pCO2 is an opposite-parameter respiratory response that moves pH toward normal without replacing bicarbonate. The anion gap is 28 mEq/L, so unmeasured anions are elevated. In ketoacidosis, added organic acids consume bicarbonate during buffering and leave conjugate-base anions behind, producing high-gap metabolic acidosis.",
     "type": "mcq",
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "PH8"
+      "acid-base interpretation",
+      "compensation versus correction",
+      "anion gap"
     ],
     "covers": [
+      "PH6",
+      "PH7",
       "PH8"
     ],
     "course": "OST520",
     "source": "sept11-practice",
-    "sourceRef": "OST520 (034) L - Blood pH Regulation - Faner.docx, paragraphs 490-516",
+    "sourceRef": "OST520 live recording 1_00v4ill7, raw transcript lines 418-458 and 604-646; L034 blood pH regulation guide, PH6-PH8.",
     "sourceBlock": "L034",
-    "applicationLevel": "recall",
+    "applicationLevel": "presentation",
     "requiresMedia": false,
     "mediaNote": "",
     "closestDistractor": {
       "index": 1,
-      "why_wrong": "An anion gap of 20 is substantial, but 26 from the final panel is larger."
+      "why_wrong": "It correctly identifies high-gap metabolic acidosis but mistakes respiratory compensation for correction and incorrectly claims that ventilation replaces bicarbonate."
     },
     "holdout": false,
-    "reasoningOrder": 1
+    "reasoningOrder": 3
   },
   {
     "id": "MQG-SEP11-L035-01",
@@ -7999,5 +8003,916 @@
     },
     "holdout": false,
     "reasoningOrder": 2
+  },
+  {
+    "id": "MQG-SEP12-L036-01",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A newly isolated virus lacks a lipid envelope entirely, having only a protein capsid around its genome. A related virus of similar genome size and family has a lipid envelope. Compared with the enveloped relative, how should the naked virus's resistance to drying and to acidic environments differ?",
+    "options": [
+      "Increased resistance to drying and increased resistance to acid",
+      "Decreased resistance to drying, but increased resistance to acid",
+      "Increased resistance to drying, but decreased resistance to acid",
+      "Decreased resistance to drying and decreased resistance to acid",
+      "No change in resistance to either drying or acid"
+    ],
+    "optionExplanations": [
+      "Naked capsids lack the lipid envelope that is destabilized by desiccation and low pH, so they withstand both stresses better than an enveloped relative, matching the poliovirus-versus-HIV pattern described for the course.",
+      "This splits the two environmental stresses in opposite directions, but the envelope's lipid bilayer is the shared vulnerability being removed here, so losing it should not make drying resistance worse while acid resistance improves.",
+      "This also splits the stresses in opposite directions; the same missing lipid envelope that is disrupted by drying is also the structure disrupted by acid, so removing it should not lower acid resistance while raising drying resistance.",
+      "This reverses the actual direction: it treats capsid-only structure as more fragile, when the course material states naked capsids are the hardier structural class against both stresses.",
+      "This denies that the envelope has any protective or vulnerability role at all, contradicting the stated difference in environmental stability between naked and enveloped viruses."
+    ],
+    "answer": 0,
+    "rationale": "Naked (non-enveloped) capsids resist drying, acid, and general environmental stress far better than enveloped viruses, because the lipid envelope is the structure most easily disrupted by desiccation and low pH. This is why non-enveloped viruses such as poliovirus support fecal-oral, environmentally resistant transmission, while enveloped viruses such as HIV are readily inactivated by drying and acid.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "viral structure",
+      "capsid vs envelope"
+    ],
+    "covers": [
+      "L036-O1"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (036) L - Intro to Viruses - Taylor.pdf, pp. 10, 18",
+    "sourceBlock": "L036",
+    "applicationLevel": "recall",
+    "reasoningOrder": 1,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 3,
+      "why_wrong": "It reverses which structural class (naked vs. enveloped) is the hardier one against environmental stress."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L036-02",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A +ssRNA virus's genome is translated as a single large polyprotein that a viral protease must cleave into individual functional proteins, including capsid proteins and genome-replication enzymes. A new drug irreversibly inactivates only this viral protease immediately after entry. Compared with an untreated infection, what happens to the availability of mature functional capsid protein and to genome replication?",
+    "options": [
+      "Mature functional capsid availability increases while genome replication decreases",
+      "Mature functional capsid availability decreases and genome replication decreases",
+      "Mature functional capsid availability decreases, but genome replication is unaffected",
+      "Mature functional capsid availability is unaffected, but genome replication decreases",
+      "Neither mature functional capsid availability nor genome replication is affected"
+    ],
+    "optionExplanations": [
+      "There is no mechanism by which blocking a required processing enzyme would increase availability of one mature downstream protein class while decreasing another that depends on the same cleavage step.",
+      "Translation of the uncleaved polyprotein may continue, but blocking the protease prevents release of mature functional capsid proteins and replication enzymes, so functional capsid availability and genome replication both fall.",
+      "This assumes replication enzymes are released independently of protease cleavage, but the stem states they are part of the same uncleaved polyprotein, so they should be disabled along with capsid proteins.",
+      "This assumes mature capsid proteins are released independently of protease cleavage, but their sequences remain trapped in the uncleaved polyprotein along with the replication enzymes.",
+      "This treats protease cleavage as unnecessary for generating functional proteins, contradicting the stem's statement that individual functional proteins only exist after this specific cleavage step."
+    ],
+    "answer": 1,
+    "rationale": "For many +ssRNA viruses, initial translation produces one large polyprotein, and a viral protease cleaves it into individually functional proteins, including capsid proteins and the enzymes needed for genome replication. Irreversibly blocking that protease does not necessarily stop translation of the uncleaved polyprotein, but it prevents release of mature functional capsid protein and functional replication machinery. Mature capsid availability and genome replication therefore both fall.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "viral protease",
+      "polyprotein processing"
+    ],
+    "covers": [
+      "L036-O2",
+      "L036-O3"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (036) L - Intro to Viruses - Taylor.pdf, p. 34; transcript 029, 08:52-09:32",
+    "sourceBlock": "L036",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 4,
+      "why_wrong": "It assumes the protease is dispensable for generating functional viral proteins, contradicting the stem's description of the polyprotein-to-functional-protein cleavage step."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L036-03",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A retrovirus infects a cell. Immediately after entry, a drug is added that selectively and completely inhibits reverse transcriptase for the remainder of the infection. Compared with an untreated infection, what happens to integration of the viral genome into host DNA, and to production of viral mRNA?",
+    "options": [
+      "Integration blocked; mRNA production unaffected",
+      "Integration unaffected; mRNA production blocked",
+      "Integration blocked; mRNA production also blocked",
+      "Integration unaffected; mRNA production unaffected",
+      "Integration blocked; mRNA production increased"
+    ],
+    "optionExplanations": [
+      "This assumes mRNA can still be produced despite blocked integration, but both steps depend on the same DNA copy that reverse transcriptase generates, so mRNA production should not remain unaffected.",
+      "This assumes integration can proceed even though reverse transcriptase is blocked, when integration itself requires the DNA copy this enzyme produces.",
+      "Reverse transcriptase makes the DNA copy of the viral RNA genome; without it, there is no DNA to integrate into host DNA and no integrated template from which host RNA polymerase can transcribe viral mRNA, so both steps fail.",
+      "This claims reverse transcriptase is dispensable for both integration and mRNA production, but retroviruses require it to generate the DNA intermediate both steps depend on.",
+      "There is no mechanism by which blocking reverse transcriptase would increase mRNA production; loss of the DNA intermediate should impair, not enhance, this downstream step."
+    ],
+    "answer": 2,
+    "rationale": "Retroviruses require reverse transcriptase (RNA-dependent DNA polymerase) to convert their RNA genome into a DNA copy. That DNA copy is what integrates into host DNA, and host RNA polymerase transcribes viral mRNA only from the integrated template. Blocking reverse transcriptase removes the source of the DNA copy, so both integration and mRNA production fail.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "reverse transcriptase",
+      "retrovirus replication"
+    ],
+    "covers": [
+      "L036-O3",
+      "L036-O4"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (036) L - Intro to Viruses - Taylor.pdf, pp. 6, 35",
+    "sourceBlock": "L036",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "It reverses which specific step fails, claiming integration proceeds without the DNA copy that reverse transcriptase alone produces."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L037-01",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A newly described protozoan undergoes sexual reproduction in a freshwater snail and asexual replication in a fish that eats the snail. Humans who eat undercooked infected fish become infected, but the parasite cannot progress further or reproduce in humans, and human infection is not required to maintain the parasite's life cycle. Which host role does the fish occupy?",
+    "options": [
+      "Incidental host",
+      "Reservoir host",
+      "Dead-end host",
+      "Intermediate host",
+      "Definitive host"
+    ],
+    "optionExplanations": [
+      "An incidental host is by definition unnecessary for completing the life cycle, but the fish is described as necessary for transmitting the parasite onward, which rules this out.",
+      "A reservoir host maintains a pathogen in nature apart from the parasite's defined life-cycle stages; the fish's role here is a required developmental stage (asexual replication), not simply reservoir maintenance.",
+      "A dead-end host cannot transmit the parasite onward, but the fish is described as supporting asexual replication that carries the parasite toward further hosts, so it is not a dead end.",
+      "The fish supports asexual replication and is necessary for completing the life cycle, but sexual maturity occurs only in the snail, matching the definition of an intermediate host.",
+      "Sexual reproduction, the defining feature of a definitive host, occurs in the snail, not the fish, so this role does not fit the fish."
+    ],
+    "answer": 3,
+    "rationale": "A definitive host is where sexual reproduction occurs, regardless of pathology; here that is the snail. An intermediate host is necessary for life-cycle completion, lacks sexual maturity, and may support asexual replication; the fish fits this role. An incidental host is accidentally infected and unnecessary for the life cycle; humans fit that role here, not the fish.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "definitive host",
+      "intermediate host"
+    ],
+    "covers": [
+      "L037-O1"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (037) L - Parasitology (Outline) - Seydel.pdf, p. 2",
+    "sourceBlock": "L037",
+    "applicationLevel": "recall",
+    "reasoningOrder": 1,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "It misapplies the incidental-host definition (unnecessary for the life cycle) to a host the stem explicitly describes as necessary for completing the life cycle."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L037-02",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A febrile traveler's thick blood smear reveals intracellular organisms consistent with Plasmodium, but the technologist cannot determine the species or estimate percent parasitemia from this slide. Which next laboratory step addresses this specific limitation, and what property of the thick preparation caused it?",
+    "options": [
+      "Repeat thick smear; longer viewing restores lost morphologic detail",
+      "Thin smear; it restores the sensitivity the thick smear lacked",
+      "Order PCR; species identification requires molecular testing",
+      "No further testing; the thick smear already shows full detail",
+      "Thin smear; it preserves morphology needed for species identification"
+    ],
+    "optionExplanations": [
+      "Repeating the same slide cannot restore morphology already distorted by the thick preparation's concentration process; the limitation is inherent to that preparation method, not observation time.",
+      "The organism was already detected on the thick smear, so sensitivity was adequate; the actual gap is lost morphologic detail, not failure to detect the parasite.",
+      "Species identification and quantification are routinely obtained from thin-smear morphology without the added resource burden of PCR, which is better reserved for cases needing the lowest possible detection limit.",
+      "This denies the stem's explicit statement that species and parasitemia could not be determined from the thick smear.",
+      "Thick smears maximize sensitivity by concentrating organisms but disrupt cell architecture; thin smears preserve morphology, allowing species identification and quantification, directly addressing the stated gap."
+    ],
+    "answer": 4,
+    "rationale": "Thick smears maximize sensitivity by concentrating parasites across a larger blood volume per field, but this concentration process disrupts red cell and parasite ultrastructure. Thin smears sacrifice some sensitivity but preserve morphology, allowing species identification and quantification (percent parasitemia). The two preparations are complementary, not substitutes for each other.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "thick smear",
+      "thin smear",
+      "blood parasite diagnosis"
+    ],
+    "covers": [
+      "L037-O3"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (037) L - Parasitology (Outline) - Seydel.pdf, p. 2",
+    "sourceBlock": "L037",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "It proposes the correct next step (a thin smear) but for the wrong reason, treating a sensitivity gap as the problem when the organism was already detected."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L037-03",
+    "topic": "Microbiology",
+    "src": "M",
+    "stem": "A patient with lymphatic filariasis receives a single antihelminthic drug course. Circulating microfilariae are cleared within days, but adult worms residing in the lymphatics survive and resume producing microfilariae months later, despite confirmed adequate drug concentrations reaching the lymphatic tissue throughout treatment. Which explanation is best supported?",
+    "options": [
+      "The drug's mechanism targets a pathway present in the microfilarial stage but not in the biologically distinct adult stage",
+      "The adult worms acquired new drug resistance mutations during the single treatment course",
+      "Subtherapeutic drug levels reached the lymphatics despite adequate systemic dosing",
+      "The adult worms reside in a site that is completely inaccessible to any drug",
+      "The difference in outcome between microfilariae and adult worms is due to random treatment failure, since both stages share the same vulnerable pathway"
+    ],
+    "optionExplanations": [
+      "Parasites often pass through multiple, biologically distinct life stages, so a single drug's target may be present at one stage and absent or different at another; adequate tissue drug levels alongside stage-restricted killing explains clearance of microfilariae but survival of adults.",
+      "A single short course provides little opportunity for a new resistance mutation to arise and fix in the adult population, and the stem gives no indication of altered adult-worm susceptibility from a new mutation, only stage-specific survival.",
+      "This directly contradicts the stem, which states that adequate drug concentrations reached the lymphatic tissue throughout treatment.",
+      "The stem specifies that adequate drug levels were confirmed in the lymphatic tissue where the adult worms reside, so the tissue was reached; the problem is not lack of drug access to the site.",
+      "This attributes the outcome to chance despite adequate, confirmed drug exposure, and it assumes a shared vulnerable pathway between two life stages that the parasitology course specifically identifies as a source of stage-specific drug resistance."
+    ],
+    "answer": 0,
+    "rationale": "Parasites are eukaryotic with multiple, sometimes non-proliferating life stages, which limits the number of drug targets shared across every stage and can require stage-specific therapy. Here, adequate tissue drug levels rule out under-dosing, so persistence of adult worms despite microfilarial clearance is best explained by a drug target present in the microfilarial stage but absent or inaccessible in the adult stage.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "stage-specific drug targets",
+      "parasite treatment challenges"
+    ],
+    "covers": [
+      "L037-O4"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (037) L - Parasitology (Outline) - Seydel.pdf, pp. 3-4",
+    "sourceBlock": "L037",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "It denies the stem's explicit statement that adequate drug levels reached the lymphatic tissue, so it cannot be the explanation."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L038-01",
+    "topic": "Immunology",
+    "src": "M",
+    "stem": "A biopsy shows hematopoietic stem cells in the bone marrow giving rise to lymphoid progenitors. These progenitors then travel to a second organ, where they undergo the selection processes that produce mature T lymphocytes. Which organ is this second site?",
+    "options": [
+      "Peyer's patch",
+      "Thymus",
+      "Bone marrow",
+      "Spleen",
+      "Lymph node"
+    ],
+    "optionExplanations": [
+      "Peyer's patches are gut-associated secondary lymphoid tissue involved in mucosal immune activation, not the primary site where T lymphocytes mature.",
+      "T lymphocyte maturation, including the selection processes that generate mature T cells, occurs in the thymus after progenitors leave the bone marrow, matching the site described.",
+      "The stem already identifies bone marrow as the first site where hematopoietic stem cells arise; the question asks for the distinct second site where maturation occurs, not the origin site.",
+      "The spleen is a secondary lymphoid organ involved in filtering blood-borne material and lymphocyte activation, not the primary site of T lymphocyte maturation.",
+      "Lymph nodes are secondary lymphoid organs that filter lymph and support lymphocyte activation, not the primary organ responsible for T lymphocyte maturation."
+    ],
+    "answer": 1,
+    "rationale": "Bone marrow and thymus are the primary lymphoid organs. Bone marrow is the site of hematopoiesis and lymphocyte origin, while the thymus is where lymphoid progenitors destined to become T lymphocytes complete maturation. Secondary lymphoid organs (spleen, lymph nodes, MALT/GALT, Peyer's patches) instead filter material and support activation of already-mature cells.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "primary lymphoid organs",
+      "T lymphocyte maturation"
+    ],
+    "covers": [
+      "L038-O2"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (038, 039) L - Intro to Immunology I and II - Taylor.pdf, p. 3; transcript 032, 06:45-07:02",
+    "sourceBlock": "L038/039",
+    "applicationLevel": "recall",
+    "reasoningOrder": 1,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 3,
+      "why_wrong": "It substitutes a secondary lymphoid organ (site of activation/filtering) for the primary lymphoid organ that the stem describes as the maturation site."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L038-02",
+    "topic": "Immunology",
+    "src": "M",
+    "stem": "A patient had normal infection frequency through adulthood before beginning a medication that blocks NF-κB activation in several leukocyte populations. Months later, they develop recurrent opportunistic infections, while testing shows neither autoantibodies nor inflammatory injury to self-tissues. Which classification and failed immune function best explain the new pattern?",
+    "options": [
+      "Primary immunodeficiency; an inherited failure of pathogen elimination",
+      "Autoimmunity; an acquired failure to maintain tolerance to self",
+      "Secondary immunodeficiency; an acquired failure of pathogen elimination",
+      "Mixed immunodeficiency and autoimmunity; simultaneous failure of pathogen elimination and self-tolerance",
+      "Normal immune aging; preserved pathogen elimination with reduced self-tolerance"
+    ],
+    "optionExplanations": [
+      "The infection phenotype fits failed pathogen elimination, but normal health before an acquired leukocyte-signaling blockade argues against an inherited primary defect.",
+      "The acquired timing fits, but opportunistic infection without autoantibodies or self-tissue injury indicates impaired pathogen defense rather than loss of self-tolerance.",
+      "Normal prior immune function followed by opportunistic infection after an acquired leukocyte-signaling blockade identifies a secondary immunodeficiency caused by impaired pathogen detection or elimination.",
+      "The stem supports failed pathogen defense but supplies no evidence of self-tolerance failure, so combining immunodeficiency with autoimmunity adds an unsupported mechanism.",
+      "The new opportunistic infections show that pathogen elimination is not preserved, and their onset after a defined signaling blockade is not explained by normal aging."
+    ],
+    "answer": 2,
+    "rationale": "The student must combine the acquired onset after leukocyte signaling was blocked with the opportunistic-infection phenotype. Together they indicate a secondary immunodeficiency caused by impaired pathogen detection or elimination. Autoimmunity would instead produce loss of self-tolerance and self-tissue injury, while a primary immunodeficiency is inherited even when its clinical presentation is delayed.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "secondary immunodeficiency",
+      "autoimmunity",
+      "tolerance"
+    ],
+    "covers": [
+      "L038-O6"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (038, 039) L - Intro to Immunology I and II - Taylor.pdf, p. 2",
+    "sourceBlock": "L038/039",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "It correctly links opportunistic infection to failed pathogen elimination but wrongly assigns an inherited origin despite normal prior function and onset after an acquired signaling blockade."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L038-03",
+    "topic": "Immunology",
+    "src": "M",
+    "stem": "Activated macrophages in an infected tissue secrete IL-1 into the local interstitial fluid. A nearby fibroblast expresses no IL-1 receptor, while an adjacent endothelial cell expresses abundant IL-1 receptor; both cells sit in the same fluid and receive the same local IL-1 concentration. What happens to each cell in direct response to this IL-1 release?",
+    "options": [
+      "The fibroblast responds to IL-1, while the endothelial cell is unaffected",
+      "Neither cell responds, because IL-1 signaling requires direct cell-cell contact rather than a soluble mediator",
+      "Both cells are unaffected, because cytokine redundancy means no single cytokine determines a cellular outcome",
+      "The fibroblast is unaffected, while the endothelial cell responds to IL-1",
+      "Both cells respond equally, because they are bathed in the same interstitial fluid"
+    ],
+    "optionExplanations": [
+      "This reverses which cell expresses the IL-1 receptor as stated in the stem; the endothelial cell, not the fibroblast, is described as receptor-bearing.",
+      "IL-1 is described as a secreted cytokine acting through interstitial fluid, a soluble signaling mode, not a contact-dependent one; this misclassifies the communication method.",
+      "Redundancy refers to multiple different cytokines being able to produce the same effect on a receptor-bearing cell; it does not mean a cytokine has no effect on cells that do express its receptor.",
+      "A cytokine can only signal a cell that expresses its receptor; because the fibroblast lacks the IL-1 receptor and the endothelial cell expresses it abundantly, only the receptor-bearing endothelial cell responds despite equal local exposure.",
+      "Shared exposure to a soluble cytokine does not guarantee a response; response requires the cell to express the corresponding receptor, which the fibroblast in this case does not."
+    ],
+    "answer": 3,
+    "rationale": "Cytokines signal only cells that express the matching receptor; a cytokine has no effect on a cell lacking that receptor, regardless of local concentration or shared fluid exposure. Here, the fibroblast lacks the IL-1 receptor and is unaffected, while the receptor-bearing endothelial cell responds to the same local IL-1 release.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "cytokine receptor specificity",
+      "IL-1 signaling"
+    ],
+    "covers": [
+      "L038-O5"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (038, 039) L - Intro to Immunology I and II - Taylor.pdf, p. 3",
+    "sourceBlock": "L038/039",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 4,
+      "why_wrong": "It substitutes shared fluid exposure for receptor expression as the determinant of cytokine response, contradicting the stated receptor-dependence of cytokine signaling."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L039-01",
+    "topic": "Immunology",
+    "src": "M",
+    "stem": "A patient's serum antibody titer against a specific viral antigen is still undetectable eight days after their first-ever exposure to that virus. The same patient is re-exposed to the identical virus two years later, and their antibody titer becomes detectable within 48 hours of this second exposure. Which explanation is best supported?",
+    "options": [
+      "The virus mutated between the two exposures, making it easier for existing antibodies to detect the second time",
+      "Innate immunity alone produced the rapid second-exposure titer rise, since the adaptive system does not change between exposures",
+      "The first-exposure antibody response was simply too weak to ever become detectable, so no real primary response occurred",
+      "Naive lymphocyte numbers increased permanently after the first exposure, independent of any pathogen-specific memory",
+      "Retained memory B cells expanded rapidly upon re-exposure, unlike the rare naive lymphocytes that had to be activated and proliferate after the first exposure"
+    ],
+    "optionExplanations": [
+      "The stem specifies re-exposure to the identical virus, so a mutation-based explanation for faster detection is not supported by the scenario as described.",
+      "Antibody titer is a product of the adaptive, humoral response, not innate immunity, and the adaptive system does change between exposures through the formation of retained memory B cells.",
+      "The typical primary humoral response takes about one to two weeks to become measurable; an undetectable titer at day eight is consistent with a response still in progress, not evidence that no primary response occurred at all.",
+      "The described speed advantage is attributed to pathogen-specific memory cell retention, not to a general, non-specific increase in the naive lymphocyte pool.",
+      "A primary response depends on rare naive lymphocytes proliferating over roughly one to two weeks, consistent with no detectable titer by day eight, whereas a secondary response draws on an already-expanded pool of retained memory B cells that can reactivate and produce antibody within days."
+    ],
+    "answer": 4,
+    "rationale": "A primary adaptive response requires proliferation of rare naive lymphocytes into effector cells, a process taking roughly one to two weeks, which fits an undetectable titer at day eight. After the response contracts, memory B cells persist for years and can be rapidly reactivated and expanded upon re-exposure to the same pathogen, producing a much faster secondary antibody response, as seen here at 48 hours.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "primary vs secondary response",
+      "memory B cells"
+    ],
+    "covers": [
+      "L039-O1"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (038, 039) L - Intro to Immunology I and II - Taylor.pdf, p. 9",
+    "sourceBlock": "L038/039",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "It reinterprets a normal, still-developing primary response timeline as proof that no primary response happened, which the stated one-to-two-week response window does not support."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L039-02",
+    "topic": "Immunology",
+    "src": "M",
+    "stem": "A CD8+ T cell recognizes a short viral peptide only when it is displayed on a specific host cell surface protein. A viral mutation prevents this peptide from being loaded onto that surface protein, but does not otherwise change the virus's surface antigens on released virions. Compared with a normally infected cell, what happens to CD8+ T cell activation against the mutant-infected cell, and does an antibody response against free extracellular virions remain intact?",
+    "options": [
+      "CD8+ T cell activation against the infected cell is impaired, but the antibody response against free virions remains intact",
+      "Both CD8+ T cell activation and the antibody response are impaired",
+      "CD8+ T cell activation is intact, but the antibody response is impaired",
+      "Neither response is affected, because CD8+ T cells can recognize viral antigen directly without needing a presenting protein",
+      "Both responses are impaired, because failure to load the peptide destroys the antigen before any lymphocyte can recognize it"
+    ],
+    "optionExplanations": [
+      "CD8+ T cell recognition depends specifically on peptide loading onto the surface presenting protein described in the stem, so blocking that step prevents activation against the infected cell; antibody binding to intact virion surface antigens does not depend on this intracellular presentation pathway, so it is unaffected.",
+      "This extends the peptide-loading defect to antibody binding of extracellular virions, but the stem states the virion's surface antigens are otherwise unchanged, so there is no basis for antibody binding to fail.",
+      "This reverses which process depends on the surface presenting protein; the stem specifies CD8+ recognition, not antibody binding, requires peptide display on that protein.",
+      "This contradicts the stem's explicit statement that CD8+ recognition occurs only through peptide display on the specific surface protein.",
+      "The mutation blocks loading onto one specific intracellular presentation pathway; it does not eliminate the antigen from the intact virion surface, where it remains available for antibody recognition."
+    ],
+    "answer": 0,
+    "rationale": "CD8+ T cell (cytotoxic) recognition requires antigen processing and peptide presentation on a specific host surface protein; disrupting peptide loading prevents this recognition route. Antibody-mediated (humoral) recognition instead binds antigen directly on the intact extracellular virion surface and does not depend on this intracellular presentation pathway, so it remains functional despite the mutation.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "antigen presentation",
+      "humoral vs cell-mediated recognition"
+    ],
+    "covers": [
+      "L039-O2"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (038, 039) L - Intro to Immunology I and II - Taylor.pdf, p. 8",
+    "sourceBlock": "L038/039",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "It swaps which arm depends on the intracellular presenting protein, when the stem specifies that dependence belongs to CD8+ T cell recognition, not antibody binding."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L039-03",
+    "topic": "Immunology",
+    "src": "M",
+    "stem": "A patient lacks functional B lymphocytes. They develop recurrent infections with extracellular encapsulated bacteria, yet CD8+ lymphocytes still clear virus-infected host cells effectively. Which immune arm is deficient, and why is the antiviral clearance preserved?",
+    "options": [
+      "Both arms are deficient, because the antibody defect responsible for B cell loss is assumed to also impair cytotoxic T cell development",
+      "Humoral immunity is deficient, while cell-mediated immunity remains intact because cytotoxic T cell killing does not require antibody-mediated opsonization",
+      "Both humoral and cell-mediated immunity are deficient, because plasma cells are required for cytotoxic T lymphocytes to mature",
+      "Both arms are intact, because interferon-gamma secreted by T cells is assumed to fully replace antibody-mediated opsonization",
+      "Cell-mediated immunity is deficient, while humoral immunity is intact, because encapsulated bacteria are cleared by cytotoxic T cells rather than antibodies"
+    ],
+    "optionExplanations": [
+      "Normal T lymphocyte numbers and function, including preserved cytotoxic clearance, contradict the claim that the B cell defect also impairs cytotoxic T cell development; the two lineages are not shown to share a defect.",
+      "Humoral immunity depends on B cells producing antibodies to opsonize extracellular pathogens, so its absence explains the recurrent encapsulated bacterial infections; cytotoxic T cells kill infected cells directly and do not require antibodies, explaining preserved viral clearance.",
+      "Plasma cells (antibody-secreting B cell descendants) are not required for cytotoxic T lymphocyte maturation; this patient's preserved cytotoxic function contradicts any such dependency.",
+      "Interferon-gamma from T cells has other immune effects, but there is no described mechanism by which it substitutes for antibody-mediated opsonization, and the stem's recurrent bacterial infections contradict full compensation.",
+      "This reverses the described mechanism; encapsulated extracellular bacteria are classically cleared via antibody-mediated opsonization, not direct cytotoxic T cell killing, and this patient's cytotoxic function is stated to be normal."
+    ],
+    "answer": 1,
+    "rationale": "Humoral immunity (B cells and antibodies) opsonizes extracellular pathogens such as encapsulated bacteria, marking them for phagocytosis; its loss explains the recurrent bacterial infections. Cell-mediated immunity (cytotoxic T cells) directly kills infected cells without requiring antibody-mediated opsonization, so it remains functional despite the B cell defect, explaining preserved viral clearance.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "humoral immunity",
+      "cell-mediated immunity"
+    ],
+    "covers": [
+      "L039-O3"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (038, 039) L - Intro to Immunology I and II - Taylor.pdf, p. 5; transcript 037, 00:43-03:37",
+    "sourceBlock": "L038/039",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 4,
+      "why_wrong": "It reverses the described clinical pattern, assigning encapsulated bacterial clearance to cytotoxic T cells rather than to the antibody-mediated opsonization the stem describes."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L040-01",
+    "topic": "Immunology",
+    "src": "M",
+    "stem": "A Gram-positive bacterium's peptidoglycan cell wall is directly exposed to lysozyme, an enzyme found in tears and saliva that hydrolyzes peptidoglycan. A Gram-negative bacterium is exposed to the same lysozyme concentration, but its peptidoglycan layer sits beneath an outer membrane. What is the expected effect of this lysozyme exposure on each bacterium?",
+    "options": [
+      "Neither bacterium is affected, because lysozyme functions only in blood, not in mucosal secretions",
+      "The Gram-negative bacterium is more affected, because its thinner peptidoglycan is more easily hydrolyzed once exposed",
+      "The Gram-positive wall is degraded and lysis is likely; the Gram-negative peptidoglycan is shielded by its outer membrane and is not directly accessible to lysozyme",
+      "The Gram-positive wall is unaffected, because its peptidoglycan is located inside the cell rather than in an exposed wall layer",
+      "Both bacteria are equally lysed, because lysozyme targets peptidoglycan in all bacteria regardless of accessibility"
+    ],
+    "optionExplanations": [
+      "The stem specifies lysozyme is present in tears and saliva, mucosal secretions where it is a recognized chemical barrier, contradicting a claim that it acts only in blood.",
+      "Gram-negative peptidoglycan is indeed thinner, but the outer membrane prevents lysozyme from ever reaching it in an intact cell, so 'once exposed' does not apply to this scenario.",
+      "Lysozyme hydrolyzes peptidoglycan on contact; the Gram-positive wall's thick, exposed peptidoglycan is directly accessible, but the Gram-negative outer membrane physically blocks lysozyme from reaching its thinner peptidoglycan layer underneath.",
+      "Gram-positive peptidoglycan forms a thick, exposed outer wall layer, not an intracellular structure, so this misstates its location and would incorrectly predict resistance to a wall-degrading enzyme.",
+      "This ignores the outer membrane's role in physically restricting lysozyme access to peptidoglycan in Gram-negative organisms, treating accessibility as irrelevant when it is the key structural difference described."
+    ],
+    "answer": 2,
+    "rationale": "Lysozyme hydrolyzes bacterial peptidoglycan, especially in Gram-positive organisms whose thick peptidoglycan wall is directly exposed at the cell surface. Gram-negative bacteria have an outer membrane covering a thinner peptidoglycan layer, which physically restricts lysozyme's access, making them comparatively resistant to this particular chemical barrier despite having less peptidoglycan overall.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "lysozyme",
+      "chemical barriers",
+      "Gram-positive vs Gram-negative wall"
+    ],
+    "covers": [
+      "L040-O2"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (040, 041) L - Innate Immunology I and II - Taylor.pdf, p. 2; transcript 026, 08:32-08:54 and 17:03-17:23",
+    "sourceBlock": "L040/041",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "It reverses the accessibility relationship: the outer membrane, not peptidoglycan thickness alone, is what actually blocks lysozyme from reaching Gram-negative peptidoglycan."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L040-02",
+    "topic": "Immunology",
+    "src": "M",
+    "stem": "A macrophage's TLR4 gene is nonfunctional, but all other TLRs and downstream NF-κB signaling components are normal. In a complement-free assay, this macrophage is exposed only to purified LPS. Investigators measure its NF-κB-dependent pro-inflammatory cytokine output and then test the IL-8-dependent neutrophil-recruiting activity of its conditioned medium. Compared with a macrophage with intact TLR4, what happens to these two readouts?",
+    "options": [
+      "Cytokine production is normal, and recruitment is unaffected, because intact downstream NF-κB acts without needing upstream TLR4",
+      "Neither cytokine production nor recruitment is affected, because TLR2 substitutes for TLR4 in detecting this bacterium's LPS",
+      "Both cytokine production and recruitment increase, because losing TLR4 removes a negative regulator of NF-κB",
+      "Cytokine production and recruitment are both reduced, because TLR4 is required to recognize LPS and no other TLR ligand is present",
+      "Cytokine production is reduced, but recruitment is unaffected because C5a can recruit neutrophils when complement is present"
+    ],
+    "optionExplanations": [
+      "Downstream NF-κB machinery cannot activate on its own; it must first be triggered by an upstream receptor recognizing its ligand, and TLR4 is the only receptor here able to do that for LPS.",
+      "TLR2 recognizes peptidoglycan, not LPS; it cannot substitute for TLR4 in recognizing this particular ligand, so signaling in response to an LPS-only stimulus is not restored.",
+      "TLR4 signaling activates NF-κB rather than restraining it, so removing TLR4 should reduce, not disinhibit, this activation pathway.",
+      "TLR4 is the receptor for the purified LPS used here. Loss of TLR4 therefore reduces NF-κB-dependent cytokine output and the IL-8-dependent neutrophil-recruiting activity generated by that macrophage.",
+      "C5a can recruit neutrophils in vivo when complement is activated, but this assay is explicitly complement-free and measures recruitment driven by the macrophage's IL-8-containing conditioned medium, so that parallel route cannot preserve this readout."
+    ],
+    "answer": 3,
+    "rationale": "TLR4 specifically recognizes LPS and activates NF-κB-dependent production of pro-inflammatory cytokines, including the IL-8 signal that recruits neutrophils. In this purified-LPS, complement-free assay, loss of TLR4 removes the relevant upstream trigger while leaving downstream machinery intact. The macrophage therefore produces less cytokine and its conditioned medium has less IL-8-dependent neutrophil-recruiting activity. Complement-derived C5a can recruit neutrophils in vivo, but that biologically real parallel route is excluded from this assay.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "TLR4",
+      "PRR signaling",
+      "NF-κB",
+      "neutrophil recruitment"
+    ],
+    "covers": [
+      "L040-O3",
+      "L040-O4"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (040, 041) L - Innate Immunology I and II - Taylor.pdf, pp. 3-4",
+    "sourceBlock": "L040/041",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "It incorrectly substitutes TLR2, whose ligand is peptidoglycan, for TLR4, whose ligand is LPS, as if the two receptors were interchangeable for this stimulus."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L040-03",
+    "topic": "Immunology",
+    "src": "M",
+    "stem": "A patient develops an acute bacterial infection. IL-6 released locally by activated macrophages reaches the liver via the bloodstream. Compared with before the infection, what happens sequentially to (a) hepatic C-reactive protein (CRP) production, (b) the rate at which red blood cells settle out of suspension (erythrocyte sedimentation rate), and (c) opsonization of the bacteria?",
+    "options": [
+      "CRP production rises, the sedimentation rate decreases, and opsonization improves",
+      "CRP production rises and the sedimentation rate increases, but opsonization is unaffected because CRP functions only as a diagnostic marker, not as a functional opsonin",
+      "CRP production is unaffected because IL-6 acts only on immune cells, not hepatocytes, so the sedimentation rate and opsonization are also unchanged",
+      "CRP production rises, but the sedimentation rate decreases because increased plasma protein raises viscosity and slows red cell settling, while opsonization improves",
+      "CRP production rises, the sedimentation rate increases, and opsonization of the bacteria improves"
+    ],
+    "optionExplanations": [
+      "The well-established relationship is that increased acute-phase proteins cause red cells to aggregate and settle faster, increasing (not decreasing) the sedimentation rate; this reverses that direction.",
+      "CRP has a dual role: it is a clinically useful inflammation marker and it also functions directly as an opsonin that binds bacterial surfaces, so treating it as marker-only omits its established functional role in phagocyte-mediated clearance.",
+      "This denies the IL-6-to-liver signal stated directly in the stem, which is the defining feature of the acute-phase response, and its hepatocyte target is well established for CRP induction.",
+      "This introduces a viscosity-based mechanism to argue for a slower sedimentation rate, but the acute-phase response's actual effect is increased red cell aggregation that speeds, rather than slows, sedimentation.",
+      "IL-6 signals the liver to sharply increase CRP production; the resulting rise in circulating acute-phase proteins promotes red cell aggregation, increasing the sedimentation rate, and CRP itself binds bacterial surfaces to function as an opsonin, improving phagocyte-mediated clearance."
+    ],
+    "answer": 4,
+    "rationale": "IL-6 signals hepatocytes to increase multiple acute-phase proteins, including CRP and fibrinogen. Fibrinogen is the principal acute-phase driver of rouleaux formation, so red cells aggregate and settle faster, raising the erythrocyte sedimentation rate. Separately, CRP binds bacterial surfaces as a functional opsonin and enhances phagocytosis. Thus CRP production, ESR, and bacterial opsonization all increase, but by related rather than identical mechanisms.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "acute-phase response",
+      "CRP",
+      "ESR",
+      "opsonization"
+    ],
+    "covers": [
+      "L040-O4"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (040, 041) L - Innate Immunology I and II - Taylor.pdf, p. 5",
+    "sourceBlock": "L040/041",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 3,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "It reverses the direction of the sedimentation-rate change, which increases (not decreases) as acute-phase proteins promote red cell aggregation."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L040-04",
+    "topic": "Immunology",
+    "src": "M",
+    "stem": "A patient clears a first infection and forms pathogen-specific memory B cells. During that infection and again six months later, investigators isolate fresh macrophages and measure their response to the identical bacterial antigen before antibody can contribute. The retained memory B cells are tested separately on re-exposure. Compared with the first encounter, how should the second macrophage response and the memory B-cell response differ?",
+    "options": [
+      "Macrophage response is unchanged; memory B cells respond faster and stronger",
+      "Macrophage response is unchanged; memory B cells also respond unchanged",
+      "Macrophage response strengthens; memory B cells respond unchanged",
+      "Macrophage response strengthens; memory B cells also respond faster and stronger",
+      "Macrophage response weakens; memory B cells respond faster and stronger"
+    ],
+    "optionExplanations": [
+      "Innate responses are germline-encoded and lack pathogen-specific memory, so macrophage strength and speed stay essentially the same across repeated exposures; adaptive memory B cells, by contrast, retain pathogen-specific memory and mount a faster, stronger response on re-exposure.",
+      "This correctly predicts an unchanged innate response but incorrectly denies memory B cells any improved response, contradicting the defining feature of immunological memory.",
+      "Innate responses do not strengthen with repeated exposure to the same pathogen, since they lack pathogen-specific memory; this reverses that property.",
+      "This incorrectly attributes memory-based strengthening to the innate macrophage response, when only the adaptive memory B cell response should show that improvement.",
+      "There is no basis for the innate response to weaken with repeated exposure; germline-encoded recognition does not degrade with use."
+    ],
+    "answer": 0,
+    "rationale": "Innate immunity is hard-wired and lacks pathogen-specific memory, so its response strength and speed remain essentially unchanged across repeated exposures to the same pathogen. Adaptive immunity, in contrast, generates long-lived memory B cells after a first exposure, producing a markedly faster and stronger secondary response, unlike the innate pattern.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "innate vs adaptive memory"
+    ],
+    "covers": [
+      "L040-O1"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (038, 039) L - Intro to Immunology I and II - Taylor.pdf, p. 5",
+    "sourceBlock": "L040/041",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "It correctly predicts the unchanged innate response but incorrectly denies memory B cells any improved response on re-exposure."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L041-01",
+    "topic": "Immunology",
+    "src": "M",
+    "stem": "Following helminth exposure, a tissue biopsy shows eosinophils releasing granule contents, including major basic protein and peroxidase, into the narrow extracellular space between a large multicellular parasite and adjacent healthy epithelium. The parasite is too large for any single cell to ingest. What happens to helminth viability and to the integrity of the nearby epithelium?",
+    "options": [
+      "Neither the helminth nor the epithelium is affected, because eosinophils require direct receptor-mediated cell contact rather than granule release to act on a target",
+      "The helminth is killed by the extracellular toxic granule proteins, and the adjacent epithelium is also damaged because the released products are not pathogen-specific",
+      "The helminth is killed by phagocytosis, since eosinophils are professional phagocytes for large parasites, and the epithelium is spared because phagocytosis only affects the ingested target",
+      "The helminth is unaffected because eosinophil granules act only against Gram-negative bacteria, and the epithelial damage results from an unrelated process",
+      "The helminth is killed, but the epithelium is protected because eosinophil granule release is precisely targeted only to the parasite surface"
+    ],
+    "optionExplanations": [
+      "This mischaracterizes the described mechanism, which is extracellular granule release of toxic proteins onto the parasite surface, not a contact-receptor-dependent process.",
+      "Because the parasite is too large to phagocytose, eosinophils instead release toxic granule contents extracellularly onto its surface, killing it; this release is not targeted only to the parasite, so nearby healthy epithelial cells exposed to the same products are also damaged.",
+      "The stem states the parasite is too large to be phagocytosed; eosinophil killing of helminths occurs through extracellular granule release rather than ingestion, so a phagocytosis-based explanation does not fit.",
+      "Eosinophil granule contents such as major basic protein are specifically directed at helminths, not Gram-negative bacteria, so this misassigns the target specificity of this granule-release mechanism.",
+      "Extracellular release of toxic granule contents is not restricted only to the intended target; nearby healthy tissue exposed to the same released products can also be damaged, which is why this mechanism is described as causing collateral injury."
+    ],
+    "answer": 1,
+    "rationale": "Eosinophils use major basic protein and peroxidase released extracellularly to kill large, multicellular helminths that cannot be phagocytosed. Because this release is not restricted to the parasite surface alone, nearby healthy tissue exposed to the same toxic products can also be damaged, which is the mechanism behind eosinophil-associated tissue injury seen in some allergic and parasitic conditions.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "eosinophils",
+      "major basic protein",
+      "helminth defense"
+    ],
+    "covers": [
+      "L041-O5"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (040, 041) L - Innate Immunology I and II - Taylor.pdf, pp. 7-8",
+    "sourceBlock": "L040/041",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "It claims phagocytosis is the killing mechanism despite the stem explicitly stating the parasite is too large to be ingested by any single cell."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L041-02",
+    "topic": "Immunology",
+    "src": "M",
+    "stem": "Patient A has a mutation that eliminates mannose-binding lectin (MBL) function, but the alternative and classical complement pathways activate C3 normally. Patient B has a mutation that eliminates complement C3 entirely. How should the expected severity and infection pattern compare between these two patients?",
+    "options": [
+      "Patient A has severe disease; Patient B also has severe disease, but specifically from recurrent Neisseria infections rather than pyogenic infections",
+      "Both patients have mild disease, because hepatic complement synthesis compensates for any single missing complement protein",
+      "Patient A has mild or unaffected complement function, because the alternative and classical pathways still activate C3; Patient B has severe recurrent pyogenic infections, because no pathway can activate C3 at all",
+      "Patient A has severe disease, because the lectin pathway is the only route to activate C3; Patient B has mild disease, because C5 can substitute for the missing C3",
+      "Both patients have identical, severe disease, because any complement gene mutation abolishes the entire complement cascade"
+    ],
+    "optionExplanations": [
+      "Recurrent Neisseria infection is the classic presentation of a late (MAC-forming) complement defect, not of a C3 deficiency, which instead impairs opsonization broadly and causes pyogenic infections; this misassigns the clinical pattern.",
+      "There is no compensatory synthesis mechanism for a specific missing protein; C3 is itself the missing protein in Patient B, so hepatic synthesis of other complement components cannot substitute for its absence.",
+      "MBL loss removes only the lectin pathway's route to activating C3, but the alternative and classical pathways remain intact and can still activate C3, so opsonization is largely preserved; C3 itself is the shared convergence point for all three pathways, so its complete loss removes opsonization entirely, producing severe recurrent pyogenic bacterial infections.",
+      "The lectin pathway is only one of three parallel routes that converge on C3 activation, not the sole route, and there is no described mechanism by which C5 substitutes for missing C3 activity.",
+      "This overgeneralizes; losing one of three parallel initiating pathways (MBL/lectin) is not equivalent to losing the shared downstream convergence point (C3) that all three pathways depend on."
+    ],
+    "answer": 2,
+    "rationale": "All three complement pathways (alternative, lectin, classical) converge on activating C3, so losing one upstream initiator such as MBL still leaves two other routes to activate C3, generally producing mild disease. C3 itself is the shared checkpoint for all three pathways; its complete loss eliminates opsonization through every route, producing severe, recurrent pyogenic bacterial infections.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "complement pathways",
+      "C3",
+      "MBL deficiency"
+    ],
+    "covers": [
+      "L041-O6"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (040, 041) L - Innate Immunology I and II - Taylor.pdf, pp. 9, 12",
+    "sourceBlock": "L040/041",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "It assigns the classic late-complement-defect (Neisseria-specific) clinical pattern to C3 deficiency, when C3 loss instead produces broad opsonization failure and pyogenic infection."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L041-03",
+    "topic": "Immunology",
+    "src": "M",
+    "stem": "A child has recurrent bacterial infections of the skin and mucous membranes with little to no pus formation at infected sites, but peripheral blood neutrophil counts are markedly elevated rather than low. Which innate immunodeficiency is best supported, and what do the peripheral neutrophilia and absent pus together indicate about neutrophil function?",
+    "options": [
+      "Sporadic congenital neutropenia; impaired granulocyte production leaves too few neutrophils in blood or tissue to form an effective response",
+      "Primary C3 deficiency; impaired opsonization limits phagocytic uptake even though neutrophils can still leave the bloodstream",
+      "MBL deficiency; loss of lectin-pathway activation reduces one route to opsonization while the alternative and classical pathways remain intact",
+      "Leukocyte adhesion deficiency; failed integrin-mediated adhesion prevents neutrophils from leaving the bloodstream, so they accumulate in blood instead of migrating into infected tissue to form pus",
+      "Chronic granulomatous disease; neutrophils migrate and phagocytose normally, but failed NADPH oxidase activity prevents respiratory-burst killing and promotes granuloma formation"
+    ],
+    "optionExplanations": [
+      "Sporadic congenital neutropenia causes low circulating neutrophil counts due to a production defect, the opposite of the elevated count stated in the stem, so this diagnosis does not fit the given blood count.",
+      "C3 deficiency impairs opsonization and phagocytic efficiency after neutrophils have reached the infection site; it does not explain a failure of neutrophils to migrate into tissue or their accumulation in blood, which are the specific findings described.",
+      "MBL deficiency is typically mild because the alternative and classical pathways still activate C3, and it does not produce the described migration-failure phenotype (accumulation of neutrophils in blood with no pus at infected sites).",
+      "In leukocyte adhesion deficiency, defective adhesion molecules prevent neutrophils from adhering to and crossing the vessel wall (extravasation); unable to reach infected tissue, they instead accumulate in the blood (explaining neutrophilia) and cannot form pus, which is composed of neutrophils that reached and died at the infection site.",
+      "Chronic granulomatous disease is a plausible killing-defect competitor because neutrophils migrate and phagocytose but cannot generate a respiratory burst. That intact migration does not explain the paired clue of neutrophils accumulating in blood while failing to enter infected tissue and form pus."
+    ],
+    "answer": 3,
+    "rationale": "Leukocyte adhesion deficiency results from defective adhesion molecules (such as the β2-integrin CD18) required for neutrophils to firmly adhere to and cross the vessel wall into tissue. Because neutrophils cannot extravasate, they remain abundant in the bloodstream (neutrophilia) while failing to reach infected tissue, so essentially no pus, which is composed of neutrophils that migrated to and died at the site of infection, forms despite ongoing infection.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "leukocyte adhesion deficiency",
+      "innate immunodeficiency differential"
+    ],
+    "covers": [
+      "L041-O8"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (040, 041) L - Innate Immunology I and II - Taylor.pdf, p. 11",
+    "sourceBlock": "L040/041",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 3,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 4,
+      "why_wrong": "It correctly describes CGD as a post-phagocytic ROS-killing defect, but intact neutrophil migration in CGD does not explain the paired finding of blood neutrophilia with little to no neutrophil-derived pus in infected tissue."
+    },
+    "holdout": false
+  },
+  {
+    "id": "MQG-SEP12-L041-04",
+    "topic": "Immunology",
+    "src": "M",
+    "stem": "Early in infection by a bacterium whose surface does not bind mannose-binding lectin, complement C3b is already bound to the unprotected bacterial surface before pathogen-specific antibody appears. Which pathway most directly explains this deposition, and would it still occur in a patient with congenital agammaglobulinemia?",
+    "options": [
+      "The classical pathway; deposition would still occur without antibody, because C1 can bind bacterial surfaces directly",
+      "The classical pathway; deposition would not occur in the agammaglobulinemic patient, because no antibody is present to initiate C1 binding",
+      "The lectin pathway; deposition would still occur without antibody because mannose-binding lectin can bind this bacterial surface",
+      "The alternative pathway; deposition would not occur in the agammaglobulinemic patient, because complement protein production itself depends on functioning B cells",
+      "The alternative pathway; deposition would still occur in the agammaglobulinemic patient, because this pathway is initiated by C3b binding directly to unprotected microbial surfaces and does not require antibody"
+    ],
+    "optionExplanations": [
+      "The classical pathway requires C1 binding to antibody that is already bound to the pathogen surface, not direct C1-to-bacterium binding, so it cannot account for antibody-independent C3b deposition.",
+      "This correctly identifies the classical pathway's dependence on antibody, but incorrectly assigns the classical pathway as the source of the described early, antibody-independent C3b deposition, which instead requires an antibody-independent route.",
+      "The lectin pathway is antibody-independent, but it requires MBL binding to an appropriate microbial carbohydrate; the stem explicitly states that this bacterial surface does not bind MBL.",
+      "Complement proteins, including C3, are synthesized by the liver, not by B cells, so a defect in antibody-producing B cells does not impair the availability of complement proteins.",
+      "The alternative pathway begins with low levels of circulating C3b binding spontaneously to unprotected pathogen surfaces, independent of antibody. Because the stem excludes MBL binding, this is the uniquely supported antibody-independent route and it remains functional in agammaglobulinemia."
+    ],
+    "answer": 4,
+    "rationale": "Both the alternative and lectin pathways are antibody-independent, while the classical pathway requires antibody-bound C1. Here, the bacterial surface does not bind MBL, excluding lectin-pathway initiation. Spontaneously generated C3b can still bind the unprotected bacterial surface and amplify through the alternative pathway. Because that pathway does not require antibody, the same deposition can occur in agammaglobulinemia.",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "concepts": [
+      "alternative complement pathway",
+      "antibody-independent opsonization"
+    ],
+    "covers": [
+      "L041-O6"
+    ],
+    "course": "OST520",
+    "source": "sept12-practice",
+    "sourceRef": "OST520 (040, 041) L - Innate Immunology I and II - Taylor.pdf, pp. 9-10",
+    "sourceBlock": "L040/041",
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "closestDistractor": {
+      "index": 3,
+      "why_wrong": "It misassigns complement protein synthesis to B cells rather than to the liver, incorrectly predicting that antibody deficiency would impair complement protein availability itself."
+    },
+    "holdout": false
   }
 ]
