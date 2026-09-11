@@ -48,23 +48,23 @@
   "id": "MQG-SEP12-L036-02",
   "topic": "Microbiology",
   "src": "M",
-  "stem": "A +ssRNA virus's genome is translated as a single large polyprotein that a viral protease must cleave into individual functional proteins, including capsid proteins and genome-replication enzymes. A new drug irreversibly inactivates only this viral protease immediately after entry. Compared with an untreated infection, what happens to capsid protein production and to genome replication?",
+  "stem": "A +ssRNA virus's genome is translated as a single large polyprotein that a viral protease must cleave into individual functional proteins, including capsid proteins and genome-replication enzymes. A new drug irreversibly inactivates only this viral protease immediately after entry. Compared with an untreated infection, what happens to the availability of mature functional capsid protein and to genome replication?",
   "options": [
-   "Capsid protein production increases while genome replication decreases",
-   "Capsid protein production decreases and genome replication decreases",
-   "Capsid protein production decreases, but genome replication is unaffected",
-   "Capsid protein production is unaffected, but genome replication decreases",
-   "Neither capsid protein production nor genome replication is affected"
+   "Mature functional capsid availability increases while genome replication decreases",
+   "Mature functional capsid availability decreases and genome replication decreases",
+   "Mature functional capsid availability decreases, but genome replication is unaffected",
+   "Mature functional capsid availability is unaffected, but genome replication decreases",
+   "Neither mature functional capsid availability nor genome replication is affected"
   ],
   "optionExplanations": [
-   "There is no mechanism by which blocking a required processing enzyme would increase production of one downstream protein class while decreasing another that depends on the same cleavage step.",
-   "Both capsid proteins and replication enzymes are generated only after the single polyprotein is cleaved; blocking the protease prevents release of functional copies of either protein class, so both outputs fall.",
+   "There is no mechanism by which blocking a required processing enzyme would increase availability of one mature downstream protein class while decreasing another that depends on the same cleavage step.",
+   "Translation of the uncleaved polyprotein may continue, but blocking the protease prevents release of mature functional capsid proteins and replication enzymes, so functional capsid availability and genome replication both fall.",
    "This assumes replication enzymes are released independently of protease cleavage, but the stem states they are part of the same uncleaved polyprotein, so they should be disabled along with capsid proteins.",
-   "This assumes capsid proteins are released independently of protease cleavage, but the stem states capsid proteins are also part of the uncleaved polyprotein, so they should be disabled along with replication enzymes.",
+   "This assumes mature capsid proteins are released independently of protease cleavage, but their sequences remain trapped in the uncleaved polyprotein along with the replication enzymes.",
    "This treats protease cleavage as unnecessary for generating functional proteins, contradicting the stem's statement that individual functional proteins only exist after this specific cleavage step."
   ],
   "answer": 1,
-  "rationale": "For many +ssRNA viruses, initial translation produces one large polyprotein, and a viral protease cleaves it into individually functional proteins, including capsid proteins and the enzymes needed for genome replication. Irreversibly blocking that protease prevents this cleavage, so neither functional capsid protein nor functional replication machinery is released, and both capsid production and genome replication fall.",
+  "rationale": "For many +ssRNA viruses, initial translation produces one large polyprotein, and a viral protease cleaves it into individually functional proteins, including capsid proteins and the enzymes needed for genome replication. Irreversibly blocking that protease does not necessarily stop translation of the uncleaved polyprotein, but it prevents release of mature functional capsid protein and functional replication machinery. Mature capsid availability and genome replication therefore both fall.",
   "type": "mcq",
   "context": "",
   "unit": "UE2",
@@ -305,7 +305,7 @@
   ],
   "course": "OST520",
   "source": "sept12-practice",
-  "sourceRef": "OST520 (038, 039) L - Intro to Immunology I and II - Taylor.pdf, p. 3",
+  "sourceRef": "OST520 (038, 039) L - Intro to Immunology I and II - Taylor.pdf, p. 3; transcript 032, 06:45-07:02",
   "sourceBlock": "L038",
   "applicationLevel": "recall",
   "reasoningOrder": 1,
@@ -321,23 +321,23 @@
   "id": "MQG-SEP12-L038-02",
   "topic": "Immunology",
   "src": "M",
-  "stem": "A patient with no prior history of immune disease begins a chronic immunosuppressive medication for an unrelated condition. Months later, they develop recurrent infections with organisms that rarely cause disease in healthy people. No autoantibodies or self-tissue damage are found. Which condition is best supported, and how does it differ from the excluded alternative?",
+  "stem": "A patient had normal infection frequency through adulthood before beginning a medication that blocks NF-\u03baB activation in several leukocyte populations. Months later, they develop recurrent opportunistic infections, while testing shows neither autoantibodies nor inflammatory injury to self-tissues. Which classification and failed immune function best explain the new pattern?",
   "options": [
-   "Primary immunodeficiency; opportunistic infection reflects an inborn defect",
-   "Autoimmunity; any immune dysfunction reflects lost self-tolerance",
-   "Secondary immunodeficiency; the defect is acquired after starting the drug",
-   "Mixed primary and secondary disease present from birth and drug exposure",
-   "Normal age-related decline; unrelated to the new medication"
+   "Primary immunodeficiency; an inherited failure of pathogen elimination",
+   "Autoimmunity; an acquired failure to maintain tolerance to self",
+   "Secondary immunodeficiency; an acquired failure of pathogen elimination",
+   "Mixed immunodeficiency and autoimmunity; simultaneous failure of pathogen elimination and self-tolerance",
+   "Normal immune aging; preserved pathogen elimination with reduced self-tolerance"
   ],
   "optionExplanations": [
-   "Primary immunodeficiencies are inborn and present from birth; this patient's defect began only after starting a specific drug later in life, which instead fits an acquired, secondary cause.",
-   "The clinical picture is opportunistic infection with no autoantibodies or self-tissue attack, which reflects failed pathogen detection or elimination, not the failed self-tolerance that defines autoimmunity.",
-   "The timing (onset after starting an immunosuppressive drug, not present since birth) and the pattern (opportunistic infection, not autoantibodies) both fit an acquired, secondary immunodeficiency.",
-   "This combines two distinct mechanisms without support; the stem gives no evidence of a defect predating the drug, only one that appeared afterward.",
-   "This ignores the clear temporal link to a specific immunosuppressive drug stated in the stem, attributing the new infections to nonspecific aging instead."
+   "The infection phenotype fits failed pathogen elimination, but normal health before an acquired leukocyte-signaling blockade argues against an inherited primary defect.",
+   "The acquired timing fits, but opportunistic infection without autoantibodies or self-tissue injury indicates impaired pathogen defense rather than loss of self-tolerance.",
+   "Normal prior immune function followed by opportunistic infection after an acquired leukocyte-signaling blockade identifies a secondary immunodeficiency caused by impaired pathogen detection or elimination.",
+   "The stem supports failed pathogen defense but supplies no evidence of self-tolerance failure, so combining immunodeficiency with autoimmunity adds an unsupported mechanism.",
+   "The new opportunistic infections show that pathogen elimination is not preserved, and their onset after a defined signaling blockade is not explained by normal aging."
   ],
   "answer": 2,
-  "rationale": "Secondary immunodeficiencies are acquired during life, including from immunosuppressive drugs, and increase susceptibility to opportunistic infection because pathogen detection or elimination is impaired. This differs from autoimmunity, where loss of tolerance causes attack on self-tissue, and from primary immunodeficiency, which is an inborn defect present from birth rather than one that appears after a specific acquired exposure.",
+  "rationale": "The student must combine the acquired onset after leukocyte signaling was blocked with the opportunistic-infection phenotype. Together they indicate a secondary immunodeficiency caused by impaired pathogen detection or elimination. Autoimmunity would instead produce loss of self-tolerance and self-tissue injury, while a primary immunodeficiency is inherited even when its clinical presentation is delayed.",
   "type": "mcq",
   "context": "",
   "unit": "UE2",
@@ -359,7 +359,7 @@
   "mediaNote": "",
   "closestDistractor": {
    "index": 0,
-   "why_wrong": "It correctly links opportunistic infection to failed pathogen elimination but wrongly assigns an inborn, present-from-birth timing that the stem's drug-onset history contradicts."
+   "why_wrong": "It correctly links opportunistic infection to failed pathogen elimination but wrongly assigns an inherited origin despite normal prior function and onset after an acquired signaling blockade."
   },
   "holdout": false
  },
@@ -502,7 +502,7 @@
   "id": "MQG-SEP12-L039-03",
   "topic": "Immunology",
   "src": "M",
-  "stem": "A patient lacks functional B lymphocytes but has normal T lymphocyte numbers and function. They mount effective cytotoxic clearance of virus-infected cells, but develop recurrent infections from extracellular encapsulated bacteria that are normally cleared after being coated by opsonizing antibodies. Which immune arm is deficient, and why does cell-mediated clearance remain unaffected?",
+  "stem": "A patient lacks functional B lymphocytes. They develop recurrent infections with extracellular encapsulated bacteria, yet CD8+ lymphocytes still clear virus-infected host cells effectively. Which immune arm is deficient, and why is the antiviral clearance preserved?",
   "options": [
    "Both arms are deficient, because the antibody defect responsible for B cell loss is assumed to also impair cytotoxic T cell development",
    "Humoral immunity is deficient, while cell-mediated immunity remains intact because cytotoxic T cell killing does not require antibody-mediated opsonization",
@@ -577,7 +577,7 @@
   ],
   "course": "OST520",
   "source": "sept12-practice",
-  "sourceRef": "OST520 (040, 041) L - Innate Immunology I and II - Taylor.pdf, p. 2",
+  "sourceRef": "OST520 (040, 041) L - Innate Immunology I and II - Taylor.pdf, p. 2; transcript 026, 08:32-08:54 and 17:03-17:23",
   "sourceBlock": "L040",
   "applicationLevel": "mechanism",
   "reasoningOrder": 2,
@@ -593,23 +593,23 @@
   "id": "MQG-SEP12-L040-02",
   "topic": "Immunology",
   "src": "M",
-  "stem": "A macrophage's TLR4 gene is nonfunctional, but all other TLRs and downstream NF-\u03baB signaling components are normal. This macrophage is exposed to a Gram-negative bacterium that expresses LPS but has no flagella and no other TLR ligand accessible at its surface. Compared with a macrophage with intact TLR4 exposed to the same bacterium, what happens to pro-inflammatory cytokine production and to downstream neutrophil recruitment signaling?",
+  "stem": "A macrophage's TLR4 gene is nonfunctional, but all other TLRs and downstream NF-\u03baB signaling components are normal. In a complement-free assay, this macrophage is exposed only to purified LPS. Investigators measure its NF-\u03baB-dependent pro-inflammatory cytokine output and then test the IL-8-dependent neutrophil-recruiting activity of its conditioned medium. Compared with a macrophage with intact TLR4, what happens to these two readouts?",
   "options": [
    "Cytokine production is normal, and recruitment is unaffected, because intact downstream NF-\u03baB acts without needing upstream TLR4",
    "Neither cytokine production nor recruitment is affected, because TLR2 substitutes for TLR4 in detecting this bacterium's LPS",
    "Both cytokine production and recruitment increase, because losing TLR4 removes a negative regulator of NF-\u03baB",
    "Cytokine production and recruitment are both reduced, because TLR4 is required to recognize LPS and no other TLR ligand is present",
-   "Cytokine production is reduced, but recruitment proceeds normally through an independent complement pathway instead"
+   "Cytokine production is reduced, but recruitment is unaffected because C5a can recruit neutrophils when complement is present"
   ],
   "optionExplanations": [
    "Downstream NF-\u03baB machinery cannot activate on its own; it must first be triggered by an upstream receptor recognizing its ligand, and TLR4 is the only receptor here able to do that for LPS.",
    "TLR2 recognizes peptidoglycan, not LPS; it cannot substitute for TLR4 in recognizing this particular ligand, so signaling in response to an LPS-only stimulus is not restored.",
    "TLR4 signaling activates NF-\u03baB rather than restraining it, so removing TLR4 should reduce, not disinhibit, this activation pathway.",
-   "TLR4 is the receptor for LPS; with no flagellin, peptidoglycan, or other ligand present to engage a different TLR, loss of TLR4 removes the only available recognition route for this bacterium, so cytokine production and the neutrophil recruitment signal it would trigger are both reduced.",
-   "The stem provides no complement-activating stimulus, and the neutrophil recruitment pathway in this scenario depends on the cytokine signal that TLR4 signaling would normally generate, not on an independent complement route."
+   "TLR4 is the receptor for the purified LPS used here. Loss of TLR4 therefore reduces NF-\u03baB-dependent cytokine output and the IL-8-dependent neutrophil-recruiting activity generated by that macrophage.",
+   "C5a can recruit neutrophils in vivo when complement is activated, but this assay is explicitly complement-free and measures recruitment driven by the macrophage's IL-8-containing conditioned medium, so that parallel route cannot preserve this readout."
   ],
   "answer": 3,
-  "rationale": "TLR4 specifically recognizes LPS; TLR signaling activates NF-\u03baB, which drives production of pro-inflammatory cytokines (IL-1, IL-6, TNF-\u03b1) that in turn recruit neutrophils. With TLR4 nonfunctional and no other TLR ligand available from this particular bacterium, the macrophage has no route to activate NF-\u03baB, so cytokine production and the downstream neutrophil recruitment signal are both reduced.",
+  "rationale": "TLR4 specifically recognizes LPS and activates NF-\u03baB-dependent production of pro-inflammatory cytokines, including the IL-8 signal that recruits neutrophils. In this purified-LPS, complement-free assay, loss of TLR4 removes the relevant upstream trigger while leaving downstream machinery intact. The macrophage therefore produces less cytokine and its conditioned medium has less IL-8-dependent neutrophil-recruiting activity. Complement-derived C5a can recruit neutrophils in vivo, but that biologically real parallel route is excluded from this assay.",
   "type": "mcq",
   "context": "",
   "unit": "UE2",
@@ -657,7 +657,7 @@
    "IL-6 signals the liver to sharply increase CRP production; the resulting rise in circulating acute-phase proteins promotes red cell aggregation, increasing the sedimentation rate, and CRP itself binds bacterial surfaces to function as an opsonin, improving phagocyte-mediated clearance."
   ],
   "answer": 4,
-  "rationale": "IL-6 signals hepatocytes to sharply increase production of acute-phase proteins, including CRP. This increase in circulating protein promotes red cell aggregation, which raises the erythrocyte sedimentation rate, providing a simple clinical marker of inflammation. Separately, CRP binds directly to bacterial surfaces, acting as a functional opsonin that enhances phagocytosis, so pathogen opsonization improves alongside the rise in CRP and ESR.",
+  "rationale": "IL-6 signals hepatocytes to increase multiple acute-phase proteins, including CRP and fibrinogen. Fibrinogen is the principal acute-phase driver of rouleaux formation, so red cells aggregate and settle faster, raising the erythrocyte sedimentation rate. Separately, CRP binds bacterial surfaces as a functional opsonin and enhances phagocytosis. Thus CRP production, ESR, and bacterial opsonization all increase, but by related rather than identical mechanisms.",
   "type": "mcq",
   "context": "",
   "unit": "UE2",
@@ -688,7 +688,7 @@
   "id": "MQG-SEP12-L040-04",
   "topic": "Immunology",
   "src": "M",
-  "stem": "A patient's macrophages encounter a specific bacterial pathogen for the first time. Six months later, the identical pathogen is encountered again; no antibody is involved in either encounter. Predict how the strength and speed of the second macrophage response should compare with the first, and how a memory B cell response to the same pathogen would instead differ on this second encounter.",
+  "stem": "A patient clears a first infection and forms pathogen-specific memory B cells. During that infection and again six months later, investigators isolate fresh macrophages and measure their response to the identical bacterial antigen before antibody can contribute. The retained memory B cells are tested separately on re-exposure. Compared with the first encounter, how should the second macrophage response and the memory B-cell response differ?",
   "options": [
    "Macrophage response is unchanged; memory B cells respond faster and stronger",
    "Macrophage response is unchanged; memory B cells also respond unchanged",
@@ -732,7 +732,7 @@
   "id": "MQG-SEP12-L041-01",
   "topic": "Immunology",
   "src": "M",
-  "stem": "Following helminth exposure, a tissue biopsy shows eosinophils releasing granule contents (including major basic protein) directly onto the surface of a large multicellular parasite too big for any single cell to ingest, and this release also damages the adjacent healthy epithelium. Compared with before this exposure, what happens to helminth viability and to the integrity of the nearby healthy epithelium?",
+  "stem": "Following helminth exposure, a tissue biopsy shows eosinophils releasing granule contents, including major basic protein and peroxidase, into the narrow extracellular space between a large multicellular parasite and adjacent healthy epithelium. The parasite is too large for any single cell to ingest. What happens to helminth viability and to the integrity of the nearby epithelium?",
   "options": [
    "Neither the helminth nor the epithelium is affected, because eosinophils require direct receptor-mediated cell contact rather than granule release to act on a target",
    "The helminth is killed by the extracellular toxic granule proteins, and the adjacent epithelium is also damaged because the released products are not pathogen-specific",
@@ -762,7 +762,7 @@
   ],
   "course": "OST520",
   "source": "sept12-practice",
-  "sourceRef": "OST520 (040, 041) L - Innate Immunology I and II - Taylor.pdf, p. 6",
+  "sourceRef": "OST520 (040, 041) L - Innate Immunology I and II - Taylor.pdf, pp. 7-8",
   "sourceBlock": "L041",
   "applicationLevel": "mechanism",
   "reasoningOrder": 2,
@@ -826,18 +826,18 @@
   "src": "M",
   "stem": "A child has recurrent bacterial infections of the skin and mucous membranes with little to no pus formation at infected sites, but peripheral blood neutrophil counts are markedly elevated rather than low. Which innate immunodeficiency is best supported, and what do the peripheral neutrophilia and absent pus together indicate about neutrophil function?",
   "options": [
-   "Sporadic congenital neutropenia; low neutrophil hematopoiesis explains the absent pus, but this is inconsistent with the elevated peripheral count described",
-   "Primary C3 deficiency; failed opsonization explains the recurrent infections, but this does not account for the absent pus or the elevated neutrophil count",
-   "MBL deficiency; failed lectin-pathway opsonization explains the recurrent infections, but the generally mild course expected from intact alternative-pathway compensation would not produce neutrophilia or absent pus",
+   "Sporadic congenital neutropenia; impaired granulocyte production leaves too few neutrophils in blood or tissue to form an effective response",
+   "Primary C3 deficiency; impaired opsonization limits phagocytic uptake even though neutrophils can still leave the bloodstream",
+   "MBL deficiency; loss of lectin-pathway activation reduces one route to opsonization while the alternative and classical pathways remain intact",
    "Leukocyte adhesion deficiency; failed integrin-mediated adhesion prevents neutrophils from leaving the bloodstream, so they accumulate in blood instead of migrating into infected tissue to form pus",
-   "Chronic granulomatous disease; failed NADPH oxidase activity explains the absence of pus, but this disease should produce low, not elevated, peripheral neutrophil counts"
+   "Chronic granulomatous disease; neutrophils migrate and phagocytose normally, but failed NADPH oxidase activity prevents respiratory-burst killing and promotes granuloma formation"
   ],
   "optionExplanations": [
    "Sporadic congenital neutropenia causes low circulating neutrophil counts due to a production defect, the opposite of the elevated count stated in the stem, so this diagnosis does not fit the given blood count.",
    "C3 deficiency impairs opsonization and phagocytic efficiency after neutrophils have reached the infection site; it does not explain a failure of neutrophils to migrate into tissue or their accumulation in blood, which are the specific findings described.",
    "MBL deficiency is typically mild because the alternative and classical pathways still activate C3, and it does not produce the described migration-failure phenotype (accumulation of neutrophils in blood with no pus at infected sites).",
    "In leukocyte adhesion deficiency, defective adhesion molecules prevent neutrophils from adhering to and crossing the vessel wall (extravasation); unable to reach infected tissue, they instead accumulate in the blood (explaining neutrophilia) and cannot form pus, which is composed of neutrophils that reached and died at the infection site.",
-   "Chronic granulomatous disease results from a killing defect after neutrophils have already migrated normally and phagocytosed the pathogen; it does not typically cause peripheral neutrophilia, and its hallmark is granuloma formation around organisms that survive phagocytosis, not the migration failure and neutrophilia described here."
+   "Chronic granulomatous disease is a plausible killing-defect competitor because neutrophils migrate and phagocytose but cannot generate a respiratory burst. That intact migration does not explain the paired clue of neutrophils accumulating in blood while failing to enter infected tissue and form pus."
   ],
   "answer": 3,
   "rationale": "Leukocyte adhesion deficiency results from defective adhesion molecules (such as the \u03b22-integrin CD18) required for neutrophils to firmly adhere to and cross the vessel wall into tissue. Because neutrophils cannot extravasate, they remain abundant in the bloodstream (neutrophilia) while failing to reach infected tissue, so essentially no pus, which is composed of neutrophils that migrated to and died at the site of infection, forms despite ongoing infection.",
@@ -861,7 +861,7 @@
   "mediaNote": "",
   "closestDistractor": {
    "index": 4,
-   "why_wrong": "It correctly notes CGD's killing defect but incorrectly predicts low peripheral neutrophil counts, when the described elevated count instead fits a migration/adhesion defect."
+   "why_wrong": "It correctly describes CGD as a post-phagocytic ROS-killing defect, but intact neutrophil migration in CGD does not explain the paired finding of blood neutrophilia with little to no neutrophil-derived pus in infected tissue."
   },
   "holdout": false
  },
@@ -869,23 +869,23 @@
   "id": "MQG-SEP12-L041-04",
   "topic": "Immunology",
   "src": "M",
-  "stem": "Early in a bacterial infection, before any pathogen-specific antibody has been produced, complement C3b is already found bound to the bacterial surface in a patient with normal complement function. Which pathway most directly explains this early C3b deposition, and would the same deposition still occur in a different patient who has congenital agammaglobulinemia (a complete inability to produce antibodies)?",
+  "stem": "Early in infection by a bacterium whose surface does not bind mannose-binding lectin, complement C3b is already bound to the unprotected bacterial surface before pathogen-specific antibody appears. Which pathway most directly explains this deposition, and would it still occur in a patient with congenital agammaglobulinemia?",
   "options": [
    "The classical pathway; deposition would still occur without antibody, because C1 can bind bacterial surfaces directly",
    "The classical pathway; deposition would not occur in the agammaglobulinemic patient, because no antibody is present to initiate C1 binding",
-   "The lectin pathway; deposition would not occur, because mannose-binding lectin is produced only as part of the adaptive immune response",
+   "The lectin pathway; deposition would still occur without antibody because mannose-binding lectin can bind this bacterial surface",
    "The alternative pathway; deposition would not occur in the agammaglobulinemic patient, because complement protein production itself depends on functioning B cells",
    "The alternative pathway; deposition would still occur in the agammaglobulinemic patient, because this pathway is initiated by C3b binding directly to unprotected microbial surfaces and does not require antibody"
   ],
   "optionExplanations": [
    "The classical pathway requires C1 binding to antibody that is already bound to the pathogen surface, not direct C1-to-bacterium binding, so it cannot account for antibody-independent C3b deposition.",
    "This correctly identifies the classical pathway's dependence on antibody, but incorrectly assigns the classical pathway as the source of the described early, antibody-independent C3b deposition, which instead requires an antibody-independent route.",
-   "Mannose-binding lectin is an innate, liver-derived soluble pattern-recognition molecule, not a product of the adaptive immune response, so this misclassifies its origin.",
+   "The lectin pathway is antibody-independent, but it requires MBL binding to an appropriate microbial carbohydrate; the stem explicitly states that this bacterial surface does not bind MBL.",
    "Complement proteins, including C3, are synthesized by the liver, not by B cells, so a defect in antibody-producing B cells does not impair the availability of complement proteins.",
-   "The alternative pathway begins with low levels of circulating C3b binding spontaneously to unprotected pathogen surfaces, independent of antibody, so it can account for C3b deposition before any pathogen-specific antibody exists and would remain functional even in a patient who cannot make antibody at all."
+   "The alternative pathway begins with low levels of circulating C3b binding spontaneously to unprotected pathogen surfaces, independent of antibody. Because the stem excludes MBL binding, this is the uniquely supported antibody-independent route and it remains functional in agammaglobulinemia."
   ],
   "answer": 4,
-  "rationale": "All three complement pathways converge on C3 activation, but only the alternative pathway is initiated independent of antibody, through spontaneous C3b binding to unprotected microbial surfaces. This explains C3b deposition before any pathogen-specific antibody exists, and because it does not require antibody, it remains functional even in a patient with agammaglobulinemia, unlike the classical pathway, which strictly requires bound antibody to activate C1.",
+  "rationale": "Both the alternative and lectin pathways are antibody-independent, while the classical pathway requires antibody-bound C1. Here, the bacterial surface does not bind MBL, excluding lectin-pathway initiation. Spontaneously generated C3b can still bind the unprotected bacterial surface and amplify through the alternative pathway. Because that pathway does not require antibody, the same deposition can occur in agammaglobulinemia.",
   "type": "mcq",
   "context": "",
   "unit": "UE2",
