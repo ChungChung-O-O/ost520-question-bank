@@ -325,43 +325,44 @@
     "id": "MQG-SEP11-L032-01",
     "topic": "Microbiology",
     "src": "M",
-    "stem": "A non-Coccidioides endemic dimorphic fungus is mold in soil at 25 C. Which culture-and-tissue pairing is expected?",
+    "stem": "The same fungal isolate appears as yeast in infected tissue at 37 C and as mold after culture at 25 C with minimal nutrients. Which interpretation best connects the two findings?",
     "options": [
-      "Yeast at 25 C and mold in infected tissue at 37 C",
-      "Mold at 25 C and mold in infected tissue at 37 C",
-      "Mold at 25 C and yeast in infected tissue at 37 C",
-      "Yeast at 25 C and yeast in infected tissue at 37 C",
-      "Pseudohyphae at 25 C and spherules in infected tissue"
+      "An opportunistic yeast acquired a mold form solely because it infected a healthy host",
+      "A true pathogenic dimorphic fungus shifted from parasitic mold to saprophytic yeast",
+      "A true pathogenic dimorphic fungus shifted from parasitic yeast to saprophytic mold",
+      "Coccidioides is required because its parasitic tissue phase is yeast",
+      "The culture is contamination because one fungus cannot express both morphologies"
     ],
     "optionExplanations": [
-      "This reverses the temperature-linked forms: environmental, ambient culture is mold, while infected tissue at body temperature is yeast for the stated fungi.",
-      "The environmental mold form is correct, but tissue at 37 C selects the parasitic yeast form for a non-Coccidioides endemic dimorphic fungus.",
-      "Thermal dimorphism links the soil or ambient 25 C condition to mold and the infected-tissue 37 C condition to yeast.",
-      "Yeast is expected in infected tissue at 37 C, but the environmental 25 C culture condition favors mold rather than yeast.",
-      "Spherules are the exceptional tissue form associated with Coccidioides, which the stem excludes; pseudohyphae are not the required environmental mold form."
+      "The relevant switch is temperature and growth environment, not host immunocompetence. Opportunistic yeasts do not acquire a mold phase merely by infecting a healthy person.",
+      "This reverses both phases. The lecture labels the tissue yeast phase parasitic and the environmental or low-temperature mold phase saprophytic.",
+      "The tissue-to-culture pattern follows thermal dimorphism: a true pathogen is yeast in infected tissue at body temperature and mold in the low-temperature, minimal-nutrient saprophytic phase.",
+      "Coccidioides is the tissue-form exception: the guide identifies spherules with endospores in tissue, rather than the yeast form described in this stem.",
+      "A single thermally dimorphic pathogen can legitimately appear in both morphologies when tissue and culture conditions differ; the paired findings do not require contamination."
     ],
     "answer": 2,
-    "rationale": "Endemic dimorphic fungi change morphology with environment and temperature. In the environmental reservoir or laboratory at about 25 C, they grow as molds. In infected tissue at 37 C, the usual parasitic form is yeast; the stem excludes Coccidioides because its tissue morphology is the exception.",
+    "rationale": "The tissue and culture results are linked by thermal dimorphism. A true pathogenic dimorphic fungus is generally yeast in infected tissue at 37 C, its parasitic phase. When the same organism is cultured at 25 C with minimal nutrients, it returns to the saprophytic mold phase. Thus the differing appearances are a temperature-and-environment-dependent transition, not two organisms.",
     "type": "mcq",
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "thermal dimorphism"
+      "thermal dimorphism",
+      "saprophytic versus parasitic phase"
     ],
     "covers": [
       "L032-O5"
     ],
     "course": "OST520",
     "source": "sept11-practice",
-    "sourceRef": "OST520 (032) L - Fungal Pathogens - Wilkins.docx, paragraphs 236-246",
+    "sourceRef": "OST520 live recording 1_5aok0tts, raw transcript lines 701-713; L032 fungal pathogens guide, Thermal dimorphism.",
     "sourceBlock": "L032",
-    "applicationLevel": "recall",
-    "reasoningOrder": 1,
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
     "requiresMedia": false,
     "mediaNote": "",
     "closestDistractor": {
       "index": 1,
-      "why_wrong": "It misses the tissue-phase conversion to yeast that defines thermal dimorphism for the non-Coccidioides fungi specified."
+      "why_wrong": "It recognizes two phases but reverses the temperature-linked parasitic yeast and saprophytic mold assignments."
     },
     "holdout": false,
     "n": 45
@@ -370,44 +371,44 @@
     "id": "MQG-SEP11-L032-02",
     "topic": "Microbiology",
     "src": "M",
-    "stem": "A new antifungal causes fungal lysis in ordinary medium, but osmotic support rescues growth. Ergosterol concentration and nucleic-acid synthesis remain normal, and membrane permeability remains normal at a nonlytic dose. Which target is most likely?",
+    "stem": "A clinical specimen is initially described as showing mold because it contains long filamentous chains. Higher-power microscopy shows repeated buds and a constricted pinch point between adjacent cells throughout the chains. Which interpretation is most consistent with the finding?",
     "options": [
-      "Lanosterol-to-ergosterol conversion",
-      "Existing membrane ergosterol",
-      "Fungal DNA and RNA synthesis",
-      "1,3-beta-glucan synthesis",
-      "Microtubule assembly"
+      "Septate mold hyphae with chitin-containing cross walls",
+      "Aseptate mold hyphae with sparse cross walls and many nuclei",
+      "A dimorphic pathogen's tissue yeast phase identified solely by temperature",
+      "Rapidly budding yeast forming pseudohyphae with recurrent constrictions",
+      "Mold conidia attached to aerial stalks above vegetative mycelium"
     ],
     "optionExplanations": [
-      "Blocking lanosterol conversion would lower ergosterol and impair membrane synthesis, but the stem states that ergosterol concentration remains normal.",
-      "Normal ergosterol concentration alone does not exclude a polyene that binds existing ergosterol, but normal membrane permeability at a nonlytic dose and osmotic rescue favor wall failure instead.",
-      "Inhibition of nucleic-acid synthesis would impair growth without the characteristic osmotic rescue of a mechanically weakened fungal cell wall.",
-      "Beta-1,3-glucan is a fungal cell-wall component; blocking its synthesis weakens the wall, so osmotic support can prevent lysis while ergosterol remains normal.",
-      "Microtubule inhibition disrupts mitosis, but it does not directly remove the wall polymer whose loss makes cells vulnerable to osmotic lysis."
+      "Septate true hyphae are mold structures with cross walls, but the recurrent buds and constricted junctions in the stem identify pseudohyphae instead.",
+      "Aseptate or coenocytic hyphae have few cross walls and multiple nuclei between septa; they do not explain repeated yeast buds with pinched junctions.",
+      "Thermal dimorphism requires evidence about the organism under different temperature or nutrient conditions. The visible constrictions here directly distinguish pseudohyphae from true hyphae.",
+      "Rapid budding before complete cell separation produces elongated yeast chains with the characteristic pinched constrictions of pseudohyphae.",
+      "Conidia are asexual spores associated with mold reproductive structures. The specimen instead describes a chain of budding cells, not spores on an aerial stalk."
     ],
     "answer": 3,
-    "rationale": "Osmotic rescue points to loss of structural protection against turgor pressure, which is a cell-wall problem. Normal ergosterol concentration excludes impaired ergosterol synthesis but does not by itself exclude a polyene that binds existing ergosterol. However, normal membrane permeability at a nonlytic dose argues against direct membrane damage, while osmotic rescue supports wall-integrity failure. Normal nucleic-acid synthesis excludes antimetabolite action. Echinocandin-like inhibition of 1,3-beta-glucan synthesis best explains the findings.",
+    "rationale": "The sequence is morphology to organism form: repeated buds that have not fully separated create long chains, and the residual pinch points identify pseudohyphae. True mold hyphae can be septate or aseptate, but their cross walls are not the recurrent bud-like constrictions described here. The specimen therefore supports a yeast-derived pseudohyphal form rather than a mold.",
     "type": "mcq",
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "echinocandins",
-      "fungal wall"
+      "pseudohyphae versus true hyphae",
+      "yeast morphology"
     ],
     "covers": [
-      "L032-O7"
+      "L032-O3"
     ],
     "course": "OST520",
     "source": "sept11-practice",
-    "sourceRef": "OST520 (032) L - Fungal Pathogens - Wilkins.docx, paragraphs 354-377",
+    "sourceRef": "OST520 live recording 1_5aok0tts, raw transcript lines 536-563 and 790-801; L032 fungal pathogens guide, Yeasts and molds.",
     "sourceBlock": "L032",
-    "applicationLevel": "mechanism",
+    "applicationLevel": "presentation",
     "reasoningOrder": 2,
     "requiresMedia": false,
     "mediaNote": "",
     "closestDistractor": {
       "index": 0,
-      "why_wrong": "Lanosterol conversion is an azole target and would reduce ergosterol, which the stem explicitly reports as normal."
+      "why_wrong": "Septate hyphae are a real mold morphology, but their cross walls do not account for the stem's repeated budding and pinched junctions."
     },
     "holdout": false,
     "n": 46
@@ -652,45 +653,49 @@
     "n": 32,
     "topic": "Hematology & Physiology",
     "src": "H",
-    "stem": "Which electrolyte panel has the largest anion gap using AG = Na+ - Cl- - HCO3-?",
+    "stem": "An adult with ketoacidosis has pH 7.26, HCO3- 12 mM, pCO2 28 mm Hg, Na+ 140 mM, and Cl- 100 mM. Which interpretation best accounts for these values?",
     "options": [
-      "Na+ 140, Cl- 104, HCO3- 24",
-      "Na+ 140, Cl- 100, HCO3- 20",
-      "Na+ 140, Cl- 110, HCO3- 18",
-      "Na+ 140, Cl- 106, HCO3- 26",
-      "Na+ 140, Cl- 96, HCO3- 18"
+      "High-gap metabolic acidosis with respiratory correction; ventilation replaced the lost bicarbonate",
+      "Normal-gap metabolic acidosis with respiratory compensation; chloride retention explains the gap",
+      "Primary respiratory alkalosis with renal compensation; bicarbonate loss is secondary to low CO2",
+      "Primary respiratory acidosis with renal compensation; CO2 retention produced the low pCO2",
+      "High-gap metabolic acidosis with respiratory compensation; excess organic anions explain the gap"
     ],
     "optionExplanations": [
-      "This panel has AG = 140 - 104 - 24 = 12 mEq/L, which is lower than the largest calculated value.",
-      "This panel has AG = 140 - 100 - 20 = 20 mEq/L, so it is elevated relative to some choices but not the maximum.",
-      "This panel has AG = 140 - 110 - 18 = 12 mEq/L because the high chloride offsets the lower bicarbonate.",
-      "This panel has AG = 140 - 106 - 26 = 8 mEq/L, the smallest value among the listed panels.",
-      "This panel has AG = 140 - 96 - 18 = 26 mEq/L, which is larger than the gaps calculated from every other option."
+      "The high-gap metabolic process is correct, but lowering pCO2 changes the nonprimary respiratory parameter and therefore compensates; ventilation does not restore the primary bicarbonate deficit.",
+      "An AG of 28 is elevated rather than normal. The high gap is explained by unmeasured organic anions as bicarbonate buffers the added acid, not by chloride retention.",
+      "Low pCO2 can be a respiratory alkalosis process, but here low bicarbonate and acidemia identify metabolic acidosis as primary; the low pCO2 moves pH toward normal as compensation.",
+      "Respiratory acidosis requires elevated pCO2 from impaired CO2 escape. This patient instead has low pCO2 and low bicarbonate, with the bicarbonate abnormality driving acidemia.",
+      "The low pH and low bicarbonate identify metabolic acidosis. The low pCO2 is the opposite-parameter respiratory compensation, and AG = 140 - 100 - 12 = 28 indicates excess unmeasured organic anions from ketoacidosis."
     ],
     "answer": 4,
-    "rationale": "The anion gap is calculated separately for each panel. Subtracting chloride and bicarbonate from sodium gives 26 mEq/L for the final panel, the largest amount of unmeasured anions listed.",
+    "rationale": "First, pH 7.26 establishes acidemia. Low HCO3- identifies metabolic acidosis as the primary process, while low pCO2 is an opposite-parameter respiratory response that moves pH toward normal without replacing bicarbonate. The anion gap is 28 mEq/L, so unmeasured anions are elevated. In ketoacidosis, added organic acids consume bicarbonate during buffering and leave conjugate-base anions behind, producing high-gap metabolic acidosis.",
     "type": "mcq",
     "context": "",
     "unit": "UE2",
     "concepts": [
-      "PH8"
+      "acid-base interpretation",
+      "compensation versus correction",
+      "anion gap"
     ],
     "covers": [
+      "PH6",
+      "PH7",
       "PH8"
     ],
     "course": "OST520",
     "source": "sept11-practice",
-    "sourceRef": "OST520 (034) L - Blood pH Regulation - Faner.docx, paragraphs 490-516",
+    "sourceRef": "OST520 live recording 1_00v4ill7, raw transcript lines 418-458 and 604-646; L034 blood pH regulation guide, PH6-PH8.",
     "sourceBlock": "L034",
-    "applicationLevel": "recall",
+    "applicationLevel": "presentation",
     "requiresMedia": false,
     "mediaNote": "",
     "closestDistractor": {
       "index": 1,
-      "why_wrong": "An anion gap of 20 is substantial, but 26 from the final panel is larger."
+      "why_wrong": "It correctly identifies high-gap metabolic acidosis but mistakes respiratory compensation for correction and incorrectly claims that ventilation replaces bicarbonate."
     },
     "holdout": false,
-    "reasoningOrder": 1
+    "reasoningOrder": 3
   },
   {
     "id": "MQG-SEP11-L035-01",

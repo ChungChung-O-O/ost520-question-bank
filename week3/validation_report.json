@@ -25,9 +25,9 @@
     "card:basic": 169,
     "card:cloze": 21,
     "cue:unique_dash_correct": 8,
-    "cue:unique_dash_eligible": 41,
+    "cue:unique_dash_eligible": 42,
     "cue:unique_longest_correct": 53,
-    "cue:unique_longest_eligible": 203,
+    "cue:unique_longest_eligible": 204,
     "level:discrimination": 39,
     "level:mechanism": 82,
     "level:presentation": 84,
@@ -37,9 +37,9 @@
     "pool:holdout": 40,
     "pool:practice": 194,
     "ready:cue:unique_dash_correct": 6,
-    "ready:cue:unique_dash_eligible": 29,
+    "ready:cue:unique_dash_eligible": 30,
     "ready:cue:unique_longest_correct": 42,
-    "ready:cue:unique_longest_eligible": 150,
+    "ready:cue:unique_longest_eligible": 151,
     "ready:level:discrimination": 19,
     "ready:level:mechanism": 66,
     "ready:level:presentation": 64,
@@ -73,11 +73,11 @@
     ]
   },
   "cue_rates": {
-    "unique_longest_correct": 0.261,
-    "unique_dash_correct": 0.195
+    "unique_longest_correct": 0.26,
+    "unique_dash_correct": 0.19
   },
   "ready_cue_rates": {
-    "unique_longest_correct": 0.28,
-    "unique_dash_correct": 0.207
+    "unique_longest_correct": 0.278,
+    "unique_dash_correct": 0.2
   }
 }
