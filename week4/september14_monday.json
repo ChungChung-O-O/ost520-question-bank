@@ -1,0 +1,1405 @@
+[
+ {
+  "topic": "Hematology & Physiology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L043",
+  "sourceRef": "OST520 (043) L - WBCs and Platelets - Schwartz.pdf, pp. 19, 22; OST520 (045) L - CBC - Schwartz.pdf, pp. 43, 45-46; transcript 048 (L043), 16:05-17:43",
+  "covers": [
+   "L043-O4",
+   "L043-O5",
+   "L045-O2"
+  ],
+  "concepts": [
+   "neutrophil-pool-shifts",
+   "left-shift"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "A competitive rower has a total WBC of 7,200/µL at rest and 14,100/µL twenty minutes after finishing a maximal-effort race; her peripheral smear at both time points shows only mature segmented neutrophils. Separately, a man with two days of bacterial pneumonia has a total WBC of 14,400/µL, and his smear shows segmented neutrophils together with band forms and occasional metamyelocytes. Which statement best accounts for the difference between these two leukocytoses?",
+  "rationale": "Two different mechanisms raise a neutrophil count. Movement from the marginating pool, where cells are attached to vessel endothelium and are not sampled by the CBC, into the circulating pool happens within minutes and is what the lecture attributes to vigorous exercise and catecholamines. Marrow release ahead of schedule, driven by infection, delivers band forms and metamyelocytes to the blood, which is the lecture's definition of a left shift. The discriminating evidence is the smear, and each patient is assigned by what is positively present.",
+  "id": "OQ4-L043-C1A",
+  "options": [
+   "Both rises come from neutrophils detaching from vascular endothelium, and the band forms are an incidental finding of infection unrelated to the added cells.",
+   "The rower's rise comes from marrow release of cells ahead of schedule, while the pneumonia patient's comes from neutrophils detaching from vascular endothelium.",
+   "The rower's rise comes from neutrophils detaching from vascular endothelium, while the pneumonia patient's comes from marrow release of cells ahead of schedule.",
+   "Both rises come from increased granulopoiesis, and the rower's marrow simply responded faster because catecholamines accelerate progenitor cell division.",
+   "The rower's rise comes from prolonged neutrophil survival in the circulation, while the pneumonia patient's comes from neutrophils detaching from vascular endothelium."
+  ],
+  "optionExplanations": [
+   "Demargination is the supported reading for the rower, but treating the band forms as incidental contradicts the source, which defines immature forms appearing in blood as a left shift, that is, marrow release ahead of schedule. The pneumonia patient's smear is positive evidence of a second mechanism, not background noise.",
+   "Saying the rower's rise comes from marrow release inverts the evidence: the immature forms that mark release ahead of schedule are present in the pneumonia patient and absent in the rower, and detachment from endothelium cannot place marrow-restricted cells into the circulation.",
+   "The lecture attributes the rapid rise seen with vigorous exercise and catecholamines to neutrophils detaching from vascular endothelium, that is, movement from the marginating pool into the circulating pool. The pneumonia patient's band forms and metamyelocytes are cells normally confined to marrow, and the lecture defines their appearance in blood as a left shift, meaning release ahead of schedule. Each leukocytosis is assigned by its own positive evidence rather than by ruling the other out.",
+   "Granulopoiesis is new production from progenitors and takes days; no acceleration of progenitor division adds cells to blood within twenty minutes. Rapid mobilization of neutrophils that are already mature is a different process from new production, and the lecture attributes the exercise and catecholamine response specifically to the pool shift.",
+   "Reduced loss cannot add cells. Even if no neutrophil left the circulation at all during those twenty minutes, the count could not rise by roughly 7,000 cells/µL, and prolonged survival does not explain the pneumonia patient's marrow-restricted immature forms either."
+  ],
+  "optionMarkers": [
+   "incidental",
+   "rower's rise comes from marrow release",
+   "detaching from vascular endothelium",
+   "granulopoiesis",
+   "survival"
+  ],
+  "answer": 2,
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "It reads the rower correctly and then extends demargination to the pneumonia patient while dismissing the band forms, which are exactly the source-defined evidence of release ahead of schedule."
+  }
+ },
+ {
+  "topic": "Hematology & Physiology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L043",
+  "sourceRef": "OST520 (043) L - WBCs and Platelets - Schwartz.pdf, pp. 7, 21; OST520 (045) L - CBC - Schwartz.pdf, pp. 43-45; transcript 048 (L043), 16:05-17:43",
+  "covers": [
+   "L043-O4",
+   "L043-O5"
+  ],
+  "concepts": [
+   "neutrophil-pool-shifts",
+   "marginating-pool"
+  ],
+  "applicationLevel": "mechanism",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "A hospitalized patient with no infection, injury, or inflammatory focus is given an intravenous infusion. His absolute neutrophil count falls from 4,100/µL to 1,600/µL within thirty minutes and returns to 4,000/µL two hours after the infusion ends. A tracer study runs alongside: only neutrophils circulating in his blood at the moment of labeling took up the label, and the marrow storage pool is unlabeled. After recovery, both the concentration of labeled neutrophils per microlitre and the labeled fraction have returned to within measurement error of their pre-infusion values, and no immature forms appear on the smear at any point. Which mechanism best explains the nadir, and what happens to the total number of neutrophils in his body during it?",
+  "rationale": "The vascular compartment holds two exchangeable pools: circulating neutrophils, which the CBC measures, and marginating neutrophils, which are attached to endothelium and are not measured. A shift from circulating to marginating lowers the reported count within minutes and reverses within hours with no change in the total number of neutrophils in the body. Because only circulating cells were labeled and the marrow reserve was not, the return of both the labeled concentration and the labeled fraction to within measurement error of baseline says the original cells came back rather than replacements. With no chemotactic focus and no described route back from tissue, redistribution within the vasculature is the best-supported reading, which is what the question asks for.",
+  "id": "OQ4-L043-C1B",
+  "options": [
+   "Neutrophils were destroyed within the circulation and the marrow mobilized replacements; the total number in the body fell and then recovered.",
+   "Marrow release of neutrophils was suppressed during the infusion; the total number in the body fell as circulating cells finished their lifespan.",
+   "Neutrophils left the blood for the tissue compartment by crossing the vessel wall; the total number in the body was unchanged.",
+   "Neutrophils attached to vascular endothelium and were no longer sampled by the blood count; the total number in the body was unchanged.",
+   "Neutrophils reverted to band forms that the differential reports separately; the total number in the body was therefore unchanged."
+  ],
+  "optionExplanations": [
+   "Rapid mobilization of the mature marrow reserve is a real process, so neutrophils destroyed in the circulation could in principle be replaced within two hours; timing alone does not rule this out. The reserve is unlabeled, so replacements drawn from it would leave the concentration of labeled cells below its starting value and dilute the labeled fraction. Both returned to within measurement error of their pre-infusion values, so the cells that came back are the ones that left.",
+   "Suppressed release cannot remove neutrophils that are already in the circulation, and with a circulating lifespan of roughly 8 hours to several days, attrition over thirty minutes cannot account for a fall of more than half.",
+   "Tissue entry is a genuine route out of the circulating pool and the closest competitor here. Two things weigh against it rather than making it impossible: the source describes entry into tissue as diapedesis and ameboid travel toward a site of injury under chemotaxis, which this patient does not have, and the source describes no return route from tissue to blood that would restore the labeled cells themselves within two hours.",
+   "The CBC samples the circulating pool only. Neutrophils attached to vascular endothelium sit in the marginating pool, disappear from the measured count without leaving the vasculature, and rejoin the circulating pool when they detach. That accounts for a thirty-minute nadir, a full recovery, and the return of the labeled cells themselves rather than of unlabeled replacements.",
+   "Bands are neutrophils and are included in the absolute neutrophil count rather than excluded from it, and maturation runs from band to segmented form, not backward. The smear also showed no immature forms at any point."
+  ],
+  "optionMarkers": [
+   "destroyed",
+   "suppressed",
+   "tissue",
+   "attached to vascular endothelium",
+   "band"
+  ],
+  "answer": 3,
+  "closestDistractor": {
+   "index": 2,
+   "why_wrong": "Tissue emigration is a genuine route out of the circulating pool and the source describes it directly. It is outweighed here rather than excluded: the chemotactic focus the source ties it to is absent, and the source describes no return route that would bring the same labeled cells back."
+  }
+ },
+ {
+  "topic": "Biochemistry",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L046",
+  "sourceRef": "OST520 (046) L- Iron Metabolism-Faner.pdf, pp. 5-6; transcript 051 (L046), 20:02-26:11",
+  "covers": [
+   "L046-O2"
+  ],
+  "concepts": [
+   "irp-ire-regulation",
+   "ferritin-vs-transferrin-receptor"
+  ],
+  "applicationLevel": "mechanism",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "An erythroid cell line is engineered so that its iron-responsive protein binds its RNA target elements with high affinity no matter how much iron the cell contains. The cells are then moved from iron-poor into iron-rich medium and kept there. Compared with wild-type cells in the same iron-rich medium, what happens to ferritin protein, to transferrin receptor protein, and to the cell's iron burden?",
+  "rationale": "In the regulation this lecture describes, iron-responsive protein binds iron-responsive elements when iron is scarce and releases them when iron is plentiful. Position determines the consequence: an occupied 5' element on ferritin messenger RNA blocks translation, while an occupied 3' element on transferrin receptor messenger RNA protects the transcript from ribonucleases. A protein engineered to bind irrespective of iron holds both states permanently, so the cell continues to import iron through abundant receptors while making almost no ferritin to store it.",
+  "id": "OQ4-L046-C1A",
+  "options": [
+   "Ferritin protein is high, transferrin receptor protein is low, and iron is stored normally, because iron-rich medium overrides the engineered protein.",
+   "Ferritin protein is low, transferrin receptor protein is high, and unstored iron accumulates, because the engineered protein keeps both elements occupied.",
+   "Ferritin protein is low, transferrin receptor protein is low, and iron uptake falls, because an occupied element blocks translation of both messages.",
+   "Ferritin protein is high, transferrin receptor protein is high, and iron uptake rises, because the bound protein stabilizes both of the messages.",
+   "Ferritin protein and transferrin receptor protein are unchanged, because the iron-responsive protein acts on transcription rather than on existing messages."
+  ],
+  "optionExplanations": [
+   "This is the normal high-iron response, which depends on the iron-responsive protein binding iron and releasing the elements. The engineered protein binds the elements regardless of iron, so a high-iron medium cannot override it.",
+   "Constitutive binding locks the cell into its low-iron program. On the ferritin message the element sits in the 5' untranslated region, so an occupied element blocks translation and little ferritin is made. On the transferrin receptor message the element sits in the 3' untranslated region, so an occupied element shields the transcript from ribonucleases and receptor synthesis continues. The cell therefore keeps importing iron it cannot store, so unstored iron, which is toxic in free form, accumulates.",
+   "Only the ferritin element blocks translation. The transferrin receptor element works by protecting its transcript from ribonuclease degradation, so an occupied element raises receptor levels rather than lowering them.",
+   "This applies transcript stabilization to both messages. Stabilization is the transferrin receptor mechanism; on the ferritin message an occupied 5' element blocks translation instead.",
+   "Iron-responsive protein binding acts after transcription, on the translation and the stability of messages that already exist, so both proteins do change."
+  ],
+  "optionMarkers": [
+   "override",
+   "unstored iron",
+   "blocks translation",
+   "stabiliz",
+   "transcription"
+  ],
+  "answer": 1,
+  "closestDistractor": {
+   "index": 2,
+   "why_wrong": "It correctly recognizes that both elements stay occupied but assigns the ferritin translational block to the transferrin receptor message as well, ignoring that the receptor element stabilizes the transcript rather than silencing it."
+  }
+ },
+ {
+  "topic": "Biochemistry",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L046",
+  "sourceRef": "OST520 (046) L- Iron Metabolism-Faner.pdf, pp. 5-6, 13; transcript 051 (L046), 20:02-26:11",
+  "covers": [
+   "L046-O2",
+   "L046-O3"
+  ],
+  "concepts": [
+   "irp-ire-regulation",
+   "ferritin-vs-transferrin-receptor"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "A patient has had bilateral lens opacities since childhood and a serum ferritin far above the reference range. Serum iron, transferrin saturation, and liver iron content are normal, and there is no iron deposition in the lens. Sequencing shows a point mutation in the stem-loop element of the ferritin light-chain messenger RNA; the gene for the iron-responsive protein is normal. Which explanation fits all of these findings?",
+  "rationale": "Regulation can fail on either side of the interaction. Here the trans-acting iron-responsive protein is intact and the cis-acting element on the ferritin message is mutated, so repression of ferritin translation is lost or weakened and ferritin protein is made without regard to iron status. Because the lesion is confined to the ferritin transcript, the transferrin receptor element continues to function, which fits the normal serum iron, transferrin saturation, and liver iron and the absence of iron in the lens deposits.",
+  "id": "OQ4-L046-C1B",
+  "options": [
+   "The iron-responsive protein cannot bind either element, so ferritin synthesis rises while transferrin receptor levels fall in parallel.",
+   "Iron overload is driving ferritin synthesis upward, and transferrin saturation is still normal because stores have not yet been saturated.",
+   "Loss of the element removes a site that recruits ribonucleases to the ferritin message, so the transcript is degraded more slowly and more ferritin protein is made.",
+   "The mutated element is bound poorly by the iron-responsive protein, so ferritin translation escapes repression, while the receptor element is unaffected.",
+   "The mutated element traps the iron-responsive protein permanently and blocks ferritin translation, and the elevated result is a truncated variant the assay detects."
+  ],
+  "optionExplanations": [
+   "A protein that cannot bind either element locates the defect in the wrong place: sequencing shows that gene is normal and the mutation is in the message. Such a defect would also release the transferrin receptor element and change receptor levels, which the normal iron studies do not suggest.",
+   "A high ferritin genuinely does accompany iron overload, which is why this is the most tempting alternative. It does not fit these findings: transferrin saturation and liver iron content are normal and the lens deposits contain no iron, none of which is what an overload state driving ferritin synthesis would produce.",
+   "This mechanism is internally consistent but misassigned. In this system the element-based control of transcript survival belongs to the transferrin receptor message, and it works by the bound protein protecting the transcript from ribonucleases, not by the element recruiting them. Ferritin is controlled by a block on translation.",
+   "The lesion is in the element on the message, not in the protein that reads it. An element bound poorly by that protein leaves ferritin translation under-repressed, so ferritin protein is made without regard to iron status and deposits in the lens. Because the mutation is confined to the ferritin transcript, the transferrin receptor element still works, which is consistent with the normal iron studies and with lens deposits that contain ferritin rather than iron.",
+   "A permanent block on ferritin translation would lower ferritin protein, not raise it, and nothing in the findings supports an assay artifact; the material deposited in the lens is ferritin protein."
+  ],
+  "optionMarkers": [
+   "cannot bind either element",
+   "overload",
+   "ribonuclease",
+   "bound poorly",
+   "assay"
+  ],
+  "answer": 3,
+  "closestDistractor": {
+   "index": 1,
+   "why_wrong": "A high ferritin is strongly associated with iron overload and a prepared learner may anchor on that, but normal liver iron, normal transferrin saturation, and the absence of iron in the lens deposits are inconsistent with it."
+  }
+ },
+ {
+  "topic": "Hematology & Physiology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L045",
+  "sourceRef": "OST520 (045) L - CBC - Schwartz.pdf, pp. 23-25, 39; transcript 050 (L045), 15:06-17:48",
+  "covers": [
+   "L045-O5",
+   "L045-O6",
+   "L045-O8"
+  ],
+  "concepts": [
+   "corrected-wbc-count",
+   "absolute-neutrophil-count"
+  ],
+  "applicationLevel": "presentation",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "A patient receiving chemotherapy has an uncorrected total white cell count of 1,500/µL, reported without correction for nucleated red cells. On the Wright-stained peripheral smear, 50 nucleated red blood cells are seen per 100 white cells counted, and the 100-cell differential is 15% segmented neutrophils, 4% bands, 71% lymphocytes, 6% monocytes, 3% eosinophils, and 1% basophils. What is this patient's absolute neutrophil count?",
+  "rationale": "Nucleated red blood cells are counted among the cells reported in an uncorrected total white cell count, so the lecture corrects it as uncorrected WBC x 100 / (100 + NRBCs per 100 WBCs), giving 1,000/µL here. The ANC then uses that corrected total and includes both segmented neutrophils and bands: (15 + 4)% of 1,000 = 190/µL. Skipping the correction would report 285/µL. Both values sit in the range current clinical references call severe neutropenia, so the correction changes the number rather than the category, and the number is what dosing and monitoring decisions are tracked against.",
+  "id": "OQ4-L045-C1A",
+  "options": [
+   "190/µL, correcting the total for nucleated red cells, then applying the neutrophil and band fraction",
+   "285/µL, applying the neutrophil and band fraction directly to the reported uncorrected total",
+   "150/µL, correcting the total for nucleated red cells, then applying the segmented fraction alone",
+   "225/µL, applying the segmented neutrophil fraction alone to the reported uncorrected count",
+   "428/µL, scaling the total upward for nucleated red cells, then applying the combined fraction"
+  ],
+  "optionExplanations": [
+   "Correct the total first: 1,500 x 100 / (100 + 50) = 1,000/µL. Then ANC = (15 + 4) / 100 x 1,000 = 190/µL. Both steps are needed: the reported total counts the nucleated red cells alongside the white cells, and the ANC includes bands as well as segmented forms.",
+   "This uses the right ANC formula on a total that still includes the nucleated red cells: (15 + 4) / 100 x 1,500 = 285/µL. The lecture's formula takes the uncorrected count as its input precisely because that count is inflated, so skipping the correction overstates the ANC by half.",
+   "The correction is done properly, giving 1,000/µL, but only segmented forms are counted: 15 / 100 x 1,000 = 150/µL. Bands are neutrophils and the lecture's ANC formula adds the band percentage to the segmented percentage.",
+   "This omits the correction and the bands together: 15 / 100 x 1,500 = 225/µL. The two errors act in opposite directions, which is why the result still looks like a plausible answer.",
+   "This inverts the correction, multiplying by 150/100 instead of 100/150 to give 2,250/µL and then applying 19% for 428/µL. Correcting for nucleated red cells removes cells that were counted as white cells, so it must lower the total, not raise it."
+  ],
+  "optionMarkers": [
+   "190",
+   "285",
+   "150",
+   "225",
+   "428"
+  ],
+  "answer": 0,
+  "closestDistractor": {
+   "index": 1,
+   "why_wrong": "It applies the ANC formula correctly but to a total that still contains the nucleated red cells, which is the specific error this case is built to expose."
+  }
+ },
+ {
+  "topic": "Hematology & Physiology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L045",
+  "sourceRef": "OST520 (045) L - CBC - Schwartz.pdf, pp. 23, 26-28, 39; transcript 050 (L045), 15:06-18:16",
+  "covers": [
+   "L045-O5",
+   "L045-O6",
+   "L045-O8"
+  ],
+  "concepts": [
+   "corrected-wbc-count",
+   "absolute-neutrophil-count"
+  ],
+  "applicationLevel": "presentation",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "A neonate with severe hemolytic anemia has an uncorrected total white cell count of 9,000/µL on Monday and 12,000/µL on Wednesday, neither corrected for nucleated red cells. Over the same interval the nucleated red blood cells counted per 100 white cells rose from 10 to 100, the combined segmented neutrophil and band fraction was 30% on both days, and the infant remained afebrile with no clinical change. Which conclusion is best supported?",
+  "rationale": "A reported count and a corrected count can move in opposite directions while nucleated red cells are climbing. Correcting each uncorrected value (9,000 x 100/110 = about 8,200/µL; 12,000 x 100/200 = 6,000/µL) shows a falling corrected count behind a rising reported one. Because the ANC is the combined segmented and band fraction applied to the corrected total, an unchanged 30% on a smaller total means the ANC fell, so the rising reported count is misleading here.",
+  "id": "OQ4-L045-C1B",
+  "options": [
+   "The reported rise is explained by the rising nucleated red cells, but the corrected white cell count is essentially unchanged near 8,000/µL, so the absolute neutrophil count is stable as well.",
+   "The reported rise reflects a true leukocytosis responding to the hemolysis, and the nucleated red cells are a separate marker of marrow stress that does not affect the reported count.",
+   "The corrected white cell count fell from about 8,200/µL to 6,000/µL even though the reported count rose, so the absolute neutrophil count fell as well.",
+   "The corrected white cell count fell from about 8,200/µL to 6,000/µL, but the absolute neutrophil count rose, because the correction applies to the total and not to the differential percentages.",
+   "The corrected white cell count rose from about 8,200/µL to 12,000/µL, because the correction is applied only once nucleated red cells outnumber the white cells counted."
+  ],
+  "optionExplanations": [
+   "The direction is right and the arithmetic is not carried through. A corrected count unchanged near 8,000/µL would require the correction to be small, but at 100 nucleated red cells per 100 white cells it halves the reported value to 6,000/µL, well below Monday's 8,200/µL.",
+   "In these reported, uncorrected counts the nucleated red cells were counted alongside the white cells, which is why the lecture supplies a correction for exactly this situation. Treating them only as a marker leaves the falling corrected count undetected.",
+   "Monday corrects to 9,000 x 100 / 110 = about 8,200/µL and Wednesday to 12,000 x 100 / 200 = 6,000/µL. The reported count rose while the corrected count fell by roughly a quarter. Because the combined neutrophil and band fraction was 30% on both days, the ANC is that same fraction of a smaller total and fell as well.",
+   "The totals are computed correctly and the observation about the differential percentages is true, but it leads the wrong way: the ANC is the combined fraction multiplied by the corrected total, so an unchanged 30% applied to a total that fell from 8,200 to 6,000 gives a smaller absolute count; it cannot have risen.",
+   "The lecture's formula carries whatever number of nucleated red cells were counted per 100 white cells; it does not wait for them to outnumber the white cells before it applies. On Wednesday the ratio is exactly one to one, which halves the reported total rather than leaving it untouched."
+  ],
+  "optionMarkers": [
+   "unchanged near 8,000",
+   "marker",
+   "fell as well",
+   "differential percentages",
+   "outnumber"
+  ],
+  "answer": 2,
+  "closestDistractor": {
+   "index": 3,
+   "why_wrong": "It corrects both totals correctly and then reverses the conclusion for the ANC, treating the unchanged differential percentages as though they could raise an absolute count computed from a falling total."
+  }
+ },
+ {
+  "topic": "Immunology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L042",
+  "sourceRef": "OST520_042_L_Intro_to_Adaptive_Immunity_Taylor_pdf.txt, p.2; transcript 045 (042.1), 09:52-11:13",
+  "covers": [
+   "L042-O2",
+   "L042-O4"
+  ],
+  "concepts": [
+   "tcr-bcr-native-vs-processed"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "A researcher places a purified, fully folded viral coat protein directly into a culture system containing two physically separate lymphocyte compartments joined only by a membrane whose pores let free protein cross but block direct cell-to-cell contact: one compartment holds only purified B lymphocytes and the other holds only purified T lymphocytes, with no macrophages, dendritic cells, or other phagocytes added to either side. After several hours, the B lymphocyte compartment shows bound protein and activation, while the T lymphocyte compartment shows no binding and no activation at all, even though receptors matching this protein's sequence are present in both compartments. Which receptor explains the population that responded, and what best accounts for the other population's failure to respond under these culture conditions?",
+  "rationale": "The B cell receptor, the antibody, is described as able to bind native, unprocessed antigen directly, so purified protein added straight to a dish of lymphocytes is enough to activate a matching B cell. The T cell receptor is described as only able to detect protein antigen after a phagocyte has ingested it, broken it down, and displayed the resulting fragment, a categorical structural requirement rather than a matter of concentration or affinity. With no phagocyte present in this culture, the matching T cell receptor has nothing in the form it can bind, which is why only one population responded.",
+  "id": "OQ4-L042-C2A",
+  "options": [
+   "The B cell receptor (antibody) responded because it can bind unprocessed antigen directly; the T cell receptor could not respond because no phagocyte was present to process and present the protein first.",
+   "The T cell receptor responded because it can bind unprocessed antigen directly; the B cell receptor could not respond because it needs a phagocyte to process and present antigen first, not after.",
+   "Neither population could respond, because the lecture requires a phagocyte to process and present antigen before both the B cell receptor and the T cell receptor are able to bind it at all.",
+   "Both populations responded, because the lecture treats antigen receptor binding as purely a matter of protein concentration, and this culture had enough intact protein for either receptor to bind directly.",
+   "The T cell receptor should also have bound the protein here directly, and its failure only reflects unusually low binding affinity for this particular sequence, not any processing requirement."
+  ],
+  "optionExplanations": [
+   "The lecture states that the B cell receptor, the antibody, can bind unprocessed antigen directly, which explains the population that bound the intact protein in the dish. It also states that the T cell receptor only detects protein antigen once it has been processed and presented by a phagocyte, so with no phagocyte in the culture, the matching T cell receptor had nothing it was able to bind.",
+   "This reverses the lecture's assignment: it is the B cell receptor, the antibody, that is described as able to bind unprocessed antigen directly, while the T cell receptor is the one described as needing a phagocyte to process and present antigen first, not after.",
+   "The lecture describes only the T cell receptor as requiring a phagocyte to process and present antigen before it can bind; the B cell receptor, the antibody, is described as able to bind native antigen without that step, so it should still respond in this culture.",
+   "The lecture does not describe T cell receptor binding as a matter of antigen concentration; it describes the T cell receptor as structurally unable to bind unprocessed protein at all until a phagocyte has processed and presented it, regardless of how much protein is available.",
+   "The lecture describes the requirement for a phagocyte to process and present antigen as a categorical property of the T cell receptor, true for every protein antigen it detects, not a matter of this particular sequence having low binding affinity; nothing in the case suggests an affinity problem, only the absence of a phagocyte."
+  ],
+  "optionMarkers": [
+   "unprocessed antigen directly",
+   "process and present antigen first",
+   "process and present antigen before",
+   "concentration",
+   "binding affinity"
+  ],
+  "answer": 0,
+  "closestDistractor": {
+   "index": 4,
+   "why_wrong": "Binding affinity differences between receptors and antigens are a real feature of receptor biology, which makes this distractor tempting, but the lecture presents the need for phagocyte processing and presentation as true for every protein antigen the T cell receptor detects, and the case gives no data suggesting a sequence-specific affinity problem, only the absence of a phagocyte."
+  }
+ },
+ {
+  "topic": "Immunology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L042",
+  "sourceRef": "OST520_042_L_Intro_to_Adaptive_Immunity_Taylor_pdf.txt, p.2; transcript 045 (042.1), 09:52-11:13; transcript 047 (042.3), 01:22-01:44",
+  "covers": [
+   "L042-O2",
+   "L042-O4"
+  ],
+  "concepts": [
+   "tcr-bcr-native-vs-processed"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "A researcher draws blood from a patient and divides the sample into two chambers connected only by a membrane whose pores let the plasma and its dissolved, fully folded viral protein pass freely between them but block direct cell-to-cell contact: one chamber holds only that patient's purified B lymphocytes bearing receptors specific for this protein, and the other holds only purified T lymphocytes bearing receptors specific for peptide fragments of the same protein. The shared plasma protein concentration stays stable and easily measurable for several days. During this time, the B lymphocytes become activated and begin producing antibody, but the T lymphocytes remain completely inactive. Several days later, phagocytic cells are introduced into the T lymphocyte chamber; they ingest, break down, and display fragments of this same protein on their surface, and only at that point do the T lymphocytes become activated. Throughout this entire time the plasma concentration of the soluble protein itself never changes. Which explanation accounts for why the T lymphocytes stayed inactive while the soluble protein alone was present, and then activated only once fragments were displayed on another cell's surface?",
+  "rationale": "The B cell receptor is described as able to bind native, unprocessed antigen directly, so a stable soluble protein in plasma is enough to activate a matching B cell from day one. The T cell receptor is described as structurally unable to detect that same protein in its soluble, unprocessed form under any circumstance; it can only detect a fragment once a phagocyte has processed and displayed it. Because the plasma concentration of the original protein never changed, a concentration-based or dose-based account cannot explain the delay, and the timing lines up instead with the appearance of processed, displayed fragments, which is what finally gave the T cell receptor something it could bind.",
+  "id": "OQ4-L042-C2B",
+  "options": [
+   "The T cell receptor cannot bind the soluble, unprocessed protein at all; it can only bind a fragment once that fragment is displayed on the surface of a phagocyte, exactly the change that occurred before activation.",
+   "T cells require a higher local concentration of antigen than B cells do, and the phagocytes simply concentrated the same soluble protein enough, locally, for the T cell receptor to finally bind it.",
+   "The B cell receptor was the one that needed antigen processed and displayed by a phagocyte, and the T cell receptor could instead bind the soluble protein directly, so B cells should have stayed inactive until day two.",
+   "T cells simply take several days longer than B cells to expand into an activated, measurable population from the same soluble protein signal already present in the plasma, regardless of any processing step.",
+   "Both the T cell receptor and the B cell receptor can bind the soluble, unprocessed protein directly, and the delay only reflects how long it took phagocytes to travel to the site of infection."
+  ],
+  "optionExplanations": [
+   "The lecture describes the T cell receptor as only able to detect protein antigen once it has been processed and displayed on the surface of a phagocyte, never the intact soluble protein itself, so T cells stayed inactive throughout the period when only soluble protein was present and activated only once a fragment was displayed on the surface of a phagocyte. Because the B cell receptor can bind unprocessed antigen directly, the unchanged plasma protein concentration was already enough to activate the B cells all along.",
+   "The lecture ties T cell receptor binding to whether the protein has been processed and displayed on the surface of a phagocyte, not to reaching a higher local concentration of the same soluble protein; what the phagocytes displayed were broken-down fragments, not simply a concentrated pool of the original intact protein.",
+   "This reverses the lecture's assignment: it is the T cell receptor that needs antigen processed and displayed on the surface of a phagocyte, while the B cell receptor is the one described as able to bind the soluble protein directly, which is why the B cells were active from the very first day, not the T cells.",
+   "The case shows T cells were not merely slow to expand from the same soluble protein signal, they showed no activation at all while only soluble protein was present, and only began responding once a fragment was displayed on the surface of a phagocyte, which points to an inability to bind the unprocessed protein rather than to a slower expansion timeline from the same soluble protein signal.",
+   "The lecture describes only the B cell receptor as able to bind unprocessed antigen directly; it describes the T cell receptor as unable to bind the soluble, unprocessed protein at all, so no amount of waiting for phagocytes to simply arrive would let the T cell receptor bind the protein in its original soluble form."
+  ],
+  "optionMarkers": [
+   "displayed on the surface of a phagocyte",
+   "local concentration",
+   "bind the soluble protein directly",
+   "same soluble protein signal",
+   "bind the soluble, unprocessed protein"
+  ],
+  "answer": 0,
+  "closestDistractor": {
+   "index": 1,
+   "why_wrong": "A higher local concentration is a plausible-sounding fix because concentration genuinely matters for many receptor interactions, but the case specifies that what the phagocytes displayed were broken-down fragments, not a locally concentrated pool of the original intact protein, and the lecture ties T cell receptor binding to that processing and display step categorically, not to reaching any particular local concentration of the native protein."
+  }
+ },
+ {
+  "topic": "Immunology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L042",
+  "sourceRef": "OST520_042_L_Intro_to_Adaptive_Immunity_Taylor_pdf.txt, p.3; transcript 046 (042.2), 02:19-04:21, 06:39-07:08",
+  "covers": [
+   "L042-O3",
+   "L042-O5"
+  ],
+  "concepts": [
+   "cd4-cd8-coreceptor-function"
+  ],
+  "applicationLevel": "mechanism",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "A T cell sorted from a patient's blood is confirmed by flow cytometry to express CD3 and CD8, and not to express CD4. This sorted cell is placed in a co-culture with virus-infected cells from the same patient, with no other white blood cell type added to the dish; over several hours the infected cells lose viability, shrinking and fragmenting into small, membrane-bound pieces without ever rupturing or releasing their contents into the surrounding medium. A second sorted population, confirmed CD3-positive and CD4-positive but CD8-negative, is added to a separate co-culture with the same infected cells; their viability is unaffected, but nearby macrophages placed in that dish increase their cytokine output. Which co-receptor, and which resulting function, best accounts for the first population's ability to bring about the infected cells' death?",
+  "rationale": "The lecture splits mature T cells into two mutually exclusive co-receptor groups: CD8-positive cytotoxic T cells, which directly kill infected or diseased cells by inducing apoptosis, and CD4-positive helper T cells, which coordinate other immune cells such as macrophages through cytokines rather than killing directly. CD3 is a marker of activation signaling shared by both groups and does not by itself determine which of these two functions a given T cell performs. Because the sorted population that killed the infected cells directly was confirmed CD8-positive and CD4-negative, and the CD4-positive, CD8-negative population in the same case worked through macrophage cytokines instead, the co-receptor identity is what tracks with the functional outcome.",
+  "id": "OQ4-L042-C3A",
+  "options": [
+   "CD8, because CD8-positive T cells are the cytotoxic subset for direct, apoptosis-inducing killing, unlike CD4-positive T cells, which act through cytokines instead of direct killing.",
+   "CD4, because CD4-positive T cells are the cytotoxic subset for direct, apoptosis-inducing killing, unlike CD8-positive T cells, which act through cytokines instead of direct killing.",
+   "Both co-receptors, CD4 and CD8, must be expressed together on the same mature T cell for it to carry out direct, apoptosis-inducing killing of an infected cell.",
+   "CD3 alone accounts for the direct killing here, since CD3 helps transduce the activation signal in every T cell, regardless of whether it also expresses CD4 or CD8.",
+   "The CD8-positive population actually killed the infected cells indirectly, by secreting cytokines that recruited the macrophages seen in this case to do the actual killing."
+  ],
+  "optionExplanations": [
+   "The lecture assigns direct, apoptosis-inducing killing of infected or diseased cells specifically to the CD8-positive, cytotoxic subset of T cells, while it assigns the CD4-positive subset a coordinating role that works through cytokines rather than direct killing. Because a mature T cell expresses only one of these two co-receptors, the first population's CD8-positive, CD4-negative profile identifies it as the subset the lecture ties to direct, apoptosis-inducing killing.",
+   "This reverses the lecture's assignment: it is the CD8-positive subset, not CD4-positive cells, that the lecture ties to direct, apoptosis-inducing killing of infected cells, while CD4-positive helper cells are the ones described as coordinating other cells through cytokines. The sorted population that killed directly here was confirmed CD8-positive and CD4-negative, not the reverse.",
+   "The lecture states that each mature T cell expresses one of these co-receptors but not both, so a T cell co-expressing CD4 and CD8 is not the configuration the lecture describes; the population that performed direct, apoptosis-inducing killing here was confirmed to express only CD8, with no CD4 detected.",
+   "CD3 is described as present on every T cell and needed to transduce the activation signal in both subsets, so it cannot by itself explain why only the CD8-positive population killed directly; the second, CD4-positive population in this same case was also CD3-positive and became activated, yet it worked through cytokines rather than direct killing, which the lecture ties specifically to the CD8-positive subset.",
+   "The case states this sorted CD8-positive population killed the infected cells directly with no other white blood cell type added to its dish, so no macrophage or cytokine-recruited cell was present for this population to have killed the infected cells indirectly; the lecture ties this direct killing to the CD8-positive subset acting on its own, while cytokine-based coordination of other cells is the role it assigns to the CD4-positive subset instead."
+  ],
+  "optionMarkers": [
+   "direct, apoptosis-inducing killing",
+   "direct, apoptosis-inducing killing",
+   "direct, apoptosis-inducing killing",
+   "transduce the activation signal",
+   "killed the infected cells indirectly"
+  ],
+  "answer": 0,
+  "closestDistractor": {
+   "index": 3,
+   "why_wrong": "CD3 genuinely is required to transduce the activation signal in every T cell, which makes this distractor credible, but the case's own CD4-positive, CD3-positive population was also activated and still did not kill directly, showing that CD3 alone cannot be what separates the two functions; the lecture ties direct, apoptosis-inducing killing specifically to the CD8-positive subset instead."
+  }
+ },
+ {
+  "topic": "Immunology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L042",
+  "sourceRef": "OST520_042_L_Intro_to_Adaptive_Immunity_Taylor_pdf.txt, p.3; transcript 046 (042.2), 03:34-03:44, 04:41-05:11",
+  "covers": [
+   "L042-O3",
+   "L042-O5"
+  ],
+  "concepts": [
+   "cd4-cd8-coreceptor-function"
+  ],
+  "applicationLevel": "mechanism",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "Two individual T cells are isolated from a patient. Flow cytometry confirms that both are CD3-positive and CD4-positive, and neither expresses CD8. In a functional assay, the first cell suppresses a nearby self-reactive lymphocyte and prevents it from attacking the patient's own thyroid tissue. The second cell instead secretes cytokines that direct nearby macrophages to attack an extracellular bacterium. Given that both cells share an identical CD3/CD4/CD8 profile, which pairing correctly assigns each cell to the subset and role the lecture describes?",
+  "rationale": "The lecture lists regulatory T cells as their own distinct category among CD4-positive T cells, separate from the conventional helper subtypes, and gives them a special role in preventing autoimmunity rather than the conventional helper role of coordinating other immune cells such as macrophages through cytokines. Because CD3/CD4/CD8 surface staining is identical for both categories, only the functional readout, suppressing a self-reactive lymphocyte versus directing macrophages against a bacterium, can assign each cell in this case to the subset and role the lecture describes.",
+  "id": "OQ4-L042-C3B",
+  "options": [
+   "The first cell is a regulatory T cell preventing an autoimmune attack, and the second cell is a conventional CD4-positive helper T cell coordinating macrophages through cytokines.",
+   "The first cell is a conventional CD4-positive helper T cell that coordinates cytokines, and the second cell is instead a regulatory T cell preventing an autoimmune attack on the thyroid.",
+   "Both cells are conventional CD4-positive helper T cells, and the first cell's suppression of the lymphocyte is simply another cytokine-based helper effect, not a separate regulatory role.",
+   "Both cells are regulatory T cells, and the second cell's cytokine-driven macrophage activation is simply another way regulatory T cells prevent autoimmune damage.",
+   "Since these cells directly change another cell's behavior, both must actually be CD8-positive cytotoxic cells, and the flow cytometry finding of CD4 alone must reflect a staining error."
+  ],
+  "optionExplanations": [
+   "The lecture describes regulatory T cells as a distinct, CD4-positive category whose special role is preventing autoimmunity, separate from the conventional CD4-positive helper T cells that coordinate other immune cells such as macrophages by making cytokines. Because CD3/CD4/CD8 staining alone cannot separate these two CD4-positive categories, the functional readout in the case is what identifies the first cell as a regulatory T cell preventing an autoimmune attack and the second as a conventional helper T cell.",
+   "This swaps the functional readout in the case: it is the first cell, which suppresses a self-reactive lymphocyte, that fits the lecture's description of a regulatory T cell preventing an autoimmune attack, while the second cell, which directs macrophages against a bacterium through cytokines, fits the conventional CD4-positive helper role instead.",
+   "The lecture sets regulatory T cells apart as their own distinct, CD4-positive category with a special role in preventing autoimmunity, rather than treating suppression of a self-reactive lymphocyte as just another cytokine-based helper effect; the conventional CD4-positive helper role the lecture describes is coordinating cells like macrophages, which only the second cell in this case is doing.",
+   "The lecture ties the regulatory T cell role specifically to preventing autoimmune damage, not to directing macrophages against an extracellular bacterium, which is the conventional CD4-positive helper role instead; only the first cell's suppression of a self-reactive lymphocyte fits what the lecture describes regulatory T cells as doing.",
+   "The case confirms by flow cytometry that both cells are CD4-positive and CD8-negative, and the lecture ties direct, apoptosis-inducing killing, not suppression or cytokine-directed macrophage activation, to the CD8-positive subset; neither described function here is that kind of direct killing, so there is no basis to override the stated result as a staining error."
+  ],
+  "optionMarkers": [
+   "regulatory T cell preventing an autoimmune attack",
+   "regulatory T cell preventing an autoimmune attack",
+   "cytokine-based helper effect",
+   "autoimmune damage",
+   "staining error"
+  ],
+  "answer": 0,
+  "closestDistractor": {
+   "index": 2,
+   "why_wrong": "Calling both cells conventional helper T cells is tempting because both are CD4-positive and both act on another immune cell, but the lecture sets regulatory T cells apart as their own category with a specific autoimmunity-preventing role, distinct from the conventional helper role of coordinating cells like macrophages through cytokines, which only the second cell in this case is doing."
+  }
+ },
+ {
+  "topic": "Hematology & Physiology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L043",
+  "sourceRef": "OST520 (043) L - WBCs and Platelets - Schwartz.pdf, pp. 8, 13, 19-20; transcript 048 (L043), 03:35-04:06, 05:56-06:38",
+  "covers": [
+   "L043-O2",
+   "L043-O3"
+  ],
+  "concepts": [
+   "granulopoiesis-staging",
+   "maturation-linked-capacity"
+  ],
+  "applicationLevel": "mechanism",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "A bone marrow biopsy from a healthy adult is examined by a hematopathologist who identifies two separate granulocytic precursor populations in the marrow. Population 1 is the first recognizable stage in the granulocyte series; at this stage the pathologist cannot yet tell whether a given cell will end up as an eosinophil, a basophil, or a neutrophil. Population 2 is sampled from a later point in the same maturation sequence, immediately proximal to the band stage but short of it: these cells are not yet band cells, and like population 1's cells, none of them show the multilobed, segmented nucleus of a mature neutrophil. Which statement correctly identifies what population 2's position in the sequence establishes about its lineage, and where both populations stand relative to a normal peripheral blood smear?",
+  "rationale": "Granulopoiesis ties two different events to two different points in the sequence: lineage commitment, which the source places at the myeloblast, the one stage described as able to become an eosinophil, a basophil, or a neutrophil; and normal peripheral presence, which the source assigns only to the band stage onward, at 0-3% of peripheral leukocytes, keeping earlier forms in the marrow except during a marked left shift. A cell sampled immediately before the band stage has moved past the myeloblast and onto the neutrophil-specific part of the pathway, resolving the lineage question, even though it is still short of the stage the source ties to normal circulation.",
+  "id": "OQ4-L043-C2A",
+  "options": [
+   "Population 1 has already narrowed onto the neutrophil-specific branch, while population 2 can still become an eosinophil or a basophil, not a neutrophil, at this point in the sequence.",
+   "Neither population has narrowed onto a single lineage yet, because the lecture places the branch point among eosinophil, neutrophil, and basophil at the band stage rather than at the myeloblast.",
+   "Population 2 has already narrowed onto the neutrophil-specific branch, unlike population 1, but like population 1 it would not be an expected finding on a normal peripheral blood smear.",
+   "Both population 1 and population 2 would be expected findings on a normal peripheral blood smear, since granulocyte precursors normally circulate throughout their maturation.",
+   "Population 2 has already narrowed onto the neutrophil-specific branch, unlike population 1, and that already makes it an expected finding on a normal smear, the way band neutrophils normally are."
+  ],
+  "optionExplanations": [
+   "This reverses the developmental order. The lecture places the tri-lineage decision at the myeloblast, the first recognizable stage in the granulocyte series, which is what population 1 represents; population 1, not population 2, is the one that can still become an eosinophil or a basophil instead of a neutrophil. Population 2, sampled later in the same sequence and immediately before the neutrophil-specific band stage, has already narrowed onto that branch.",
+   "The lecture places the tri-lineage decision at the myeloblast, the first recognizable and most immature stage, describing it as a unipotent stem cell transitioning down one of three pathways; the band stage, in contrast, is described only as the stage before the segmented neutrophil, a step specific to the neutrophil pathway. Putting the branch point at the band stage rather than at the myeloblast reverses that structure, and since population 2 is already sampled short of band but past the myeloblast, it has already committed to the neutrophil branch rather than remaining undecided.",
+   "The myeloblast is described as a unipotent stem cell that transitions down one of three pathways to become an eosinophil, a neutrophil, or a basophil, and population 1 matches that first, still-undecided stage. Population 2 is sampled immediately before the band stage, which the lecture describes as the stage before the segmented, mature neutrophil specifically, not before an eosinophil or basophil; being immediately upstream of a stage that leads only to the neutrophil, population 2 has already narrowed onto the neutrophil-specific branch. But the lecture places normal peripheral presence at the band stage itself, normally 0-3% of peripheral leukocytes, and confines earlier forms to the marrow under normal conditions, releasing them into blood only with a marked left shift; since population 2 has not yet reached the band stage, it would not be an expected finding on a normal peripheral smear, any more than population 1 would be.",
+   "The lecture confines granulocyte precursors earlier than the band stage to the marrow under normal conditions, listing them as appearing in blood only when released during a marked left shift, and reserves normal peripheral presence for the band stage onward, at 0-3% of peripheral leukocytes. Neither population 1 nor population 2, both sampled short of band, would be expected findings on a normal peripheral smear, contrary to the claim that granulocyte precursors normally circulate throughout their maturation.",
+   "Population 2's position in the sequence, immediately before the neutrophil-specific band stage, does place it past the myeloblast's tri-lineage decision, which correctly separates it from population 1. But the lecture ties normal peripheral presence to the band stage itself, present at 0-3% of peripheral leukocytes, and places earlier committed precursors in the marrow under normal conditions; committing to a lineage is not the same as reaching the stage the lecture assigns to normal peripheral blood, the way band neutrophils normally are."
+  ],
+  "optionMarkers": [
+   "can still become an eosinophil",
+   "at the band stage rather than at the myeloblast",
+   "neutrophil-specific branch",
+   "normally circulate throughout their maturation",
+   "the way band neutrophils normally are"
+  ],
+  "answer": 2,
+  "closestDistractor": {
+   "index": 4,
+   "why_wrong": "It correctly identifies that population 2, unlike population 1, has already narrowed onto the neutrophil-specific branch, which is why it is the closest distractor; but it then assumes that commitment already brings the normal peripheral presence the lecture reserves specifically for the band stage onward, which population 2 has not yet reached."
+  }
+ },
+ {
+  "topic": "Hematology & Physiology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L043",
+  "sourceRef": "OST520 (043) L - WBCs and Platelets - Schwartz.pdf, pp. 6, 8; transcript 048 (L043), 03:35-04:01",
+  "covers": [
+   "L043-O2",
+   "L043-O3"
+  ],
+  "concepts": [
+   "granulopoiesis-staging",
+   "lineage-commitment"
+  ],
+  "applicationLevel": "mechanism",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "A patient has a congenital disorder in which eosinophils and basophils are entirely absent from both the bone marrow and the blood, while neutrophils are present in normal numbers and mature normally through to the segmented form. A marrow biopsy shows normal numbers of the first recognizable cell of the granulocyte series, the stage from which a cell may still travel down any one of three pathways. Where in granulopoiesis must this lesion act?",
+  "rationale": "The lecture places one branch point in the granulocyte series: the first recognizable precursor can still become an eosinophil, a neutrophil or a basophil. Two findings bracket the lesion. That precursor is present in normal numbers, so nothing upstream of it has failed, and neutrophils complete their pathway, so the branch leading to them is intact. A lesion that removes two lineages and spares the third can therefore only act after the branch point, on the eosinophil and basophil pathways specifically.",
+  "id": "OQ4-L043-C2B",
+  "options": [
+   "The lesion acts before the first recognizable granulocyte precursor, in the progenitor that gives rise to the whole granulocyte series",
+   "The lesion acts at that shared stage itself, because that is where a granulocyte precursor is assigned its eventual identity",
+   "The lesion acts after that shared stage, on the branches leading to eosinophils and basophils once the three fates have separated",
+   "The lesion acts at the band to segmented transition, the last maturation step in the granulocyte series",
+   "There is no marrow lesion; peripheral destruction removes eosinophils and basophils after they are released"
+  ],
+  "optionExplanations": [
+   "Acting before the first recognizable precursor would deplete that precursor itself and every lineage descending from it. The biopsy shows normal numbers of it and a normal neutrophil output, neither of which fits a lesion that far upstream.",
+   "A lesion acting at that shared stage would sit upstream of all three pathways, so neutrophils should be lost along with eosinophils and basophils. The marrow shows that stage present in normal numbers and the neutrophil line running to completion, which is what excludes it.",
+   "The first recognizable granulocyte precursor is present in normal numbers and still has all three fates open to it, so nothing has gone wrong up to that point. Neutrophils are made normally, which means the neutrophil branch downstream of it is intact as well. The only place a lesion can remove two of the three lineages while sparing the third is after that shared stage, once the pathways have separated.",
+   "The band to segmented transition is a late nuclear maturation step on the neutrophil pathway, and the neutrophils in this patient mature normally. It also comes too late to explain the complete absence of two other lineages.",
+   "Peripheral destruction would leave the two lineages being produced in the marrow and disappearing from blood. Here they are absent from the marrow as well, so the failure is in production rather than in survival after release."
+  ],
+  "optionMarkers": [
+   "before the first recognizable",
+   "at that shared stage",
+   "after that shared stage",
+   "band to segmented",
+   "peripheral destruction"
+  ],
+  "answer": 2,
+  "closestDistractor": {
+   "index": 1,
+   "why_wrong": "It correctly identifies the stage at which the three fates are still open, which is the right part of the sequence to be thinking about, but places the lesion one step too early: a block there would take the neutrophils with it."
+  }
+ },
+ {
+  "topic": "Hematology & Physiology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L043",
+  "sourceRef": "OST520 (043) L - WBCs and Platelets - Schwartz.pdf, pp. 27-28, 34-35; transcript 048 (L043), 20:41-22:24, 28:28-28:47, 29:09-29:50",
+  "covers": [
+   "L043-O10",
+   "L043-O5",
+   "L043-O7",
+   "L043-O8",
+   "L043-O9"
+  ],
+  "concepts": [
+   "thrombocytopenia-mechanism",
+   "megakaryocyte-production-defect"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "A 58-year-old man receiving induction chemotherapy for acute leukemia has a platelet count of 12,000/uL. His spleen is normal in size on exam and imaging. A bone marrow biopsy shows a hypocellular marrow with megakaryocytes essentially absent from the sample. He has never received heparin, and there is no history of recent hemorrhage or fluid resuscitation. A repeat count from a citrate-anticoagulated tube confirms the low value. Which mechanism best accounts for this thrombocytopenia?",
+  "rationale": "Three mechanisms can each lower a platelet count, and the source ties each to a different kind of positive evidence: production depends on megakaryocytes, the cell TPO drives toward proplatelet shedding, so a marrow essentially without them signals a block at the source; destruction removes already-made platelets and would leave the marrow's megakaryocyte output normal or compensating upward; sequestration requires an enlarged spleen to trap platelets in its red pulp. This patient's marrow finding and normal spleen size together point to production, and the absence of heparin exposure, hemorrhage, and clumping on repeat testing rules out the remaining named mechanisms by their own specific evidence rather than by exclusion alone.",
+  "id": "OQ4-L043-C3A",
+  "options": [
+   "This is destruction: antibody-mediated clearance of already-formed platelets would explain a count this low, and the marrow finding is merely incidental.",
+   "This is a production defect: the marrow's near-absent megakaryocytes show the thrombopoiesis pathway itself is impaired, not the spleen.",
+   "This is sequestration: even without a clearly enlarged spleen on exam, platelets could still be getting trapped there, accounting for the low count.",
+   "This is dilutional thrombocytopenia from aggressive fluid resuscitation, since large-volume treatment alone can lower a platelet count regardless of marrow findings.",
+   "This is artifactual thrombocytopenia caused by platelet clumping within the collection tube itself, so the true count and the marrow are both actually normal."
+  ],
+  "optionExplanations": [
+   "Antibody-mediated destruction, as in HIT, removes already-formed platelets from circulation, which the lecture attributes to antibodies against platelets rather than to a marrow problem; that mechanism predicts a marrow that keeps making megakaryocytes normally or even in increased numbers to compensate, not a marrow with megakaryocytes essentially absent, so the biopsy finding here argues against destruction rather than being incidental to it.",
+   "The lecture places megakaryocytes as the cell that TPO drives toward differentiation, maturation, and proplatelet shedding, the step that actually generates platelets; a marrow with near-absent megakaryocytes means that step cannot proceed at anything like a normal rate, which is a production defect. The normal spleen size is itself evidence against sequestration, since the lecture's mechanism for that is trapping in an enlarged spleen, which this patient does not have.",
+   "The lecture's sequestration mechanism is specifically trapping of platelets in the red pulp of an enlarged spleen, and this patient's spleen is normal in size on exam and imaging, so the specific finding the source ties to sequestration is absent here; the near-absent megakaryocytes point toward a production problem instead.",
+   "The lecture ties dilutional thrombocytopenia specifically to aggressive fluid resuscitation with packed red cells during acute hemorrhage, and this patient has no history of recent hemorrhage or fluid resuscitation, so that specific trigger is absent; the marrow finding here is not something dilution would produce in any case, since dilution does not change what the marrow contains.",
+   "The lecture attributes artifactual thrombocytopenia to clumping in anticoagulant-coated collection tubes, which produces a falsely low count while the marrow and the true circulating platelet number are unaffected; a repeat count from a citrate-anticoagulated tube here still confirms the low value, and this patient's marrow biopsy itself shows a genuine abnormality, which clumping would not produce."
+  ],
+  "optionMarkers": [
+   "incidental",
+   "near-absent megakaryocytes",
+   "enlarged spleen",
+   "fluid resuscitation",
+   "clumping"
+  ],
+  "answer": 1,
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "Antibody-mediated destruction is a real, source-described mechanism and would also produce a low platelet count, which is why it is the closest alternative; the decisive clue is the marrow itself. Destruction predicts normal or increased megakaryocytes as the marrow compensates, while this biopsy shows megakaryocytes essentially absent, which the lecture ties to the thrombopoiesis pathway failing at its source rather than to peripheral clearance."
+  }
+ },
+ {
+  "topic": "Hematology & Physiology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L043",
+  "sourceRef": "OST520 (043) L - WBCs and Platelets - Schwartz.pdf, pp. 27, 34-35; transcript 048 (L043), 20:41-20:57, 29:56-30:21, 28:28-28:47, 29:09-29:50, 30:25-31:18",
+  "covers": [
+   "L043-O10",
+   "L043-O5",
+   "L043-O7",
+   "L043-O8",
+   "L043-O9"
+  ],
+  "concepts": [
+   "thrombocytopenia-mechanism",
+   "splenic-sequestration"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "A 61-year-old woman with cirrhosis and a markedly enlarged spleen on imaging has a platelet count of 55,000/uL. A bone marrow biopsy shows a normal megakaryocyte count. She has never received heparin, has had no recent hemorrhage or fluid resuscitation, and a repeat count from a citrate-anticoagulated tube confirms the low value. Which mechanism best accounts for this thrombocytopenia?",
+  "rationale": "The same three mechanisms compete here, and the marrow biopsy is again the decisive piece of evidence rather than the platelet count alone. A normal megakaryocyte count argues against a production defect, since the lecture ties production to megakaryocyte output; the absence of heparin exposure argues against the specific destruction mechanism the source describes; the absence of hemorrhage and fluid resuscitation argues against dilution; and a persistently low repeat count on a citrate tube argues against an artifact of clumping. What remains, and what the enlarged spleen and normal marrow together support, is trapping of platelets in the spleen, which the lecture describes as capable of reducing the circulating fraction from the normal one-third up to as much as 90%.",
+  "id": "OQ4-L043-C3B",
+  "options": [
+   "This is sequestration: the enlarged spleen is trapping a larger-than-normal share of platelets in its red pulp, while production stays intact.",
+   "This is a production defect: the marrow itself must be under-producing platelets, even though the biopsy shows a normal megakaryocyte count.",
+   "This is destruction: platelet-specific antibodies are clearing platelets from the circulation faster than the marrow can ever replace them.",
+   "This is dilutional thrombocytopenia, resulting from an aggressive large-volume fluid resuscitation lowering the concentration of her existing platelets.",
+   "This is artifactual thrombocytopenia, caused by ongoing platelet clumping within the collection tube itself rather than a true decrease."
+  ],
+  "optionExplanations": [
+   "The lecture attributes splenic platelet sequestration to trapping in the red pulp of an enlarged spleen, capable of holding far more than the normal one-third of platelets, up to as much as 90%, which lowers the circulating count without the marrow being at fault; a normal megakaryocyte count on biopsy is consistent with intact production, which fits this mechanism rather than a production defect.",
+   "A production defect is supported by a marrow with few or no megakaryocytes, since that is the cell the lecture identifies as the source of platelets via TPO-driven differentiation and proplatelet shedding; this biopsy instead shows a normal megakaryocyte count, which argues against under-producing platelets and toward a mechanism that removes platelets after they are made.",
+   "The lecture ties platelet-specific antibodies to destruction only in specific triggers such as heparin exposure in HIT, and this patient has never received heparin; the normal megakaryocyte count is also consistent with a marrow able to keep up, but destruction offers no explanation for why an enlarged spleen happens to be present in this case.",
+   "The lecture ties dilutional thrombocytopenia specifically to aggressive fluid resuscitation with packed red cells during acute hemorrhage, and this patient has had no recent hemorrhage or fluid resuscitation, so that specific trigger is absent, while her enlarged spleen points toward a different, source-described mechanism instead.",
+   "The lecture attributes artifactual thrombocytopenia to clumping associated with anticoagulant-coated collection tubes, producing a falsely low count; here a repeat count from a citrate-anticoagulated tube still confirms the low value, which the lecture would not expect if clumping in the original tube were the explanation."
+  ],
+  "optionMarkers": [
+   "red pulp",
+   "normal megakaryocyte count",
+   "platelet-specific antibodies",
+   "fluid resuscitation",
+   "clumping"
+  ],
+  "answer": 0,
+  "closestDistractor": {
+   "index": 1,
+   "why_wrong": "A production defect is a real, source-grounded alternative, since a marrow that cannot make platelets would also lower the count, which is why this is the closest distractor; the decisive clue is the biopsy itself. A production defect predicts few or absent megakaryocytes, and this marrow shows a normal megakaryocyte count instead, which is what points to a mechanism that removes already-made platelets, that is, sequestration by the enlarged spleen."
+  }
+ },
+ {
+  "stem": "A metastatic tumor infiltrates and completely obstructs every afferent lymphatic vessel draining a region of skin into its regional lymph node. The node's arterial supply and its postcapillary high endothelial venules are untouched by the tumor and remain structurally normal. Antigen and the dendritic cells that pick it up in that skin can therefore no longer travel toward the node by their usual route. Over the following weeks, which of the following best describes what happens inside the node?",
+  "topic": "Histology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L044",
+  "sourceRef": "OST520 (044) L - Lymphatic System - Schwartz.pdf, pp. 13, 18; transcript 049 (L044), 07:31-07:46, 12:49-13:31",
+  "covers": [
+   "L044-O1",
+   "L044-O2",
+   "L044-O5"
+  ],
+  "concepts": [
+   "hev-lymphocyte-entry",
+   "node-entry-routes"
+  ],
+  "applicationLevel": "mechanism",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "rationale": "The lecture describes two entry routes into a lymph node: antigen and the dendritic cells carrying it drain in through afferent lymphatic vessels from peripheral tissue, and naive lymphocytes circulating in blood cross directly into the parenchyma through high endothelial venules, the trafficking function the lecture assigns specifically to HEVs. No alternate route is described for antigen draining from a given tissue territory, and no alternate route is described for naive lymphocytes crossing in directly from blood, so blocking one route without touching the other has an asymmetric effect: an obstructed afferent supply starves the node of antigen and dendritic cells from that drainage territory while its intake of naive lymphocytes from blood, and so its basic cellularity, continues uninterrupted through the HEVs.",
+  "id": "OQ4-L044-C1A",
+  "options": [
+   "Antigen and dendritic cells from the skin keep arriving by way of the blood, while new lymphocyte entry through the HEVs stops, so the node cannot answer that skin's antigens.",
+   "New naive lymphocytes keep crossing into the node through its HEVs, but the skin's antigen and dendritic cells cannot reach the node, so it cannot answer that skin's antigens.",
+   "Because the obstructed afferent vessels were the node's only route for new cells, the node stops receiving any lymphocytes and cannot answer any antigen.",
+   "Naive lymphocytes crossing into the node through the HEVs also carry the skin's antigen and dendritic cells with them, so the node's response to that skin is unaffected.",
+   "Lymph that would normally leave through the node's single efferent vessel reverses direction and carries the skin's antigen into the node instead, so the node still receives it."
+  ],
+  "optionExplanations": [
+   "This swaps each route's cargo. The lecture ties antigen and dendritic-cell delivery to the afferent lymphatics, not to blood, and ties lymphocyte entry to the HEVs; an afferent obstruction has no described effect on the HEVs, so there is no basis for lymphocyte entry through the HEVs to stop, and no route here carries skin antigen through the blood.",
+   "The lecture ties antigen and dendritic-cell drainage from peripheral tissue specifically to the afferent lymphatic route, and separately describes HEVs as letting blood-borne lymphocytes cross directly into the node's parenchyma, the trafficking role the lecture assigns to them. Blocking only the afferent vessels leaves the HEV route open, so naive lymphocytes keep crossing in from blood. No alternate route is described for antigen and dendritic cells draining from that skin, so they cannot reach the node, and it loses the ability to answer that skin's antigens even though lymphocytes are still arriving.",
+   "This treats the afferent lymphatics as the node's only route for new cells, but the lecture also describes HEVs as a second route by which blood-borne lymphocytes cross into the parenchyma; an obstruction limited to the afferent vessels leaves that second route intact, so lymphocyte entry does not stop.",
+   "The lecture describes the HEVs as a crossing point for lymphocytes from blood, not for antigen or dendritic cells, which it assigns to the afferent lymphatics instead. Nothing supports the idea that lymphocytes using the HEVs also carry antigen with them, so an obstructed afferent supply still leaves the node without that skin's antigen.",
+   "The lecture describes one efferent vessel carrying lymph out of a node, and in a chain of nodes that same vessel becomes an afferent vessel for the next node downstream; it never describes lymph inside one node that reverses direction to carry antigen back in. Without that mechanism, an obstructed afferent supply is not rescued this way."
+  ],
+  "optionMarkers": [
+   "lymphocyte entry through the hevs",
+   "cannot reach the node",
+   "the node's only route for new cells",
+   "the hevs also carry",
+   "reverses direction"
+  ],
+  "answer": 1,
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "It correctly recognizes that one route has been obstructed and one has not, but assigns the wrong cargo to each: the lecture ties antigen and dendritic-cell delivery to the afferent lymphatics and lymphocyte entry to the HEVs, and an afferent obstruction has no described effect on the HEVs themselves."
+  }
+ },
+ {
+  "stem": "A rare congenital disorder prevents the postcapillary venules in a patient's lymph nodes from ever developing the tall, specialized endothelium of high endothelial venules; the vessels remain ordinary flat-walled venules instead. Afferent lymphatic vessels, cortical and medullary sinuses, and the single efferent lymphatic vessel of each node are structurally normal, and antigen draining from peripheral tissue still reaches these nodes normally. Which of the following best describes the expected effect on the node's lymphocyte population and its ability to answer that antigen?",
+  "topic": "Histology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L044",
+  "sourceRef": "OST520 (044) L - Lymphatic System - Schwartz.pdf, pp. 13, 18; transcript 049 (L044), 07:31-07:46, 12:49-13:31",
+  "covers": [
+   "L044-O1",
+   "L044-O2",
+   "L044-O5"
+  ],
+  "concepts": [
+   "hev-lymphocyte-entry",
+   "node-entry-routes"
+  ],
+  "applicationLevel": "mechanism",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "rationale": "Losing the HEV route is the mirror image of losing the afferent route: naive lymphocytes lose their means of crossing from blood into the node's parenchyma while antigen and dendritic cells, which travel by the separate afferent lymphatic route, keep arriving unimpeded. The node is not starved of antigen here; it is starved of the fresh naive lymphocytes that would otherwise survey that antigen, which is the functional role the lecture assigns specifically to the high endothelial venule.",
+  "id": "OQ4-L044-C1B",
+  "options": [
+   "Antigen entering through the afferent lymph also comes to deliver naive lymphocytes into the node, so its naive lymphocyte supply is unaffected.",
+   "Because HEVs failed to develop, the node cannot receive antigen, dendritic cells, or lymphocytes by any route, since it has no separate and sufficient route left once the HEVs are gone.",
+   "Naive lymphocytes from the blood cannot cross into the node, so its supply of fresh naive lymphocytes falls even though antigen keeps arriving normally through the afferent lymph.",
+   "Without high endothelial venules, lymph can no longer move through the cortical and medullary sinuses, so antigen never reaches the follicles or paracortex.",
+   "Naive lymphocytes already resident in the node before this defect simply live longer to compensate, so its lymphocyte population is unaffected long-term."
+  ],
+  "optionExplanations": [
+   "Afferent lymph is described as the route for antigen, dendritic cells, and other lymph-borne leukocytes, while the lecture assigns naive lymphocyte entry from blood specifically to the HEVs, the very route this disorder removes. Nothing supports antigen entering through the afferent lymph coming to deliver naive lymphocytes into the node as well, so losing the HEVs still lowers the node's naive lymphocyte supply.",
+   "This treats HEV development as necessary for all node entry, but the lecture describes the afferent lymphatics, unaffected here, as a separate and sufficient route for antigen and dendritic cells; losing only the HEVs does not close every route, so antigen keeps arriving by that route.",
+   "HEVs are the crossing point that lets blood-borne lymphocytes enter a node's parenchyma; ordinary flat venules do not support this. Without HEVs, naive lymphocytes cannot cross into the node from blood, so the supply of fresh naive lymphocytes falls. Antigen still arrives because that cargo travels through the unaffected afferent lymphatics, so the node keeps receiving antigen but has fewer new naive lymphocytes on hand to answer it.",
+   "Lymph moving through the cortical and medullary sinuses is part of the path lymph takes after entering through afferent vessels, and the lecture never ties that flow to the HEVs; a defect confined to blood-borne lymphocyte entry does not stop lymph from moving through the cortical and medullary sinuses toward the follicles and paracortex.",
+   "The lecture describes naive and activated lymphocytes recirculating through HEVs and the efferent vessel, not a resident population that would live longer to compensate for a closed entry route; without new entrants replacing recirculating cells, a population living longer to compensate is not a mechanism the lecture provides."
+  ],
+  "optionMarkers": [
+   "deliver naive lymphocytes into the node",
+   "separate and sufficient route",
+   "cannot cross into the node",
+   "cortical and medullary sinuses",
+   "live longer to compensate"
+  ],
+  "answer": 2,
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "It correctly identifies that afferent lymph keeps functioning, but has that route also supply the naive lymphocytes HEVs normally admit; the lecture keeps the two cargoes separate, so the node's naive lymphocyte supply still falls."
+  }
+ },
+ {
+  "stem": "A patient with systemic lupus erythematosus develops diffuse lymph node enlargement. Biopsy of one node shows lymphoid follicles that are more numerous and larger than typical, each containing a lighter-staining center surrounded by a darker rim of small lymphocytes; the deep cortex and paracortex, examined on the same section, show a lymphocyte density and area within the normal range. No organisms or other evidence of infection are found within the node. Which of the following best describes which response arm is engaged, and how this enlargement should be classified?",
+  "topic": "Histology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L044",
+  "sourceRef": "OST520 (044) L - Lymphatic System - Schwartz.pdf, pp. 13-14, 16; transcript 049 (L044), 07:46-09:44, 10:50-11:20",
+  "covers": [
+   "L044-O1",
+   "L044-O2",
+   "L044-O4",
+   "L044-O6",
+   "L044-O7"
+  ],
+  "concepts": [
+   "follicular-vs-paracortical-hyperplasia",
+   "lymphadenopathy-vs-lymphadenitis"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "rationale": "The lecture assigns follicular hyperplasia, an increase in the number and size of lymphoid follicles with germinal centers, to an engaged humoral immune response, and assigns paracortical hyperplasia, marked by a paracortex several times its normal size, to a T-cell-mediated response. Which compartment is expanded therefore identifies which arm is active. Separately, the lecture narrows lymphadenitis to enlargement caused by infection within the node itself, and treats lymphadenitis as one type of the broader term lymphadenopathy, which covers any localized or systemic node swelling; with no organisms found here, there is no infection within the node itself to narrow the case to lymphadenitis, so the pattern is lymphadenopathy from antigen stimulation elsewhere rather than infection inside the node.",
+  "id": "OQ4-L044-C2A",
+  "options": [
+   "Follicular hyperplasia is engaged, and the enlargement should be narrowed to lymphadenitis even though no infection within the node itself was found.",
+   "Follicular hyperplasia, the humoral arm, is engaged; this is lymphadenopathy from antigen stimulation elsewhere, not infection inside the node.",
+   "Paracortical hyperplasia is engaged, because the paracortex is where the expansion is that is producing this node's enlargement, not the follicles.",
+   "Both the follicular and paracortical compartments are equally expanded here, reflecting simultaneous humoral and T-cell-mediated responses together.",
+   "The follicles seen here are primary follicles, which by definition lack germinal centers, so no humoral response has yet been meaningfully engaged."
+  ],
+  "optionExplanations": [
+   "This correctly names the engaged compartment but misapplies the more specific label. The lecture reserves lymphadenitis for enlargement caused by infection within the node itself, with lymphadenitis counting as one type of the broader term lymphadenopathy; with no organisms found here, there is no infection within the node itself to justify narrowing the case to lymphadenitis, so the general term lymphadenopathy is the one the finding supports.",
+   "The follicles described here, more numerous and larger than typical, each with a lighter-staining center surrounded by a darker rim of small lymphocytes, are secondary follicles with germinal centers, which the lecture ties to an engaged humoral response, follicular hyperplasia. The paracortex's lymphocyte density and area falling within the normal range argues against the T-cell-mediated paracortical hyperplasia pattern, which the lecture describes as several times normal size. The lecture reserves the narrower term lymphadenitis for enlargement caused by infection within the node itself, and treats lymphadenitis as one type of the broader term lymphadenopathy; with no organisms found in this node, there is no infection within the node itself to narrow the case to lymphadenitis, so the pattern is lymphadenopathy from antigen stimulation elsewhere, not infection inside the node.",
+   "This assigns the expansion to the wrong compartment. Paracortical hyperplasia is a T-cell-mediated pattern that the lecture ties to an expanded paracortex, but the finding described here is more numerous, larger follicles containing germinal centers while the paracortex's density and area remain within the normal range; the paracortex is where the expansion is supposed to be for this diagnosis, and here it is not.",
+   "The stem describes only the follicles as enlarged and containing germinal centers, while the paracortex's density and area remain within the normal range; nothing here shows the paracortex equally expanded, so there is no support for both compartments being engaged together.",
+   "The stem describes the enlarged follicles as containing a lighter-staining center surrounded by a darker rim of lymphocytes, the lecture's description of a germinal center, and the lecture defines a follicle with a germinal center as secondary, not primary. Follicles that lack germinal centers would argue against an engaged humoral response, but that is not the finding described here."
+  ],
+  "optionMarkers": [
+   "infection within the node itself",
+   "stimulation elsewhere, not infection inside the node",
+   "paracortex is where the expansion is",
+   "equally expanded",
+   "lack germinal centers"
+  ],
+  "answer": 1,
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "It correctly identifies the follicular, B-cell compartment as the one that is expanded, but narrows the case to lymphadenitis, infection within the node itself, when no organisms were found; without that finding, the case fits only the broader term, lymphadenopathy, of which lymphadenitis is one type."
+  }
+ },
+ {
+  "stem": "A college student with infectious mononucleosis has a lymph node biopsied. The paracortex is expanded to three to four times its normal size and is densely populated by lymphocytes with enlarged, active-appearing nuclei; where the expanded paracortex meets the cortex, the germinal centers of adjacent secondary follicles appear visibly smaller than in a typical reactive node, though the follicles themselves are still present. Which of the following best interprets the smaller germinal centers?",
+  "topic": "Histology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L044",
+  "sourceRef": "OST520 (044) L - Lymphatic System - Schwartz.pdf, p. 14; transcript 049 (L044), 09:20-09:44",
+  "covers": [
+   "L044-O1",
+   "L044-O2",
+   "L044-O4",
+   "L044-O6",
+   "L044-O7"
+  ],
+  "concepts": [
+   "follicular-vs-paracortical-hyperplasia",
+   "lymphadenopathy-vs-lymphadenitis"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "rationale": "The lecture's own example of paracortical hyperplasia is mononucleosis, where activated T cells reach three to four times their normal size and can encroach on germinal centers. Encroachment is a description of adjacent compartments crowding one another as the T-cell zone expands, not a statement about the biological status of the follicles themselves. Reading compressed germinal centers as a failing humoral response confuses an architectural consequence of one compartment's expansion with the functional state of the other, which the lecture does not address in that case.",
+  "id": "OQ4-L044-C2B",
+  "options": [
+   "Paracortical hyperplasia is engaged, and the compressed germinal centers show that the humoral response is failing at the same time.",
+   "Paracortical hyperplasia is engaged; the smaller germinal centers are follicles crowded by the expanding paracortex, not failed humoral activity.",
+   "Because the total node size is markedly enlarged overall, both the follicular and paracortical compartments must be proportionally and equally engaged.",
+   "This case is best classified as lymphadenitis, because Epstein-Barr virus infects lymphocytes that reside inside this very node directly.",
+   "The germinal centers are shrinking because the humoral response has been engaged and has already run its course, leaving only mantle-zone lymphocytes."
+  ],
+  "optionExplanations": [
+   "This correctly identifies the expanded compartment but misreads the compressed follicles. The lecture attributes their reduced visible size to the paracortex encroaching on them, a spatial consequence of T-cell expansion; it does not describe this encroachment as evidence that the humoral response is failing, only that the two compartments are crowded together.",
+   "The lecture attributes mononucleosis specifically to paracortical hyperplasia, in which activated T cells reach three to four times their normal size and can encroach on germinal centers. That encroachment is the expanding T-cell compartment pressing on adjacent structures; the germinal centers described here are follicles crowded by the expanding paracortex, a spatial effect, not a sign that the humoral response inside them has stopped working.",
+   "The lecture ties the type of hyperplasia to which specific compartment expands, not to overall total node size; a paracortex enlarged to three to four times normal can by itself account for the node's enlargement while the follicular compartment is passively crowded rather than independently activated.",
+   "The lecture cites mononucleosis specifically as its example of paracortical hyperplasia; nothing in the lecture ties the claim that Epstein-Barr virus infects lymphocytes that reside inside this very node to a narrower lymphadenitis classification here, so there is no support in the lecture for reclassifying this case away from the paracortical hyperplasia pattern it names.",
+   "Nothing in the lecture ties germinal center size to a completed humoral response. In this case the lecture attributes reduced visible germinal centers to compression by the expanding paracortex, not to a claim that the germinal centers are shrinking because the humoral response finished and only mantle-zone lymphocytes remain."
+  ],
+  "optionMarkers": [
+   "the humoral response is failing",
+   "crowded by the expanding paracortex",
+   "total node size",
+   "epstein-barr virus infects lymphocytes",
+   "the germinal centers are shrinking"
+  ],
+  "answer": 1,
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "It names the correct engaged compartment, paracortical hyperplasia, but converts the encroachment on germinal centers, a spatial crowding effect the lecture describes, into a claim that the humoral response itself has failed, which the lecture never states."
+  }
+ },
+ {
+  "stem": "An experimental agent selectively destroys the periarteriolar lymphatic sheaths and lymphoid follicles of the spleen while leaving the red pulp's cords of Billroth, sinuses, and resident macrophages structurally intact. Which of the following best predicts the effect on the spleen's two major functions?",
+  "topic": "Histology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L044",
+  "sourceRef": "OST520 (044) L - Lymphatic System - Schwartz.pdf, pp. 22-23, 26, 28; transcript 049 (L044), 16:03-17:16, 19:26-19:53, 21:53-22:17",
+  "covers": [
+   "L044-O1",
+   "L044-O10",
+   "L044-O2",
+   "L044-O6",
+   "L044-O8",
+   "L044-O9"
+  ],
+  "concepts": [
+   "splenic-white-vs-red-pulp",
+   "open-circulation"
+  ],
+  "applicationLevel": "mechanism",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "rationale": "The spleen performs two functions in two structurally separate compartments along the same blood path. White pulp, organized around the central arteriole's periarteriolar lymphatic sheath and adjacent follicles, concentrates T and B lymphocytes where they can monitor incoming blood for antigen. Red pulp, downstream, filters blood through the cords of Billroth and the sinuses, where macrophages remove aged, less deformable red cells. Destroying the white pulp removes the site of lymphocyte surveillance without touching the separate cords and sinuses where filtration happens, so filtration continues while surveillance is lost.",
+  "id": "OQ4-L044-C3A",
+  "options": [
+   "Filtering aged red cells would be lost, while surveillance of blood-borne antigen by lymphocytes continues normally, because the red pulp depends on the PALS to trap them.",
+   "Adaptive surveillance of blood-borne antigen is lost, but red pulp filtration of aged red cells continues, since it depends on the cords and sinuses, not the PALS.",
+   "Because the PALS anchor the central arteriole, destroying them means the open circulation itself would collapse, so the red pulp could no longer filter blood at all.",
+   "Because the white pulp organizes the spleen's parenchyma, the spleen would lose both antigen surveillance and red-cell filtration if the PALS and follicles were destroyed.",
+   "The cords of Billroth would be unaffected, and since they alone perform blood filtration, the spleen's only loss would be a smaller capsule and fewer trabeculae."
+  ],
+  "optionExplanations": [
+   "This reverses which compartment does which job. The lecture ties red-cell filtration to the red pulp's cords of Billroth and sinuses, and ties T- and B-cell antigen surveillance to the white pulp's PALS and follicles; destroying the PALS and follicles removes the surveillance function, and filtering aged red cells would be lost only if the cords and sinuses themselves were damaged, which they are not here.",
+   "The lecture assigns T- and B-cell surveillance of incoming blood to the white pulp, built around the central arteriole's PALS and adjacent follicles; losing that tissue removes the site where lymphocytes concentrate to meet blood-borne antigen, so adaptive surveillance of blood-borne antigen is lost. Filtration of aged, less deformable red cells happens downstream in the red pulp's cords and sinuses, structures the lecture never ties to the PALS or follicles, so that function continues.",
+   "The lecture defines open circulation by the absence of confinement within vessels as blood leaves the terminal arterial capillaries into the cords, a step in the red pulp's own vascular path; it does not describe that step as depending on the PALS sheath around the central arteriole, so there is no basis for saying the open circulation itself would collapse when only the PALS and follicles are destroyed.",
+   "The lecture describes red-cell filtration as a function of the red pulp's cords and sinuses, which are structurally separate from the white pulp's PALS and follicles; nothing supports the claim that the spleen would lose both antigen surveillance and red-cell filtration when only the white pulp is destroyed and the cords and sinuses are untouched.",
+   "It is correct that the cords of Billroth would be unaffected, since they are structurally separate from the PALS and follicles, but this understates the loss: the lecture assigns antigen surveillance specifically to the white pulp's lymphocytes, so destroying the PALS and follicles removes that function, not merely cosmetic structures like capsule or trabeculae."
+  ],
+  "optionMarkers": [
+   "filtering aged red cells would be lost",
+   "surveillance of blood-borne antigen is lost",
+   "open circulation itself would collapse",
+   "lose both antigen surveillance and red-cell filtration",
+   "the cords of billroth would be unaffected"
+  ],
+  "answer": 1,
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "It correctly recognizes that one splenic function survives and one does not, but swaps which compartment performs which job: the lecture assigns red-cell filtration to the red pulp's cords and sinuses and antigen surveillance to the white pulp's PALS and follicles, not the reverse."
+  }
+ },
+ {
+  "stem": "A different congenital condition replaces the normal rod-like, discontinuously joined endothelial cells lining the splenic sinuses with continuous, tightly joined endothelium, while the central arterioles, PALS, and follicles of the white pulp develop normally. Which of the following best predicts the effect on the spleen's two major functions?",
+  "topic": "Histology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L044",
+  "sourceRef": "OST520 (044) L - Lymphatic System - Schwartz.pdf, pp. 23, 27-28; transcript 049 (L044), 16:42-17:16, 19:54-21:52",
+  "covers": [
+   "L044-O1",
+   "L044-O10",
+   "L044-O2",
+   "L044-O6",
+   "L044-O8",
+   "L044-O9"
+  ],
+  "concepts": [
+   "splenic-white-vs-red-pulp",
+   "open-circulation"
+  ],
+  "applicationLevel": "mechanism",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "rationale": "The lecture locates two separate structural features along the splenic blood path: blood leaves vascular confinement where terminal arterial capillaries open into the cords of Billroth, which is the step that makes splenic circulation open, and blood is later filtered where it percolates through the sinuses, whose rod-like endothelial cells and discontinuous basal lamina force aged, less deformable red cells into contact with resident macrophages. A change confined to the sinus wall closes the second, filtration-specific step without touching the first, so the spleen keeps its open circulation and its upstream white-pulp antigen surveillance while losing its ability to sieve aged red cells out of the blood.",
+  "id": "OQ4-L044-C3B",
+  "options": [
+   "The open circulation would be abolished everywhere in the spleen, since a continuous sinus lining confines blood within vessels throughout the organ.",
+   "White pulp surveillance of blood-borne antigen would also be lost, because the same reticular meshwork that makes sinuses discontinuous also supports the PALS and follicles.",
+   "Filtration of aged red cells is impaired because the sieving step that captures aged, less deformable red cells is lost, while white pulp antigen surveillance is unaffected.",
+   "Filtration continues fully unimpaired, because the macrophages would simply relocate to wherever blood is still actively moving through the spleen.",
+   "Both filtration and surveillance would continue exactly as before, since the change is confined to a single cell layer that does not participate in either function."
+  ],
+  "optionExplanations": [
+   "The lecture locates the open step of splenic circulation earlier, where blood leaves the terminal arterial capillaries and percolates through the cords of Billroth before ever reaching a sinus; that exit from vascular confinement is untouched by a change limited to the sinus wall downstream, so the open circulation would be abolished everywhere in the spleen overstates a defect confined to the sinuses.",
+   "The lecture places antigen surveillance at the central arteriole, its PALS, and the follicles, structures upstream of the sinuses and never described as depending on the sinus wall's discontinuous endothelium; a defect confined to the sinus lining gives no basis for concluding that white pulp surveillance of blood-borne antigen would also be lost.",
+   "The lecture ties red-cell capture to red cells squeezing, or failing to squeeze, through the gaps of the sinus wall's discontinuous, rod-like endothelium as blood percolates through the cords; sealing those gaps means the sieving step that captures aged, less deformable red cells is lost, regardless of how many macrophages sit nearby. The white pulp's antigen surveillance happens upstream at the central arteriole and follicles and does not depend on sinus wall structure, so it continues.",
+   "The lecture ties red-cell capture to a mechanical step, blood being forced through the sinus wall's gaps so that less-deformable aged cells are caught, not merely to macrophage presence somewhere in the organ; even if the macrophages would simply relocate, that does not restore a sieving step whose physical gaps have been closed.",
+   "The lecture identifies the sinus endothelium's discontinuous, rod-like structure as the specific feature that permits filtration of blood in the red pulp, so the claim that both filtration and surveillance would continue exactly as before rests on treating that layer as uninvolved in either function; filtration, at least, would be affected."
+  ],
+  "optionMarkers": [
+   "the open circulation would be abolished everywhere in the spleen",
+   "white pulp surveillance of blood-borne antigen would also be lost",
+   "the sieving step that captures aged, less deformable red cells is lost",
+   "the macrophages would simply relocate",
+   "both filtration and surveillance would continue exactly as before"
+  ],
+  "answer": 2,
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "It correctly identifies that the sinus wall change disrupts something, but extends the defect past the sinuses to the entire open circulation, when the lecture places the open step of splenic blood flow earlier, at the capillary-to-cord transition, a step this scenario leaves untouched."
+  }
+ },
+ {
+  "stem": "A strain of gut bacteria is engineered to remain in the intestinal lumen and cannot invade enterocytes; a drug given alongside it selectively disables the apical transcytosis machinery of M cells in a segment of Peyer's patch-covered ileum without disrupting the surrounding follicle-associated epithelium, and the dendritic cells and macrophages of the underlying subepithelial dome remain structurally and functionally intact. Which of the following best predicts the mucosal immune response to this bacterium in that segment?",
+  "topic": "Histology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L044",
+  "sourceRef": "OST520 (044) L - Lymphatic System - Schwartz.pdf, pp. 29, 31; transcript 049 (L044), 22:26-22:47, 23:53-24:47",
+  "covers": [
+   "L044-O11",
+   "L044-O2"
+  ],
+  "concepts": [
+   "m-cell-antigen-sampling",
+   "no-afferent-lymphatics-in-peyers-patches"
+  ],
+  "applicationLevel": "mechanism",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "rationale": "Peyer's patches lack afferent lymphatics, so unlike a lymph node they have no lymph-borne route for antigen to reach their lymphoid tissue. The lecture instead describes M cells as sampling luminal antigen across the apical surface of the follicle-associated epithelium and delivering it to dendritic cells, macrophages, and possibly B cells in the subepithelial dome, which is what triggers an antigen-specific response, including secretory IgA. Disabling only the M cells' uptake step removes the path the lecture describes for that antigen to reach the dome's antigen-presenting cells, so the M cell-dependent response to it fails in this segment even though those cells remain otherwise functional; the lecture does not establish that every other possible route is closed, only that this is the route it describes for Peyer's patches.",
+  "id": "OQ4-L044-C4A",
+  "options": [
+   "The antigen will still reach the dome through afferent lymphatics draining the surrounding intestinal tissue, so the response proceeds normally.",
+   "Because the dendritic cells and macrophages in the dome will still mount a response on their own, blocking M cell uptake has no effect on the outcome.",
+   "The antigen never reaches the dendritic cells and macrophages beneath the epithelium, so the M cell-dependent dome response fails here.",
+   "The bacteria will invade directly through the disrupted epithelium instead, reaching the dome by a path that bypasses M cells entirely.",
+   "The organized B cell follicle itself takes up the antigen directly from the lumen, bypassing the need for M cells or the dome entirely."
+  ],
+  "optionExplanations": [
+   "The lecture states that Peyer's patches have no afferent lymphatics, unlike lymph nodes, so there is no route by which this antigen could still reach the dome through afferent lymphatics; M cell transcytosis across the epithelium is the route the lecture describes for luminal antigen to reach the dome.",
+   "This correctly notes the dome's antigen-presenting cells are unaffected, but the lecture describes them as responding to antigen that M cells deliver to them, not as detecting luminal antigen independently; the claim that the dendritic cells and macrophages in the dome will still mount a response only holds if the antigen reaches them by some other means, which the lecture does not provide here.",
+   "The lecture describes M cells engulfing luminal antigen across their apical surface and delivering it to the dendritic cells, macrophages, and possibly B cells of the subepithelial dome, which is what triggers antigen-specific responses including secretory IgA. Peyer's patches also have no afferent lymphatics, so lymph cannot bring this antigen in by an alternate path. Disabling only the M cells' apical uptake means the antigen never reaches the dendritic cells and macrophages beneath, so those otherwise intact cells are never presented with it by this route, and the M cell-dependent antigen-specific response to it does not occur in this segment.",
+   "The scenario disables only the M cells' apical transcytosis machinery, leaving the surrounding epithelial barrier intact; the lecture does not describe a mechanism by which bacteria invade directly through the disrupted epithelium when the epithelium itself has not been described as disrupted.",
+   "The lecture places the organized B cell follicle beneath the follicle-associated epithelium, not exposed to the lumen; it describes M cells, not the follicle, as the cells that sample luminal antigen, so there is no support for the claim that the B cell follicle itself takes up the antigen directly from the lumen."
+  ],
+  "optionMarkers": [
+   "still reach the dome through afferent lymphatics",
+   "the dendritic cells and macrophages in the dome will still mount a response",
+   "never reaches the dendritic cells and macrophages beneath",
+   "invade directly through the disrupted epithelium",
+   "b cell follicle itself takes up the antigen directly from the lumen"
+  ],
+  "answer": 2,
+  "closestDistractor": {
+   "index": 1,
+   "why_wrong": "It correctly leaves the dome's dendritic cells and macrophages structurally and functionally intact, but assumes they can still be activated without receiving the antigen, when the lecture makes M cell delivery the step that presents antigen to those cells in the first place."
+  }
+ },
+ {
+  "stem": "A different luminal antigen is tracked in an experimental model of Peyer's patch M cells. Imaging confirms the antigen is engulfed across the apical surface of M cells normally, but a separate trafficking defect prevents its release into the subepithelial dome, so the antigen stays trapped inside the M cells. The dendritic cells and macrophages of the dome are present and otherwise functional but never receive it. Which of the following best predicts the antigen-specific mucosal response to this antigen, and why?",
+  "topic": "Histology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L044",
+  "sourceRef": "OST520 (044) L - Lymphatic System - Schwartz.pdf, p. 31; transcript 049 (L044), 23:53-24:47",
+  "covers": [
+   "L044-O11",
+   "L044-O2"
+  ],
+  "concepts": [
+   "m-cell-antigen-sampling",
+   "no-afferent-lymphatics-in-peyers-patches"
+  ],
+  "applicationLevel": "mechanism",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "rationale": "The lecture's description of M cell function has two named steps rather than one: the cells engulf luminal antigen across their apical surface, and separately deliver it to dendritic cells, macrophages, and possibly B cells in the subepithelial dome, which is what triggers the antigen-specific response, including secretory IgA. Because a route is only completed when both steps succeed, a defect that stops delivery while leaving uptake intact produces the same functional failure as a defect in uptake itself: antigen that never reaches the dome's antigen-presenting cells cannot trigger the dome-mediated response the lecture describes, regardless of which of the two steps was interrupted; the lecture does not establish that no other route exists, only that this is the route it describes.",
+  "id": "OQ4-L044-C4B",
+  "options": [
+   "The antigen-specific response proceeds normally, because engulfed antigen is functionally equivalent to delivered antigen once M cells have taken it up.",
+   "For the response to fail here, the apical uptake step must also be impaired, since a delivery-only defect could not by itself prevent dendritic cells from seeing the antigen.",
+   "The dome-mediated response fails, because the antigen is trapped inside the M cell instead of being handed to the dome, so the dome's cells never see it.",
+   "The response fails only if the germinal centers inside the follicle are absent, since sIgA is described as being produced there rather than in the dome.",
+   "The response still proceeds because the dendritic cells migrate up into the M cell itself to retrieve the trapped antigen directly from inside it."
+  ],
+  "optionExplanations": [
+   "The lecture separates engulfing antigen at the apical surface from delivering it to the subepithelial dome as two distinct steps in M cell sampling; it never states that engulfed antigen is functionally equivalent to delivered antigen once inside the M cell, and a defect confined to delivery leaves the dome's cells without access to it regardless of successful uptake.",
+   "This assumes the apical uptake step must also be impaired for the response to fail, but the lecture describes delivery to the subepithelial dome, not apical engulfment alone, as what presents antigen to dendritic cells and macrophages; a delivery-only defect is sufficient by itself to keep them from seeing antigen that was engulfed but never handed off.",
+   "The lecture describes M cell antigen sampling as two steps: engulfing antigen across the apical surface, and delivering it to the dendritic cells, macrophages, and possibly B cells of the subepithelial dome. A defect that blocks only the second step leaves antigen trapped inside the M cell instead of being handed to the dome, so the dome's antigen-presenting cells, though present and otherwise functional, never receive it, and the dome-mediated antigen-specific response the lecture describes is not triggered by this antigen.",
+   "The lecture attributes triggering the antigen-specific response, including sIgA production, to antigen delivered to the dome's dendritic cells, macrophages, and possibly B cells, not to a rule that the response fails only if the germinal centers inside the follicle are absent; a blocked handoff to the dome is sufficient to prevent the response regardless of germinal center status.",
+   "The lecture describes M cells delivering antigen down to dendritic cells stationed in the subepithelial dome; it never describes a route in which the dendritic cells migrate up into the M cell to retrieve antigen, so trapped antigen stays inaccessible to them."
+  ],
+  "optionMarkers": [
+   "engulfed antigen is functionally equivalent to delivered antigen",
+   "the apical uptake step must also be impaired",
+   "trapped inside the M cell instead of being handed to the dome",
+   "the germinal centers inside the follicle are absent",
+   "the dendritic cells migrate up into the M cell"
+  ],
+  "answer": 2,
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "It correctly tracks that antigen was engulfed by the M cell, but treats engulfment alone as sufficient for antigen-presenting cells to encounter it, collapsing the lecture's two distinct steps, apical uptake and delivery to the dome, into one."
+  }
+ },
+ {
+  "topic": "Hematology & Physiology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L045",
+  "sourceRef": "OST520 (045) L - CBC - Schwartz.pdf, pp. 14, 17-19, 21; transcript 050 (L045), 06:46-07:29, 08:46-10:20, 11:20-11:47, 12:56-14:15",
+  "covers": [
+   "L045-O3",
+   "L045-O4",
+   "L045-O7"
+  ],
+  "concepts": [
+   "rbc-index-morphology-correlation",
+   "mchc-comparative-reasoning"
+  ],
+  "applicationLevel": "presentation",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "Two patients each have an MCV flagged L on their CBC. Patient 1: Hb 10 g/dL, Hct 30%. Patient 2: Hb 10 g/dL, Hct 45%. Which patient's red cells would you expect to show more pronounced pallor on a Wright-stained smear, and what is the best-supported reason?",
+  "rationale": "Hemoglobin as reported is a whole-blood concentration, while pallor on a smear reflects hemoglobin concentration inside the packed red cell mass, which requires relating hemoglobin to hematocrit for each patient individually. Both patients report the same hemoglobin, so the comparison turns on the hematocrit each carries it in: dividing hemoglobin by hematocrit gives Patient 1 about 33.3 and Patient 2 about 22.2, so Patient 2's red cells hold less hemoglobin per unit of packed volume and are the ones expected to show more pronounced pallor. This conclusion follows from each patient's own numbers directly and does not depend on whether the lecture's three-times hematocrit-to-hemoglobin shortcut, which assumes normal red cells, holds for either of them.",
+  "id": "OQ4-L045-C2A",
+  "options": [
+   "Neither patient would show more pallor than the other, since both share an identical hemoglobin concentration of 10 g/dL in their blood",
+   "Patient 1: hematocrit divided by hemoglobin is smaller for her, 3 versus 4.5, read here as less hemoglobin per packed cell",
+   "Patient 2: the same 10 g/dL of hemoglobin is spread across a larger packed cell volume, 45% versus 30%, so each unit of her red cells holds less hemoglobin",
+   "Neither can be compared: Patient 1's hematocrit is close to three times her hemoglobin, needed before comparing color, which Patient 2 lacks",
+   "Neither patient's pallor can be predicted here: reference ranges for red cell parameters are reported separately by sex, and no sex is given for either patient"
+  ],
+  "optionExplanations": [
+   "This treats the reported hemoglobin value as the whole answer, but hemoglobin concentration in whole blood and hemoglobin concentration within the packed red cell mass are different quantities. Both patients do share an identical hemoglobin concentration of 10 g/dL in their blood, yet their very different hematocrits, 30% versus 45%, mean that same hemoglobin is packed into very different cell volumes, which is what governs pallor.",
+   "This inverts the ratio that matters: dividing hematocrit by hemoglobin gives 3 versus 4.5, and reading a smaller result as less hemoglobin per unit of packed cells has the relationship backward. Dividing hemoglobin by hematocrit instead, the correct direction, gives Patient 1 the larger value, meaning her cells are more concentrated with hemoglobin and would show less pallor, not more.",
+   "Hemoglobin concentration within the red cells, not the hemoglobin value itself, is what determines pallor. Both patients have the same 10 g/dL of hemoglobin, but the two hematocrits are 45% versus 30%. Dividing hemoglobin by hematocrit for each, 10/30 gives about 33.3 and 10/45 gives about 22.2, so Patient 2's red cells carry less hemoglobin per unit of packed volume and would be expected to show more pronounced pallor.",
+   "Patient 1's hematocrit is indeed close to three times her hemoglobin, and the lecture does state that relationship holds only for normal red cells. But that shortcut is a separate tool from directly dividing each patient's own reported hemoglobin by her own reported hematocrit, which is valid for both patients regardless of whether the three-times relationship holds for either of them.",
+   "The lecture ties its documented sex differences specifically to total red cell count, hemoglobin, and hematocrit reference ranges, not to a direct comparison of one patient's own hemoglobin against her own hematocrit; that comparison needs no reference range that would be reported separately by sex."
+  ],
+  "optionMarkers": [
+   "identical hemoglobin concentration of 10 g/dl",
+   "3 versus 4.5",
+   "45% versus 30%",
+   "close to three times her hemoglobin",
+   "reported separately by sex"
+  ],
+  "answer": 2,
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "It correctly notices that both patients share the same reported hemoglobin, but stops at that single shared number instead of relating it to each patient's own hematocrit; hemoglobin concentration in whole blood and hemoglobin concentration within the packed red cells are different quantities, and the second one is what a smear's pallor reflects."
+  }
+ },
+ {
+  "topic": "Hematology & Physiology",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L045",
+  "sourceRef": "OST520 (045) L - CBC - Schwartz.pdf, pp. 12, 17-19; transcript 050 (L045), 10:23-11:18, 12:56-14:15",
+  "covers": [
+   "L045-O3",
+   "L045-O7"
+  ],
+  "concepts": [
+   "rbc-indices",
+   "morphology-index-correlation"
+  ],
+  "applicationLevel": "presentation",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "A peripheral smear shows red cells that are, on average, smaller in diameter than the roughly 7.5 micrometre biconcave discs usually seen, but the central area of pallor in each cell takes up the same fraction of the cell as usual, about a third. Which pattern of RBC indices would you expect on this patient's CBC?",
+  "rationale": "Cell size and hemoglobin concentration are reported by different indices, and a third index, MCH, depends on both. A smaller average diameter is a low MCV. An unchanged fraction of central pallor is the lecture's visible marker of a normal hemoglobin concentration, so MCHC is normal. MCH is the hemoglobin carried by the average cell, that is volume times concentration, so it falls with the volume even though the concentration is untouched. Low MCV, low MCH, normal MCHC is the pattern of a small cell that is normally filled, as distinct from a hypochromic cell.",
+  "id": "OQ4-L045-C2B",
+  "options": [
+   "MCV, MCH and MCHC are all normal, because an unchanged pallor fraction means the red cell indices are unaffected",
+   "MCV is low while MCH is normal, because hemoglobin content per cell is set independently of cell size",
+   "MCV and MCH are low but MCHC is normal, because a smaller cell holds less hemoglobin at an unchanged concentration",
+   "MCV, MCH and MCHC are all low, because a red cell smaller than usual is under-filled with hemoglobin",
+   "MCV is low and MCHC is high, because the same hemoglobin is now packed into a smaller cell"
+  ],
+  "optionExplanations": [
+   "The pallor fraction speaks only to concentration. Calling them all normal ignores the other finding in the smear, a smaller average diameter, which is the description the lecture assigns to a low MCV.",
+   "MCH is normal cannot hold alongside a low MCV and a normal concentration. Hemoglobin content per cell is volume multiplied by concentration, so shrinking the cell while holding concentration steady must lower the content.",
+   "The cells are smaller, so MCV is low. MCH is the amount of hemoglobin carried by an average cell, so it falls with the volume: less cell means less hemoglobin, even when nothing is wrong with how concentrated that hemoglobin is. MCHC is the concentration itself, and the unchanged pallor fraction is what tells you the concentration is normal. So MCH is low but MCHC is normal, which is the pattern that separates a small normally filled cell from a hypochromic one.",
+   "Calling the indices all low is the tempting read, and it is right about MCV and MCH but wrong about the concentration. The lecture ties hypochromasia to an enlarged area of central pallor; here the pallor is the usual fraction of the cell, so the hemoglobin concentration is normal and only the cell's size and its total hemoglobin content have fallen.",
+   "MCHC is high would require the pallor area to shrink, since the lecture reads the central pallor as the visible marker of hemoglobin concentration. The stem states the pallor is the usual fraction of the cell, so the hemoglobin was not packed more tightly; there is simply less cell."
+  ],
+  "optionMarkers": [
+   "all normal",
+   "MCH is normal",
+   "MCHC is normal",
+   "all low",
+   "MCHC is high"
+  ],
+  "answer": 2,
+  "closestDistractor": {
+   "index": 3,
+   "why_wrong": "It reads a smaller cell as an under-filled cell, which is the common and clinically reasonable instinct, but the unchanged pallor fraction is the lecture's own marker of a normal hemoglobin concentration and separates low content from low concentration."
+  }
+ },
+ {
+  "topic": "Biochemistry",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L046",
+  "sourceRef": "OST520 (046) L- Iron Metabolism-Faner.pdf, pp. 7-8, 10-11, 14; transcript 051 (L046), 36:16-38:16, 44:29-47:51",
+  "covers": [
+   "L046-O1",
+   "L046-O3",
+   "L046-O4",
+   "L046-O5"
+  ],
+  "concepts": [
+   "iron-study-pattern-interpretation",
+   "tibc-ferritin-saturation"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "A 58-year-old woman with a 12-year history of active rheumatoid arthritis is evaluated for fatigue. She takes an iron-fortified multivitamin with orange juice each morning, has no history of gastrointestinal bleeding or increased enterocyte turnover, and a bone marrow aspirate obtained for an unrelated reason shows hemosiderin-laden macrophages but no ringed sideroblasts. Her iron studies show serum iron 55 µg/dL, total iron-binding capacity (TIBC) 190 µg/dL (reference 250-400 µg/dL), and serum ferritin 260 ng/mL (reference 15-200 ng/mL). Which best describes her iron stores and the reasoning that supports it?",
+  "rationale": "The source assigns three roles to these tests: a low ferritin with a compensatory rise in TIBC points to depleted stores, as in iron deficiency; an elevated ferritin together with a TIBC that stays within its normal range, alongside a percent saturation the source calls out as reliably elevated, points to overloaded stores, as in the source's own hemochromatosis case; and an elevated ferritin together with a reduced TIBC, which the source's self-instructional answer specifically assigns to anemia of chronic disease, points to iron that is sequestered in storage rather than truly excess or truly scarce. This patient's ferritin is high and her TIBC is low, matching the sequestered pattern, while her percent saturation alone looks unremarkable and is not the discriminating value here.",
+  "id": "OQ4-L046-C2A",
+  "options": [
+   "Depleted: a TIBC of 190 means little transferrin is available, which the source ties to iron deficiency regardless of the ferritin value",
+   "Overloaded: the elevated ferritin points to excess iron, as in the source's hemochromatosis case, where TIBC was 330 and not reduced",
+   "Sequestered: ferritin is high and TIBC is low, the pattern the source assigns to anemia of chronic disease",
+   "Normal stores: serum iron divided by TIBC is about 29%, falling inside the source's 20 to 55% reference range for saturation",
+   "Indeterminate: TIBC divided by iron gives a saturation near 345%, a value the source's own formula cannot produce"
+  ],
+  "optionExplanations": [
+   "A TIBC of 190 is indeed below the reference range, but the source ties a low TIBC together with a low ferritin to iron deficiency, where transferrin rises to scavenge scarce iron. Here ferritin is elevated rather than low, so the low TIBC by itself does not establish depletion.",
+   "A high ferritin is genuinely associated with iron overload, which is why this is the most tempting reading. The source's own hemochromatosis case had a TIBC of 330 µg/dL, inside the normal 250-400 range and not reduced, while transferrin saturation was the feature the source calls out as elevated. Here TIBC is reduced rather than normal, which the source assigns to sequestration, not to overload.",
+   "Ferritin at 260 ng/mL is above the 15-200 reference range, and TIBC at 190 µg/dL is below the 250-400 reference range. The source's own self-instructional answer for a chronic inflammatory presentation states that anemia of chronic disease usually presents with high ferritin and low transferrin, which is exactly this pattern: iron is retained in storage rather than being unavailable or in true excess.",
+   "Serum iron divided by TIBC, 55/190 x100, is about 29%, which does sit inside the source's 20 to 55% reference range for saturation. That single value does not override the ferritin and TIBC results, both of which fall outside their own reference ranges in the direction the source assigns to sequestered iron.",
+   "Reversing the source's formula, TIBC divided by iron x100, gives roughly 345%, a number the source's percent transferrin saturation cannot reach since it is defined as plasma iron divided by TIBC, not the other way around."
+  ],
+  "optionMarkers": [
+   "190",
+   "330",
+   "anemia of chronic disease",
+   "29%",
+   "345%"
+  ],
+  "answer": 2,
+  "closestDistractor": {
+   "index": 1,
+   "why_wrong": "Elevated ferritin is a real feature of iron overload, so reading it that way is a reasonable first move. The decisive clue is TIBC: the source's own hemochromatosis case shows a TIBC that stays within its normal range even with a markedly elevated ferritin and saturation, while this patient's TIBC is reduced, which the source attributes to sequestration rather than to overload."
+  }
+ },
+ {
+  "topic": "Biochemistry",
+  "src": "M",
+  "type": "mcq",
+  "context": "",
+  "unit": "UE2",
+  "course": "OST520",
+  "source": "week4-opus",
+  "sourceBlock": "L046",
+  "sourceRef": "OST520 (046) L- Iron Metabolism-Faner.pdf, pp. 7-8, 10-11, 14-15; transcript 051 (L046), 37:35-38:16, 44:29-47:51",
+  "covers": [
+   "L046-O1",
+   "L046-O3",
+   "L046-O4",
+   "L046-O5"
+  ],
+  "concepts": [
+   "iron-study-pattern-interpretation",
+   "tibc-ferritin-saturation"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "stem": "A 24-year-old woman with heavy menstrual bleeding and a diet that excludes red meat is evaluated for fatigue. She has no history of gastrointestinal bleeding beyond her periods and no known inflammatory or rheumatologic disease. Her iron studies show serum iron 42 µg/dL (reference 50-170 µg/dL), total iron-binding capacity (TIBC) 480 µg/dL (reference 250-400 µg/dL), and serum ferritin 9 ng/mL (reference 15-200 ng/mL). Which best describes her iron stores and the reasoning that supports it?",
+  "rationale": "The source ties three named patterns to these tests: a low ferritin together with a high TIBC, produced by transferrin rising to scavenge scarce iron, points to depleted stores, as in its own self-instructional iron-deficiency case; a high ferritin together with a low TIBC, its own differential note for anemia of chronic disease, points to iron sequestered in storage; and its hemochromatosis case shows that overloaded stores can present with a TIBC still inside the normal range rather than elevated. This patient's ferritin is low and her TIBC is high, matching the depleted pattern, while a modestly low serum iron alone and a reversed-formula calculation are not the discriminating values here.",
+  "id": "OQ4-L046-C2B",
+  "options": [
+   "Overloaded: an elevated TIBC of 480 µg/dL reflects a higher iron-binding capacity in the blood, consistent with excess stored iron",
+   "Sequestered: this low ferritin together with a high TIBC fits the pattern the source assigns to anemia of chronic disease",
+   "Depleted: ferritin is low and TIBC is high, the pattern the source ties to iron deficiency, where transferrin rises to scavenge iron",
+   "Saturation would be reported near 91%, calculated as unsaturated iron-binding capacity, TIBC minus iron, over TIBC, times 100",
+   "Normal stores: serum iron of 42 µg/dL is only modestly below the 50 µg/dL lower reference limit, so this pattern is within expected variation"
+  ],
+  "optionExplanations": [
+   "A higher TIBC number does sound like more iron-binding material is at work, which is why this reading is tempting. But the source's own hemochromatosis case, a clear instance of iron overload, had a TIBC of 330 µg/dL, inside the normal 250-400 range and not elevated, while the self-instructional answer ties a rising TIBC specifically to transferrin increasing when body iron falls, not when it is in excess; an elevated TIBC here signals scavenging for scarce iron, not excess stored iron.",
+   "The source's own self-instructional differential states that anemia of chronic disease usually presents with high ferritin and low transferrin, the opposite pairing from this patient's low ferritin and high TIBC. A low ferritin together with a high TIBC is the pattern the source predicts for iron deficiency instead, where transferrin rises specifically because iron stores, not transferrin, are what has fallen; that rules out anemia of chronic disease here.",
+   "Ferritin at 9 ng/mL is below the 15-200 ng/mL reference range and TIBC at 480 µg/dL is above the 250-400 µg/dL reference range. The source's own self-instructional answer for a dietary iron-deficiency presentation predicts exactly this pairing: serum ferritin lower than normal, and total iron-binding capacity increased because transferrin levels rise in an attempt to scavenge iron; percent transferrin saturation is predicted to be lower than normal as well, which fits a calculated value of about 9%, well under the 20-55% reference range.",
+   "The source's table defines unsaturated iron-binding capacity as TIBC minus iron, the fraction of transferrin not bound to iron, and defines percent transferrin saturation separately as iron divided by TIBC, times 100. Computing TIBC minus iron, divided by TIBC here gives roughly 91%, but that is the unsaturated iron-binding capacity's share, not the percent transferrin saturation, which the source's correct formula puts at about 9%.",
+   "Serum iron alone sitting just under its lower limit could plausibly reflect ordinary variation, which is why this option is tempting. But ferritin at 9 ng/mL and TIBC at 480 µg/dL both fall well outside their reference ranges in the same direction the source assigns to iron deficiency, and the saturation calculated from these values is about 9%, far under the 20-55% reference range; three concordant abnormal values are not explained away as within expected variation by one border-line value."
+  ],
+  "optionMarkers": [
+   "excess stored iron",
+   "anemia of chronic disease",
+   "scavenge iron",
+   "unsaturated iron-binding capacity",
+   "within expected variation"
+  ],
+  "answer": 2,
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "A high TIBC is a real, correctly noticed abnormality, so reading it as evidence of overload is a reasonable first move. The decisive clue is direction: the source's own hemochromatosis case keeps TIBC inside its normal range despite genuine overload, and ties a rising TIBC specifically to transferrin scavenging when body iron is falling, which is this patient's situation, not a case of excess."
+  }
+ }
+]
