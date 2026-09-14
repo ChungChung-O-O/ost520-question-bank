@@ -146,7 +146,7 @@ const unit2Boot=scoped({course:"OST520",unit:"UE2",source:"all"});
 assert.equal(unit2Boot.els.get("setup").hidden,false,"a saved UE2 scope must open straight into that unit");
 assert.equal(vm.runInContext("BANK.length",unit2Boot.ctx),250,"UE2 must expose the verified Monday release and Tuesday candidate");
 assert(vm.runInContext('BANK.every(q=>q.unit==="UE2"&&["week3-bank","missed-remediation","sept11-practice","sept12-practice","sept14-practice","sept15-practice"].includes(q.source))',unit2Boot.ctx),"UE2 leaked another unit or source");
-assert(unit2Boot.els.get("releasecard").innerHTML.includes("250 questions are ready in this private candidate")&&unit2Boot.els.get("releasecard").innerHTML.includes("Tuesday Session A and Friday Session B"),"UE2 release card is stale");
+assert(unit2Boot.els.get("releasecard").innerHTML.includes("250 questions are ready now")&&unit2Boot.els.get("releasecard").innerHTML.includes("Tuesday Session A and Friday Session B"),"UE2 release card is stale");
 assert.equal(unit2Boot.els.get("unittitle").textContent,"Unit Exam 2","UE2 screen title must not say Unit Exam 1");
 assert.equal(vm.runInContext("dailyCap()",unit2Boot.ctx),22,"UE2 daily cap must honor the 13-22 question strategy");
 assert.equal(vm.runInContext('unitById(courseById("OST520"),"UE2").exam',unit2Boot.ctx),"2026-09-22","UE2 exam date changed");

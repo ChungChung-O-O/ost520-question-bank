@@ -82,9 +82,9 @@ if (!html.includes(priorFingerprint)) {
 }
 html=html.replace(
   /<p class="label" style="margin:0">Unit 2 · Monday release<\/p><p style="margin:10px 0 0;font-family:'Source Serif 4',Georgia,serif;font-size:15\.5px"><strong>224 questions are ready now\.<\/strong> The newest 26 cover L042-L046 as 13 distinct A\/B concept pairs\. Monday Day A and Wednesday Day B each serve 13 new questions plus one approved C042-1 question under its existing ID\. After you check an answer, every choice explains why it is correct or incorrect\.<\/p><p class="note">Use 13–22 questions total per day\. Existing IDs and saved progress remain compatible; the reused pair keeps its prior attempt history\.<\/p>/,
-  `<p class="label" style="margin:0">Unit 2 · Tuesday release candidate</p><p style="margin:10px 0 0;font-family:'Source Serif 4',Georgia,serif;font-size:15.5px"><strong>250 questions are ready in this private candidate.</strong> The newest 26 cover L047-L051 as 13 distinct A/B concept pairs. Tuesday Session A and Friday Session B each serve 13 new questions. After you check an answer, every choice explains why it is correct or incorrect.</p><p class="note">Eight L050/L051 items retain provisional PDF-only provenance pending transcript reconciliation. Existing IDs, answers, and saved progress remain compatible.</p>`
+  `<p class="label" style="margin:0">Unit 2 · Tuesday release</p><p style="margin:10px 0 0;font-family:'Source Serif 4',Georgia,serif;font-size:15.5px"><strong>250 questions are ready now.</strong> The newest 26 cover L047-L051 as 13 distinct A/B concept pairs. Tuesday Session A and Friday Session B each serve 13 new questions. After you check an answer, every choice explains why it is correct or incorrect.</p><p class="note">Eight L050/L051 items retain provisional PDF-only provenance pending transcript reconciliation. Existing IDs, answers, and saved progress remain compatible.</p>`
 );
-if (!html.includes("250 questions are ready in this private candidate")) throw new Error("release-card update failed");
+if (!html.includes("250 questions are ready now")) throw new Error("release-card update failed");
 
 fs.writeFileSync(htmlPath,html);
 fs.writeFileSync(jsonPath,`${JSON.stringify(bank,null,2)}\n`);

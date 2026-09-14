@@ -15,7 +15,7 @@ the only class so far. Unit 1 and Unit 2 both hold questions.
 | File | What it is |
 |------|------------|
 | `index.html` | The whole app — questions, grading, rationales, progress tracking. No build step, no server, no dependencies. Opening the file directly also works. |
-| `bank.json` | The 863 questions in this private release candidate as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
+| `bank.json` | The 863 released questions as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
 | `add-week3-questions.js` | Idempotent ingest for the verified Week 3 baseline, remediation, and September 11 application set. |
 | `add-sept14-monday-set.js` | Guarded, idempotent ingest for the verified L042-L046 Monday set and its Monday/Wednesday A/B routing. |
 | `add-sept15-tuesday-set.js` | Guarded, idempotent ingest for the reviewed L047-L051 Tuesday set and its Tuesday/Friday A/B routing. |
@@ -38,7 +38,7 @@ Every question carries a `course` and a `unit`, and the site shelves them accord
 | Level | Values today |
 |-------|--------------|
 | Class | `OST520` |
-| Unit | `UE1` (613 questions), `UE2` (250 questions in this candidate), and an empty `UE3` shelf. |
+| Unit | `UE1` (613 questions), `UE2` (250 released questions), and an empty `UE3` shelf. |
 
 To open a new unit, tag questions with that `unit` value; the shelf stops being
 empty on its own. To add a class, append to the `COURSES` array in `index.html`
@@ -59,7 +59,7 @@ against, both of which always span the whole bank.
 
 ## Contents
 
-863 questions in this private candidate: 613 for Unit Exam 1 and 250 for Unit Exam 2.
+863 released questions: 613 for Unit Exam 1 and 250 for Unit Exam 2.
 
 | Topic | Questions | Coverage | `src` |
 |-------|-----------|----------|-------|
@@ -103,15 +103,14 @@ option. Monday Day A and Wednesday Day B each route 13 new items plus one existi
 C042-1 question. The reused IDs are `MQG-SEP12-L039-01` and
 `MQG-SEP12-L040-04`; they are not duplicated, so browser-local history remains intact.
 
-### September 15 Tuesday release candidate
+### September 15 Tuesday release
 
-The L047-L051 candidate adds 26 new questions arranged as 13 distinct A/B concept
+The L047-L051 release adds 26 new questions arranged as 13 distinct A/B concept
 pairs. Tuesday Session A and Friday Session B each route 13 items. All questions
 have five choices and aligned explanations for every option. The 18 L047-L049
 items are source-final. The eight L050/L051 items are deliberately marked
 provisional because they are grounded in faculty PDFs and still require transcript
-reconciliation when the recordings are refreshed Wednesday night. This branch is
-private and is not the live GitHub Pages release.
+reconciliation when the recordings are refreshed Wednesday night.
 
 ### Look-Alike Concepts
 
