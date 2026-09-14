@@ -1,6 +1,6 @@
 # OST 520 Question Bank
 
-Self-contained, 837-question practice bank for OST 520 Unit Exams 1 and 2. It combines
+Self-contained, 863-question practice bank for OST 520 Unit Exams 1 and 2. It combines
 adaptive daily sets, browser-local performance diagnosis, weak-concept retesting,
 worked rationales, choice-by-choice Unit 2 explanations, a Look-Alike Concepts lab, confidence tracking, and lossless backup/restore. Previously a
 Claude Artifact, it is now a plain static site that any browser can reach by URL.
@@ -15,13 +15,15 @@ the only class so far. Unit 1 and Unit 2 both hold questions.
 | File | What it is |
 |------|------------|
 | `index.html` | The whole app — questions, grading, rationales, progress tracking. No build step, no server, no dependencies. Opening the file directly also works. |
-| `bank.json` | The 837 released questions as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
+| `bank.json` | The 863 questions in this private release candidate as structured data, extracted from `index.html`. Read this instead of scraping the HTML. |
 | `add-week3-questions.js` | Idempotent ingest for the verified Week 3 baseline, remediation, and September 11 application set. |
 | `add-sept14-monday-set.js` | Guarded, idempotent ingest for the verified L042-L046 Monday set and its Monday/Wednesday A/B routing. |
+| `add-sept15-tuesday-set.js` | Guarded, idempotent ingest for the reviewed L047-L051 Tuesday set and its Tuesday/Friday A/B routing. |
 | `update-week3-day1-transcripts.js` | Guarded, idempotent replacement of the three verified Day 1 transcript-grounded Week 3 items before synchronizing the release. |
 | `update-week3-validation-report.js` | Private audit helper that recomputes Week 3 pool, answer-position, application-level, and option-cue metrics. It requires the intentionally ignored holdout file. |
 | `week3/` | Week 3 public release data, dated remediation batches, media-gated questions, coverage ledger, source manifest, and validation report. Reserved holdouts are stored only in the private course pack. |
 | `week4/september14_monday.json` | Exact reviewed 26-item Monday source snapshot. The release script normalizes its provenance and topic-routing tags but does not alter question content. |
+| `week4/september15_tuesday.json` | Exact reviewed 26-item Tuesday source snapshot. Eight L050/L051 items retain provisional PDF-only provenance pending transcript reconciliation. |
 | `week3/DAY1_MEDIA_QBANK_PLAN.md` | Internal MediaSpace transcript audit, replacement plan, no-change decisions, and post-change verification record. |
 | `add-faculty-problem-sets.js` | Idempotent ingest of the faculty practice sets. Also records, in comments, which faculty items were deliberately skipped and why. |
 | `add-weakness-questions.js` | Idempotent ingest of the 24 targeted `WK-*` weak-area questions. |
@@ -36,7 +38,7 @@ Every question carries a `course` and a `unit`, and the site shelves them accord
 | Level | Values today |
 |-------|--------------|
 | Class | `OST520` |
-| Unit | `UE1` (613 questions), `UE2` (224 released questions), and an empty `UE3` shelf. |
+| Unit | `UE1` (613 questions), `UE2` (250 questions in this candidate), and an empty `UE3` shelf. |
 
 To open a new unit, tag questions with that `unit` value; the shelf stops being
 empty on its own. To add a class, append to the `COURSES` array in `index.html`
@@ -46,9 +48,9 @@ Inside a unit, **Which questions** filters by provenance:
 
 | View | Shows |
 |------|-------|
-| Everything | All 837 |
+| Everything | All 863 |
 | Faculty practice | The 50 questions taken from the course's own problem sets |
-| Bank questions | The 787 written for this site |
+| Bank questions | The 813 written for this site |
 
 The chosen class, unit, and view are remembered in `localStorage` under
 `ost520.bank.v2.scope`, so a reload returns you where you were. The view narrows what
@@ -57,22 +59,22 @@ against, both of which always span the whole bank.
 
 ## Contents
 
-837 released questions: 613 for Unit Exam 1 and 224 for Unit Exam 2.
+863 questions in this private candidate: 613 for Unit Exam 1 and 250 for Unit Exam 2.
 
 | Topic | Questions | Coverage | `src` |
 |-------|-----------|----------|-------|
 | Genetics | 403 | Pedigrees, inheritance, DNA/chromosomes, regulation, population genetics, refresher prerequisites | `G` |
-| Biochemistry | 211 | UE1 metabolism plus Unit 2 energy, lipid, and iron metabolism | `B` |
+| Biochemistry | 235 | UE1 metabolism plus Unit 2 energy, lipid, and iron metabolism | `B` |
 | Epi & Biostats | 59 | Study design, screening, bias, association, calculations | `E` |
 | Molecular Biology | 12 | Translation, protein targeting, folding, and processing | `N` |
 | Histology | 22 | Connective tissue plus lymph-node and Peyer's-patch organization | `T` |
-| Hematology & Physiology | 42 | Blood cells, hematopoiesis, CBC interpretation, hemoglobin transport, and acid-base physiology | `H` |
+| Hematology & Physiology | 44 | Blood cells, hematopoiesis, CBC interpretation, hemoglobin transport, and acid-base physiology | `H` |
 | Microbiology | 55 | Infection, microbiota, fungi, bacterial structure, viruses, and parasites | `M` |
 | Immunology | 33 | Immune organization, communication, innate recognition, complement, adaptive receptors, and T-cell function | `I` |
 
-812 are multiple choice (`"type": "mcq"`), 25 are worked problems (`"type": "worked"`).
-Of the MCQs, 807 have five choices. The five four-choice exceptions are preserved
-faculty-authored items whose option text stays faithful to the source. Of all 837 questions, 787 are bank-authored.
+838 are multiple choice (`"type": "mcq"`), 25 are worked problems (`"type": "worked"`).
+Of the MCQs, 833 have five choices. The five four-choice exceptions are preserved
+faculty-authored items whose option text stays faithful to the source. Of all 863 questions, 813 are bank-authored.
 
 ### Week 3 release policy
 
@@ -100,6 +102,16 @@ All require at least second-order reasoning and include aligned explanations for
 option. Monday Day A and Wednesday Day B each route 13 new items plus one existing
 C042-1 question. The reused IDs are `MQG-SEP12-L039-01` and
 `MQG-SEP12-L040-04`; they are not duplicated, so browser-local history remains intact.
+
+### September 15 Tuesday release candidate
+
+The L047-L051 candidate adds 26 new questions arranged as 13 distinct A/B concept
+pairs. Tuesday Session A and Friday Session B each route 13 items. All questions
+have five choices and aligned explanations for every option. The 18 L047-L049
+items are source-final. The eight L050/L051 items are deliberately marked
+provisional because they are grounded in faculty PDFs and still require transcript
+reconciliation when the recordings are refreshed Wednesday night. This branch is
+private and is not the live GitHub Pages release.
 
 ### Look-Alike Concepts
 

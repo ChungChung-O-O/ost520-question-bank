@@ -27976,5 +27976,1473 @@
       "why_wrong": "A high TIBC is a real, correctly noticed abnormality, so reading it as evidence of overload is a reasonable first move. The decisive clue is direction: the source's own hemochromatosis case keeps TIBC inside its normal range despite genuine overload, and ties a rising TIBC specifically to transferrin scavenging when body iron is falling, which is this patient's situation, not a case of excess."
     },
     "n": 211
+  },
+  {
+    "stem": "A 25-year-old solder-booth worker develops a month of daily headaches, personality change, constipation, and left-hand weakness. His blood lead level is markedly elevated, and his erythrocyte zinc protoporphyrin is far above the reference range. Which combination of biochemical changes best reflects lead's effect on heme biosynthesis in this patient?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L047",
+    "sourceRef": "OST520 (047) L - Heme Metabolism - Faner.pdf, pp. 9, 19-20, 21, 23 (SIQ 4 and answer key); transcript 052 (L047), 03:08-05:14, 12:54-13:46",
+    "covers": [
+      "L047-O1",
+      "L047-O2",
+      "L047-O3",
+      "L047-O4",
+      "L047-O5",
+      "L047-O6"
+    ],
+    "concepts": [
+      "heme-committed-step",
+      "lead-sensitive-enzymes"
+    ],
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 3,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "Location and regulation together determine the consequence of a block. ALA dehydratase, lead's principal target per the lecture's own answer key, acts in the cytosol on ALA to form PBG; blocking it accumulates its substrate ALA and depletes its product PBG, and eventually heme itself. Because heme synthesis's committed step is regulated by feedback inhibition from its end product, heme, the resulting fall in heme, not PBG, is the signal that releases ALA synthase, the mitochondrial committed-step enzyme, from inhibition, so ALA synthase activity and ALA both rise further. Lead separately inhibits ferrochelatase, the mitochondrial last step, so protoporphyrin IX cannot receive iron and accumulates, appearing in red cells as zinc protoporphyrin once zinc is inserted instead.",
+    "id": "OQ4-L047-C1A",
+    "options": [
+      "ALA synthase, the committed-step enzyme, is lead's principal target and is directly inhibited, so its own ALA production falls while ALA dehydratase and ferrochelatase activity both remain entirely normal.",
+      "ALA dehydratase is inhibited exactly as lead does, but the resulting fall in heme further decreases ALA synthase activity, so ALA, PBG, and heme all fall together while ferrochelatase stays unaffected.",
+      "ALA dehydratase, lead's target, is inhibited: ALA rises, PBG falls, and the fall in heme produces a feedback increase in ALA synthase, while blocked ferrochelatase lets protoporphyrin IX accumulate as zinc protoporphyrin.",
+      "ALA dehydratase is inhibited, so PBG accumulates because it is that enzyme's own downstream product, while ALA levels fall now that the enzyme which normally consumes ALA is itself fully blocked.",
+      "Only ferrochelatase is inhibited by lead in this patient, so protoporphyrin IX and zinc protoporphyrin steadily accumulate, while ALA dehydratase functions completely normally and both ALA and PBG stay well within their usual reference ranges."
+    ],
+    "optionExplanations": [
+      "ALA synthase is grouped with two other enzymes as sensitive to lead, which makes it tempting to call it the principal target, but the lecture's own answer key names ALA dehydratase, not ALA synthase, as the enzyme that is the main target of lead's inhibition. Lead does not directly inhibit ALA synthase at all; it indirectly raises ALA synthase activity through the feedback loop, and the lecture reports increased, not decreased, ALA in lead-poisoned patients.",
+      "This correctly inhibits ALA dehydratase but reverses the direction of the feedback loop: the lecture states that the committed step is subject to feedback inhibition by its end product, heme, so a fall in heme produces a feedback increase in ALA synthase, not a mechanism that further decreases it, because falling heme output releases ALA synthase from its normal inhibition rather than suppressing it further. Measured ALA rises rather than falls in lead poisoning, which contradicts an ALA synthase activity that further decreases here.",
+      "The lecture's own answer key identifies ALA dehydratase, also called PBG synthase, as lead's principal target; inhibiting it lets its substrate ALA accumulate while its product PBG, and eventually heme itself, falls. Because the committed step is subject to feedback inhibition by its end product, heme, the resulting fall in heme produces a feedback increase in ALA synthase, so more ALA is made even as the enzyme that would consume it stays blocked, and increased ALA is exactly what the lecture reports being measured in lead-poisoned patients. Lead's separate inhibition of ferrochelatase, the last step, prevents iron insertion into protoporphyrin IX, which accumulates and appears in red cells as zinc protoporphyrin once zinc is inserted instead.",
+      "This treats an inhibited enzyme's product as what builds up and its substrate as what falls, but the opposite is true: a block accumulates the substrate immediately before it and depletes the product immediately after it. With ALA dehydratase inhibited, ALA is its substrate and therefore accumulates, while PBG is its product and therefore falls, so the claim that PBG accumulates here has cause and effect backwards.",
+      "Ferrochelatase inhibition genuinely does cause protoporphyrin IX to accumulate as zinc protoporphyrin, so this option is not wrong about that part. It is wrong to say only ferrochelatase is inhibited: the lecture's own answer key names ALA dehydratase as lead's principal target, a second and separately inhibited enzyme, so ALA is expected to rise rather than stay within its reference range."
+    ],
+    "optionMarkers": [
+      "principal target",
+      "further decreases",
+      "feedback increase in ALA synthase",
+      "PBG accumulates",
+      "only ferrochelatase is inhibited"
+    ],
+    "answer": 2,
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "It correctly recognizes ALA synthase as sensitive to lead and as the committed-step enzyme, but calls it lead's directly inhibited principal target, when the lecture's own answer key assigns that role to ALA dehydratase and reports ALA synthase activity rising, not falling, in lead poisoning."
+    },
+    "n": 212
+  },
+  {
+    "stem": "A male infant is found to carry a mutation in ALA synthase 2, the erythroid-specific isozyme of heme synthesis's committed-step enzyme; the ubiquitous ALA synthase 1 isozyme in his other tissues is normal. Developing red cell precursors in his marrow show iron-laden mitochondria visible as ringed sideroblasts, and he has anemia with a low red cell count and low hemoglobin. Which explanation best accounts for these findings?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L047",
+    "sourceRef": "OST520 (047) L - Heme Metabolism - Faner.pdf, pp. 4-5, 8; transcript 052 (L047), 00:14-01:10, 03:08-04:31, 06:52-07:03, 11:42-12:57",
+    "covers": [
+      "L047-O1",
+      "L047-O2",
+      "L047-O3",
+      "L047-O4",
+      "L047-O5",
+      "L047-O6"
+    ],
+    "concepts": [
+      "heme-committed-step",
+      "lead-sensitive-enzymes"
+    ],
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "A block's consequence depends on its position in the pathway as well as on regulation. ALA synthase catalyzes the mitochondrial, first, committed step; nothing upstream of it belongs to the heme-dedicated pathway, so a defective erythroid isozyme (ALA synthase 2, distinct from the ubiquitous ALA synthase 1) simply lowers ALA and every downstream intermediate, including heme, rather than letting any heme-pathway intermediate back up. Iron delivered to these mitochondria for heme synthesis still arrives, but with insufficient protoporphyrin downstream to accept it, so it accumulates as the iron granules of a ringed sideroblast, and reduced heme output for hemoglobin manifests as anemia. This contrasts with a block further along the pathway, such as lead's, where a specific intermediate does accumulate just before the block.",
+    "id": "OQ4-L047-C1B",
+    "options": [
+      "Because the pathway is blocked at ALA synthase itself, ALA and PBG accumulate in these marrow precursors the same way a downstream block would cause a backup, while iron delivery to the mitochondria stays completely unaffected.",
+      "Lead's inhibition of pyrimidine-5'-nucleotidase destabilizes this infant's red blood cell membranes as well, and that membrane instability is the main driver of his anemia here.",
+      "ALA synthase catalyzes the pathway's first, committed step, so a defective erythroid isozyme lowers ALA and every downstream intermediate; iron delivered to these mitochondria then accumulates as ringed sideroblasts.",
+      "Losing feedback inhibition at this defective committed-step enzyme allows overall heme production to increase despite the underlying mutation, which is offered here to explain the ringed sideroblasts.",
+      "The same mutation described here also impairs ferrochelatase, the pathway's separate last step, which is why iron cannot be inserted into protoporphyrin within these red cell precursors."
+    ],
+    "optionExplanations": [
+      "This applies the familiar upstream-builds-up, downstream-falls pattern from a mid-pathway block, such as lead's inhibition of ALA dehydratase, to a block at the very first step instead. There is no heme-pathway intermediate before ALA synthase, since ALA synthase is what makes ALA in the first place, so a defective committed-step enzyme reduces ALA and PBG together rather than letting the claim that ALA and PBG accumulate hold here.",
+      "Pyrimidine-5'-nucleotidase inhibition and the red cell membrane instability it causes are mechanisms the lecture attributes specifically to lead poisoning's separate effect on red cell survival, not to an ALA synthase 2 mutation. Nothing here describes lead exposure, so there is no basis for invoking lead's inhibition of pyrimidine-5'-nucleotidase in this infant.",
+      "Because ALA synthase performs the pathway's first, committed step, there is no heme-pathway intermediate upstream of it that could back up when it is defective; ALA and every intermediate after it, and heme itself, are simply reduced. Iron continues to be delivered to these mitochondria for heme synthesis, but with too little protoporphyrin being produced downstream to receive it, that iron accumulates as the visible granules of a ringed sideroblast, and the resulting shortfall in hemoglobinized red cells is the anemia.",
+      "This assumes relieving feedback inhibition can raise output even when the enzyme itself is mutated and catalytically impaired. Feedback normally works by adjusting how much of a functional enzyme is active or expressed; it cannot restore catalysis to an enzyme whose own defect is what is limiting ALA production here, so heme production does not increase.",
+      "The mutation described here is confined to ALA synthase 2, the erythroid isozyme of the pathway's first step; nothing indicates it also disrupts ferrochelatase, a separate enzyme acting at the pathway's last step. Iron accumulates in this infant because too little protoporphyrin is being produced overall from a first-step defect, not because ferrochelatase has also independently failed."
+    ],
+    "optionMarkers": [
+      "ALA and PBG accumulate",
+      "pyrimidine-5'-nucleotidase",
+      "first, committed step",
+      "heme production",
+      "ferrochelatase"
+    ],
+    "answer": 2,
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "It correctly applies the block-causes-upstream-accumulation heuristic that fits a mid-pathway lesion like lead's, but there is no heme-pathway intermediate upstream of the committed step for ALA and PBG to accumulate from; a first-step defect instead reduces every intermediate, including ALA and PBG, together."
+    },
+    "n": 213
+  },
+  {
+    "stem": "A researcher creates a cell line carrying a mutation in hydroxymethylbilane synthase (porphobilinogen deaminase), the enzyme catalyzing the third step of heme biosynthesis, a step that acts before any porphyrinogen ring has formed. Compared with a normal cell line under the same conditions, which clinical picture and biochemical pattern would this lesion predict?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L047",
+    "sourceRef": "OST520 (047) L - Heme Metabolism - Faner.pdf, pp. 7-8; transcript 052 (L047), 09:29-10:08, 11:23-11:42",
+    "covers": [
+      "L047-O7"
+    ],
+    "concepts": [
+      "porphyria-early-vs-late"
+    ],
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "The lecture splits porphyria mechanisms by where the enzyme lesion sits relative to porphyrinogen formation. A mutation before that point, such as one in hydroxymethylbilane synthase, the third-step enzyme, accumulates ALA and PBG, which the lecture describes as very toxic to abdominal nerves and the central nervous system, producing abdominal pain, neuropsychiatric symptoms and paralysis. Photosensitivity from oxidized porphyrins is reserved for lesions positioned after porphyrinogens have already formed, which this one is not.",
+    "id": "OQ4-L047-C2A",
+    "options": [
+      "Because this mutation acts early in the pathway, porphyrinogens still accumulate proximal to the block and oxidize, producing skin damage and photosensitivity rather than abdominal or neuropsychiatric symptoms.",
+      "This lesion mainly reduces red cell hemoglobinization and produces anemia, the pattern the lecture assigns to X-linked sideroblastic anemia, rather than the abdominal or neuropsychiatric pattern.",
+      "This early lesion lets ALA and PBG accumulate proximal to the block, and their neurotoxic effect on abdominal nerves and the CNS produces abdominal pain and neuropsychiatric symptoms, not photosensitivity.",
+      "Because the pathway is disrupted at this point, this lesion produces abdominal pain and neuropsychiatric symptoms together with skin photosensitivity, all occurring in roughly equal measure.",
+      "Because ALA and PBG are small, water-soluble molecules that are efficiently excreted in the urine, their accumulation at this position produces no clinical symptoms at all."
+    ],
+    "optionExplanations": [
+      "This assigns the late-pathway pattern to a lesion positioned before porphyrinogens form; the claim that porphyrinogens still accumulate proximal to the block does not hold at the third step, since no porphyrinogen ring exists yet. What accumulates instead is ALA and PBG, which the lecture ties to neurotoxicity, not photosensitivity.",
+      "X-linked sideroblastic anemia is the lecture's example of a defect at ALA synthase, the pathway's very first, committed step, which lowers heme output enough to cause anemia. Hydroxymethylbilane synthase acts three steps later, after ALA and PBG have already been made, so a defect there does not resemble the first-step, anemia-producing lesion of X-linked sideroblastic anemia; the lecture instead assigns it to the early, neurotoxic, abdominal-and-neuropsychiatric group.",
+      "Hydroxymethylbilane synthase acts at the third step, before any porphyrinogen ring exists, so a defect here lets its substrates ALA and PBG accumulate proximal to the block, not a porphyrinogen. The lecture attributes toxicity to abdominal nerves and the central nervous system specifically to ALA and PBG, producing abdominal pain, neuropsychiatric symptoms and paralysis, and reserves photosensitivity for lesions positioned later, after porphyrinogens have formed.",
+      "The lecture splits porphyria presentations into two groups by where the lesion sits, not into a single combined presentation. A lesion positioned before porphyrinogens form, like this one, accumulates ALA and PBG and produces the neurotoxic, abdominal-and-neuropsychiatric picture; producing photosensitivity in roughly equal measure would require porphyrinogens to also be accumulating, which they are not at this position.",
+      "Urinary excretion is real, and the lecture does describe ALA and PBG appearing in the urine, but excretion into urine does not prevent the tissue and CNS toxicity the lecture attributes to these compounds; it states plainly that their accumulation is very toxic to abdominal nerves and the central nervous system, producing abdominal pain, neuropsychiatric symptoms and paralysis, so no clinical symptoms at all is not the expected outcome."
+    ],
+    "optionMarkers": [
+      "porphyrinogens still accumulate",
+      "X-linked sideroblastic anemia",
+      "proximal to the block",
+      "roughly equal measure",
+      "no clinical symptoms at all"
+    ],
+    "answer": 2,
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "It correctly recognizes that this is an early-pathway lesion but assigns it the late-pathway accumulating species; hydroxymethylbilane synthase acts before any porphyrinogen ring has formed, so ALA and PBG, not a porphyrinogen, are what build up proximal to the block."
+    },
+    "n": 214
+  },
+  {
+    "stem": "A different research line carries a mutation in uroporphyrinogen decarboxylase, the enzyme catalyzing a step that acts on a porphyrinogen ring already formed several steps earlier in the pathway. A urine sample from an affected individual is collected and analyzed immediately, without any exposure to light or air. Which finding regarding the urine, and which explanation, best fits this lesion's position in the pathway?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L047",
+    "sourceRef": "OST520 (047) L - Heme Metabolism - Faner.pdf, pp. 7-8; transcript 052 (L047), 10:08-11:19, 11:23-11:42",
+    "covers": [
+      "L047-O7"
+    ],
+    "concepts": [
+      "porphyria-early-vs-late"
+    ],
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 3,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "Where a lesion sits relative to porphyrinogen formation determines not only the clinical picture but also how the urine behaves. Before porphyrinogens form, accumulating ALA and PBG give urine that starts normal-colored and darkens only after standing, since these compounds need time and exposure to oxidize. After porphyrinogens have formed, as with a uroporphyrinogen decarboxylase defect, the accumulating porphyrinogens oxidize spontaneously, so the lecture describes that urine as already dark without any light exposure needed. The same position-in-the-pathway reasoning that predicts neurotoxic versus photosensitizing symptoms also predicts this urine-timing difference.",
+    "id": "OQ4-L047-C2B",
+    "options": [
+      "The urine is normal in color at collection and only darkens after the sample sits out, because delayed darkening on standing is the hallmark of any pathway lesion that produces dark urine.",
+      "The urine shows no color change at all here, because photosensitizing porphyrins act only on skin that is directly exposed to light and never appear anywhere in the urine at all.",
+      "The urine is already dark at collection because the accumulating porphyrinogens spontaneously oxidize without needing light exposure, consistent with a lesion positioned after porphyrinogens have formed.",
+      "The urine stays normal-colored throughout this collection, because compounds accumulating this late in the pathway are excreted only in feces, never in urine at all.",
+      "Because uroporphyrinogen decarboxylase acts specifically in the cytosol, not the mitochondria, the urine finding here depends on that subcellular location, not on the enzyme's position in the reaction sequence."
+    ],
+    "optionExplanations": [
+      "Delayed darkening after the sample sits out is the hallmark specifically of ALA and PBG, the compounds that accumulate in early lesions positioned before porphyrinogens form; the lecture ties that pattern to non-exposure followed by later oxidation. This lesion sits later in the pathway, after porphyrinogens already exist, and the lecture describes those compounds as spontaneously oxidizing without needing to sit out, so treating delayed darkening after the sample sits out as the hallmark of any pathway lesion misapplies an early-lesion finding to a late one.",
+      "Photosensitizing porphyrins do act on light-exposed skin, but the lecture also describes these same later-pathway compounds appearing in the urine and spontaneously oxidizing there, producing urine that is already dark rather than showing no color change at all; the skin effect and the urine finding are two separate consequences of the same accumulating compounds, not alternatives.",
+      "Uroporphyrinogen decarboxylase acts on a porphyrinogen ring several steps after hydroxymethylbilane synthase, so its defect accumulates a porphyrinogen rather than ALA or PBG. The lecture states that these later-pathway compounds spontaneously oxidize and are dark in the urine without needing light exposure, unlike ALA and PBG, which darken only after the urine has been sitting out; a sample collected and analyzed immediately is already dark at collection.",
+      "The summary table the lecture presents lists increased urinary excretion, alongside fecal and red cell excretion, for late-pathway porphyrias such as congenital erythropoietic porphyria, so late-accumulating compounds are not excreted only in feces; urinary excretion occurs for this lesion as well, and the lecture ties that urine to spontaneous, non-light-dependent darkening.",
+      "Subcellular location and position in the reaction sequence are two different things: cytosolic versus mitochondrial placement governs compartmentalization of the pathway's steps, but the lecture ties the urine-darkening pattern specifically to whether porphyrinogens have already formed at the point of the lesion, not to which organelle the enzyme works in. Uroporphyrinogen decarboxylase's subcellular location does not by itself determine the urine finding."
+    ],
+    "optionMarkers": [
+      "sample sits out",
+      "no color change at all",
+      "already dark at collection",
+      "excreted only in feces",
+      "subcellular location"
+    ],
+    "answer": 2,
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "It correctly recalls that early-pathway urine darkens only after standing, but applies that rule to a lesion positioned after porphyrinogens have already formed, where the lecture instead describes spontaneous oxidation that makes the urine dark without any delay."
+    },
+    "n": 215
+  },
+  {
+    "stem": "A 24-year-old woman with several weeks of fatigue is found to have an elevated reticulocyte count and schistocytes on peripheral smear, consistent with ongoing red cell destruction. Her total serum bilirubin is modestly elevated; her direct (conjugated) bilirubin stays within the normal 0.1-0.4 mg/dL range, and fractionation attributes essentially all of the excess to non-conjugated (indirect) bilirubin. No bilirubin is detected in her urine, and her stool retains its normal brown color. Which classification and mechanism best fit these findings?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L047",
+    "sourceRef": "OST520 (047) L - Heme Metabolism - Faner.pdf, pp. 12, 14-16 (direct/total reference values, water-soluble conjugated bilirubin); transcript 052 (L047), 23:40-23:57 (stercobilin/urobilin), 24:46-27:04, 27:42-28:46, 33:11-34:09",
+    "covers": [
+      "L047-O10",
+      "L047-O11",
+      "L047-O12",
+      "L047-O8",
+      "L047-O9",
+      "L048-O8"
+    ],
+    "concepts": [
+      "bilirubin-conjugation-jaundice-classification"
+    ],
+    "applicationLevel": "discrimination",
+    "reasoningOrder": 3,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "Total bilirubin is the sum of a conjugated (direct) and non-conjugated (indirect) fraction, and the source gives normal ranges of 0.1-0.4 mg/dL for direct and 0.4-1.2 mg/dL for total. When direct bilirubin stays within its normal range while total rises, essentially all of the increase is occurring in the non-conjugated fraction, as happens when red cell destruction delivers more bilirubin than usual to an otherwise unobstructed liver. Because non-conjugated bilirubin is not water-soluble, it cannot pass into the urine no matter how high it climbs, and because bile flow into the gut remains undisturbed, the bilirubin the liver does conjugate still reaches the intestine, is converted to stercobilin, and keeps stool its normal brown color. A post-hepatic block instead raises the conjugated fraction above its own normal range, driving it into the urine because conjugated bilirubin is water-soluble, and starves the gut of stercobilin, turning stool pale and clay-colored.",
+    "id": "OQ4-L047-C3A",
+    "options": [
+      "Post-hepatic jaundice from a blocked bile duct: her conjugated bilirubin would back up into the blood and rise well above its normal range, appear in her urine, and turn her stool pale and clay-colored from lost stercobilin pigment.",
+      "Post-hepatic jaundice from a blocked bile duct: non-conjugated bilirubin is the water-soluble fraction here, so its rise is what should be turning up as bilirubin in her urine, well before any conjugated bilirubin does.",
+      "Pre-hepatic jaundice from hemolysis: her direct bilirubin stays within its normal range while only the non-conjugated fraction rises, so the water-insoluble excess cannot enter her urine, and her stool stays its normal brown color.",
+      "Post-hepatic jaundice from a blocked bile duct: because total bilirubin equals conjugated plus non-conjugated bilirubin, an elevated total bilirubin here means her direct bilirubin must also exceed its own normal range.",
+      "Pre-hepatic jaundice from hemolysis: urobilin, not stercobilin, is the pigment that colors her stool, so her normal brown stool reflects continued urobilin production rather than any bile reaching her intestine at all."
+    ],
+    "optionExplanations": [
+      "A blocked bile duct genuinely does force conjugated bilirubin to back up into the blood and rise well above its normal range, which is exactly why it becomes water-soluble bilirubin that spills into the urine, and why stool loses the stercobilin pigment that normally colors it and turns pale and clay-colored instead. None of that fits this patient: her direct bilirubin stays within its normal range, no bilirubin appears in her urine, and her stool remains a normal brown color, so the elevation here is not coming from a blocked duct.",
+      "This reverses the solubility relationship the source describes: conjugated bilirubin is the water-soluble fraction able to pass into urine, while non-conjugated bilirubin is hydrophobic and travels bound to albumin, which is exactly why a rise in the non-conjugated fraction produces no urine bilirubin here. Calling non-conjugated bilirubin the water-soluble fraction also does not fit a bile duct obstruction, which would be expected to raise conjugated, not non-conjugated, bilirubin, and this patient's direct bilirubin instead stays within its normal range.",
+      "Increased red cell destruction delivers more bilirubin than usual to an otherwise unobstructed liver. Her direct bilirubin stays within its normal range (0.1-0.4 mg/dL) even as her total bilirubin rises, so essentially all of the increase is occurring in the non-conjugated fraction. Non-conjugated bilirubin is not water-soluble and travels bound to albumin, so it cannot pass into the urine no matter how high its level climbs. Because bile flow into the gut is undisturbed, whatever bilirubin the liver does conjugate still reaches the intestine, is converted to stercobilin, and keeps her stool its normal brown color.",
+      "Total bilirubin does equal conjugated plus non-conjugated bilirubin, but an elevated total does not require every component to individually exceed its own normal range: the entire rise here is occurring in the non-conjugated fraction while direct bilirubin stays within its normal range. Assuming a rise in total forces a matching rise in the direct component reverses how a sum works, and it also does not fit a bile duct obstruction, which would need conjugated bilirubin specifically, not non-conjugated, to be responsible for the elevated total.",
+      "This swaps the two pigments the source assigns to feces and urine: the source states it is stercobilin, not urobilin, that colors feces, while urobilin, not stercobilin, accounts for the yellow of urine. Her stool's normal brown color instead reflects stercobilin formed from bilirubin that reaches her intestine through undisturbed bile flow, not urobilin, which explains the coloring of her urine instead."
+    ],
+    "optionMarkers": [
+      "back up into the blood",
+      "water-soluble fraction",
+      "stays within its normal range",
+      "conjugated plus non-conjugated bilirubin",
+      "urobilin, not stercobilin"
+    ],
+    "answer": 2,
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "It correctly describes how a blocked bile duct raises conjugated bilirubin above its normal range, drives it into the urine, and turns stool pale from lost stercobilin, but none of those findings match this patient: her direct bilirubin stays within its normal range, no bilirubin appears in her urine, and her stool remains a normal brown color, so the elevation here is not coming from an obstructed duct."
+    },
+    "n": 216
+  },
+  {
+    "stem": "A patient has a gallstone lodged in the common bile duct, confirmed by imaging, with a liver biopsy showing no hepatocyte injury, and a second patient has ongoing hemolysis, confirmed by an elevated reticulocyte count and a normal-appearing biliary tree on imaging. Which prediction about each patient's urine bilirubin test, direct bilirubin relative to its normal range, and stool color best fits their two mechanisms?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L047",
+    "sourceRef": "OST520 (047) L - Heme Metabolism - Faner.pdf, pp. 12, 14-17 (direct/total reference values, water-soluble conjugated bilirubin); transcript 052 (L047), 23:40-23:57 (stercobilin/urobilin), 24:46-27:04, 34:09-36:01",
+    "covers": [
+      "L047-O10",
+      "L047-O11",
+      "L047-O12",
+      "L047-O8",
+      "L047-O9",
+      "L048-O8"
+    ],
+    "concepts": [
+      "bilirubin-conjugation-jaundice-classification"
+    ],
+    "applicationLevel": "discrimination",
+    "reasoningOrder": 3,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "Conjugated bilirubin is the water-soluble fraction a urine bilirubin test detects, so its direction, not the severity of jaundice overall, determines whether that test comes back positive. A blocked bile duct traps conjugated bilirubin, which the liver still makes normally, so it backs up and rises above its normal range, producing a positive urine test and, once no bile reaches the gut to form stercobilin, pale, clay-colored stool. Hemolysis instead delivers excess bilirubin that is overwhelmingly non-conjugated; because non-conjugated bilirubin is not water-soluble, it cannot enter urine no matter how elevated it becomes, so a hemolysis patient's direct bilirubin stays within its normal range, her urine test stays negative, and her stool, still supplied with bile, keeps its normal brown color. More bilirubin production alone, without a block on its excretion route, does not push the conjugated fraction outside its normal range.",
+    "id": "OQ4-L047-C3B",
+    "options": [
+      "The hemolysis patient's markedly elevated bilirubin load should produce a positive urine bilirubin test, while the gallstone patient's obstruction, since it blocks bilirubin from being made at all in the first place, should leave her urine test negative instead.",
+      "Because more bilirubin overall is being produced in hemolysis, the hemolysis patient's direct bilirubin should also rise above its normal range, roughly matching the gallstone patient's elevated conjugated bilirubin pattern.",
+      "The gallstone patient's conjugated bilirubin backs up and rises above its normal range, giving a positive urine test and pale, clay-colored stool; the hemolysis patient's direct bilirubin stays normal, so her test stays negative and stool stays brown.",
+      "Because total bilirubin equals conjugated plus non-conjugated bilirubin, the gallstone patient's positive urine bilirubin test means her total bilirubin, not just her conjugated fraction, must exceed its own normal range.",
+      "Because urobilin, not stercobilin, is the pigment responsible for stool color, the gallstone patient's stool should stay its normal brown color despite her obstructed bile duct blocking bile from reaching the intestine."
+    ],
+    "optionExplanations": [
+      "This gets both predictions backwards. The hemolysis patient's elevated bilirubin is overwhelmingly non-conjugated, and because non-conjugated bilirubin is not water-soluble, it cannot produce a positive urine bilirubin test no matter how high it climbs. The gallstone patient's obstruction does not block bilirubin from being made; it blocks conjugated bilirubin, which the liver still produces normally, from leaving through the bile duct, so it backs up into the blood and does produce a positive urine test.",
+      "More bilirubin production alone does not mean direct bilirubin should also rise above its normal range; only a mechanism that keeps conjugated bilirubin from leaving the liver, such as the gallstone patient's obstruction, does that. Here, the hemolysis patient's direct bilirubin stays within its normal range while her total bilirubin is carried upward almost entirely by the non-conjugated fraction, unlike the gallstone patient, whose conjugated bilirubin itself backs up and exceeds its normal range.",
+      "Because conjugated bilirubin is the water-soluble fraction detected by a urine bilirubin test, the gallstone patient's obstruction backs it up and raises it above its normal range, producing a positive urine test and pale, clay-colored stool once no bile reaches her intestine to form stercobilin. The hemolysis patient's excess bilirubin is instead overwhelmingly non-conjugated, so her direct bilirubin stays within its normal range even as her total bilirubin climbs; because non-conjugated bilirubin is not water-soluble, her urine test stays negative, and because bile flow to her gut is undisturbed, her stool keeps its normal brown color.",
+      "Total bilirubin does equal conjugated plus non-conjugated bilirubin, but a positive urine bilirubin test only requires the conjugated fraction to be elevated and water-soluble; it does not by itself establish that total bilirubin exceeds its own normal range, since total also depends on the non-conjugated fraction. The gallstone patient's conjugated bilirubin backing up above its normal range is what produces her positive urine test, regardless of exactly how high her total bilirubin ultimately measures.",
+      "This swaps the two pigments: the source states it is stercobilin, not urobilin, that colors feces, while urobilin, not stercobilin, accounts for the yellow of urine. Because no bile reaches the gallstone patient's intestine, no stercobilin is formed there, so her stool loses its color and turns pale and clay-colored rather than staying its normal brown color."
+    ],
+    "optionMarkers": [
+      "bilirubin from being made",
+      "should also rise above its normal range",
+      "positive urine test and pale, clay-colored stool",
+      "conjugated plus non-conjugated bilirubin",
+      "urobilin, not stercobilin"
+    ],
+    "answer": 2,
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "It correctly recognizes that hemolysis delivers more bilirubin overall to the liver, but assumes that extra production must itself show up as a rise in the conjugated fraction; only a mechanism that traps conjugated bilirubin behind a blocked duct, as in the gallstone patient, pushes it above its normal range, while the hemolysis patient's direct bilirubin stays within its normal range and her total rises through the non-conjugated fraction instead."
+    },
+    "n": 217
+  },
+  {
+    "stem": "A man with a G6PD variant that retains only about 10% of normal enzyme activity develops a bacterial soft-tissue infection. Neutrophils infiltrating the site mount a respiratory burst, and some of the hydrogen peroxide they generate diffuses into nearby red blood cells. Which of the following best predicts what happens inside those red blood cells over the next several hours?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L048",
+    "sourceRef": "OST520 (048) L - RBC Metabolism - Faner.pdf, pp. 2-3, 4-5; transcript 053 (L048), 01:15-02:44, 03:30-05:59, 11:24-12:26, 14:34-15:09",
+    "covers": [
+      "L048-O1",
+      "L048-O7"
+    ],
+    "concepts": [
+      "nadph-glutathione-cascade",
+      "nadh-methemoglobin-reduction"
+    ],
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "The lecture places two separate reducing-equivalent systems inside the red cell. Methemoglobin reductase restores iron two-plus using NADH generated by glycolysis, a supply a G6PD defect does not touch. Reduced glutathione, which glutathione peroxidase consumes to clear hydrogen peroxide, is regenerated by glutathione reductase using NADPH, produced through G6PD and the pentose phosphate pathway. A G6PD variant with reduced activity can supply enough NADPH for the ordinary one to three percent of hemoglobin that oxidizes each day, but the lecture ties infection specifically to hemolysis in these patients because the neutrophil respiratory burst adds a hydrogen peroxide load the limited NADPH supply cannot keep pace with. The predictable outcome is an intact NADH-dependent methemoglobin reductase step alongside an overwhelmed NADPH-dependent glutathione system, with hemoglobin and membrane thiol groups oxidized into Heinz bodies.",
+    "id": "OQ4-L048-C1A",
+    "options": [
+      "Glutathione regeneration proceeds normally because that step draws on NADH, while methemoglobin reduction fails because it depends on the limited NADPH this patient's G6PD variant cannot supply, leaving iron unprotected instead.",
+      "Both methemoglobin reduction and glutathione regeneration fail together, because the same G6PD defect that limits NADPH also limits the NADH available to methemoglobin reductase, leaving hemoglobin iron unprotected as well as the membrane.",
+      "Methemoglobin reductase keeps reducing methemoglobin normally because that step draws on NADH, but glutathione cannot keep pace on the limited NADPH supply, so peroxide oxidizes hemoglobin and membrane thiol groups largely unchecked.",
+      "Superoxide dismutase converts the hydrogen peroxide from the respiratory burst directly into water, so this patient's red cells stay fully protected regardless of his NADPH supply or glutathione status.",
+      "Both methemoglobin reduction and glutathione regeneration keep pace with the added peroxide, because a G6PD variant retaining some activity supplies enough NADPH for ordinary daily oxidative turnover in this patient."
+    ],
+    "optionExplanations": [
+      "This swaps the two cofactors. The lecture ties glutathione reductase to NADPH, generated through G6PD and the pentose phosphate pathway, and ties methemoglobin reductase to NADH from glycolysis; saying glutathione regeneration proceeds normally because that step draws on NADH reverses which enzyme uses which reducing equivalent, so the predicted outcome is backwards for both proteins.",
+      "This is the tempting reading because both problems appear side by side in the same oxidative-stress picture, but the lecture keeps the two cofactors on separate tracks: NADH comes from glycolysis and NADPH comes from the pentose phosphate pathway through G6PD. A G6PD defect limits the NADH available to methemoglobin reductase only if glycolysis itself is impaired, which this scenario does not describe, so methemoglobin reduction is not the pathway this defect touches.",
+      "The lecture assigns methemoglobin reduction to methemoglobin reductase, an enzyme that draws on NADH, a cofactor produced by glycolysis and untouched by a G6PD defect. Regenerating reduced glutathione, by contrast, draws on NADPH from the pentose phosphate pathway, exactly the supply this patient's G6PD variant restricts. With glutathione stuck oxidized, glutathione peroxidase cannot keep pace with the peroxide load, so hemoglobin and membrane protein thiol groups are oxidized and denature into Heinz bodies.",
+      "Superoxide dismutase acts on superoxide anion, converting it to ordinary oxygen and hydrogen peroxide; it is glutathione peroxidase, using reduced glutathione, that clears hydrogen peroxide itself. The claim that superoxide dismutase converts the hydrogen peroxide from the respiratory burst directly into water skips a step the lecture keeps separate, and that skipped step is exactly the one this patient's limited NADPH cannot keep supplied with reduced glutathione.",
+      "Retaining some G6PD activity is enough for the small, constant baseline of oxidation the lecture describes, but the lecture ties infection specifically to hemolysis in G6PD-deficient patients because the respiratory burst's extra peroxide load exceeds what limited NADPH can handle. A variant that supplies enough NADPH for ordinary daily oxidative turnover is exactly the kind the lecture describes failing once a precipitating factor like infection is added."
+    ],
+    "optionMarkers": [
+      "regeneration proceeds normally because that step draws on nadh",
+      "limits the nadh available to methemoglobin reductase",
+      "draws on nadh",
+      "converts the hydrogen peroxide from the respiratory burst directly into water",
+      "supplies enough nadph for ordinary daily oxidative turnover"
+    ],
+    "answer": 2,
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "It correctly starts from the same oxidative-stress picture but assumes the two cofactor systems fail together; the lecture keeps NADH, from glycolysis, and NADPH, from the pentose phosphate pathway through G6PD, on separate tracks, and only the NADPH-dependent glutathione system is what a G6PD defect restricts."
+    },
+    "n": 218
+  },
+  {
+    "stem": "A newborn is cyanotic despite a normal lung exam, a normal arterial pO2, and no heart murmurs. Sequencing identifies a single point mutation causing one amino acid substitution in the beta-globin chain; no other globin-gene change is found. G6PD activity, the NADPH-generating pathway, and the reduced-to-oxidized glutathione ratio are all measured and reported as normal for this infant. Which of the following best predicts the state of this infant's hemoglobin iron and red cell membrane, and why?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L048",
+    "sourceRef": "OST520 (048) L - RBC Metabolism - Faner.pdf, pp. 2, 11-12; transcript 053 (L048), 01:22-02:44, 33:30-34:29",
+    "covers": [
+      "L048-O1",
+      "L048-O7"
+    ],
+    "concepts": [
+      "nadph-glutathione-cascade",
+      "nadh-methemoglobin-reduction"
+    ],
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 3,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "Hemoglobin M relocates the defect from cofactor supply to the enzyme's substrate. The lecture attributes it to a single amino acid change, tyrosine for histidine, in one globin chain that makes that chain resistant to methemoglobin reductase itself, independent of how much NADH the reductase has on hand. Because the defect is structural rather than a shortage of reducing power, normal NADPH, glutathione, and G6PD activity cannot compensate: methemoglobin accumulates because the enzyme cannot act on this substrate, and the lecture describes the resulting HbM aggregating into Heinz bodies that damage the membrane as well, so both iron and membrane fail together rather than one being spared as in a purely NADPH-limited case.",
+    "id": "OQ4-L048-C1B",
+    "options": [
+      "Because NADPH generation and the glutathione ratio are normal, methemoglobin reductase has all the reducing power it needs, so this infant's hemoglobin iron and membrane stay fully protected from any damage.",
+      "This infant's methemoglobin accumulates because the mutation secretly impairs NADPH production, the same defect responsible for classic G6PD-deficient hemolysis in older patients.",
+      "Hemoglobin iron is not protected because the substituted chain resists the NADH-dependent reductase regardless of cofactor supply, and the resulting HbM aggregates go on to damage the membrane as well.",
+      "Methemoglobin reductase still restores the iron normally because the mutation is confined to the globin chain, while HbM aggregates go on to damage the membrane on their own.",
+      "Methemoglobin reductase still reduces iron normally because NADH is unaffected, but the membrane is damaged by unresolved peroxide, the same pattern as a limited-NADPH presentation."
+    ],
+    "optionExplanations": [
+      "This applies the supply-side logic of a NADPH-limited defect to a case that is not a supply problem. The lecture ties this infant's finding to a mutation that makes the chain itself resist the reductase; a step that has all the reducing power it needs cannot restore iron on a substrate the enzyme no longer acts on, so normal NADPH and glutathione do not protect this infant's hemoglobin.",
+      "The stem states NADPH generation and the glutathione ratio are documented as normal, which rules out a supply-side defect; the lecture ties Hemoglobin M instead to a structural change that makes the chain resist the reductase directly. Claiming the mutation secretly impairs NADPH production imports the G6PD mechanism into a case whose lab values already exclude it.",
+      "The lecture attributes Hemoglobin M to a single amino acid change that makes the affected chain resistant to the reductase, a defect in the enzyme's substrate rather than in its cofactor supply. Because the chain resists the NADH-dependent reductase regardless of cofactor supply, normal NADH, NADPH, and glutathione levels cannot rescue iron reduction, so methemoglobin accumulates; the lecture also describes HbM aggregating and Heinz bodies forming, which distort and damage the membrane as well.",
+      "The mutation being confined to the globin chain is exactly why it matters here: methemoglobin reductase must act on that same chain's heme iron, so a substitution confined to the globin chain is precisely the kind of change the lecture says makes the chain resist the reductase, not one that leaves reduction unaffected. Iron protection fails together with the membrane, not separately from it.",
+      "This transfers the split outcome that fits a limited-NADPH presentation, where the NADH-dependent reductase step stays intact while the NADPH-dependent glutathione step falls behind, onto a case built differently: here the substituted chain itself resists the reductase, so NADH availability cannot rescue iron reduction. The same pattern as a limited-NADPH presentation does not carry over once the defect moves from cofactor supply to the enzyme's substrate."
+    ],
+    "optionMarkers": [
+      "has all the reducing power it needs",
+      "secretly impairs nadph production",
+      "resists the nadh-dependent reductase regardless of cofactor supply",
+      "confined to the globin chain",
+      "the same pattern as a limited-nadph presentation"
+    ],
+    "answer": 2,
+    "closestDistractor": {
+      "index": 4,
+      "why_wrong": "It correctly recalls that a NADPH-limited defect leaves iron reduction intact while the membrane suffers, and mechanically carries that split outcome over to this case; but here the defect is in the globin chain the reductase must act on, not in cofactor supply, so iron reduction fails along with the membrane instead of being spared."
+    },
+    "n": 219
+  },
+  {
+    "stem": "Two patients have hereditary red cell enzyme deficiencies confirmed by enzyme assay. Patient 1 repeatedly has low erythrocyte ATP with accumulation of phosphoenolpyruvate, glycerate 2-phosphate, and glycerate 3-phosphate, including when otherwise well. Patient 2 has a documented episodic G6PD variant: he is normal between attacks and has hemolyzed only after infections or oxidizing medications. Neither patient encounters such a trigger during the coming week. Which course and mechanistic explanation are most likely?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L048",
+    "sourceRef": "OST520 (048) L - RBC Metabolism - Faner.pdf, pp. 5-7; transcript 053 (L048), 13:26-14:22, 14:34-15:56, 18:11-20:05",
+    "covers": [
+      "L048-O2"
+    ],
+    "concepts": [
+      "pk-atp-deficit",
+      "g6pd-trigger-dependence"
+    ],
+    "applicationLevel": "discrimination",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "Positive pathway evidence distinguishes these patients without generalizing across all G6PD variants. Patient 1's low ATP and accumulation of metabolites before pyruvate kinase identify loss of the glycolytic ATP-generating step. Mature erythrocytes lack mitochondria and continuously need that ATP for the sodium-potassium ATPase that maintains cell shape, so their energy failure does not wait for oxidative stress. G6PD supplies NADPH that regenerates reduced glutathione during oxidative stress, but the lecture explicitly describes chronic, episodic, and asymptomatic variants. Patient 2 is established as episodic, so his own trigger-linked history, rather than the G6PD label alone, supports wellness during a week without an added oxidant load.",
+    "id": "OQ4-L048-C2A",
+    "options": [
+      "Patient 1 improves as mature red cells restore their ATP through oxidative phosphorylation, while patient 2 remains well because no oxidant load challenges his reduced NADPH reserve.",
+      "Patient 1 becomes stable at baseline without an oxidant challenge because ATP demand is intermittent; patient 2 hemolyzes continuously because reduced G6PD activity always exhausts the red cell's NADPH reserve.",
+      "Patient 1 continues to hemolyze at baseline because the glycolytic block keeps ATP low; patient 2 remains well because this episodic variant exceeds its NADPH reserve only during an added oxidant load.",
+      "Both patients continue to hemolyze because low ATP and low NADPH each impair red cell maintenance continuously, even when neither patient has an infection or oxidizing medication exposure.",
+      "Both patients remain clinically stable because neither encounters an oxidant trigger; the ATP deficit becomes harmful only when infection adds oxidative stress to the red cell membrane."
+    ],
+    "optionExplanations": [
+      "The prediction that mature red cells restore their ATP through oxidative phosphorylation is incompatible with the lecture's distinction between reticulocytes and erythrocytes. Reticulocytes temporarily retain mitochondria, but mature red cells have none and depend on glycolysis for ATP. The second half fits patient 2's episodic G6PD phenotype, but mitochondrial compensation cannot rescue patient 1's mature erythrocytes.",
+      "The prediction that patient 1 becomes stable at baseline assigns trigger dependence to the wrong pathway. His low ATP and metabolites accumulating before pyruvate kinase show a continuing glycolytic energy defect, and the membrane sodium-potassium ATPase requires ATP continuously. Patient 2's documented well intervals and trigger-linked attacks directly contradict continuous hemolysis from his particular episodic G6PD variant.",
+      "Patient 1 continues to hemolyze at baseline because his upstream glycolytic accumulation and low ATP identify the pyruvate kinase block described in the lecture. Mature red cells need glycolytic ATP continuously for the sodium-potassium ATPase that maintains their shape. Patient 2 is explicitly described as having an episodic G6PD variant, so without the infections or oxidizing medications that previously exceeded his NADPH and reduced-glutathione reserve, he is expected to remain well this week.",
+      "The statement that both patients continue to hemolyze ignores the phenotype established for patient 2. The lecture describes chronic, episodic, and asymptomatic G6PD variants; this patient's records identify the episodic form, in which infection or an oxidizing medication precipitates an attack. Patient 1's low ATP is a continuing maintenance problem, but patient 2's NADPH reserve is adequate between the stated triggers.",
+      "The claim that both patients remain clinically stable correctly fits patient 2's documented episodic G6PD phenotype but incorrectly makes an oxidant challenge necessary for patient 1. Low ATP is already present in patient 1 because metabolites accumulate before pyruvate kinase; mature red cells require that ATP at all times to operate the sodium-potassium ATPase and preserve their morphology."
+    ],
+    "optionMarkers": [
+      "mature red cells restore their atp",
+      "becomes stable at baseline",
+      "continues to hemolyze at baseline",
+      "both patients continue to hemolyze",
+      "both patients remain clinically stable"
+    ],
+    "answer": 2,
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "It preserves the intended contrast between a continuing course and a trigger-linked course but assigns them backwards. Patient 1's low ATP plus metabolites accumulated before pyruvate kinase establish a continuous energy defect; patient 2's history explicitly identifies an episodic G6PD phenotype."
+    },
+    "n": 220
+  },
+  {
+    "stem": "Two children have hereditary hemolytic anemia. During well visits, child A has persistently low red cell ATP, accumulation of phosphoenolpyruvate and glycerate 2- and 3-phosphate, and decreased pyruvate and lactate. Child B has normal ATP but develops low NADPH, a low reduced-to-oxidized glutathione ratio, and hemolysis only during infections or after oxidizing medications; he is clinically well between episodes. Which enzyme deficiency best fits each child?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L048",
+    "sourceRef": "OST520 (048) L - RBC Metabolism - Faner.pdf, pp. 5-7; transcript 053 (L048), 13:26-14:22, 14:34-15:56, 18:11-20:05",
+    "covers": [
+      "L048-O2"
+    ],
+    "concepts": [
+      "pk-atp-deficit",
+      "g6pd-trigger-dependence"
+    ],
+    "applicationLevel": "discrimination",
+    "reasoningOrder": 3,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "The metabolite and cofactor patterns localize the two defects independently of severity. A pyruvate kinase block accumulates phosphoenolpyruvate and glycerate phosphates while lowering pyruvate, lactate, and ATP. That loss is especially damaging after reticulocytes mature and lose mitochondria because erythrocytes depend on glycolysis for the ATP used by their membrane sodium-potassium ATPase. G6PD deficiency instead lowers pentose-phosphate-pathway NADPH and leaves too little reduced glutathione to clear peroxide. The faculty source allows chronic, episodic, and asymptomatic G6PD variants; child B's low-redox measurements during infection- or medication-triggered attacks and wellness between them establish the episodic phenotype, while child A's pathway-specific glycolytic pattern rules out severe chronic G6PD as the explanation for his course.",
+    "id": "OQ4-L048-C2B",
+    "options": [
+      "Both children have G6PD deficiency: child A has a chronic variant that continuously lowers ATP, whereas child B has an episodic variant that lowers glutathione only after oxidant exposure.",
+      "Child A has pyruvate kinase deficiency, but his low ATP is temporary because mature red cells regain mitochondria; child B has G6PD deficiency because oxidant exposure lowers glutathione.",
+      "Child A's low ATP identifies pyruvate kinase deficiency, whereas child B's low NADPH and glutathione during trigger-linked attacks identify an episodic G6PD deficiency.",
+      "Child A's low ATP identifies G6PD deficiency, whereas child B's low glutathione identifies pyruvate kinase deficiency with attacks precipitated by infection or medication.",
+      "Both children have pyruvate kinase deficiency: child A has a severe persistent energy deficit, whereas child B has a milder defect revealed only when illness increases red cell stress."
+    ],
+    "optionExplanations": [
+      "The lecture does allow chronic G6PD deficiency, so the claim that both children have G6PD deficiency is a plausible diagnostic shortcut. It fails on child A's pathway-specific evidence: G6PD supplies NADPH, whereas his persistent low ATP plus upstream glycolytic accumulation and low pyruvate and lactate localize the block to pyruvate kinase. Child B's redox findings do fit episodic G6PD deficiency.",
+      "The assignment of enzymes is correct, but the assertion that child A's low ATP is temporary is not. The lecture states that reticulocytes have mitochondria and lose them as they mature; mature erythrocytes do not regain mitochondria and therefore depend on glycolysis. Child B's trigger-linked low NADPH and glutathione still identify episodic G6PD deficiency.",
+      "Child A's low ATP identifies pyruvate kinase deficiency because phosphoenolpyruvate and glycerate phosphates accumulate before the blocked reaction while pyruvate, lactate, and ATP fall after it. Child B instead loses NADPH and reduced glutathione during infection- or medication-triggered episodes, the redox pattern the lecture assigns to an episodic G6PD deficiency. These pathway findings exclude a chronic G6PD variant as an alternative explanation for child A.",
+      "The claim that child B's low glutathione identifies pyruvate kinase deficiency reverses the two pathways. The lecture places G6PD in the pentose phosphate pathway that supplies NADPH for reduced glutathione, matching child B. It places pyruvate kinase at an ATP-generating glycolytic step, matching child A's low ATP, upstream metabolite accumulation, and decreased pyruvate and lactate.",
+      "The choice that both children have pyruvate kinase deficiency accounts for child A's low ATP and glycolytic metabolite pattern but cannot explain child B's normal ATP or selective fall in NADPH and reduced glutathione. Infection and oxidizing medications precipitate the G6PD mechanism described in the lecture; they do not convert a pyruvate kinase block into a NADPH-specific defect."
+    ],
+    "optionMarkers": [
+      "both children have g6pd deficiency",
+      "low atp is temporary",
+      "low atp identifies pyruvate kinase deficiency",
+      "low glutathione identifies pyruvate kinase deficiency",
+      "both children have pyruvate kinase deficiency"
+    ],
+    "answer": 2,
+    "closestDistractor": {
+      "index": 3,
+      "why_wrong": "It names the same two enzyme deficiencies but maps the pathway findings backwards. Low ATP with metabolites accumulating before pyruvate kinase identifies child A's glycolytic block, whereas low NADPH and reduced glutathione during oxidant-triggered episodes identify child B's G6PD defect."
+    },
+    "n": 221
+  },
+  {
+    "stem": "A child of Southeast Asian descent has mild hemolytic anemia. The blood smear shows numerous target cells. Hemoglobin electrophoresis shows a normal HbA band along with an additional band that migrates differently and is shown by further testing to be a tetramer built entirely of otherwise-normal beta chains. Both parents are unaffected carriers. Which of the following best explains this pattern, and which category of hemoglobinopathy does it belong to?",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L048",
+    "sourceRef": "OST520 (048) L - RBC Metabolism - Faner.pdf, p. 8; transcript 053 (L048), 20:56-23:20",
+    "covers": [
+      "L048-O3",
+      "L048-O4",
+      "L048-O5",
+      "L048-O8"
+    ],
+    "concepts": [
+      "thalassemia-quantity-defect",
+      "hbs-structural-defect"
+    ],
+    "applicationLevel": "discrimination",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "The lecture splits hemoglobinopathies into two categories by what is wrong with the globin chain: a quantity defect, where the chains produced are structurally normal but out of balance with each other, versus a structure defect, where the amount produced is normal but the sequence is altered. Alpha-thalassemia is the quantity defect: too few alpha chains leaves the normally-paired beta chains in excess, and those otherwise-normal beta chains aggregate into the HbH tetramer, producing both an additional electrophoresis band and target cell morphology. The discrimination the reader must make is that an additional band on electrophoresis does not by itself mean a structural mutation; here it is explicitly a tetramer of normal chains, which places the defect in quantity rather than structure.",
+    "id": "OQ4-L048-C3A",
+    "options": [
+      "This is Cooley's anemia, a form of beta-thalassemia in which a shortage of beta chains leaves excess alpha chains to aggregate and cause the extra electrophoresis band seen here.",
+      "This is a hemoglobin variant caused by a single amino acid substitution in the beta chain, similar to the substitution that produces HbS, which explains the abnormal band on electrophoresis.",
+      "This is alpha-thalassemia, a reduced quantity of structurally normal alpha chains that leaves an excess of normal beta chains to aggregate into HbH.",
+      "The target cells and extra band reflect an unrelated iron deficiency anemia rather than any imbalance between alpha and beta chain production in this child.",
+      "Both chains are present in normal quantity and normal structure here, and the extra band is a benign, clinically insignificant electrophoresis artifact worth ignoring."
+    ],
+    "optionExplanations": [
+      "Cooley's anemia is the lecture's example of beta-thalassemia, where a shortage of beta chains leaves excess alpha chains to aggregate; here, though, the aggregating species is identified as a tetramer of beta chains, which means beta chains are in excess and alpha chains are the ones in short supply, the opposite imbalance from Cooley's anemia.",
+      "An abnormally migrating electrophoresis band is exactly the finding the lecture also produces with a single amino acid substitution in the beta chain, as in HbS, which makes this the closest wrong reading. But here the extra band is identified as a tetramer of otherwise-normal beta chains rather than a chain with an altered sequence, and the finding fits an alpha-chain quantity shortfall instead of a structural mutation in either chain.",
+      "The lecture defines alpha-thalassemia as a defect in the amount of alpha chain produced, not its structure: with too few alpha chains available, the beta chains that would normally pair with them are left in excess and aggregate into the HbH tetramer, a species the lecture describes as built from beta chains that are otherwise normal in sequence. A reduced quantity of structurally normal alpha chains, not an altered amino acid sequence, is what produces both the HbH band and the target cell morphology.",
+      "Iron deficiency is not described anywhere in the lecture's account of target cells or of the HbH band; the lecture instead ties both findings to an imbalance between alpha and beta chain production, so attributing them to an unrelated iron deficiency anemia leaves the electrophoresis finding, a tetramer of beta chains, unexplained.",
+      "The lecture ties this pattern, target cells plus a tetramer of otherwise-normal beta chains on electrophoresis, specifically to alpha-thalassemia rather than to a benign, clinically insignificant electrophoresis artifact; the child's anemia and carrier parents are also not consistent with dismissing the finding as inconsequential."
+    ],
+    "optionMarkers": [
+      "a shortage of beta chains leaves excess alpha chains",
+      "a single amino acid substitution in the beta chain",
+      "reduced quantity of structurally normal alpha chains",
+      "unrelated iron deficiency anemia",
+      "a benign, clinically insignificant electrophoresis artifact"
+    ],
+    "answer": 2,
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "An abnormally migrating band is the same electrophoresis signature the lecture also produces with a single amino acid substitution such as HbS, which is why this reading is tempting. It is excluded because the extra species here is identified as a tetramer of otherwise-normal beta chains rather than a chain with an altered sequence, which fits a chain-quantity imbalance instead of a structural mutation."
+    },
+    "n": 43
+  },
+  {
+    "stem": "A young man of West African descent has episodic pain crises and an otherwise unremarkable baseline blood smear. Hemoglobin electrophoresis shows no detectable HbA band; essentially all of his hemoglobin migrates to a single abnormal position distinct from HbA. Both of his parents each carry one copy of the variant. Which of the following best explains this electrophoresis pattern, and which category of hemoglobinopathy does it belong to?",
+    "topic": "Hematology & Physiology",
+    "src": "H",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L048",
+    "sourceRef": "OST520 (048) L - RBC Metabolism - Faner.pdf, pp. 8-9; transcript 053 (L048), 23:56-24:50",
+    "covers": [
+      "L048-O3",
+      "L048-O4",
+      "L048-O5",
+      "L048-O8"
+    ],
+    "concepts": [
+      "thalassemia-quantity-defect",
+      "hbs-structural-defect"
+    ],
+    "applicationLevel": "discrimination",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "Run in the opposite direction from C3A, the same discrimination starts from a structural context. Sickle cell disease arises from a transversion mutation substituting one amino acid at position six of the beta chain; the number of beta chains produced is unaffected, only their sequence changes. Because every beta chain carries the same substitution, essentially the entire hemoglobin pool migrates to one new electrophoretic position rather than showing a normal band beside a separate excess-chain species, the quantity-defect pattern seen in thalassemia. The reader must again separate an electrophoresis shift from a quantity shortfall: here the shift is total and the chain amount is normal, which places the defect in structure rather than quantity.",
+    "id": "OQ4-L048-C3B",
+    "options": [
+      "This is Cooley's anemia, since the absence of a normal HbA band means beta chain production has failed almost entirely in this patient.",
+      "The abnormal band reflects a red cell enzyme deficiency such as G6PD deficiency altering hemoglobin's total charge, not a change in the globin chain itself.",
+      "This is sickle cell disease, a normal quantity of beta chains that are structurally abnormal due to a single amino acid substitution.",
+      "Because each parent carries only one copy of the variant, this patient must also be heterozygous with sickle cell trait rather than sickle cell disease.",
+      "The single abnormal band reflects a shortage of beta chain production, the same alpha-versus-beta quantity imbalance that produces thalassemia in other patients."
+    ],
+    "optionExplanations": [
+      "Cooley's anemia, the lecture's beta-thalassemia example, still leaves some normal adult hemoglobin alongside excess alpha chain aggregates, rather than shifting essentially the entire hemoglobin pool to one new position; a reading in which beta chain production has failed almost entirely does not match a chain that is being produced, in normal amount, with an altered sequence instead.",
+      "The lecture ties G6PD deficiency to oxidative damage and Heinz body formation, not to a shift in hemoglobin's electrophoretic migration; a red cell enzyme deficiency such as G6PD deficiency altering hemoglobin's total charge has no basis in the lecture's account, which instead assigns migration shifts like this one to a change in the globin chain's own amino acid sequence.",
+      "The lecture attributes sickle cell disease to a transversion mutation that substitutes one amino acid at a single position of the beta chain, changing its structure without changing how much of the chain is produced. A normal quantity of beta chains that are structurally abnormal due to a single amino acid substitution is exactly this mechanism, and it is why the entire measurable hemoglobin pool migrates to one new position on electrophoresis rather than showing a normal band alongside a separate additional species.",
+      "The lecture ties heterozygosity, sickle cell trait, to being generally unaffected, but this patient has pain crises and no detectable HbA band at all, both of which the lecture reserves for homozygous sickle cell disease; two carrier parents can each pass their copy to the same child, so a patient must also be heterozygous with sickle cell trait does not follow from the parents' carrier status alone.",
+      "A quantity imbalance is the lecture's mechanism for thalassemia, where the number of alpha or beta chains produced falls out of balance while their sequence stays normal; here, though, essentially all of the hemoglobin has shifted to one new position rather than showing a normal band alongside a separate excess-chain species, which is the electrophoresis signature of a changed chain structure, not the same alpha-versus-beta quantity imbalance that produces thalassemia."
+    ],
+    "optionMarkers": [
+      "beta chain production has failed almost entirely",
+      "a red cell enzyme deficiency such as g6pd deficiency altering hemoglobin's total charge",
+      "structurally abnormal due to a single amino acid substitution",
+      "must also be heterozygous with sickle cell trait",
+      "the same alpha-versus-beta quantity imbalance that produces thalassemia"
+    ],
+    "answer": 2,
+    "closestDistractor": {
+      "index": 4,
+      "why_wrong": "A quantity imbalance is the lecture's mechanism for the other major hemoglobinopathy category, which is why it is tempting here. It is excluded because the entire hemoglobin pool has shifted to one new electrophoretic position rather than showing a normal band alongside a separate excess-chain species, the pattern a structural substitution produces rather than a chain-quantity shortfall."
+    },
+    "n": 44
+  },
+  {
+    "stem": "In a cultured hepatocyte line, phosphatidate phosphatase activity is genetically increased several-fold while the enzyme activity that activates phosphatidate with CTP is left unchanged; no other manipulation is made. Predict what happens to the fraction of newly made phosphatidate that is committed toward triacylglycerol rather than phospholipid, and to the phosphate content of the major new glycerolipid species being made.",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L049",
+    "sourceRef": "OST520 (049) L - Lipid Metabolism: Complex Lipids - Wilkins.pdf, pp. 3-5; transcript 054 (049.1), 07:24-07:55, 11:14-13:27",
+    "covers": [
+      "L049-A1",
+      "L049-A2",
+      "L049-A3",
+      "L049-A4",
+      "L049-MO-A3"
+    ],
+    "concepts": [
+      "phosphatidate-branch-point",
+      "tag-vs-pl-fate"
+    ],
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "Phosphatidate is the single branch-point intermediate the lecture places at the center of triacylglycerol and phospholipid synthesis. Phosphatidate phosphatase clips off its phosphate group to give 1,2-diacylglycerol, which then accepts a third fatty acid to become triacylglycerol, a non-membrane storage lipid the lecture describes as having no phosphate in its finished structure. The competing route activates phosphatidate with CTP to form CDP-diacylglycerol, which keeps the phosphate and goes on to become a phospholipid. Because both routes draw on the same phosphatidate pool, favoring one enzyme changes how that pool is partitioned rather than simply increasing total output on both sides, and the predicted product's phosphate content follows directly from which enzyme is favored.",
+    "id": "OQ4-L049-C1A",
+    "options": [
+      "A larger fraction of phosphatidate is activated by CTP and carried on to phospholipid; the major new glycerolipid species now retains its phosphate group.",
+      "A larger fraction of phosphatidate is dephosphorylated to diacylglycerol and carried on to triacylglycerol; the major new glycerolipid species now carries no phosphate group.",
+      "Both triacylglycerol and phospholipid synthesis increase in parallel, because more phosphatidate is now available for both branches at once.",
+      "More triacylglycerol is made, but the new triacylglycerol molecules still carry a phosphate group as part of their finished structure.",
+      "Triacylglycerol formation cannot increase without extra CTP, since the third fatty acid attachment requires the same CTP-dependent energy step used in phospholipid synthesis."
+    ],
+    "optionExplanations": [
+      "This reverses which branch phosphatidate phosphatase pushes the intermediate toward. Increasing phosphatidate phosphatase increases dephosphorylation of phosphatidate toward triacylglycerol, not activation by CTP toward phospholipid; a lipid species that retains its phosphate group is the phospholipid outcome, which this manipulation does not favor.",
+      "Increasing phosphatidate phosphatase increases the rate at which the branch-point intermediate, phosphatidate, is dephosphorylated to 1,2-diacylglycerol, which is then esterified with a third fatty acid to form triacylglycerol. The lecture describes triacylglycerol's finished structure as having no phosphate group at all, unlike phospholipids, which retain their phosphate through the separate CTP-dependent activation step this manipulation left untouched.",
+      "Phosphatidate is a single branch-point pool, not two separate supplies. Raising only phosphatidate phosphatase activity changes how that shared pool is partitioned between the two branches rather than expanding the total amount of phosphatidate available, so triacylglycerol and phospholipid synthesis do not simply increase in parallel from this one change.",
+      "More triacylglycerol is indeed favored here, but the lecture describes triacylglycerol's finished structure as having no phosphate at all: phosphatidate phosphatase's role is precisely to remove that phosphate before the third fatty acid is attached. Saying the product carries a phosphate group as part of its structure misapplies the phosphate-retention rule that actually belongs to phospholipids.",
+      "The lecture ties CTP specifically to the phospholipid branch, where it activates phosphatidate to CDP-diacylglycerol. Attaching the third fatty acid to diacylglycerol to finish triacylglycerol instead uses an acyltransferase drawing on acyl-CoA. Treating that step as needing the same CTP-dependent energy step used in phospholipid synthesis imports an energy requirement from the wrong branch."
+    ],
+    "optionMarkers": [
+      "retains its phosphate group",
+      "no phosphate group",
+      "increase in parallel",
+      "phosphate group as part of",
+      "CTP-dependent energy step"
+    ],
+    "answer": 1,
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "It correctly recognizes phosphatidate phosphatase as the branch-controlling enzyme but assigns it the opposite direction, sending the intermediate toward the phosphate-retaining phospholipid product instead of the phosphate-free triacylglycerol product the lecture ties to this enzyme."
+    },
+    "n": 222
+  },
+  {
+    "stem": "A researcher isolates the major new glycerolipid species being synthesized in a tissue sample. The isolated species has exactly two fatty acids esterified to a glycerol backbone, carries no phosphate group, and no CDP-diacylglycerol can be detected accumulating anywhere upstream. Which branch-point enzyme activity most plausibly predominates in this tissue right now, and what does that predict about the tissue's branch-point commitment at this moment?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L049",
+    "sourceRef": "OST520 (049) L - Lipid Metabolism: Complex Lipids - Wilkins.pdf, pp. 4-5; transcript 054 (049.1), 11:14-13:27",
+    "covers": [
+      "L049-A1",
+      "L049-A2",
+      "L049-A3",
+      "L049-A4",
+      "L049-MO-A3"
+    ],
+    "concepts": [
+      "phosphatidate-branch-point",
+      "tag-vs-pl-fate"
+    ],
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 3,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "Run in the opposite direction from C1A, this item starts from a structural readout and asks which branch-point enzyme activity it implies rather than starting from a perturbed enzyme and predicting the readout. A phosphate-free species carrying exactly two fatty acids matches only 1,2-diacylglycerol, the specific product of phosphatidate phosphatase, and the absence of any detectable CDP-diacylglycerol confirms the CTP-dependent branch is not active. Both findings together point to phosphatidate phosphatase predominating and this tissue being currently committed toward triacylglycerol rather than phospholipid at the branch point, without requiring or supporting any stronger claim about the tissue's phospholipid capacity in general.",
+    "id": "OQ4-L049-C1B",
+    "options": [
+      "CTP-dependent activation predominates; this tissue currently favors making new phospholipid over new triacylglycerol at the branch point.",
+      "Phosphatidate phosphatase activity predominates; this tissue currently favors making new triacylglycerol over new phospholipid at the branch point.",
+      "The isolated species is already finished triacylglycerol, so no further branch-point reasoning is needed to interpret this finding.",
+      "Because the isolated lipid has no phosphate, this tissue cannot make any phospholipid at all right now, only triacylglycerol.",
+      "The finding shows this tissue's cells have run out of CTP, which is why no CDP-diacylglycerol accumulates and the phosphate-free intermediate builds up instead."
+    ],
+    "optionExplanations": [
+      "This assigns the finding to the wrong branch. A phosphate-free, two-fatty-acid intermediate is not CDP-diacylglycerol, which retains phosphate from CTP, and no CDP-diacylglycerol is even detectable here; a tissue that favors making new phospholipid over new triacylglycerol at this branch point would instead accumulate the phosphate-carrying intermediate, not the phosphate-free one that was found.",
+      "A two-fatty-acid, phosphate-free intermediate matches only 1,2-diacylglycerol, the direct product of phosphatidate phosphatase clipping the phosphate from phosphatidate, and the absence of any detectable CDP-diacylglycerol shows the competing CTP-dependent activation step is not being used right now. Together these findings show a tissue that currently favors making new triacylglycerol over new phospholipid at this branch point.",
+      "Finished triacylglycerol carries three esterified fatty acids, not two. A species with exactly two fatty acids and no phosphate is the diacylglycerol intermediate one step before the third fatty acid is attached, so this is not already finished triacylglycerol and still requires the branch-point reasoning to interpret.",
+      "One momentary snapshot of the dominant intermediate does not rule out phospholipid synthesis proceeding elsewhere in the same tissue at a lower rate. The lecture assigns phospholipid synthesis to essentially every cell type except mature red blood cells, so a claim that this tissue cannot make any phospholipid at all right now overstates what a single accumulating intermediate can show.",
+      "Nothing in this finding measures CTP levels directly, and the lecture ties the branch point to which enzyme activity, phosphatidate phosphatase versus CTP-dependent activation, acts on phosphatidate, not to whether the cell has run out of CTP as a raw material. The phosphate-free intermediate is explained by phosphatidate phosphatase activity being favored, not by a CTP shortage."
+    ],
+    "optionMarkers": [
+      "favors making new phospholipid",
+      "favors making new triacylglycerol",
+      "already finished triacylglycerol",
+      "cannot make any phospholipid at all",
+      "run out of CTP"
+    ],
+    "answer": 1,
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "It correctly reasons from the intermediate's structure back to a branch-point commitment but assigns the finding to the phosphate-retaining phospholipid branch instead of the phosphate-free triacylglycerol branch that a phosphate-free, two-fatty-acid intermediate actually indicates."
+    },
+    "n": 223
+  },
+  {
+    "stem": "During a prolonged fast, rising glucagon signals lipolysis in an adipocyte. This particular adipocyte has fully normal adipose triglyceride lipase (ATGL) and monoacylglycerol lipase (MAGL) activity but a complete genetic deficiency of hormone-sensitive lipase (HSL). Which intermediate builds up in this cell's fat droplets, and which downstream product reaching the liver is most reduced?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L049",
+    "sourceRef": "OST520 (049) L - Lipid Metabolism: Complex Lipids - Wilkins.pdf, p. 9; transcript 055 (049.2), 04:56-05:37",
+    "covers": [
+      "L049-B1",
+      "L049-B2",
+      "L049-B3",
+      "L049-B4",
+      "L049-MO-B3"
+    ],
+    "concepts": [
+      "tag-lipase-cascade",
+      "phospholipase-specificity"
+    ],
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "Triacylglycerol breakdown proceeds through three lipases acting in a fixed order on a narrowing substrate: ATGL clips the first fatty acid to make diacylglycerol, hormone-sensitive lipase, the hormonally regulated step, clips a second fatty acid from its preferred substrate, diacylglycerol, to make monoacylglycerol, and monoacylglycerol lipase clips the last fatty acid to release free glycerol. Removing HSL from that sequence does not stop the pathway at its start; ATGL still acts, so diacylglycerol accumulates, but nothing downstream of the missing step can be produced, so free glycerol, the final product the liver depends on, is the one most reduced.",
+    "id": "OQ4-L049-C2A",
+    "options": [
+      "Monoacylglycerol builds up, because HSL's absence blocks monoacylglycerol lipase directly; the fatty acid ATGL would normally release is the product most reduced.",
+      "Diacylglycerol builds up, since ATGL still clips the first fatty acid off triacylglycerol; free glycerol is the product most reduced, since HSL is missing.",
+      "No meaningful accumulation occurs here, because ATGL by itself can fully break triacylglycerol down to free fatty acids and glycerol without any help from HSL.",
+      "Free glycerol output stays normal, because rising glucagon instead directly activates monoacylglycerol lipase to compensate for the missing hormone-sensitive lipase.",
+      "Free glycerol output stays normal, because phospholipase C substitutes for HSL, clipping the head group directly off the stored triacylglycerol droplet."
+    ],
+    "optionExplanations": [
+      "This misplaces where the block occurs. ATGL acts first and is unaffected here, so its product, diacylglycerol, still forms normally; HSL, not MAGL, is what is missing, and HSL acts on diacylglycerol to generate monoacylglycerol in the first place. Saying monoacylglycerol builds up requires HSL to have already made it, which a complete HSL deficiency rules out.",
+      "ATGL initiates triacylglycerol breakdown and generates diacylglycerol regardless of HSL status, so diacylglycerol builds up in this cell. Producing free glycerol requires cleaving diacylglycerol down to monoacylglycerol first, and hormone-sensitive lipase is described as working primarily on diacylglycerol as its preferred substrate; without it, monoacylglycerol lipase has nothing to act on, so free glycerol reaching the liver is the product most reduced by this specific deficiency.",
+      "The lecture describes ATGL as only initiating the process, clipping off one fatty acid to generate diacylglycerol; it does not carry the pathway all the way to free glycerol. Saying triacylglycerol breaks down completely without help from HSL skips the two remaining lipases, hormone-sensitive lipase and monoacylglycerol lipase, that the lecture assigns to finishing that job.",
+      "The lecture ties hormonal control by insulin and glucagon specifically to hormone-sensitive lipase, not to monoacylglycerol lipase. Nothing in the lecture describes glucagon signaling that directly activates monoacylglycerol lipase to take over HSL's job, and without HSL's product, monoacylglycerol, MAGL has no substrate to act on regardless of how it is regulated.",
+      "Triacylglycerol has no head group for an enzyme to clip; the lecture assigns phospholipase C to removing phospholipid head groups, a separate enzyme class acting on a separate substrate. Phospholipase C substitutes for HSL only if the two pathways shared a substrate, which they do not."
+    ],
+    "optionMarkers": [
+      "monoacylglycerol builds up",
+      "diacylglycerol builds up",
+      "help from HSL",
+      "directly activates monoacylglycerol lipase",
+      "phospholipase C substitutes"
+    ],
+    "answer": 1,
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "It correctly places the defect within the ATGL-HSL-MAGL sequence but assigns the accumulating intermediate one step too far downstream, to monoacylglycerol, when HSL is precisely the enzyme needed to produce monoacylglycerol from diacylglycerol in the first place."
+    },
+    "n": 224
+  },
+  {
+    "stem": "A biochemist treats a purified phospholipid with one phospholipase preparation. Afterward, the glycerol backbone still carries a fatty acid at carbon 1 and the entire phosphate-containing head group is still attached, but the fatty acid that had been esterified at carbon 2 is gone. Which phospholipase produced this result, and which signaling molecule would this same enzyme most directly liberate from a phosphatidylinositol substrate carrying arachidonic acid at carbon 2?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L049",
+    "sourceRef": "OST520 (049) L - Lipid Metabolism: Complex Lipids - Wilkins.pdf, pp. 8, 10; transcript 055 (049.2), 02:28-03:11, 05:44-07:04",
+    "covers": [
+      "L049-B1",
+      "L049-B2",
+      "L049-B3",
+      "L049-B4",
+      "L049-MO-B3"
+    ],
+    "concepts": [
+      "tag-lipase-cascade",
+      "phospholipase-specificity"
+    ],
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 3,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "Run through the phospholipid side rather than the triacylglycerol side, this item asks the same kind of inference in reverse: from a structural readout, infer which enzyme is missing or acting. The lecture distinguishes the four phospholipases by exactly where on the molecule they cut: phospholipase A1 clips the fatty acid at the end carbon, phospholipase A2 clips the fatty acid at the middle carbon where arachidonic acid usually sits, phospholipase C removes the entire head group, and phospholipase D removes only the head group's alcohol portion. A result missing only the middle-carbon fatty acid, with the end-carbon fatty acid and the entire head group intact, is the signature of phospholipase A2 specifically, which is also the enzyme the lecture ties to releasing free arachidonic acid for prostaglandin synthesis, distinct from the IP3 and diacylglycerol that phospholipase C releases from phosphorylated phosphatidylinositol.",
+    "id": "OQ4-L049-C2B",
+    "options": [
+      "Phospholipase A1 produced this result, since it clips the end-carbon fatty acid; acting there on phosphatidylinositol, it would directly liberate free arachidonic acid.",
+      "Phospholipase A2 produced this result, since it clips the fatty acid from the middle carbon; acting there on phosphatidylinositol, it directly liberates free arachidonic acid.",
+      "Phospholipase C produced this result, since it is described as clipping the fatty acid from the middle carbon while sparing the head group entirely.",
+      "Phospholipase D produced this result, since it clips only the alcohol portion of the head group, leaving every fatty acid completely untouched.",
+      "Phospholipase A2 is correctly identified here as the enzyme clipping the fatty acid from the middle carbon, but on phosphatidylinositol it would instead liberate IP3 and diacylglycerol."
+    ],
+    "optionExplanations": [
+      "Phospholipase A1 clips the end-carbon fatty acid, which would remove the fatty acid at carbon 1 and leave carbon 2's fatty acid intact, the opposite of what is observed here, where carbon 1's fatty acid remains and carbon 2's is missing. It is also carbon 2, not the end carbon, that the lecture ties to arachidonic acid's usual location and release.",
+      "The lecture assigns phospholipase A2 as the enzyme that clips the fatty acid from the middle carbon, carbon 2, while leaving carbon 1's fatty acid and the entire head group untouched, which matches exactly what remains here. Because arachidonic acid is described as typically esterified at that same middle carbon, phospholipase A2 acting there is also the enzyme the lecture ties to liberating free arachidonic acid for prostaglandin synthesis.",
+      "The lecture ties phospholipase C to clipping off the entire head group, phosphate plus alcohol, not to removing a fatty acid tail at all. Describing it as sparing the head group while acting on a fatty acid tail is backwards from how the lecture defines this enzyme's target, and here the head group is exactly what remains untouched.",
+      "Phospholipase D is described as the enzyme that clips only the alcohol portion of the head group while leaving the phosphate on the backbone, not as removing a fatty acid tail. Here a fatty acid at carbon 2 is missing while the entire head group, phosphate and alcohol together, is still attached, the reverse of what phospholipase D would produce.",
+      "Correctly placing the missing fatty acid at carbon 2 identifies phospholipase A2, but the lecture ties IP3 and diacylglycerol production specifically to phospholipase C acting on phosphorylated phosphatidylinositol, not to phospholipase A2. Claiming this same enzyme would liberate IP3 and diacylglycerol instead assigns phospholipase C's specific products to the wrong enzyme."
+    ],
+    "optionMarkers": [
+      "clips the end-carbon fatty acid",
+      "clips the fatty acid from the middle carbon",
+      "sparing the head group",
+      "clips only the alcohol portion of the head group",
+      "liberate IP3 and diacylglycerol"
+    ],
+    "answer": 1,
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "It correctly narrows the result to a fatty-acid-clipping phospholipase acting on a specific carbon rather than a head-group-clipping one, which is the right family, but names the enzyme that acts on the wrong carbon, carbon 1 rather than the middle carbon 2 the finding actually implicates."
+    },
+    "n": 225
+  },
+  {
+    "stem": "In cultured fibroblasts from a patient, the lysosomal enzyme that hydrolytically clips the phosphorylcholine head group off sphingomyelin to generate ceramide is found to be almost completely inactive; the enzyme that acts on ceramide afterward, releasing sphingosine, and every other lysosomal hydrolase, are normal. Predict which lipid accumulates in this patient's lysosomes and what happens to that lipid's own rate of new synthesis.",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L049",
+    "sourceRef": "OST520 (049) L - Lipid Metabolism: Complex Lipids - Wilkins.pdf, pp. 14, 17; transcript 057 (049.4), 00:53-01:57, 04:43-04:52, 06:05-06:26",
+    "covers": [
+      "L049-C1",
+      "L049-C2",
+      "L049-C3",
+      "L049-C4",
+      "L049-D1",
+      "L049-D2",
+      "L049-D3",
+      "L049-D4",
+      "L049-D5",
+      "L049-MO-C3"
+    ],
+    "concepts": [
+      "sphingolipidosis-substrate-accumulation",
+      "lysosomal-degradation-order"
+    ],
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "The lecture's account of sphingolipidoses rests on assigning each degradative enzyme its own specific substrate: sphingomyelinase hydrolytically clips the phosphorylcholine head group from sphingomyelin to yield ceramide, entirely inside the lysosome. A deficiency in that step does not touch ceramide production by any other route; it simply prevents this particular conversion, so the molecule waiting to be acted on, sphingomyelin, is what accumulates. The lecture separately states, as a general property of these disorders, that the rate of biosynthesis of the accumulating lipid remains normal, so the correct prediction pairs a specific, unchanged substrate identity with an unchanged synthesis rate rather than any compensatory rise or fall the source does not describe.",
+    "id": "OQ4-L049-C3A",
+    "options": [
+      "Ceramide accumulates, since it is the direct product released by the missing step, while sphingomyelin's own synthesis slows because its usual degradation route is blocked.",
+      "Sphingomyelin itself accumulates, since it is the substrate of the missing step; its own new sphingomyelin synthesis rate stays normal, unaffected by the degradative block.",
+      "Sphingomyelin accumulates, and its own synthesis rate also rises, since the cell increases production to compensate for what it can no longer clear from the lysosome.",
+      "Sphingomyelin accumulates, and its own synthesis rate falls, since the growing lysosomal pool signals the cell to slow further production of it.",
+      "A glycosphingolipid such as glucocerebroside accumulates instead, since any single missing lysosomal hydrolase causes a general buildup of glycosphingolipids together."
+    ],
+    "optionExplanations": [
+      "This assigns the buildup to the wrong side of the reaction. A deficient enzyme causes its substrate to accumulate, not its product; here the substrate is sphingomyelin and ceramide is what the step would have released, so saying ceramide accumulates gets the direction of the block backwards, and nothing in the lecture ties a blocked degradation route to a slower synthesis rate for the accumulating lipid.",
+      "The deficient enzyme is described as clipping sphingomyelin's phosphorylcholine head group to generate ceramide, so sphingomyelin is what backs up when that step fails, not the ceramide the step would have produced. Consistent with the lecture's general rule for these lysosomal storage conditions, sphingomyelin's own synthesis rate stays normal even as the lysosomal pool of unclipped sphingomyelin builds up, because the lesion is confined to degradation and does not touch the synthetic pathway.",
+      "Identifying sphingomyelin as the accumulating substrate is correct, but the lecture is explicit that the rate of biosynthesis of the accumulating lipid remains normal in these conditions. Claiming its own synthesis rate also rises to compensate adds a compensatory mechanism the lecture does not describe.",
+      "Identifying sphingomyelin as the accumulating substrate is correct, but the lecture states the rate of biosynthesis of the accumulating lipid remains normal in these disorders. Claiming its own synthesis rate falls in response to lysosomal buildup describes a feedback mechanism the lecture does not attribute to this system.",
+      "The lecture's stated pattern for these disorders is the opposite of a general buildup: a single, specific sphingolipid, the substrate of the one deficient enzyme, accumulates, not a class of unrelated species together. The enzyme described here acts specifically on sphingomyelin, so a general buildup of glycosphingolipids together is not what this particular deficiency predicts."
+    ],
+    "optionMarkers": [
+      "ceramide accumulates",
+      "synthesis rate stays normal",
+      "synthesis rate also rises",
+      "synthesis rate falls",
+      "general buildup of glycosphingolipids"
+    ],
+    "answer": 1,
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "It correctly applies the lecture's rule that a single specific substrate accumulates but adds an unstated compensatory response, a rise in that same lipid's own synthesis rate, when the lecture instead states directly that the biosynthesis rate of the accumulating lipid remains normal."
+    },
+    "n": 226
+  },
+  {
+    "stem": "Glycosphingolipid degradation in the lysosome removes sugar residues in the reverse order from that in which they were added during synthesis, one at a time. Patient 1 has a deficiency of the lysosomal enzyme that clips off the terminal sugar, the one added last during synthesis. Patient 2 has a deficiency of a different lysosomal enzyme, the one that clips off a sugar added one step earlier in synthesis, one layer beneath the terminal sugar. Both patients otherwise have every other relevant lysosomal enzyme intact. Which glycolipid intermediate accumulates in each patient's lysosomes?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L049",
+    "sourceRef": "OST520 (049) L - Lipid Metabolism: Complex Lipids - Wilkins.pdf, pp. 15, 17; transcript 057 (049.4), 02:41-02:58, 04:43-04:52, 06:19-06:26",
+    "covers": [
+      "L049-C1",
+      "L049-C2",
+      "L049-C3",
+      "L049-C4",
+      "L049-D1",
+      "L049-D2",
+      "L049-D3",
+      "L049-D4",
+      "L049-D5",
+      "L049-MO-C3"
+    ],
+    "concepts": [
+      "sphingolipidosis-substrate-accumulation",
+      "lysosomal-degradation-order"
+    ],
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 3,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "Run through the same shared inference from the glycosphingolipid side, this item trades a single named enzyme for a comparison between two block positions along one sequential pathway. The lecture describes glycosphingolipid degradation as removing sugars strictly in reverse synthesis order, last on, first off, using a distinct lysosomal enzyme for each specific bond. A block at the very first removal step leaves the entire parent molecule untouched, while a block one step later still permits that first removal before stalling, leaving a partially degraded intermediate rather than the intact parent. Comparing two patients whose blocks sit at different positions in the same sequence forces the reader to track the order of removal explicitly, rather than simply recalling that some accumulation occurs, and the lecture's separate statement that biosynthesis of the accumulating lipid stays normal rules out any claim that the degradation block also throttles synthesis of the same molecule.",
+    "id": "OQ4-L049-C3B",
+    "options": [
+      "Patient 1 accumulates a partially degraded intermediate missing only the outer sugar, and patient 2 accumulates the fully intact parent glycosphingolipid.",
+      "Patient 1 accumulates the fully intact parent glycosphingolipid; patient 2 accumulates a partially degraded intermediate missing only the outer sugar.",
+      "Both patients accumulate the exact same fully intact parent glycosphingolipid, because any missing lysosomal enzyme halts degradation at the first step, regardless of which enzyme is missing.",
+      "Patient 2 accumulates nothing detectable, since a defect anywhere in the pathway other than the first step causes the molecule to be degraded by an alternate route instead.",
+      "Patient 2's degradation block also slows this same glycolipid's own synthesis, since the last-on-first-off rule ties the two processes together in both directions."
+    ],
+    "optionExplanations": [
+      "This swaps the two patients. The terminal, most-recently-added sugar must be clipped first, so a deficiency at that first step, patient 1's, blocks removal of anything and leaves the intact parent molecule; only a deficiency one step later, patient 2's, allows the terminal sugar to come off before stalling. Saying patient 2 accumulates the fully intact parent puts the block at the wrong position in the sequence.",
+      "Because degradation removes sugars in the reverse order from synthesis, the terminal, most-recently-added sugar must come off first. If the enzyme for that first step is missing, as in patient 1, nothing is removed and the fully intact parent molecule accumulates. Patient 2's deficient enzyme acts one step later, so the terminal sugar is still clipped off normally before the pathway stalls, leaving an intermediate missing only the outer sugar rather than the intact parent.",
+      "Degradation is described as a sequential process with a specific enzyme for each specific glycosidic bond, not a single first checkpoint that any deficiency halts equally. Because patient 2's missing enzyme acts one step later than patient 1's, the outcome depends on which step is blocked, so both patients accumulating the same intact parent regardless of which enzyme is missing does not hold once the block sits at a different position in the sequence.",
+      "The lecture's account of these disorders is that a missing lysosomal hydrolase causes its own specific substrate to accumulate, not to be cleared some other way. No alternate degradation route is described for glycosphingolipids, so a partially degraded intermediate accumulates at patient 2's block rather than the molecule being degraded by an alternate route and disappearing.",
+      "The last-on-first-off rule the lecture describes governs only the order sugars are removed during degradation; it says nothing about degradation feeding back onto synthesis, and the lecture states directly that the rate of biosynthesis of the accumulating lipid remains normal in these conditions. Claiming the block also slows this same glycolipid's own synthesis contradicts that stated rule."
+    ],
+    "optionMarkers": [
+      "patient 2 accumulates the fully intact parent",
+      "missing only the outer sugar",
+      "regardless of which enzyme is missing",
+      "degraded by an alternate route",
+      "slows this same glycolipid's own synthesis"
+    ],
+    "answer": 1,
+    "closestDistractor": {
+      "index": 0,
+      "why_wrong": "It correctly recognizes that the two patients' blocks sit at different positions in the same sequential pathway but assigns the intact-parent outcome to the wrong patient, reversing which deficiency, the terminal-sugar enzyme or the one beneath it, leaves the molecule completely untouched."
+    },
+    "n": 227
+  },
+  {
+    "stem": "A patient begins a statin for hyperlipidemia. Two findings are reported after several weeks: (1) the parent drug is extensively converted to inactive metabolites by the liver before being eliminated from the body, and (2) the patient's LDL cholesterol falls because the drug inhibits HMG-CoA reductase, the enzyme the lecture lists as this drug class's physiologic target. Which statement correctly classifies each finding and identifies the type of target responsible for the LDL-lowering effect?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L050",
+    "sourceRef": "OST520 (050) L - Introduction to Pharmacology - Restini.pdf, pp. 4, 8, 20",
+    "covers": [
+      "L050-O2",
+      "L050-O3"
+    ],
+    "concepts": [
+      "pk-vs-pd-classification",
+      "drug-target-categories"
+    ],
+    "applicationLevel": "discrimination",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "The lecture defines pharmacokinetics as what the body does to the drug (absorption, distribution, metabolism, excretion) and pharmacodynamics as what the drug does to the body, acting on a target such as a receptor, ion channel, enzyme, or transporter. Hepatic conversion of a drug to metabolites is squarely pharmacokinetics; a drug inhibiting an enzyme to produce a therapeutic effect is squarely pharmacodynamics, and the lecture's own target table names HMG-CoA reductase as an example of an enzyme target for statins. The two findings must be classified by which side of the body-drug relationship they describe, not by surface wording like the shared word 'metabolic.'",
+    "id": "OQ4-L050-C1A",
+    "options": [
+      "Finding (1) is pharmacokinetics, and finding (2) is pharmacodynamics, with an enzyme as the target responsible for the drug's LDL-lowering effect on the liver.",
+      "Finding (1) is pharmacodynamics, since hepatic conversion of the drug is an action on the patient, and finding (2) is pharmacokinetics, since it describes how the drug is handled.",
+      "Both findings are pharmacokinetics, because both involve a metabolic process: the liver metabolizing the drug and the drug affecting a metabolic enzyme.",
+      "Finding (1) is pharmacokinetics, and finding (2) is pharmacodynamics, but the target responsible for the LDL-lowering effect is a receptor rather than an enzyme.",
+      "Finding (1) is pharmacokinetics, and finding (2) is pharmacodynamics, but the target responsible for the LDL-lowering effect is a transporter rather than an enzyme."
+    ],
+    "optionExplanations": [
+      "The lecture defines pharmacokinetics as what the body does to the drug, which includes metabolism, so the liver converting the parent drug to metabolites is pharmacokinetics. The lecture defines pharmacodynamics as what the drug does to the body, and its target table lists HMG-CoA reductase as an enzyme, so finding (2) is pharmacodynamics with an enzyme as the target responsible for the LDL-lowering effect.",
+      "This swaps the two domains. Claiming hepatic conversion of the drug is an action gets the direction backward: it is the liver's machinery acting on the drug, which the lecture defines as pharmacokinetics. Inhibiting HMG-CoA reductase to lower LDL is the drug acting on a bodily target, which the lecture defines as pharmacodynamics, not pharmacokinetics.",
+      "This conflates two senses of metabolism. Hepatic conversion of the parent drug is pharmacokinetics, since it is what the body does to the drug, but the drug inhibiting HMG-CoA reductase to lower LDL is what the drug does to the body, which the lecture defines as pharmacodynamics; that both findings involve a metabolic process in the loose sense does not make both of them pharmacokinetics.",
+      "This correctly separates the two domains but misassigns the target category. The lecture's target table lists HMG-CoA reductase, the target this drug inhibits to lower LDL, as an enzyme; treating the LDL-lowering effect as due to a receptor rather than an enzyme misidentifies the category the lecture assigns to this drug class.",
+      "This correctly separates the two domains but misassigns the target category. The lecture's target table lists HMG-CoA reductase, the target this drug inhibits to lower LDL, as an enzyme; treating the LDL-lowering effect as due to a transporter rather than an enzyme misidentifies the category the lecture assigns to this drug class."
+    ],
+    "optionMarkers": [
+      "an enzyme as the target",
+      "hepatic conversion of the drug is an action",
+      "involve a metabolic process",
+      "a receptor rather than an enzyme",
+      "a transporter rather than an enzyme"
+    ],
+    "answer": 0,
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "It correctly separates pharmacokinetics from pharmacodynamics but treats both findings as pharmacokinetics because each loosely involves 'metabolism,' collapsing the lecture's distinction between the body metabolizing a drug and a drug acting on a metabolic enzyme."
+    },
+    "provisional": "no transcript; faculty PDF only; revise when Austin posts the recording",
+    "n": 228
+  },
+  {
+    "stem": "A patient with significant renal impairment takes a diuretic at the same dose as a patient with normal kidney function. Two findings are reported: (1) the impaired patient's plasma diuretic concentration is higher because the kidneys clear the unchanged drug from the body more slowly, and (2) in both patients, each molecule of diuretic reaching the kidney inhibits the Na-K-2Cl cotransporter to the same degree, the target the lecture lists for this drug class. Which statement correctly classifies each finding and identifies the type of target responsible for the sodium-excretion effect?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L050",
+    "sourceRef": "OST520 (050) L - Introduction to Pharmacology - Restini.pdf, pp. 4, 8, 20-21",
+    "covers": [
+      "L050-O2",
+      "L050-O3"
+    ],
+    "concepts": [
+      "pk-vs-pd-classification",
+      "drug-target-categories"
+    ],
+    "applicationLevel": "discrimination",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "This item tests the same classification with a perturbation rather than a static pair: renal impairment changes the pharmacokinetic side of the drug (how fast the body eliminates it) while leaving the pharmacodynamic side (how strongly each drug molecule inhibits its target) unchanged. The lecture's target table lists the Na-K-2Cl cotransporter as a carrier/transporter target for diuretics, so the sodium-excretion effect is pharmacodynamics with a transporter as the target, while the concentration change is pharmacokinetics driven by impaired excretion; sharing an anatomic site, the kidney, does not merge the two domains.",
+    "id": "OQ4-L050-C1B",
+    "options": [
+      "Finding (1) is pharmacokinetics, and finding (2) is pharmacodynamics, with a transporter as the target responsible for the sodium-excretion effect.",
+      "Finding (1) is pharmacodynamics, since slower clearance is an effect the drug produces on the kidney, and finding (2) is pharmacokinetics.",
+      "Both findings are pharmacokinetics, because both take place in the kidney: the kidney clears the drug, and the drug acts on the cotransporter.",
+      "Finding (1) is pharmacokinetics, and finding (2) is pharmacodynamics, but the target responsible for the sodium-excretion effect is an enzyme rather than a transporter.",
+      "Finding (1) is pharmacokinetics, and finding (2) is pharmacodynamics, but the target responsible for the sodium-excretion effect is a receptor rather than a transporter."
+    ],
+    "optionExplanations": [
+      "The lecture defines pharmacokinetics as what the body does to the drug, and slower clearance of unchanged drug in renal impairment is exactly that. The lecture's target table lists the Na-K-2Cl cotransporter as a carrier/transporter, so the diuretic inhibiting it to the same degree regardless of renal function is pharmacodynamics, with a transporter as the target responsible for the sodium-excretion effect.",
+      "This swaps the two domains. Claiming slower clearance is an effect the drug produces on the kidney gets the direction backward: it is the impaired kidney's handling of the drug that changed, which the lecture defines as pharmacokinetics. The cotransporter-inhibition finding is what the drug does to the body, which the lecture defines as pharmacodynamics, not pharmacokinetics.",
+      "This conflates anatomic site with pharmacologic domain. The kidney clearing the unchanged drug is what the body does to the drug, so that finding is pharmacokinetics, but the drug inhibiting the cotransporter is what the drug does to the body, which the lecture defines as pharmacodynamics regardless of where the transporter sits; that both take place in the kidney does not make both of them pharmacokinetics.",
+      "This correctly separates the two domains but misassigns the target category. The lecture's target table lists the Na-K-2Cl cotransporter as a carrier/transporter, not an enzyme, so treating the sodium-excretion effect as due to an enzyme rather than a transporter misidentifies the category the lecture assigns to this drug class.",
+      "This correctly separates the two domains but misassigns the target category. The lecture's target table lists the Na-K-2Cl cotransporter as a carrier/transporter, not a receptor, so treating the sodium-excretion effect as due to a receptor rather than a transporter misidentifies the category the lecture assigns to this drug class."
+    ],
+    "optionMarkers": [
+      "a transporter as the target",
+      "effect the drug produces on the kidney",
+      "both take place in the kidney",
+      "an enzyme rather than a transporter",
+      "a receptor rather than a transporter"
+    ],
+    "answer": 0,
+    "closestDistractor": {
+      "index": 2,
+      "why_wrong": "It correctly separates pharmacokinetics from pharmacodynamics but treats both findings as pharmacokinetics because both happen to occur in the kidney, collapsing the lecture's distinction between the kidney clearing a drug and a drug acting on a kidney transporter."
+    },
+    "provisional": "no transcript; faculty PDF only; revise when Austin posts the recording",
+    "n": 229
+  },
+  {
+    "stem": "A hepatocyte line carries a point mutation that abolishes the tyrosine kinase activity of the insulin receptor's beta-subunits, while the receptor's alpha-subunits still bind insulin normally. Before insulin is added, the cells are in a fasting, glucagon-predominant state in which glycogen synthase is phosphorylated and inactive. Insulin is then added at a saturating concentration. Which statement best describes what happens to insulin's signal and to glycogen synthase?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L051",
+    "sourceRef": "OST520 (051) L - Hormones and Hormone Action - Wilkins.pdf, pp. 3-4, 7",
+    "covers": [
+      "L051-MO-A2",
+      "L051-MO-A4",
+      "L051-O4"
+    ],
+    "concepts": [
+      "insulin-receptor-kinase-cascade",
+      "glucagon-gpcr-cascade"
+    ],
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 3,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "The insulin receptor is a receptor-as-kinase: insulin binding at the extracellular alpha-subunits causes a conformational change that activates the intracellular tyrosine kinase domains of the beta-subunits, which autophosphorylate and then phosphorylate insulin receptor substrates, ultimately activating phosphatases that dephosphorylate target metabolic enzymes such as glycogen synthase into their active state. A mutation that kills only the kinase activity leaves binding intact but breaks the chain at the very next link, so the downstream phosphatase activation, and therefore glycogen synthase's shift out of its glucagon-set phosphorylated, inactive state, never occurs.",
+    "id": "OQ4-L051-C1A",
+    "options": [
+      "Insulin binds normally, but the phosphatases that dephosphorylate target enzymes are never activated, because the dead kinase domains block the cascade, so glycogen synthase stays phosphorylated.",
+      "Insulin binds entirely normally, since the alpha-subunits are the part of the receptor that recognizes insulin, and that binding alone should be enough to dephosphorylate and activate glycogen synthase.",
+      "Insulin cannot bind the mutated receptor at all, so no signal is transmitted and glycogen synthase remains phosphorylated and inactive despite the saturating insulin concentration added.",
+      "The kinase-dead receptor instead activates the glucagon G-protein pathway, producing cAMP that further phosphorylates and keeps glycogen synthase inactive despite the added insulin.",
+      "Insulin's short half-life of about 5 minutes means it is degraded before the kinase-dead receptor can ever respond at all, so glycogen synthase remains phosphorylated and inactive."
+    ],
+    "optionExplanations": [
+      "The lecture's insulin pathway runs from binding at the alpha-subunits, to activation of the beta-subunit tyrosine kinase domains, to autophosphorylation, to phosphorylation of insulin receptor substrates, to activation of phosphatases that dephosphorylate target enzymes such as glycogen synthase. With the kinase domains dead, insulin still binds but the chain breaks at the next step: the phosphatases that dephosphorylate target enzymes are never activated, so glycogen synthase stays exactly as glucagon left it, phosphorylated and inactive.",
+      "Binding is real: the alpha-subunits are indeed the part of the receptor that recognizes insulin. But recognition is not transduction; the lecture attributes the downstream cascade to the beta-subunit tyrosine kinase domains, not to the alpha-subunits, and with those kinase domains dead, binding alone cannot dephosphorylate glycogen synthase.",
+      "The mutation is confined to the beta-subunit kinase domains; the stem states the alpha-subunits, the lecture's insulin-binding site, still bind insulin normally. Saying insulin cannot bind the mutated receptor at all is not what this mutation does; the defect blocks transduction after binding, not binding itself, though glycogen synthase ends up in the same state either way.",
+      "The lecture describes the insulin receptor-as-kinase pathway and the glucagon G-protein pathway as separate systems with different receptors, and never describes one receptor activating the other. A kinase-dead insulin receptor has no described route by which it activates the glucagon G-protein pathway; it simply fails to transmit its own signal, leaving glycogen synthase in whatever state glucagon last set it to.",
+      "The lecture does state insulin has a short half-life of about 5 minutes, which limits how long a normal signal lasts, but that describes hormone turnover in circulation, not receptor signaling capacity, and the stem adds insulin at a saturating concentration with no elapsed time specified. This fact does not explain why glycogen synthase stays phosphorylated; the dead beta-subunit kinase domains are the actual reason the phosphatase step is never triggered."
+    ],
+    "optionMarkers": [
+      "phosphatases that dephosphorylate target enzymes are never activated",
+      "the part of the receptor that recognizes insulin",
+      "cannot bind the mutated receptor at all",
+      "activates the glucagon g-protein pathway",
+      "short half-life of about 5 minutes"
+    ],
+    "answer": 0,
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "It correctly identifies that insulin still binds through the alpha-subunits, but then treats that binding as sufficient on its own, ignoring that the lecture assigns the entire downstream cascade, from autophosphorylation to phosphatase activation, to the beta-subunit kinase domains this mutation destroys."
+    },
+    "provisional": "no transcript; faculty PDF only; revise when Austin posts the recording",
+    "n": 230
+  },
+  {
+    "stem": "In an isolated hepatocyte preparation, a pharmacologic agent irreversibly blocks adenylate cyclase, while the glucagon receptor and the Gs protein it couples to remain fully functional. Before glucagon is added, the cells are in a fed, insulin-predominant state in which HMG-CoA reductase has just been dephosphorylated and activated. Glucagon is then added at a saturating concentration. Which statement best describes what happens to glucagon's signal and to HMG-CoA reductase?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L051",
+    "sourceRef": "OST520 (051) L - Hormones and Hormone Action - Wilkins.pdf, pp. 6-7",
+    "covers": [
+      "L051-MO-A2",
+      "L051-MO-A4",
+      "L051-O4"
+    ],
+    "concepts": [
+      "insulin-receptor-kinase-cascade",
+      "glucagon-gpcr-cascade"
+    ],
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 3,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "The glucagon receptor is a Gs-coupled receptor: glucagon binding activates Gs, which releases its alpha-subunit to activate adenylate cyclase and generate cAMP, which activates protein kinases that phosphorylate target metabolic enzymes such as HMG-CoA reductase into their inactive state. Blocking adenylate cyclase alone leaves receptor binding and Gs activation intact but breaks the chain at the very next link, so cAMP is never made, the protein kinases are never activated, and HMG-CoA reductase's shift out of its insulin-set dephosphorylated, active state never occurs. This mirrors L051-C1A's insulin-side break at a different step and with the opposite stuck state, active rather than inactive.",
+    "id": "OQ4-L051-C1B",
+    "options": [
+      "Glucagon binds its receptor and activates Gs, but the protein kinases that phosphorylate target enzymes are never activated, because adenylate cyclase is blocked, so HMG-CoA reductase stays dephosphorylated.",
+      "Glucagon binds and activates Gs entirely normally, since Gs activation is the step the lecture ties to turning on the pathway, and that step alone should fully phosphorylate HMG-CoA reductase.",
+      "Glucagon cannot bind its receptor once adenylate cyclase is blocked, so no Gs activation occurs at all and HMG-CoA reductase stays dephosphorylated and active despite the saturating glucagon concentration added.",
+      "With adenylate cyclase blocked, glucagon instead signals through the insulin receptor's tyrosine kinase pathway, further dephosphorylating HMG-CoA reductase despite the added glucagon.",
+      "Glucagon's short half-life of about 5 minutes means it is degraded before the blocked pathway can ever respond at all, so HMG-CoA reductase stays dephosphorylated and active."
+    ],
+    "optionExplanations": [
+      "The lecture's glucagon pathway runs from binding a G-protein-coupled receptor, to activation of Gs and release of its alpha-subunit, to activation of adenylate cyclase, to cAMP production, to activation of protein kinases that phosphorylate target enzymes such as HMG-CoA reductase. With adenylate cyclase blocked, glucagon still binds and activates Gs, but the chain breaks at the next step: the protein kinases that phosphorylate target enzymes are never activated, so HMG-CoA reductase stays exactly as insulin left it, dephosphorylated and active.",
+      "Gs activation is real and is indeed the step the lecture ties to turning on the pathway. But turning on Gs is not the same as generating cAMP; the lecture attributes phosphorylation of target enzymes to the protein kinases cAMP activates, downstream of adenylate cyclase, not to Gs activation by itself. With adenylate cyclase blocked, Gs activation alone cannot phosphorylate HMG-CoA reductase.",
+      "The stem states the glucagon receptor and Gs protein remain fully functional; only adenylate cyclase, further downstream, is blocked. Saying glucagon cannot bind its receptor once adenylate cyclase is blocked is not what this preparation does; receptor binding and Gs activation still occur, and the break comes later in the chain, though HMG-CoA reductase ends up in the same state either way.",
+      "The lecture describes the glucagon G-protein pathway and the insulin receptor-as-kinase pathway as separate systems with different receptors, and never describes glucagon as an agent that signals through the insulin receptor's tyrosine kinase pathway when its own pathway is blocked. A glucagon receptor with a blocked downstream enzyme has no described route into the insulin pathway; it simply fails to transmit its own signal.",
+      "The lecture does state glucagon has a short half-life of about 5 minutes, which limits how long a normal signal lasts, but that describes hormone turnover in circulation, not the site of the pathway block, and the stem adds glucagon at a saturating concentration with no elapsed time specified. This fact does not explain why HMG-CoA reductase stays dephosphorylated; the blocked adenylate cyclase is the actual reason the protein-kinase step is never triggered."
+    ],
+    "optionMarkers": [
+      "protein kinases that phosphorylate target enzymes are never activated",
+      "the step the lecture ties to turning on the pathway",
+      "cannot bind its receptor once adenylate cyclase is blocked",
+      "signals through the insulin receptor's tyrosine kinase pathway",
+      "short half-life of about 5 minutes"
+    ],
+    "answer": 0,
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "It correctly identifies that glucagon still binds and still activates Gs, but then treats Gs activation as sufficient on its own, ignoring that the lecture assigns phosphorylation of target enzymes to the cAMP-dependent protein kinases downstream of adenylate cyclase, the very step this preparation blocks."
+    },
+    "provisional": "no transcript; faculty PDF only; revise when Austin posts the recording",
+    "n": 231
+  },
+  {
+    "stem": "During an overnight fast, glucagon predominates in the liver. Considering glycogen synthase and glycogen phosphorylase, both established targets of glucagon's phosphorylation signal, which statement correctly describes their phosphorylation states and resulting activities?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L051",
+    "sourceRef": "OST520 (051) L - Hormones and Hormone Action - Wilkins.pdf, pp. 7, 29",
+    "covers": [
+      "L051-MO-B1",
+      "L051-MO-B2",
+      "L051-MO-B3",
+      "L051-MO-B4",
+      "L051-MO-B5",
+      "L051-O4"
+    ],
+    "concepts": [
+      "liver-enzyme-phosphorylation-rule",
+      "phosphorylation-exceptions"
+    ],
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 3,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "The lecture's general rule ties phosphorylation state directly to activity: glucagon phosphorylates target carbohydrate and lipid enzymes to typically inactivate them, and insulin dephosphorylates them to typically activate them. The lecture then names exactly two exceptions, glycogen phosphorylase and fructose 2,6-bisphosphatase, and is explicit that the exception is in their activity, not their phosphorylation state: both enzymes are still phosphorylated by glucagon and dephosphorylated by insulin like every other target, but their phosphorylated form is active and their dephosphorylated form is inactive, the reverse of the general rule's activity consequence. A correct answer during a fast must therefore phosphorylate both enzymes but read out their activity in opposite directions.",
+    "id": "OQ4-L051-C2A",
+    "options": [
+      "Glucagon phosphorylates both enzymes; this inactivates glycogen synthase, but glycogen phosphorylase is one of the two exceptions in which the phosphorylated form is active.",
+      "Glucagon phosphorylates both enzymes, and phosphorylation inactivates both of them, following the general rule for every target enzyme, since no exception applies to glycogen metabolism enzymes.",
+      "Glucagon phosphorylates both enzymes, and phosphorylation activates both of them, because glycogen phosphorylase's exception status extends to glycogen synthase as well.",
+      "Glucagon phosphorylates glycogen synthase but dephosphorylates glycogen phosphorylase, activating both enzymes, as if phosphorylation direction alone determined the activity outcome.",
+      "Glucagon dephosphorylates both enzymes; dephosphorylation activates glycogen synthase and inactivates glycogen phosphorylase, reversing the hormone each enzyme normally responds to."
+    ],
+    "optionExplanations": [
+      "The general rule is that glucagon phosphorylates target enzymes to typically inactivate them, and glycogen synthase, one of the rule's own examples, follows this exactly. The lecture is explicit that glycogen phosphorylase is one of the two exceptions in which the phosphorylated form is active, and that the exception lies in the enzyme's activity, not in which way phosphorylation goes; glucagon still phosphorylates it the same way it phosphorylates every other target.",
+      "This applies the general rule correctly to glycogen synthase but misses the lecture's explicit exception: glycogen phosphorylase is phosphorylated by glucagon just like glycogen synthase, but the lecture states its phosphorylated form is active, needed to break down glycogen and raise blood glucose during a fast. Saying no exception applies to glycogen metabolism enzymes contradicts the lecture's own list of the two exceptions, which includes this enzyme.",
+      "This over-applies the exception. The lecture names exactly two exceptions to the general rule, glycogen phosphorylase and fructose 2,6-bisphosphatase, and glycogen synthase is not one of them; the lecture lists glycogen synthase among the enzymes that follow the general rule, inactive when phosphorylated. Saying glycogen phosphorylase's exception status extends to glycogen synthase as well is not a claim the lecture supports.",
+      "The lecture is explicit that the two exceptions differ from the general rule in their activities, not their phosphorylation states: glucagon still phosphorylates glycogen phosphorylase exactly as it phosphorylates every other target. Saying glucagon dephosphorylates glycogen phosphorylase gets the phosphorylation direction wrong for an enzyme the lecture says is phosphorylated under glucagon just like the rest.",
+      "This assigns glucagon the action the lecture attributes to insulin. The general rule states that glucagon phosphorylates target enzymes and insulin dephosphorylates them; saying glucagon dephosphorylates both enzymes reverses the hormone-to-phosphorylation-direction pairing the lecture gives for every one of the eight regulated enzymes, exceptions included."
+    ],
+    "optionMarkers": [
+      "one of the two exceptions in which the phosphorylated form is active",
+      "no exception applies to glycogen metabolism enzymes",
+      "exception status extends to glycogen synthase as well",
+      "dephosphorylates glycogen phosphorylase",
+      "glucagon dephosphorylates both enzymes"
+    ],
+    "answer": 0,
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "It applies the general rule correctly to glycogen synthase and confidently extends the same activity consequence to glycogen phosphorylase, missing the lecture's explicit note that this enzyme is one of the two named exceptions whose phosphorylated form is active rather than inactive."
+    },
+    "provisional": "no transcript; faculty PDF only; revise when Austin posts the recording",
+    "n": 232
+  },
+  {
+    "stem": "After a carbohydrate-rich meal, insulin predominates in the liver. Considering the pyruvate dehydrogenase (PDH) complex and fructose 2,6-bisphosphatase (FBP2), both established targets of insulin's phosphatase signal, which statement correctly describes their phosphorylation states and resulting activities?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L051",
+    "sourceRef": "OST520 (051) L - Hormones and Hormone Action - Wilkins.pdf, p. 7",
+    "covers": [
+      "L051-MO-B1",
+      "L051-MO-B2",
+      "L051-MO-B3",
+      "L051-MO-B4",
+      "L051-MO-B5",
+      "L051-O4"
+    ],
+    "concepts": [
+      "liver-enzyme-phosphorylation-rule",
+      "phosphorylation-exceptions"
+    ],
+    "applicationLevel": "mechanism",
+    "reasoningOrder": 3,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "This item tests the same exception-aware inference from the opposite hormonal direction: a fed, insulin-predominant state instead of a fasted, glucagon-predominant one, and a different enzyme pair, the PDH complex (a general-rule example) against FBP2 (one of the two named exceptions). Insulin dephosphorylates both enzymes exactly as it dephosphorylates every other regulated target, but the general rule's activity consequence, dephosphorylated equals active, holds for the PDH complex and inverts for FBP2, whose dephosphorylated form the lecture states is inactive. Getting this right requires tracking phosphorylation direction and activity consequence as separate questions, exactly where the general rule and its two exceptions come apart.",
+    "id": "OQ4-L051-C2B",
+    "options": [
+      "Insulin's phosphatases dephosphorylate both enzymes; this activates the PDH complex, but FBP2 is one of the two exceptions in which the dephosphorylated form is inactive.",
+      "Insulin's phosphatases dephosphorylate both enzymes, and dephosphorylation activates both of them, following the general rule for every target enzyme, since no exception applies to these two enzymes.",
+      "Insulin's phosphatases dephosphorylate both enzymes, and dephosphorylation inactivates both of them, because FBP2's exception status extends to the PDH complex as well.",
+      "Insulin dephosphorylates the PDH complex but phosphorylates FBP2, activating both enzymes, as if phosphorylation direction alone determined the activity outcome.",
+      "Insulin phosphorylates both enzymes; phosphorylation activates the PDH complex and inactivates FBP2, reversing the hormone each enzyme normally responds to."
+    ],
+    "optionExplanations": [
+      "The general rule is that insulin dephosphorylates target enzymes to typically activate them, and the PDH complex, one of the rule's own examples, follows this exactly. The lecture is explicit that FBP2 is one of the two exceptions in which the dephosphorylated form is inactive, and that the exception lies in the enzyme's activity, not in which way phosphorylation goes; insulin still dephosphorylates it the same way it dephosphorylates every other target.",
+      "This applies the general rule correctly to the PDH complex but misses the lecture's explicit exception: FBP2 is dephosphorylated by insulin just like the PDH complex, but the lecture states its dephosphorylated form is inactive, part of how the exceptions coordinate carbohydrate handling during feeding. Saying no exception applies to these two enzymes contradicts the lecture's own list of the two exceptions, which includes FBP2.",
+      "This over-applies the exception. The lecture names exactly two exceptions to the general rule, glycogen phosphorylase and FBP2, and the PDH complex is not one of them; the lecture lists the PDH complex among the enzymes that follow the general rule, active when dephosphorylated. Saying FBP2's exception status extends to the PDH complex as well is not a claim the lecture supports.",
+      "The lecture is explicit that the two exceptions differ from the general rule in their activities, not their phosphorylation states: insulin still dephosphorylates FBP2 exactly as it dephosphorylates every other target. Saying insulin phosphorylates FBP2 gets the phosphorylation direction wrong for an enzyme the lecture says is dephosphorylated under insulin just like the rest.",
+      "This assigns insulin the action the lecture attributes to glucagon. The general rule states that insulin dephosphorylates target enzymes and glucagon phosphorylates them; saying insulin phosphorylates both enzymes reverses the hormone-to-phosphorylation-direction pairing the lecture gives for every one of the eight regulated enzymes, exceptions included."
+    ],
+    "optionMarkers": [
+      "one of the two exceptions in which the dephosphorylated form is inactive",
+      "no exception applies to these two enzymes",
+      "exception status extends to the pdh complex as well",
+      "phosphorylates fbp2",
+      "insulin phosphorylates both enzymes"
+    ],
+    "answer": 0,
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "It applies the general rule correctly to the PDH complex and confidently extends the same activity consequence to FBP2, missing the lecture's explicit note that this enzyme is one of the two named exceptions whose dephosphorylated form is inactive rather than active."
+    },
+    "provisional": "no transcript; faculty PDF only; revise when Austin posts the recording",
+    "n": 233
+  },
+  {
+    "stem": "During a prolonged fast, blood glucagon rises well above insulin. A researcher infuses glucagon directly and measures glycogen breakdown, gluconeogenesis, and lipolysis in liver, skeletal muscle, and adipose tissue. Which outcome is most consistent with the lecture's description of glucagon's target tissues?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L051",
+    "sourceRef": "OST520 (051) L - Hormones and Hormone Action - Wilkins.pdf, pp. 7, 13",
+    "covers": [
+      "L051-MO-A1",
+      "L051-MO-A3",
+      "L051-O1",
+      "L051-O2",
+      "L051-O3"
+    ],
+    "concepts": [
+      "hormone-fed-fasted-indicator",
+      "insulin-glucagon-target-tissue-selectivity"
+    ],
+    "applicationLevel": "discrimination",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "The lecture ties glucagon to the starved state and lists its target tissues as liver (gluconeogenesis, glycogen breakdown, ketone body synthesis) and adipose tissue (lipolysis); skeletal muscle does not appear in that target-tissue table. A companion page reinforces the tissue-specific pattern by tying it to receptor distribution, noting that glucagon receptors are present in liver but not muscle, so liver, not muscle, performs gluconeogenesis in response to low blood glucose. A fasting stimulus therefore predicts glucagon-driven changes in liver and adipose tissue only, with skeletal muscle absent from the tissues the lecture lists as responsive to glucagon, whatever else muscle can do metabolically under other signals.",
+    "id": "OQ4-L051-C3A",
+    "options": [
+      "Liver shows increased glycogen breakdown and gluconeogenesis, adipose tissue shows increased lipolysis, but skeletal muscle shows no response, because the glucagon target-tissue table lists liver and adipose only.",
+      "Liver and adipose tissue respond as described, and skeletal muscle also increases glycogen breakdown in response to glucagon, since glycogenolysis occurs in muscle as well as liver.",
+      "Liver shows increased lipolysis and adipose tissue shows increased gluconeogenesis, while skeletal muscle is unaffected, reversing which organ the lecture assigns each pathway to.",
+      "Insulin, not glucagon, predominates in a prolonged fast, so liver and adipose tissue increase synthetic activity while skeletal muscle increases glucose uptake instead of mobilizing fuel.",
+      "Skeletal muscle responds to glucagon just as liver and adipose tissue do, because the lecture lists muscle among the key tissues in normal energy metabolism, right alongside liver and adipose tissue in that broader list."
+    ],
+    "optionExplanations": [
+      "The lecture's glucagon target-tissue table lists liver and adipose only, with liver promoting gluconeogenesis and glycogen breakdown and adipose tissue promoting lipolysis; skeletal muscle does not appear anywhere in that table. A glucagon infusion should therefore change liver and adipose tissue fuel handling while leaving skeletal muscle unaffected.",
+      "Muscle glycogenolysis is real, but the lecture ties it to other signals such as epinephrine, not to glucagon; the glucagon target-tissue table lists liver and adipose only, with skeletal muscle absent from it for any of muscle's metabolic processes. That glycogenolysis occurs in muscle as well as liver under other stimuli does not mean glucagon is the stimulus producing it here.",
+      "Skeletal muscle is correctly excluded, but the liver and adipose tissue actions are swapped. The lecture assigns gluconeogenesis and glycogen breakdown to glucagon's effect on liver, and lipolysis to glucagon's effect on adipose tissue; saying adipose tissue shows increased gluconeogenesis assigns a liver-specific pathway to the wrong tissue.",
+      "The lecture associates glucagon, not insulin, with the starved state, so the claim that insulin, not glucagon, predominates in a prolonged fast reverses that association; a prolonged fast is exactly the condition under which the lecture says glucagon predominates and promotes fuel mobilization rather than synthesis.",
+      "It is true that the lecture lists muscle among the key tissues in normal energy metabolism, with its own glycogen and triglyceride stores, but its glucagon target-tissue table does not include muscle at all. Being a key tissue in energy metabolism generally is not the same as being a target tissue for this particular hormone."
+    ],
+    "optionMarkers": [
+      "glucagon target-tissue table lists liver and adipose only",
+      "glycogenolysis occurs in muscle as well as liver",
+      "adipose tissue shows increased gluconeogenesis",
+      "insulin, not glucagon, predominates in a prolonged fast",
+      "lists muscle among the key tissues in normal energy metabolism"
+    ],
+    "answer": 0,
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "It is a genuine biochemical fact that skeletal muscle can break down glycogen, which makes it tempting to assume glucagon drives that breakdown everywhere glycogen exists; the lecture's glucagon target-tissue table lists liver and adipose tissue only, without muscle."
+    },
+    "provisional": "no transcript; faculty PDF only; revise when Austin posts the recording",
+    "n": 234
+  },
+  {
+    "stem": "After a carbohydrate-rich meal, blood insulin rises well above glucagon. A researcher measures glucose uptake and synthetic activity in liver, skeletal muscle, and adipose tissue. Which outcome is most consistent with the lecture's description of insulin's target tissues?",
+    "topic": "Biochemistry",
+    "src": "B",
+    "type": "mcq",
+    "context": "",
+    "unit": "UE2",
+    "course": "OST520",
+    "source": "sept15-practice",
+    "sourceBlock": "L051",
+    "sourceRef": "OST520 (051) L - Hormones and Hormone Action - Wilkins.pdf, pp. 2, 5, 7",
+    "covers": [
+      "L051-MO-A1",
+      "L051-MO-A3",
+      "L051-O1",
+      "L051-O2",
+      "L051-O3"
+    ],
+    "concepts": [
+      "hormone-fed-fasted-indicator",
+      "insulin-glucagon-target-tissue-selectivity"
+    ],
+    "applicationLevel": "discrimination",
+    "reasoningOrder": 2,
+    "requiresMedia": false,
+    "mediaNote": "",
+    "holdout": false,
+    "rationale": "This item tests the same stimulus-to-hormone-to-tissue inference from the opposite direction: a fed, insulin-predominant state instead of a fasted, glucagon-predominant one, with the tissue-inclusion pattern reversed. The lecture ties insulin to the fed state, where it acts to store energy, and lists liver, muscle, and adipose tissue together as its target tissues; muscle is the one tissue whose specific effects the handout fills in, stimulated glucose uptake and stimulated glycogen and protein synthesis, in direct contrast to glucagon's target-tissue table, which lists liver and adipose only, without muscle. Getting this right requires recognizing that insulin's broader tissue range, muscle included, is not the same pattern as glucagon's restricted one, grounded in the muscle entries and the fed-state framing the lecture actually prints rather than in the blank liver and adipose lines on the same page.",
+    "id": "OQ4-L051-C3B",
+    "options": [
+      "Skeletal muscle shows stimulated glucose uptake and stimulated glycogen and protein synthesis; unlike glucagon, insulin acts on muscle as well, alongside liver and adipose tissue.",
+      "Liver and adipose tissue respond to insulin, but skeletal muscle does not, because the lecture restricts insulin's target tissues to liver and adipose tissue in the same way it restricts glucagon's target tissues.",
+      "All three tissues respond, but liver increases gluconeogenesis and glycogen breakdown in response to insulin, exactly the same direction glucagon produces on the liver during a fast.",
+      "Glucagon, not insulin, predominates after a carbohydrate-rich meal, so liver and adipose tissue mobilize fuel while skeletal muscle's glucose uptake falls instead of rising.",
+      "Adipose tissue responds to insulin by increasing lipolysis to provide fatty acids to the liver, while skeletal muscle increases glucose uptake and synthesis instead of storing fuel."
+    ],
+    "optionExplanations": [
+      "The lecture's insulin target-tissue list names liver, muscle, and adipose tissue together, and gives muscle's specific effects as stimulated glucose uptake and stimulated glycogen and protein synthesis; the lecture separately states that insulin is associated with the fed state and acts to store energy. This is the direct contrast to glucagon's target-tissue table, which lists liver and adipose only: unlike glucagon, insulin acts on muscle as well, alongside liver and adipose tissue.",
+      "This over-applies glucagon's tissue restriction to insulin. Glucagon's target-tissue table, which lists liver and adipose only, applies only to glucagon; the lecture's list of insulin's target tissues names liver, muscle, and adipose tissue together, with muscle showing stimulated glucose uptake and synthesis. Nothing in the lecture restricts insulin's target tissues to liver and adipose tissue the way it restricts glucagon's.",
+      "Muscle's stimulated response is correct, but the liver action is wrong. The lecture's insulin handout marks the liver's gluconeogenesis/glycogen-breakdown line with a note that glucose production falls, because the liver does not need to export glucose when plenty is already available; saying liver increases gluconeogenesis and glycogen breakdown assigns insulin a glucagon-like effect on the liver.",
+      "The lecture associates insulin, not glucagon, with the fed state, so the claim that glucagon, not insulin, predominates after a carbohydrate-rich meal reverses that association; a carbohydrate-rich meal is exactly the condition under which the lecture says insulin predominates.",
+      "Muscle's synthetic response is consistent with insulin, but the adipose tissue action is wrong. The lecture's fed-state description ties insulin to stimulating synthesis of biological molecules generally, and lists TAGs as adipose tissue's stored fuel; increasing lipolysis to provide fatty acids to the liver is the effect the lecture attributes to glucagon on adipose tissue during fasting, not to insulin during the fed state."
+    ],
+    "optionMarkers": [
+      "unlike glucagon, insulin acts on muscle",
+      "restricts insulin's target tissues to liver and adipose tissue",
+      "liver increases gluconeogenesis and glycogen breakdown",
+      "glucagon, not insulin, predominates after a carbohydrate-rich meal",
+      "increasing lipolysis to provide fatty acids to the liver"
+    ],
+    "answer": 0,
+    "closestDistractor": {
+      "index": 1,
+      "why_wrong": "It correctly recalls that glucagon's target-tissue table lists liver and adipose only and then over-generalizes that same restriction to insulin, missing that the lecture's insulin target-tissue list explicitly includes muscle with its own stimulated glucose uptake and synthesis."
+    },
+    "provisional": "no transcript; faculty PDF only; revise when Austin posts the recording",
+    "n": 235
   }
 ]
