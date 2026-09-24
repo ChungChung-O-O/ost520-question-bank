@@ -4,9 +4,9 @@ const html=fs.readFileSync("index.html","utf8"), json=JSON.parse(fs.readFileSync
 const between=(a,b)=>html.slice(html.indexOf(a)+a.length,html.indexOf(b,html.indexOf(a)));
 const bank=vm.runInNewContext("("+between("let BANK = ",";\nconst META =")+")");
 assert.deepStrictEqual(JSON.parse(JSON.stringify(bank)),json,"bank.json must exactly equal embedded BANK");
-assert.equal(bank.length,863); assert.equal(new Set(bank.map(q=>q.id)).size,863);
-assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats","Molecular Biology","Histology","Hematology & Physiology","Microbiology","Immunology"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":235,"Genetics":403,"Epi & Biostats":59,"Molecular Biology":12,"Histology":22,"Hematology & Physiology":44,"Microbiology":55,"Immunology":33});
-assert.equal(bank.filter(q=>q.type==="mcq").length,838); assert.equal(bank.filter(q=>q.type==="worked").length,25);
+assert.equal(bank.length,912); assert.equal(new Set(bank.map(q=>q.id)).size,912);
+assert.deepStrictEqual(Object.fromEntries(["Biochemistry","Genetics","Epi & Biostats","Molecular Biology","Histology","Hematology & Physiology","Microbiology","Immunology"].map(t=>[t,bank.filter(q=>q.topic===t).length])),{"Biochemistry":235,"Genetics":403,"Epi & Biostats":59,"Molecular Biology":22,"Histology":22,"Hematology & Physiology":44,"Microbiology":69,"Immunology":58});
+assert.equal(bank.filter(q=>q.type==="mcq").length,868); assert.equal(bank.filter(q=>q.type==="worked").length,44);
 assert.equal(bank.filter(q=>/^WK-/.test(q.id)).length,24,"targeted weakness set must remain complete");
 const confusionLab=bank.filter(q=>/^DL-\d\d$/.test(q.id));
 assert.equal(confusionLab.length,24,"confusion lab must contain exactly 24 questions");
@@ -15,7 +15,7 @@ for(const q of confusionLab){assert.equal(q.source,"confusion-lab");assert.equal
 assert.equal(new Set(confusionLab.map(q=>q.confusionSet)).size,8,"confusion lab must cover eight look-alike families");
 for(const family of new Set(confusionLab.map(q=>q.confusionSet)))assert.equal(confusionLab.filter(q=>q.confusionSet===family).length,3,`family must contain three questions: ${family}`);
 assert.deepStrictEqual(JSON.parse(JSON.stringify(confusionLab.reduce((counts,q)=>(counts[q.answer]=(counts[q.answer]||0)+1,counts),{}))),{"0":5,"1":5,"2":5,"3":5,"4":4},"confusion-lab answer positions must remain balanced");
-const originalAnswerHash=crypto.createHash("sha256").update(JSON.stringify(bank.filter(q=>!(/^(DL-|L013-|W3-|MQG-|OQ4-)/.test(q.id))).map(q=>[q.id,q.answer]))).digest("hex");
+const originalAnswerHash=crypto.createHash("sha256").update(JSON.stringify(bank.filter(q=>!(/^(DL-|L013-|W3-|MQG-|OQ4-|OQ5-|RQ5-)/.test(q.id))).map(q=>[q.id,q.answer]))).digest("hex");
 assert.equal(originalAnswerHash,"bf42363a39188b1e3270cd2aedafc141d5f1cf8ef67bfd8c73deab1dae5ec3b9","an original answer index changed");
 const dnaRepair=bank.filter(q=>/^L013-\d\d$/.test(q.id));
 assert.equal(dnaRepair.length,14,"L013 DNA Repair set must remain complete");
@@ -111,7 +111,7 @@ for(const q of numberedReferences) assert(q.context&&q.context.trim(),"numbered 
 assert.equal(bank.find(q=>q.id==="E13").context,bank.find(q=>q.id==="E12").stem,"E13 must display the full E12 stem before asking its follow-up");
 
 // every question is filed under a class and a unit, so the library can shelve it
-for(const q of bank){ assert.equal(q.course,"OST520","question must carry its course: "+q.id); assert(["UE1","UE2"].includes(q.unit),"question must carry a known unit: "+q.id); if(/^(?:W3-|MQG-|OQ4-)/.test(q.id))assert.equal(q.unit,"UE2"); else assert.equal(q.unit,"UE1"); }
+for(const q of bank){ assert.equal(q.course,"OST520","question must carry its course: "+q.id); assert(["UE1","UE2","UE3"].includes(q.unit),"question must carry a known unit: "+q.id); if(/^(?:OQ5-|RQ5-)/.test(q.id))assert.equal(q.unit,"UE3"); else if(/^(?:W3-|MQG-|OQ4-)/.test(q.id))assert.equal(q.unit,"UE2"); else assert.equal(q.unit,"UE1"); }
 assert(html.includes("let BANK = "),"BANK must be reassignable for the library view");
 assert(html.includes("const ALL_QUESTIONS = BANK.slice()"),"full bank must be retained separately from the view");
 assert(html.includes("function applyScope()"),"library scope filter missing");
@@ -127,9 +127,9 @@ assert(html.includes("sessionInView(saved)"),"resume must be limited to sessions
 // library behaviour, exercised through the real boot path
 const SCOPE_KEY="ost520.bank.v2.scope", scoped=v=>boot({[SCOPE_KEY]:JSON.stringify(v)});
 const libBoot=boot();
-assert.equal(vm.runInContext("BANK.length",libBoot.ctx),863,"with no saved scope the whole bank is loaded");
+assert.equal(vm.runInContext("BANK.length",libBoot.ctx),912,"with no saved scope the whole bank is loaded");
 assert.equal(libBoot.els.get("library").hidden,false,"no saved scope must open the library");
-assert.equal(vm.runInContext("IDS.size",libBoot.ctx),863,"id set must span the whole bank regardless of view");
+assert.equal(vm.runInContext("IDS.size",libBoot.ctx),912,"id set must span the whole bank regardless of view");
 const unitBoot=scoped({course:"OST520",unit:"UE1",source:"all"});
 assert.equal(unitBoot.els.get("setup").hidden,false,"a saved unit must open straight into that unit");
 assert.equal(vm.runInContext("BANK.length",unitBoot.ctx),613);
@@ -259,7 +259,7 @@ vm.runInContext('const RealDate=Date;Date=class extends RealDate{constructor(...
 assert.match(vm.runInContext("todaysPlan().note",cumulativeBoot.ctx),/^cumulative review/,"pre-exam fallback was mislabeled post-exam");
 assert.equal(scoped({course:"NOPE",unit:"UE1",source:"all"}).els.get("library").hidden,false,"an unknown course must fall back to the library");
 assert.equal(vm.runInContext("BANK_FINGERPRINT",facBoot.ctx),vm.runInContext("BANK_FINGERPRINT",libBoot.ctx),"the view must not change the backup fingerprint");
-assert(html.includes('863-question OST 520 bank for Unit Exams 1 and 2 with adaptive practice'),"page metadata must describe the current bank");
+assert(html.includes('912-question OST 520 bank for Unit Exams 1, 2 and 3 with adaptive practice'),"page metadata must describe the current bank");
 assert(html.includes('New question-quality release'),"home must explain the current quality release");
 assert(html.includes('label:"Look-Alike Concepts"')&&html.includes('q.source==="confusion-lab"'),"Look-Alike Concepts mode missing");
 assert(html.includes('id="contrastwrap"')&&html.includes("function renderContrast(q,a)"),"contrast table UI missing");
@@ -364,7 +364,7 @@ assert(!pairAnalysis.includes(vm.runInContext('ALL_QUESTIONS.find(q=>q.id==="DL-
 assert.throws(()=>vm.runInContext('validateBackup({schemaVersion:4,bankFingerprint:BANK_FINGERPRINT,history:{},questionReports:{B1:{reason:"injected"}}})',restoreBoot.ctx),/invalid question report/);
 assert.throws(()=>vm.runInContext(`(()=>{const q=ALL_QUESTIONS.find(x=>x.id==="DL-01"),chosen=q.optionConcepts[q.answer===0?1:0],correct=q.optionConcepts[q.answer],key=pairStorageKey(chosen,correct);return validateBackup({schemaVersion:4,bankFingerprint:BANK_FINGERPRINT,history:{},confusionPairs:{[key]:{chosen,correct,count:0,lastAt:new Date().toISOString(),questionId:q.id}}})})()`,restoreBoot.ctx),/invalid confusion pair/);
 assert.throws(()=>vm.runInContext(`validateBackup({schemaVersion:4,bankFingerprint:BANK_FINGERPRINT,history:{},confusionPairs:{"made-up::pair":{chosen:"made-up",correct:"pair",count:1,lastAt:new Date().toISOString(),questionId:"DL-01"}}})`,restoreBoot.ctx),/invalid confusion pair/);
-for(const priorFingerprint of ["fnv1a-2ed224b5-483","fnv1a-56ef5225-483","fnv1a-ac6648c1-507","fnv1a-40f86fe5-557","fnv1a-41aaee35-575","fnv1a-2939a373-613","fnv1a-91c07573-765","fnv1a-26480c6b-771","fnv1a-3fdb4259-811","fnv1a-7055f0cd-837"]){
+for(const priorFingerprint of ["fnv1a-2ed224b5-483","fnv1a-56ef5225-483","fnv1a-ac6648c1-507","fnv1a-40f86fe5-557","fnv1a-41aaee35-575","fnv1a-2939a373-613","fnv1a-91c07573-765","fnv1a-26480c6b-771","fnv1a-3fdb4259-811","fnv1a-7055f0cd-837","fnv1a-89e3dcab-863"]){
   assert.doesNotThrow(()=>vm.runInContext(`validateBackup({schemaVersion:4,bankFingerprint:"${priorFingerprint}",history:{B1:{attempts:1,correct:1,lastOk:true,reasons:[]}}})`,restoreBoot.ctx),`known additive bank version must remain importable: ${priorFingerprint}`);
 }
 vm.runInContext(`S={id:"timeline-test",name:"Test",date:todayISO(),answers:{B1:{pick:1,reasons:["cue"]}},committed:{},initiallySeen:{B1:false},order:["B1"]}; commit(BANK.find(q=>q.id==="B1"),true,"narrowed");`,restoreBoot.ctx);
@@ -375,4 +375,17 @@ const legacyText=`OST 520 question bank — full results export (2026-08-27)\n48
 restoreBoot.ctx.legacyFixture=legacyText;
 const parsedLegacy=vm.runInContext("parseLegacyResults(legacyFixture)",restoreBoot.ctx);
 assert.equal(parsedLegacy.history.B1.attempts,2);assert.equal(parsedLegacy.history.B1.correct,1);assert.equal(parsedLegacy.history.B1.lastOk,false);assert.deepStrictEqual(Array.from(parsedLegacy.history.B1.reasons),["content","cue"]);
+
+// UE3 September 23 block: append-only release with A/B pairs, recall prompts and routes
+const ue3=bank.filter(q=>q.unit==="UE3"),ue3Mcq=ue3.filter(q=>q.type==="mcq"),ue3Recall=ue3.filter(q=>q.type==="worked");
+assert.equal(ue3.length,49,"UE3 release must contain 49 items");assert.equal(ue3Mcq.length,30);assert.equal(ue3Recall.length,19);
+assert(ue3Mcq.every(q=>/^OQ5-L06[0-4]-C\d[AB]$/.test(q.id)&&q.reasoningOrder>=2&&q.options.length===5&&new Set(q.options).size===5&&q.optionExplanations.length===5&&q.optionExplanations.every(x=>x.trim().length>=40)&&q.closestDistractor.index!==q.answer&&/The trap/.test(q.rationale)&&!q.holdout&&!q.requiresMedia),"UE3 MCQ quality guard failed");
+for(const prefix of new Set(ue3Mcq.map(q=>q.id.slice(0,-1)))){const pair=ue3Mcq.filter(q=>q.id.slice(0,-1)===prefix);assert.equal(pair.length,2,"UE3 pair incomplete: "+prefix);assert.notEqual(pair[0].stem,pair[1].stem);}
+assert(ue3Recall.every(q=>/^RQ5-/.test(q.id)&&q.answer===null&&q.options.length===0&&q.rationale.includes("<strong>Answer:</strong>")),"UE3 recall guard failed");
+assert(longestCue(ue3Mcq).correct/longestCue(ue3Mcq).eligible<=.25,"UE3 correct-longest cue rate exceeds 25%");
+assert(html.includes('data-unit-tab="UE3"'),"Unit 3 tab missing");
+const ue3Unit=between('{id:"UE3", name:"Unit 3"','taught:');
+for(const date of ["2026-09-24","2026-09-25","2026-09-26","2026-09-27"])assert(ue3Unit.includes('date:"'+date+'"'),"UE3 route missing "+date);
+const thuIds=JSON.parse(between('{date:"2026-09-24",blocks:["L060","L061","L062","L063"],questionIds:',',note:'));assert.equal(thuIds.length,29);assert.equal(thuIds.filter(id=>/^OQ5-.*A$/.test(id)).length,14);assert(thuIds.every(id=>bank.some(q=>q.id===id&&q.unit==="UE3")));
+const satIds=JSON.parse(between('{date:"2026-09-26",blocks:["L060","L061","L062","L063"],questionIds:',',note:'));assert.equal(satIds.length,14);assert(satIds.every(id=>/^OQ5-.*B$/.test(id)));
 console.log("PASS: integrity, answer-key safeguards, migration compatibility, queues, interleaving, session semantics, backup/import UI guards");

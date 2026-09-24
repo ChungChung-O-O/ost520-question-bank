@@ -1,0 +1,1855 @@
+[
+ {
+  "id": "OQ5-L060-C1A",
+  "stem": "A researcher coats cultured tumor cells with IgG antibody specific for a tumor-surface protein, then adds purified NK cells to the dish. Ninety minutes later most antibody-coated tumor cells are dying by apoptosis, and intact dying cell corpses are visible rather than being engulfed by another cell. Which effector mechanism best explains these tumor cell deaths?",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L060",
+  "sourceRef": "OST520 (060) L - Humoral Immunity - Taylor.pdf, file pp. 5, 27-28; transcript 060.3 09:53-12:12",
+  "covers": [
+   "L060-O6"
+  ],
+  "concepts": [
+   "effector-mechanism-selection"
+  ],
+  "applicationLevel": "prediction",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "Antibody-dependent cellular cytotoxicity: NK-cell Fc-receptor engagement of the coated cell releases perforin/granzymes, triggering apoptosis",
+   "Antibody-dependent cellular phagocytosis, in which a macrophage Fc receptor engages the antibody-coated tumor cell and engulfs the whole cell",
+   "Classical complement activation, in which C1, C2, and C4 assemble a C3 convertase that opsonizes and can lyse the coated tumor cell",
+   "Neutralization, in which the bound antibody physically blocks the tumor protein from interacting with its normal binding partner",
+   "Direct T-cell-mediated killing, in which the tumor protein is processed and displayed on MHC for cytotoxic T-cell recognition"
+  ],
+  "answer": 0,
+  "optionExplanations": [
+   "Correct: the lecture ties NK-cell Fc-receptor engagement of an antibody-coated cell to perforin/granzyme release and apoptosis, matching intact dying corpses rather than engulfment [060.3 09:53-12:12; p5, p28].",
+   "This describes ADCP, the macrophage/neutrophil route that ends in whole-cell engulfment, but the scenario used purified NK cells and shows intact apoptotic corpses, not engulfed cells [060.3 09:53-12:12; p5, p27].",
+   "Classical complement needs C1/C2/C4 recruitment to build a convertase; no complement proteins were added to this NK-cell coculture, so this pathway cannot explain the observed deaths [060.3 12:18-13:23; p5, p28].",
+   "Neutralization blocks a molecule's function by simple binding and does not itself kill the coated cell; here the tumor cells are dying by apoptosis, which neutralization alone does not cause [060.3 05:28-09:49; p4, p26].",
+   "The lecture does not describe NK-cell antibody effector function as depending on antigen processing and MHC display; ADCC is triggered by Fc-receptor recognition of surface-bound antibody, not by T-cell antigen presentation [060.3 09:53-12:12]."
+  ],
+  "closestDistractor": {
+   "index": 1,
+   "why_wrong": "ADCP and ADCC share an antibody-coated target and Fc-receptor engagement, but ADCP is carried out by a phagocyte (macrophage/neutrophil) and ends in engulfment, while the scenario specifies NK cells and intact apoptotic corpses, which the lecture assigns to ADCC [060.3 09:53-12:12; p5, p27-28]."
+  },
+  "rationale": "The lecture teaches that the same antibody-coated target can be eliminated by different Fc-receptor-bearing effector cells through different mechanisms: a macrophage drives ADCP (whole-cell phagocytosis), while an NK cell drives ADCC (perforin/granzyme-triggered apoptosis) [060.3 09:53-12:12; p5, p27-28]. The scenario specifies NK cells and intact apoptotic corpses, which points to ADCC rather than engulfment. The trap: 'engulfs it whole' describes ADCP's macrophage-driven phagocytosis, not the NK-cell-driven apoptosis this scenario describes."
+ },
+ {
+  "id": "OQ5-L060-C1B",
+  "stem": "A patient recovering from tetanus has serum antibody that binds circulating tetanus toxin and physically blocks the toxin's active site from engaging its neuronal receptor, preventing muscle rigidity. In this particular protective effect, no phagocyte, NK cell, or complement protein participates. Which effector mechanism is illustrated?",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L060",
+  "sourceRef": "OST520 (060) L - Humoral Immunity - Taylor.pdf, file pp. 4-5, 26-28; transcript 060.3 05:28-12:12",
+  "covers": [
+   "L060-O6"
+  ],
+  "concepts": [
+   "effector-mechanism-selection"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "Opsonization, because the antibody labels the toxin for phagocytosis by an Fc-receptor-bearing cell",
+   "Antibody-dependent cellular phagocytosis, because a macrophage engulfs the antibody-coated toxin whole",
+   "Neutralization, because the bound antibody directly blocks the toxin's active site from engaging its neuronal receptor",
+   "Antibody-dependent cellular cytotoxicity, because an NK cell recognizes the antibody-coated toxin and releases granzymes",
+   "Classical complement activation, because the bound antibody recruits C1, C2, and C4 to assemble a C3 convertase"
+  ],
+  "answer": 2,
+  "optionExplanations": [
+   "Opsonization requires an Fc-receptor-bearing cell to act on the labeled target; the stem states no phagocyte participates, so labeling for phagocytosis is not what is being described here [060.3 05:28-09:49; p4, p26].",
+   "ADCP requires a macrophage to physically engulf the coated target; the stem explicitly excludes phagocyte involvement in this protective effect [060.3 09:53-12:12; p5, p27].",
+   "Correct: the lecture defines neutralization as antibody directly blocking a pathogen or toxin's function by binding its active site, with no cell-mediated or complement step required [060.3 05:28-09:49; p4, p26].",
+   "ADCC requires an NK cell to engage the coated target and release granzymes; the stem explicitly excludes NK-cell involvement in this protective effect [060.3 09:53-12:12; p5, p28].",
+   "Classical complement activation requires C1, C2, and C4 recruitment to the bound antibody; the stem explicitly excludes complement protein participation in this protective effect [060.3 12:18-13:23; p5, p28]."
+  ],
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "Opsonization and neutralization both start with antibody binding a target, but opsonization requires a second, Fc-receptor-bearing effector cell to act on the labeled target, while neutralization blocks function by binding alone; the stem excludes any phagocyte, so labeling for phagocytosis cannot be what stops the toxin [060.3 05:28-09:49; p4, p26]."
+  },
+  "rationale": "The lecture separates effector mechanisms by what else besides antibody binding is required: neutralization needs only the bound antibody to physically block a functional site, while opsonization, ADCP, ADCC, and complement activation all require a second effector (a phagocyte, NK cell, or complement protein) [060.3 05:28-12:12; p4-5, p26-28]. The stem states no such second effector participates, so the mechanism is neutralization. The trap: 'labels the toxin for phagocytosis' smuggles in a phagocyte that the stem has already ruled out."
+ },
+ {
+  "id": "OQ5-L060-C2A",
+  "stem": "A patient's serum antibody against a bacterial capsular polysaccharide is isolated and found to have ten antigen-binding sites per molecule, to be held together by a J chain, and to be the isotype the lecture names as the main activator of the classical complement cascade. Which isotype and structural feature best account for these properties?",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L060",
+  "sourceRef": "OST520 (060) L - Humoral Immunity - Taylor.pdf, file pp. 3, 5, 20, 28; transcript 060.2 11:07-11:29, 14:13-14:57; 060.3 12:18-13:23",
+  "covers": [
+   "L060-O5"
+  ],
+  "concepts": [
+   "isotype-structure-function"
+  ],
+  "applicationLevel": "mechanism",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "IgG, a monomer that predominates in blood serum and carries a long half-life of three to four weeks",
+   "IgM, a J-chain-linked pentamer with ten binding sites, the main activator of classical complement",
+   "IgA, a J-chain-linked dimer that predominates at mucosal surfaces and undergoes poly-Ig receptor transcytosis",
+   "IgE, a monomer linked to parasite defense, toxins, venoms, and granulocyte activation",
+   "IgD, a naive B-cell receptor isotype co-expressed with IgM through alternative splicing of one transcript"
+  ],
+  "answer": 1,
+  "optionExplanations": [
+   "IgG is a secreted monomer with a long serum half-life and is a lesser, not the main, activator of classical complement, so it does not fit an antibody described as the main complement activator with ten binding sites [060.2 11:52-13:16; p3, p20].",
+   "Correct: the lecture describes secreted IgM as a J-chain-linked pentamer with ten antigen-binding sites and names it the main activator of the classical complement cascade [060.2 11:07-11:29, 14:13-14:57; 060.3 12:18-13:23; p3, p20, p28].",
+   "IgA is a J-chain-linked dimer, not a pentamer, has two rather than ten binding sites, and is described for mucosal transport rather than as the main complement activator [060.2 12:24-14:13; p3, p20].",
+   "IgE is a secreted monomer with two binding sites and is linked to parasite/toxin defense and granulocyte activation, not to complement activation or a J-chain-linked multimer [060.2 13:01-13:55; p3, p20].",
+   "IgD is a naive-cell membrane receptor isotype, not a secreted multimer, and the lecture does not describe it activating complement or forming a J-chain-linked pentamer [060.2 09:08-09:19; p3]."
+  ],
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "IgG and IgM are both taught as complement activators, but the lecture qualifies IgG's role as 'to a lesser extent' and reserves 'main activator' and the ten-binding-site pentameric structure for IgM [060.3 12:18-13:23; p3, p5, p20, p28]."
+  },
+  "rationale": "The lecture links each isotype's secreted quaternary structure to its function: IgM assembles as a J-chain-linked pentamer with ten binding sites and is named the main classical-complement activator, while IgG is a monomer that activates complement only to a lesser extent [060.2 11:07-14:57; 060.3 12:18-13:23; p3, p5, p20, p28]. The stem's ten sites, J chain, and 'main activator' wording together point only to IgM. The trap: 'predominates in blood and has a long half-life' correctly describes IgG but does not match the structural and complement clues given."
+ },
+ {
+  "id": "OQ5-L060-C2B",
+  "stem": "Antibody collected from saliva is a J-chain-linked dimer that also carries an extra protein fragment increasing its half-life in secretions. This antibody reached the saliva after crossing mucosal epithelial cells: it bound a receptor on the basolateral surface, was carried across the cell, released at the apical surface, and left with that fragment attached after the receptor was cleaved. Which isotype and process are described?",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L060",
+  "sourceRef": "OST520 (060) L - Humoral Immunity - Taylor.pdf, file p. 5, 29; transcript 060.3 13:28-14:46",
+  "covers": [
+   "L060-O5",
+   "L060-O6"
+  ],
+  "concepts": [
+   "isotype-structure-function"
+  ],
+  "applicationLevel": "mechanism",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "IgM, the isotype the lecture describes as predominant in blood, with the longest antibody half-life",
+   "IgG, the antibody the lecture describes as predominant in blood serum, entering saliva with no epithelial transport step at all",
+   "IgE, an isotype transported into saliva only after first binding granulocyte Fc receptors in the surrounding connective tissue",
+   "IgA: its J-chain dimer binds a poly-Ig receptor, crosses the epithelium, and keeps a secretory fragment after cleavage",
+   "IgD, present in saliva as part of the naive B-cell receptor repertoire rather than as a secreted antibody"
+  ],
+  "answer": 3,
+  "optionExplanations": [
+   "IgM forms a pentamer, not the dimer described, and the lecture attributes blood predominance and the longest half-life to IgG, not IgM, so this option misassigns both the structure and the isotype [060.2 11:44-13:16; p3, p20].",
+   "IgG predominates in blood but the lecture does not describe it undergoing mucosal poly-Ig receptor transcytosis; the scenario's epithelial transport step is the IgA/poly-Ig receptor pathway, not IgG's route [060.3 13:28-14:46; p5, p29].",
+   "IgE is described in the context of parasite/toxin defense and granulocyte activation, not mucosal transcytosis into secretions via an epithelial basolateral receptor [060.2 13:01-13:16; p3, p20].",
+   "Correct: the lecture describes IgA as a J-chain-linked dimer transported across mucosal epithelium by a poly-Ig receptor, released at the apical surface, and left with an attached secretory-component fragment that extends its half-life [060.3 13:28-14:46; p5, p29].",
+   "IgD is taught as a naive B-cell membrane receptor isotype, not as a secreted antibody found in mucosal secretions such as saliva [060.2 09:08-09:19; p3]."
+  ],
+  "closestDistractor": {
+   "index": 1,
+   "why_wrong": "IgG and IgA are both secreted antibodies, but only IgA is described undergoing basolateral poly-Ig receptor binding, transcytosis, and secretory-component retention into mucosal secretions; IgG's role is blood predominance, not this transport pathway [060.3 13:28-14:46; p5, p29]."
+  },
+  "rationale": "The lecture links IgA's J-chain-linked dimer structure to a specific transport mechanism: a poly-Ig receptor on the epithelial basolateral surface binds the J chain, carries the dimer across the cell, and is cleaved at the apical surface so a secretory-component fragment stays attached and extends the antibody's half-life in the lumen [060.3 13:28-14:46; p5, p29]. Every clue in the stem, the J-chain dimer, basolateral binding, transcytosis, and the retained fragment, matches only this IgA pathway. The trap: 'predominant in blood' correctly describes IgG but IgG is not the isotype the lecture ties to this mucosal transport mechanism."
+ },
+ {
+  "id": "OQ5-L060-C3A",
+  "stem": "A patient who underwent splenectomy after trauma later develops overwhelming sepsis from an encapsulated, blood-borne bacterium. Loss of which B-cell subset, normally positioned to survey the blood for such microbes and to make antibody mainly of a single isotype, best explains this patient's increased vulnerability?",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L060",
+  "sourceRef": "OST520 (060) L - Humoral Immunity - Taylor.pdf, file p. 4, 24; transcript 060.3 01:31-03:21",
+  "covers": [
+   "L060-O3"
+  ],
+  "concepts": [
+   "b-cell-subset-localization"
+  ],
+  "applicationLevel": "presentation",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "Follicular B cells, which mainly respond to protein antigen in lymph node germinal centers and can class-switch",
+   "B-1 B cells, which mainly patrol peritoneal and mucosal surfaces for an early response to pathogens there",
+   "Memory B cells, which are long-lived and carry a membrane receptor of several isotypes while awaiting re-challenge",
+   "Plasma cells, which are terminally differentiated and no longer carry a membrane B-cell receptor",
+   "Marginal zone B cells, which survey the blood in the splenic marginal zone and mainly make IgM"
+  ],
+  "answer": 4,
+  "optionExplanations": [
+   "Follicular B cells are described as responding mainly to protein antigen in lymphoid tissue germinal centers, not as the dedicated blood-borne-microbe surveillance subset that a splenectomy removes [060.3 01:31-03:21; p4, p23].",
+   "B-1 B cells are described as mainly patrolling peritoneal, stomach/GI, and lung mucosal sites for early defense, not the splenic blood-filtering site removed by splenectomy [060.3 01:31-03:21; p4, p24].",
+   "Memory B cells are a long-lived resting population awaiting re-challenge across isotypes, not the subset the lecture ties specifically to splenic blood-borne microbe surveillance [060.3 03:24-05:07; p4, p25].",
+   "Plasma cells are terminally differentiated antibody factories drawn from any activated subset; they are not themselves the anatomically localized surveillance population lost with the spleen [060.3 03:24-05:07; p4, p24].",
+   "Correct: the lecture places marginal zone B cells in the splenic marginal zone, describes their role as defense against blood-borne microbes, and states they mainly make IgM, matching a splenectomized patient's vulnerability [060.3 01:31-03:21; p4, p24]."
+  ],
+  "closestDistractor": {
+   "index": 1,
+   "why_wrong": "Marginal zone and B-1 B cells are both described as mainly making IgM, but marginal zone cells are localized to the splenic marginal zone for blood-borne microbe defense, while B-1 cells are localized to peritoneal/mucosal sites; only the marginal zone population is lost with the spleen [060.3 01:31-03:21; p4, p24]."
+  },
+  "rationale": "The lecture localizes each B-cell subset to a site and a typical antigen source: marginal zone B cells sit in the splenic marginal zone and defend against blood-borne microbes while mainly making IgM, whereas follicular cells handle protein antigen in lymphoid germinal centers and B-1 cells handle early mucosal defense [060.3 01:31-03:21; p4, p23-24]. Removing the spleen removes the marginal zone population and its blood surveillance function, explaining the sepsis. The trap: 'B-1 B cells, which mainly patrol peritoneal and mucosal surfaces' correctly describes a mainly-IgM subset, but the wrong anatomic site for this splenectomized patient's blood-borne infection."
+ },
+ {
+  "id": "OQ5-L060-C3B",
+  "stem": "A researcher compares antibody at two sites in an unimmunized mouse: IgM already present in the peritoneal cavity before any deliberate immunization, versus switched IgG produced weeks later in a lymph node germinal center after a protein vaccine. Which B-cell subset accounts for the peritoneal IgM, in contrast to the lymph-node response?",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L060",
+  "sourceRef": "OST520 (060) L - Humoral Immunity - Taylor.pdf, file p. 4, 23-24; transcript 060.3 00:31-03:21",
+  "covers": [
+   "L060-O3"
+  ],
+  "concepts": [
+   "b-cell-subset-localization"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "Follicular B cells, because they are the main source of switched IgG following protein-antigen activation in germinal centers",
+   "Marginal zone B cells, because they survey blood-borne microbes in the splenic marginal zone",
+   "B-1 B cells, because they are positioned at peritoneal and mucosal sites and mainly produce IgM as an early response there",
+   "Memory B cells, because they persist for years and carry a membrane receptor of several isotypes",
+   "Plasma cells, because they are terminally differentiated cells that secrete large amounts of antibody"
+  ],
+  "answer": 2,
+  "optionExplanations": [
+   "Follicular B cells are the subset the lecture ties to the switched IgG germinal-center response described here, not to the peritoneal IgM this item asks about [060.3 01:31-03:21; p4, p23].",
+   "Marginal zone B cells are localized to the splenic blood-filtering compartment, not the peritoneal cavity, so they do not account for this scenario's peritoneal IgM [060.3 01:31-03:21; p4, p24].",
+   "Correct: the lecture places B-1 B cells at peritoneal and mucosal sites and describes them as mainly making IgM for an early response there, matching pre-existing peritoneal IgM in an unimmunized animal [060.3 01:31-03:21; p4, p24].",
+   "Memory B cells arise only after an antigen-driven response and persist for later re-challenge; they do not explain IgM already present before any deliberate immunization [060.3 03:24-05:07; p4, p25].",
+   "Plasma cells are terminally differentiated effector cells generated from an activated subset; the stem asks which subset is positioned to produce this IgM, not which cell type ultimately secretes it [060.3 03:24-05:07; p4, p24]."
+  ],
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "Follicular and B-1 B cells are both taught B-cell subsets, but follicular cells are described as the source of the switched, protein-driven, germinal-center IgG in this scenario, while B-1 cells are the peritoneal, mainly-IgM subset the stem is actually asking about [060.3 01:31-03:21; p4, p23-24]."
+  },
+  "rationale": "The lecture distinguishes B-cell subsets by site and typical output: follicular cells drive switched IgG after protein-antigen activation in lymph-node germinal centers, while B-1 cells sit at peritoneal and mucosal sites and mainly make IgM as an early, seemingly pre-existing response [060.3 00:31-03:21; p4, p23-24]. The peritoneal IgM present before deliberate immunization matches the B-1 subset, in contrast to the lymph-node IgG response. The trap: 'main source of switched IgG following protein-antigen activation' correctly describes follicular cells but answers the lymph-node half of the comparison, not the peritoneal IgM this item asks about."
+ },
+ {
+  "id": "OQ5-L061-C1A",
+  "stem": "A 4-year-old boy has moderate intellectual disability, a long face, and prominent ears. His maternal uncle has similar features, fitting an X-linked pattern, and the family history points to a specific triplet-repeat locus. Which technique is most appropriate to size the suspected repeat expansion and confirm the diagnosis?",
+  "context": "",
+  "topic": "Molecular Biology",
+  "src": "N",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L061",
+  "sourceRef": "OST520 (061, 066) L - Molecular Techniques I and II - Faner.pdf, file pp. 6, 8-9; transcript 074 05:19-13:43, 16:40-17:44",
+  "covers": [
+   "L061-O2",
+   "L061-O3"
+  ],
+  "concepts": [
+   "assay-selection-known-status",
+   "fmr1-southern-blot"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "Sanger sequencing across the coding exons of the candidate gene",
+   "Array CGH comparing patient DNA to a reference genome-wide",
+   "Southern blot of EcoRI-digested DNA with a targeted probe",
+   "FISH using a locus-specific probe and a centromere probe",
+   "Allele-specific PCR with a mutant-specific 3' primer"
+  ],
+  "answer": 2,
+  "optionExplanations": [
+   "Sanger sequencing reads base-level sequence in a known gene when a panel is incomplete (as with CFTR); it is not the taught method for sizing a triplet-repeat expansion [p7, 074 13:49-16:33].",
+   "Array CGH is the genome-wide tool used when no candidate gene or locus is known; here the repeat locus is already implicated by the pedigree, so a genome-wide search is unnecessary [p8-9, 074 16:40-17:44].",
+   "Southern blot after EcoRI digestion, electrophoresis/blotting, and probe hybridization is the taught method to size the FMR1 CGG-repeat expansion in the 5' UTR [p6, 074 05:19-13:43].",
+   "FISH uses locus-specific and centromere probes to assess chromosomal or gene copy number in fixed tissue, such as HER2 amplification, not to size a repeat expansion [p12, 074 28:13-35:17].",
+   "ARMS-PCR requires a known point mutation or small deletion for its mutant-specific primer; it is not suited to determining a variable repeat length [p11, 074 22:29-28:07]."
+  ],
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "Sanger sequencing is the taught next step when a known gene's mutation panel is incomplete (as with CFTR), not the method for sizing a triplet-repeat expansion, which the faculty pairs specifically with Southern blot/VNTR analysis [p6-7, 074 05:19-16:33]."
+  },
+  "rationale": "<strong>Answer:</strong> The pedigree and phenotype point to a known repeat-expansion locus (FMR1), so the taught method is Southern blot: EcoRI digestion, electrophoresis/blotting, probe hybridization, and imaging to size the expanded fragment [p6, 074 05:19-13:43]. <br><br><strong>Discriminator:</strong> Sanger sequencing finds an unresolved point mutation within a known gene when a panel is incomplete, array CGH and FISH read copy-number/chromosomal signal rather than repeat length, and ARMS-PCR needs a known point variant for its mismatched primer. The trap: 'Sanger sequencing across the coding exons' sounds like the general-purpose sequencing answer, but the faculty reserves Sanger for a base-by-base search across a known gene when a panel is incomplete (as with CFTR), pairing repeat-locus sizing specifically with Southern blot/VNTR analysis [p6-7, 074 05:19-16:33]."
+ },
+ {
+  "id": "OQ5-L061-C1B",
+  "stem": "A newborn has a positive sweat chloride test and elevated immunoreactive trypsinogen. CFTR is the known disease gene, and a targeted panel for common variants identifies only one of the two expected pathogenic alleles. Which technique should be used next to find the second variant?",
+  "context": "",
+  "topic": "Molecular Biology",
+  "src": "N",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L061",
+  "sourceRef": "OST520 (061, 066) L - Molecular Techniques I and II - Faner.pdf, file pp. 6-9; transcript 074 13:49-16:33, 16:40-17:44",
+  "covers": [
+   "L061-O2",
+   "L061-O4"
+  ],
+  "concepts": [
+   "assay-selection-known-status",
+   "cftr-sanger-sequencing"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "Sanger sequencing across the clinically relevant CFTR regions",
+   "Allele-specific PCR with a mutant-specific 3' primer for CFTR",
+   "Southern blot with a probe for a repeat-expansion locus",
+   "Array CGH comparing patient DNA to a reference genome-wide",
+   "FISH using a locus-specific probe for the CFTR region"
+  ],
+  "answer": 0,
+  "optionExplanations": [
+   "When a fixed panel finds only one of two expected CFTR variants, the taught next step is Sanger sequencing across the gene's clinically relevant regions to find the unresolved second variant [p7, 074 13:49-16:33].",
+   "ARMS-PCR needs the specific mutant sequence already known to design its 3' mismatched primer; here the second CFTR variant is not yet identified, so an undirected sequencing search is needed instead [p11, 074 22:29-28:07].",
+   "Southern blot/VNTR analysis is the taught method for sizing a repeat-expansion locus such as FMR1, not for finding point mutations across the CFTR gene [p6, 074 05:19-13:43].",
+   "Array CGH is used when no candidate gene is known; here CFTR is already the confirmed disease gene, so a genome-wide search is unnecessary [p8-9, 074 16:40-17:44].",
+   "FISH assesses chromosomal or locus copy number with fluorescent probes on fixed tissue; it does not detect a base-level point mutation within CFTR [p12, 074 28:13-35:17]."
+  ],
+  "closestDistractor": {
+   "index": 1,
+   "why_wrong": "ARMS-PCR is also a PCR-based mutation test, but it requires the mutant sequence to already be known to design the mismatched primer; here the second CFTR variant is unknown, so Sanger sequencing across the gene is needed instead [p7, p11, 074 13:49-16:33, 22:29-28:07]."
+  },
+  "rationale": "<strong>Answer:</strong> CFTR is the known disease gene, but a fixed panel finds only one of the two expected pathogenic alleles, so the taught next step is Sanger sequencing across the clinically relevant CFTR regions to find the unresolved second variant [p7, 074 13:49-16:33]. <br><br><strong>Discriminator:</strong> Southern blot sizes a known repeat locus (FMR1), array CGH searches genome-wide when no gene is known, FISH reads chromosomal/locus copy number in fixed tissue, and ARMS-PCR needs the mutant sequence already known. The trap: 'allele-specific PCR with a mutant-specific 3' primer' sounds like a reasonable CFTR mutation test, but ARMS-PCR only detects a mutation whose sequence is already known, and here the second variant has not yet been identified, so an undirected sequencing approach across the gene is required [p7, p11, 074 13:49-16:33, 22:29-28:07]."
+ },
+ {
+  "id": "OQ5-L061-C2A",
+  "stem": "A 3-year-old girl has global developmental delay and subtle dysmorphic features with a normal karyotype. No specific gene or chromosomal region is suspected from her family history or exam. Which technique is most appropriate as a first-tier test to identify a possible copy-number abnormality?",
+  "context": "",
+  "topic": "Molecular Biology",
+  "src": "N",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L061",
+  "sourceRef": "OST520 (061, 066) L - Molecular Techniques I and II - Faner.pdf, file pp. 8-9; transcript 074 16:40-22:28",
+  "covers": [
+   "L061-O2",
+   "L061-O5"
+  ],
+  "concepts": [
+   "genome-wide-vs-targeted-copy-number",
+   "array-cgh-unknown-locus"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "FISH using a locus-specific probe and a centromere probe",
+   "Sanger sequencing of a single candidate gene's coding exons",
+   "Allele-specific PCR with a mutant-specific 3' primer",
+   "Array CGH comparing patient DNA to a reference genome-wide",
+   "Southern blot with a probe for a known repeat locus"
+  ],
+  "answer": 3,
+  "optionExplanations": [
+   "FISH requires a specific locus already chosen for its probe; without a candidate region, there is no target locus to design the probe against [p12, 074 28:13-35:17].",
+   "Sanger sequencing requires a known candidate gene to sequence; none has been identified from this child's history or exam [p7, 074 13:49-16:33].",
+   "ARMS-PCR requires a known specific mutation to design the mismatched primer; no mutation has been identified here [p11, 074 22:29-28:07].",
+   "Array CGH cohybridizes patient and reference DNA genome-wide and is the taught first-tier test for unexplained developmental delay with no candidate locus [p8-9, 074 16:40-22:28].",
+   "Southern blot/VNTR analysis targets one known repeat locus (such as FMR1); it is not a genome-wide screening approach [p6, 074 05:19-13:43]."
+  ],
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "FISH also detects copy-number change, but it needs a specific locus chosen in advance for its probe; with no candidate region identified, the taught choice is the genome-wide array CGH comparison instead [p8-9, p12, 074 16:40-22:28, 28:13-35:17]."
+  },
+  "rationale": "<strong>Answer:</strong> No candidate gene or region is suspected, so the taught first-tier approach is array CGH: patient and reference DNA are differentially labeled and cohybridized genome-wide, and the fluorescence ratio flags copy-number gain or loss [p8-9, 074 16:40-22:28]. <br><br><strong>Discriminator:</strong> FISH, Sanger sequencing, Southern blot, and ARMS-PCR are all taught as targeted methods that need a specific locus, gene, or mutation chosen in advance. The trap: 'FISH using a locus-specific probe' sounds like a reasonable copy-number test, but FISH cannot be performed without first selecting the locus to probe, which this vignette explicitly lacks, making the genome-wide array CGH search the taught choice [p8-9, p12, 074 16:40-22:28, 28:13-35:17]."
+ },
+ {
+  "id": "OQ5-L061-C2B",
+  "stem": "A 52-year-old woman has invasive breast carcinoma. Immunohistochemistry for HER2/EGFR2 protein is equivocal, and the team wants to determine whether the HER2 gene itself is amplified in the tumor tissue to decide on trastuzumab therapy. Which technique is most appropriate?",
+  "context": "",
+  "topic": "Molecular Biology",
+  "src": "N",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L061",
+  "sourceRef": "OST520 (061, 066) L - Molecular Techniques I and II - Faner.pdf, file p. 12; transcript 074 28:13-35:17, 33:01-35:12",
+  "covers": [
+   "L061-O2",
+   "L061-O7"
+  ],
+  "concepts": [
+   "genome-wide-vs-targeted-copy-number",
+   "her2-fish-targeted"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "Sanger sequencing of the HER2 coding exons",
+   "FISH using locus-specific and centromere probes",
+   "Array CGH comparing patient DNA to a reference genome-wide",
+   "Southern blot with a probe for a repeat-expansion locus",
+   "Allele-specific PCR with a mutant-specific 3' primer for HER2"
+  ],
+  "answer": 1,
+  "optionExplanations": [
+   "Sanger sequencing detects base-level sequence changes; it does not measure gene copy number or amplification [p7, 074 13:49-16:33].",
+   "FISH with a locus-specific probe for HER2 and a centromere probe for chromosome 17 gives an LSI:CEP ratio that is the taught method to call HER2 amplification in fixed tumor tissue [p12, 074 28:13-35:17].",
+   "Array CGH is the genome-wide tool taught for cases with no known candidate locus; here HER2 is already the specific candidate gene, so the faculty's targeted FISH assay applies [p8-9, p12, 074 16:40-17:44, 33:01-35:12].",
+   "Southern blot/VNTR analysis sizes a known repeat locus such as FMR1; it is not used to assess gene amplification in tumor tissue [p6, 074 05:19-13:43].",
+   "ARMS-PCR detects a specific point mutation or small deletion, as with EGFR1 in lung adenocarcinoma; it does not measure gene copy number amplification [p10-11, 074 22:29-28:07]."
+  ],
+  "closestDistractor": {
+   "index": 2,
+   "why_wrong": "Array CGH also reads copy-number change genome-wide, but the faculty ties it to cases without a known candidate locus; here HER2 is already the specific gene of interest, so the targeted FISH LSI:CEP assay is the taught companion-diagnostic method instead [p8-9, p12, 074 16:40-17:44, 33:01-35:12]."
+  },
+  "rationale": "<strong>Answer:</strong> HER2 is the specific known candidate gene here, so the taught method is FISH with a centromere probe (chromosome 17 control) and a locus-specific probe for HER2; the LSI:CEP signal ratio is used to call amplification in fixed tumor tissue [p12, 074 28:13-35:17]. <br><br><strong>Discriminator:</strong> Sanger sequencing and ARMS-PCR read base-level sequence, not copy number; Southern blot sizes a repeat locus; array CGH is the genome-wide tool reserved for cases without a known candidate gene. The trap: 'array CGH comparing patient DNA to a reference genome-wide' also detects copy-number change, but the faculty frames genome-wide array CGH for the unexplained case with no candidate locus, while a known locus like HER2 gets the targeted FISH ratio taught as the companion diagnostic [p8-9, p12, 074 16:40-17:44, 33:01-35:12]."
+ },
+ {
+  "id": "OQ5-L061-C3A",
+  "stem": "FISH is performed on a breast tumor specimen using a centromere enumeration probe (CEP) for chromosome 17 and a locus-specific identifier (LSI) probe for HER2/EGFR2. Across a representative set of tumor nuclei, the average CEP signal count is 2 and the average LSI signal count is 6. How should this result be interpreted?",
+  "context": "",
+  "topic": "Molecular Biology",
+  "src": "N",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L061",
+  "sourceRef": "OST520 (061, 066) L - Molecular Techniques I and II - Faner.pdf, file p. 12; transcript 074 32:12-35:12",
+  "covers": [
+   "L061-O7"
+  ],
+  "concepts": [
+   "fish-lsi-cep-ratio-interpretation"
+  ],
+  "applicationLevel": "prediction",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "HER2 amplification is present, since the LSI:CEP ratio exceeds 2",
+   "HER2 amplification is present, since the LSI count exceeds the CEP count",
+   "HER2 amplification is absent, since both signal counts fall in a normal range",
+   "The result is uninterpretable without also performing Sanger sequencing of HER2",
+   "HER2 amplification is present only if immunohistochemistry also shows overexpression"
+  ],
+  "answer": 0,
+  "optionExplanations": [
+   "The LSI:CEP ratio here is 6 divided by 2, or 3, which exceeds the taught threshold of 2, so HER2 amplification is called positive [p12, 074 33:01-35:12].",
+   "The taught interpretation rule is the LSI:CEP ratio exceeding 2, not simply LSI being numerically greater than CEP; a smaller excess (for example LSI 3, CEP 2, ratio 1.5) would not clear the threshold even though LSI still exceeds CEP [p12, 074 33:01-35:12].",
+   "Judging the signal counts individually without computing the ratio skips the taught interpretation step; here the counts do yield a ratio above 2, so amplification is present, not absent [p12, 074 33:01-35:12].",
+   "Sanger sequencing reads base-level sequence and is not part of the taught rule for interpreting a FISH LSI:CEP ratio [p7, 074 13:49-16:33].",
+   "The taught FISH amplification call is made directly from the LSI:CEP ratio; immunohistochemistry is a separate test, not a stated requirement for interpreting this ratio [p12, 074 33:01-35:12]."
+  ],
+  "closestDistractor": {
+   "index": 1,
+   "why_wrong": "LSI exceeding CEP sounds like 'more copies,' but the taught cutoff is specifically an LSI:CEP ratio above 2, not merely LSI being numerically greater than CEP; a small excess can still fall below the threshold [p12, 074 33:01-35:12]."
+  },
+  "rationale": "<strong>Answer:</strong> CEP counts chromosome 17 copies as the control, and LSI counts the HER2 locus; the ratio here is 6/2 = 3, which exceeds the taught cutoff of 2, so amplification is called positive [p12, 074 33:01-35:12]. <br><br><strong>Discriminator:</strong> The interpretation rule is the ratio, not the raw counts individually, and no other assay (Sanger sequencing, immunohistochemistry) is part of the taught FISH interpretation step. The trap: 'since the LSI count exceeds the CEP count' reuses the correct direction of change but the wrong rule, since a small numeric excess of LSI over CEP can still produce a ratio below the taught threshold of 2, so the ratio itself, not a simple 'greater than' comparison, is what determines the call [p12, 074 33:01-35:12]."
+ },
+ {
+  "id": "OQ5-L061-C3B",
+  "stem": "FISH is performed on a second breast tumor specimen using the same CEP17 and HER2 LSI probes. In this specimen, the average CEP signal count is 4 and the average LSI signal count is 6. How should this result be interpreted?",
+  "context": "",
+  "topic": "Molecular Biology",
+  "src": "N",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L061",
+  "sourceRef": "OST520 (061, 066) L - Molecular Techniques I and II - Faner.pdf, file p. 12; transcript 074 32:12-35:12",
+  "covers": [
+   "L061-O7"
+  ],
+  "concepts": [
+   "fish-lsi-cep-ratio-interpretation"
+  ],
+  "applicationLevel": "prediction",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "HER2 amplification is present, since the LSI count exceeds the CEP count",
+   "The result cannot be interpreted without repeating the assay using array CGH",
+   "HER2 amplification is absent, since the LSI:CEP ratio is below 2",
+   "HER2 amplification is absent only if the CEP count is also below 2",
+   "HER2 amplification is present, since both signal counts are above one copy"
+  ],
+  "answer": 2,
+  "optionExplanations": [
+   "LSI exceeding CEP by itself is not the taught cutoff; here the ratio is 6/4 = 1.5, which does not clear the threshold of 2 despite LSI being numerically higher [p12, 074 33:01-35:12].",
+   "Array CGH is the genome-wide tool taught for cases without a known candidate locus; it is not a required confirmatory step for interpreting a HER2 FISH ratio [p8-9, 074 16:40-17:44].",
+   "The LSI:CEP ratio here is 6 divided by 4, or 1.5, which is below the taught threshold of 2, so HER2 amplification is called negative [p12, 074 33:01-35:12].",
+   "The taught cutoff is the LSI:CEP ratio itself, not a separate rule based on the absolute CEP count; the ratio already determines the call [p12, 074 33:01-35:12].",
+   "Both signal counts being present above one copy does not by itself indicate amplification; the CEP count is the chromosome-copy control that the LSI count must be compared against as a ratio [p12, 074 33:01-35:12]."
+  ],
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "LSI is again numerically higher than CEP here, but the ratio (6/4 = 1.5) does not reach the taught threshold of 2, so this specimen is read as negative for amplification, showing the raw comparison is not the taught rule [p12, 074 33:01-35:12]."
+  },
+  "rationale": "<strong>Answer:</strong> The LSI:CEP ratio here is 6/4 = 1.5, below the taught cutoff of 2, so this specimen is read as HER2 amplification negative [p12, 074 33:01-35:12]. <br><br><strong>Discriminator:</strong> A rising CEP count reflects more chromosome 17 copies (the control), which can raise the LSI count numerically without the ratio itself crossing the threshold; array CGH and an absolute-CEP rule are not part of the taught FISH interpretation step. The trap: 'since the LSI count exceeds the CEP count' repeats the same raw-comparison error as before, but with a higher CEP control count the ratio falls below 2 even though LSI is still numerically larger, which is exactly why the faculty teaches the ratio rather than the raw counts as the interpretation rule [p12, 074 33:01-35:12]."
+ },
+ {
+  "id": "OQ5-L062-C1A",
+  "stem": "A flow-cytometry study of bone marrow B-lineage precursors identifies a population that is CD19+ and CD20-negative, is actively rearranging D-to-J and then V-to-DJ segments at the immunoglobulin heavy-chain locus using RAG and TdT, and displays no B-cell receptor of any kind on its surface. Within this population, cells that fail to assemble a functional heavy-chain protein are eliminated by which fate?",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L062",
+  "sourceRef": "OST520 (062) L - B cell development - Ritchie.pdf, file pp. 9, 16; transcript 062 06:15-07:57, 09:13-10:46, 36:43-37:01",
+  "covers": [
+   "L062-LO2",
+   "L062-F"
+  ],
+  "concepts": [
+   "pre-bcr-checkpoint"
+  ],
+  "applicationLevel": "presentation",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "Apoptosis at the pro-B stage, before a pre-B-cell receptor can ever be displayed",
+   "Apoptosis after a complete surface IgM molecule paired with a real light chain is expressed",
+   "Negative selection triggered by strong binding to a self-antigen presented in the bone marrow",
+   "Receptor editing at the same heavy-chain locus to generate a second, different VDJ rearrangement",
+   "Survival as a B cell that expresses only the surrogate light chain without any heavy chain"
+  ],
+  "answer": 0,
+  "optionExplanations": [
+   "Correct: a pro-B cell that cannot assemble a functional mu heavy chain never pairs it with the surrogate light chain to form the pre-BCR, so it dies by apoptosis before that receptor appears, the checkpoint that removes about 60% of cells here [062 06:29-07:22, 36:43-37:01].",
+   "This describes the light-chain checkpoint of the immature B cell stage, which forms only after a functional heavy chain has already paired with a real light chain; this population has not even finished heavy-chain rearrangement yet [p9-10][062 08:00-08:39].",
+   "Central negative selection against self-antigen acts on immature B cells that already display a complete surface IgM receptor, not on pro-B cells that have no receptor at all to bind antigen with [062 09:13-10:46].",
+   "Receptor editing at the heavy-chain locus after a failed rearrangement is not a mechanism the faculty describes for this lecture; a nonfunctional heavy chain leads to apoptosis, not a second attempt [062 07:11-07:22].",
+   "The pre-BCR requires a mu heavy chain paired with the surrogate light chain; the surrogate light chain alone, without a heavy chain, does not signal survival or proliferation in this system [062 06:29-06:57]."
+  ],
+  "closestDistractor": {
+   "index": 2,
+   "why_wrong": "Central negative selection against self-antigen removes immature B cells that already display surface IgM; this pro-B population has no receptor yet to bind any antigen with [062 09:13-10:46]."
+  },
+  "rationale": "The pro-B to pre-B transition is a heavy-chain-only checkpoint: a functional mu heavy chain must pair with the surrogate light chain to form the pre-BCR before the cell can proliferate and go on to rearrange its light chain [062 06:29-07:57]. A cell that cannot make that pairing is eliminated by apoptosis at this stage, accounting for roughly 60% attrition here [062 36:43-37:01]. The trap: 'negative selection triggered by strong binding to a self-antigen' borrows a real B-cell death mechanism from the wrong stage; that checkpoint acts later, on immature B cells that already express surface IgM, not on pro-B cells with no receptor at all."
+ },
+ {
+  "id": "OQ5-L062-C1B",
+  "stem": "Investigators generate a strain of mice that cannot produce the surrogate light chain that normally pairs with the mu heavy chain. Bone marrow from these mice contains normal numbers of CD19+CD20-negative cells actively rearranging heavy-chain gene segments, but almost no CD19+CD20+ cells beyond that point, while thymic T-cell development is unaffected. Which step is most directly disrupted by this mutation?",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L062",
+  "sourceRef": "OST520 (062) L - B cell development - Ritchie.pdf, file pp. 9-10; transcript 062 06:15-07:57, 09:13-10:46",
+  "covers": [
+   "L062-LO2",
+   "L062-F"
+  ],
+  "concepts": [
+   "pre-bcr-checkpoint"
+  ],
+  "applicationLevel": "prediction",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "RAG-mediated cutting at the heavy-chain V, D and J gene segments in pro-B cells",
+   "TdT-mediated addition of N nucleotides during light-chain V-to-J joining",
+   "Formation of the pre-BCR and the survival signal it sends once a functional heavy chain is made",
+   "Alternative splicing that lets a single VDJ exon be expressed with both mu and delta constant regions",
+   "Central selection that removes immature B cells with strongly self-reactive receptors in the bone marrow"
+  ],
+  "answer": 2,
+  "optionExplanations": [
+   "RAG still cuts and joins the heavy-chain segments normally in this strain, which is why CD19+CD20-negative cells rearranging heavy-chain DNA appear in normal numbers; the defect lies downstream of this step [062 06:15-06:29].",
+   "TdT acts on heavy-chain VDJ joining in pro-B cells, not on light-chain VJ joining, and this mutation is in the surrogate light-chain gene itself, not in TdT; light-chain rearrangement is never reached in these mice [p16][062 37:10-37:18].",
+   "Correct: the surrogate light chain pairs with the mu heavy chain to form the pre-BCR; without it, cells that make a functional heavy chain cannot display the pre-BCR or receive its proliferation and survival signal, so they fail to become CD19+CD20+ pre-B cells [062 06:29-07:57].",
+   "Alternative splicing that generates simultaneous IgM and IgD occurs at the mature naive stage, long after the pre-B checkpoint that this mutation blocks [062 37:34-38:36].",
+   "Central selection against self-antigen acts on immature B cells that already express surface IgM; this mutation blocks development before any B cell reaches that stage [062 09:13-10:46]."
+  ],
+  "closestDistractor": {
+   "index": 1,
+   "why_wrong": "It correctly names an enzyme active in early B-cell development but assigns it to the wrong locus and stage; TdT adds N nucleotides during heavy-chain VDJ joining in pro-B cells, and the described mutation is in the surrogate light chain gene, not TdT, so light-chain rearrangement is never reached here [p16][062 37:10-37:18]."
+  },
+  "rationale": "The surrogate light chain's only job is to pair with a successfully made mu heavy chain to form the pre-BCR, whose expression signals the cell to proliferate and then begin light-chain rearrangement [062 06:29-07:57]. Losing the surrogate light chain leaves heavy-chain rearrangement itself intact, explaining the normal CD19+CD20-negative population, but blocks every cell from advancing to the CD19+CD20+ pre-B stage, and T cells are unaffected because this gene has no role in the thymus. The trap: 'TdT-mediated addition of N nucleotides during light-chain V-to-J joining' misapplies an enzyme that acts only in heavy-chain joining to a locus and stage this mutation never lets the cells reach."
+ },
+ {
+  "id": "OQ5-L062-C2A",
+  "stem": "A strain of mice is engineered with TdT completely deleted. Pro-B and pre-B cells in these mice still complete rearrangement and mature B cells are produced. When the immunoglobulin gene junctions of these mature B cells are sequenced, which pattern is expected?",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L062",
+  "sourceRef": "OST520 (062) L - B cell development - Ritchie.pdf, file pp. 8, 16; transcript 062 33:41-35:41, 37:10-37:18",
+  "covers": [
+   "L062-E",
+   "L062-LO2"
+  ],
+  "concepts": [
+   "junctional-diversity-tdt"
+  ],
+  "applicationLevel": "prediction",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "Both the heavy-chain and light-chain junctions lack N nucleotides, since TdT contributes equally to VDJ and VJ joining",
+   "Heavy-chain junctions lose N nucleotides and diversity; light-chain junctions are unaffected, since TdT never acts there",
+   "Heavy-chain junctions lack P nucleotides, since TdT is responsible for the repair-enzyme-mediated joining that produces them",
+   "Neither heavy-chain nor light-chain gene segments can be joined at all, because TdT is required for RAG to cut the DNA",
+   "Both junctions gain extra P nucleotides to compensate for the missing N nucleotides, keeping total diversity unchanged"
+  ],
+  "answer": 1,
+  "optionExplanations": [
+   "This overgeneralizes TdT's role to both loci; the faculty teaches TdT as active only during heavy-chain VDJ joining in pro-B cells, while light-chain VJ joining in pre-B cells uses RAG without TdT, so light-chain junctions were never affected by TdT to begin with [p8][p16][062 33:41-33:50][062 37:10-37:18].",
+   "Correct: TdT adds the random N nucleotides only during heavy-chain VDJ joining; removing it leaves heavy chains still forming but with less junctional diversity, while light-chain VJ joining, which never used TdT, is unaffected [062 33:41-35:41][062 37:10-37:18].",
+   "P nucleotides come from the DNA repair enzymes that seal the break ends, not from TdT; TdT's product is the N nucleotide, so deleting TdT would not remove P nucleotides [062 33:53-35:19].",
+   "RAG performs the cutting step independently of TdT; the transcript states that without TdT a heavy chain can still be made, just with less diversity, so segment joining is not abolished [062 35:22-35:38].",
+   "The faculty describes no compensatory mechanism that adds extra P nucleotides when TdT is absent; losing TdT is presented as a net loss of diversity, not a substitution [062 35:22-35:38]."
+  ],
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "It correctly identifies that N nucleotides would be lost, but wrongly extends TdT's role to the light-chain locus; the faculty specifically teaches that TdT is not active during light-chain VJ joining, so that locus keeps its normal N-nucleotide-free junctional pattern [p16][062 37:10-37:18]."
+  },
+  "rationale": "TdT is taught as active only during heavy-chain VDJ joining in the pro-B stage, adding random N nucleotides on top of the P nucleotides the repair enzymes already contribute; light-chain VJ joining in the pre-B stage uses RAG alone, without TdT [p8][p16][062 33:41-35:41][062 37:10-37:18]. Deleting TdT therefore reduces junctional diversity specifically at the heavy-chain locus while leaving light-chain junctions untouched, and the transcript confirms a heavy chain can still be made, just less diverse. The trap: 'both the heavy-chain and light-chain junctions lack N nucleotides' assumes TdT works at both loci, when the faculty explicitly restricts it to heavy-chain rearrangement."
+ },
+ {
+  "id": "OQ5-L062-C2B",
+  "stem": "Researchers sequence the heavy-chain and light-chain gene junctions from the same mature B-cell clone. The heavy-chain junction contains extra random nucleotides that cannot be explained by simple repair of the cut DNA ends. The light-chain junction contains only a small number of nucleotide changes, all explainable by that same repair process. Which explanation best accounts for this difference?",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L062",
+  "sourceRef": "OST520 (062) L - B cell development - Ritchie.pdf, file pp. 8, 16; transcript 062 33:41-35:19, 37:10-37:18, 24:01-24:10",
+  "covers": [
+   "L062-E",
+   "L062-LO2"
+  ],
+  "concepts": [
+   "junctional-diversity-tdt"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "Both junctions should show the same random nucleotides, so this pattern most likely reflects a sequencing or rearrangement error",
+   "The light-chain locus also contains D gene segments like the heavy chain, but they were not captured in this particular sequencing read",
+   "RAG itself adds random nucleotides at the heavy-chain locus only, while the repair enzymes handle the light-chain locus",
+   "The heavy chain formed in the pro-B stage with TdT adding N nucleotides; the light chain formed later, using RAG alone",
+   "The random nucleotide differences reflect somatic hypermutation introduced by AID after the B cell was activated by antigen"
+  ],
+  "answer": 3,
+  "optionExplanations": [
+   "This treats a taught, stage-specific enzyme difference as an artifact; the faculty explains this exact pattern as expected, not as an error, based on which enzymes act at each locus [p8][p16].",
+   "The light-chain locus has only V and J segments, with no D segment, so there is no D segment to miss in sequencing; this is a stated structural difference from the heavy-chain locus, not a sampling issue [p16][062 37:10-37:18].",
+   "RAG performs the cutting and joining of gene segments at both loci but does not itself add random nucleotides; TdT is the enzyme that adds N nucleotides, and only at the heavy-chain locus [062 33:41-33:50].",
+   "Correct: TdT is active during heavy-chain VDJ joining in the pro-B stage, adding the extra random N nucleotides seen here; light-chain VJ joining happens later, in the pre-B stage, using RAG and the repair enzymes' P nucleotides alone, without TdT [p8][p16][062 33:41-33:50][062 37:10-37:18].",
+   "AID-driven somatic hypermutation acts on already-rearranged variable regions after antigen activation, a process this lecture defers to a later lecture; it does not explain junctional differences created during bone-marrow gene rearrangement [062 24:01-24:10]."
+  ],
+  "closestDistractor": {
+   "index": 2,
+   "why_wrong": "It correctly separates the two loci but misassigns which enzyme adds the random nucleotides; RAG cuts and joins DNA at both loci, while TdT, not RAG, is the enzyme that adds N nucleotides, and it does so only during heavy-chain joining [062 33:41-33:50]."
+  },
+  "rationale": "Heavy-chain VDJ joining happens in the pro-B stage with both RAG and TdT active, so TdT layers random N nucleotides on top of the repair enzymes' P nucleotides, producing junctions that cannot be explained by repair alone [p8][062 33:41-33:50]. Light-chain VJ joining happens later, in the pre-B stage, using RAG and the repair enzymes without TdT, so its junctions show only the smaller, repair-explainable P-nucleotide changes [p16][062 37:10-37:18]. The trap: 'RAG itself adds random nucleotides at the heavy-chain locus' assigns TdT's job to RAG, which only cuts and joins the DNA at both loci."
+ },
+ {
+  "id": "OQ5-L062-C3A",
+  "stem": "An immature B cell in the bone marrow expresses a surface IgM receptor that binds strongly to a self-antigen displayed on nearby stromal cells. Which outcome and rationale best describes what happens to this cell next?",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L062",
+  "sourceRef": "OST520 (062) L - B cell development - Ritchie.pdf; transcript 062 09:13-10:46",
+  "covers": [
+   "L062-F"
+  ],
+  "concepts": [
+   "central-selection-self-antigen"
+  ],
+  "applicationLevel": "prediction",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "It undergoes positive selection and survives, because central selection favors any receptor capable of binding antigen",
+   "It undergoes alternative splicing to co-express IgD, which reduces its affinity for the self-antigen",
+   "It migrates out of the bone marrow, where peripheral tolerance mechanisms will eliminate it instead",
+   "It rearranges a new light chain at a second light-chain locus to try to lower its self-reactivity",
+   "It undergoes negative selection and dies by apoptosis, preventing this receptor from attacking self-tissue later"
+  ],
+  "answer": 4,
+  "optionExplanations": [
+   "This reverses the taught rule: central selection favors weak, not strong, self-antigen binding, since strong binding to self is what negative selection is meant to remove [062 09:53-10:13].",
+   "Alternative splicing to add IgD is a mature-stage event tied to becoming a naive follicular B cell, not a response to strong self-antigen binding in an immature B cell, and it is not taught as an affinity-lowering mechanism [062 37:34-38:36].",
+   "The faculty teaches central selection as occurring in the bone marrow itself, a sterile site where self-antigen is what the cell first encounters; this option relocates the described checkpoint to the wrong compartment [062 09:32-09:48].",
+   "The faculty does not describe a second light-chain rearrangement attempt in this lecture; a strongly self-reactive immature B cell is eliminated, not given another chance to rearrange [062 09:53-10:13].",
+   "Correct: strong recognition of self-antigen by an immature B cell in the bone marrow triggers negative selection and apoptosis, removing that receptor before it can leave the marrow and attack normal self-tissue such as the collagen example given [062 09:53-10:46]."
+  ],
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "It correctly names central selection but reverses which binding strength triggers which outcome; the faculty specifically teaches weak self-antigen recognition as producing positive selection and strong recognition as producing negative selection, not the other way around [062 09:53-10:13]."
+  },
+  "rationale": "Because immature B cells in the sterile bone marrow can only encounter self-antigen, the faculty teaches that weak binding is tolerated (positive selection, survival) while strong binding triggers negative selection and apoptosis, using a self-reactive anti-collagen example to show why this matters: unchecked, such a cell would attack normal tissue once released into the periphery [062 09:13-10:46]. The trap: 'positive selection and survives, because central selection favors any receptor capable of binding antigen' ignores that central selection specifically discriminates by binding strength, not by the mere presence of binding."
+ },
+ {
+  "id": "OQ5-L062-C3B",
+  "stem": "Suppose the checkpoint that eliminates strongly self-reactive immature B cells in the bone marrow were absent, while every other step of B-cell development proceeded normally. Once these cells complete maturation and enter the periphery, which outcome is most directly expected?",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L062",
+  "sourceRef": "OST520 (062) L - B cell development - Ritchie.pdf, file p. 10; transcript 062 09:13-10:46, 39:49-40:19",
+  "covers": [
+   "L062-F"
+  ],
+  "concepts": [
+   "central-selection-self-antigen"
+  ],
+  "applicationLevel": "prediction",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "No change to the peripheral B-cell repertoire, because central selection acts on T cells, not B cells",
+   "A greater risk of antibody attack on normal self-tissue, since high-affinity self-reactive B cells would no longer be removed",
+   "Weakly self-reactive B cells would now be removed instead, since removing one checkpoint shifts elimination to the opposite binding strength",
+   "Loss of combinatorial and junctional diversity, since both depend on this same selection checkpoint",
+   "Formation of memory B cells directly in the bone marrow, bypassing the normal requirement for antigen exposure in the periphery"
+  ],
+  "answer": 1,
+  "optionExplanations": [
+   "Central selection as taught in this lecture removes strongly self-reactive immature B cells, not T cells; this option misattributes the mechanism to the wrong lymphocyte lineage [062 09:13-10:46].",
+   "Correct: the faculty's own rationale for this checkpoint is that a strongly self-reactive B cell released into the periphery would attack normal self-tissue, using the anti-collagen example; removing the checkpoint removes that protection [062 09:53-10:46].",
+   "This assumes removing a checkpoint reverses its target rather than simply eliminating it; the faculty describes strong binders as the ones normally removed, and nothing in that mechanism would newly target the weak binders that are normally allowed to survive [062 09:53-10:13].",
+   "Combinatorial diversity comes from V, D and J segment choice and junctional diversity comes from TdT and repair-enzyme activity during rearrangement, both of which occur before this selection checkpoint and do not depend on it [p8-9][062 35:41-36:05].",
+   "Memory B cell formation is not described in this lecture as occurring in the bone marrow or without antigen exposure; it is explicitly deferred to a later discussion of post-antigen B-cell biology [p10][062 39:49-40:19]."
+  ],
+  "closestDistractor": {
+   "index": 2,
+   "why_wrong": "It correctly recognizes that removing a checkpoint changes outcomes but wrongly assumes the checkpoint would now target the opposite binding strength; the faculty describes strong self-antigen binding as what is normally eliminated, so removing that checkpoint simply stops removing strong binders rather than starting to remove weak ones [062 09:53-10:13]."
+  },
+  "rationale": "The faculty explains central selection's purpose directly: strongly self-reactive immature B cells are removed in the bone marrow specifically because, if released, they would attack normal self-tissue such as collagen [062 09:32-10:46]. Removing this checkpoint would let those high-affinity self-reactive cells complete maturation and enter the periphery intact, raising the risk of self-tissue damage. The trap: 'weakly self-reactive B cells would now be removed instead' assumes losing a checkpoint reverses its target, when the mechanism taught simply stops filtering out the strong binders rather than starting to filter out the weak ones."
+ },
+ {
+  "id": "OQ5-L062-C4A",
+  "stem": "A 9-month-old boy has had three episodes of otitis media and one pneumonia since age 6 months. Flow cytometry shows a normal number of CD3+ T cells and almost no CD19+ cells in blood. Serum IgG, IgA and IgM are all very low. Failure of which step best explains these findings?",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L062",
+  "sourceRef": "OST520 (062) L - B cell development - Ritchie.pdf, file pp. 8, 12; transcript 062 09:35-10:46; OST520 (064, 065) L - B Cells and Antibodies I and II - Taylor.pdf, file pp. 5, 9-10",
+  "covers": [
+   "L062-O3",
+   "L062-G"
+  ],
+  "concepts": [
+   "b-lymphocyte-defect-localization"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "RAG-mediated cleavage at V, D and J segments in developing lymphocytes",
+   "CD40-CD40L signaling that initiates isotype switching in germinal centers",
+   "Signaling from the pre-B cell receptor that lets pre-B cells survive and differentiate",
+   "Differentiation of mature B cells into antibody-secreting plasma cells",
+   "Deletion of strongly self-reactive immature B cells in the bone marrow"
+  ],
+  "answer": 2,
+  "optionExplanations": [
+   "Without RAG, neither antibody nor TCR genes form, so mature B <em>and</em> T cells are absent. Normal CD3+ T cells argue against it. [L062 p8]",
+   "CD40-CD40L defects (hyper-IgM) leave B cells present with IgM normal or high. Here B cells are absent and IgM is low. [L065 p9]",
+   "BTK carries pre-BCR signaling, which is required for pre-B survival and differentiation. Loss blocks maturation beyond pre-B, so blood B cells and all serum Ig are low while T cells are normal. [L062 p12; L065 p9]",
+   "A defect confined to terminal differentiation into plasma cells can leave mature B cells present in blood. The faculty describes CVID as heterogeneous: it <em>can</em> involve terminal B-cell differentiation, and total B-cell numbers <em>may</em> be normal or elevated. Near-absent CD19+ cells in a 9-month-old argue against this option. [L065 p10]",
+   "Negative selection removes only strongly self-reactive immature cells; weakly self-reactive cells survive. It does not empty the B-cell compartment. [062 09:35-10:46]"
+  ],
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "Without RAG, neither antibody nor TCR genes form, so mature B <em>and</em> T cells are absent. Normal CD3+ T cells argue against it. [L062 p8]"
+  },
+  "rationale": "BTK carries pre-BCR signaling, which is required for pre-B survival and differentiation. Loss blocks maturation beyond pre-B, so blood B cells and all serum Ig are low while T cells are normal. [L062 p12; L065 p9] Timing cue: onset after about 6 months fits loss of transplacental maternal IgG (about 3-6 months of protection). [L064 p5] The trap: \"RAG-mediated cleavage at V, D and J segments in developing lymphocytes\" Without RAG, neither antibody nor TCR genes form, so mature B <em>and</em> T cells are absent. Normal CD3+ T cells argue against it. [L062 p8]"
+ },
+ {
+  "id": "OQ5-L062-C4B",
+  "stem": "A newborn's screening panel reports very low T-cell receptor excision circles (TRECs) <em>and</em> very low kappa-deleting recombination excision circles (KRECs). By 3 months the infant has had repeated severe infections. Absence of which gene product best explains both screening results?",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L062",
+  "sourceRef": "OST520 (062) L - B cell development - Ritchie.pdf, file p. 8, 12; transcript 062 34:02-34:20; OST520 (064, 065) L - B Cells and Antibodies I and II - Taylor.pdf, file pp. 4, 73",
+  "covers": [
+   "L062-O2",
+   "L062-O3",
+   "L062-G"
+  ],
+  "concepts": [
+   "b-lymphocyte-defect-localization",
+   "excision-circle-screening"
+  ],
+  "applicationLevel": "prediction",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "Bruton tyrosine kinase (BTK)",
+   "Activation-induced deaminase (AID)",
+   "CD40 ligand",
+   "RAG-1",
+   "Terminal deoxynucleotidyl transferase (TdT)"
+  ],
+  "answer": 3,
+  "optionExplanations": [
+   "BTK acts only in B-cell development, so T cells (and TRECs) are normal in XLA. [L062 p12; L065 p9]",
+   "AID acts after antigen activation, in switch and variable regions. Bone-marrow rearrangement (and its excision circles) is intact. [L064 p4]",
+   "CD40L is a T-cell help signal for switching and affinity maturation. It does not act during receptor rearrangement. [L064 p3]",
+   "Excision circles are DNA cut out during receptor-gene recombination. KRECs (kappa-deleting recombination excision circles; faculty wording \"K-RAC\", \"kappa receptor excision circles\") come from recombination involving the kappa-deleting element in developing B cells, not from every light-chain VJ event. The faculty presents them as measurable in newborn screening to show B-cell differentiation is occurring, with TRECs as the T-cell analog. Both are low, so recombination is failing in both lineages, and RAG is required to produce both antibody and TCR genes. [062 34:02-34:20; L062 p8]",
+   "TdT adds N nucleotides that increase junctional diversity. RAG, not TdT, is what the faculty teaches as required for B- and T-cell production. [L062 p8]"
+  ],
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "BTK acts only in B-cell development, so T cells (and TRECs) are normal in XLA. [L062 p12; L065 p9]"
+  },
+  "rationale": "Excision circles are DNA cut out during receptor-gene recombination. KRECs (kappa-deleting recombination excision circles; faculty wording \"K-RAC\", \"kappa receptor excision circles\") come from recombination involving the kappa-deleting element in developing B cells, not from every light-chain VJ event. The faculty presents them as measurable in newborn screening to show B-cell differentiation is occurring, with TRECs as the T-cell analog. Both are low, so recombination is failing in both lineages, and RAG is required to produce both antibody and TCR genes. [062 34:02-34:20; L062 p8] Scope note: T−B− is one taught SCID pattern. T−B+ forms exist, so \"SCID\" does not always mean absent B cells. [L065 p73] The trap: \"Bruton tyrosine kinase (BTK)\" BTK acts only in B-cell development, so T cells (and TRECs) are normal in XLA. [L062 p12; L065 p9]"
+ },
+ {
+  "id": "OQ5-L063-C1A",
+  "stem": "A gram-negative rod is isolated from a patient with profuse watery, non-bloody diarrhea, normal temperature, and no mucosal cell death on intestinal biopsy. In a cell-culture assay, the purified A subunit of the organism's toxin transfers ADP-ribose from NAD onto a regulatory G protein controlling adenylate cyclase in intestinal epithelial cells. Which downstream effect best accounts for this patient's presentation?",
+  "context": "",
+  "topic": "Microbiology",
+  "src": "M",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L063",
+  "sourceRef": "OST520 (063) L - Host-Pathogen Interactions - CArvidson.pdf, file p. 33; transcript 063 34:57-35:23",
+  "covers": [
+   "L063-O9"
+  ],
+  "concepts": [
+   "ab-toxin-adp-ribosylation-target"
+  ],
+  "applicationLevel": "prediction",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "Elongation factor 2 is inactivated by ADP-ribosylation, halting protein synthesis and killing the epithelial cell",
+   "The toxin bridges MHC class II on an antigen-presenting cell to the T-cell receptor Vβ chain, activating a large T-cell subset",
+   "The G protein is locked active, raising intracellular cAMP and driving net ion and water secretion without killing the cell",
+   "A zinc-metalloprotease cleaves proteins needed for neurotransmitter exocytosis, producing flaccid paralysis of the gut wall",
+   "The toxin inserts into the epithelial membrane and forms pores, causing osmotic lysis of the infected cells"
+  ],
+  "answer": 2,
+  "optionExplanations": [
+   "This describes diphtheria toxin and Pseudomonas exotoxin A, which ADP-ribosylate EF-2 and kill the cell; the stem's target is the adenylate cyclase regulator, not EF-2, and biopsy here shows no cell death [p33][063 34:43-34:56].",
+   "Superantigens act by direct MHC II-TCR bridging without any ADP-ribosylation step; the stem's toxin uses NAD-dependent ADP-ribosylation of a G protein, an unrelated mechanism [p40][063 37:56-38:20].",
+   "Correct: ADP-ribosylating the adenylate cyclase regulator raises cAMP, increasing secretion from the cell without killing it, exactly the watery-diarrhea presentation described and taught for cholera toxin/E. coli LT [p33][063 34:57-35:23].",
+   "Tetanus and botulinum toxins act by proteolysis of exocytosis proteins in neurons, not by ADP-ribosylation of a G protein in gut epithelium, and produce paralysis, not diarrhea [p36][063 35:34-36:45].",
+   "Pore-forming cytolysins act by membrane insertion causing lysis, a different toxin class from the ADP-ribosylating AB toxin described in the stem, which does not kill the cell [p39]."
+  ],
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "Both options describe ADP-ribosylation reactions, but the diphtheria/Pseudomonas exotoxin A target is EF-2 and causes cell death, while the stem specifies the adenylate cyclase regulator and biopsy shows no cell death [p33][063 34:43-35:23]."
+  },
+  "rationale": "AB toxins that use ADP-ribosylation are distinguished by their host target, not just the shared enzymatic mechanism: targeting EF-2 blocks protein synthesis and kills the cell (diphtheria toxin, Pseudomonas exotoxin A), while targeting the adenylate cyclase regulator raises cAMP and drives fluid secretion without killing the cell (cholera toxin, E. coli LT) [p33][063 34:43-35:23]. The stem's assay and biopsy findings (no cell death, watery secretion) match only the adenylate cyclase route. The trap: 'Elongation factor 2 is inactivated' borrows the correct enzymatic chemistry (ADP-ribosylation) but applies it to the wrong target, which would produce cell death and no watery diarrhea instead of the presentation given."
+ },
+ {
+  "id": "OQ5-L063-C1B",
+  "stem": "A patient with a Pseudomonas aeruginosa burn-wound infection develops progressive local tissue necrosis. Biopsy of the affected tissue shows arrested host protein synthesis and cell death, with no evidence of elevated cAMP or increased fluid secretion. Which molecular target of the toxin's A subunit best accounts for this finding?",
+  "context": "",
+  "topic": "Microbiology",
+  "src": "M",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L063",
+  "sourceRef": "OST520 (063) L - Host-Pathogen Interactions - CArvidson.pdf, file p. 33; transcript 063 34:30-34:56",
+  "covers": [
+   "L063-O9"
+  ],
+  "concepts": [
+   "ab-toxin-adp-ribosylation-target"
+  ],
+  "applicationLevel": "mechanism",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "Elongation factor 2, whose ADP-ribosylation halts protein synthesis and kills the cell",
+   "The regulatory G protein of adenylate cyclase, whose ADP-ribosylation raises cAMP and drives secretion without killing the cell",
+   "A SNARE-associated protein, cleaved by a zinc-metalloprotease to block neurotransmitter exocytosis",
+   "MHC class II, cross-linked to the T-cell receptor Vβ chain to trigger polyclonal T-cell activation",
+   "Membrane phospholipids, hydrolyzed to destabilize and lyse the host cell membrane"
+  ],
+  "answer": 0,
+  "optionExplanations": [
+   "Correct: Pseudomonas exotoxin A ADP-ribosylates EF-2 just as diphtheria toxin does, blocking protein synthesis and killing the cell, matching the necrosis and arrested protein synthesis described [p33][063 34:43-34:56].",
+   "This is the cholera toxin/E. coli LT target and produces increased cAMP and secretion without cell death, the opposite of the arrested protein synthesis and necrosis described in the stem [p33][063 34:57-35:23].",
+   "SNARE-protein cleavage is the tetanus/botulinum proteolytic mechanism in neurons, not an ADP-ribosylation event in wound tissue, and produces paralysis, not local necrosis [p36][063 35:34-36:45].",
+   "MHC II-TCR bridging is the superantigen mechanism, which activates T cells rather than arresting protein synthesis in the biopsied tissue and involves no ADP-ribosylation [p40][063 37:56-38:20].",
+   "Phospholipid hydrolysis describes cytolysins such as C. perfringens alpha-toxin, a membrane-lysis mechanism distinct from the ADP-ribosylation-driven protein-synthesis arrest described here [p38]."
+  ],
+  "closestDistractor": {
+   "index": 1,
+   "why_wrong": "Both options name a legitimate ADP-ribosylation target from the same toxin family, but the adenylate cyclase regulator raises cAMP and causes secretion without cell death, the opposite of the arrested protein synthesis and necrosis described in the stem [p33][063 34:57-35:23]."
+  },
+  "rationale": "Faculty teaches that any AB toxin's consequence follows from its specific A-subunit target, not just its shared chemistry [063 37:00-37:12]. ADP-ribosylation of EF-2 blocks protein synthesis and kills the cell (diphtheria toxin, Pseudomonas exotoxin A), while ADP-ribosylation of the adenylate cyclase regulator raises cAMP and drives secretion without cell death (cholera toxin, E. coli LT) [p33][063 34:43-35:23]. The biopsy's arrested protein synthesis and necrosis point to the EF-2 target. The trap: 'regulatory G protein of adenylate cyclase' names a real ADP-ribosylation target taught in the same lecture, but it produces secretion without killing the cell, not the necrosis and blocked protein synthesis given in the stem."
+ },
+ {
+  "id": "OQ5-L063-C2A",
+  "stem": "A child with a deep puncture wound develops trismus and sustained generalized muscle spasm. Wound culture grows Clostridium tetani. The organism's exotoxin B subunit binds preferentially to which type of neuron to produce this presentation?",
+  "context": "",
+  "topic": "Microbiology",
+  "src": "M",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L063",
+  "sourceRef": "OST520 (063) L - Host-Pathogen Interactions - CArvidson.pdf, file p. 36; transcript 063 35:34-36:26",
+  "covers": [
+   "L063-O9"
+  ],
+  "concepts": [
+   "tetanus-botulinum-target-neuron"
+  ],
+  "applicationLevel": "presentation",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "Acetylcholine-releasing motor neurons, so blocked acetylcholine release removes muscle excitation entirely",
+   "Sensory afferent neurons, so pain signaling is lost without any change in motor tone",
+   "Dopaminergic neurons of the basal ganglia, so dopamine depletion produces rigidity",
+   "Inhibitory neurotransmitter-releasing neurons, whose blocked export removes inhibition of motor activity",
+   "Both inhibitory and excitatory neurons equally, so a mixed pattern of paralysis results"
+  ],
+  "answer": 3,
+  "optionExplanations": [
+   "Binding acetylcholine-releasing motor neurons and blocking ACh release is the botulinum toxin mechanism and produces flaccid paralysis, the opposite of the sustained spasm described in the stem [p36][063 36:28-36:45].",
+   "The faculty does not teach a sensory-neuron target for either toxin; both tetanus and botulinum toxins act on neurons controlling neurotransmitter export tied to motor tone, not sensory afferents [p36][063 35:34-36:45].",
+   "A dopaminergic/basal-ganglia mechanism is not part of the faculty's tetanus/botulinum comparison; both toxins act via a zinc-metalloprotease A subunit on neurotransmitter export, not on dopamine [p36][063 35:29-36:54].",
+   "Correct: tetanus toxin's B subunit binds the neuron that releases the inhibitory neurotransmitter; blocking its export removes inhibition, leaving unopposed excitatory activity and sustained spasm [p36][063 35:59-36:26].",
+   "The faculty teaches that the B subunit's specificity for one neuron type, not both, is what determines the clinical picture; an equal, mixed target is not the taught mechanism for either toxin [p36][063 35:52-35:57]."
+  ],
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "Both toxins share an almost identical zinc-metalloprotease A subunit, but tetanus toxin's B subunit targets the inhibitory-neurotransmitter-releasing neuron (spastic paralysis), while acetylcholine-releasing motor neurons are botulinum toxin's target (flaccid paralysis), the reverse of what the stem describes [p36][063 35:52-36:45]."
+  },
+  "rationale": "Tetanus and botulinum toxins share a nearly identical zinc-metalloprotease A subunit; what determines opposite clinical pictures is the B subunit's target neuron [p36][063 35:29-36:54]. Tetanus toxin's B subunit binds the neuron releasing an inhibitory neurotransmitter, so blocking its export removes inhibition and produces sustained spasm (spastic paralysis), matching this patient's trismus and muscle spasm [063 35:59-36:26]. The trap: 'acetylcholine-releasing motor neurons' correctly names a real toxin target from the same comparison, but it is botulinum toxin's target and produces flaccid, not spastic, paralysis."
+ },
+ {
+  "id": "OQ5-L063-C2B",
+  "stem": "A basic-science lab constructs a chimeric neurotoxin: a zinc-metalloprotease A subunit with activity identical to tetanus toxin's, attached to botulinum toxin's B subunit, which binds and delivers the A subunit into acetylcholine-releasing motor neurons. The metalloprotease still blocks neurotransmitter exocytosis once inside the cell. Which clinical picture would this chimeric toxin most likely produce?",
+  "context": "",
+  "topic": "Microbiology",
+  "src": "M",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L063",
+  "sourceRef": "OST520 (063) L - Host-Pathogen Interactions - CArvidson.pdf, file p. 36; transcript 063 35:34-37:12",
+  "covers": [
+   "L063-O9"
+  ],
+  "concepts": [
+   "tetanus-botulinum-target-neuron"
+  ],
+  "applicationLevel": "prediction",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "Spastic paralysis, because the A subunit's proteolytic activity is identical to tetanus toxin's own",
+   "Flaccid paralysis, because the B subunit delivers it into acetylcholine-releasing motor neurons",
+   "No clinical effect, because an A subunit and B subunit from two different toxins cannot function together",
+   "Sensory loss without motor involvement, because zinc-metalloproteases act only on sensory neurons",
+   "Autonomic dysfunction only, because acetylcholine-releasing neurons are exclusively autonomic"
+  ],
+  "answer": 1,
+  "optionExplanations": [
+   "This assumes the A subunit's identity determines the clinical picture, but the faculty's own comparison teaches that the two A subunits are almost identical and it is the B subunit's target neuron that sets spastic versus flaccid presentation [p36][063 35:41-36:52].",
+   "Correct: because specificity for the target cell is mediated by the B subunit, delivering the metalloprotease into acetylcholine-releasing motor neurons blocks ACh release there, producing flaccid paralysis regardless of which toxin the A subunit came from [p36][063 35:55-36:52][063 37:00-37:12].",
+   "The stem specifies the chimeric metalloprotease still blocks exocytosis once delivered; nothing in the taught mechanism suggests an A/B pairing from related clostridial toxins would be nonfunctional, since the B subunit's only taught role is target-cell delivery and specificity [p33][063 33:22-34:02].",
+   "The faculty does not teach a sensory-neuron target for either toxin; both A subunits act on neurons controlling neurotransmitter export tied to motor and autonomic tone, not sensory afferents [p36][063 35:34-36:45].",
+   "Acetylcholine-releasing neurons include somatic motor neurons at the neuromuscular junction, not only autonomic neurons, so ACh blockade here would affect skeletal muscle, producing flaccid paralysis rather than isolated autonomic dysfunction [063 36:30-36:40]."
+  ],
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "It correctly notes the A subunit is identical to tetanus toxin's, but the faculty teaches that B-subunit target-cell specificity, not A-subunit identity, sets the clinical picture, so delivery into acetylcholine-releasing motor neurons produces flaccid, not spastic, paralysis [p36][063 35:52-36:52]."
+  },
+  "rationale": "The faculty's framework for any AB toxin is to know the enzymatic activity, the intracellular target, and the target cell type, because target-cell specificity comes from the B subunit, not the A subunit [063 37:00-37:12]. Tetanus and botulinum toxins nearly share an A subunit, yet produce opposite paralysis because their B subunits deliver that A subunit into different neurons [p36][063 35:29-36:54]. A chimeric toxin whose B subunit targets acetylcholine-releasing motor neurons would therefore block ACh release and produce flaccid paralysis, following the B subunit's target, not the A subunit's origin. The trap: 'because the A subunit's proteolytic activity is identical to tetanus toxin's' sounds mechanistically sophisticated but applies the wrong half of the toxin to predict the clinical outcome."
+ },
+ {
+  "id": "OQ5-L063-C3A",
+  "stem": "In controlled human-challenge studies, Organism X has an ID50 of approximately 10 organisms, while a related Organism Y has an ID50 of approximately one million organisms under identical conditions. Both organisms are capable of causing the same disease in humans. Which statement best describes what this ID50 difference indicates?",
+  "context": "",
+  "topic": "Microbiology",
+  "src": "M",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L063",
+  "sourceRef": "OST520 (063) L - Host-Pathogen Interactions - CArvidson.pdf, file p. 4; transcript 063 02:44-03:33",
+  "covers": [
+   "L063-O1"
+  ],
+  "concepts": [
+   "pathogenicity-virulence-id50"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 2,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "Organism Y is more virulent than Organism X, because it requires more organisms to establish infection",
+   "Organism X is pathogenic while Organism Y is not, because ID50 measures pathogenicity, an all-or-none property",
+   "Both organisms are equally virulent, because virulence itself is an all-or-none property like pathogenicity",
+   "The ID50 difference reflects each organism's strict versus opportunistic pathogen status, not its virulence",
+   "Organism X is more virulent than Organism Y, since far fewer organisms are needed to produce disease"
+  ],
+  "answer": 4,
+  "optionExplanations": [
+   "This reverses the relationship the faculty teaches: a lower ID50 means fewer organisms are needed to cause disease, which indicates higher, not lower, virulence, so Organism X, not Y, is the more virulent one [p4][063 03:14-03:33].",
+   "Pathogenicity is the binary, present-or-absent ability to cause disease, not something ID50 measures; both organisms are stated to be capable of causing the same disease, so both are pathogenic, and ID50 instead quantifies virulence, the degree of that ability [p4][063 02:44-03:12].",
+   "The faculty explicitly contrasts pathogenicity, an all-or-none property, with virulence, which is quantifiable and differs here by roughly five orders of magnitude in ID50, so treating virulence as all-or-none is a direct definitional reversal [p4][063 02:44-03:12].",
+   "Strict versus opportunistic pathogen status concerns whether an organism is pathogenic only in a compromised host, a separate concept the faculty does not link to ID50 comparisons between two normally pathogenic organisms [p4][063 01:33-02:37].",
+   "Correct: the faculty teaches that virulence is quantified by measures like ID50, and a smaller number of organisms needed to cause disease means higher virulence, exactly the case for Organism X here (Shigella-like ID50 of about 10 versus a Vibrio cholerae-like ID50 of about a million) [p4][063 03:14-03:33]."
+  ],
+  "closestDistractor": {
+   "index": 1,
+   "why_wrong": "It correctly notes ID50 relates to a core definition, but it applies the measurement to the wrong term: ID50 quantifies virulence, a matter of degree, while pathogenicity is the separate binary capacity to cause disease that both organisms are stated to share [p4][063 02:44-03:33]."
+  },
+  "rationale": "The faculty distinguishes pathogenicity, an all-or-none capacity to cause disease, from virulence, a quantifiable degree of that capacity measured by ID50/LD50 [p4][063 02:44-03:12]. A lower ID50 means fewer organisms are needed to cause disease, so Organism X (ID50 about 10, like the faculty's Shigella example) is more virulent than Organism Y (ID50 about a million, like the faculty's Vibrio cholerae example) [063 03:14-03:33]. The trap: 'ID50 measures pathogenicity, an all-or-none property' sounds like a textbook definition but assigns a quantifiable measurement to the wrong, binary term."
+ },
+ {
+  "id": "OQ5-L063-C3B",
+  "stem": "Researchers delete a set of genes from a wild-type bacterial strain that is normally capable of causing disease in humans. The mutant strain's remaining genome still encodes the underlying capacity to cause that disease, but in challenge studies the mutant fails to produce any signs of illness even at very high doses. Which statement correctly classifies the mutant strain?",
+  "context": "",
+  "topic": "Microbiology",
+  "src": "M",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L063",
+  "sourceRef": "OST520 (063) L - Host-Pathogen Interactions - CArvidson.pdf, file p. 4; transcript 063 02:51-03:03",
+  "covers": [
+   "L063-O1"
+  ],
+  "concepts": [
+   "pathogenicity-virulence-id50"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "The mutant is nonpathogenic, because failing to cause disease at a very high dose means it has permanently lost pathogenicity",
+   "The mutant has become an opportunistic pathogen, causing disease only when introduced into a compromised host",
+   "The mutant is an avirulent pathogen: it retains the ability to cause disease without currently expressing it",
+   "The mutant's ID50 has decreased, which indicates the deletion increased its virulence",
+   "The mutant now exhibits latency: it is present but not growing until some later reactivation event"
+  ],
+  "answer": 2,
+  "optionExplanations": [
+   "This treats failure to cause disease at a given dose as loss of pathogenicity itself, but the faculty specifically teaches that an organism can retain the underlying ability to cause disease, for example because of genes that have been removed, while still being classified as pathogenic in principle rather than nonpathogenic [p4][063 02:51-03:03].",
+   "Nothing in the stem describes a compromised host or an unprotected site; the mutant fails to cause illness even in a presumably normal host at high dose, which does not match the opportunistic-pathogen definition the faculty ties to host or site status, not to gene deletion [p4][063 01:33-02:37].",
+   "Correct: the faculty's own example is an organism capable of causing disease that, for some reason such as removed important genes, does not currently do so; this is defined as an avirulent pathogen, not a nonpathogen [p4][063 02:51-03:03].",
+   "Failing to cause illness even at very high doses indicates a higher, not lower, ID50, which would reflect decreased virulence, the opposite of what this option claims [p4][063 03:14-03:19].",
+   "Latency describes a present but non-growing infectious agent that can later reactivate in an infected host, a different concept from a gene-deletion mutant that fails to establish disease at all in a challenge study [p4][063 03:40-04:50]."
+  ],
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "Both options describe a strain that fails to cause visible disease, but the faculty's own definition holds that an organism which is able to cause disease yet does not, often because important genes have been removed, is called avirulent, not nonpathogenic; pathogenicity is not lost simply because virulence is not being expressed [p4][063 02:51-03:03]."
+  },
+  "rationale": "The faculty explicitly states that an avirulent pathogen is possible: an organism able to cause disease that, for some reason such as removed important genes, does not currently do so [p4][063 02:51-03:03]. The gene-deletion mutant in this stem fits that definition exactly, since its genome still encodes the capacity for disease even though it fails to produce illness at high dose. The trap: 'nonpathogenic, because failing to cause disease... means it has permanently lost pathogenicity' sounds like a reasonable inference from the experimental result, but it collapses the faculty's explicit distinction between losing the underlying ability (nonpathogenic) and simply not expressing it (avirulent pathogen)."
+ },
+ {
+  "id": "OQ5-L063-C4A",
+  "stem": "A 19-year-old college student develops fever, a spreading petechial rash, hypotension and oozing from IV sites. Blood cultures grow <em>Neisseria meningitidis</em>. Which sequence best explains the hypotension and the bleeding?",
+  "context": "",
+  "topic": "Microbiology",
+  "src": "M",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L063",
+  "sourceRef": "OST520 (063) L - Host-Pathogen Interactions - CArvidson.pdf, file pp. 27, 29, 33, 39, 42, 45; transcript 063 29:37-32:05",
+  "covers": [
+   "L063-O7"
+  ],
+  "concepts": [
+   "endotoxin-vs-superantigen-shock"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "A toxin bridges MHC II and TCR Vβ, activating about 2-20% of T cells and causing a cytokine storm",
+   "An A-B toxin ADP-ribosylates EF-2 in endothelial cells, halting protein synthesis",
+   "An A-B toxin ADP-ribosylates an adenylate cyclase regulator, raising cAMP and causing fluid loss",
+   "Outer-membrane lipid A engages CD14 (via LPS-binding protein) and TLR4, releasing IL-1, IL-6 and TNF; high doses activate Hageman factor and consume clotting factors (DIC)",
+   "A pore-forming toxin lyses red cells and platelets, causing hemolysis and thrombocytopenia"
+  ],
+  "answer": 3,
+  "optionExplanations": [
+   "This is the superantigen mechanism. It shares IL-1/TNF release but does not stimulate the coagulation cascade, so it does not explain the DIC. [L063 p42, p45]",
+   "This is the diphtheria/Pseudomonas exotoxin A mechanism, not the endotoxic shock the faculty attributes to gram-negative bacteremia. [L063 p33]",
+   "This is the cholera toxin/LT mechanism, which causes watery diarrhea without killing the cell. [L063 p33]",
+   "<em>N. meningitidis</em> is the faculty's major named cause of gram-negative endotoxic shock; it blebs its outer membrane, releasing extra LOS. The LPS/LOS route to IL-1/IL-6/TNF, plus high-dose Hageman-factor activation giving DIC, explains both hypotension and bleeding. [063 31:40-32:05; L063 p27, p29]",
+   "Pore-forming toxins (e.g. streptolysin O, S. aureus alpha-toxin) lyse cells, but the faculty does not link them to the DIC pathway. The clotting consumption here comes from Hageman-factor activation. [L063 p39, p29]"
+  ],
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "This is the superantigen mechanism. It shares IL-1/TNF release but does not stimulate the coagulation cascade, so it does not explain the DIC. [L063 p42, p45]"
+  },
+  "rationale": "<em>N. meningitidis</em> is the faculty's major named cause of gram-negative endotoxic shock; it blebs its outer membrane, releasing extra LOS. The LPS/LOS route to IL-1/IL-6/TNF, plus high-dose Hageman-factor activation giving DIC, explains both hypotension and bleeding. [063 31:40-32:05; L063 p27, p29] The trap: \"A toxin bridges MHC II and TCR Vβ, activating about 2-20% of T cells and causing a cytokine storm\" This is the superantigen mechanism. It shares IL-1/TNF release but does not stimulate the coagulation cascade, so it does not explain the DIC. [L063 p42, p45]"
+ },
+ {
+  "id": "OQ5-L063-C4B",
+  "stem": "A 16-year-old develops high fever, a diffuse rash and hypotension during menses; a retained tampon grows <em>Staphylococcus aureus</em>. A team member suggests blocking LPS-binding protein/CD14 signaling. Why is that mechanistically unlikely to address this patient's shock?",
+  "context": "",
+  "topic": "Microbiology",
+  "src": "M",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-practice",
+  "sourceBlock": "L063",
+  "sourceRef": "OST520 (063) L - Host-Pathogen Interactions - CArvidson.pdf, file pp. 24-25, 33, 40, 42, 45; transcript 063 31:32-31:38",
+  "covers": [
+   "L063-O7",
+   "L063-O8"
+  ],
+  "concepts": [
+   "endotoxin-vs-superantigen-shock"
+  ],
+  "applicationLevel": "discrimination",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "<em>S. aureus</em> LOS lacks O-antigen, so it cannot bind CD14, although lipid A still triggers TLR4",
+   "<em>S. aureus</em> makes no endotoxin; its superantigen activates T cells directly by bridging MHC II and TCR Vβ",
+   "The staphylococcal toxin must first be processed and presented by MHC II, so the block acts too late",
+   "The shock comes from staphylococcal ADP-ribosylation of EF-2, which CD14 blockade cannot reverse",
+   "It would be effective: endotoxin and superantigen share the same receptor pathway, as their overlapping IL-1/TNF release shows"
+  ],
+  "answer": 1,
+  "optionExplanations": [
+   "LOS is taught for species that always lack O-antigen, such as <em>Neisseria</em> and <em>Haemophilus</em>. <em>S. aureus</em> is gram-positive and has no LPS or LOS. [L063 p25]",
+   "Endotoxin exists only in gram-negative outer membranes. The faculty states <em>S. aureus</em> makes no endotoxin but causes severe disease through other toxins. TSST-1 is a staphylococcal superantigen that bridges MHC II and TCR Vβ without processing, activating about 2-20% of T cells. [L063 p24-25; 063 31:32-31:38; p40, p42]",
+   "Superantigens specifically bypass antigen processing. That is their defining difference from normal antigens. [L063 p40]",
+   "EF-2 ADP-ribosylation is the diphtheria toxin/Pseudomonas exotoxin A mechanism, not a staphylococcal one in this lecture. [L063 p33]",
+   "The faculty's comparison table separates the two: both stimulate IL-1/TNF, but only superantigen bridges MHC II-TCR and stimulates T cells. Overlapping cytokines do not mean a shared receptor. [L063 p45]"
+  ],
+  "closestDistractor": {
+   "index": 4,
+   "why_wrong": "The faculty's comparison table separates the two: both stimulate IL-1/TNF, but only superantigen bridges MHC II-TCR and stimulates T cells. Overlapping cytokines do not mean a shared receptor. [L063 p45]"
+  },
+  "rationale": "Endotoxin exists only in gram-negative outer membranes. The faculty states <em>S. aureus</em> makes no endotoxin but causes severe disease through other toxins. TSST-1 is a staphylococcal superantigen that bridges MHC II and TCR Vβ without processing, activating about 2-20% of T cells. [L063 p24-25; 063 31:32-31:38; p40, p42] The trap: \"It would be effective: endotoxin and superantigen share the same receptor pathway, as their overlapping IL-1/TNF release shows\" The faculty's comparison table separates the two: both stimulate IL-1/TNF, but only superantigen bridges MHC II-TCR and stimulates T cells. Overlapping cytokines do not mean a shared receptor. [L063 p45]"
+ },
+ {
+  "id": "OQ5-L064-C1A",
+  "stem": "A 3-year-old boy has recurrent bacterial sinus and lung infections. Serum IgM is elevated; IgG, IgA and IgE are very low. His B-cell count is normal. Genetic testing finds a mutation in an X-linked gene expressed on activated CD4+ T cells. Besides isotype switching, which B-cell process is most directly expected to be impaired?",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept24-practice",
+  "sourceBlock": "L064",
+  "sourceRef": "OST520 (064, 065) L - B Cells and Antibodies I and II - Taylor.pdf, file pp. 2-4, 9; transcript 064.1 05:57-06:42; OST520 (062) L - B cell development - Ritchie.pdf, file p. 8",
+  "covers": [
+   "L064-O2",
+   "L064-O3"
+  ],
+  "concepts": [
+   "cd40l-aid-switching-affinity"
+  ],
+  "applicationLevel": "prediction",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "V(D)J recombination of heavy-chain genes in bone-marrow pro-B cells",
+   "Affinity maturation of antibodies in germinal centers",
+   "Co-expression of membrane IgM and IgD on naive B cells by alternative splicing",
+   "Secretion of pentameric IgM by plasma cells",
+   "Signal transduction through Igα/Igβ after BCR cross-linking"
+  ],
+  "answer": 1,
+  "optionExplanations": [
+   "V(D)J recombination is RAG-driven during antigen-independent bone-marrow development, before any T-cell help. A normal B-cell count confirms it happened. [L062 p8]",
+   "CD40L on activated CD4+ Th cells binding CD40 triggers <em>both</em> isotype switching and affinity maturation. X-linked hyper-IgM causes poor germinal-center formation and affects both. [L064 p3; L065 p9]",
+   "Naive B cells make IgM and IgD by alternative splicing without T-cell help. [L060 p3]",
+   "IgM secretion is preserved; the elevated IgM is the hallmark of the syndrome. [L065 p9]",
+   "Igα/Igβ carry the BCR's own signal (the CD3 analog). The faculty separates this from the CD40/CD40L T-cell help signal that drives switching and affinity maturation. [L064 p2; 075 05:57-06:42]"
+  ],
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "V(D)J recombination is RAG-driven during antigen-independent bone-marrow development, before any T-cell help. A normal B-cell count confirms it happened. [L062 p8]"
+  },
+  "rationale": "CD40L on activated CD4+ Th cells binding CD40 triggers <em>both</em> isotype switching and affinity maturation. X-linked hyper-IgM causes poor germinal-center formation and affects both. [L064 p3; L065 p9] The trap: \"V(D)J recombination of heavy-chain genes in bone-marrow pro-B cells\" V(D)J recombination is RAG-driven during antigen-independent bone-marrow development, before any T-cell help. A normal B-cell count confirms it happened. [L062 p8]"
+ },
+ {
+  "id": "OQ5-L064-C1B",
+  "stem": "A 6-year-old girl with autosomal recessive AID deficiency received the full primary tetanus series in infancy and is not receiving immunoglobulin replacement. She now gets a booster. Compared with a healthy child, which serum response is expected over the next 1-2 weeks?",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "mcq",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept24-practice",
+  "sourceBlock": "L064",
+  "sourceRef": "OST520 (064, 065) L - B Cells and Antibodies I and II - Taylor.pdf, file pp. 4-5, 9",
+  "covers": [
+   "L064-O2",
+   "L064-O4"
+  ],
+  "concepts": [
+   "cd40l-aid-switching-affinity"
+  ],
+  "applicationLevel": "prediction",
+  "reasoningOrder": 3,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [
+   "A rapid, high-affinity IgG response, because memory B cells formed during the primary series",
+   "No antibody of any isotype, because B cells cannot be activated without AID",
+   "Normal IgG but absent IgA and IgE, because AID is needed only for mucosal and allergic isotypes",
+   "High-affinity IgM, because affinity maturation proceeds even though switching fails",
+   "An IgM-dominant response without a rise in high-affinity IgG"
+  ],
+  "answer": 4,
+  "optionExplanations": [
+   "A normal secondary response is memory-driven, rapid (1-3 days) and high-affinity IgG. That depends on earlier switching and affinity maturation, both of which need AID. [L064 p5, p4]",
+   "AID acts after activation. B cells can still be activated and make IgM (the elevated IgM in HIGM shows this). [L065 p9]",
+   "AID is required to switch to any downstream isotype, IgG included. Deficiency leaves IgM only. [L064 p4]",
+   "Affinity maturation also needs AID (cytosine to uracil, corrected to thymine). Without it, affinity maturation fails as well. [L064 p4]",
+   "AID deficiency is an autosomal recessive hyper-IgM form, so output is IgM only. AID's C-to-U deamination is needed both for switch-region breaks and for variable-region point mutations, so the IgM is also not affinity-matured. [L064 p4; L065 p9]"
+  ],
+  "closestDistractor": {
+   "index": 0,
+   "why_wrong": "A normal secondary response is memory-driven, rapid (1-3 days) and high-affinity IgG. That depends on earlier switching and affinity maturation, both of which need AID. [L064 p5, p4]"
+  },
+  "rationale": "AID deficiency is an autosomal recessive hyper-IgM form, so output is IgM only. AID's C-to-U deamination is needed both for switch-region breaks and for variable-region point mutations, so the IgM is also not affinity-matured. [L064 p4; L065 p9] The trap: \"A rapid, high-affinity IgG response, because memory B cells formed during the primary series\" A normal secondary response is memory-driven, rapid (1-3 days) and high-affinity IgG. That depends on earlier switching and affinity maturation, both of which need AID. [L064 p5, p4]"
+ },
+ {
+  "id": "RQ5-L060-F12",
+  "stem": "Markers the faculty lists as routinely present on mature B cells",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-recall",
+  "sourceBlock": "L060",
+  "sourceRef": "L060 [p4][060.3 00:31-01:17]; L062 [p9]",
+  "covers": [
+   "L060"
+  ],
+  "concepts": [
+   "recall-f12"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> CD19, CD20, CD21<br><br><strong>Discriminator:</strong> Handout wording is \"most types of mature B cells\", not naive-only. Pro-B cells are CD19+ but CD20- <em>[L060 [p4][060.3 00:31-01:17]; L062 [p9]]</em>"
+ },
+ {
+  "id": "RQ5-L060-F13",
+  "stem": "NK-cell Fc receptor (CD number) that triggers ADCC, and the killing mediators released",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-recall",
+  "sourceBlock": "L060",
+  "sourceRef": "L060 [p5][060.3 10:57-12:12]",
+  "covers": [
+   "L060"
+  ],
+  "concepts": [
+   "recall-f13"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> CD16 (activating Fcγ receptor on NK cells); perforin and granzymes, leading to target apoptosis<br><br><strong>Discriminator:</strong> Macrophage engulfing an antibody-coated human cell = ADCP, not ADCC. Source conflict: the handout prints \"FcγRI (CD16)\" for macrophages/neutrophils [p5], and the audio says NK CD16 is \"the same protein that macrophages make\" [060.3 11:20-11:29]. Established mapping: FcγRI = CD64; NK CD16 = CD16A/FcγRIIIa; neutrophil CD16 = CD16B/FcγRIIIb. Use the exact receptor and cell context in the stem; ask faculty to clarify the handout label <em>[L060 [p5][060.3 10:57-12:12]]</em>"
+ },
+ {
+  "id": "RQ5-L061-01",
+  "stem": "Technique Faner uses to size the FMR1 CGG-repeat expansion (Fragile X)",
+  "context": "",
+  "topic": "Molecular Biology",
+  "src": "N",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-recall",
+  "sourceBlock": "L061",
+  "sourceRef": "OST520 (061, 066) L - Molecular Techniques I and II - Faner.pdf, file p. 6; transcript 074 05:19-13:43",
+  "covers": [
+   "L061-O3"
+  ],
+  "concepts": [
+   "fmr1-southern-blot"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> Southern blot analysis, after EcoRI digestion, electrophoresis/blotting, and probe hybridization to estimate fragment/repeat size [p6, 074 05:19-13:43]. <br><br><strong>Discriminator:</strong> Sanger sequencing is used instead when the gene is known but a panel leaves a specific point mutation unresolved (as with CFTR), not for sizing a repeat [p7, 074 13:49-16:33]."
+ },
+ {
+  "id": "RQ5-L061-02",
+  "stem": "Array CGH color assigned to patient DNA vs reference DNA, and what an elevated green:red ratio indicates",
+  "context": "",
+  "topic": "Molecular Biology",
+  "src": "N",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-recall",
+  "sourceBlock": "L061",
+  "sourceRef": "OST520 (061, 066) L - Molecular Techniques I and II - Faner.pdf, file p. 8-9; transcript 074 16:40-22:28",
+  "covers": [
+   "L061-O5"
+  ],
+  "concepts": [
+   "array-cgh-color-scheme"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> Patient (test) DNA is labeled green and reference DNA is labeled red; an elevated green:red ratio indicates a patient gain, a reduced ratio indicates a patient loss [p9, 074 17:47-20:48]. <br><br><strong>Discriminator:</strong> Array CGH is used when no candidate gene/locus is known, unlike FISH, which targets a locus already suspected [p8-9, p12, 074 16:40-17:44, 28:13-35:17]."
+ },
+ {
+  "id": "RQ5-L061-03",
+  "stem": "FISH LSI:CEP ratio cutoff that Faner uses to call HER2/EGFR2 gene amplification",
+  "context": "",
+  "topic": "Molecular Biology",
+  "src": "N",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-recall",
+  "sourceBlock": "L061",
+  "sourceRef": "OST520 (061, 066) L - Molecular Techniques I and II - Faner.pdf, file p. 12; transcript 074 32:12-35:12",
+  "covers": [
+   "L061-O7"
+  ],
+  "concepts": [
+   "fish-lsi-cep-ratio-interpretation"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> An LSI:CEP ratio greater than 2 is called amplification positive; a ratio below 2 is negative [p12, 074 33:01-35:12]. <br><br><strong>Discriminator:</strong> CEP counts chromosome copies as the control; LSI counts the gene locus itself. A higher raw LSI count alone (without a ratio above 2 relative to CEP) does not mean amplification [p12, 074 32:12-34:56]."
+ },
+ {
+  "id": "RQ5-L061-04",
+  "stem": "Why ARMS-PCR only produces a product when the mutant template is present",
+  "context": "",
+  "topic": "Molecular Biology",
+  "src": "N",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-recall",
+  "sourceBlock": "L061",
+  "sourceRef": "OST520 (061, 066) L - Molecular Techniques I and II - Faner.pdf, file p. 11; transcript 074 22:29-28:07",
+  "covers": [
+   "L061-O6"
+  ],
+  "concepts": [
+   "arms-pcr-mechanism"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> The primer's 3' end is designed to match only the mutant sequence, and Taq polymerase cannot extend from a 3' mismatch, so a wild-type template blocks extension and no product forms [p11, 074 22:29-27:15]. <br><br><strong>Discriminator:</strong> This differs from FISH, which reports locus/chromosome copy information via fluorescent probes rather than allele-specific primer extension [p11-12, 074 25:02-27:15, 28:43-35:00]."
+ },
+ {
+  "id": "RQ5-L062-F06",
+  "stem": "B-cell stage that expresses the pre-BCR (µ heavy chain + surrogate light chain)",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-recall",
+  "sourceBlock": "L062",
+  "sourceRef": "L062 [p9-10][062 36:33-37:09]",
+  "covers": [
+   "L062"
+  ],
+  "concepts": [
+   "recall-f06"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> Pre-B cell<br><br><strong>Discriminator:</strong> Pro-B: CD19+, heavy-chain rearrangement, no pre-BCR. Immature B: IgM with a real light chain <em>[L062 [p9-10][062 36:33-37:09]]</em>"
+ },
+ {
+  "id": "RQ5-L062-F07",
+  "stem": "Enzyme that adds random N nucleotides; which chain rearrangement uses it",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-recall",
+  "sourceBlock": "L062",
+  "sourceRef": "L062 [p8][p16][062 33:41-35:41]",
+  "covers": [
+   "L062"
+  ],
+  "concepts": [
+   "recall-f07"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> TdT; heavy-chain VDJ in pro-B (and pro-T) cells<br><br><strong>Discriminator:</strong> Not active for light-chain VJ. P nucleotides come from the repair enzymes, not TdT <em>[L062 [p8][p16][062 33:41-35:41]]</em>"
+ },
+ {
+  "id": "RQ5-L062-F08",
+  "stem": "Enzyme without which no mature B or T cells can form",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-recall",
+  "sourceBlock": "L062",
+  "sourceRef": "L062 [p8]",
+  "covers": [
+   "L062"
+  ],
+  "concepts": [
+   "recall-f08"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> RAG-1/RAG-2<br><br><strong>Discriminator:</strong> TdT loss removes N nucleotides; the faculty does not teach it as required for lymphocyte production <em>[L062 [p8]]</em>"
+ },
+ {
+  "id": "RQ5-L062-F09",
+  "stem": "Gene defect and stage block in X-linked agammaglobulinemia",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-recall",
+  "sourceBlock": "L062",
+  "sourceRef": "L062 [p12]; L065 [p9]",
+  "covers": [
+   "L062"
+  ],
+  "concepts": [
+   "recall-f09"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> BTK; B cells fail to mature beyond the pre-B stage (pre-BCR signaling)<br><br><strong>Discriminator:</strong> T cells are normal. RAG defects remove both B and T cells <em>[L062 [p12]; L065 [p9]]</em>"
+ },
+ {
+  "id": "RQ5-L063-F01",
+  "stem": "Serum protein that binds shed LPS and delivers it to CD14 on macrophages",
+  "context": "",
+  "topic": "Microbiology",
+  "src": "M",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-recall",
+  "sourceBlock": "L063",
+  "sourceRef": "L063 [p27][063 29:39-29:47]",
+  "covers": [
+   "L063"
+  ],
+  "concepts": [
+   "recall-f01"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> LPS-binding protein<br><br><strong>Discriminator:</strong> Faculty lists a second route: LPS binds TLR4 directly on endothelial cells. CD14 is taught \"on m[acrophages], etc.\", not macrophage-only <em>[L063 [p27][063 29:39-29:47]]</em>"
+ },
+ {
+  "id": "RQ5-L063-F02",
+  "stem": "Cytokines released after LPS engages its host receptors (faculty's list)",
+  "context": "",
+  "topic": "Microbiology",
+  "src": "M",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-recall",
+  "sourceBlock": "L063",
+  "sourceRef": "L063 [p27][p45]",
+  "covers": [
+   "L063"
+  ],
+  "concepts": [
+   "recall-f02"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> IL-1, IL-6, TNF<br><br><strong>Discriminator:</strong> Superantigens also drive IL-1/TNF, but only endotoxin stimulates the coagulation and fibrin cascades <em>[L063 [p27][p45]]</em>"
+ },
+ {
+  "id": "RQ5-L063-F03",
+  "stem": "High-dose endotoxin activates which clotting factor, leading to DIC",
+  "context": "",
+  "topic": "Microbiology",
+  "src": "M",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-recall",
+  "sourceBlock": "L063",
+  "sourceRef": "L063 [p29][063 30:44-31:28]",
+  "covers": [
+   "L063"
+  ],
+  "concepts": [
+   "recall-f03"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> Hageman factor (factor XII)<br><br><strong>Discriminator:</strong> Hypotension/shock is a separate arm: vasoactive activation, vasodilation, permeability <em>[L063 [p29][063 30:44-31:28]]</em>"
+ },
+ {
+  "id": "RQ5-L063-F04",
+  "stem": "Superantigen bridges which two molecules; what fraction of T cells respond",
+  "context": "",
+  "topic": "Microbiology",
+  "src": "M",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-recall",
+  "sourceBlock": "L063",
+  "sourceRef": "L063 [p40][p42]",
+  "covers": [
+   "L063"
+  ],
+  "concepts": [
+   "recall-f04"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> MHC II on the APC and TCR Vβ, without antigen processing; about 2-20% of T cells<br><br><strong>Discriminator:</strong> Normal antigen: about 0.01%. True mitogens (e.g. concanavalin A) stimulate all T cells <em>[L063 [p40][p42]]</em>"
+ },
+ {
+  "id": "RQ5-L063-F05",
+  "stem": "Two toxins whose A subunit ADP-ribosylates EF-2",
+  "context": "",
+  "topic": "Microbiology",
+  "src": "M",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept23-recall",
+  "sourceBlock": "L063",
+  "sourceRef": "L063 [p33][063 34:43-35:23]",
+  "covers": [
+   "L063"
+  ],
+  "concepts": [
+   "recall-f05"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> Diphtheria toxin and Pseudomonas exotoxin A<br><br><strong>Discriminator:</strong> Cholera toxin/E. coli LT ADP-ribosylate an adenylate cyclase regulator, raising cAMP; the cell is not killed <em>[L063 [p33][063 34:43-35:23]]</em>"
+ },
+ {
+  "id": "RQ5-L064-F10",
+  "stem": "Enzyme shared by class-switch recombination and affinity maturation; what it does to DNA",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept24-recall",
+  "sourceBlock": "L064",
+  "sourceRef": "L064 [p4][076 11:14-12:16][077 02:01-04:52]",
+  "covers": [
+   "L064"
+  ],
+  "concepts": [
+   "recall-f10"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> AID; converts cytosine to uracil<br><br><strong>Discriminator:</strong> Switching: uracil removed, DNA breaks, recombination. Affinity maturation: uracil corrected to thymine, point mutation <em>[L064 [p4][076 11:14-12:16][077 02:01-04:52]]</em>"
+ },
+ {
+  "id": "RQ5-L065-F11",
+  "stem": "Most common form of hyper-IgM syndrome: defective protein and the cell that expresses it",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept24-recall",
+  "sourceBlock": "L065",
+  "sourceRef": "L065 [p9][079 10:39-11:30]",
+  "covers": [
+   "L065"
+  ],
+  "concepts": [
+   "recall-f11"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> CD40L on CD4+ T cells (X-linked)<br><br><strong>Discriminator:</strong> Autosomal recessive forms: CD40 (B cell) or AID. X-linked form also affects T-cell help beyond B cells <em>[L065 [p9][079 10:39-11:30]]</em>"
+ },
+ {
+  "id": "RQ5-L065-F14",
+  "stem": "Assay that detects a patient's antibody against a known antigen",
+  "context": "",
+  "topic": "Immunology",
+  "src": "I",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept24-recall",
+  "sourceBlock": "L065",
+  "sourceRef": "L065 [p6-7][078 06:28-08:56]",
+  "covers": [
+   "L065"
+  ],
+  "concepts": [
+   "recall-f14"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> Indirect ELISA (antigen-coated dish plus patient serum)<br><br><strong>Discriminator:</strong> Sandwich ELISA detects antigen (capture antibody plus a second antibody) and can quantify it <em>[L065 [p6-7][078 06:28-08:56]]</em>"
+ },
+ {
+  "id": "RQ5-L068-F15",
+  "stem": "Pattern-recognition receptor for dsRNA in virus-infected cells",
+  "context": "",
+  "topic": "Microbiology",
+  "src": "M",
+  "type": "worked",
+  "unit": "UE3",
+  "course": "OST520",
+  "source": "sept24-recall",
+  "sourceBlock": "L068",
+  "sourceRef": "L068 [p6]",
+  "covers": [
+   "L068"
+  ],
+  "concepts": [
+   "recall-f15"
+  ],
+  "applicationLevel": "recall",
+  "reasoningOrder": 1,
+  "requiresMedia": false,
+  "mediaNote": "",
+  "holdout": false,
+  "options": [],
+  "answer": null,
+  "rationale": "<strong>Answer:</strong> TLR3 (inflammation, NF-κB activation)<br><br><strong>Discriminator:</strong> dsRNA is abnormal in our cells because we do not make it; lots is made when an RNA virus replicates its genome <em>[L068 [p6]]</em>"
+ }
+]
